@@ -208,6 +208,116 @@
    BULLET STUFF
 ================================================== */
 
+body.custom-bullets-enabled {
+  /* Remove default bullets from everywhere */
+  .markdown-rendered ul {
+    list-style-type: none !important;
+  }
+
+  .markdown-rendered .list-bullet:after {
+    display: none;
+    margin-inline-start: 0em !important;
+  }
+
+  .list-bullet:after {
+    content: "" !important;
+  }
+
+  /* Reading Mode Bullets */
+  ul > li::before {
+    content: var(--custom-bullet-level-1, "+") !important;
+    font-weight: 500 !important;
+    font-size: 20px !important;
+    margin-right: 0.5em !important;
+    color: var(--italic-color) !important;
+  }
+
+  ul ul > li::before {
+    content: var(--custom-bullet-level-2, "-") !important;
+    font-weight: normal !important;
+    margin-right: 0.5em !important;
+    color: var(--text-faint) !important;
+  }
+
+  ul ul ul > li::before {
+    content: var(--custom-bullet-level-3, "=") !important;
+    font-weight: normal !important;
+    margin-right: 0.5em !important;
+    color: var(--text-faint) !important;
+  }
+
+  /* Preserve Ordered List Numbering */
+  ol > li::before {
+    content: "" !important;
+  }
+
+  ol {
+    list-style-type: decimal !important;
+  }
+
+  ol > li::marker {
+    /* Keep default numbering */
+  }
+
+  ul ul > li::before,
+  ul ol > li::before,
+  ol ul > li::before,
+  ol ol > li::before {
+    content: var(--custom-bullet-level-2, "-") !important;
+    font-weight: normal !important;
+    margin-right: 0.5em !important;
+    color: var(--italic-color) !important;
+  }
+
+  /* Live Preview Bullets - Level 1 */
+  .HyperMD-list-line.HyperMD-list-line-1.cm-line:not(:has(.cm-formatting-list-ol))::before {
+    content: var(--custom-bullet-level-1, "+") !important;
+    color: var(--italic-color);
+    font-weight: 500;
+    margin-right: -20px !important;
+    font-size: 20px !important;
+  }
+
+  /* Level 2 */
+  .cm-list-2 .list-bullet:after {
+    content: var(--custom-bullet-level-2, "-") !important;
+    color: var(--text-faint) !important;
+    font-weight: normal;
+    margin-right: 0.5em !important;
+    display: inline !important;
+    background: none !important;
+    border: none !important;
+    width: auto !important;
+    height: auto !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    line-height: normal !important;
+  }
+
+  .cm-list-1 .list-bullet:after {
+    content: "" !important;
+    display: none !important;
+  }
+
+  /* Level 3 */
+  .cm-list-3 .list-bullet:after {
+    content: var(--custom-bullet-level-3, "=") !important;
+    color: var(--text-faint) !important;
+    font-weight: normal;
+    margin-right: 0.5em !important;
+    background: none !important;
+    border: none !important;
+    width: auto !important;
+    height: auto !important;
+    display: inline !important;
+  }
+
+  /* Hide bullet for checkboxes */
+  .HyperMD-list-line:has(input[type="checkbox"])::before {
+    display: none !important;
+  }
+}
+
 
 /* ==================================================
    INLINE TITLE
@@ -235,7 +345,16 @@
   margin-bottom: 15px;
 }
 
-
+.right-inline-title .inline-title {
+  position: relative;
+  text-align: right;
+  display: inline-block;
+  padding: 20px;
+  transition: all 0.2s ease;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
 
 
 /* ==================================================
@@ -1312,7 +1431,7 @@ input.prompt-input:focus {
     margin-bottom: 6px !important;
 
     background-color: var(--background-primary-alt);
-    background-image: linear-gradient(180deg, var(--background-primary-alt), var(--background-secondary-alt));
+    background-image: linear-gradient(180deg, var(--background-primary-alt), var(--background-secondary-alt)) !important;
     color: var(--text-normal) !important;
 
     
@@ -2670,8 +2789,7 @@ body:not(.disable-checkboxes) {
 }
 
 /* hide strikethrough */
-.hide-strikethrough .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"], 
-.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="X"] {
+.hide-strikethrough, .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"], .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="X"] {
     text-decoration: none !important;
     color: var(--checklist-done-color);
 }
@@ -3256,7 +3374,6 @@ li[data-task="w"] > input:checked:hover {
 }
 
 
-
 /*  ===== style settings =====  */
 /* @settings
 name: blobob theme
@@ -3265,140 +3382,12 @@ collapsed: false
 settings:
 
   ########################################
-  # Focus and Layout
-  ########################################
-  - id: heading-focus
-    title: Focus and Layout Options
-    type: heading
-    level: 1
-
-  - id: focus-mode
-    title: Focus mode
-    description: Removes UI elements. You should assign a hotkey to use it.
-    type: class-toggle
-    default: false
-    addCommand: true
-
-  - id: hide-status-bar
-    title: Hide Status Bar
-    type: class-toggle
-    default: false
-
-  ########################################
-  # Command Palette
-  ########################################
-  - id: heading-command-palette
-    title: Command Palette
-    type: heading
-    level: 2
-
-  - id: hide-prompt-instructions
-    title: Hide Instructions in Command Palette
-    type: class-toggle
-    default: false
-    addCommand: false
-
-  ########################################
-  # File Explorer
-  ########################################
-  - id: heading-file-explorer
-    title: File Explorer
-    type: heading
-    level: 2
-
-  - id: nav-hide-text
-    title: Hide Action Buttons in File Explorer with Text
-    description: Text shown when buttons are hidden in file explorer
-    type: variable-text
-    default: "My Vault"
-
-  ########################################
-  # Properties Panel
-  ########################################
-  - id: heading-properties
-    title: Properties Panel
-    type: heading
-    level: 2
-
-  - id: dim-properties
-    title: Dim Properties unless hovered
-    type: class-toggle
-    default: true
-    addCommand: false
-
-  - id: properties-style
-    title: Properties Style
-    description: Select the properties layout style
-    type: class-select
-    default: properties-1
-    options:
-      - label: Style 1
-        value: properties-1
-      - label: Style 2
-        value: properties-2
-      - label: Style 3
-        value: properties-3
-      - label: Style 4
-        value: properties-4
-      - label: Style 5
-        value: properties-5
-      - label: Obsidian Default
-        value: Obsidian-default
-
-  - id: hide-properties-arrow
-    title: Hide arrow in properties heading
-    type: class-toggle
-    default: true
-    addCommand: false
-
-  - id: center-properties-heading
-    title: Center properties heading
-    type: class-toggle
-    default: false
-    addCommand: false
-
-  - id: cssclasses-properties-style
-    title: Cssclasses Style
-    type: class-select
-    default: cssclasses-2
-    options:
-      - label: Style 1
-        value: cssclasses-1
-      - label: Style 2
-        value: cssclasses-2
-      - label: Obsidian Default
-        value: Obsidian-default
-
-  - id: metadata-key-style
-    title: Properties metadata key Style
-    type: class-select
-    default: mpk-accent-color
-    options:
-      - label: Accent Color
-        value: mpk-accent-color
-      - label: Normal Color
-        value: mpk-normal-color
-      - label: Muted Color
-        value: mpk-muted-color
-      - label: Hidden Icon
-        value: mpk-key-only
-      - label: Obsidian Default
-        value: Obsidian-default
-
-  ########################################
-  # Editor Appearance & Colors
+  # Editor & Text Appearance
   ########################################
   - id: heading-editor
-    title: Editor Appearance & Colors
+    title: Editor & Text Appearance
     type: heading
-    level: 2
-
-  - id: lined
-    title: Lined Notebook
-    description: Adds lines to the editor
-    type: class-toggle
-    default: false
-    addCommand: false
+    level: 1
 
   - id: highlight-active-line
     title: Highlight active line
@@ -3418,24 +3407,12 @@ settings:
     default: false
     addCommand: false
 
-  - id: disable-checkboxes
-    title: Disable checkboxes
-    description: Disable this if you are using your own implementation via a CSS Snippet.
+  - id: lined
+    title: Lined Notebook
+    description: Adds lines to the editor
     type: class-toggle
     default: false
-
-  - id: inline-title
-    title: Align inline title
-    description: 
-    type: class-select
-    default: center-inline-title
-    options:
-      - label: Center
-        value: center-inline-title
-      - label: Left
-        value: left-inline-title
-      - label: Right
-        value: right-inline-title
+    addCommand: false
 
   - id: heading-colors
     title: All Headings Color
@@ -3467,56 +3444,6 @@ settings:
         value: heading-color-gray
       - label: Brown
         value: heading-color-brown
-
-  - id: table-hor-lines-only
-    title: Hide Vertical Lines in Tables
-    type: class-toggle
-    default: true
-    addCommand: false
-
-  - id: hide-strikethrough
-    title: Hide Strikethrough in checked list
-    type: class-toggle
-    default: true
-    addCommand: false
-
-  - id: hide-tab-close-btn
-    title: Hide tab close button
-    type: class-toggle
-    default: false
-    addCommand: false
-
-  - id: center-folder-title
-    title: Center folder title
-    type: class-toggle
-    default: false
-    addCommand: false
-
-  - id: pin-icon-only
-    title: Show only icon on pinned tabs
-    type: class-toggle
-    default: true
-    addCommand: false
-
-  - id: custom-bullets-enabled
-    title: Enable custom bullets
-    type: class-toggle
-    default: true
-  - id: custom-bullet-level-1
-    title: 1st level bullet
-    type: variable-text
-    default: "+"
-    quotes: true
-  - id: custom-bullet-level-2
-    title: 2nd level bullet
-    type: variable-text
-    default: "-"
-    quotes: true
-  - id: custom-bullet-level-3
-    title: 3rd level bullet
-    type: variable-text
-    default: "|"
-    quotes: true
 
   - id: heading-italic
     title: Italic Text Color
@@ -3617,6 +3544,105 @@ settings:
       - label: Brown
         value: bolditalic-color-brown
 
+  - id: hide-strikethrough
+    title: Hide Strikethrough in checked list
+    type: class-toggle
+    default: true
+    addCommand: false
+
+  - id: table-hor-lines-only
+    title: Hide Vertical Lines in Tables
+    type: class-toggle
+    default: true
+    addCommand: false
+
+  - id: inline-title
+    title: Align inline title
+    description: 
+    type: class-select
+    default: center-inline-title
+    options:
+      - label: Center
+        value: center-inline-title
+      - label: Left
+        value: left-inline-title
+      - label: Right
+        value: right-inline-title
+
+  ########################################
+  # Lists & Checkboxes
+  ########################################
+  - id: heading-checkboxes
+    title: Lists & Checkboxes
+    type: heading
+    level: 2
+    
+  - id: custom-bullets-enabled
+    title: Enable custom bullets
+    type: class-toggle
+    default: true
+  - id: custom-bullet-level-1
+    title: 1st level bullet
+    type: variable-text
+    default: "+"
+    quotes: true
+  - id: custom-bullet-level-2
+    title: 2nd level bullet
+    type: variable-text
+    default: "-"
+    quotes: true
+  - id: custom-bullet-level-3
+    title: 3rd level bullet
+    type: variable-text
+    default: "="
+    quotes: true
+
+  - id: disable-checkboxes
+    title: Disable checkboxes
+    description: Disable this if you don't want to use blobob theme's checkboxes.
+    type: class-toggle
+    default: false
+
+  ########################################
+  # Tabs & Navigation
+  ########################################
+  - id: heading-tabs
+    title: Tabs & Navigation
+    type: heading
+    level: 2
+
+  - id: hide-tab-close-btn
+    title: Hide tab close button
+    type: class-toggle
+    default: false
+    addCommand: false
+
+  - id: pin-icon-only
+    title: Show only icon on pinned tabs
+    type: class-toggle
+    default: true
+    addCommand: false
+
+  ########################################
+  # File Explorer
+  ########################################
+  - id: heading-file-explorer
+    title: File Explorer
+    type: heading
+    level: 1
+
+  - id: nav-hide-text
+    title: Hide Action Buttons in File Explorer with Text
+    description: Text shown when buttons are hidden in file explorer
+    type: variable-text
+    default: "My Vault"
+
+  - id: center-folder-title
+    title: Center folder title
+    type: class-toggle
+    default: false
+    addCommand: false
+
   - id: folder-style
     title: Folders Style
     description: Select the properties layout style
@@ -3629,4 +3655,111 @@ settings:
         value: folders-2
       - label: Style 3
         value: folders-3
+
+  ########################################
+  # Properties Panel
+  ########################################
+  - id: heading-properties
+    title: Properties Panel
+    type: heading
+    level: 1
+
+  - id: properties-style
+    title: Properties Style
+    description: Select the properties layout style
+    type: class-select
+    default: properties-1
+    options:
+      - label: Style 1
+        value: properties-1
+      - label: Style 2
+        value: properties-2
+      - label: Style 3
+        value: properties-3
+      - label: Style 4
+        value: properties-4
+      - label: Style 5
+        value: properties-5
+      - label: Obsidian Default
+        value: Obsidian-default
+
+  - id: dim-properties
+    title: Dim Properties unless hovered
+    type: class-toggle
+    default: true
+    addCommand: false
+
+  - id: hide-properties-arrow
+    title: Hide arrow in properties heading
+    type: class-toggle
+    default: true
+    addCommand: false
+
+  - id: center-properties-heading
+    title: Center properties heading
+    type: class-toggle
+    default: false
+    addCommand: false
+
+  - id: cssclasses-properties-style
+    title: Cssclasses Style
+    type: class-select
+    default: cssclasses-2
+    options:
+      - label: Style 1
+        value: cssclasses-1
+      - label: Style 2
+        value: cssclasses-2
+      - label: Obsidian Default
+        value: Obsidian-default
+
+  - id: metadata-key-style
+    title: Properties metadata key Style
+    type: class-select
+    default: mpk-accent-color
+    options:
+      - label: Accent Color
+        value: mpk-accent-color
+      - label: Normal Color
+        value: mpk-normal-color
+      - label: Muted Color
+        value: mpk-muted-color
+      - label: Hidden Icon
+        value: mpk-key-only
+      - label: Obsidian Default
+        value: Obsidian-default
+
+  ########################################
+  # Command Palette
+  ########################################
+  - id: heading-command-palette
+    title: Command Palette
+    type: heading
+    level: 1
+
+  - id: hide-prompt-instructions
+    title: Hide Instructions in Command Palette
+    type: class-toggle
+    default: false
+    addCommand: false
+
+  ########################################
+  # Focus & Layout
+  ########################################
+  - id: heading-focus
+    title: Focus & Layout
+    type: heading
+    level: 1
+
+  - id: focus-mode
+    title: Focus mode
+    description: Removes UI elements. You should assign a hotkey to use it.
+    type: class-toggle
+    default: false
+    addCommand: true
+
+  - id: hide-status-bar
+    title: Hide Status Bar
+    type: class-toggle
+    default: false
 */
