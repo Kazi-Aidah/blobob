@@ -102,3 +102,17 @@ Define Custom Bullets!
 1. Focus Mode – Hides the tab bar, min-max-close buttons & status bar
 2. Hide Status Bar - Hides the Status Bar
 
+## Why is the theme named ***blobob***?
+
+I drew **Blob** a long time ago as a simple character concept.
+
+At one point, I planned to turn it into a small animated task-reminder app using Rive, but the idea never went further. The character stayed with me, though.
+
+![](assets/original-blob.png)
+
+In the theme, the main face you see is the yellow character I named **Bob**:
+
+![](assets/blob-bob.png)
+
+**Blob** is the original concept, **Bob** is the face used in the theme. 
+Together, they became **blobob**.

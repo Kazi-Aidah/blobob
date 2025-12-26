@@ -3286,11 +3286,11 @@ background-image: url("data:image/svg+xml;utf8,\
       background-image: none;
       background-image: url("data:image/svg+xml;utf8,\
 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>\
-<circle cx='23' cy='50' r='7' fill='pink'/>\
-<circle cx='77' cy='50' r='7' fill='pink'/>\
-<circle cx='35' cy='40' r='7' fill='black'/>\
-<circle cx='65' cy='40' r='7' fill='black'/>\
-<path d='M40 57 Q50 70 60 57' stroke='black' stroke-width='10' fill='none' stroke-linecap='round'/>\
+<circle cx='27' cy='50' r='7' fill='pink'/>\
+<circle cx='73' cy='50' r='7' fill='pink'/>\
+<circle cx='37' cy='40' r='6' fill='black'/>\
+<circle cx='63' cy='40' r='6' fill='black'/>\
+<path d='M40 55 Q50 65 60 55' stroke='black' stroke-width='8' fill='none' stroke-linecap='round'/>\
 </svg>");
 }
 
