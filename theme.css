@@ -597,6 +597,8 @@ display: none !important;
   border-bottom: 0;
   margin-top: 4px;
   padding-top: 2px;
+  margin-left: 0 !important;
+  padding-left: 2px !important;
 
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.4) !important;
 }
@@ -640,7 +642,6 @@ display: none !important;
   transition: all 0.25s cubic-bezier(0.68, -0.6, 0.32, 1.6) !important;
 }
 
-/* Smooth transition for transform property */
 .pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner {
   transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
 }
@@ -694,7 +695,7 @@ display: none !important;
     border-radius: 18px !important;
     border-bottom-left-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
-    padding-left: 8px !important;
+    padding-left: 0px !important;
     
     transition: 
         border-radius 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
@@ -739,12 +740,15 @@ display: none !important;
     border-bottom-right-radius: 0 !important;
 
     padding-bottom: 0px !important;
-    margin-left: 7px;
+    margin-left: 5px;
+    margin-right: 5px;
     padding-left: 8px !important;
+
+    white-space: nowrap;
     
     transition: border-radius 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
                  margin 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
-                 padding 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+                 padding 0.3s ease,
                  background-color 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
                  transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
                  background-color 0s ease !important;
