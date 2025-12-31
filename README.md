@@ -7,7 +7,7 @@ An animated theme for Obsidian!
 As a self-taught animator of 7 years, I love seeing motion in interactions.
 Since Obsidian is a huge part of my life, I'd like to smile more often when I see the UI.
 
-It supports [Style Settings](https://github.com/mgmeyers/obsidian-style-settings#obsidian-style-settings-plugin) for lots of customization. Blobob Theme is currently in development, so if you find isues or want features and more styles, please create an issue [here](https://github.com/Kazi-Aidah/blobob/issues).
+It supports [Style Settings](https://github.com/mgmeyers/obsidian-style-settings#obsidian-style-settings-plugin) for lots of customization. Blobob Theme is currently in development, so if you find issues or want features and more styles, please create an issue [here](https://github.com/Kazi-Aidah/blobob/issues).
 
 > I'd recommend trying this theme out without reading the rest of the README for surprises.
 
@@ -101,6 +101,7 @@ Define Custom Bullets!
 ## Hiding
 1. Focus Mode – Hides the tab bar, min-max-close buttons & status bar
 2. Hide Status Bar - Hides the Status Bar
+3. Hide Breadcrumbs - Hides the parent paths in view-header
 
 ## Why is the theme named ***blobob***?
 
