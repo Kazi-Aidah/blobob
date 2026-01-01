@@ -364,11 +364,14 @@ body.custom-bullets-enabled {
 /* ==================================================
    ACTIVE LINE
 ================================================== */
+
 .highlight-active-line .cm-active.cm-line {
   background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
-  padding-left: 10px;
+  /* padding-left: 10px; */
   border-radius: 0;
   border-inline-start: 3px solid hsla(var(--interactive-accent-hsl), 0.8);
+
+  padding-inline-start: 6px;
 
   transition: background-color 0s ease;
 }
@@ -498,13 +501,64 @@ body.custom-bullets-enabled {
   background-color: var(--background-modifier-hover) !important;
 }
 
-.workspace-tab-header:hover .workspace-tab-header-inner-icon {
+/* hide icon on hover, show close btn */
+/* .workspace .mod-root .workspace-tab-header .workspace-tab-header-inner-close-button:hover .workspace-tab-header-inner-icon {
   display: none;
+} */
+
+
+/* tabs in left and right sidebars */
+.workspace .mod-left-split .workspace-tab-header,
+.workspace .mod-right-split .workspace-tab-header {
+  transition: 
+    border-radius 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+    margin 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2),
+    padding 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    background-color 0.3s ease,
+    filter 0.2s ease,
+    transform 0.3s ease !important;
 }
 
-.workspace-tab-header:hover .workspace-tab-header-inner-icon .iconic-icon {
-  display: none;
+.workspace .mod-left-split .workspace-tab-header.is-active,
+.workspace .mod-right-split .workspace-tab-header.is-active {
+  padding: 0px !important;
+  margin: 0px !important;
+  transform: scale(1.05);
 }
+
+.workspace .mod-left-split .workspace-tab-header:hover,
+.workspace .mod-right-split .workspace-tab-header:hover {
+  transform: scale(1.1);
+  filter: brightness(1.5);
+}
+
+.workspace .mod-left-split .workspace-tab-header.is-active:hover,
+.workspace .mod-right-split .workspace-tab-header.is-active:hover {
+  transform: scale(1.1);
+  filter: brightness(1.05);
+}
+
+/* active tab for left sidebar */
+/* .workspace .mod-left-split .workspace-tab-header.is-active {
+  padding: 0px !important;
+} */
+
+/* for right sidebar */
+/* .workspace .mod-right-split .workspace-tab-header.is-active {
+  padding: 0px !important;
+} */
+
+
+
+/* body:not(.workspace):not(.mod-root) .workspace-tab-header.is-active {
+  padding: 20px !important;
+} */
+
+/* .workspace .mod-root .workspace-tab-header.is-active {
+  padding: 20px !important;
+} */
+
+
 
 /* .workspace-tab-header-inner-icon {
     z-index: 1001 !important;
@@ -628,6 +682,9 @@ display: none !important;
   border: 1px solid var(--background-modifier-border);
   margin-top: 2px;
   padding-bottom: 8px !important;
+
+  padding-left: 0 !important;
+  padding-right: 0 !important;
   
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
 }
@@ -693,8 +750,8 @@ display: none !important;
   margin: 0px;
     --tab-curve: 16px !important;
     border-radius: 18px !important;
-    border-bottom-left-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
+    /* border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important; */
     padding-left: 0px !important;
     
     transition: 
@@ -736,15 +793,18 @@ display: none !important;
 
     border-bottom: none !important;
 
-    border-bottom-left-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
+    /* border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important; */
 
     padding-bottom: 0px !important;
+    
     margin-left: 5px;
     margin-right: 5px;
-    padding-left: 8px !important;
 
-    white-space: nowrap;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+
+    text-overflow: ellipsis;
     
     transition: border-radius 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
                  margin 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
@@ -779,8 +839,8 @@ display: none !important;
     --tab-curve: 14px !important;
     border-radius: 20px !important;
 
-    border-bottom-left-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
+    /* border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important; */
     
     transition: border-radius 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55),
                 background-color 0s ease,
