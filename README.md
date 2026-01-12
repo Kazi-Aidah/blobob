@@ -63,6 +63,9 @@ You can use the [Style Settings](https://github.com/mgmeyers/obsidian-style-sett
 ## Active Line Highlighting
 ![](assets/active-line-highlight-w-face.png)
 
+## Active Line Dimming & Floating
+![](assets/darken-inactive-lines.gif)
+
 ## Properties Styles
 The Properties Styling does not affect the "Show File Properties" brought via Command Palette.
 

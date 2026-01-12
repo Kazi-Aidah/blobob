@@ -2077,23 +2077,25 @@ background: var(--background-secondary-alt);
 
 /* === TAGS === */
 .metadata-property[data-property-key="tags"] .multi-select-pill {
+  letter-spacing: 0.08em;
   border-radius: 20px !important;
   padding: 4px 4px !important;
   padding-top: 0.35em !important;
-  border: 0.15em solid var(--tag-color);
-  box-shadow: 0px 1.5px 0px 0px var(--tag-color);
-  text-transform: uppercase;
+  /* border: 0.15em solid var(--tag-color);
+  box-shadow: 0px 1.5px 0px 0px var(--tag-color); */
+  /* text-transform: uppercase; */
   letter-spacing: 0.09em;
+  font-size: 0.9em;
   background-color: var(--tag-background);
   color: var(--tag-color) !important;
 }
 
 .metadata-property[data-property-key="tags"] .multi-select-pill:hover {
-  border: 0.15em solid var(--tag-color-hover);
-  box-shadow: 0px 1.5px 0px 0px var(--tag-color-hover);
+  /* border: 0.15em solid var(--tag-color-hover);
+  box-shadow: 0px 1.5px 0px 0px var(--tag-color-hover); */
 
   background-color: var(--tag-background-hover);
-  border: 0.2em solid var(--tag-color);
+  /* border: 0.2em solid var(--tag-color); */
   font-weight: bold;
 }
 
@@ -2112,7 +2114,7 @@ background: var(--background-secondary-alt);
   padding: 4px 12px !important;
   border: 0.15em solid var(--color-accent);
   box-shadow: 0px 1.5px 0px 0px var(--color-accent);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 0.09em;
   background-color: transparent;
   color: var(--color-accent-2) !important;
@@ -2139,7 +2141,7 @@ background: var(--background-secondary-alt);
   border-radius: 20px !important;
   padding: 0px 6px !important;
   box-shadow: 0px 0px 0px 1px var(--text-normal);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 0.09em;
   background-color: transparent;
   color: var(--text-normal) !important;
@@ -2155,18 +2157,70 @@ background: var(--background-secondary-alt);
 
 
 
+/* === CSSCLASSES THREE === */
+.cssclasses-3 .metadata-property[data-property-key="cssclasses"] .multi-select-pill {
+  padding: 3px 12px !important;
+  /* text-transform: uppercase; */
+  letter-spacing: 0.09em;
+    background-color: rgba(var(--mono-rgb-100), 0.1) !important;
+  color: var(--text-normal) !important;
+  font-size: 0.9em;
+}
+
+/* x icon */
+.cssclasses-3 .metadata-property[data-property-key="cssclasses"] .multi-select-pill svg {
+  color: var(--text-normal) !important;
+  margin: 2px;
+  margin-right: 0px;
+}
+
+
+.workspace-leaf-content[data-type="file-properties"] .metadata-property-value {
+  padding: 4px !important;
+}
+
+/* bubbletry */
+/* body .workspace-tab-container {
+    margin: 14px 10px 14px !important;
+    border-radius: 12px;
+    border: 2px solid var(--background-modifier-border);
+    filter: brightness(1);
+} */
+
+
+.metadata-property, .metadata-property-key, .metadata-property-value {
+  border: none !important;
+}
+
 /* property key icon styles: accent color, normal text color, muted color, hidden */
 .mpk-accent-color .metadata-property-key-input {
   border-radius: 20px !important;
-  padding: 4px 12px !important;
+  padding: 4px 10px !important;
   text-transform: uppercase; /* !ss case */
   letter-spacing: 0.09em;
   background-color: transparent;
-  color: var(--color-accent-2) !important;
+  color: var(--color-accent-1) !important;
+  font-size: 0.8em;
 }
 
 .mpk-accent-color .metadata-property-icon {
-  color: var(--color-accent-2) !important;
+  color: var(--color-accent-1) !important;
+}
+
+
+/* accent-color + hidden */
+.mpk-accent-color-hidden .metadata-property-key-input {
+  border-radius: 20px !important;
+  text-transform: uppercase; /* !ss case */
+  letter-spacing: 0.09em;
+  background-color: transparent;
+  color: var(--color-accent-1) !important;
+  font-size: 0.8em;
+}
+
+.mpk-accent-color-hidden .metadata-property-icon {
+  color: var(--color-accent-1) !important;
+  display: none;
 }
 
 /* ? normal */
@@ -3634,6 +3688,18 @@ settings:
     default: false
     addCommand: false
 
+  - id: dim-inactive
+    title: Darken inactive lines
+    type: class-toggle
+    default: false
+    addCommand: false
+
+  - id: float-inactive
+    title: Make inactive lines float
+    type: class-toggle
+    default: false
+    addCommand: false
+
   - id: lined
     title: Lined Notebook
     description: Adds lines to the editor
@@ -3931,12 +3997,14 @@ settings:
   - id: cssclasses-properties-style
     title: Cssclasses Style
     type: class-select
-    default: cssclasses-2
+    default: cssclasses-3
     options:
       - label: Style 1
         value: cssclasses-1
       - label: Style 2
         value: cssclasses-2
+      - label: Style 3
+        value: cssclasses-3
       - label: Obsidian Default
         value: Obsidian-default
 
@@ -3953,6 +4021,8 @@ settings:
         value: mpk-muted-color
       - label: Hidden Icon
         value: mpk-key-only
+      - label: Accent + Hidden Icon
+        value: mpk-accent-color-hidden
       - label: Obsidian Default
         value: Obsidian-default
 
@@ -4017,4 +4087,55 @@ settings:
   margin-inline-end: -4px;
   color: var(--color-accent-1);
   font-weight: 500;
+}
+
+
+
+
+/* FLOAT INACTIVE */
+.float-inactive .cm-line:not(.cm-active):not(.HyperMD-codeblock):not(.HyperMD-codeblock-bg):not(.HyperMD-codeblock-end):not(.HyperMD-codeblock-end-bg) {
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+.float-inactive .cm-line:not(.cm-active):not(.HyperMD-codeblock):not(.HyperMD-codeblock-bg):not(.HyperMD-codeblock-end):not(.HyperMD-codeblock-end-bg):nth-child(8n+1) { 
+  animation-delay: 0s; 
+}
+
+.float-inactive .cm-line:not(.cm-active):not(.HyperMD-codeblock):not(.HyperMD-codeblock-bg):not(.HyperMD-codeblock-end):not(.HyperMD-codeblock-end-bg):nth-child(8n+2) { 
+  animation-delay: 0.15s; 
+}
+
+.float-inactive .cm-line:not(.cm-active):not(.HyperMD-codeblock):not(.HyperMD-codeblock-bg):not(.HyperMD-codeblock-end):not(.HyperMD-codeblock-end-bg):nth-child(8n+3) { 
+  animation-delay: 0.3s; 
+}
+
+.float-inactive .cm-line:not(.cm-active):not(.HyperMD-codeblock):not(.HyperMD-codeblock-bg):not(.HyperMD-codeblock-end):not(.HyperMD-codeblock-end-bg):nth-child(8n+4) { 
+  animation-delay: 0.45s; 
+}
+
+.float-inactive .cm-line:not(.cm-active):not(.HyperMD-codeblock):not(.HyperMD-codeblock-bg):not(.HyperMD-codeblock-end):not(.HyperMD-codeblock-end-bg):nth-child(8n+5) { 
+  animation-delay: 0.6s; 
+}
+
+.float-inactive .cm-line:not(.cm-active):not(.HyperMD-codeblock):not(.HyperMD-codeblock-bg):not(.HyperMD-codeblock-end):not(.HyperMD-codeblock-end-bg):nth-child(8n+6) { 
+  animation-delay: 0.75s; 
+}
+
+.float-inactive .cm-line:not(.cm-active):not(.HyperMD-codeblock):not(.HyperMD-codeblock-bg):not(.HyperMD-codeblock-end):not(.HyperMD-codeblock-end-bg):nth-child(8n+7) { 
+  animation-delay: 0.9s; 
+}
+
+.float-inactive .cm-line:not(.cm-active):not(.HyperMD-codeblock):not(.HyperMD-codeblock-bg):not(.HyperMD-codeblock-end):not(.HyperMD-codeblock-end-bg):nth-child(8n+8) { 
+  animation-delay: 1.05s; 
+}
+
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* dim inactive */
+.dim-inactive .cm-line:not(.cm-active) {
+  opacity: 0.6;
+  animation: floatUpDown 3s ease-in-out infinite;
 }
