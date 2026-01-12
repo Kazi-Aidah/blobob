@@ -2408,7 +2408,9 @@ input.prompt-input:focus {
 
 /* sidebar file properties UNcustomization */
 .workspace-leaf-content[data-type="file-properties"] .metadata-container {
-    background-color: var(--background-primary) !important;
+    .metadata-content {
+  background-color: var(--background-secondary) !important;
+}
 }
 
 /* ===== RESET FOR FILE PROPERTIES WORKSPACE ===== */
@@ -5031,3 +5033,4 @@ settings:
 .dim-inactive .cm-line:not(.cm-active) {
   opacity: 0.6;
 }
+
