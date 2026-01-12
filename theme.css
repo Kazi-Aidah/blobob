@@ -4000,3 +4000,17 @@ settings:
 .hide-breadcrumbs .view-header-breadcrumb-separator {
   display: none;
 }
+
+
+/* Vertical Tabs Plugin Fix */
+.workspace-leaf.obsidian-vertical-tabs-tab-content .tree-item-self.is-active {
+  padding: 0px;
+}
+
+.workspace-leaf.obsidian-vertical-tabs-tab-content .tree-item-self.is-active .tree-item-icon, .workspace-leaf.obsidian-vertical-tabs-tab-content .tree-item-self.is-active .tree-item-inner {
+  margin: 8px 2px;
+  margin-inline-start: 6px;
+  margin-inline-end: -4px;
+  color: var(--color-accent-1);
+  font-weight: 500;
+}
