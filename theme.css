@@ -4,6 +4,7 @@
    Dark theme vars
    ========= */
 .theme-dark {
+    --toggle-thumb-color: var(--text-normal);
     --caret-color: var(--color-accent);
     --checkbox-color: var(--color-tang);
     --text-error: rgb(255, 138, 138);
@@ -19,8 +20,17 @@
     --tab-container-background: var(--titlebar-background);
 
     --code-background: #19191d;
+    --interactive-normal: var(--button-background);
+    --interactive-hover: var(--button-background-hover);
 
+    --background-modifier-form-field: #2a2a2a;
     --background-modifier-form-field-hover: #29292d;
+    --dropdown-background: #363636;
+    --dropdown-background-hover: #3f3f3f;
+    --button-background: #363636;
+    --button-background-hover: #3f3f3f;
+    --background-modifier-border: #3a3a3a;
+    --background-modifier-border-hover: #484848;
 
     --accent-red: var(--color-red);
     --accent-orange: var(--color-orange);
@@ -31,6 +41,7 @@
     --accent-purple: var(--color-purple);
     --accent-pink: var(--color-pink);
     --accent-brown: var(--color-brown);
+    --accent-gray: var(--text-normal);
 
     --color-red: #a93f3f;
     --color-orange: #cc692a;
@@ -41,9 +52,11 @@
     --color-purple: #965daf;
     --color-pink: #c85b92;
     --color-brown: #9b674b;
+    --color-gray: var(--text-normal);
     
     --text-normal: #bababa;
     --text-muted: #80807c;
+    --text-faint: var(--text-muted);
 
     --tab-radius: 8px;
 
@@ -51,6 +64,302 @@
 
     --button-radius: 20px;
 }
+
+/* === DARK THEME COLOR OPTIONS === */
+
+.theme-dark.neutral-gray {
+    --toggle-thumb-color: white;
+}
+
+.theme-dark.darker-gray {
+    --background-primary: #171717;
+    --background-primary-alt: #202020;
+    --background-secondary: #171717;
+    --background-secondary-alt: #2a2a2a;
+    --titlebar-background: #141414;
+    --titlebar-background-focused: #111111;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #191919;
+    --text-normal: #bababa;
+    --text-muted: #888888;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #2a2a2a;
+    --background-modifier-form-field-hover: #2e2e2e;
+    --dropdown-background: #363636;
+    --dropdown-background-hover: #404040;
+    --button-background: #363636;
+    --button-background-hover: #404040;
+}
+
+.theme-dark.dark-night {
+    --background-primary: #0b0e16;
+    --background-primary-alt: #161b2a;
+    --background-secondary: #0e1220;
+    --background-secondary-alt: #1f2438;
+    --titlebar-background: #070a14;
+    --titlebar-background-focused: #05070f;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #0f1424;
+    --text-normal: #cfd8e3;
+    --text-muted: #7d8593;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #1c2135;
+    --background-modifier-form-field-hover: #242a42;
+    --dropdown-background: #1c2135;
+    --dropdown-background-hover: #242a42;
+    --button-background: #1c2135;
+    --button-background-hover: #242a42;
+    --background-modifier-border: #1c2135;
+    --background-modifier-border-hover: #242a42;
+}
+
+.theme-dark.amoled {
+    --background-primary: #000000;
+    --background-primary-alt: #111111;
+    --background-secondary: #000000;
+    --background-secondary-alt: #1a1a1a;
+    --titlebar-background: #000000;
+    --titlebar-background-focused: #000000;
+    --tab-container-background: #050505;
+    --code-background: #0a0a0a;
+    --text-normal: #e0e0e0;
+    --text-muted: #808080;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #0d0d0d;
+    --background-modifier-form-field-hover: #111111;
+    --dropdown-background: #1a1a1a;
+    --dropdown-background-hover: #222222;
+    --button-background: #1a1a1a;
+    --button-background-hover: #222222;
+    --background-modifier-border: #0d0d0d;
+    --background-modifier-border-hover: #1a1a1a;
+}
+
+.theme-dark.noble-blue {
+    --background-primary: #0d1b2a;
+    --background-primary-alt: #1b263b;
+    --background-secondary: #0d1b2a;
+    --background-secondary-alt: #2d3748;
+    --titlebar-background: #0a1522;
+    --titlebar-background-focused: #08111c;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #0f1a29;
+    --text-normal: #e2e8f0;
+    --text-muted: #94a3b8;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #1a2536;
+    --background-modifier-form-field-hover: #1e293b;
+    --dropdown-background: #253147;
+    --dropdown-background-hover: #2d3b5a;
+    --button-background: #253147;
+    --button-background-hover: #2d3b5a;
+    --background-modifier-border: #1c2738;
+    --background-modifier-border-hover: #253147;
+}
+
+.theme-dark.magic-purply {
+    --background-primary: #1a1034;
+    --background-primary-alt: #2d1b69;
+    --background-secondary: #1a1034;
+    --background-secondary-alt: #3d2a6a;
+    --titlebar-background: #150d2c;
+    --titlebar-background-focused: #120a25;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #1f153d;
+    --text-normal: #e9d5ff;
+    --text-muted: #8e81b6;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #251a45;
+    --background-modifier-form-field-hover: #2a1f4d;
+    --dropdown-background: #35255e;
+    --dropdown-background-hover: #3f2c70;
+    --button-background: #35255e;
+    --button-background-hover: #3f2c70;
+    --background-modifier-border: #2a1f4d;
+    --background-modifier-border-hover: #35255e;
+}
+
+.theme-dark.midnight-emerald {
+    --background-primary: #0c2d2a;
+    --background-primary-alt: #17403c;
+    --background-secondary: #0c2d2a;
+    --background-secondary-alt: #235750;
+    --titlebar-background: #092421;
+    --titlebar-background-focused: #071d1a;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #0e3531;
+    --text-normal: #d1fae5;
+    --text-muted: #6ee7b7;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #153934;
+    --background-modifier-form-field-hover: #19433e;
+    --dropdown-background: #1f4e48;
+    --dropdown-background-hover: #255a53;
+    --button-background: #1f4e48;
+    --button-background-hover: #255a53;
+    --background-modifier-border: #1c3f3a;
+    --background-modifier-border-hover: #235750;
+}
+
+.theme-dark.deep-ocean {
+    --background-primary: #0f172a;
+    --background-primary-alt: #1e293b;
+    --background-secondary: #0f172a;
+    --background-secondary-alt: #334155;
+    --titlebar-background: #0c1424;
+    --titlebar-background-focused: #0a1120;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #131c30;
+    --text-normal: #b7cae1;
+    --text-muted: #94a3b8;
+    --text-error: #ff8a8a;
+    --toggle-thumb-color: #cfd9e7;
+    --background-modifier-form-field: #1a2536;
+    --background-modifier-form-field-hover: #1e293b;
+    --dropdown-background: #253147;
+    --dropdown-background-hover: #2d3b5a;
+    --button-background: #253147;
+    --button-background-hover: #2d3b5a;
+    --background-modifier-border: #1e293b;
+    --background-modifier-border-hover: #253147;
+}
+
+.theme-dark.crimson-twilight {
+    --background-primary: #1f0a1a;
+    --background-primary-alt: #3d142f;
+    --background-secondary: #1f0a1a;
+    --background-secondary-alt: #5a1f44;
+    --titlebar-background: #1a0715;
+    --titlebar-background-focused: #150511;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #240f1e;
+    --text-normal: #fecdd3;
+    --text-muted: #cc9aa0;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #2d1426;
+    --background-modifier-form-field-hover: #34182c;
+    --dropdown-background: #422033;
+    --dropdown-background-hover: #4d263c;
+    --button-background: #422033;
+    --button-background-hover: #4d263c;
+    --background-modifier-border: #34182c;
+    --background-modifier-border-hover: #422033;
+}
+
+.theme-dark.golden-hour {
+    --background-primary: #2c1a0d;
+    --background-primary-alt: #4a2c1a;
+    --background-secondary: #2c1a0d;
+    --background-secondary-alt: #6b3f22;
+    --titlebar-background: #241508;
+    --titlebar-background-focused: #1d1106;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #311e10;
+    --text-normal: #fde68a;
+    --text-muted: #fbbf24;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #3a2414;
+    --background-modifier-form-field-hover: #422a18;
+    --dropdown-background: #52331d;
+    --dropdown-background-hover: #5e3b22;
+    --button-background: #52331d;
+    --button-background-hover: #5e3b22;
+    --background-modifier-border: #3a2414;
+    --background-modifier-border-hover: #48301c;
+}
+
+.theme-dark.violet-dream {
+    --background-primary: #1e0f33;
+    --background-primary-alt: #341c5c;
+    --background-secondary: #1e0f33;
+    --background-secondary-alt: #4a2a7d;
+    --titlebar-background: #180c2b;
+    --titlebar-background-focused: #140a24;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #23133c;
+    --text-normal: #f3e8ff;
+    --text-muted: #d8b4fe;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #2a1a4a;
+    --background-modifier-form-field-hover: #301e55;
+    --dropdown-background: #3b256e;
+    --dropdown-background-hover: #452b81;
+    --button-background: #3b256e;
+    --button-background-hover: #452b81;
+    --background-modifier-border: #2a1a4a;
+    --background-modifier-border-hover: #362059;
+}
+
+.theme-dark.slate-smoke {
+    --background-primary: #1a202c;
+    --background-primary-alt: #2d3748;
+    --background-secondary: #1a202c;
+    --background-secondary-alt: #4a5568;
+    --titlebar-background: #171d28;
+    --titlebar-background-focused: #141a24;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #1f2532;
+    --text-normal: #edf2f7;
+    --text-muted: #a0aec0;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #252c3b;
+    --background-modifier-form-field-hover: #293241;
+    --dropdown-background: #343e52;
+    --dropdown-background-hover: #3d4960;
+    --button-background: #343e52;
+    --button-background-hover: #3d4960;
+    --background-modifier-border: #2d3748;
+    --background-modifier-border-hover: #374151;
+}
+
+.theme-dark.chocolate {
+    --background-primary: #2a1a0f;
+    --background-primary-alt: #3d2818;
+    --background-secondary: #2a1a0f;
+    --background-secondary-alt: #553723;
+    --titlebar-background: #23150c;
+    --titlebar-background-focused: #1d1209;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #2f1e12;
+    --text-normal: #f5e6d3;
+    --text-muted: #d4a574;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #362314;
+    --background-modifier-form-field-hover: #3d2818;
+    --dropdown-background: #45321f;
+    --dropdown-background-hover: #513a25;
+    --button-background: #45321f;
+    --button-background-hover: #513a25;
+    --background-modifier-border: #362314;
+    --background-modifier-border-hover: #423021;
+}
+
+.theme-dark.dark-chocolate {
+    --background-primary: #1b0f08;
+    --background-primary-alt: #2a170d;
+    --background-secondary: #1b0f08;
+    --background-secondary-alt: #3a2214;
+    --titlebar-background: #150b06;
+    --titlebar-background-focused: #110804;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #21120a;
+    --text-normal: #f1dcc6;
+    --text-muted: #c39a6b;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #25140b;
+    --background-modifier-form-field-hover: #2a170d;
+    --dropdown-background: #332013;
+    --dropdown-background-hover: #3b2617;
+    --button-background: #332013;
+    --button-background-hover: #3b2617;
+    --background-modifier-border: #25140b;
+    --background-modifier-border-hover: #332013;
+}
+
+
+
+
+
 
 /* selection */
 .theme-dark ::selection,
@@ -927,124 +1236,464 @@ display: none !important;
 /* DO: Add a dropdown for cssclasses case style */
 
 /* ===== HEADING COLORS DROPDOWN ===== */
-/* Color options for all headings */
-.heading-color-normal .cm-header,
-.heading-color-normal h1,
-.heading-color-normal h2,
-.heading-color-normal h3,
-.heading-color-normal h4,
-.heading-color-normal h5,
-.heading-color-normal h6 {
+/* Color options for all headings - only apply when per-heading-colors-toggle is OFF */
+body:not(.per-heading-colors-toggle).heading-color-normal .cm-header,
+body:not(.per-heading-colors-toggle).heading-color-normal h1,
+body:not(.per-heading-colors-toggle).heading-color-normal h2,
+body:not(.per-heading-colors-toggle).heading-color-normal h3,
+body:not(.per-heading-colors-toggle).heading-color-normal h4,
+body:not(.per-heading-colors-toggle).heading-color-normal h5,
+body:not(.per-heading-colors-toggle).heading-color-normal h6 {
     color: var(--text-normal) !important;
 }
 
-.heading-color-accent .cm-header,
-.heading-color-accent h1,
-.heading-color-accent h2,
-.heading-color-accent h3,
-.heading-color-accent h4,
-.heading-color-accent h5,
-.heading-color-accent h6 {
+body:not(.per-heading-colors-toggle).heading-color-accent .cm-header,
+body:not(.per-heading-colors-toggle).heading-color-accent h1,
+body:not(.per-heading-colors-toggle).heading-color-accent h2,
+body:not(.per-heading-colors-toggle).heading-color-accent h3,
+body:not(.per-heading-colors-toggle).heading-color-accent h4,
+body:not(.per-heading-colors-toggle).heading-color-accent h5,
+body:not(.per-heading-colors-toggle).heading-color-accent h6 {
     color: var(--interactive-accent) !important;
 }
 
-.heading-color-red .cm-header,
-.heading-color-red h1,
-.heading-color-red h2,
-.heading-color-red h3,
-.heading-color-red h4,
-.heading-color-red h5,
-.heading-color-red h6 {
+body:not(.per-heading-colors-toggle).heading-color-red .cm-header,
+body:not(.per-heading-colors-toggle).heading-color-red h1,
+body:not(.per-heading-colors-toggle).heading-color-red h2,
+body:not(.per-heading-colors-toggle).heading-color-red h3,
+body:not(.per-heading-colors-toggle).heading-color-red h4,
+body:not(.per-heading-colors-toggle).heading-color-red h5,
+body:not(.per-heading-colors-toggle).heading-color-red h6 {
     color: var(--color-red) !important;
 }
 
-.heading-color-orange .cm-header,
-.heading-color-orange h1,
-.heading-color-orange h2,
-.heading-color-orange h3,
-.heading-color-orange h4,
-.heading-color-orange h5,
-.heading-color-orange h6 {
+body:not(.per-heading-colors-toggle).heading-color-orange .cm-header,
+body:not(.per-heading-colors-toggle).heading-color-orange h1,
+body:not(.per-heading-colors-toggle).heading-color-orange h2,
+body:not(.per-heading-colors-toggle).heading-color-orange h3,
+body:not(.per-heading-colors-toggle).heading-color-orange h4,
+body:not(.per-heading-colors-toggle).heading-color-orange h5,
+body:not(.per-heading-colors-toggle).heading-color-orange h6 {
     color: var(--color-orange) !important;
 }
 
-.heading-color-yellow .cm-header,
-.heading-color-yellow h1,
-.heading-color-yellow h2,
-.heading-color-yellow h3,
-.heading-color-yellow h4,
-.heading-color-yellow h5,
-.heading-color-yellow h6 {
+body:not(.per-heading-colors-toggle).heading-color-yellow .cm-header,
+body:not(.per-heading-colors-toggle).heading-color-yellow h1,
+body:not(.per-heading-colors-toggle).heading-color-yellow h2,
+body:not(.per-heading-colors-toggle).heading-color-yellow h3,
+body:not(.per-heading-colors-toggle).heading-color-yellow h4,
+body:not(.per-heading-colors-toggle).heading-color-yellow h5,
+body:not(.per-heading-colors-toggle).heading-color-yellow h6 {
     color: var(--color-yellow) !important;
 }
 
-.heading-color-green .cm-header,
-.heading-color-green h1,
-.heading-color-green h2,
-.heading-color-green h3,
-.heading-color-green h4,
-.heading-color-green h5,
-.heading-color-green h6 {
+body:not(.per-heading-colors-toggle).heading-color-green .cm-header,
+body:not(.per-heading-colors-toggle).heading-color-green h1,
+body:not(.per-heading-colors-toggle).heading-color-green h2,
+body:not(.per-heading-colors-toggle).heading-color-green h3,
+body:not(.per-heading-colors-toggle).heading-color-green h4,
+body:not(.per-heading-colors-toggle).heading-color-green h5,
+body:not(.per-heading-colors-toggle).heading-color-green h6 {
     color: var(--color-green) !important;
 }
 
-.heading-color-cyan .cm-header,
-.heading-color-cyan h1,
-.heading-color-cyan h2,
-.heading-color-cyan h3,
-.heading-color-cyan h4,
-.heading-color-cyan h5,
-.heading-color-cyan h6 {
+body:not(.per-heading-colors-toggle).heading-color-cyan .cm-header,
+body:not(.per-heading-colors-toggle).heading-color-cyan h1,
+body:not(.per-heading-colors-toggle).heading-color-cyan h2,
+body:not(.per-heading-colors-toggle).heading-color-cyan h3,
+body:not(.per-heading-colors-toggle).heading-color-cyan h4,
+body:not(.per-heading-colors-toggle).heading-color-cyan h5,
+body:not(.per-heading-colors-toggle).heading-color-cyan h6 {
     color: var(--color-cyan) !important;
 }
 
-.heading-color-blue .cm-header,
-.heading-color-blue h1,
-.heading-color-blue h2,
-.heading-color-blue h3,
-.heading-color-blue h4,
-.heading-color-blue h5,
-.heading-color-blue h6 {
+body:not(.per-heading-colors-toggle).heading-color-blue .cm-header,
+body:not(.per-heading-colors-toggle).heading-color-blue h1,
+body:not(.per-heading-colors-toggle).heading-color-blue h2,
+body:not(.per-heading-colors-toggle).heading-color-blue h3,
+body:not(.per-heading-colors-toggle).heading-color-blue h4,
+body:not(.per-heading-colors-toggle).heading-color-blue h5,
+body:not(.per-heading-colors-toggle).heading-color-blue h6 {
     color: var(--color-blue) !important;
 }
 
-.heading-color-purple .cm-header,
-.heading-color-purple h1,
-.heading-color-purple h2,
-.heading-color-purple h3,
-.heading-color-purple h4,
-.heading-color-purple h5,
-.heading-color-purple h6 {
+body:not(.per-heading-colors-toggle).heading-color-purple .cm-header,
+body:not(.per-heading-colors-toggle).heading-color-purple h1,
+body:not(.per-heading-colors-toggle).heading-color-purple h2,
+body:not(.per-heading-colors-toggle).heading-color-purple h3,
+body:not(.per-heading-colors-toggle).heading-color-purple h4,
+body:not(.per-heading-colors-toggle).heading-color-purple h5,
+body:not(.per-heading-colors-toggle).heading-color-purple h6 {
     color: var(--color-purple) !important;
 }
 
-.heading-color-pink .cm-header,
-.heading-color-pink h1,
-.heading-color-pink h2,
-.heading-color-pink h3,
-.heading-color-pink h4,
-.heading-color-pink h5,
-.heading-color-pink h6 {
+body:not(.per-heading-colors-toggle).heading-color-pink .cm-header,
+body:not(.per-heading-colors-toggle).heading-color-pink h1,
+body:not(.per-heading-colors-toggle).heading-color-pink h2,
+body:not(.per-heading-colors-toggle).heading-color-pink h3,
+body:not(.per-heading-colors-toggle).heading-color-pink h4,
+body:not(.per-heading-colors-toggle).heading-color-pink h5,
+body:not(.per-heading-colors-toggle).heading-color-pink h6 {
     color: var(--color-pink) !important;
 }
 
-.heading-color-gray .cm-header,
-.heading-color-gray h1,
-.heading-color-gray h2,
-.heading-color-gray h3,
-.heading-color-gray h4,
-.heading-color-gray h5,
-.heading-color-gray h6 {
+body:not(.per-heading-colors-toggle).heading-color-gray .cm-header,
+body:not(.per-heading-colors-toggle).heading-color-gray h1,
+body:not(.per-heading-colors-toggle).heading-color-gray h2,
+body:not(.per-heading-colors-toggle).heading-color-gray h3,
+body:not(.per-heading-colors-toggle).heading-color-gray h4,
+body:not(.per-heading-colors-toggle).heading-color-gray h5,
+body:not(.per-heading-colors-toggle).heading-color-gray h6 {
     color: var(--text-muted) !important;
 }
 
-.heading-color-brown .cm-header,
-.heading-color-brown h1,
-.heading-color-brown h2,
-.heading-color-brown h3,
-.heading-color-brown h4,
-.heading-color-brown h5,
-.heading-color-brown h6 {
+body:not(.per-heading-colors-toggle).heading-color-brown .cm-header,
+body:not(.per-heading-colors-toggle).heading-color-brown h1,
+body:not(.per-heading-colors-toggle).heading-color-brown h2,
+body:not(.per-heading-colors-toggle).heading-color-brown h3,
+body:not(.per-heading-colors-toggle).heading-color-brown h4,
+body:not(.per-heading-colors-toggle).heading-color-brown h5,
+body:not(.per-heading-colors-toggle).heading-color-brown h6 {
+    color: var(--color-brown) !important;
+}
+
+/* ===== PER-HEADING COLOR RULES ===== */
+
+/* H1 Color options */
+body.per-heading-colors-toggle.h1-color-normal .cm-header-1,
+body.per-heading-colors-toggle.h1-color-normal h1 {
+    color: var(--text-normal) !important;
+}
+body.per-heading-colors-toggle.h1-color-accent .cm-header-1,
+body.per-heading-colors-toggle.h1-color-accent h1 {
+    color: var(--interactive-accent) !important;
+}
+body.per-heading-colors-toggle.h1-color-red .cm-header-1,
+body.per-heading-colors-toggle.h1-color-red h1 {
+    color: var(--color-red) !important;
+}
+body.per-heading-colors-toggle.h1-color-orange .cm-header-1,
+body.per-heading-colors-toggle.h1-color-orange h1 {
+    color: var(--color-orange) !important;
+}
+body.per-heading-colors-toggle.h1-color-yellow .cm-header-1,
+body.per-heading-colors-toggle.h1-color-yellow h1 {
+    color: var(--color-yellow) !important;
+}
+body.per-heading-colors-toggle.h1-color-green .cm-header-1,
+body.per-heading-colors-toggle.h1-color-green h1 {
+    color: var(--color-green) !important;
+}
+body.per-heading-colors-toggle.h1-color-cyan .cm-header-1,
+body.per-heading-colors-toggle.h1-color-cyan h1 {
+    color: var(--color-cyan) !important;
+}
+body.per-heading-colors-toggle.h1-color-blue .cm-header-1,
+body.per-heading-colors-toggle.h1-color-blue h1 {
+    color: var(--color-blue) !important;
+}
+body.per-heading-colors-toggle.h1-color-purple .cm-header-1,
+body.per-heading-colors-toggle.h1-color-purple h1 {
+    color: var(--color-purple) !important;
+}
+body.per-heading-colors-toggle.h1-color-pink .cm-header-1,
+body.per-heading-colors-toggle.h1-color-pink h1 {
+    color: var(--color-pink) !important;
+}
+body.per-heading-colors-toggle.h1-color-gray .cm-header-1,
+body.per-heading-colors-toggle.h1-color-gray h1 {
+    color: var(--text-muted) !important;
+}
+body.per-heading-colors-toggle.h1-color-brown .cm-header-1,
+body.per-heading-colors-toggle.h1-color-brown h1 {
+    color: var(--color-brown) !important;
+}
+
+/* H2 Color options */
+body.per-heading-colors-toggle.h2-color-normal .cm-header-2,
+body.per-heading-colors-toggle.h2-color-normal h2 {
+    color: var(--text-normal) !important;
+}
+body.per-heading-colors-toggle.h2-color-accent .cm-header-2,
+body.per-heading-colors-toggle.h2-color-accent h2 {
+    color: var(--interactive-accent) !important;
+}
+body.per-heading-colors-toggle.h2-color-red .cm-header-2,
+body.per-heading-colors-toggle.h2-color-red h2 {
+    color: var(--color-red) !important;
+}
+body.per-heading-colors-toggle.h2-color-orange .cm-header-2,
+body.per-heading-colors-toggle.h2-color-orange h2 {
+    color: var(--color-orange) !important;
+}
+body.per-heading-colors-toggle.h2-color-yellow .cm-header-2,
+body.per-heading-colors-toggle.h2-color-yellow h2 {
+    color: var(--color-yellow) !important;
+}
+body.per-heading-colors-toggle.h2-color-green .cm-header-2,
+body.per-heading-colors-toggle.h2-color-green h2 {
+    color: var(--color-green) !important;
+}
+body.per-heading-colors-toggle.h2-color-cyan .cm-header-2,
+body.per-heading-colors-toggle.h2-color-cyan h2 {
+    color: var(--color-cyan) !important;
+}
+body.per-heading-colors-toggle.h2-color-blue .cm-header-2,
+body.per-heading-colors-toggle.h2-color-blue h2 {
+    color: var(--color-blue) !important;
+}
+body.per-heading-colors-toggle.h2-color-purple .cm-header-2,
+body.per-heading-colors-toggle.h2-color-purple h2 {
+    color: var(--color-purple) !important;
+}
+body.per-heading-colors-toggle.h2-color-pink .cm-header-2,
+body.per-heading-colors-toggle.h2-color-pink h2 {
+    color: var(--color-pink) !important;
+}
+body.per-heading-colors-toggle.h2-color-gray .cm-header-2,
+body.per-heading-colors-toggle.h2-color-gray h2 {
+    color: var(--text-muted) !important;
+}
+body.per-heading-colors-toggle.h2-color-brown .cm-header-2,
+body.per-heading-colors-toggle.h2-color-brown h2 {
+    color: var(--color-brown) !important;
+}
+
+/* H3 Color options */
+body.per-heading-colors-toggle.h3-color-normal .cm-header-3,
+body.per-heading-colors-toggle.h3-color-normal h3 {
+    color: var(--text-normal) !important;
+}
+body.per-heading-colors-toggle.h3-color-accent .cm-header-3,
+body.per-heading-colors-toggle.h3-color-accent h3 {
+    color: var(--interactive-accent) !important;
+}
+body.per-heading-colors-toggle.h3-color-red .cm-header-3,
+body.per-heading-colors-toggle.h3-color-red h3 {
+    color: var(--color-red) !important;
+}
+body.per-heading-colors-toggle.h3-color-orange .cm-header-3,
+body.per-heading-colors-toggle.h3-color-orange h3 {
+    color: var(--color-orange) !important;
+}
+body.per-heading-colors-toggle.h3-color-yellow .cm-header-3,
+body.per-heading-colors-toggle.h3-color-yellow h3 {
+    color: var(--color-yellow) !important;
+}
+body.per-heading-colors-toggle.h3-color-green .cm-header-3,
+body.per-heading-colors-toggle.h3-color-green h3 {
+    color: var(--color-green) !important;
+}
+body.per-heading-colors-toggle.h3-color-cyan .cm-header-3,
+body.per-heading-colors-toggle.h3-color-cyan h3 {
+    color: var(--color-cyan) !important;
+}
+body.per-heading-colors-toggle.h3-color-blue .cm-header-3,
+body.per-heading-colors-toggle.h3-color-blue h3 {
+    color: var(--color-blue) !important;
+}
+body.per-heading-colors-toggle.h3-color-purple .cm-header-3,
+body.per-heading-colors-toggle.h3-color-purple h3 {
+    color: var(--color-purple) !important;
+}
+body.per-heading-colors-toggle.h3-color-pink .cm-header-3,
+body.per-heading-colors-toggle.h3-color-pink h3 {
+    color: var(--color-pink) !important;
+}
+body.per-heading-colors-toggle.h3-color-gray .cm-header-3,
+body.per-heading-colors-toggle.h3-color-gray h3 {
+    color: var(--text-muted) !important;
+}
+body.per-heading-colors-toggle.h3-color-brown .cm-header-3,
+body.per-heading-colors-toggle.h3-color-brown h3 {
+    color: var(--color-brown) !important;
+}
+
+/* H4 Color options */
+body.per-heading-colors-toggle.h4-color-normal .cm-header-4,
+body.per-heading-colors-toggle.h4-color-normal h4 {
+    color: var(--text-normal) !important;
+}
+body.per-heading-colors-toggle.h4-color-accent .cm-header-4,
+body.per-heading-colors-toggle.h4-color-accent h4 {
+    color: var(--interactive-accent) !important;
+}
+body.per-heading-colors-toggle.h4-color-red .cm-header-4,
+body.per-heading-colors-toggle.h4-color-red h4 {
+    color: var(--color-red) !important;
+}
+body.per-heading-colors-toggle.h4-color-orange .cm-header-4,
+body.per-heading-colors-toggle.h4-color-orange h4 {
+    color: var(--color-orange) !important;
+}
+body.per-heading-colors-toggle.h4-color-yellow .cm-header-4,
+body.per-heading-colors-toggle.h4-color-yellow h4 {
+    color: var(--color-yellow) !important;
+}
+body.per-heading-colors-toggle.h4-color-green .cm-header-4,
+body.per-heading-colors-toggle.h4-color-green h4 {
+    color: var(--color-green) !important;
+}
+body.per-heading-colors-toggle.h4-color-cyan .cm-header-4,
+body.per-heading-colors-toggle.h4-color-cyan h4 {
+    color: var(--color-cyan) !important;
+}
+body.per-heading-colors-toggle.h4-color-blue .cm-header-4,
+body.per-heading-colors-toggle.h4-color-blue h4 {
+    color: var(--color-blue) !important;
+}
+body.per-heading-colors-toggle.h4-color-purple .cm-header-4,
+body.per-heading-colors-toggle.h4-color-purple h4 {
+    color: var(--color-purple) !important;
+}
+body.per-heading-colors-toggle.h4-color-pink .cm-header-4,
+body.per-heading-colors-toggle.h4-color-pink h4 {
+    color: var(--color-pink) !important;
+}
+body.per-heading-colors-toggle.h4-color-gray .cm-header-4,
+body.per-heading-colors-toggle.h4-color-gray h4 {
+    color: var(--text-muted) !important;
+}
+body.per-heading-colors-toggle.h4-color-brown .cm-header-4,
+body.per-heading-colors-toggle.h4-color-brown h4 {
+    color: var(--color-brown) !important;
+}
+
+/* H5 Color options */
+body.per-heading-colors-toggle.h5-color-normal .cm-header-5,
+body.per-heading-colors-toggle.h5-color-normal h5 {
+    color: var(--text-normal) !important;
+}
+body.per-heading-colors-toggle.h5-color-accent .cm-header-5,
+body.per-heading-colors-toggle.h5-color-accent h5 {
+    color: var(--interactive-accent) !important;
+}
+body.per-heading-colors-toggle.h5-color-red .cm-header-5,
+body.per-heading-colors-toggle.h5-color-red h5 {
+    color: var(--color-red) !important;
+}
+body.per-heading-colors-toggle.h5-color-orange .cm-header-5,
+body.per-heading-colors-toggle.h5-color-orange h5 {
+    color: var(--color-orange) !important;
+}
+body.per-heading-colors-toggle.h5-color-yellow .cm-header-5,
+body.per-heading-colors-toggle.h5-color-yellow h5 {
+    color: var(--color-yellow) !important;
+}
+body.per-heading-colors-toggle.h5-color-green .cm-header-5,
+body.per-heading-colors-toggle.h5-color-green h5 {
+    color: var(--color-green) !important;
+}
+body.per-heading-colors-toggle.h5-color-cyan .cm-header-5,
+body.per-heading-colors-toggle.h5-color-cyan h5 {
+    color: var(--color-cyan) !important;
+}
+body.per-heading-colors-toggle.h5-color-blue .cm-header-5,
+body.per-heading-colors-toggle.h5-color-blue h5 {
+    color: var(--color-blue) !important;
+}
+body.per-heading-colors-toggle.h5-color-purple .cm-header-5,
+body.per-heading-colors-toggle.h5-color-purple h5 {
+    color: var(--color-purple) !important;
+}
+body.per-heading-colors-toggle.h5-color-pink .cm-header-5,
+body.per-heading-colors-toggle.h5-color-pink h5 {
+    color: var(--color-pink) !important;
+}
+body.per-heading-colors-toggle.h5-color-gray .cm-header-5,
+body.per-heading-colors-toggle.h5-color-gray h5 {
+    color: var(--text-muted) !important;
+}
+body.per-heading-colors-toggle.h5-color-brown .cm-header-5,
+body.per-heading-colors-toggle.h5-color-brown h5 {
+    color: var(--color-brown) !important;
+}
+
+/* H6 Color options */
+body.per-heading-colors-toggle.h6-color-normal .cm-header-6,
+body.per-heading-colors-toggle.h6-color-normal h6 {
+    color: var(--text-normal) !important;
+}
+body.per-heading-colors-toggle.h6-color-accent .cm-header-6,
+body.per-heading-colors-toggle.h6-color-accent h6 {
+    color: var(--interactive-accent) !important;
+}
+body.per-heading-colors-toggle.h6-color-red .cm-header-6,
+body.per-heading-colors-toggle.h6-color-red h6 {
+    color: var(--color-red) !important;
+}
+body.per-heading-colors-toggle.h6-color-orange .cm-header-6,
+body.per-heading-colors-toggle.h6-color-orange h6 {
+    color: var(--color-orange) !important;
+}
+body.per-heading-colors-toggle.h6-color-yellow .cm-header-6,
+body.per-heading-colors-toggle.h6-color-yellow h6 {
+    color: var(--color-yellow) !important;
+}
+body.per-heading-colors-toggle.h6-color-green .cm-header-6,
+body.per-heading-colors-toggle.h6-color-green h6 {
+    color: var(--color-green) !important;
+}
+body.per-heading-colors-toggle.h6-color-cyan .cm-header-6,
+body.per-heading-colors-toggle.h6-color-cyan h6 {
+    color: var(--color-cyan) !important;
+}
+body.per-heading-colors-toggle.h6-color-blue .cm-header-6,
+body.per-heading-colors-toggle.h6-color-blue h6 {
+    color: var(--color-blue) !important;
+}
+body.per-heading-colors-toggle.h6-color-purple .cm-header-6,
+body.per-heading-colors-toggle.h6-color-purple h6 {
+    color: var(--color-purple) !important;
+}
+body.per-heading-colors-toggle.h6-color-pink .cm-header-6,
+body.per-heading-colors-toggle.h6-color-pink h6 {
+    color: var(--color-pink) !important;
+}
+body.per-heading-colors-toggle.h6-color-gray .cm-header-6,
+body.per-heading-colors-toggle.h6-color-gray h6 {
+    color: var(--text-muted) !important;
+}
+body.per-heading-colors-toggle.h6-color-brown .cm-header-6,
+body.per-heading-colors-toggle.h6-color-brown h6 {
+    color: var(--color-brown) !important;
+}
+
+/* H6 Color options */
+.per-heading-colors-toggle.h6-color-normal h6 {
+    color: var(--text-normal) !important;
+}
+.per-heading-colors-toggle.h6-color-accent h6 {
+    color: var(--interactive-accent) !important;
+}
+.per-heading-colors-toggle.h6-color-red h6 {
+    color: var(--color-red) !important;
+}
+.per-heading-colors-toggle.h6-color-orange h6 {
+    color: var(--color-orange) !important;
+}
+.per-heading-colors-toggle.h6-color-yellow h6 {
+    color: var(--color-yellow) !important;
+}
+.per-heading-colors-toggle.h6-color-green h6 {
+    color: var(--color-green) !important;
+}
+.per-heading-colors-toggle.h6-color-cyan h6 {
+    color: var(--color-cyan) !important;
+}
+.per-heading-colors-toggle.h6-color-blue h6 {
+    color: var(--color-blue) !important;
+}
+.per-heading-colors-toggle.h6-color-purple h6 {
+    color: var(--color-purple) !important;
+}
+.per-heading-colors-toggle.h6-color-pink h6 {
+    color: var(--color-pink) !important;
+}
+.per-heading-colors-toggle.h6-color-gray h6 {
+    color: var(--text-muted) !important;
+}
+.per-heading-colors-toggle.h6-color-brown h6 {
     color: var(--color-brown) !important;
 }
 
@@ -3674,6 +4323,42 @@ settings:
   ########################################
   # Editor & Text Appearance
   ########################################
+
+  - id: dark-theme-colors
+    title: Dark Theme Colors
+    description: Set the theme colors for dark mode
+    type: class-select
+    default: neutral-gray
+    options:
+      - label: Neutral Gray
+        value: neutral-gray
+      - label: Darker Gray
+        value: darker-gray
+      - label: Dark Night
+        value: dark-night
+      - label: Amoled
+        value: amoled
+      - label: Noble Blue
+        value: noble-blue
+      - label: Magic Purple
+        value: magic-purply
+      - label: Emerald
+        value: midnight-emerald
+      - label: Deep Ocean
+        value: deep-ocean
+      - label: Crimson Twilight
+        value: crimson-twilight
+      - label: Golden Hour
+        value: golden-hour
+      - label: Violet Dream
+        value: violet-dream
+      - label: Slate Smoke
+        value: slate-smoke
+      - label: Chocolate
+        value: chocolate
+      - label: Dark Chocolate
+        value: dark-chocolate
+
   - id: heading-editor
     title: Editor & Text Appearance
     type: heading
@@ -3746,6 +4431,205 @@ settings:
         value: heading-color-gray
       - label: Brown
         value: heading-color-brown
+
+  - id: per-heading-colors-toggle
+    title: Enable Per-Heading Colors
+    description: Allow individual color selection for each heading level (H1-H6)
+    type: class-toggle
+    default: false
+    addCommand: false
+
+  - id: h1-color
+    title: H1 Color
+    description: Set the color for H1 headings
+    type: class-select
+    default: h1-color-accent
+    showIf: per-heading-colors-toggle
+    options:
+      - label: Normal Color
+        value: h1-color-normal
+      - label: Accent Color
+        value: h1-color-accent
+      - label: Red
+        value: h1-color-red
+      - label: Orange
+        value: h1-color-orange
+      - label: Yellow
+        value: h1-color-yellow
+      - label: Green
+        value: h1-color-green
+      - label: Cyan
+        value: h1-color-cyan
+      - label: Blue
+        value: h1-color-blue
+      - label: Purple
+        value: h1-color-purple
+      - label: Pink
+        value: h1-color-pink
+      - label: Gray
+        value: h1-color-gray
+      - label: Brown
+        value: h1-color-brown
+
+  - id: h2-color
+    title: H2 Color
+    description: Set the color for H2 headings
+    type: class-select
+    default: h2-color-accent
+    showIf: per-heading-colors-toggle
+    options:
+      - label: Normal Color
+        value: h2-color-normal
+      - label: Accent Color
+        value: h2-color-accent
+      - label: Red
+        value: h2-color-red
+      - label: Orange
+        value: h2-color-orange
+      - label: Yellow
+        value: h2-color-yellow
+      - label: Green
+        value: h2-color-green
+      - label: Cyan
+        value: h2-color-cyan
+      - label: Blue
+        value: h2-color-blue
+      - label: Purple
+        value: h2-color-purple
+      - label: Pink
+        value: h2-color-pink
+      - label: Gray
+        value: h2-color-gray
+      - label: Brown
+        value: h2-color-brown
+
+  - id: h3-color
+    title: H3 Color
+    description: Set the color for H3 headings
+    type: class-select
+    default: h3-color-accent
+    showIf: per-heading-colors-toggle
+    options:
+      - label: Normal Color
+        value: h3-color-normal
+      - label: Accent Color
+        value: h3-color-accent
+      - label: Red
+        value: h3-color-red
+      - label: Orange
+        value: h3-color-orange
+      - label: Yellow
+        value: h3-color-yellow
+      - label: Green
+        value: h3-color-green
+      - label: Cyan
+        value: h3-color-cyan
+      - label: Blue
+        value: h3-color-blue
+      - label: Purple
+        value: h3-color-purple
+      - label: Pink
+        value: h3-color-pink
+      - label: Gray
+        value: h3-color-gray
+      - label: Brown
+        value: h3-color-brown
+
+  - id: h4-color
+    title: H4 Color
+    description: Set the color for H4 headings
+    type: class-select
+    default: h4-color-accent
+    showIf: per-heading-colors-toggle
+    options:
+      - label: Normal Color
+        value: h4-color-normal
+      - label: Accent Color
+        value: h4-color-accent
+      - label: Red
+        value: h4-color-red
+      - label: Orange
+        value: h4-color-orange
+      - label: Yellow
+        value: h4-color-yellow
+      - label: Green
+        value: h4-color-green
+      - label: Cyan
+        value: h4-color-cyan
+      - label: Blue
+        value: h4-color-blue
+      - label: Purple
+        value: h4-color-purple
+      - label: Pink
+        value: h4-color-pink
+      - label: Gray
+        value: h4-color-gray
+      - label: Brown
+        value: h4-color-brown
+
+  - id: h5-color
+    title: H5 Color
+    description: Set the color for H5 headings
+    type: class-select
+    default: h5-color-accent
+    showIf: per-heading-colors-toggle
+    options:
+      - label: Normal Color
+        value: h5-color-normal
+      - label: Accent Color
+        value: h5-color-accent
+      - label: Red
+        value: h5-color-red
+      - label: Orange
+        value: h5-color-orange
+      - label: Yellow
+        value: h5-color-yellow
+      - label: Green
+        value: h5-color-green
+      - label: Cyan
+        value: h5-color-cyan
+      - label: Blue
+        value: h5-color-blue
+      - label: Purple
+        value: h5-color-purple
+      - label: Pink
+        value: h5-color-pink
+      - label: Gray
+        value: h5-color-gray
+      - label: Brown
+        value: h5-color-brown
+
+  - id: h6-color
+    title: H6 Color
+    description: Set the color for H6 headings
+    type: class-select
+    default: h6-color-accent
+    showIf: per-heading-colors-toggle
+    options:
+      - label: Normal Color
+        value: h6-color-normal
+      - label: Accent Color
+        value: h6-color-accent
+      - label: Red
+        value: h6-color-red
+      - label: Orange
+        value: h6-color-orange
+      - label: Yellow
+        value: h6-color-yellow
+      - label: Green
+        value: h6-color-green
+      - label: Cyan
+        value: h6-color-cyan
+      - label: Blue
+        value: h6-color-blue
+      - label: Purple
+        value: h6-color-purple
+      - label: Pink
+        value: h6-color-pink
+      - label: Gray
+        value: h6-color-gray
+      - label: Brown
+        value: h6-color-brown
 
   - id: heading-italic
     title: Italic Text Color
