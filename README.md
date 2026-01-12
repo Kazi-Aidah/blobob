@@ -60,6 +60,9 @@ Design idea: Sharp when active, darkened and standing down when inactive (like b
 # Style Settings
 You can use the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings#obsidian-style-settings-plugin) plugin to activate these extra styles!
 
+## Multiple Theme Colors
+![](assets/theme-colors-dropdown.png)
+
 ## Active Line Highlighting
 ![](assets/active-line-highlight-w-face.png)
 
