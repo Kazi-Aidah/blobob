@@ -4137,5 +4137,4 @@ settings:
 /* dim inactive */
 .dim-inactive .cm-line:not(.cm-active) {
   opacity: 0.6;
-  animation: floatUpDown 3s ease-in-out infinite;
 }
