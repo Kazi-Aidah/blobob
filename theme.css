@@ -661,6 +661,10 @@ display: none !important;
 }
 /* === pinned tab styling === */
 
+.pin-icon-only .workspace .mod-root .workspace-tab-header .workspace-tab-header-inner-close-button {
+  display: none !important;
+}
+
 /* pinned tab only icon show */
 .pin-icon-only .workspace-tab-header:has(.mod-pinned) {
   --tab-max-width: 50px !important;
