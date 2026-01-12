@@ -2096,7 +2096,7 @@ background: var(--background-secondary-alt);
 
   background-color: var(--tag-background-hover);
   /* border: 0.2em solid var(--tag-color); */
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 /* x icon */
@@ -2163,6 +2163,15 @@ background: var(--background-secondary-alt);
   /* text-transform: uppercase; */
   letter-spacing: 0.09em;
     background-color: rgba(var(--mono-rgb-100), 0.1) !important;
+  color: var(--text-normal) !important;
+  font-size: 0.9em;
+}
+
+.cssclasses-3 .metadata-property[data-property-key="cssclasses"] .multi-select-pill:hover {
+  padding: 3px 12px !important;
+  /* text-transform: uppercase; */
+  letter-spacing: 0.09em;
+    background-color: rgba(var(--mono-rgb-100), 0.2) !important;
   color: var(--text-normal) !important;
   font-size: 0.9em;
 }
