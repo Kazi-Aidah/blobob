@@ -450,7 +450,6 @@
 .theme-light select {
     background: rgba(255, 255, 255, 0.7);
     border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 3px;
     color: var(--text-normal);
     font-family: inherit;
 }
@@ -461,7 +460,6 @@
         rgba(255, 255, 255, 0.9), 
         rgba(230, 232, 235, 0.9));
     border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 3px;
     padding: 6px 12px;
     margin: auto 2px;
     color: var(--text-normal);
@@ -1766,8 +1764,100 @@ strong em, em strong { color: var(--bolditalic-color) !important; }
 
 /* ===== BASIC ELEMENTS ===== */
 
+
+/* tiptips */
+.circular-tiptip select,
+.circular-tiptip input,
+.circular-tiptip textarea,
+.circular-tiptip button,
+.circular-tiptip .clickable-icon,
+.circular-tiptip .mod-cta,
+.circular-tiptip .setting-item-control button,
+.circular-tiptip .setting-item-control .clickable-icon {
+  border-radius: 20px !important;
+  --input-radius: 20px;
+}
+
+.rounded-tiptip select,
+.rounded-tiptip input,
+.rounded-tiptip textarea,
+.rounded-tiptip button,
+.rounded-tiptip .clickable-icon,
+.rounded-tiptip .mod-cta,
+.rounded-tiptip .setting-item-control button,
+.rounded-tiptip .setting-item-control .clickable-icon {
+  border-radius: 10px !important;
+  --input-radius: 10px;
+}
+
+.sharp-tiptip select,
+.sharp-tiptip input,
+.sharp-tiptip textarea,
+.sharp-tiptip button,
+.sharp-tiptip .clickable-icon,
+.sharp-tiptip .mod-cta,
+.sharp-tiptip .setting-item-control button,
+.sharp-tiptip .setting-item-control .clickable-icon {
+  border-radius: 0px !important;
+  --input-radius: 0px;
+} 
+  
+
+
+.eye-tiptip select,
+.eye-tiptip input,
+.eye-tiptip textarea,
+.eye-tiptip button,
+.eye-tiptip .clickable-icon,
+.eye-tiptip .mod-cta,
+.eye-tiptip .setting-item-control button,
+.eye-tiptip .setting-item-control .clickable-icon {
+  border-radius: 50% !important;
+  --input-radius: 0px;
+}
+  
+
+.sock-tiptip select,
+.sock-tiptip input,
+.sock-tiptip textarea,
+.sock-tiptip button,
+.sock-tiptip .clickable-icon,
+.sock-tiptip .mod-cta,
+.sock-tiptip .setting-item-control button,
+.sock-tiptip .setting-item-control .clickable-icon {
+  border-radius: 10% !important;
+  --input-radius: 0px;
+}
+
+  
+.hexagon-tiptip select,
+.hexagon-tiptip input,
+.hexagon-tiptip textarea,
+.hexagon-tiptip button,
+.hexagon-tiptip .clickable-icon,
+.hexagon-tiptip .mod-cta,
+.hexagon-tiptip .setting-item-control button,
+.hexagon-tiptip .setting-item-control .clickable-icon {
+  --cut: 6px;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  clip-path: polygon(
+    var(--cut) 0%,
+    calc(100% - var(--cut)) 0%,
+    100% var(--cut),
+    100% calc(100% - var(--cut)),
+    calc(100% - var(--cut)) 100%,
+    var(--cut) 100%,
+    0% calc(100% - var(--cut)),
+    0% var(--cut)
+  );
+}
+
+
+/* ------------- */
+
 .clickable-icon {
-    border-radius: 20px !important;
     transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 2);
 }
 
@@ -1804,7 +1894,6 @@ strong em, em strong { color: var(--bolditalic-color) !important; }
 }
 
 button {
-    border-radius: 20px !important;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 2), background-color 0.2s ease;
     transform: scale(1.0);
     outline: 0px solid var(--background-modifier-border);
@@ -1828,8 +1917,7 @@ button:active {
 }
 
 select {
-  margin-right: 0px !important;
-    border-radius: 20px !important;
+    margin-right: 0px !important;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 2), background-color 0.2s ease;
     padding: auto 20px !important;
     text-align: center;
@@ -1840,13 +1928,11 @@ select {
 } */
 
 select:active {
-    border-radius: 10px !important;
     padding: auto 26px !important;
     transform: scale(0.9);
 }
 
 input {
-    border-radius: 20px !important;
     transition: border-radius 0.2s cubic-bezier(0.175, 0.885, 0.32, 2),
                 border 0.1s ease !important;;
 }
@@ -4364,6 +4450,25 @@ settings:
         value: chocolate
       - label: Dark Chocolate
         value: dark-chocolate
+
+  - id: tiptips
+    title: Select, Buttons & Input Radiuses
+    description: Set the border radius for selects, buttons, and inputs
+    type: class-select
+    default: circular-tiptip
+    options:
+      - label: Circular
+        value: circular-tiptip
+      - label: Rounded
+        value: rounded-tiptip
+      - label: Sharp
+        value: sharp-tiptip
+      - label: Hexagon
+        value: hexagon-tiptip
+      - label: Sock
+        value: sock-tiptip
+      - label: Eye
+        value: eye-tiptip
 
   - id: heading-editor
     title: Editor & Text Appearance
