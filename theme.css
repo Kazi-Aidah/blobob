@@ -2657,7 +2657,7 @@ background: var(--background-secondary-alt);
 
 /* Expanded state */
 .metadata-container:not(.is-collapsed) .metadata-content {
-  transform: scaleY(1.05); /* slight overshoot */
+  transform: scaleY(1.05);
   opacity: 1;
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2), opacity 0.4s ease;
 }
@@ -2712,21 +2712,25 @@ background: var(--background-secondary-alt);
 
 /* Closing animation */
 .metadata-container.is-collapsed {
-  animation: collapse-bounce 0.35s cubic-bezier(0.175, 0.885, 0.32, 2) forwards;
+  animation: collapse-bounce 0.45s cubic-bezier(0.175, 0.885, 0.32, 2) forwards;
   opacity: 0.6;
 }
 
 /* Closing bouncey baby */
 @keyframes collapse-bounce {
   0% { transform: scaleY(1); }
-  40% { transform: scaleY(1.06); }
-  100% { transform: scaleY(0.92); }
+  /* 40% { transform: scaleY(1.06); } */
+  60% { transform: scaleY(0.94); }
+  100% { transform: scaleY(1); }
 }
 
 
 
-
 /* === TAGS === */
+.metadata-property[data-property-key="tags"] .multi-select-pill, .metadata-property[data-property-key="cssclasses"] .multi-select-pill {
+  transition: all 0.15s ease;
+}
+
 .metadata-property[data-property-key="tags"] .multi-select-pill {
   letter-spacing: 0.08em;
   border-radius: 20px !important;
