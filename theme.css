@@ -1770,10 +1770,8 @@ strong em, em strong { color: var(--bolditalic-color) !important; }
 .circular-tiptip input,
 .circular-tiptip textarea,
 .circular-tiptip button,
-.circular-tiptip .clickable-icon,
 .circular-tiptip .mod-cta,
-.circular-tiptip .setting-item-control button,
-.circular-tiptip .setting-item-control .clickable-icon {
+.circular-tiptip .setting-item-control button .circular-tiptip .setting-item-control .clickable-icon {
   border-radius: 20px !important;
   --input-radius: 20px;
 }
@@ -1782,10 +1780,8 @@ strong em, em strong { color: var(--bolditalic-color) !important; }
 .rounded-tiptip input,
 .rounded-tiptip textarea,
 .rounded-tiptip button,
-.rounded-tiptip .clickable-icon,
 .rounded-tiptip .mod-cta,
-.rounded-tiptip .setting-item-control button,
-.rounded-tiptip .setting-item-control .clickable-icon {
+.rounded-tiptip .setting-item-control button {
   border-radius: 10px !important;
   --input-radius: 10px;
 }
@@ -1794,10 +1790,8 @@ strong em, em strong { color: var(--bolditalic-color) !important; }
 .sharp-tiptip input,
 .sharp-tiptip textarea,
 .sharp-tiptip button,
-.sharp-tiptip .clickable-icon,
 .sharp-tiptip .mod-cta,
-.sharp-tiptip .setting-item-control button,
-.sharp-tiptip .setting-item-control .clickable-icon {
+.sharp-tiptip .setting-item-control button {
   border-radius: 0px !important;
   --input-radius: 0px;
 } 
@@ -1808,10 +1802,8 @@ strong em, em strong { color: var(--bolditalic-color) !important; }
 .eye-tiptip input,
 .eye-tiptip textarea,
 .eye-tiptip button,
-.eye-tiptip .clickable-icon,
 .eye-tiptip .mod-cta,
-.eye-tiptip .setting-item-control button,
-.eye-tiptip .setting-item-control .clickable-icon {
+.eye-tiptip .setting-item-control button {
   border-radius: 50% !important;
   --input-radius: 0px;
 }
@@ -1821,10 +1813,8 @@ strong em, em strong { color: var(--bolditalic-color) !important; }
 .sock-tiptip input,
 .sock-tiptip textarea,
 .sock-tiptip button,
-.sock-tiptip .clickable-icon,
 .sock-tiptip .mod-cta,
-.sock-tiptip .setting-item-control button,
-.sock-tiptip .setting-item-control .clickable-icon {
+.sock-tiptip .setting-item-control button {
   border-radius: 10% !important;
   --input-radius: 0px;
 }
@@ -1834,10 +1824,8 @@ strong em, em strong { color: var(--bolditalic-color) !important; }
 .hexagon-tiptip input,
 .hexagon-tiptip textarea,
 .hexagon-tiptip button,
-.hexagon-tiptip .clickable-icon,
 .hexagon-tiptip .mod-cta,
-.hexagon-tiptip .setting-item-control button,
-.hexagon-tiptip .setting-item-control .clickable-icon {
+.hexagon-tiptip .setting-item-control button {
   --cut: 6px;
   border: none !important;
   box-shadow: none !important;
@@ -1854,16 +1842,17 @@ strong em, em strong { color: var(--bolditalic-color) !important; }
   );
 }
 
-
 /* ------------- */
 
 .clickable-icon {
     transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 2);
+    border-radius: 20px !important;
 }
 
 .clickable-icon:hover {
     transform: scale(1.2);
     transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 2);
+    border-radius: 20px !important;
 }
 
 .clickable-icon:active {
@@ -4497,13 +4486,13 @@ settings:
     title: Darken inactive lines
     type: class-toggle
     default: false
-    addCommand: false
+    addCommand: true
 
   - id: float-inactive
     title: Make inactive lines float
     type: class-toggle
     default: false
-    addCommand: false
+    addCommand: true
 
   - id: lined
     title: Lined Notebook
