@@ -1764,83 +1764,41 @@ strong em, em strong { color: var(--bolditalic-color) !important; }
 
 /* ===== BASIC ELEMENTS ===== */
 
-
-/* tiptips */
-.circular-tiptip select,
-.circular-tiptip input,
-.circular-tiptip textarea,
-.circular-tiptip button,
-.circular-tiptip .mod-cta,
-.circular-tiptip .setting-item-control button .circular-tiptip .setting-item-control .clickable-icon {
-  border-radius: 20px !important;
+.circular-tiptip {
+  --button-radius: 20px;
   --input-radius: 20px;
 }
 
-.rounded-tiptip select,
-.rounded-tiptip input,
-.rounded-tiptip textarea,
-.rounded-tiptip button,
-.rounded-tiptip .mod-cta,
-.rounded-tiptip .setting-item-control button {
-  border-radius: 10px !important;
+.rounded-tiptip {
+  --button-radius: 10px;
   --input-radius: 10px;
 }
 
-.sharp-tiptip select,
-.sharp-tiptip input,
-.sharp-tiptip textarea,
-.sharp-tiptip button,
-.sharp-tiptip .mod-cta,
-.sharp-tiptip .setting-item-control button {
-  border-radius: 0px !important;
-  --input-radius: 0px;
-} 
-  
-
-
-.eye-tiptip select,
-.eye-tiptip input,
-.eye-tiptip textarea,
-.eye-tiptip button,
-.eye-tiptip .mod-cta,
-.eye-tiptip .setting-item-control button {
-  border-radius: 50% !important;
-  --input-radius: 0px;
-}
-  
-
-.sock-tiptip select,
-.sock-tiptip input,
-.sock-tiptip textarea,
-.sock-tiptip button,
-.sock-tiptip .mod-cta,
-.sock-tiptip .setting-item-control button {
-  border-radius: 10% !important;
+.sharp-tiptip {
+  --button-radius: 0px;
   --input-radius: 0px;
 }
 
-  
-.hexagon-tiptip select,
-.hexagon-tiptip input,
-.hexagon-tiptip textarea,
-.hexagon-tiptip button,
-.hexagon-tiptip .mod-cta,
-.hexagon-tiptip .setting-item-control button {
-  --cut: 6px;
-  border: none !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  clip-path: polygon(
-    var(--cut) 0%,
-    calc(100% - var(--cut)) 0%,
-    100% var(--cut),
-    100% calc(100% - var(--cut)),
-    calc(100% - var(--cut)) 100%,
-    var(--cut) 100%,
-    0% calc(100% - var(--cut)),
-    0% var(--cut)
-  );
+.eye-tiptip {
+  --button-radius: 999px;
+  --input-radius: 999px;
 }
+
+.sock-tiptip {
+  --button-radius: 10%;
+  --input-radius: 10%;
+}
+
+select,
+.circular-tiptip input,
+textarea,
+button,
+.mod-cta,
+.setting-item-control button,
+.setting-item-control .clickable-icon {
+  border-radius: var(--button-radius) !important;
+}
+
 
 /* ------------- */
 
