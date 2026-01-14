@@ -4,6 +4,7 @@
    Dark theme vars
    ========= */
 .theme-dark {
+    --blockquote-border-thickness: 4px;
     --toggle-thumb-color: var(--text-normal);
     --caret-color: var(--color-accent);
     --checkbox-color: var(--color-tang);
@@ -100,7 +101,7 @@
     --titlebar-background-focused: #05070f;
     --tab-container-background: var(--titlebar-background);
     --code-background: #0f1424;
-    --text-normal: #cfd8e3;
+    --text-normal: #b4c2d2;
     --text-muted: #7d8593;
     --text-error: #ff8a8a;
     --background-modifier-form-field: #1c2135;
@@ -4457,7 +4458,7 @@ settings:
     description: Adds lines to the editor
     type: class-toggle
     default: false
-    addCommand: false
+    addCommand: true
 
   - id: heading-colors
     title: All Headings Color
@@ -5090,3 +5091,38 @@ settings:
   opacity: 0.6;
 }
 
+
+/* === BLOCKQUOTES === */
+
+/* Reading mode blockquote */
+.markdown-preview-view blockquote {
+  border-left: 4px solid var(--color-accent);
+  padding: 0.6em 1em;
+  margin: 0.8em 0;
+  background-color: var(--background-secondary);
+  border-radius: 8px;
+}
+
+/* Live Preview blockquote */
+.markdown-source-view.is-live-preview
+.cm-line.HyperMD-quote {
+  /* border-left: 4px solid var(--color-accent); */
+  background-color: var(--background-secondary);
+  border-radius: 8px !important;
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:before, .markdown-source-view.mod-cm6 .cm-blockquote-border::before {
+    content: "\200b";
+    display: block;
+    width: 1px;
+    border-inline-start: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
+    color: transparent;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.HyperMD-quote.HyperMD-quote-1.cm-line {
+  border-radius: 200px !important;
+}
