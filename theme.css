@@ -4,6 +4,7 @@
    Dark theme vars
    ========= */
 .theme-dark {
+   --nav-hide-text: 'My Vault';
     --blockquote-border-thickness: 4px;
     --toggle-thumb-color: var(--text-normal);
     --caret-color: var(--color-accent);
@@ -1795,8 +1796,7 @@ select,
 textarea,
 button,
 .mod-cta,
-.setting-item-control button,
-.setting-item-control .clickable-icon {
+.setting-item-control button {
   border-radius: var(--button-radius) !important;
 }
 
@@ -1909,8 +1909,38 @@ input:focus {
 .menu-item.tappable {
     border-radius: 20px !important;
     padding: 6px 8px !important;
-    transition: all 0.1s ease !important;
+    transition: all 0.1s ease !important
 }
+
+@media (max-width: 600px) {
+.menu-item.tappable {
+    border-radius: 12px !important;
+    margin: 8px 0px;
+    padding: 12px !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+.menu { border-radius: 20px !important; }
+.view-header {
+  background-color: var(--background-secondary-alt) !important;
+}
+
+.view-header .clickable-icon {
+  background-color: var(--background-secondary-alt) !important;
+  background: var(--background-secondary-alt) !important;
+}
+.clickable-icon {
+  &:hover {
+  transform: scale(0.8);
+  }
+  &:active {
+    transform: none;
+  }
+
+}
+}
+
+
 
 .menu-item.tappable.selected {
     color: var(--color-accent) !important;
@@ -2180,9 +2210,7 @@ input.prompt-input:focus {
 
 /* ===== NAVIGATION ===== */
 
-:root {
-  --nav-hide-text: 'My Vault';
-}
+@media (min-width: 600px) {
 
 .nav-header {
    /* margin-top: -30px; */
@@ -2229,6 +2257,8 @@ input.prompt-input:focus {
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-files-container {
     padding-top: 10px;
+}
+
 }
 
 /* ===== FILE EXPLORER ===== */
