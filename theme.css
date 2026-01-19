@@ -3100,6 +3100,17 @@ background: var(--background-secondary-alt);
 
 .callout-content {
     padding-inline-start: 24px;
+    padding-inline-end: 24px;
+}
+
+.callout-content img {
+    border-radius: var(--radius-m);
+    margin: 6px 0px;
+    margin-top: 10px;
+}
+
+.callout-content table {
+    width: 100%;
 }
 
 /* ===== CALLOUT ANIMATION ===== */
@@ -3107,7 +3118,6 @@ background: var(--background-secondary-alt);
 .callout {
   transform-origin: top;
   transition: transform 0.45s cubic-bezier(0.175, 0.885, 0.32, 2.2), max-height 0.45s ease, padding 0.3s ease, opacity 0.3s ease;
-  max-height: 2000px;
   overflow: hidden;
   opacity: 1;
 }
@@ -3115,7 +3125,6 @@ background: var(--background-secondary-alt);
 /* OPEN STATE */
 .callout:not(.is-collapsed) {
   transform: scaleY(1.0);
-  max-height: 2000px;
   opacity: 1;
 }
 
