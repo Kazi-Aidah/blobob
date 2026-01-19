@@ -1782,8 +1782,8 @@ strong em, em strong { color: var(--bolditalic-color) !important; }
 }
 
 .eye-tiptip {
-  --button-radius: 999px;
-  --input-radius: 999px;
+  --button-radius: 50%;
+  --input-radius: 50%;
 }
 
 .sock-tiptip {
@@ -1791,8 +1791,31 @@ strong em, em strong { color: var(--bolditalic-color) !important; }
   --input-radius: 10%;
 }
 
+.hexagon-tiptip select,
+.hexagon-tiptip input,
+.hexagon-tiptip textarea,
+.hexagon-tiptip button,
+.hexagon-tiptip .mod-cta,
+.hexagon-tiptip .setting-item-control button {
+  --cut: 6px;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  clip-path: polygon(
+    var(--cut) 0%,
+    calc(100% - var(--cut)) 0%,
+    100% var(--cut),
+    100% calc(100% - var(--cut)),
+    calc(100% - var(--cut)) 100%,
+    var(--cut) 100%,
+    0% calc(100% - var(--cut)),
+    0% var(--cut)
+  );
+}
+
+
 select,
-.circular-tiptip input,
+input,
 textarea,
 button,
 .mod-cta,
