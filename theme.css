@@ -5,7 +5,9 @@
    ========= */
 .theme-dark {
    --nav-hide-text: 'My Vault';
+
     --blockquote-border-thickness: 4px;
+
     --toggle-thumb-color: var(--text-normal);
     --caret-color: var(--color-accent);
     --checkbox-color: var(--color-tang);
@@ -1903,13 +1905,28 @@ select:active {
     transform: scale(0.9);
 }
 
-input {
-    transition: border-radius 0.2s cubic-bezier(0.175, 0.885, 0.32, 2),
-                border 0.1s ease !important;;
+input[type=text] {
+    /* border: var(--input-border-width) solid var(--background-modifier-border); */
+    /* border: 2px solid var(--background-modifier-border-hover) !important; */
+  /* box-shadow:
+  0px -0.8px 0px 1px var(--background-modifier-form-field-hover),
+  0px 1px 0.3px 1px #00000040; */
+
+    --background-modifier-form-field: var(--background-secondary-alt);
+  --background-modifier-form-field-hover: var(--background-secondary-alt);
+  --background-modifier-border-focus: var(--text-muted);
+  --background-modifier-border-width: 2px;
+  --input-border-width: 0px;
+
+    transition: border-radius 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.2),
+                background 0.2s ease,
+                background-color 0.2s ease,
+                border 0.1s ease !important;
 }
 
 input:focus {
     border-radius: 10px !important;
+    transition: border-radius 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.2);
 }
 
 .menu {
