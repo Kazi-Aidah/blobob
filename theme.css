@@ -2000,7 +2000,9 @@ strong em, em strong { color: var(--bolditalic-color) !important; }
 .hexagon-tiptip .setting-item-control button,
 .hexagon-tiptip .menu-item.tappable,
 .hexagon-tiptip .vertical-tab-nav-item,
-.suggestion-item.mod-complex.is-selected, .hexagon-tiptip .suggestion-hotkey, .hexagon-tiptip .setting-hotkey {
+.hexagon-tiptip .suggestion-item.mod-complex.is-selected, 
+.hexagon-tiptip .suggestion-hotkey, 
+.hexagon-tiptip .setting-hotkey {
   --cut: 6px;
   border: none !important;
   box-shadow: none !important;
@@ -2017,7 +2019,9 @@ strong em, em strong { color: var(--bolditalic-color) !important; }
   );
 }
 
-.hexagon-tiptip .menu, .hexagon-tiptip .modal, .hexagon-tiptip .prompt, .hexagon-tiptip {
+.hexagon-tiptip .menu, 
+.hexagon-tiptip .modal, 
+.hexagon-tiptip .prompt, .hexagon-tiptip {
   --cut: 12px;
   border: none !important;
   box-shadow: none !important;
@@ -2041,9 +2045,9 @@ button,
 .mod-cta,
 .setting-item-control button,
 .menu-item.tappable, a,
-.sock-tiptip .suggestion-item.mod-complex.is-selected,
-.sock-tiptip .suggestion-hotkey,
-.sock-tiptip .setting-hotkey {
+.suggestion-item.mod-complex.is-selected,
+.suggestion-hotkey,
+.setting-hotkey {
   border-radius: var(--button-radius) !important;
 }
 
@@ -2055,7 +2059,8 @@ button,
 
 .sharp-tiptip .menu, 
 .sharp-tiptip .modal,
-.sharp-tiptip .prompt {
+.sharp-tiptip .prompt,
+.sharp-tiptip .suggestion-item.mod-complex.is-selected {
   border-radius: calc(var(--button-radius) + 2px) !important;
 }
 
@@ -2298,7 +2303,7 @@ vertical-tab-nav-item-icon, .horizontal-tab-nav-item.is-active .vertical-tab-nav
 .vertical-tab-nav-item.is-active {
     border-radius: var(--button-radius);
 
-    transition: padding 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.5), background-color 0s ease, color 0s ease;
+    transition: padding 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.5), background-color 0s ease, color 0s ease;
     /* animation-delay: background-color 0.1s, color 0.1s; */
 
     padding: 8px 8px !important;
@@ -2320,20 +2325,26 @@ vertical-tab-nav-item-icon, .horizontal-tab-nav-item.is-active .vertical-tab-nav
 .vertical-tab-nav-item:not(.is-active):hover{
     border-radius: var(--button-radius);
     transform: translateX(6px);
+    padding: 8px 8px;
     transition: all 0.1s ease-out;
     text-align: center;
+    transition-delay: text-center 4s ease, background-color 2s ease !important;
 }
 
 .vertical-tab-nav-item:not(.is-active):active {
     /* background-color: var(--color-accent) !important; */
     transform: ScaleX(6px), translateX(0) !important;
-    padding: 0px 8px;
+    padding: 4px 8px;
     transition: all 0.05s;
     text-align: center;
     flex-direction: column;
                 /* background-color 0.2s ease-in;
     transition-delay: background-color 0.05s ease; */
 }
+
+/* .vertical-tab-nav-item:not(.is-active):active:hover {
+    transform: ScaleX(6px), translateX(0) !important;
+} */
 
 .vertical-tab-nav-item:not(.is-active):active .vertical-tab-nav-item-icon,
 .vertical-tab-nav-item:not(.is-active):hover .vertical-tab-nav-item-icon {
@@ -2479,6 +2490,7 @@ input[type="color"]:hover {
     /* border-radius: var(--button-radius); */
     color: var(--color-accent-1);
     background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
+    transition: padding 0s ease;
 }
 
 /* .prompt::after {
