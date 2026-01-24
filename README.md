@@ -14,7 +14,9 @@ It supports [Style Settings](https://github.com/mgmeyers/obsidian-style-settings
 ---
 
 ## Settings Tabs
-![](assets/settings-vertical-tabs.gif)
+<!-- ![](assets/settings-vertical-tabs.gif) -->
+![](assets/eye-vertical-tab.gif)
+
 It is animated using ease-in-ease-out and anticipation animation principles.
 
 ## Setting Items
@@ -62,6 +64,8 @@ You can use the [Style Settings](https://github.com/mgmeyers/obsidian-style-sett
 
 ## Multiple Theme Colors
 ![](assets/theme-colors-dropdown.png)
+
+6 Button Styles + 21 Theme Colors 👀
 
 ## Active Line Highlighting
 ![](assets/active-line-highlight-w-face.png)

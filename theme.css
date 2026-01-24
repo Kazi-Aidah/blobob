@@ -508,7 +508,58 @@
     --background-modifier-border-hover: #462c16;
     --background-modifier-border-focus: #63401f;
 }
+.theme-dark.mafia-red {
+    --background-primary: #0a0a0a;
+    --background-primary-alt: #111111;
+    --background-secondary: #0a0a0a;
+    --background-secondary-alt: #1a1a1a;
+    --titlebar-background: #050505;
+    --titlebar-background-focused: #000000;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #101010;
+    --text-normal: #ffffff;
+    --text-muted: #aaaaaa;
+    --text-error: #ff7070;
+    --background-modifier-form-field: #151515;
+    --background-modifier-form-field-hover: #1a1a1a;
+    --dropdown-background: #1a1a1a;
+    --dropdown-background-hover: #222222;
+    --button-background: #1a1a1a;
+    --button-background-hover: #222222;
+    --background-modifier-border: #222222;
+    --background-modifier-border-hover: #2a2a2a;
+    --background-modifier-border-focus: #333333;
+    --color-accent-hsl: 0, 100%, 50%;
+    --color-accent: #c51e1e;
+    --color-accent-1: #da3232;
+    --color-accent-2: #ff5151;
+    --interactive-accent: #b32626;
+    --text-on-accent: #fff;
+    --link-color: #be3a3a;
+    --link-unresolved-color: #a22525;
+    --link-color-hover: #8b0000;
+    --toggle-thumb-color: #b32626;
 
+    .checkbox-container.is-enabled::after {
+      box-shadow: none;
+    }
+
+    .checkbox-container.is-enabled:hover {
+      background-color: #710000;
+    }
+
+    /* .menu-item.tappable {
+      border-radius: 0 !important;
+    }
+
+    .menu {
+      border-radius: 0 !important;
+    }
+    
+    a, .internal-link, .external-link {
+      border-radius: 0px !important;
+    } */
+}
 
 
 
@@ -1946,7 +1997,10 @@ strong em, em strong { color: var(--bolditalic-color) !important; }
 .hexagon-tiptip textarea,
 .hexagon-tiptip button,
 .hexagon-tiptip .mod-cta,
-.hexagon-tiptip .setting-item-control button {
+.hexagon-tiptip .setting-item-control button,
+.hexagon-tiptip .menu-item.tappable,
+.hexagon-tiptip .vertical-tab-nav-item,
+.suggestion-item.mod-complex.is-selected, .hexagon-tiptip .suggestion-hotkey, .hexagon-tiptip .setting-hotkey {
   --cut: 6px;
   border: none !important;
   box-shadow: none !important;
@@ -1963,16 +2017,63 @@ strong em, em strong { color: var(--bolditalic-color) !important; }
   );
 }
 
+.hexagon-tiptip .menu, .hexagon-tiptip .modal, .hexagon-tiptip .prompt, .hexagon-tiptip {
+  --cut: 12px;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  clip-path: polygon(
+    var(--cut) 0%,
+    calc(100% - var(--cut)) 0%,
+    100% var(--cut),
+    100% calc(100% - var(--cut)),
+    calc(100% - var(--cut)) 100%,
+    var(--cut) 100%,
+    0% calc(100% - var(--cut)),
+    0% var(--cut)
+  );
+}
 
 select,
 input,
 textarea,
 button,
 .mod-cta,
-.setting-item-control button {
+.setting-item-control button,
+.menu-item.tappable, a,
+.sock-tiptip .suggestion-item.mod-complex.is-selected,
+.sock-tiptip .suggestion-hotkey,
+.sock-tiptip .setting-hotkey {
   border-radius: var(--button-radius) !important;
 }
 
+.rounded-tiptip .menu, 
+.rounded-tiptip .modal,
+.rounded-tiptip .prompt {
+  border-radius: calc(var(--button-radius) + 2px) !important;
+}
+
+.sharp-tiptip .menu, 
+.sharp-tiptip .modal,
+.sharp-tiptip .prompt {
+  border-radius: calc(var(--button-radius) + 2px) !important;
+}
+
+.sock-tiptip .menu, 
+.sock-tiptip .modal,
+.sock-tiptip .prompt {
+  border-radius: 1.7% !important;
+}
+
+.circular-tiptip .suggestion-item.mod-complex.is-selected {
+  border-radius: var(--button-radius) !important;
+}
+
+.eye-tiptip .suggestion-item.mod-complex.is-selected,
+.eye-tiptip .suggestion-hotkey,
+.eye-tiptip .setting-hotkey {
+  border-radius: var(--button-radius) !important;
+}
 
 /* ------------- */
 
@@ -2078,7 +2179,7 @@ input:focus {
 }
 
 .menu {
-    border-radius: 20px !important;
+    border-radius: 20px;
     transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 2) !important;
     /* padding: 0px 30px !important; */
     overflow: auto !important;
@@ -2087,7 +2188,7 @@ input:focus {
 }
 
 .menu-item.tappable.selected:active {
-    border-radius: 26px !important;
+    border-radius: 26px;
     /* padding: 2px 8px !important; */
     transition: all 0.1s ease;
     /* background-color: hsla(var(--interactive-accent-hsl), 0.6) !important;  */
@@ -2095,14 +2196,14 @@ input:focus {
 }
 
 .menu-item.tappable {
-    border-radius: 20px !important;
+    border-radius: 20px;
     padding: 6px 8px !important;
     transition: all 0.1s ease !important
 }
 
 @media (max-width: 600px) {
 .menu-item.tappable {
-    border-radius: 12px !important;
+    border-radius: 12px;
     margin: 8px 0px;
     padding: 12px !important;
     border: none !important;
@@ -2188,11 +2289,27 @@ input:focus {
 
 /* ===== TABS ===== */
 
+vertical-tab-nav-item-icon, .horizontal-tab-nav-item.is-active .vertical-tab-nav-item-icon, .vertical-tab-nav-item.is-active .vertical-tab-nav-item-icon {
+  color: var(--text-on-accent);
+  transition: color 0s;
+  /* display: none; */
+}
+
 .vertical-tab-nav-item.is-active {
-    border-radius: 10px;
-    transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.5);
-    padding: 6px 8px !important;
+    border-radius: var(--button-radius);
+
+    transition: padding 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.5), background-color 0s ease, color 0s ease;
+    /* animation-delay: background-color 0.1s, color 0.1s; */
+
+    padding: 8px 8px !important;
     text-align: center;
+    color: var(--text-on-accent);
+    background-color: var(--interactive-accent) !important;
+    font-weight: bolder;
+
+    flex-direction: column;
+    gap: 3px;
+    transform: scaleX(1) translateX(0px);
 }
 
 .vertical-tab-nav-item {
@@ -2201,20 +2318,35 @@ input:focus {
 }
 
 .vertical-tab-nav-item:not(.is-active):hover{
-    background: none !important;
-    border-radius: 20px;
+    border-radius: var(--button-radius);
     transform: translateX(6px);
     transition: all 0.1s ease-out;
+    text-align: center;
 }
 
-.vertical-tab-nav-item:not(.is-active):active{
+.vertical-tab-nav-item:not(.is-active):active {
     /* background-color: var(--color-accent) !important; */
-    border-radius: 20px;
-    transform: translateX(30px) !important;
-    transition: transform 0.05s ease-in;
+    transform: ScaleX(6px), translateX(0) !important;
+    padding: 0px 8px;
+    transition: all 0.05s;
+    text-align: center;
+    flex-direction: column;
                 /* background-color 0.2s ease-in;
     transition-delay: background-color 0.05s ease; */
 }
+
+.vertical-tab-nav-item:not(.is-active):active .vertical-tab-nav-item-icon,
+.vertical-tab-nav-item:not(.is-active):hover .vertical-tab-nav-item-icon {
+  display: none;
+}
+
+
+/* .vertical-tab-nav-item:not(.is-active):active{
+    border-radius: 20px;
+    transform: translateX(30px) !important;
+    transition: all 0.05s;
+} */
+
 
 /* ===== CODE BLOCKS ===== */
 
@@ -2339,12 +2471,12 @@ input[type="color"]:hover {
 /* ==== COMMAND PALETTE ==== */
 
 .prompt {
-    border-radius: 20px !important;
+    border-radius: 20px;
     border: 2px solid var(--background-modifier-border) !important;
 }
 
 .suggestion-item.mod-complex.is-selected {
-    border-radius: 8px !important;
+    /* border-radius: var(--button-radius); */
     color: var(--color-accent-1);
     background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
 }
@@ -4636,6 +4768,8 @@ settings:
         value: chocolate
       - label: Dark Chocolate
         value: dark-chocolate
+      - label: Mafia Red
+        value: mafia-red
 
   - id: tiptips
     title: Select, Buttons & Input Radiuses
