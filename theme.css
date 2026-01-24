@@ -47,7 +47,8 @@
     --accent-brown: var(--color-brown);
     --accent-gray: var(--text-normal);
 
-    --color-red: #a93f3f;
+    /* --color-red: #a93f3f; */
+    --color-red: #da4b4b;
     --color-orange: #cc692a;
     --color-yellow: #e8b05a;
     --color-green: #a3bd6a;
@@ -62,6 +63,8 @@
     --text-muted: #80807c;
     --text-faint: var(--text-muted);
 
+    --hr-color: var(--background-modifier-border-focus);
+
     --tab-radius: 8px;
 
     --text-highlight-bg: hsl(var(--interactive-accent-hsl), 0.5);
@@ -74,7 +77,6 @@
 .theme-dark.neutral-gray {
     --toggle-thumb-color: white;
 }
-
 .theme-dark.darker-gray {
     --background-primary: #171717;
     --background-primary-alt: #202020;
@@ -93,6 +95,7 @@
     --dropdown-background-hover: #404040;
     --button-background: #363636;
     --button-background-hover: #404040;
+    --background-modifier-border-focus: #505050;
 }
 
 .theme-dark.dark-night {
@@ -115,6 +118,7 @@
     --button-background-hover: #242a42;
     --background-modifier-border: #1c2135;
     --background-modifier-border-hover: #242a42;
+    --background-modifier-border-focus: #2a3150;
 }
 
 .theme-dark.amoled {
@@ -137,6 +141,7 @@
     --button-background-hover: #222222;
     --background-modifier-border: #0d0d0d;
     --background-modifier-border-hover: #1a1a1a;
+    --background-modifier-border-focus: #2a2a2a;
 }
 
 .theme-dark.noble-blue {
@@ -159,11 +164,12 @@
     --button-background-hover: #2d3b5a;
     --background-modifier-border: #1c2738;
     --background-modifier-border-hover: #253147;
+    --background-modifier-border-focus: #324369;
 }
 
 .theme-dark.magic-purply {
     --background-primary: #1a1034;
-    --background-primary-alt: #2d1b69;
+    --background-primary-alt: #2c1f56;
     --background-secondary: #1a1034;
     --background-secondary-alt: #3d2a6a;
     --titlebar-background: #150d2c;
@@ -181,6 +187,7 @@
     --button-background-hover: #3f2c70;
     --background-modifier-border: #2a1f4d;
     --background-modifier-border-hover: #35255e;
+    --background-modifier-border-focus: #4a3482;
 }
 
 .theme-dark.midnight-emerald {
@@ -203,6 +210,7 @@
     --button-background-hover: #255a53;
     --background-modifier-border: #1c3f3a;
     --background-modifier-border-hover: #235750;
+    --background-modifier-border-focus: #2d6c63;
 }
 
 .theme-dark.deep-ocean {
@@ -226,6 +234,7 @@
     --button-background-hover: #2d3b5a;
     --background-modifier-border: #1e293b;
     --background-modifier-border-hover: #253147;
+    --background-modifier-border-focus: #344664;
 }
 
 .theme-dark.crimson-twilight {
@@ -248,6 +257,7 @@
     --button-background-hover: #4d263c;
     --background-modifier-border: #34182c;
     --background-modifier-border-hover: #422033;
+    --background-modifier-border-focus: #5a2c46;
 }
 
 .theme-dark.golden-hour {
@@ -270,6 +280,7 @@
     --button-background-hover: #5e3b22;
     --background-modifier-border: #3a2414;
     --background-modifier-border-hover: #48301c;
+    --background-modifier-border-focus: #6d4629;
 }
 
 .theme-dark.violet-dream {
@@ -292,6 +303,7 @@
     --button-background-hover: #452b81;
     --background-modifier-border: #2a1a4a;
     --background-modifier-border-hover: #362059;
+    --background-modifier-border-focus: #4c2f8c;
 }
 
 .theme-dark.slate-smoke {
@@ -314,6 +326,7 @@
     --button-background-hover: #3d4960;
     --background-modifier-border: #2d3748;
     --background-modifier-border-hover: #374151;
+    --background-modifier-border-focus: #4a5568;
 }
 
 .theme-dark.chocolate {
@@ -336,6 +349,7 @@
     --button-background-hover: #513a25;
     --background-modifier-border: #362314;
     --background-modifier-border-hover: #423021;
+    --background-modifier-border-focus: #5c422b;
 }
 
 .theme-dark.dark-chocolate {
@@ -358,8 +372,142 @@
     --button-background-hover: #3b2617;
     --background-modifier-border: #25140b;
     --background-modifier-border-hover: #332013;
+    --background-modifier-border-focus: #4a321e;
+}
+.theme-dark.rose-gold {
+    --background-primary: #2a1a1f;
+    --background-primary-alt: #3d252c;
+    --background-secondary: #2a1a1f;
+    --background-secondary-alt: #52303a;
+    --titlebar-background: #23151a;
+    --titlebar-background-focused: #1d1215;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #2f1e23;
+    --text-normal: #f4e0e9;
+    --text-muted: #e0b4c2;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #362228;
+    --background-modifier-form-field-hover: #3d252c;
+    --dropdown-background: #453036;
+    --dropdown-background-hover: #503740;
+    --button-background: #453036;
+    --button-background-hover: #503740;
+    --background-modifier-border: #3d252c;
+    --background-modifier-border-hover: #453036;
+    --background-modifier-border-focus: #9c647a;
+}
+.theme-dark.arctic-ice {
+    --background-primary: #0f1a2a;
+    --background-primary-alt: #1a2840;
+    --background-secondary: #0f1a2a;
+    --background-secondary-alt: #24365a;
+    --titlebar-background: #0c1524;
+    --titlebar-background-focused: #0a1120;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #131e32;
+    --text-normal: #e0f2fe;
+    --text-muted: #a5d8ff;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #1a2840;
+    --background-modifier-form-field-hover: #1f2e4a;
+    --dropdown-background: #24365a;
+    --dropdown-background-hover: #2a3e68;
+    --button-background: #24365a;
+    --button-background-hover: #2a3e68;
+    --background-modifier-border: #1f2e4a;
+    --background-modifier-border-hover: #24365a;
+    --background-modifier-border-focus: #587598;
+}
+.theme-dark.comfort-choco {
+    --background-primary: #261e17;
+    --background-primary-alt: #372d23;
+    --background-secondary: #261e17;
+    --background-secondary-alt: #483c2f;
+    --titlebar-background: #201912;
+    --titlebar-background-focused: #1a140e;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #2b231a;
+    --text-normal: #f0e6d6;
+    --text-muted: #d4c4a8;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #31271e;
+    --background-modifier-form-field-hover: #372d23;
+    --dropdown-background: #3d3328;
+    --dropdown-background-hover: #473c30;
+    --button-background: #3d3328;
+    --button-background-hover: #473c30;
+    --background-modifier-border: #372d23;
+    --background-modifier-border-hover: #3d3328;
+    --background-modifier-border-focus: #6d5f43;
+}
+.theme-dark.lavendar {
+    --background-primary: #1c1a2e;
+    --background-primary-alt: #2a2744;
+    --background-secondary: #1c1a2e;
+    --background-secondary-alt: #38355c;
+    --titlebar-background: #171526;
+    --titlebar-background-focused: #131120;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #211e36;
+    --text-normal: #e6e4f2;
+    --text-muted: #b8b4d9;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #26233f;
+    --background-modifier-form-field-hover: #2a2744;
+    --dropdown-background: #302d50;
+    --dropdown-background-hover: #38355c;
+    --button-background: #302d50;
+    --button-background-hover: #38355c;
+    --background-modifier-border: #2a2744;
+    --background-modifier-border-hover: #302d50;
+    --background-modifier-border-focus: #5b5496;
 }
 
+.theme-dark.more-olives {
+    --background-primary: #181c18;
+    --background-primary-alt: #232823;
+    --background-secondary: #181c18;
+    --background-secondary-alt: #2f352f;
+    --titlebar-background: #141714;
+    --titlebar-background-focused: #101210;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #1c201c;
+    --text-normal: #eaf3ea;
+    --text-muted: #a4b9a4;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #202520;
+    --background-modifier-form-field-hover: #262b26;
+    --dropdown-background: #2a302a;
+    --dropdown-background-hover: #333a33;
+    --button-background: #2a302a;
+    --button-background-hover: #333a33;
+    --background-modifier-border: #232823;
+    --background-modifier-border-hover: #2a302a;
+    --background-modifier-border-focus: #404c40;
+}
+
+.theme-dark.caramel {
+    --background-primary: #261a0f;
+    --background-primary-alt: #382513;
+    --background-secondary: #261a0f;
+    --background-secondary-alt: #4a3019;
+    --titlebar-background: #1f140a;
+    --titlebar-background-focused: #191008;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #2d1e11;
+    --text-normal: #ffeccc;
+    --text-muted: #e0b879;
+    --text-error: #ff9966;
+    --background-modifier-form-field: #3a2611;
+    --background-modifier-form-field-hover: #432b15;
+    --dropdown-background: #4a3019;
+    --dropdown-background-hover: #55361d;
+    --button-background: #4a3019;
+    --button-background-hover: #55361d;
+    --background-modifier-border: #3a2611;
+    --background-modifier-border-hover: #462c16;
+    --background-modifier-border-focus: #63401f;
+}
 
 
 
@@ -3297,7 +3445,6 @@ a.external-link:hover {
   box-decoration-break: clone;
 
   &:hover {
-      background-color: rgba(var(--rose-rgb), 0.3);
       color: var(--link-color);
   }
 }
@@ -4459,20 +4606,32 @@ settings:
         value: amoled
       - label: Noble Blue
         value: noble-blue
-      - label: Magic Purple
-        value: magic-purply
-      - label: Emerald
-        value: midnight-emerald
       - label: Deep Ocean
         value: deep-ocean
+      - label: Arctic Ice
+        value: arctic-ice
+      - label: Slate Smoke
+        value: slate-smoke
+      - label: Lavendar
+        value: lavendar
+      - label: Magic Purple
+        value: magic-purply
+      - label: Violet Dream
+        value: violet-dream
+      - label: Emerald
+        value: midnight-emerald
+      - label: More Olives
+        value: more-olives
+      - label: Rose Gold
+        value: rose-gold
       - label: Crimson Twilight
         value: crimson-twilight
       - label: Golden Hour
         value: golden-hour
-      - label: Violet Dream
-        value: violet-dream
-      - label: Slate Smoke
-        value: slate-smoke
+      - label: Caramel
+        value: caramel
+      - label: Comfort Chocolate
+        value: comfort-choco
       - label: Chocolate
         value: chocolate
       - label: Dark Chocolate
