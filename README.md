@@ -5,11 +5,12 @@ An animated theme for Obsidian!
 ![](assets/screenshot-HQ.png)
 
 As a self-taught animator of 7 years, I love seeing motion in interactions.
-Since Obsidian is a huge part of my life, I'd like to smile more often when I see the UI.
+Since Obsidian is a huge part of my life, I wanted to make it more fun for me (and others).
 
-It supports [Style Settings](https://github.com/mgmeyers/obsidian-style-settings#obsidian-style-settings-plugin) for lots of customization. Blobob Theme is currently in development, so if you find issues or want features and more styles, please create an issue [here](https://github.com/Kazi-Aidah/blobob/issues).
+It supports [Style Settings](https://github.com/mgmeyers/obsidian-style-settings#obsidian-style-settings-plugin) for lots of customization. Blobob Theme is currently in development, so if you find issues or want features or more styles, please create an issue [here](https://github.com/Kazi-Aidah/blobob/issues).
 
 > I'd recommend trying this theme out without reading the rest of the README for surprises.
+> THERE ARE 40+ COLOR THEMES INSIDE ( ≧ᗜ≦ )
 
 ---
 
