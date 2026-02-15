@@ -2900,7 +2900,7 @@ vertical-tab-nav-item-icon, .horizontal-tab-nav-item.is-active .vertical-tab-nav
 .vertical-tab-nav-item.is-active {
     border-radius: var(--button-radius);
 
-    transition: padding 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.8), background-color 0s ease, color 0s ease;
+    transition: padding 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.5), background-color 0s ease, color 0s ease;
     /* animation-delay: background-color 0.1s, color 0.1s; */
 
     padding: 8px 8px !important;
@@ -2933,39 +2933,6 @@ vertical-tab-nav-item-icon, .horizontal-tab-nav-item.is-active .vertical-tab-nav
     padding: 8px 8px;
 }
 
-
-/* ======== OLD VERTICAL TAB ============ */
-
-/* ===== TABS ===== */
-
-.vertical-tab-nav-item.is-active {
-    /* border-radius: 10px; */
-    transition: transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.5);
-    padding: 6px 8px !important;
-    text-align: center;
-}
-
-.vertical-tab-nav-item {
-    /* border-radius: 20px; */
-    transition: all 0.1s ease-out;
-}
-
-.vertical-tab-nav-item:not(.is-active):hover{
-    background: none !important;
-    /* border-radius: 20px; */
-    transform: translateX(6px);
-    transition: all 0.1s ease-out;
-}
-
-.vertical-tab-nav-item:not(.is-active):active{
-    /* background-color: var(--color-accent) !important; */
-    /* border-radius: 20px; */
-    transform: translateX(30px) !important;
-    transition: transform 0.05s ease-in;
-                /* background-color 0.2s ease-in;
-    transition-delay: background-color 0.05s ease; */
-}
-
 /* .vertical-tab-nav-item:not(.is-active):hover .vertical-tab-nav-item-title {
     transform: translateX(10px);
     transition: all 0.1s ease-out;
@@ -2974,7 +2941,7 @@ vertical-tab-nav-item-icon, .horizontal-tab-nav-item.is-active .vertical-tab-nav
 .vertical-tab-nav-item:not(.is-active):active {
     /* background-color: var(--color-accent) !important; */
     transform: ScaleX(6px) translateX(10px) !important;
-    padding: 14px 8px;
+    padding: 4px 8px;
     transition: all 0.05s;
     /* text-align: center; */
     flex-direction: column;
@@ -4042,21 +4009,23 @@ background: var(--background-secondary-alt);
 
 /* ===== CALLOUTS ===== */
 
+:root {
+    --callout-border-width: 2px;
+    --callout-radius: 12px;
+}
+
 .callout {
-  --callout-border-width: 3px;
-  --callout-radius: 12px;
-  --callout-padding: 0px;
-    border: var(--callout-border-width) solid rgba(var(--callout-color), var(--callout-border-opacity));
-    border-radius: var(--callout-radius);
+    border: 2px solid rgba(var(--callout-color), var(--callout-border-opacity));
+    border-width: 2px /* var(--callout-border-width) */ ;
+    border-radius: 12px /*var(--callout-radius)*/ ;
     margin: 1em 0;
     mix-blend-mode: var(--callout-blend-mode);
     background-color: rgba(var(--callout-color), 0.1);
-    padding: var(--callout-padding);
+    padding: 0;
 }
 
 .callout-title {
-   --callout-title-padding: 10px 14px;
-    padding: var(--callout-title-padding);
+    padding: 10px 14px;
     display: flex;
     gap: var(--size-4-1);
     font-size: var(--callout-title-size);
