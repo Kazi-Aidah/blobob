@@ -3211,6 +3211,8 @@ input.prompt-input:focus {
     opacity: 1;
     pointer-events: none;
     transition: opacity 0s ease;
+    width: 100%;
+    text-align: center;
 }
 
 /* On hover, show buttons + hide text */
