@@ -1,11 +1,11 @@
-
+:root {
+  --nav-hide-text: 'My Vault';
+}
 
 /* =========
    Dark theme vars
    ========= */
 .theme-dark {
-   --nav-hide-text: 'My Vault';
-
     --blockquote-border-thickness: 4px;
 
     --toggle-thumb-color: var(--text-normal);
@@ -579,7 +579,6 @@
    Light theme vars
    ========= */
 .theme-light {
-    --nav-hide-text: 'My Vault';
     --blockquote-border-thickness: 4px;
     --toggle-thumb-color: var(--text-normal);
     --caret-color: var(--color-accent);
@@ -3203,7 +3202,7 @@ input.prompt-input:focus {
 
 /* Hide the buttons and show text */
 .workspace-leaf-content[data-type="file-explorer"] .nav-buttons-container::after {
-    content: var(--nav-hide-text); /* this this */
+    content: var(--nav-hide-text) !important;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -3238,49 +3237,94 @@ input.prompt-input:focus {
 }
 
 /* ===== FILE EXPLORER ===== */
-.tree-item-self {
-    border-radius: 10px;
-    transition: background-color 0.2s ease;
+
+.file-exp-left {
+  .nav-file-title .tree-item-icon {
+      margin-inline-start: -20.5px !important;
+  }
+
+  .nav-file-title.is-active .tree-item-icon {
+    margin-inline-start: -15.5px !important;
+  }
+
+  .tree-item-self.is-active {
+      padding: 10px 4px;
+      border-radius: 10px;
+      background-color: hsla(var(--interactive-accent-hsl), 0.2);
+      color: var(--color-accent-1);
+      margin: 8px 0;
+      transition: all 0.3s ease;
+      gap: 4px;
+  }
+
+  .tree-item-self.is-active:hover {
+      background-color: hsla(var(--interactive-accent-hsl), 0.25) !important;
+      color: var(--color-accent-1) !important;
+      margin: 10px 0;
+      transition: all 0.3s ease;
+  }
+
+  .tree-item-self.is-active .tree-item-icon {
+      position: static !important;
+      margin-right: 3px;
+  }
+
+
 }
 
-.nav-file-title .tree-item-icon {
-    margin-inline-start: -20.5px !important;
-}
+.file-exp-center {
+  .tree-item-self {
+      border-radius: 10px;
+      transition: background-color 0.2s ease;
+  }
 
-.tree-item-self.is-active {
-    padding: 10px 4px;
-    border-radius: 10px;
-    background-color: hsla(var(--interactive-accent-hsl), 0.2);
-    color: var(--color-accent-1);
-    margin: 8px 0;
-    transition: all 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-}
+  .nav-file-title.is-active .tree-item-icon {
+    margin-inline-start: -15.5px !important;
+  }
 
-.tree-item-self.is-active:hover {
-    background-color: hsla(var(--interactive-accent-hsl), 0.25) !important;
-    color: var(--color-accent-1) !important;
-    margin: 10px 0;
-    transition: all 0.3s ease;
-}
+  /* .tree-item-self .nav-file-title {
+      display: flex;
+      justify-content: center;
+  } */
 
-.tree-item-self.is-active .nav-file-title,
-.tree-item-self.is-active .tree-item-inner.nav-file-title-content,
-.tree-item-self.is-active .nav-file-tag {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    white-space: nowrap;
-}
+  .nav-file-title .tree-item-icon {
+      margin-inline-start: -20.5px !important;
+  }
 
-.tree-item-self.is-active .tree-item-icon {
-    position: static !important;
-    margin-right: 2px;
-}
+  .tree-item-self.is-active {
+      padding: 10px 4px;
+      border-radius: 10px;
+      background-color: hsla(var(--interactive-accent-hsl), 0.2);
+      color: var(--color-accent-1);
+      margin: 8px 0;
+      transition: all 0.3s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+  }
 
+  .tree-item-self.is-active:hover {
+      background-color: hsla(var(--interactive-accent-hsl), 0.25) !important;
+      color: var(--color-accent-1) !important;
+      margin: 10px 0;
+      transition: all 0.3s ease;
+  }
+
+  .tree-item-self.is-active .nav-file-title,
+  .tree-item-self.is-active .tree-item-inner.nav-file-title-content,
+  .tree-item-self.is-active .nav-file-tag {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+  }
+
+  .tree-item-self.is-active .tree-item-icon {
+      position: static !important;
+      margin-right: 2px;
+  }
+}
 
 /* === folder - I DO NOT LIKE IT ARGH === */
 /* .nav-folder-title {
@@ -5955,16 +5999,31 @@ settings:
   ########################################
   # File Explorer
   ########################################
+
   - id: heading-file-explorer
     title: File Explorer
     type: heading
     level: 1
 
+  - id: file-exp
+    title: File Explorer active file styling
+    description: 
+    type: class-select
+    default: file-exp-left
+    options:
+      - label: Center
+        value: file-exp-center
+      - label: Left
+        value: file-exp-left
+      - label: none
+        value: none
+
   - id: nav-hide-text
     title: Hide Action Buttons in File Explorer with Text
-    description: Text shown when buttons are hidden in file explorer
+    description: Text shown when buttons are hidden in file explorer. USE "" between your text
     type: variable-text
-    default: "My Vault"
+    default: My Vault
+    quote: true
 
   - id: center-folder-title
     title: Center folder title
