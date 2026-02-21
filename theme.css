@@ -2,6 +2,11 @@
   --nav-hide-text: 'My Vault';
 }
 
+
+
+
+
+
 /* =========
    Dark theme vars
    ========= */
@@ -592,7 +597,7 @@
     --background-secondary-alt: #e9ecef;
     
     --titlebar-background: #f1f3f5;
-    --titlebar-background-focused: #e9ecef;
+    --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
 
     --code-background: #ffffff;
@@ -647,7 +652,7 @@
     --background-secondary: #f8f9fa;
     --background-secondary-alt: #e9ecef;
     --titlebar-background: #f8f9fa;
-    --titlebar-background-focused: #f1f3f5;
+    --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
     --code-background: #ffffff;
     --text-normal: #212529;
@@ -670,7 +675,7 @@
     --background-secondary: #e6e8eb;
     --background-secondary-alt: #d8dbdf;
     --titlebar-background: #e6e8eb;
-    --titlebar-background-focused: #d8dbdf;
+    --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
     --code-background: #ffffff;
     --text-normal: #2d3748;
@@ -693,7 +698,7 @@
     --background-secondary: #f5e9d1;
     --background-secondary-alt: #eed9b7;
     --titlebar-background: #f5e9d1;
-    --titlebar-background-focused: #eed9b7;
+    --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
     --code-background: #fffef8;
     --text-normal: #5c4b3a;
@@ -716,7 +721,7 @@
     --background-secondary: #dcfce7;
     --background-secondary-alt: #bbf7d0;
     --titlebar-background: #dcfce7;
-    --titlebar-background-focused: #bbf7d0;
+    --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
     --code-background: #ffffff;
     --text-normal: #14532d;
@@ -739,7 +744,7 @@
     --background-secondary: #f3e8ff;
     --background-secondary-alt: #e9d5ff;
     --titlebar-background: #f3e8ff;
-    --titlebar-background-focused: #e9d5ff;
+    --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
     --code-background: #ffffff;
     --text-normal: #581c87;
@@ -762,7 +767,7 @@
     --background-secondary: #e0f2fe;
     --background-secondary-alt: #bae6fd;
     --titlebar-background: #e0f2fe;
-    --titlebar-background-focused: #bae6fd;
+    --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
     --code-background: #ffffff;
     --text-normal: #0c4a6e;
@@ -785,7 +790,7 @@
     --background-secondary: #ffedd5;
     --background-secondary-alt: #fed7aa;
     --titlebar-background: #ffedd5;
-    --titlebar-background-focused: #fed7aa;
+    --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
     --code-background: #ffffff;
     --text-normal: #7c2d12;
@@ -808,7 +813,7 @@
     --background-secondary: #ffe4e6;
     --background-secondary-alt: #fecdd3;
     --titlebar-background: #ffe4e6;
-    --titlebar-background-focused: #fecdd3;
+    --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
     --code-background: #ffffff;
     --text-normal: #881337;
@@ -831,7 +836,7 @@
     --background-secondary: #ccfbf1;
     --background-secondary-alt: #99f6e4;
     --titlebar-background: #ccfbf1;
-    --titlebar-background-focused: #99f6e4;
+    --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
     --code-background: #ffffff;
     --text-normal: #134e4a;
@@ -854,7 +859,7 @@
     --background-secondary: #fef9c3;
     --background-secondary-alt: #fef08a;
     --titlebar-background: #fef9c3;
-    --titlebar-background-focused: #fef08a;
+    --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
     --code-background: #ffffff;
     --text-normal: #854d0e;
@@ -877,7 +882,7 @@
     --background-secondary: #f1f5f9;
     --background-secondary-alt: #e2e8f0;
     --titlebar-background: #f1f5f9;
-    --titlebar-background-focused: #e2e8f0;
+    --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
     --code-background: #ffffff;
     --text-normal: #1e293b;
@@ -900,7 +905,7 @@
     --background-secondary: #dbeafe;
     --background-secondary-alt: #bfdbfe;
     --titlebar-background: #dbeafe;
-    --titlebar-background-focused: #bfdbfe;
+    --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
     --code-background: #ffffff;
     --text-normal: #1e3a8a;
@@ -923,7 +928,7 @@
     --background-secondary: #e8f5e9;
     --background-secondary-alt: #c8e6c9;
     --titlebar-background: #e8f5e9;
-    --titlebar-background-focused: #c8e6c9;
+    --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
     --code-background: #ffffff;
     --text-normal: #2e7d32;
@@ -946,7 +951,7 @@
     --background-secondary: #a8f0ff;
     --background-secondary-alt: #70e0ff;
     --titlebar-background: #a8f0ff;
-    --titlebar-background-focused: #70e0ff;
+    --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
     --code-background: #ffffff;
     --text-normal: #004f63;
@@ -970,7 +975,7 @@
     --background-secondary: #efb9c8;
     --background-secondary-alt: #e79aad;
     --titlebar-background: #efb9c8;
-    --titlebar-background-focused: #e79aad;
+    --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
     --code-background: #fffafa;
     --text-normal: #6b1238;
@@ -993,7 +998,7 @@
     --background-secondary: #ece6b8;
     --background-secondary-alt: #e0d68f;
     --titlebar-background: #ece6b8;
-    --titlebar-background-focused: #e0d68f;
+    --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
     --code-background: #fffef8;
     --text-normal: #6f6400;
@@ -1016,7 +1021,7 @@
     --background-secondary: #e6b3b8;
     --background-secondary-alt: #d48a92;
     --titlebar-background: #e6b3b8;
-    --titlebar-background-focused: #d48a92;
+    --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
     --code-background: #fffafa;
     --text-normal: #6f0f14;
@@ -1043,7 +1048,7 @@
     --background-secondary: #d6dde5;
     --background-secondary-alt: #c1ccd8;
     --titlebar-background: #d6dde5;
-    --titlebar-background-focused: #c1ccd8;
+    --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
     --code-background: #ffffff;
     --text-normal: #1f2a37;
@@ -1066,7 +1071,7 @@
     --background-secondary: #d8d8c9;
     --background-secondary-alt: #c9c9b5;
     --titlebar-background: #d8d8c9;
-    --titlebar-background-focused: #c9c9b5;
+    --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
     --code-background: #ffffff;
     --text-normal: #5d5c5a;
@@ -1089,7 +1094,7 @@
     --background-secondary: #ffecb3;
     --background-secondary-alt: #ffe082;
     --titlebar-background: #ffecb3;
-    --titlebar-background-focused: #ffe082;
+    --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
     --code-background: #ffffff;
     --text-normal: #eb8502;
@@ -1113,7 +1118,7 @@
     --background-secondary: #e1e5c0;
     --background-secondary-alt: #c8d197;
     --titlebar-background: #e1e5c0;
-    --titlebar-background-focused: #c8d197;
+    --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
     --code-background: #f9f9f2;
     --text-normal: #7a7015;
@@ -1137,7 +1142,7 @@
     --background-secondary: #7a7a7a;
     --background-secondary-alt: #737373;
     --titlebar-background: #7a7a7a;
-    --titlebar-background-focused: #737373;
+    --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
     --code-background: #dcdcdc;
     --text-normal: #000000;
@@ -1160,7 +1165,7 @@
     --background-secondary: #c8e6c9;
     --background-secondary-alt: #a5d6a7;
     --titlebar-background: #c8e6c9;
-    --titlebar-background-focused: #a5d6a7;
+    --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
     --code-background: #e8f5e9;
     --text-normal: #1b5e20;
@@ -1184,7 +1189,7 @@
     --background-secondary: #d0d6ba;
     --background-secondary-alt: #bfc7a1;
     --titlebar-background: #d0d6ba;
-    --titlebar-background-focused: #bfc7a1;
+    --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
     --code-background: #f0f3e8;
     --text-normal: #2f3316;
@@ -1213,7 +1218,7 @@
     --background-secondary: #efe7d8;
     --background-secondary-alt: #e5dcc8;
     --titlebar-background: #efe7d8;
-    --titlebar-background-focused: #e5dcc8;
+    --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
     --code-background: #fbf8f2;
     --text-normal: #3b3328;
@@ -1236,6 +1241,32 @@
     --accent-red: var(--red-accent);
 }
 
+.theme-light.cream {
+    --cream-base: #f6f1e7;
+    --red-accent: #e53935;
+    --cyan-accent: #00acc1;
+    --background-primary: #f6f1e7;
+    --background-primary-alt: #efe7d8;
+    --background-secondary: #efe7d8;
+    --background-secondary-alt: #e5dcc8;
+    --titlebar-background: #efe7d8;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #fbf8f2;
+    --text-normal: #3b3328;
+    --text-muted: #6b6256;
+    --text-error: var(--red-accent);
+    --background-modifier-form-field: #fbf8f2;
+    --background-modifier-form-field-hover: #f6f1e7;
+    --dropdown-background: #fbf8f2;
+    --dropdown-background-hover: #f6f1e7;
+    --button-background: #e5dcc8;
+    --button-background-hover: #d9cfb8;
+    --background-modifier-border: #d9cfb8;
+    --background-modifier-border-hover: #cbbf9f;
+    --toggle-thumb-color: var(--background-primary);
+    --accent-red: var(--red-accent);
+}
 
 
 
@@ -1303,6 +1334,10 @@
   display: none !important;
 }
 
+.focus-mode .workspace-tab-container:has(.cm-scroller) {
+  padding-bottom: 14px !important;
+}
+
 /* ===== Lined Notebook ===== */
 .lined .cm-line {
     border-bottom: 1.5px solid rgba(128, 128, 128, 0.178) !important;
@@ -1313,6 +1348,70 @@
   display: none !important;
 }
 
+.hide-status-bar .focus-mode .workspace-tab-container:has(.cm-scroller) {
+  padding-bottom: 4px !important;
+}
+
+/* ===== center status bar ===== */
+.centered-statusbar {
+.status-bar {
+
+  background-color: transparent !important;
+  position: fixed;
+  right: 33% !important;
+  bottom: 0px;
+  backdrop-filter: blur(15px);
+  border-top: 1px solid var(--shade-plus-darker);
+  border-left: 1px solid var(--shade-plus-darker);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  line-height: 1;
+  padding: 8px 12px 8px 0;
+	opacity: 0.5 !important;
+	transition: .2s;
+    background-color: transparent !important;
+    border: none;
+    padding: 8px !important;
+    transform: none !important;
+    font-size: smaller;
+}
+
+.status-bar:hover {
+	opacity: 1 !important;
+	transition: .2s;
+    background-color: transparent !important;
+    padding: 8px !important;
+    transform: none !important;
+    transition: none;
+}
+
+.status-bar-item {
+  padding: 0 0 0 10px;
+}
+
+.workspace-tab-container:has(.cm-scroller) {
+  padding-bottom: 30px !important;
+  padding-top: 8px !important;
+}
+}
+
+/* ===== icon styles ===== */
+.filled svg {
+	fill: currentColor;
+  fill-opacity: 25%;
+}
+
+.big svg, .big svg.svg-icon, .big .clickable-icon {
+  --icon-size: 22px !important;
+}
+
+.big-filled svg, .big-filled svg.svg-icon, .big-filled .clickable-icon {
+  --icon-size: 22px !important;
+	fill: currentColor;
+  fill-opacity: 25%;
+}
 
 
 /* ==================================================
@@ -1573,9 +1672,14 @@ body.custom-bullets-enabled {
     box-shadow: inset 0 -1px 0 var(--tab-outline-color);
 }
 
-.mod-root .workspace-tab-header-container-inner {
+.mod-root .workspace-tab-header-container {
     /* padding-left: 4px !important; */
     padding-top: 2px;
+}
+
+.bubble .workspace-tab-header-container-inner {
+    padding-bottom: -6px;
+    margin-bottom: -2px;
 }
 
 
@@ -1885,9 +1989,273 @@ display: none !important;
     display: none !important;
 }
 
+/* === bubble tab === */
+/* .bubble .workspace-tab-header,
+.bubble .workspace-tab-header.is-active,
+.bubble .workspace-tab-header.is-active:hover,
+.bubble .workspace-tab-header:not(.is-active) 
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  --tab-curve: 0px !important;
+  border-radius: 12px !important;
+  transition: border-radius 0s ease !important;
+} */
 
+/* focused dark inside */
+.bubble.theme-dark.bubble-border {
+  .workspace-tab-header.is-active {
+    outline: 2px solid var(--background-modifier-border-focus) !important;
+  }
 
+  .workspace-leaf {
+    border: 2px solid var(--background-modifier-border-focus) !important;
+    background-color: var(--background-primary);
+  }
+}
 
+/* dark outside */
+.bubble.theme-dark.bubble-focused-dark-outside {
+  .workspace-tab-header.is-active {
+    background-color: var(--background-primary-alt);
+    outline: 2px solid var(--background-modifier-border-focus);
+  }
+
+  .workspace-leaf {
+    border: 2px solid var(--background-modifier-border-focus);
+    border-radius: 20px;
+    background-color: var(--background-primary-alt) !important;
+    background: var(--background-primary-alt) !important;
+  }
+
+  .workspace-leaf-content, .view-header, .view-content {
+    border-color: var(--background-modifier-border-focus);
+    background-color: var(--background-primary-alt) !important;
+    background: var(--background-primary-alt) !important;
+  }
+
+  .workspace-sidedock-vault-profile {
+    border-top: none !important;
+  }
+
+  .workspace-tab-container {
+    background-color: var(--background-primary);
+  }
+
+  .app-container {
+    background-color: var(--background-primary) !important;
+  }
+
+  .workspace-tab-header-container {
+    background-color: var(--background-primary) !important;
+    box-shadow: none !important;
+  }
+
+  .titlebar-button {
+    background-color: var(--background-primary) !important;
+  }
+
+  .titlebar-button-container {
+    background-color: var(--background-primary) !important;
+  }
+}
+
+/* dark outside */
+.bubble.theme-dark.bubble-dark-outside {
+  .workspace-tab-header.is-active {
+    background-color: var(--background-primary-alt);
+  }
+
+  .workspace-leaf {
+    border-radius: 20px;
+    background-color: var(--background-primary-alt) !important;
+    background: var(--background-primary-alt) !important;
+  }
+
+  .workspace-leaf-content, .view-header, .view-content {
+    background-color: var(--background-primary-alt) !important;
+    background: var(--background-primary-alt) !important;
+  }
+
+  .workspace-sidedock-vault-profile {
+    border-top: none !important;
+  }
+
+  .workspace-tab-container {
+    background-color: var(--background-primary);
+  }
+
+  .app-container {
+    background-color: var(--background-primary) !important;
+  }
+
+  .workspace-tab-header-container {
+    background-color: var(--background-primary) !important;
+    box-shadow: none !important;
+  }
+
+  .titlebar-button {
+    background-color: var(--background-primary) !important;
+  }
+
+  .titlebar-button-container {
+    background-color: var(--background-primary) !important;
+  }
+}
+
+/* Base bubble styles */
+.bubble {
+  /* .theme-dark {
+      .workspace-tab-header.is-active {
+        outline: 2px solid var(--background-modifier-border-focus) !important;
+      }
+  } */
+  .workspace-tab-header {
+    margin: 3px 5px 5px 3px;
+    --tab-curve: 0 !important;
+    border-radius: 12px !important;
+    padding-left: 0px !important;
+    transform: translateY(4px) !important;
+    
+    transition: 
+        border-radius 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+        margin 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2),
+        padding 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+        background-color 0s ease !important;
+  }
+
+  .workspace-tab-header.is-active {
+    --tab-curve: 0;
+    color: var(--tab-text-color-focused-active);
+    background-color: var(--tab-background-active);
+    outline: 2px solid var(--background-modifier-border);
+    margin: 3px 5px 5px 3px;
+    border-radius: 12px !important;
+    border-bottom: none !important;
+    padding-bottom: 0px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    text-overflow: ellipsis;
+    transform: translateY(-1px) !important;
+    
+    transition: 
+        border-radius 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+        margin 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+        padding 0.3s ease,
+        background-color 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+        transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        background-color 0s ease !important;
+  }
+
+  .workspace-tab-header:hover {
+    color: var(--color-accent);
+    transition: color 0s cubic-bezier(0.175, 0.885, 0.32, 1.4) !important;
+  }
+
+  .workspace-tab-header.is-active:hover {
+    --tab-curve: 0 !important;
+    border-radius: 12px !important;
+    transition: 
+        border-radius 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+        background-color 0s ease,
+        margin 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.4) !important;
+  }
+
+  .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+    height: 100%;
+    border-radius: 12px !important;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-top: -2px !important;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  }
+
+  .workspace-split.mod-vertical.mod-root .workspace-tab-header:not(.is-active):not(:has(.mod-pinned)) {
+    margin-left: 0px !important;
+    margin-right: -3px !important;
+    transition: 
+        margin-left 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2),
+        margin-right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2) !important;
+  }
+
+  .workspace-tab-header .workspace-tab-header-inner {
+    transition: 
+        border-radius 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+        margin 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2),
+        padding 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2) !important;
+  }
+
+  .workspace-tab-header:not(.is-active):hover {
+    transform: translateY(2px);
+    transition: 
+        transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+        border-radius 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+  }
+
+  .workspace-tab-header {
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.2) !important;
+  }
+
+  .workspace-tab-container:has(.cm-scroller) {
+    padding-bottom: 16px !important;
+  }
+
+  .workspace-leaf {
+    margin-top: none !important;
+    margin: 4px !important;
+    border: 2px solid var(--background-modifier-border);
+    border-radius: 20px;
+    background-color: var(--background-primary);
+  }
+
+  .workspace-sidedock-vault-profile {
+    border-top: none !important;
+  }
+
+  .workspace-tab-container {
+    background-color: var(--background-primary-alt);
+    padding: 4px;
+    padding-top: 0px !important;
+  }
+
+  .app-container {
+    background-color: var(--background-primary-alt) !important;
+  }
+
+  .horizontal-main-container {
+    padding: 3px;
+  }
+
+  .workspace-leaf-resize-handle {
+    --divider-width: 0px !important;
+  }
+
+  .workspace-tab-header-container {
+    background-color: var(--background-primary-alt) !important;
+    box-shadow: none !important;
+  }
+
+  .titlebar-button {
+    background-color: var(--background-primary-alt) !important;
+    margin-top: 8px;
+    border-radius: 8px;
+  }
+
+  .titlebar-button-container {
+    background-color: var(--background-primary-alt) !important;
+    margin-right: 12px;
+    padding-left: 0px !important;
+    margin-left: 0 !important;
+  }
+
+  .bubble .workspace-tab-header-container::after {
+    opacity: 0 !important;
+    width: 0 !important;
+    background: transparent !important;
+  }
+}
+
+/* === default tab === */
+.default-tab {
 .workspace-tab-header {
   margin: 0px;
     --tab-curve: 16px !important;
@@ -2028,7 +2396,7 @@ display: none !important;
 .workspace-tab-header {
     transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.2) !important;
 }
-
+}
 
 /* DO: Ease-out for all color changes */
 /* DO: Add a dropdown for cssclasses case style */
@@ -3047,6 +3415,14 @@ vertical-tab-nav-item-icon, .horizontal-tab-nav-item.is-active .vertical-tab-nav
     color: var(--text-normal) !important;
 }
 
+.dim-status-bar .status-bar {
+  opacity: 0 !important;
+}
+
+.dim-status-bar .status-bar:hover {
+  opacity: 1 !important;
+}
+
 /* ===== SETTINGS UI ===== */
 
 .setting-hotkey, .suggestion-hotkey {
@@ -3496,6 +3872,7 @@ input.prompt-input:focus {
 .workspace-leaf-content[data-type="file-properties"] .metadata-container {
     .metadata-content {
   background-color: var(--background-secondary) !important;
+  border-radius: var(--button-radius);
 }
 }
 
@@ -4432,7 +4809,7 @@ td, th {
 /* Table headers: darkened background */
 .markdown-preview-view table th,
 .markdown-source-view.mod-cm6 .cm-table-widget th {
-    background-color: var(--titlebar-background-focused) !important;
+    --titlebar-background-focused: var(--titlebar-background);
     color: var(--text-normal);
     border-bottom: 1px solid var(--background-modifier-border);
 }
@@ -5523,11 +5900,38 @@ settings:
         value: payesh
       - label: Chicken
         value: chicken
+      - label: Cream
+        value: cream
       - label: Cream Blue
         value: cream-blue
       - label: 50% Gray
         value: gray
 
+  - id: workspace-layout
+    title: Layouts
+    description: Set the workspace layout for desktop
+    type: class-select
+    default: default-tab
+    options:
+      - label: Blobob Default
+        value: default-tab
+      - label: Bubble
+        value: bubble
+
+  - id: bubble-styling
+    title: Bubble color options
+    description: Only affects dark mode
+    type: class-select
+    default: bubble-dark-inside
+    options:
+      - label: Dark inside
+        value: bubble-dark-inside
+      - label: Focused dark inside
+        value: bubble-border
+      - label: Dark outside
+        value: bubble-dark-outside
+      - label: Focused Dark outside
+        value: bubble-focused-dark-outside
 
   - id: tiptips
     title: Select, Buttons & Input Radiuses
@@ -5547,6 +5951,47 @@ settings:
         value: sock-tiptip
       - label: Eye
         value: eye-tiptip
+
+  - id: icon-style
+    title: Icon style
+    description: Set the icon style
+    type: class-select
+    default: filled
+    options:
+      - label: Default
+        value: default
+      - label: Filled
+        value: filled
+      - label: Big
+        value: big
+      - label: Big Filled
+        value: big-filled
+
+  - id: status-bar
+    title: Status bar options
+    type: class-select
+    default: default
+    options:
+      - label: Default
+        value: default
+      - label: Show on hover
+        value: dim-status-bar
+      - label: Hidden
+        value: hide-status-bar
+      - label: Centered
+        value: centered-statusbar
+    
+  - id: hide-breadcrumbs
+    title: Hide Breadcrumbs
+    type: class-toggle
+    default: true
+
+  - id: focus-mode
+    title: Focus mode
+    description: Removes UI elements. You should assign a hotkey to use it.
+    type: class-toggle
+    default: false
+    addCommand: true
 
   - id: heading-editor
     title: Editor & Text Appearance
@@ -6136,31 +6581,6 @@ settings:
     type: class-toggle
     default: false
     addCommand: false
-
-  ########################################
-  # Focus & Layout
-  ########################################
-  - id: heading-focus
-    title: Focus & Layout
-    type: heading
-    level: 1
-
-  - id: focus-mode
-    title: Focus mode
-    description: Removes UI elements. You should assign a hotkey to use it.
-    type: class-toggle
-    default: false
-    addCommand: true
-
-  - id: hide-status-bar
-    title: Hide Status Bar
-    type: class-toggle
-    default: false
-    
-  - id: hide-breadcrumbs
-    title: Hide Breadcrumbs
-    type: class-toggle
-    default: true
 
     */
 
