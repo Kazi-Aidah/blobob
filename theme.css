@@ -2053,6 +2053,11 @@ display: none !important;
   .titlebar-button {
     background-color: var(--background-primary) !important;
   }
+  
+  .titlebar-button.mod-close:hover {
+    color: var(--text-error);
+    background-color: rgba(var(--color-red-rgb), 0.2) !important;
+  }
 
   .titlebar-button-container {
     background-color: var(--background-primary) !important;
@@ -2095,6 +2100,11 @@ display: none !important;
 
   .titlebar-button {
     background-color: var(--background-primary) !important;
+  }
+
+  .titlebar-button.mod-close:hover {
+    color: var(--text-error);
+    background-color: rgba(var(--color-red-rgb), 0.2) !important;
   }
 
   .titlebar-button-container {
