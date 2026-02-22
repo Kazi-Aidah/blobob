@@ -3,6 +3,7 @@
 # blobob theme
 An animated theme for Obsidian!
 ![](assets/screenshot-HQ.png)
+![](assets/bubble-tabs.gif)
 
 As a self-taught animator of 7 years, I love seeing motion in interactions.
 Since Obsidian is a huge part of my life, I wanted to make it more fun for me (and others).
@@ -16,7 +17,7 @@ It supports [Style Settings](https://github.com/mgmeyers/obsidian-style-settings
 
 ## Settings Tabs
 <!-- ![](assets/settings-vertical-tabs.gif) -->
-![](assets/eye-vertical-tab.gif)
+![](assets/settings-vertical-tabs.gif)
 
 It is animated using ease-in-ease-out and anticipation animation principles.
 
