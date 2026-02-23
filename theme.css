@@ -11,6 +11,7 @@
    Dark theme vars
    ========= */
 .theme-dark {
+    --canvas-background: var(--background-primary);
     --blockquote-border-thickness: 4px;
 
     --toggle-thumb-color: var(--text-normal);
@@ -2174,6 +2175,13 @@ body.custom-bullets-enabled {
 }
 
 .bubble {
+    .mod-sidedock
+        .workspace-tab-header-container-inner
+        .workspace-tab-header.is-active {
+        transform: translateY(2px) translateX(0px) !important;
+        margin: -2px 2px !important;
+    }
+
     /* bubble rounded tab */
     .workspace-tab-header {
         margin: 3px 5px 5px 3px;
@@ -4695,6 +4703,49 @@ input.prompt-input:focus {
 
 .canvas-card-menu {
     border-radius: 12px;
+}
+
+/* ===== CANVAS STYLING ===== */
+.theme-light,
+.theme-dark {
+    --canvas-color-6: 172, 124, 196;
+    --canvas-color-5: 105, 147, 194;
+    --canvas-color-4: 87, 147, 100;
+    --canvas-color-3: 255, 221, 140;
+    --canvas-color-2: 229, 156, 88;
+    --canvas-color-1: 215, 97, 76;
+}
+
+.canvas-node:not(.is-themed) .canvas-node-container {
+    border-color: var(--background-modifier-border) !important;
+}
+
+.canvas-edges > g:not(.is-themed) path.canvas-display-path {
+    stroke: var(--background-modifier-border) !important;
+}
+
+/*.canvas-edges > g:not(.is-themed) marker path {
+    fill: var(--background-modifier-border) !important;
+    stroke: var(--background-modifier-border) !important;
+}*/
+
+body.theme-dark {
+    --canvas-color: 62, 70, 83 !important;
+}
+
+.canvas-node-container {
+    border: 2.5px solid rgb(var(--canvas-color)) !important;
+    border-radius: var(--button-radius);
+}
+
+.canvas-node-content.markdown-embed
+    > .markdown-embed-content
+    > .markdown-preview-view {
+    font-size: 1.5em !important;
+}
+
+.canvas-node.is-themed .canvas-node-content {
+    background-color: rgba(var(--canvas-color), 0.26) !important;
 }
 
 /* ===== CALLOUTS ===== */
