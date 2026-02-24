@@ -53,7 +53,9 @@ It supports [Style Settings](https://github.com/mgmeyers/obsidian-style-settings
 | **Cream Blue**<br>![](assets/themages/Cream%20Blue.png) | **50% Gray**<br>![](assets/themages/50%20Gray.png) |
 
 **My favourites are:**
+
 *Favourite Dark Themes:* Dark Night, Golden Earth, Crimson Twilight, Emerald, Mafia Red
+
 *Favourite Light Themes:* Payesh, Chicken, Corporate, Yellow Teeth
 
 ---
