@@ -5,13 +5,11 @@ An animated theme for Obsidian!
 ![](assets/screenshot-HQ.png)
 ![](assets/bubble-tabs.gif)
 
-As a self-taught animator of 7 years, I love seeing motion in interactions.
-Since Obsidian is a huge part of my life, I wanted to make it more fun for me (and others).
+As a self-taught animator with 7 years of experience, I love seeing motion in interactions. So I created this theme with 60+ colour options and, of course, ANIMATIONS! ( ≧ᗜ≦ )
 
 It supports [Style Settings](https://github.com/mgmeyers/obsidian-style-settings#obsidian-style-settings-plugin) for lots of customization. Blobob Theme is currently in development, so if you find issues or want features or more styles, please create an issue [here](https://github.com/Kazi-Aidah/blobob/issues).
 
 > I'd recommend trying this theme out without reading the rest of the README for surprises.
-> THERE ARE 40+ COLOR THEMES INSIDE ( ≧ᗜ≦ )
 
 ---
 # Colour Options
@@ -54,6 +52,9 @@ It supports [Style Settings](https://github.com/mgmeyers/obsidian-style-settings
 | **Chicken**<br>![](assets/themages/Chicken.png) | **Cream**<br>![](assets/themages/Cream.png) |
 | **Cream Blue**<br>![](assets/themages/Cream%20Blue.png) | **50% Gray**<br>![](assets/themages/50%20Gray.png) |
 
+**My favourites are:**
+*Favourite Dark Themes:* Dark Night, Golden Earth, Crimson Twilight, Emerald, Mafia Red
+*Favourite Light Themes:* Payesh, Chicken, Corporate, Yellow Teeth
 
 ---
 
