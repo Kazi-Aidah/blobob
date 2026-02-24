@@ -2007,7 +2007,7 @@ body.custom-bullets-enabled {
 
 .view-header-title {
     /* font-size: 20px !important; */
-    color: var(--text-faint) !important;
+    color: var(--text-muted) !important;
     text-transform: uppercase;
     letter-spacing: 2px;
     /* text-decoration: underline;
@@ -6380,54 +6380,53 @@ settings:
     type: class-select
     default: neutral-gray
     options:
-      - label: Neutral Gray
-        value: neutral-gray
-      - label: Darker Gray
-        value: darker-gray
-      - label: Dark Night
-        value: dark-night
+
       - label: Amoled
         value: amoled
-      - label: Noble Blue
-        value: noble-blue
-      - label: Deep Ocean
-        value: deep-ocean
-      - label: Deep Blue
-        value: deep-blue
-      - label: Arctic Ice
-        value: arctic-ice
+      - label: Darker Gray
+        value: darker-gray
+      - label: Neutral Gray
+        value: neutral-gray
       - label: Slate Smoke
         value: slate-smoke
-      - label: Lavendar
-        value: lavendar
-      - label: Magic Purple
-        value: magic-purply
-      - label: Violet Dream
-        value: violet-dream
+      - label: Arctic Ice
+        value: arctic-ice
+      - label: Noble Blue
+        value: noble-blue
+      - label: Dark Night
+        value: dark-night
+      - label: Deep Blue
+        value: deep-blue
       - label: Deep Purple
         value: deep-purple
+      - label: Violet Dream
+        value: violet-dream
+      - label: Magic Purple
+        value: magic-purply
+      - label: Lavendar
+        value: lavendar
       - label: Emerald
         value: midnight-emerald
-      - label: Forest Green
-        value: forest-green
       - label: Muted Green
         value: muted-green
       - label: More Olives
         value: more-olives
+      - label: Deep Green
+        value: forest-green
       - label: Rose Gold
         value: rose-gold
-      - label: Deep Magenta
-        value: deep-magenta
-      - label: Deep Hot Pink
-        value: deep-hotpink
       - label: Crimson Twilight
         value: crimson-twilight
       - label: Wine
         value: wine
-      - label: Golden Hour
-        value: golden-hour
+      - label: Deep Hotpink
+        value: deep-hotpink
+      - label: Deep Magenta
+        value: deep-magenta
       - label: Golden Earth
         value: golden-earth
+      - label: Golden Hour
+        value: golden-hour
       - label: Caramel
         value: caramel
       - label: Chocolate
@@ -6446,6 +6445,7 @@ settings:
         value: mafia-red
       - label: Deep Red
         value: deep-red
+
 
   - id: light-theme-colors
     title: Light Theme Colors

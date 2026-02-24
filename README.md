@@ -14,6 +14,48 @@ It supports [Style Settings](https://github.com/mgmeyers/obsidian-style-settings
 > THERE ARE 40+ COLOR THEMES INSIDE ( ≧ᗜ≦ )
 
 ---
+# Colour Options
+**Note:** Heading is green due to my current Obsidian accent color. Some themes override it with their own.
+
+### Dark Theme Colors
+
+| **Amoled**<br>![](assets/themages/Amoled.png) | **Darker Gray**<br>![](assets/themages/Darker%20Gray.png) |
+|-----------------------------------------------|------------------------------------------------------------|
+| **Neutral Gray**<br>![](assets/themages/Neutral%20Gray.png) | **Slate Smoke**<br>![](assets/themages/Slate%20Smoke.png) |
+| **Arctic Ice**<br>![](assets/themages/Arctic%20Ice.png) | **Noble Blue**<br>![](assets/themages/Noble%20Blue.png) |
+| **Dark Night**<br>![](assets/themages/Dark%20Night.png) | **Deep Blue**<br>![](assets/themages/Deep%20Blue.png) |
+| **Deep Purple**<br>![](assets/themages/Deep%20Purple.png) | **Violent Dream**<br>![](assets/themages/Violent%20Dream.png) |
+| **Magic Purple**<br>![](assets/themages/Magic%20Purple.png) | **Lavendar**<br>![](assets/themages/Lavendar.png) |
+| **Emerald**<br>![](assets/themages/Emerald.png) | **Muted Green**<br>![](assets/themages/Muted%20Green.png) |
+| **More Olives**<br>![](assets/themages/More%20Olives.png) | **Deep Green**<br>![](assets/themages/Deep%20Green.png) |
+| **Rose Gold**<br>![](assets/themages/Rose%20Gold.png) | **Crimson Twilight**<br>![](assets/themages/Crimson%20Twilight.png) |
+| **Wine**<br>![](assets/themages/Wine.png) | **Deep Hotpink**<br>![](assets/themages/Deep%20Hotpink.png) |
+| **Deep Magenta**<br>![](assets/themages/Deep%20Magenta.png) | **Golden Earth**<br>![](assets/themages/Golden%20Earth.png) |
+| **Golden Hour**<br>![](assets/themages/Golden%20Hour.png) | **Caramel**<br>![](assets/themages/Caramel.png) |
+| **Chocolate**<br>![](assets/themages/Chocolate.png) | **Dark Chocolate**<br>![](assets/themages/Dark%20Chocolate.png) |
+| **Comfort Chocolate**<br>![](assets/themages/Comfort%20Chocolate.png) | **Tasty Chocolate**<br>![](assets/themages/Tasty%20Chocolate.png) |
+| **Tasty Chocolate 2**<br>![](assets/themages/Tasty%20Chocolate%202.png) | **Leather**<br>![](assets/themages/Leather.png) |
+| **Mafia Red**<br>![](assets/themages/Mafia%20Red.png) | **Deep Red**<br>![](assets/themages/Deep%20Red.png) |
+
+### Light Theme Colors
+
+| **Cloud White**<br>![](assets/themages/Cloud%20White.png) | **Paper White**<br>![](assets/themages/Paper%20White.png) |
+|------------------------------------------------------------|------------------------------------------------------------|
+| **Light Gray**<br>![](assets/themages/Light%20Gray.png) | **Sand**<br>![](assets/themages/Sand.png) |
+| **Peach**<br>![](assets/themages/Peach.png) | **Yellow**<br>![](assets/themages/Yellow.png) |
+| **Green**<br>![](assets/themages/Green.png) | **Cyan**<br>![](assets/themages/Cyan.png) |
+| **Blue**<br>![](assets/themages/Blue.png) | **Azure**<br>![](assets/themages/Azure.png) |
+| **Purple**<br>![](assets/themages/Purple.png) | **Pink**<br>![](assets/themages/Pink.png) |
+| **Herb**<br>![](assets/themages/Herb.png) | **Olive**<br>![](assets/themages/Olive.png) |
+| **Jade**<br>![](assets/themages/Jade.png) | **Rose**<br>![](assets/themages/Rose.png) |
+| **Yellow Teeth**<br>![](assets/themages/Yellow%20Teeth.png) | **Toothpaste**<br>![](assets/themages/Toothpaste.png) |
+| **Blood**<br>![](assets/themages/Blood.png) | **Corporate**<br>![](assets/themages/Corporate.png) |
+| **Disgust**<br>![](assets/themages/Disgust.png) | **Payesh**<br>![](assets/themages/Payesh.png) |
+| **Chicken**<br>![](assets/themages/Chicken.png) | **Cream**<br>![](assets/themages/Cream.png) |
+| **Cream Blue**<br>![](assets/themages/Cream%20Blue.png) | **50% Gray**<br>![](assets/themages/50%20Gray.png) |
+
+
+---
 
 ## Settings Tabs
 <!-- ![](assets/settings-vertical-tabs.gif) -->
@@ -129,3 +171,6 @@ In the theme, the main face you see is the yellow character I named **Bob**:
 
 **Blob** is the original concept, **Bob** is the face used in the theme. 
 Together, they became **blobob**.
+
+
+
