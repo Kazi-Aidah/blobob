@@ -523,7 +523,7 @@
     --titlebar-background-focused: #000000;
     --tab-container-background: var(--titlebar-background);
     --code-background: #101010;
-    --text-normal: #ffffff;
+    --text-normal: #dbd7d1;
     --text-muted: #aaaaaa;
     --text-error: #ff7070;
     --background-modifier-form-field: #151515;
@@ -643,6 +643,268 @@
     --toggle-track-color: #2a5c38;
     --toggle-track-color-hover: #38754c;
 }
+
+.theme-dark.deep-purple {
+    --background-primary: #120d17;
+    --background-primary-alt: #18112b;
+    --background-secondary: #1a1429;
+    --background-secondary-alt: #231b35;
+    --titlebar-background: #0f0b1a;
+    --titlebar-background-focused: #0c0916;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #161128;
+    --background-modifier-form-field: #1d1530;
+    --background-modifier-form-field-hover: #2a1f40;
+    --dropdown-background: #1e1633;
+    --dropdown-background-hover: #2f2350;
+    --button-background: #36296b;
+    --button-background-hover: #4a3890;
+    --button-background-active: #5f47b5;
+    --background-modifier-border: #4a3a8a;
+    --background-modifier-border-hover: #624daa;
+    --background-modifier-border-focus: #7d63cf;
+    --text-normal: #d5c6f2;
+    --text-muted: #b29ae0;
+    --text-faint: #8a71b5;
+    --text-accent: #c7afff;
+    --text-error: #ffa58e;
+    --toggle-thumb-color: var(--background-primary);
+    --toggle-track-color: #4a3a8a;
+    --toggle-track-color-hover: #624daa;
+}
+
+.theme-dark.deep-red {
+    --background-primary: #170d0d;
+    --background-primary-alt: #2b1111;
+    --background-secondary: #291414;
+    --background-secondary-alt: #351b1b;
+    --titlebar-background: #1a0f0f;
+    --titlebar-background-focused: #160c0c;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #281212;
+    --background-modifier-form-field: #301616;
+    --background-modifier-form-field-hover: #402020;
+    --dropdown-background: #331717;
+    --dropdown-background-hover: #502727;
+    --button-background: #6b2a2a;
+    --button-background-hover: #903737;
+    --button-background-active: #b54545;
+    --background-modifier-border: #8a3a3a;
+    --background-modifier-border-hover: #aa4d4d;
+    --background-modifier-border-focus: #cf6363;
+    --text-normal: #f2cfcf;
+    --text-muted: #e0a1a1;
+    --text-faint: #b56f6f;
+    --text-accent: #ffb8b8;
+    --text-error: #ffb0a0;
+    --toggle-thumb-color: var(--background-primary);
+    --toggle-track-color: #8a3a3a;
+    --toggle-track-color-hover: #aa4d4d;
+}
+
+.theme-dark.deep-blue {
+    --background-primary: #0d1117;
+    --background-primary-alt: #11172b;
+    --background-secondary: #141c29;
+    --background-secondary-alt: #1b2635;
+    --titlebar-background: #0b0f1a;
+    --titlebar-background-focused: #090d16;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #0f1728;
+    --background-modifier-form-field: #162030;
+    --background-modifier-form-field-hover: #202e40;
+    --dropdown-background: #172133;
+    --dropdown-background-hover: #253950;
+    --button-background: #2a3f6b;
+    --button-background-hover: #355590;
+    --button-background-active: #426bb5;
+    --background-modifier-border: #3a558a;
+    --background-modifier-border-hover: #4d6daa;
+    --background-modifier-border-focus: #6389cf;
+    --text-normal: #c6dcf2;
+    --text-muted: #9abce0;
+    --text-faint: #7192b5;
+    --text-accent: #afd4ff;
+    --text-error: #ffa58e;
+    --toggle-thumb-color: var(--background-primary);
+    --toggle-track-color: #3a558a;
+    --toggle-track-color-hover: #4d6daa;
+}
+
+.theme-dark.deep-magenta {
+    --background-primary: #170d14;
+    --background-primary-alt: #281120;
+    --background-secondary: #25131e;
+    --background-secondary-alt: #311928;
+    --titlebar-background: #130b11;
+    --titlebar-background-focused: #10090e;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #22121b;
+    --background-modifier-form-field: #2b1521;
+    --background-modifier-form-field-hover: #381c2b;
+    --dropdown-background: #2e1723;
+    --dropdown-background-hover: #452133;
+    --button-background: #632652;
+    --button-background-hover: #82306b;
+    --button-background-active: #a13d84;
+    --background-modifier-border: #7a3365;
+    --background-modifier-border-hover: #94417e;
+    --background-modifier-border-focus: #b3549f;
+    --text-normal: #f2c6e6;
+    --text-muted: #e09ad0;
+    --text-faint: #b571a6;
+    --text-accent: #ffafe9;
+    --text-error: #ffa58e;
+    --toggle-thumb-color: var(--background-primary);
+    --toggle-track-color: #7a3365;
+    --toggle-track-color-hover: #94417e;
+}
+
+.theme-dark.deep-hotpink {
+    --background-primary: #1a0d12;
+    --background-primary-alt: #24111a;
+    --background-secondary: #20131b;
+    --background-secondary-alt: #2c1925;
+    --titlebar-background: #160b10;
+    --titlebar-background-focused: #12090e;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #23121b;
+    --background-modifier-form-field: #271520;
+    --background-modifier-form-field-hover: #301a27;
+    --dropdown-background: #2c1925;
+    --dropdown-background-hover: #3a202a;
+    --button-background: #4a2636;
+    --button-background-hover: #612f46;
+    --background-modifier-border: #68374b;
+    --background-modifier-border-hover: #804460;
+    --background-modifier-border-focus: #a8597a;
+    --text-normal: #ffb8dd;
+    --text-muted: #ff85c0;
+    --text-error: #ff7b6b;
+    --toggle-thumb-color: var(--background-primary);
+}
+
+.theme-dark.wine {
+    --background-primary: #1a050f;
+    --background-primary-alt: #2d0b1c;
+    --background-secondary: #1a050f;
+    --background-secondary-alt: #3c1028;
+    --titlebar-background: #16040d;
+    --titlebar-background-focused: #13030b;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #1f0714;
+    --text-normal: #f0d9e6;
+    --text-muted: #d4b0c9;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #2d0b1c;
+    --background-modifier-form-field-hover: #350e22;
+    --dropdown-background: #3c1028;
+    --dropdown-background-hover: #481332;
+    --button-background: #3c1028;
+    --button-background-hover: #481332;
+    --background-modifier-border: #2d0b1c;
+    --background-modifier-border-hover: #3c1028;
+    --background-modifier-border-focus: #5c1a40;
+    --link-color: #cc338a;
+    --link-unresolved-color: #b32d7a;
+    --link-color-hover: #b32670;;
+}
+
+
+
+.theme-dark.tasty-chocolate {
+    --background-primary: #1a140d;
+    --background-primary-alt: #2c1f14;
+    --background-secondary: #1a140d;
+    --background-secondary-alt: #3a2a20;
+    --titlebar-background: #16110c;
+    --titlebar-background-focused: #140f0a;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #1e1810;
+    --text-normal: #e6d8c9;
+    --text-muted: #b8a58e;
+    --text-error: #d46b5f;
+    --background-modifier-form-field: #2c1f14;
+    --background-modifier-form-field-hover: #352618;
+    --dropdown-background: #3a2a20;
+    --dropdown-background-hover: #453323;
+    --button-background: #3a2a20;
+    --button-background-hover: #453323;
+    --background-modifier-border: #2c1f14;
+    --background-modifier-border-hover: #3a2a20;
+    --background-modifier-border-focus: #55402e;
+}
+
+
+.theme-dark.tasty-chocolate-2 {
+    --background-primary: #1f1810;
+    --background-primary-alt: #312619;
+    --background-secondary: #1f1810;
+    --background-secondary-alt: #433421;
+    --titlebar-background: #1b150e;
+    --titlebar-background-focused: #18120c;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #241d14;
+    --text-normal: #f0e6d6;
+    --text-muted: #d4c4a8;
+    --text-error: #d46b5f;
+    --background-modifier-form-field: #312619;
+    --background-modifier-form-field-hover: #392c1f;
+    --dropdown-background: #433421;
+    --dropdown-background-hover: #4e3c26;
+    --button-background: #433421;
+    --button-background-hover: #4e3c26;
+    --background-modifier-border: #312619;
+    --background-modifier-border-hover: #403325;
+    --background-modifier-border-focus: #5c4a35;
+}
+
+.theme-dark.velvet {
+    --background-primary: #1a0f0f;
+    --background-primary-alt: #2c1818;
+    --background-secondary: #1a0f0f;
+    --background-secondary-alt: #3a2222;
+    --titlebar-background: #160d0d;
+    --titlebar-background-focused: #130b0b;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #1e1313;
+    --text-normal: #f2cfcf;
+    --text-muted: #d4a8a8;
+    --text-error: #d46b5f;
+    --background-modifier-form-field: #2c1818;
+    --background-modifier-form-field-hover: #351d1d;
+    --dropdown-background: #3a2222;
+    --dropdown-background-hover: #462828;
+    --button-background: #3a2222;
+    --button-background-hover: #462828;
+    --background-modifier-border: #2c1818;
+    --background-modifier-border-hover: #3a2222;
+    --background-modifier-border-focus: #553434;
+}
+
+.theme-dark.leather {
+    --background-primary: #201a14;
+    --background-primary-alt: #332a20;
+    --background-secondary: #201a14;
+    --background-secondary-alt: #443829;
+    --titlebar-background: #1c1712;
+    --titlebar-background-focused: #191410;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #251e18;
+    --text-normal: #f2e8dc;
+    --text-muted: #d4c8b8;
+    --text-error: #d46b5f;
+    --background-modifier-form-field: #332a20;
+    --background-modifier-form-field-hover: #3b3025;
+    --dropdown-background: #443829;
+    --dropdown-background-hover: #504330;
+    --button-background: #443829;
+    --button-background-hover: #504330;
+    --background-modifier-border: #332a20;
+    --background-modifier-border-hover: #443829;
+    --background-modifier-border-focus: #5d503c;
+}
+
 
 /* .theme-dark ::selection,
 .theme-light ::selection {
@@ -6130,6 +6392,8 @@ settings:
         value: noble-blue
       - label: Deep Ocean
         value: deep-ocean
+      - label: Deep Blue
+        value: deep-blue
       - label: Arctic Ice
         value: arctic-ice
       - label: Slate Smoke
@@ -6140,6 +6404,8 @@ settings:
         value: magic-purply
       - label: Violet Dream
         value: violet-dream
+      - label: Deep Purple
+        value: deep-purple
       - label: Emerald
         value: midnight-emerald
       - label: Forest Green
@@ -6150,22 +6416,36 @@ settings:
         value: more-olives
       - label: Rose Gold
         value: rose-gold
+      - label: Deep Magenta
+        value: deep-magenta
+      - label: Deep Hot Pink
+        value: deep-hotpink
       - label: Crimson Twilight
         value: crimson-twilight
+      - label: Wine
+        value: wine
       - label: Golden Hour
         value: golden-hour
       - label: Golden Earth
         value: golden-earth
       - label: Caramel
         value: caramel
-      - label: Comfort Chocolate
-        value: comfort-choco
       - label: Chocolate
         value: chocolate
       - label: Dark Chocolate
         value: dark-chocolate
+      - label: Comfort Chocolate
+        value: comfort-choco
+      - label: Tasty Chocolate
+        value: tasty-chocolate
+      - label: Tasty Chocolate 2
+        value: tasty-chocolate-2
+      - label: Leather
+        value: leather
       - label: Mafia Red
         value: mafia-red
+      - label: Deep Red
+        value: deep-red
 
   - id: light-theme-colors
     title: Light Theme Colors

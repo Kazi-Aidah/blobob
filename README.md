@@ -67,7 +67,7 @@ You can use the [Style Settings](https://github.com/mgmeyers/obsidian-style-sett
 ## Multiple Theme Colors
 ![](assets/theme-colors-dropdown.png)
 
-6 Button Styles + 24 Dark Theme Colors 👀 + 25+ Light Theme Colors!!
+6 Button Styles + 35 Dark Theme Colors 👀 + 30+ Light Theme Colors!!
 
 ## Active Line Highlighting
 ![](assets/active-line-highlight-w-face.png)
