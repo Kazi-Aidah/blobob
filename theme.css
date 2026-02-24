@@ -1741,6 +1741,13 @@
     fill-opacity: 25%;
 }
 
+.big-filled .workspace-tab-header .workspace-tab-header-inner-icon,
+.big .workspace-tab-header .workspace-tab-header-inner-icon {
+    --icon-size: 18px !important;
+    width: 22px;
+}
+
+
 /* ==================================================
    BULLET STUFF
 ================================================== */
