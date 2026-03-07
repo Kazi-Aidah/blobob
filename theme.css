@@ -3517,19 +3517,19 @@ a,
 /* ------------- */
 
 .clickable-icon {
-    transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all 0.1s ease;
     border-radius: 20px !important;
 }
 
 .clickable-icon:hover {
-    transform: scale(1.2);
-    transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 2);
+    /* transform: scale(1.2); */
+    transition: all 0.1s ease;
     border-radius: 20px !important;
 }
 
 .clickable-icon:active {
     border-radius: 10px !important;
-    transform: scale(0.8);
+    /* transform: scale(0.8); */
     color: var(--color-accent-1);
     background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
 }
@@ -3542,17 +3542,34 @@ a,
 .clickable-icon.extra-setting-button[aria-label*="uninstall" i]:hover {
     color: var(--text-error) !important;
     background-color: rgba(var(--color-red-rgb), 0.2);
+    border-radius: 8px !important;
 }
 
 .clickable-icon.extra-setting-button[aria-label*="delete" i]:hover {
     color: var(--text-error) !important;
     background-color: rgba(var(--color-red-rgb), 0.2);
+    border-radius: 8px !important;
 }
 
 .clickable-icon.extra-setting-button[aria-label*="remove" i]:hover {
     color: var(--text-error) !important;
     background-color: rgba(var(--color-red-rgb), 0.2);
 }
+
+.modal-close-button.clickable-icon:hover {
+    border-radius: 8px !important;
+    color: var(--text-error);
+    background-color: rgba(var(--color-red-rgb), 0.2) !important;
+    transition: 0.2s ease !important;
+}
+
+.workspace-tab-header-new-tab .clickable-icon:hover {
+    border-radius: 8px !important;
+    color: var(--color-green);
+    background-color: rgba(var(--color-green-rgb), 0.2) !important;
+    transition: 0.2s ease !important;
+}
+
 
 button {
     transition:
@@ -3729,7 +3746,7 @@ input:focus {
 
 /* ===== TABS ===== */
 
-.vertical-tab-nav-item-icon,
+vertical-tab-nav-item-icon,
 .horizontal-tab-nav-item.is-active .vertical-tab-nav-item-icon,
 .vertical-tab-nav-item.is-active .vertical-tab-nav-item-icon {
     color: var(--text-on-accent);
@@ -5517,6 +5534,25 @@ th {
     transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.2);
 }
 
+.titlebar-button.mod-close:hover {
+    color: var(--text-error);
+    background-color: rgba(var(--color-red-rgb), 0.2) !important;
+}
+
+.titlebar-button:hover::before {
+    transform: scale(1.15);
+}
+
+.titlebar-button.mod-maximize:hover {
+    color: var(--color-yellow);
+    background-color: rgba(var(--color-yellow-rgb), 0.2) !important;
+}
+
+.titlebar-button.mod-minimize:hover {
+    color: var(--color-green);
+    background-color: rgba(var(--color-green-rgb), 0.2) !important;
+}
+
 /* close */
 .titlebar-button.mod-close::before {
     -webkit-mask-image: url("data:image/svg+xml;utf8,\
@@ -5546,15 +5582,6 @@ th {
 /* hover states */
 .titlebar-button:hover {
     color: var(--text-normal);
-}
-
-.titlebar-button.mod-close:hover {
-    color: var(--text-error);
-    background-color: rgba(var(--color-red-rgb), 0.2) !important;
-}
-
-.titlebar-button:hover::before {
-    transform: scale(1.15);
 }
 
 /* ===== SLIDERS ===== */
