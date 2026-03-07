@@ -2447,7 +2447,26 @@ body.custom-bullets-enabled {
 
 .bubble {
     /* pinned tabs */
-    
+    .workspace-tab-header.is-active:has(.mod-pinned) {
+        border-radius: 20px !important;
+        height: 27px !important;
+        padding-bottom: 3px !important;
+    }
+
+    .workspace-tab-header:has(.mod-pinned) {
+        border: 0 !important;
+        border-radius: 20px !important;
+        height: 27px !important;
+        padding-bottom: 10px !important;
+        --tab-max-width: 40px !important;
+        transition: all 0.2s ease;
+    }
+
+    .workspace-tab-header:has(.mod-pinned):hover {
+        border-radius: 20px !important;
+        --tab-max-width: 52px !important;
+        transition: all 0.2s ease;
+    }
 
 
     .mod-sidedock
