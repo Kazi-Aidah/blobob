@@ -3729,7 +3729,7 @@ input:focus {
 
 /* ===== TABS ===== */
 
-vertical-tab-nav-item-icon,
+.vertical-tab-nav-item-icon,
 .horizontal-tab-nav-item.is-active .vertical-tab-nav-item-icon,
 .vertical-tab-nav-item.is-active .vertical-tab-nav-item-icon {
     color: var(--text-on-accent);
@@ -3818,7 +3818,7 @@ vertical-tab-nav-item-icon,
 .vertical-tab-nav-item:not(.is-active):active {
     /* background-color: var(--color-accent) !important; */
     transform: ScaleX(6px) translateX(10px) !important;
-    padding: 14px 8px;
+    padding: 10px 8px;
     transition: all 0.05s;
     /* text-align: center; */
     flex-direction: column;
