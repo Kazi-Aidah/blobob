@@ -905,12 +905,13 @@
     --background-modifier-border-focus: #5d503c;
 }
 
-
-/* .theme-dark ::selection,
+.theme-dark ::selection,
 .theme-light ::selection {
-    color: #ffffff;
+    background-color: hsl(var(--interactive-accent-hsl), 0.3) !important;
 }
 
+
+/*
 .cm-highlight, mark {
     padding: 2px 6px;
     border-radius: 6px;
@@ -3519,17 +3520,20 @@ a,
 .clickable-icon {
     transition: all 0.1s ease;
     border-radius: 20px !important;
+    transition: 0.2s ease cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: scale(0.9);
 }
 
 .clickable-icon:hover {
     /* transform: scale(1.2); */
     transition: all 0.1s ease;
     border-radius: 20px !important;
+    transform: scale(1);
 }
 
 .clickable-icon:active {
     border-radius: 10px !important;
-    /* transform: scale(0.8); */
+    transform: scale(0.8);
     color: var(--color-accent-1);
     background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
 }
@@ -3564,6 +3568,13 @@ a,
 }
 
 .workspace-tab-header-new-tab .clickable-icon:hover {
+    border-radius: 20px !important;
+    color: var(--color-green);
+    background-color: rgba(var(--color-green-rgb), 0.2) !important;
+    transition: 0.2s ease !important;
+}
+
+.workspace-tab-header-new-tab .clickable-icon:active {
     border-radius: 8px !important;
     color: var(--color-green);
     background-color: rgba(var(--color-green-rgb), 0.2) !important;
@@ -3919,7 +3930,8 @@ vertical-tab-nav-item-icon,
 
 .setting-hotkey,
 .suggestion-hotkey {
-    color: var(--color-accent-2) !important;
+    /* color: var(--color-accent-2) !important; */
+    /* color: var(--text-on-accent); */
     background-color: hsla(var(--interactive-accent-hsl), 0.3) !important;
     border-radius: 20px;
 }
@@ -5503,7 +5515,6 @@ th {
 
 /* ===== MIN MAX CLOSE BUTTONS ===== */
 
-/* base titlebar buttons */
 .titlebar-button {
     position: relative;
     background-color: transparent;
@@ -5543,15 +5554,31 @@ th {
     transform: scale(1.15);
 }
 
-.titlebar-button.mod-maximize:hover {
-    color: var(--color-yellow);
-    background-color: rgba(var(--color-yellow-rgb), 0.2) !important;
+
+.g-min-y-max {
+    .titlebar-button.mod-maximize:hover {
+        color: var(--color-yellow);
+        background-color: rgba(var(--color-yellow-rgb), 0.2) !important;
+    }
+
+    .titlebar-button.mod-minimize:hover {
+        color: var(--color-green);
+        background-color: rgba(var(--color-green-rgb), 0.2) !important;
+    }
 }
 
-.titlebar-button.mod-minimize:hover {
-    color: var(--color-green);
-    background-color: rgba(var(--color-green-rgb), 0.2) !important;
+.y-min-g-max {
+    .titlebar-button.mod-maximize:hover {
+        color: var(--color-green);
+        background-color: rgba(var(--color-green-rgb), 0.2) !important;
+    }
+
+    .titlebar-button.mod-minimize:hover {
+        color: var(--color-yellow);
+        background-color: rgba(var(--color-yellow-rgb), 0.2) !important;
+    }
 }
+
 
 /* close */
 .titlebar-button.mod-close::before {
@@ -6641,6 +6668,18 @@ settings:
         value: hide-status-bar
       - label: Centered
         value: centered-statusbar
+
+  - id: color-min-max
+    title: Color Minimize & Maximize buttons
+    type: class-select
+    default: none
+    options:
+      - label: none
+        value: none
+      - label: Green-min Yellow-max
+        value: g-min-y-max
+      - label: Yellow-min Green-max
+        value: y-min-g-max
 
   - id: hide-breadcrumbs
     title: Hide Breadcrumbs
