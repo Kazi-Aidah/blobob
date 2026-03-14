@@ -905,11 +905,126 @@
     --background-modifier-border-focus: #5d503c;
 }
 
+.theme-dark.green-road {
+    --background-primary: #161a20;
+    --background-primary-alt: #222831;
+    --background-secondary: #15181d;
+    --background-secondary-alt: #2a1f25;
+    --titlebar-background: #12151a;
+    --titlebar-background-focused: #101318;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #1b1f26;
+
+    --text-normal: #e6e9e3;
+    --text-muted: #b8beb6;
+    --text-error: #6a8f6a;
+
+    --background-modifier-form-field: #262e2a;
+    --background-modifier-form-field-hover: #2f3833;
+
+    --dropdown-background: #2b3236;
+    --dropdown-background-hover: #353d42;
+
+    --button-background: #6f7a42;
+    --button-background-hover: #7f8d42;
+
+    --background-modifier-border: #2c3238;
+    --background-modifier-border-hover: #3a4248;
+    --background-modifier-border-focus: #5e6b52;
+    
+    --color-accent-hsl: 75, 28%, 38%;
+    --color-accent: #7f8d42;
+    --color-accent-1: #6f7a42;
+    --color-accent-2: #8f9f4f;
+
+    --interactive-accent: #6f7a42;
+    --text-on-accent: #ffffff;
+
+    --link-color: #6f8a5a;
+    --link-unresolved-color: #5f7a5f;
+    --link-color-hover: #7f8d42;
+
+    --toggle-thumb-color: #6f7a42;
+
+    .checkbox-container.is-enabled::after {
+        box-shadow: none;
+    }
+
+    .checkbox-container.is-enabled:hover {
+        background-color: #2e4036;
+    }
+}
+
+
+.theme-dark.red-forest {
+    --background-primary: #2f2f2f;
+    --background-primary-alt: #262626;
+    --background-secondary: #262626;
+    --background-secondary-alt: #333333;
+    --titlebar-background: #242424;
+    --titlebar-background-focused: #1f1f1f;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #1f1f1f;
+    --text-normal: #e6e9e3;
+    --text-muted: #b8beb6;
+    --text-error: #b54a45;
+    --background-modifier-form-field: #383838;
+    --background-modifier-form-field-hover: #444444;
+    --dropdown-background: #353535;
+    --dropdown-background-hover: #404040;
+
+    --button-background: #944b4b;
+    --button-background-hover: #b34949;
+    
+    --background-modifier-border: #4a2a2a;
+    --background-modifier-border-hover: #5a3333;
+    --background-modifier-border-focus: #7a3f3f;
+
+    --color-accent-hsl: 0, 45%, 40%;
+    --color-accent: #b34949;
+    --color-accent-1: #a04646;
+    --color-accent-2: #b85656;
+
+
+    /* red accent buttons */
+    --interactive-accent: #944b4b;
+    --interactive-accent-hover: #944b4b;
+    
+    /* green normal buttons */
+    --interactive-normal: #6f7a42;
+    --interactive-hover: #7f8d42;
+
+    --text-on-accent: #ffffff;
+    --link-color: #6f8a5a;
+    --link-unresolved-color: #7a3f3f;
+    --link-color-hover: #7f8d42;
+    --toggle-thumb-color: #6f7a42;
+
+    .checkbox-container {
+        background-color: #484848;
+    }
+
+    .checkbox-container.is-enabled {
+        background-color: #944b4b;
+    }
+
+    .checkbox-container.is-enabled::after {
+        background-color: #b8a577;
+    }
+
+    .checkbox-container.is-enabled:hover {
+        background-color: #2e4036;
+    }
+}
+
+
+
+
+
 .theme-dark ::selection,
 .theme-light ::selection {
     background-color: hsl(var(--interactive-accent-hsl), 0.3) !important;
 }
-
 
 /*
 .cm-highlight, mark {
@@ -6530,10 +6645,18 @@ settings:
         value: tasty-chocolate-2
       - label: Leather
         value: leather
-      - label: Mafia Red
-        value: mafia-red
+      - label: Velvet Maroon
+        value: velvet
       - label: Deep Red
         value: deep-red
+      - label: Mafia Red
+        value: mafia-red
+      - label: Red Forest
+        value: red-forest
+      - label: Green Road
+        value: green-road
+
+
 
 
   - id: light-theme-colors
