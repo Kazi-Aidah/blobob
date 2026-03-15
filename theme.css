@@ -909,7 +909,7 @@
     --background-primary: #161a20;
     --background-primary-alt: #222831;
     --background-secondary: #15181d;
-    --background-secondary-alt: #2a1f25;
+    --background-secondary-alt: #353d42;
     --titlebar-background: #12151a;
     --titlebar-background-focused: #101318;
     --tab-container-background: var(--titlebar-background);
@@ -937,7 +937,7 @@
     --color-accent-1: #6f7a42;
     --color-accent-2: #8f9f4f;
 
-    --interactive-accent: #6f7a42;
+    --interactive-accent: #60a590;
     --text-on-accent: #ffffff;
 
     --link-color: #6f8a5a;
@@ -950,9 +950,18 @@
         box-shadow: none;
     }
 
+    .checkbox-container.is-enabled,
+    .checkbox-container.is-enabled::after {
+        background-color: #68823e;
+    }
+
     .checkbox-container.is-enabled:hover {
         background-color: #2e4036;
     }
+
+    /* .checkbox-container {
+        background-color: #2e4036;
+    } */
 }
 
 
