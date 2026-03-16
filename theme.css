@@ -30,6 +30,10 @@
     --tab-container-background: var(--titlebar-background);
 
     --code-background: #19191d;
+    --code-border-color: var(--background-secondary-alt);
+    --code-border-width: 2px;
+    --code-radius: var(--button-radius);
+
     --interactive-normal: var(--button-background);
     --interactive-hover: var(--button-background-hover);
 
@@ -928,7 +932,7 @@
     --button-background: #6f7a42;
     --button-background-hover: #7f8d42;
 
-    --background-modifier-border: #2c3238;
+    --background-modifier-border: #404d58;
     --background-modifier-border-hover: #3a4248;
     --background-modifier-border-focus: #5e6b52;
     
@@ -1062,7 +1066,11 @@
     --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
 
-    --code-background: #ffffff;
+    --code-background: var(--background-secondary);
+    --code-border-color: var(--background-secondary-alt);
+    --code-border-width: 2px;
+    --code-radius: var(--button-radius);
+
     --interactive-normal: var(--button-background);
     --interactive-hover: var(--button-background-hover);
 
@@ -1116,7 +1124,7 @@
     --titlebar-background: #f8f9fa;
     --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
-    --code-background: #ffffff;
+    
     --text-normal: #212529;
     --text-muted: #495057;
     --text-error: #e03131;
@@ -1139,7 +1147,7 @@
     --titlebar-background: #e6e8eb;
     --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
-    --code-background: #ffffff;
+    
     --text-normal: #2d3748;
     --text-muted: #4a5568;
     --text-error: #c53030;
@@ -1185,7 +1193,7 @@
     --titlebar-background: #dcfce7;
     --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
-    --code-background: #ffffff;
+    
     --text-normal: #14532d;
     --text-muted: #166534;
     --text-error: #dc2626;
@@ -1208,7 +1216,7 @@
     --titlebar-background: #f3e8ff;
     --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
-    --code-background: #ffffff;
+    
     --text-normal: #581c87;
     --text-muted: #7c3aed;
     --text-error: #be185d;
@@ -1231,7 +1239,7 @@
     --titlebar-background: #e0f2fe;
     --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
-    --code-background: #ffffff;
+    
     --text-normal: #0c4a6e;
     --text-muted: #0369a1;
     --text-error: #be123c;
@@ -1254,7 +1262,7 @@
     --titlebar-background: #ffedd5;
     --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
-    --code-background: #ffffff;
+    
     --text-normal: #7c2d12;
     --text-muted: #c2410c;
     --text-error: #b91c1c;
@@ -1277,7 +1285,7 @@
     --titlebar-background: #ffe4e6;
     --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
-    --code-background: #ffffff;
+    
     --text-normal: #881337;
     --text-muted: #be123c;
     --text-error: #b91c1c;
@@ -1300,7 +1308,7 @@
     --titlebar-background: #ccfbf1;
     --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
-    --code-background: #ffffff;
+    
     --text-normal: #134e4a;
     --text-muted: #0d9488;
     --text-error: #dc2626;
@@ -1323,7 +1331,7 @@
     --titlebar-background: #fef9c3;
     --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
-    --code-background: #ffffff;
+    
     --text-normal: #854d0e;
     --text-muted: #ca8a04;
     --text-error: #b91c1c;
@@ -1346,7 +1354,7 @@
     --titlebar-background: #f1f5f9;
     --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
-    --code-background: #ffffff;
+    
     --text-normal: #1e293b;
     --text-muted: #475569;
     --text-error: #dc2626;
@@ -1369,7 +1377,7 @@
     --titlebar-background: #dbeafe;
     --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
-    --code-background: #ffffff;
+    
     --text-normal: #1e3a8a;
     --text-muted: #1d4ed8;
     --text-error: #b91c1c;
@@ -1392,7 +1400,7 @@
     --titlebar-background: #e8f5e9;
     --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
-    --code-background: #ffffff;
+    
     --text-normal: #2e7d32;
     --text-muted: #4caf50;
     --text-error: #c62828;
@@ -1415,7 +1423,7 @@
     --titlebar-background: #a8f0ff;
     --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
-    --code-background: #ffffff;
+    
     --text-normal: #004f63;
     --text-muted: #007a8f;
     --text-error: #c62828;
@@ -1438,7 +1446,7 @@
     --titlebar-background: #efb9c8;
     --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
-    --code-background: #fffafa;
+    
     --text-normal: #6b1238;
     --text-muted: #8c2a52;
     --text-error: #a61d2d;
@@ -1484,7 +1492,7 @@
     --titlebar-background: #e6b3b8;
     --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
-    --code-background: #fffafa;
+    
     --text-normal: #6f0f14;
     --text-muted: #8a2a2f;
     --text-error: #4d0000;
@@ -1511,7 +1519,7 @@
     --titlebar-background: #d6dde5;
     --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
-    --code-background: #ffffff;
+    
     --text-normal: #1f2a37;
     --text-muted: #3a4a5e;
     --text-error: #8b1d1d;
@@ -1533,7 +1541,7 @@
     --titlebar-background: #d8d8c9;
     --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
-    --code-background: #ffffff;
+    
     --text-normal: #5d5c5a;
     --text-muted: #7a7976;
     --text-error: #c62828;
@@ -1556,7 +1564,7 @@
     --titlebar-background: #ffecb3;
     --titlebar-background-focused: var(--titlebar-background);
     --tab-container-background: var(--titlebar-background);
-    --code-background: #ffffff;
+    
     --text-normal: #eb8502;
     --text-muted: #ffa000;
     --text-error: #c62828;
@@ -2324,6 +2332,9 @@ body.custom-bullets-enabled {
 .sidebar-toggle-button.mod-left {
     margin-inline-end: 10px !important;
 }
+
+
+
 /* === pinned tab styling === */
 
 /* Pin icon z-index */
@@ -2332,114 +2343,79 @@ body.custom-bullets-enabled {
 }
 
 /* Hide close button on pinned tabs */
-.pin-icon-only
-    .workspace
-    .mod-root
-    .workspace-tab-header
-    .workspace-tab-header-inner-close-button {
+.pin-icon-only .workspace .mod-root .workspace-tab-header .workspace-tab-header-inner-close-button {
     display: none !important;
 }
 
 /* Base pinned tab styling */
 .pin-icon-only .workspace-tab-header:has(.mod-pinned) {
-    --tab-max-width: 40px !important;
+    --tab-max-width: 38px !important;
     border-radius: 10px 10px 0 0 !important;
     background-color: var(--tab-background);
-    border: 1px solid var(--background-modifier-border);
+    border: 0px solid var(--background-modifier-border);
     border-bottom: 0;
     margin-top: 4px;
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
-}
-
-/* Pinned tab + icon default state */
-.pin-icon-only .workspace-tab-header:has(.mod-pinned),
-.pin-icon-only
-    .workspace-tab-header:has(.mod-pinned)
-    .workspace-tab-header-inner-icon {
-    --tab-max-width: 54px !important;
-    border-radius: 12px 12px 0 0 !important;
-    border-bottom: 0;
-    margin-top: 4px;
-    padding-top: 2px;
-    margin-left: 0 !important;
-    padding-left: 2px !important;
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.4) !important;
-    height: 30px;
+    transition-property: border-radius, max-width, margin, padding, transform, background-color !important;
+    transition-duration: 0.4s, 0.4s, 0.4s, 0.4s, 0.3s, 0s !important;
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1), cubic-bezier(0.34, 1.56, 0.64, 1), cubic-bezier(0.34, 1.56, 0.64, 1), cubic-bezier(0.34, 1.56, 0.64, 1), cubic-bezier(0.68, -0.55, 0.265, 1.55), ease !important;
 }
 
 /* Hover state - tab and icon */
 .pin-icon-only .workspace-tab-header:has(.mod-pinned):hover,
-.pin-icon-only
-    .workspace-tab-header:has(.mod-pinned):hover
-    .workspace-tab-header-inner-icon {
-    --tab-max-width: 64px !important;
+.pin-icon-only .workspace-tab-header:has(.mod-pinned):hover .workspace-tab-header-inner-icon {
+    /* --tab-max-width: 64px !important; */
+    /* margin: 4px 2px !important; */
     border-radius: 14px 14px 0 0 !important;
     transform: scale(1.03);
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+    transition-property: border-radius, max-width, margin, transform !important;
+    transition-duration: 0.3s, 0.3s, 0.3s, 0.25s !important;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55), cubic-bezier(0.68, -0.55, 0.265, 1.55), cubic-bezier(0.68, -0.55, 0.265, 1.55), cubic-bezier(0.68, -0.6, 0.32, 1.6) !important;
 }
 
 /* Active pinned tab */
 .pin-icon-only .workspace-tab-header.is-active:has(.mod-pinned) {
-    --tab-max-width: 52px !important;
+    --tab-max-width: 58px !important;
+    /* background-color: var(--tab-background) !important; */
     border-radius: 6px 6px 0 0 !important;
-    background-color: var(--background-secondary);
     border: 0px solid var(--background-modifier-border);
     margin-top: 2px;
     padding-bottom: 8px !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
     height: 40px;
+    transition-property: border-radius, margin, padding, background-color, max-width !important;
+    transition-duration: 0.4s, 0.4s, 0.4s, 0s !important;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275), cubic-bezier(0.175, 0.885, 0.32, 1.275), cubic-bezier(0.175, 0.885, 0.32, 1.275), ease !important;
 }
 
 /* Inner hover for non-active tabs */
-.pin-icon-only
-    .workspace-tab-header:has(.mod-pinned):not(.is-active):hover
-    .workspace-tab-header-inner {
-    --tab-max-width: 75px !important;
+.pin-icon-only .workspace-tab-header:has(.mod-pinned):not(.is-active):hover .workspace-tab-header-inner {
+    height: 30px;
     border-radius: 8px !important;
     background: none !important;
     transform: translateY(-1px);
-    transition: all 0.25s cubic-bezier(0.68, -0.6, 0.32, 1.6) !important;
+    transition-property: max-width, border-radius, transform !important;
+    transition-duration: 0.25s, 0.25s, 0.2s !important;
+    transition-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6), cubic-bezier(0.68, -0.6, 0.32, 1.6), cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
 }
 
 /* Inner transition */
-.pin-icon-only
-    .workspace-tab-header:has(.mod-pinned)
-    .workspace-tab-header-inner {
+.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner {
     transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
-}
-
-/* Pinned tab transition properties */
-.pin-icon-only .workspace-tab-header:has(.mod-pinned) {
-    transition-property:
-        border-radius, max-width, margin, padding, border-color, transform,
-        box-shadow !important;
-    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1) !important;
-    transition-duration: 0.35s !important;
 }
 
 /* Icon hover effect */
-.pin-icon-only
-    .workspace-tab-header:has(.mod-pinned)
-    .workspace-tab-header-inner-icon:hover {
+.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner-icon:hover {
     transform: scale(1.1) rotate(5deg);
     transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
 }
-
-/* .pin-icon-only .workspace-tab-header:has(.mod-pinned), workspace-tab-header-inner:hover {
-  background-color: var(--background-primary) !important;
-  border-radius: 0 !important;
-} */
 
 .pin-icon-only .workspace-tab-header-status-container {
     z-index: 1001 !important;
     display: none;
 }
 
-.pin-icon-only
-    .workspace-tab-header:has(.mod-pinned)
-    .workspace-tab-header-inner-title {
+.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner-title {
     display: none !important;
 }
 
@@ -2455,22 +2431,29 @@ body.custom-bullets-enabled {
   transition: border-radius 0s ease !important;
 } */
 
+.bubble.theme-dark {
+    --tab-background: var(--background-primary);
+}
+
 /* focused dark inside */
 .bubble.theme-dark.bubble-border {
+    --tab-background: var(--background-primary);
     .workspace-tab-header.is-active {
         outline: 2px solid var(--background-modifier-border-focus) !important;
     }
 
     .workspace-leaf {
         border: 2px solid var(--background-modifier-border-focus) !important;
-        background-color: var(--background-primary);
+        --tab-background: var(--background-primary);
+        background-color: var(--tab-background);
     }
 }
 
 /* dark outside */
 .bubble.theme-dark.bubble-focused-dark-outside {
+    --tab-background: var(--background-primary-alt);
     .workspace-tab-header.is-active {
-        background-color: var(--background-primary-alt);
+        background-color: var(--tab-background);
         outline: 2px solid var(--background-modifier-border-focus);
     }
 
@@ -2522,14 +2505,17 @@ body.custom-bullets-enabled {
 
 /* dark outside */
 .bubble.theme-dark.bubble-dark-outside {
+    --tab-background: var(--background-primary-alt);
     .workspace-tab-header.is-active {
         background-color: var(--background-primary-alt);
     }
 
     .workspace-leaf {
         border-radius: 20px;
-        background-color: var(--background-primary-alt) !important;
-        background: var(--background-primary-alt) !important;
+        background-color: var(--tab-background) !important;
+        background: var(--tab-background) !important;
+
+        --tab-background: var(--background-primary-alt);
     }
 
     .workspace-leaf-content,
@@ -2570,26 +2556,38 @@ body.custom-bullets-enabled {
     }
 }
 
+.theme-light.bubble {
+    .workspace-tab-header.is-active:has(.mod-pinned) {
+        background-color: var(--background-primary) !important;
+        border-radius: 20px !important;
+        height: 27px !important;
+        padding-bottom: 3px !important;
+    }
+}
+
 .bubble {
     /* pinned tabs */
     .workspace-tab-header.is-active:has(.mod-pinned) {
+        background-color: var(--tab-background) !important;
         border-radius: 20px !important;
         height: 27px !important;
         padding-bottom: 3px !important;
     }
 
     .workspace-tab-header:has(.mod-pinned) {
+        background-color: transparent !important;
         border: 0 !important;
         border-radius: 20px !important;
         height: 27px !important;
         padding-bottom: 10px !important;
-        --tab-max-width: 40px !important;
+
         transition: all 0.2s ease;
     }
 
     .workspace-tab-header:has(.mod-pinned):hover {
+        background-color: var(--tab-background) !important;
         border-radius: 20px !important;
-        --tab-max-width: 52px !important;
+        /* --tab-max-width: 52px !important; */
         transition: all 0.2s ease;
     }
 
@@ -5400,12 +5398,6 @@ a.external-link:hover {
 }
 
 /* ===== CODEBLOCKS ===== */
-
-.theme-dark {
-    --code-border-color: var(--background-secondary-alt);
-    --code-border-width: 2px;
-    --code-radius: 6px;
-}
 
 .markdown-rendered pre {
     position: relative;
