@@ -37,13 +37,13 @@
     --interactive-normal: var(--button-background);
     --interactive-hover: var(--button-background-hover);
 
-    --background-modifier-form-field: #2a2a2a;
+    --background-modifier-form-field: #303439;
     --background-modifier-form-field-hover: #29292d;
     --dropdown-background: #363636;
     --dropdown-background-hover: #3f3f3f;
-    --button-background: #363636;
-    --button-background-hover: #3f3f3f;
-    --background-modifier-border: #3a3a3a;
+    --button-background: #333639;
+    --button-background-hover: #32353c;
+    --background-modifier-border: #31353e;
     --background-modifier-border-hover: #484848;
 
     --accent-red: var(--color-red);
@@ -166,7 +166,7 @@
     --text-normal: #e2e8f0;
     --text-muted: #94a3b8;
     --text-error: #ff8a8a;
-    --background-modifier-form-field: #1a2536;
+    --background-modifier-form-field: #141d2c;
     --background-modifier-form-field-hover: #1e293b;
     --dropdown-background: #253147;
     --dropdown-background-hover: #2d3b5a;
@@ -351,7 +351,7 @@
     --text-normal: #f5e6d3;
     --text-muted: #d4a574;
     --text-error: #ff8a8a;
-    --background-modifier-form-field: #362314;
+    --background-modifier-form-field: #311f11;
     --background-modifier-form-field-hover: #3d2818;
     --dropdown-background: #45321f;
     --dropdown-background-hover: #513a25;
@@ -374,7 +374,7 @@
     --text-normal: #f1dcc6;
     --text-muted: #c39a6b;
     --text-error: #ff8a8a;
-    --background-modifier-form-field: #25140b;
+    --background-modifier-form-field: #1e0f08;
     --background-modifier-form-field-hover: #2a170d;
     --dropdown-background: #332013;
     --dropdown-background-hover: #3b2617;
@@ -396,7 +396,7 @@
     --text-normal: #f4e0e9;
     --text-muted: #e0b4c2;
     --text-error: #ff8a8a;
-    --background-modifier-form-field: #362228;
+    --background-modifier-form-field: #311e24;
     --background-modifier-form-field-hover: #3d252c;
     --dropdown-background: #453036;
     --dropdown-background-hover: #503740;
@@ -418,7 +418,7 @@
     --text-normal: #e0f2fe;
     --text-muted: #a5d8ff;
     --text-error: #ff8a8a;
-    --background-modifier-form-field: #1a2840;
+    --background-modifier-form-field: #253654;
     --background-modifier-form-field-hover: #1f2e4a;
     --dropdown-background: #24365a;
     --dropdown-background-hover: #2a3e68;
@@ -462,7 +462,7 @@
     --text-normal: #e6e4f2;
     --text-muted: #b8b4d9;
     --text-error: #ff8a8a;
-    --background-modifier-form-field: #26233f;
+    --background-modifier-form-field: #23203c;
     --background-modifier-form-field-hover: #2a2744;
     --dropdown-background: #302d50;
     --dropdown-background-hover: #38355c;
@@ -485,7 +485,7 @@
     --text-normal: #eaf3ea;
     --text-muted: #a4b9a4;
     --text-error: #ff8a8a;
-    --background-modifier-form-field: #202520;
+    --background-modifier-form-field: #1b1f1b;
     --background-modifier-form-field-hover: #262b26;
     --dropdown-background: #2a302a;
     --dropdown-background-hover: #333a33;
@@ -508,7 +508,7 @@
     --text-normal: #ffeccc;
     --text-muted: #e0b879;
     --text-error: #ff9966;
-    --background-modifier-form-field: #3a2611;
+    --background-modifier-form-field: #473017;
     --background-modifier-form-field-hover: #432b15;
     --dropdown-background: #4a3019;
     --dropdown-background-hover: #55361d;
@@ -580,7 +580,7 @@
     --titlebar-background-focused: #100d06;
     --tab-container-background: var(--titlebar-background);
     --code-background: #211b0e;
-    --background-modifier-form-field: #241d10;
+    --background-modifier-form-field: #302615;
     --background-modifier-form-field-hover: #2c2313;
     --dropdown-background: #2a2212;
     --dropdown-background-hover: #342a17;
@@ -800,7 +800,7 @@
     --text-normal: #f0d9e6;
     --text-muted: #d4b0c9;
     --text-error: #ff8a8a;
-    --background-modifier-form-field: #2d0b1c;
+    --background-modifier-form-field: #3d0d25;
     --background-modifier-form-field-hover: #350e22;
     --dropdown-background: #3c1028;
     --dropdown-background-hover: #481332;
@@ -828,7 +828,7 @@
     --text-normal: #e6d8c9;
     --text-muted: #b8a58e;
     --text-error: #d46b5f;
-    --background-modifier-form-field: #2c1f14;
+    --background-modifier-form-field: #241a12;
     --background-modifier-form-field-hover: #352618;
     --dropdown-background: #3a2a20;
     --dropdown-background-hover: #453323;
@@ -852,7 +852,7 @@
     --text-normal: #f0e6d6;
     --text-muted: #d4c4a8;
     --text-error: #d46b5f;
-    --background-modifier-form-field: #312619;
+    --background-modifier-form-field: #453522;
     --background-modifier-form-field-hover: #392c1f;
     --dropdown-background: #433421;
     --dropdown-background-hover: #4e3c26;
@@ -875,7 +875,7 @@
     --text-normal: #f2cfcf;
     --text-muted: #d4a8a8;
     --text-error: #d46b5f;
-    --background-modifier-form-field: #2c1818;
+    --background-modifier-form-field: #3e2424;
     --background-modifier-form-field-hover: #351d1d;
     --dropdown-background: #3a2222;
     --dropdown-background-hover: #462828;
@@ -898,7 +898,7 @@
     --text-normal: #f2e8dc;
     --text-muted: #d4c8b8;
     --text-error: #d46b5f;
-    --background-modifier-form-field: #332a20;
+    --background-modifier-form-field: #3e3326;
     --background-modifier-form-field-hover: #3b3025;
     --dropdown-background: #443829;
     --dropdown-background-hover: #504330;
