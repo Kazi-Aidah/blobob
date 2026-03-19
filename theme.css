@@ -921,16 +921,15 @@
 
     --text-normal: #e6e9e3;
     --text-muted: #b8beb6;
-    --text-error: #6a8f6a;
 
-    --background-modifier-form-field: #262e2a;
+    --background-modifier-form-field: #333743;
     --background-modifier-form-field-hover: #2f3833;
 
     --dropdown-background: #2b3236;
     --dropdown-background-hover: #353d42;
 
-    --button-background: #6f7a42;
-    --button-background-hover: #7f8d42;
+    --button-background: #474f27;
+    --button-background-hover: #464f1d;
 
     --background-modifier-border: #404d58;
     --background-modifier-border-hover: #3a4248;
