@@ -2451,6 +2451,7 @@ body.custom-bullets-enabled {
     border: 0px solid var(--background-modifier-border);
     margin-top: 0px;
     padding-bottom: 8px !important;
+    margin-top: 2px;
     padding-left: 0 !important;
     padding-right: 0 !important;
     height: 40px;
@@ -2650,7 +2651,7 @@ body.custom-bullets-enabled {
         border: 0 !important;
         border-radius: 20px !important;
         height: 27px !important;
-        padding-bottom: 10px !important;
+        padding-bottom: -px !important;
 
         transition: all calc(var(--animation-duration) * 0.6667) ease;
     }
