@@ -1759,7 +1759,7 @@
     color: var(--text-normal);
     font-family: inherit;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all calc(var(--animation-duration) * 0.6667) ease;
     gap: 4px !important;
 }
 
@@ -1826,7 +1826,7 @@
         line-height: 1;
         padding: 8px 12px 8px 0;
         opacity: 0.5 !important;
-        transition: 0.2s;
+        transition: calc(var(--animation-duration) * 0.6667);
         background-color: transparent !important;
         border: none;
         padding: 8px !important;
@@ -1836,7 +1836,7 @@
 
     .status-bar:hover {
         opacity: 1 !important;
-        transition: 0.2s;
+        transition: calc(var(--animation-duration) * 0.6667);
         background-color: transparent !important;
         padding: 8px !important;
         transform: none !important;
@@ -2005,7 +2005,7 @@ body.custom-bullets-enabled {
     text-align: center;
     display: inline-block;
     padding: 20px;
-    transition: all 0.2s ease;
+    transition: all calc(var(--animation-duration) * 0.6667) ease;
     width: 100%;
     justify-content: space-between;
     margin-bottom: 15px;
@@ -2016,7 +2016,7 @@ body.custom-bullets-enabled {
     text-align: left;
     display: inline-block;
     padding: 20px;
-    transition: all 0.2s ease;
+    transition: all calc(var(--animation-duration) * 0.6667) ease;
     width: 100%;
     justify-content: space-between;
     margin-bottom: 15px;
@@ -2027,7 +2027,7 @@ body.custom-bullets-enabled {
     text-align: right;
     display: inline-block;
     padding: 20px;
-    transition: all 0.2s ease;
+    transition: all calc(var(--animation-duration) * 0.6667) ease;
     width: 100%;
     justify-content: space-between;
     margin-bottom: 15px;
@@ -2052,8 +2052,8 @@ body.custom-bullets-enabled {
     background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
     border-radius: 20px;
     transition:
-        background-color 0.2s ease,
-        background-image 20s !important;
+        background-color calc(var(--animation-duration) * 0.6667) ease,
+        background-image calc(var(--animation-duration) * 66.6667) !important;
     transition-delay: background-image 2s !important;
     padding: 0px;
     margin-inline-end: 10px;
@@ -2153,6 +2153,29 @@ body.custom-bullets-enabled {
     text-underline-offset: 3px; */
 }
 
+/* view title casing overrides */
+.view-title-case-none .view-header-title {
+    text-transform: none;
+    letter-spacing: normal;
+}
+.view-title-case-upper .view-header-title {
+    text-transform: uppercase;
+}
+.view-title-case-lower .view-header-title {
+    text-transform: lowercase;
+}
+
+/* metadata property key casing */
+.meta-key-case-upper .metadata-property-key-input {
+    text-transform: uppercase;
+}
+.meta-key-case-lower .metadata-property-key-input {
+    text-transform: lowercase;
+}
+.meta-key-case-none .metadata-property-key-input {
+    text-transform: none;
+}
+
 /* tab close btn */
 .workspace
     .mod-root
@@ -2169,10 +2192,10 @@ body.custom-bullets-enabled {
     width: 0;
     margin-left: -8px;
     transition:
-        transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
-        opacity 0.2s ease-out,
-        width 0.2s ease-out,
-        margin-left 0.2s ease-out !important;
+        transform calc(var(--animation-duration) * 0.6667) cubic-bezier(0.34, 1.56, 0.64, 1),
+        opacity calc(var(--animation-duration) * 0.6667) ease-out,
+        width calc(var(--animation-duration) * 0.6667) ease-out,
+        margin-left calc(var(--animation-duration) * 0.6667) ease-out !important;
     pointer-events: none;
 
     border: 2px solid transparent;
@@ -2219,12 +2242,12 @@ body.custom-bullets-enabled {
 .workspace .mod-left-split .workspace-tab-header,
 .workspace .mod-right-split .workspace-tab-header {
     transition:
-        border-radius 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
-        margin 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2),
-        padding 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
-        background-color 0.3s ease,
-        filter 0.2s ease,
-        transform 0.3s ease !important;
+        border-radius calc(var(--animation-duration) * 1.3333) cubic-bezier(0.34, 1.56, 0.64, 1),
+        margin calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 1.2),
+        padding calc(var(--animation-duration) * 1.6667) cubic-bezier(0.68, -0.55, 0.265, 1.55),
+        background-color calc(var(--animation-duration) * 1) ease,
+        filter calc(var(--animation-duration) * 0.6667) ease,
+        transform calc(var(--animation-duration) * 1) ease !important;
 }
 
 .workspace .mod-left-split .workspace-tab-header.is-active,
@@ -2356,7 +2379,7 @@ body.custom-bullets-enabled {
     margin-top: 4px;
     padding-bottom: 10px !important;
     transition-property: border-radius, max-width, margin, padding, transform, background-color !important;
-    transition-duration: 0.4s, 0.4s, 0.4s, 0.4s, 0.3s, 0s !important;
+    transition-duration: calc(var(--animation-duration) * 1.3333), calc(var(--animation-duration) * 1.3333), calc(var(--animation-duration) * 1.3333), calc(var(--animation-duration) * 1.3333), calc(var(--animation-duration) * 1), 0s !important;
     transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1), cubic-bezier(0.34, 1.56, 0.64, 1), cubic-bezier(0.34, 1.56, 0.64, 1), cubic-bezier(0.34, 1.56, 0.64, 1), cubic-bezier(0.68, -0.55, 0.265, 1.55), ease !important;
 }
 
@@ -2368,7 +2391,7 @@ body.custom-bullets-enabled {
     border-radius: 14px 14px 0 0 !important;
     transform: scale(1.03);
     transition-property: border-radius, max-width, margin, transform !important;
-    transition-duration: 0.3s, 0.3s, 0.3s, 0.25s !important;
+    transition-duration: calc(var(--animation-duration) * 1), calc(var(--animation-duration) * 1), calc(var(--animation-duration) * 1), calc(var(--animation-duration) * 0.8333) !important;
     transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55), cubic-bezier(0.68, -0.55, 0.265, 1.55), cubic-bezier(0.68, -0.55, 0.265, 1.55), cubic-bezier(0.68, -0.6, 0.32, 1.6) !important;
 }
 
@@ -2384,7 +2407,7 @@ body.custom-bullets-enabled {
     padding-right: 0 !important;
     height: 40px;
     transition-property: border-radius, margin, padding, background-color, max-width !important;
-    transition-duration: 0.4s, 0.4s, 0.4s, 0s !important;
+    transition-duration: calc(var(--animation-duration) * 1.3333), calc(var(--animation-duration) * 1.3333), calc(var(--animation-duration) * 1.3333), 0s !important;
     transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275), cubic-bezier(0.175, 0.885, 0.32, 1.275), cubic-bezier(0.175, 0.885, 0.32, 1.275), ease !important;
 }
 
@@ -2395,19 +2418,19 @@ body.custom-bullets-enabled {
     background: none !important;
     transform: translateY(-1px);
     transition-property: max-width, border-radius, transform !important;
-    transition-duration: 0.25s, 0.25s, 0.2s !important;
+    transition-duration: calc(var(--animation-duration) * 0.8333), calc(var(--animation-duration) * 0.8333), calc(var(--animation-duration) * 0.6667) !important;
     transition-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6), cubic-bezier(0.68, -0.6, 0.32, 1.6), cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
 }
 
 /* Inner transition */
 .pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner {
-    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+    transition: transform calc(var(--animation-duration) * 1) cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
 }
 
 /* Icon hover effect */
 .pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner-icon:hover {
     transform: scale(1.1) rotate(5deg);
-    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+    transition: transform calc(var(--animation-duration) * 1) cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
 }
 
 .pin-icon-only .workspace-tab-header-status-container {
@@ -2581,14 +2604,14 @@ body.custom-bullets-enabled {
         height: 27px !important;
         padding-bottom: 10px !important;
 
-        transition: all 0.2s ease;
+        transition: all calc(var(--animation-duration) * 0.6667) ease;
     }
 
     .workspace-tab-header:has(.mod-pinned):hover {
         background-color: var(--tab-background) !important;
         border-radius: 20px !important;
         /* --tab-max-width: 52px !important; */
-        transition: all 0.2s ease;
+        transition: all calc(var(--animation-duration) * 0.6667) ease;
     }
 
 
@@ -2608,9 +2631,9 @@ body.custom-bullets-enabled {
         transform: translateY(4px) !important;
 
         transition:
-            border-radius 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
-            margin 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2),
-            padding 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+            border-radius calc(var(--animation-duration) * 1.3333) cubic-bezier(0.34, 1.56, 0.64, 1),
+            margin calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 1.2),
+            padding calc(var(--animation-duration) * 1.6667) cubic-bezier(0.68, -0.55, 0.265, 1.55),
             background-color 0s ease !important;
     }
 
@@ -2629,11 +2652,11 @@ body.custom-bullets-enabled {
         transform: translateY(-1px) !important;
 
         transition:
-            border-radius 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
-            margin 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
-            padding 0.3s ease,
-            background-color 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
-            transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+            border-radius calc(var(--animation-duration) * 1.6667) cubic-bezier(0.68, -0.55, 0.265, 1.55),
+            margin calc(var(--animation-duration) * 1.6667) cubic-bezier(0.68, -0.55, 0.265, 1.55),
+            padding calc(var(--animation-duration) * 1) ease,
+            background-color calc(var(--animation-duration) * 1.3333) cubic-bezier(0.34, 1.56, 0.64, 1),
+            transform calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 1.275),
             background-color 0s ease !important;
     }
 
@@ -2646,9 +2669,9 @@ body.custom-bullets-enabled {
         --tab-curve: 0 !important;
         border-radius: 12px !important;
         transition:
-            border-radius 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+            border-radius calc(var(--animation-duration) * 1) cubic-bezier(0.68, -0.55, 0.265, 1.55),
             background-color 0s ease,
-            margin 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.4) !important;
+            margin calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.4) !important;
     }
 
     .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
@@ -2657,7 +2680,7 @@ body.custom-bullets-enabled {
         margin-right: 2px;
         margin-left: 2px;
         margin-top: -2px !important;
-        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+        transition: all calc(var(--animation-duration) * 1.3333) cubic-bezier(0.34, 1.56, 0.64, 1) !important;
     }
 
     .workspace-split.mod-vertical.mod-root
@@ -2665,22 +2688,22 @@ body.custom-bullets-enabled {
         margin-left: 0px !important;
         margin-right: -3px !important;
         transition:
-            margin-left 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2),
-            margin-right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2) !important;
+            margin-left calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 1.2),
+            margin-right calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 1.2) !important;
     }
 
     .workspace-tab-header .workspace-tab-header-inner {
         transition:
-            border-radius 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
-            margin 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2),
-            padding 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2) !important;
+            border-radius calc(var(--animation-duration) * 1.3333) cubic-bezier(0.34, 1.56, 0.64, 1),
+            margin calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 1.2),
+            padding calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 1.2) !important;
     }
 
     .workspace-tab-header:not(.is-active):hover {
         transform: translateY(2px);
         transition:
-            transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55),
-            border-radius 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+            transform calc(var(--animation-duration) * 1) cubic-bezier(0.68, -0.55, 0.265, 1.55),
+            border-radius calc(var(--animation-duration) * 1) cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
     }
 
     .workspace-tab-header {
@@ -2762,9 +2785,9 @@ body.custom-bullets-enabled {
         padding-left: 0px !important;
 
         transition:
-            border-radius 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
-            margin 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2),
-            padding 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+            border-radius calc(var(--animation-duration) * 1.3333) cubic-bezier(0.34, 1.56, 0.64, 1),
+            margin calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 1.2),
+            padding calc(var(--animation-duration) * 1.6667) cubic-bezier(0.68, -0.55, 0.265, 1.55),
             background-color 0s ease !important;
     }
 
@@ -2781,7 +2804,7 @@ body.custom-bullets-enabled {
     padding: 0px 4px !important;
     padding-bottom: 0px !important;
     margin-inline-start: 7px;
-    transition: border-radius 0.3s cubic-bezier(0.175, 0.885, 0.32, 4),
+    transition: border-radius calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 4),
                 padding 0.3s ease,
                 margin 0.3s cubic-bezier(0.175, 0.885, 0.32, 4),
                 margin-inline-start 0s ease !important;
@@ -2808,11 +2831,11 @@ body.custom-bullets-enabled {
         text-overflow: ellipsis;
 
         transition:
-            border-radius 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
-            margin 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
-            padding 0.3s ease,
-            background-color 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
-            transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+            border-radius calc(var(--animation-duration) * 1.6667) cubic-bezier(0.68, -0.55, 0.265, 1.55),
+            margin calc(var(--animation-duration) * 1.6667) cubic-bezier(0.68, -0.55, 0.265, 1.55),
+            padding calc(var(--animation-duration) * 1) ease,
+            background-color calc(var(--animation-duration) * 1.3333) cubic-bezier(0.34, 1.56, 0.64, 1),
+            transform calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 1.275),
             background-color 0s ease !important;
     }
 
@@ -2833,7 +2856,7 @@ body.custom-bullets-enabled {
     border-bottom: none !important;
     padding-bottom: 0px !important;
     margin-left: 7px;
-    transition: border-radius 0.3s cubic-bezier(0.175, 0.885, 0.32, 4),
+    transition: border-radius calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 4),
                  margin 0.4s cubic-bezier(0.175, 0.885, 0.32, 2) !important;
 
 } */
@@ -2852,9 +2875,9 @@ body.custom-bullets-enabled {
     border-bottom-right-radius: 0 !important; */
 
         transition:
-            border-radius 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+            border-radius calc(var(--animation-duration) * 1) cubic-bezier(0.68, -0.55, 0.265, 1.55),
             background-color 0s ease,
-            margin 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.4) !important;
+            margin calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.4) !important;
     }
 
     .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
@@ -2867,7 +2890,7 @@ body.custom-bullets-enabled {
         margin-left: 2px;
         margin-top: -2px !important;
 
-        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+        transition: all calc(var(--animation-duration) * 1.3333) cubic-bezier(0.34, 1.56, 0.64, 1) !important;
     }
 
     .workspace-split.mod-vertical.mod-root
@@ -2876,23 +2899,23 @@ body.custom-bullets-enabled {
         margin-right: -3px !important;
 
         transition:
-            margin-left 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2),
-            margin-right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2) !important;
+            margin-left calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 1.2),
+            margin-right calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 1.2) !important;
     }
 
     .workspace-tab-header .workspace-tab-header-inner {
         transition:
-            border-radius 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
-            margin 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2),
-            padding 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2) !important;
+            border-radius calc(var(--animation-duration) * 1.3333) cubic-bezier(0.34, 1.56, 0.64, 1),
+            margin calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 1.2),
+            padding calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 1.2) !important;
     }
 
     /* non-active tabs  hover */
     .workspace-tab-header:not(.is-active):hover {
         transform: translateY(-1px);
         transition:
-            transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55),
-            border-radius 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+            transform calc(var(--animation-duration) * 1) cubic-bezier(0.68, -0.55, 0.265, 1.55),
+            border-radius calc(var(--animation-duration) * 1) cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
     }
 
     /* hpver -> no hover */
@@ -3640,15 +3663,15 @@ a,
 /* ------------- */
 
 .clickable-icon {
-    transition: all 0.1s ease;
+    transition: all calc(var(--animation-duration) * 0.3333) ease;
     border-radius: 20px !important;
-    transition: 0.2s ease cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: var(--animation-duration) ease cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transform: scale(0.9);
 }
 
 .clickable-icon:hover {
     /* transform: scale(1.2); */
-    transition: all 0.1s ease;
+    transition: all var(--animation-duration) ease;
     border-radius: 20px !important;
     transform: scale(1);
 }
@@ -3686,28 +3709,28 @@ a,
     border-radius: 8px !important;
     color: var(--text-error);
     background-color: rgba(var(--color-red-rgb), 0.2) !important;
-    transition: 0.2s ease !important;
+    transition: calc(var(--animation-duration) * 0.6667) ease !important;
 }
 
 .workspace-tab-header-new-tab .clickable-icon:hover {
     border-radius: 20px !important;
     color: var(--color-green);
     background-color: rgba(var(--color-green-rgb), 0.2) !important;
-    transition: 0.2s ease !important;
+    transition: calc(var(--animation-duration) * 0.6667) ease !important;
 }
 
 .workspace-tab-header-new-tab .clickable-icon:active {
     border-radius: 8px !important;
     color: var(--color-green);
     background-color: rgba(var(--color-green-rgb), 0.2) !important;
-    transition: 0.2s ease !important;
+    transition: calc(var(--animation-duration) * 0.6667) ease !important;
 }
 
 
 button {
     transition:
-        all 0.3s cubic-bezier(0.175, 0.885, 0.32, 2),
-        background-color 0.2s ease;
+        all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2),
+        background-color calc(var(--animation-duration) * 0.6667) ease;
     transform: scale(1);
     outline: 0px solid var(--background-modifier-border);
 }
@@ -3725,15 +3748,15 @@ button:active {
     border-radius: 10px !important;
     /* padding: 6px; */
     transform: scale(0.9);
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
     outline: 0px solid var(--background-modifier-border);
 }
 
 select {
     margin-right: 0px !important;
     transition:
-        all 0.3s cubic-bezier(0.175, 0.885, 0.32, 2),
-        background-color 0.2s ease;
+        all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2),
+        background-color calc(var(--animation-duration) * 0.6667) ease;
     padding: auto 20px !important;
     text-align: center;
 }
@@ -3761,20 +3784,20 @@ input[type="text"] {
     --input-border-width: 0px;
 
     transition:
-        border-radius 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.2),
-        background 0.2s ease,
-        background-color 0.2s ease,
-        border 0.1s ease !important;
+        border-radius calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.2),
+        background calc(var(--animation-duration) * 0.6667) ease,
+        background-color calc(var(--animation-duration) * 0.6667) ease,
+        border calc(var(--animation-duration) * 0.3333) ease !important;
 }
 
 input:focus {
     border-radius: 10px !important;
-    transition: border-radius 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.2);
+    transition: border-radius calc(var(--animation-duration) * 0.6667) cubic-bezier(0.175, 0.885, 0.32, 1.2);
 }
 
 .menu {
     border-radius: 20px;
-    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 2) !important;
+    transition: all calc(var(--animation-duration) * 0.6667) cubic-bezier(0.175, 0.885, 0.32, 2) !important;
     /* padding: 0px 30px !important; */
     overflow: auto !important;
     opacity: 1;
@@ -3783,7 +3806,7 @@ input:focus {
 .menu-item.tappable.selected:active {
     border-radius: 26px;
     /* padding: 2px 8px !important; */
-    transition: all 0.1s ease;
+    transition: all calc(var(--animation-duration) * 0.3333) ease;
     /* background-color: hsla(var(--interactive-accent-hsl), 0.6) !important;  */
     transform: scale(0.9);
 }
@@ -3791,7 +3814,7 @@ input:focus {
 .menu-item.tappable {
     border-radius: 20px;
     padding: 6px 8px !important;
-    transition: all 0.1s ease !important;
+    transition: all calc(var(--animation-duration) * 0.3333) ease !important;
 }
 
 @media (max-width: 600px) {
@@ -3891,7 +3914,7 @@ vertical-tab-nav-item-icon,
     border-radius: var(--button-radius);
 
     transition:
-        padding 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.8),
+        padding calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.8),
         background-color 0s ease,
         color 0s ease;
     /* animation-delay: background-color 0.1s, color 0.1s; */
@@ -3909,14 +3932,14 @@ vertical-tab-nav-item-icon,
 
 .vertical-tab-nav-item {
     border-radius: 20px;
-    transition: all 0.1s ease-out;
+    transition: all calc(var(--animation-duration) * 0.3333) ease-out;
 }
 
 .vertical-tab-nav-item:not(.is-active):hover {
     border-radius: var(--button-radius);
     transform: translateX(6px);
     padding: 8px 8px;
-    transition: all 0.1s ease-out;
+    transition: all calc(var(--animation-duration) * 0.3333) ease-out;
     /* text-align: center; */
     transition-delay:
         text-center 4s ease,
@@ -3934,42 +3957,42 @@ vertical-tab-nav-item-icon,
 
 .vertical-tab-nav-item.is-active {
     /* border-radius: 10px; */
-    transition: transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.5);
+    transition: transform calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
     padding: 6px 8px !important;
     text-align: center;
 }
 
 .vertical-tab-nav-item {
     /* border-radius: 20px; */
-    transition: all 0.1s ease-out;
+    transition: all calc(var(--animation-duration) * 0.3333) ease-out;
 }
 
 .vertical-tab-nav-item:not(.is-active):hover {
     background: none !important;
     /* border-radius: 20px; */
     transform: translateX(6px);
-    transition: all 0.1s ease-out;
+    transition: all calc(var(--animation-duration) * 0.3333) ease-out;
 }
 
 .vertical-tab-nav-item:not(.is-active):active {
     /* background-color: var(--color-accent) !important; */
     /* border-radius: 20px; */
     transform: translateX(30px) !important;
-    transition: transform 0.05s ease-in;
+    transition: transform calc(var(--animation-duration) * 0.1667) ease-in;
     /* background-color 0.2s ease-in;
     transition-delay: background-color 0.05s ease; */
 }
 
 /* .vertical-tab-nav-item:not(.is-active):hover .vertical-tab-nav-item-title {
     transform: translateX(10px);
-    transition: all 0.1s ease-out;
+    transition: all calc(var(--animation-duration) * 0.3333) ease-out;
 } */
 
 .vertical-tab-nav-item:not(.is-active):active {
     /* background-color: var(--color-accent) !important; */
     transform: ScaleX(6px) translateX(10px) !important;
     padding: 10px 8px;
-    transition: all 0.05s;
+    transition: all calc(var(--animation-duration) * 0.1667);
     /* text-align: center; */
     flex-direction: column;
     /* background-color 0.2s ease-in;
@@ -3991,7 +4014,7 @@ vertical-tab-nav-item-icon,
 .vertical-tab-nav-item:not(.is-active):active {
     background-color: transparent;
     transform: translateX(30px) !important;
-    transition: all 0.05s;
+    transition: all calc(var(--animation-duration) * 0.1667);
     flex-direction: row;
 }
 
@@ -3999,13 +4022,13 @@ vertical-tab-nav-item-icon,
 
 .code-block-flair {
     border-radius: 20px !important;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
 }
 
 .code-block-flair:hover {
     color: var(--color-accent) !important;
     border-radius: 10px !important;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1);
+    transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1);
 }
 
 .code-block-flair:active {
@@ -4017,7 +4040,7 @@ vertical-tab-nav-item-icon,
 
 .status-bar {
     border-radius: 14px !important;
-    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.5) !important;
+    transition: all calc(var(--animation-duration) * 0.6667) cubic-bezier(0.175, 0.885, 0.32, 1.5) !important;
     /* padding: 0px 30px !important; */
     overflow: auto !important;
     opacity: 1;
@@ -4031,7 +4054,7 @@ vertical-tab-nav-item-icon,
 .status-bar:hover {
     border-radius: 10px !important;
     padding: 10px 8px !important;
-    transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.5);
+    transition: all calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
     /* filter: brightness(1); */
     transform: translateX(0);
     border-bottom-left-radius: 0 !important;
@@ -4060,7 +4083,7 @@ vertical-tab-nav-item-icon,
 
 input[type="color"].color {
     border-radius: 20px !important;
-    transition: all 0.3s ease-out;
+    transition: all calc(var(--animation-duration) * 1) ease-out;
     transform: scale(1);
     outline: 0px solid var(--background-modifier-border);
 }
@@ -4069,14 +4092,54 @@ input[type="color"]:hover {
     transform: scale(1.1) !important;
 }
 
+/* === ANIMATION SPEED VARIABLE === */
+:root {
+    --animation-speed-raw: 550ms;
+}
+
+body {
+    --animation-duration: calc(850ms - var(--animation-speed-raw));
+}
+
 .setting-item {
     transform: translateX(0px) !important;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all var(--animation-duration) cubic-bezier(0.175, 0.885, 0.32, 2);
 }
 
 .setting-item:hover {
     transform: translateY(-3px) !important;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: transform var(--animation-duration) cubic-bezier(0.175, 0.885, 0.32, 2);
+}
+
+/* disable settings animation */
+.disable-settings-animation .setting-item {
+    transform: none !important;
+    transition: none !important;
+}
+.disable-settings-animation .setting-item:hover {
+    transform: none !important;
+    transition: none !important;
+}
+
+/* disable button/dropdown/input animations */
+.disable-ui-animations button,
+.disable-ui-animations select,
+.disable-ui-animations input,
+.disable-ui-animations textarea,
+.disable-ui-animations .mod-cta,
+.disable-ui-animations .setting-item-control button,
+.disable-ui-animations .dropdown {
+    transition: none !important;
+    animation: none !important;
+}
+
+/* disable clickable icon animations */
+.disable-icon-animations .clickable-icon,
+.disable-icon-animations .clickable-icon:hover,
+.disable-icon-animations .clickable-icon:active {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
 }
 
 /* ===== MODALS & PROMPTS ===== */
@@ -4089,7 +4152,7 @@ input[type="color"]:hover {
 
 /* OLD MODAL OPENING ANIM */
 /* .modal-container {
-    animation: modal-bounce-in 0.22s cubic-bezier(0.175, 0.885, 0.32, 1.5);
+    animation: modal-bounce-in calc(var(--animation-duration) * 0.7333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
     transform-origin: center;
 }
 @keyframes modal-bounce-in {
@@ -4108,7 +4171,7 @@ input[type="color"]:hover {
 
 .modal-container {
     transform-origin: center;
-    animation: modal-open 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.7);
+    animation: modal-open calc(var(--animation-duration) * 0.8333) cubic-bezier(0.175, 0.885, 0.32, 1.7);
 }
 
 @keyframes modal-open {
@@ -4188,14 +4251,14 @@ input.prompt-input:focus {
 @media (min-width: 600px) {
     .nav-header {
         /* margin-top: -30px; */
-        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.2);
+        transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.2);
         border-bottom: 1.5px solid var(--background-modifier-border);
     }
 
     .nav-buttons-container {
         position: relative;
-        transition: opacity 2s ease;
-        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.6);
+        transition: opacity calc(var(--animation-duration) * 6.6667) ease;
+        transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.6);
         margin: -2.8px;
     }
 
@@ -4258,7 +4321,7 @@ input.prompt-input:focus {
         background-color: hsla(var(--interactive-accent-hsl), 0.2);
         color: var(--color-accent-1);
         margin: 8px 0;
-        transition: all 0.3s ease;
+        transition: all calc(var(--animation-duration) * 1) ease;
         gap: 4px;
     }
 
@@ -4266,7 +4329,7 @@ input.prompt-input:focus {
         background-color: hsla(var(--interactive-accent-hsl), 0.25) !important;
         color: var(--color-accent-1) !important;
         margin: 10px 0;
-        transition: all 0.3s ease;
+        transition: all calc(var(--animation-duration) * 1) ease;
     }
 
     .tree-item-self.is-active .tree-item-icon {
@@ -4278,7 +4341,7 @@ input.prompt-input:focus {
 .file-exp-center {
     .tree-item-self {
         border-radius: 10px;
-        transition: background-color 0.2s ease;
+        transition: background-color calc(var(--animation-duration) * 0.6667) ease;
     }
 
     .nav-file-title.is-active .tree-item-icon {
@@ -4300,7 +4363,7 @@ input.prompt-input:focus {
         background-color: hsla(var(--interactive-accent-hsl), 0.2);
         color: var(--color-accent-1);
         margin: 8px 0;
-        transition: all 0.3s ease;
+        transition: all calc(var(--animation-duration) * 1) ease;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -4311,7 +4374,7 @@ input.prompt-input:focus {
         background-color: hsla(var(--interactive-accent-hsl), 0.25) !important;
         color: var(--color-accent-1) !important;
         margin: 10px 0;
-        transition: all 0.3s ease;
+        transition: all calc(var(--animation-duration) * 1) ease;
     }
 
     .tree-item-self.is-active .nav-file-title,
@@ -4339,7 +4402,7 @@ input.prompt-input:focus {
     margin: 4px 0;
     border-radius: 8px;
     background-color: var(--background-modifier-hover);
-    transition: all 0.3s ease;
+    transition: all calc(var(--animation-duration) * 1) ease;
 
     border-top: 2px solid var(--background-modifier-border-hover);
 }
@@ -4404,12 +4467,12 @@ input.prompt-input:focus {
 
     border: 2px solid var(--background-modifier-border);
     transition:
-        border 0.2s ease,
-        padding 0.2s ease,
+        border calc(var(--animation-duration) * 0.6667) ease,
+        padding calc(var(--animation-duration) * 0.6667) ease,
         padding-left 0s ease,
-        margin 0.2s ease,
-        border-radius 0.2s,
-        box-shadow 0.2s ease !important;
+        margin calc(var(--animation-duration) * 0.6667) ease,
+        border-radius calc(var(--animation-duration) * 0.6667),
+        box-shadow calc(var(--animation-duration) * 0.6667) ease !important;
 
     &:hover {
         border-radius: 12px;
@@ -4426,12 +4489,12 @@ input.prompt-input:focus {
         box-shadow: 0px 2px 0px var(--text-faint);
 
         transition:
-            border 0.2s ease,
-            padding 0.2s ease,
+            border calc(var(--animation-duration) * 0.6667) ease,
+            padding calc(var(--animation-duration) * 0.6667) ease,
             padding-left 0s ease,
-            margin 0.2s ease,
-            border-radius 0.2s,
-            box-shadow 0.2s ease !important;
+            margin calc(var(--animation-duration) * 0.6667) ease,
+            border-radius calc(var(--animation-duration) * 0.6667),
+            box-shadow calc(var(--animation-duration) * 0.6667) ease !important;
     }
 }
 
@@ -4452,13 +4515,13 @@ input.prompt-input:focus {
     border: none;
 
     transition:
-        border 0.2s ease,
-        padding 0.2s ease,
+        border calc(var(--animation-duration) * 0.6667) ease,
+        padding calc(var(--animation-duration) * 0.6667) ease,
         padding-left 0s ease,
-        margin 0.2s ease,
-        border-radius 0.2s,
-        box-shadow 0.2s ease,
-        background-color 0.2s ease !important;
+        margin calc(var(--animation-duration) * 0.6667) ease,
+        border-radius calc(var(--animation-duration) * 0.6667),
+        box-shadow calc(var(--animation-duration) * 0.6667) ease,
+        background-color calc(var(--animation-duration) * 0.6667) ease !important;
 
     &:hover {
         border-radius: 6px;
@@ -4470,13 +4533,13 @@ input.prompt-input:focus {
     padding-bottom: 10px !important; */
 
         transition:
-            border 0.2s ease,
-            padding 0.2s ease,
+            border calc(var(--animation-duration) * 0.6667) ease,
+            padding calc(var(--animation-duration) * 0.6667) ease,
             padding-left 0s ease,
-            margin 0.2s ease,
-            border-radius 0.2s,
-            box-shadow 0.2s ease,
-            background-color 0.2s ease !important;
+            margin calc(var(--animation-duration) * 0.6667) ease,
+            border-radius calc(var(--animation-duration) * 0.6667),
+            box-shadow calc(var(--animation-duration) * 0.6667) ease,
+            background-color calc(var(--animation-duration) * 0.6667) ease !important;
     }
 }
 
@@ -4596,12 +4659,12 @@ input.prompt-input:focus {
 /* = dim unless hovered = */
 .dim-properties .metadata-container {
     opacity: 0.6 !important;
-    transition: opacity 0.3s ease !important;
+    transition: opacity calc(var(--animation-duration) * 1) ease !important;
 }
 
 .dim-properties .metadata-container:hover {
     opacity: 1 !important;
-    transition: opacity 0.3s ease !important;
+    transition: opacity calc(var(--animation-duration) * 1) ease !important;
 }
 
 /* 1 */
@@ -4736,7 +4799,7 @@ input.prompt-input:focus {
     .metadata-properties-heading
     .collapse-indicator.collapse-icon {
     opacity: 0 !important;
-    transition: opacity 0.2s ease;
+    transition: opacity calc(var(--animation-duration) * 0.6667) ease;
 }
 
 .metadata-container.is-collapsed
@@ -4767,8 +4830,8 @@ input.prompt-input:focus {
 .properties-5 .metadata-container .metadata-content {
     transform-origin: top;
     transition:
-        transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2),
-        opacity 0.4s ease;
+        transform calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
+        opacity calc(var(--animation-duration) * 1.3333) ease;
 }
 
 /* Collapsed state */
@@ -4782,13 +4845,13 @@ input.prompt-input:focus {
     transform: scaleY(1.05);
     opacity: 1;
     transition:
-        transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2),
-        opacity 0.4s ease;
+        transform calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
+        opacity calc(var(--animation-duration) * 1.3333) ease;
 }
 
 /* settle back from overshoot */
 .metadata-container:not(.is-collapsed) .metadata-content {
-    animation: settle-bounce 0.4s forwards;
+    animation: settle-bounce calc(var(--animation-duration) * 1.3333) forwards;
 }
 
 @keyframes settle-bounce {
@@ -4811,9 +4874,9 @@ input.prompt-input:focus {
 .properties-5 .metadata-container {
     transform-origin: top;
     transition:
-        transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2),
-        padding 0.4s ease,
-        opacity 0.4s ease;
+        transform calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
+        padding calc(var(--animation-duration) * 1.3333) ease,
+        opacity calc(var(--animation-duration) * 1.3333) ease;
 }
 
 /* Collapsed state */
@@ -4826,8 +4889,8 @@ input.prompt-input:focus {
 .metadata-container:not(.is-collapsed) {
     transform: scaleY(1.15);
     opacity: 1;
-    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 2);
-    animation: settle-container 0.5s forwards;
+    transition: transform calc(var(--animation-duration) * 1.6667) cubic-bezier(0.175, 0.885, 0.32, 2);
+    animation: settle-container calc(var(--animation-duration) * 1.6667) forwards;
 }
 
 /* Bounce back to normal scale */
@@ -4847,7 +4910,7 @@ input.prompt-input:focus {
 
 /* Closing animation */
 .metadata-container.is-collapsed {
-    animation: collapse-bounce 0.45s cubic-bezier(0.175, 0.885, 0.32, 2)
+    animation: collapse-bounce calc(var(--animation-duration) * 1.5) cubic-bezier(0.175, 0.885, 0.32, 2)
         forwards;
     opacity: 0.6;
 }
@@ -4869,7 +4932,7 @@ input.prompt-input:focus {
 /* === TAGS === */
 .metadata-property[data-property-key="tags"] .multi-select-pill,
 .metadata-property[data-property-key="cssclasses"] .multi-select-pill {
-    transition: all 0.15s ease;
+    transition: all calc(var(--animation-duration) * 0.5) ease;
 }
 
 .metadata-property[data-property-key="tags"] .multi-select-pill {
@@ -5016,7 +5079,6 @@ input.prompt-input:focus {
 .mpk-accent-color .metadata-property-key-input {
     border-radius: 20px !important;
     padding: 4px 10px !important;
-    text-transform: uppercase; /* !ss case */
     letter-spacing: 0.09em;
     background-color: transparent;
     color: var(--color-accent-1) !important;
@@ -5030,7 +5092,6 @@ input.prompt-input:focus {
 /* accent-color + hidden */
 .mpk-accent-color-hidden .metadata-property-key-input {
     border-radius: 20px !important;
-    text-transform: uppercase; /* !ss case */
     letter-spacing: 0.09em;
     background-color: transparent;
     color: var(--color-accent-1) !important;
@@ -5046,7 +5107,6 @@ input.prompt-input:focus {
 .mpk-normal-color .metadata-property-key-input {
     border-radius: 20px !important;
     padding: 4px 12px !important;
-    text-transform: uppercase; /* !ss case */
     letter-spacing: 0.09em;
     background-color: transparent;
     color: var(--text-normal) !important;
@@ -5060,7 +5120,6 @@ input.prompt-input:focus {
 .mpk-muted-color .metadata-property-key-input {
     border-radius: 20px !important;
     padding: 4px 12px !important;
-    text-transform: uppercase; /* !ss case */
     letter-spacing: 0.09em;
     background-color: transparent;
     color: var(--text-muted) !important;
@@ -5074,7 +5133,6 @@ input.prompt-input:focus {
 .mpk-key-only .metadata-property-key-input {
     border-radius: 20px !important;
     padding: 4px 12px !important;
-    text-transform: uppercase; /* !ss case */
     letter-spacing: 0.09em;
     background-color: transparent;
     color: var(--text-muted) !important;
@@ -5089,7 +5147,7 @@ input.prompt-input:focus {
 
 .notice,
 .notice-container {
-    animation: notice-in 0.35s cubic-bezier(0.175, 0.885, 0.32, 2);
+    animation: notice-in calc(var(--animation-duration) * 1.1667) cubic-bezier(0.175, 0.885, 0.32, 2);
     transform-origin: top center;
     z-index: 2000;
 }
@@ -5126,7 +5184,7 @@ input.prompt-input:focus {
 }
 
 .canvas-control-item {
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.275);
     padding: 8px 10px;
     background-color: var(--titlebar-background) !important;
 }
@@ -5145,7 +5203,7 @@ input.prompt-input:focus {
 }
 
 .canvas-card-menu-button.mod-draggable:hover {
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 2) !important;
+    transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2) !important;
     transform: scale(1.2) translateY(0) !important;
 }
 
@@ -5222,7 +5280,7 @@ body.theme-dark {
     align-items: flex-start;
     border-bottom: 2px solid
         rgba(var(--callout-color), var(--callout-border-opacity));
-    transition: border-bottom-width 0.1s ease;
+    transition: border-bottom-width calc(var(--animation-duration) * 0.3333) ease;
 }
 
 .callout.is-collapsed > .callout-title {
@@ -5250,10 +5308,10 @@ body.theme-dark {
 .callout {
     transform-origin: top;
     transition:
-        transform 0.45s cubic-bezier(0.175, 0.885, 0.32, 2.2),
-        max-height 0.45s ease,
-        padding 0.3s ease,
-        opacity 0.3s ease;
+        transform calc(var(--animation-duration) * 1.5) cubic-bezier(0.175, 0.885, 0.32, 2.2),
+        max-height calc(var(--animation-duration) * 1.5) ease,
+        padding calc(var(--animation-duration) * 1) ease,
+        opacity calc(var(--animation-duration) * 1) ease;
     overflow: hidden;
     opacity: 1;
 }
@@ -5299,7 +5357,7 @@ body.theme-dark {
 }
 
 .callout-title {
-    transition: border-bottom-width 0.15s ease;
+    transition: border-bottom-width calc(var(--animation-duration) * 0.5) ease;
     gap: 10px;
 }
 
@@ -5332,7 +5390,7 @@ a.external-link {
     text-decoration: underline !important;
     text-decoration-thickness: 1px !important;
     text-underline-offset: 2px !important;
-    transition: all 0.2s ease !important;
+    transition: all calc(var(--animation-duration) * 0.6667) ease !important;
     padding: 2px 0px !important;
 }
 
@@ -5341,7 +5399,7 @@ a.external-link:hover {
     background-color: var(--background-secondary-alt) !important;
     border-radius: 8px !important;
     font-weight: 600 !important;
-    transition: all 0.2s ease !important;
+    transition: all calc(var(--animation-duration) * 0.6667) ease !important;
     padding: 2px 6px !important;
 }
 
@@ -5353,14 +5411,14 @@ a.external-link:hover {
     color: var(--color-accent) !important;
     background-image: none;
     margin-right: 0px;
-    transition: all 0.2s ease !important;
+    transition: all calc(var(--animation-duration) * 0.6667) ease !important;
     padding: 2px 0px !important;
 }
 
 .external-link:hover {
     background-color: var(--background-secondary-alt) !important;
     margin-right: 0px;
-    transition: all 0.2s ease !important;
+    transition: all calc(var(--animation-duration) * 0.6667) ease !important;
     padding: 2px 0px !important;
 }
 
@@ -5369,7 +5427,7 @@ a.external-link:hover {
     background-color: transparent !important;
     text-decoration: underline !important;
     color: var(--text-normal) !important;
-    transition: all 0.15s ease !important;
+    transition: all calc(var(--animation-duration) * 0.5) ease !important;
     padding: 2px 0px !important;
 }
 
@@ -5378,7 +5436,7 @@ a.external-link:hover {
     background-color: var(--background-secondary-alt) !important;
     text-decoration-thickness: 2px !important;
     border-radius: 8px !important;
-    transition: all 0.15s ease !important;
+    transition: all calc(var(--animation-duration) * 0.5) ease !important;
     padding: 2px 6px !important;
 }
 
@@ -5389,7 +5447,7 @@ a.external-link:hover {
     border-radius: 6px;
     padding-left: 5px;
     padding-right: 5px;
-    transition: background-color 0.5s ease;
+    transition: background-color calc(var(--animation-duration) * 1.6667) ease;
     box-decoration-break: clone;
 
     &:hover {
@@ -5437,13 +5495,13 @@ a.external-link:hover {
 
 .markdown-embed-link {
     border-radius: 20px !important;
-    transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2);
     z-index: 1000 !important;
 }
 
 .markdown-embed-link:hover {
     transform: scale(1.2);
-    transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2);
 }
 
 .markdown-embed-link:active {
@@ -5658,7 +5716,7 @@ th {
     mask-position: center;
     mask-size: contain;
     pointer-events: none;
-    transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.2);
+    transition: transform calc(var(--animation-duration) * 0.5) cubic-bezier(0.175, 0.885, 0.32, 1.2);
 }
 
 .titlebar-button.mod-close:hover {
@@ -5741,7 +5799,7 @@ input.slider::-webkit-slider-thumb {
     background-color: var(--interactive-accent);
     cursor: pointer;
     width: 20px !important;
-    transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.5);
+    transition: all calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
     background-image: url("data:image/svg+xml;utf8,\
 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>\
 <!-- Angry eyes \\/ -->\
@@ -5758,7 +5816,7 @@ input.slider::-webkit-slider-thumb:hover {
     appearance: none;
     border-radius: 20px !important;
     width: 18px !important;
-    transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2);
     background-image: url("data:image/svg+xml;utf8,\
 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>\
 <circle cx='35' cy='40' r='5' fill='black'/>\
@@ -5779,24 +5837,24 @@ input.slider::-webkit-slider-thumb:hover {
 /* TOGGLE STYLING */
 .checkbox-container {
     border-radius: 10px;
-    transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2);
 }
 
 .checkbox-container:not(.is-enabled)::after {
     border-radius: 10px;
-    transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2);
 }
 
 .checkbox-container.is-enabled {
     border-radius: 6px;
-    transition: all 0.1s ease-out;
+    transition: all calc(var(--animation-duration) * 0.3333) ease-out;
 }
 
 .checkbox-container.is-enabled::after {
     border-radius: 6px;
     transition:
-        transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 2),
-        border-radius 0.3s cubic-bezier(0.175, 0.885, 0.32, 2);
+        transform calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
+        border-radius calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
 }
 
 .checkbox-container::after {
@@ -5810,8 +5868,8 @@ input.slider::-webkit-slider-thumb:hover {
     background-position: center;
     background-size: 70%;
     transition:
-        background-size 0.1s cubic-bezier(0.175, 0.885, 0.32, 2),
-        transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.5);
+        background-size calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
+        transform calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
 }
 
 .checkbox-container:not(.is-enabled):hover::after {
@@ -5831,8 +5889,8 @@ input.slider::-webkit-slider-thumb:hover {
 .theme-light .checkbox-container.is-enabled:hover::after {
     border: 1px solid var(--background-modifier-border) !important;
     transition:
-        transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 2),
-        border 0.1s ease;
+        transform calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
+        border calc(var(--animation-duration) * 0.3333) ease;
 }
 
 .checkbox-container.is-enabled:hover::after {
@@ -5847,13 +5905,13 @@ input.slider::-webkit-slider-thumb:hover {
 </svg>");
     transform: scale(1.5) translateX(1em);
     transition:
-        transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 2),
-        border 0.1s ease;
+        transform calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
+        border calc(var(--animation-duration) * 0.3333) ease;
 }
 
 input[type="checkbox"] {
     transform: scale(1);
-    transition: transform 0.1s ease !important;
+    transition: transform calc(var(--animation-duration) * 0.3333) ease !important;
 }
 
 input[type="checkbox"]:checked:hover {
@@ -5888,9 +5946,9 @@ body:not(.disable-checkboxes) {
 
         cursor: pointer;
         transition:
-            all 0.3s cubic-bezier(0.175, 0.885, 0.32, 2),
-            padding 0.1s ease,
-            border-radius 0.2s ease !important;
+            all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2),
+            padding calc(var(--animation-duration) * 0.3333) ease,
+            border-radius calc(var(--animation-duration) * 0.6667) ease !important;
     }
 
     /* hide tick */
@@ -5914,9 +5972,9 @@ body:not(.disable-checkboxes) {
         border-radius: 20px !important;
         transform: scale(0.96) !important;
         transition:
-            transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 2),
-            padding 0.1s ease,
-            border-radius 0.2s ease !important;
+            transform calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2),
+            padding calc(var(--animation-duration) * 0.3333) ease,
+            border-radius calc(var(--animation-duration) * 0.6667) ease !important;
     }
 
     /* sad */
@@ -6370,7 +6428,7 @@ body:not(.disable-checkboxes) {
   border-bottom-left-radius: 0px;
   padding: 2px 4px;
   margin: -4.8px;
-  transition: background-color 0.2s ease;
+  transition: background-color calc(var(--animation-duration) * 0.6667) ease;
 }
 
 .HyperMD-list-line[data-task="D"] > label {
@@ -6551,7 +6609,7 @@ li[data-task="D"] > input:checked:hover {
     background-repeat: no-repeat;
     vertical-align: middle;
 
-    animation: float 2s ease-in-out infinite;
+    animation: float calc(var(--animation-duration) * 6.6667) ease-in-out infinite;
 }
 
 @keyframes float {
@@ -7213,6 +7271,19 @@ settings:
       - label: Right
         value: right-inline-title
 
+  - id: view-title-casing
+    title: View title casing
+    description: Change the text transform of the view/tab title
+    type: class-select
+    default: view-title-case-none
+    options:
+      - label: No change
+        value: view-title-case-none
+      - label: Uppercase
+        value: view-title-case-upper
+      - label: Lowercase
+        value: view-title-case-lower
+
   ########################################
   # Lists & Checkboxes
   ########################################
@@ -7392,6 +7463,19 @@ settings:
       - label: Obsidian Default
         value: Obsidian-default
 
+  - id: metadata-key-casing
+    title: Metadata property key casing
+    description: Change the text transform of property key labels
+    type: class-select
+    default: meta-key-case-none
+    options:
+      - label: No change
+        value: meta-key-case-none
+      - label: Uppercase
+        value: meta-key-case-upper
+      - label: Lowercase
+        value: meta-key-case-lower
+
   ########################################
   # Command Palette
   ########################################
@@ -7406,7 +7490,45 @@ settings:
     default: false
     addCommand: false
 
-    */
+  ########################################
+  # Animations
+  ########################################
+  - id: heading-animations
+    title: Animations
+    type: heading
+    level: 1
+
+  - id: disable-settings-animation
+    title: Disable settings item animation
+    description: Disables the hover lift animation on settings items
+    type: class-toggle
+    default: true
+
+  - id: disable-ui-animations
+    title: Disable button, dropdown & input animations
+    description: Disables transition animations on buttons, dropdowns, and input boxes
+    type: class-toggle
+    default: false
+
+  - id: disable-icon-animations
+    title: Disable clickable icon animations
+    description: Disables scale/transform animations on clickable icons
+    type: class-toggle
+    default: false
+
+  - id: animation-speed-raw
+    title: Animation speed
+    description: Drag left for slower, right for faster animations. Default is the middle.
+    type: variable-number-slider
+    default: 550
+    min: 50
+    max: 800
+    step: 10
+    format: ms
+
+*/
+
+
 
 .hide-breadcrumbs .view-header-breadcrumb {
     display: none;
@@ -7439,7 +7561,7 @@ settings:
     .cm-line:not(.cm-active):not(.HyperMD-codeblock):not(
         .HyperMD-codeblock-bg
     ):not(.HyperMD-codeblock-end):not(.HyperMD-codeblock-end-bg) {
-    animation: floatUpDown 3s ease-in-out infinite;
+    animation: floatUpDown calc(var(--animation-duration) * 10) ease-in-out infinite;
 }
 
 .float-inactive
