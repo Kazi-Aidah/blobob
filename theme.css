@@ -1076,12 +1076,50 @@
     background-color: hsl(var(--interactive-accent-hsl), 0.3) !important;
 }
 
-/*
-.cm-highlight, mark {
-    padding: 2px 6px;
+
+.cm-s-obsidian span.cm-highlight, mark,
+body .cm-s-obsidian span.cm-highlight,
+body mark {
     border-radius: 6px;
-    background-color: var(--text-highlight-bg);
-} */
+    padding: 2px 4px;
+    background-color: hsla(var(--interactive-accent-hsl), 0.4) !important;
+    border: none;
+    border-bottom: none;
+}
+
+.underlined-highlight .cm-s-obsidian span.cm-highlight,
+.underlined-highlight mark {
+    background-color: hsla(var(--interactive-accent-hsl), 0.3) !important;
+    border-bottom: 2px solid hsla(var(--interactive-accent-hsl), 0.6) !important;
+    padding: 2px 4px;
+    border-radius: 0;
+}
+
+.bordered-highlight .cm-s-obsidian span.cm-highlight,
+.bordered-highlight mark {
+    background-color: hsla(var(--interactive-accent-hsl), 0.4) !important;
+    border: 2px solid hsla(var(--interactive-accent-hsl), 0.6) !important;
+    padding: 0px 4px;
+    padding-top: 2px;
+    border-radius: 7px;
+}
+
+.only-underline .cm-s-obsidian span.cm-highlight,
+.only-underline mark {
+    background-color: transparent !important;
+    border-bottom: 2px solid hsla(var(--interactive-accent-hsl), 0.6) !important;
+    padding: 2px 4px;
+    border-radius: 0;
+}
+
+.only-border .cm-s-obsidian span.cm-highlight,
+.only-border mark {
+    background-color: transparent !important;
+    border: 2px solid hsla(var(--interactive-accent-hsl), 0.6) !important;
+    padding: 0px 4px;
+    padding-top: 2px;
+    border-radius: 7px;
+}
 
 /* =========
    Light theme vars
@@ -2451,7 +2489,7 @@ body.custom-bullets-enabled {
     border: 0px solid var(--background-modifier-border);
     margin-top: 0px;
     padding-bottom: 8px !important;
-    margin-top: 2px;
+    margin-top: 0px;
     padding-left: 0 !important;
     padding-right: 0 !important;
     height: 40px;
@@ -2639,6 +2677,10 @@ body.custom-bullets-enabled {
 
 .bubble {
     /* pinned tabs */
+    .workspace-tab-header.is-active:has(.mod-pinned) {
+        margin-top: 2px !important;
+    }
+
     .workspace-tab-header.is-active:has(.mod-pinned) {
         background-color: var(--tab-background) !important;
         border-radius: 20px !important;
@@ -6937,6 +6979,23 @@ settings:
     type: heading
     level: 1
 
+  - id: highlight-styles
+    title: Highlight styles
+    description: change the style of ==highlight==
+    type: class-select
+    default: default
+    options:
+      - label: Default Highlight
+        value: default
+      - label: Bordered Highlight
+        value: bordered-highlight
+      - label: Underlined Highlight
+        value: underlined-highlight
+      - label: Only border
+        value: only-border
+      - label: Only underline
+        value: only-underline
+
   - id: lined
     title: Lined Notebook
     description: Adds lines to the editor
@@ -7039,6 +7098,8 @@ settings:
         value: view-title-case-upper
       - label: Lowercase
         value: view-title-case-lower
+
+
 
   ########################################
   # Text colours
