@@ -121,7 +121,7 @@
     --text-muted: #7d8593;
     --text-error: #ff8a8a;
     --background-modifier-form-field: #1c2135;
-    --background-modifier-form-field-hover: #242a42;
+    --background-modifier-form-field-hover: #262d46;
     --dropdown-background: #1c2135;
     --dropdown-background-hover: #242a42;
     --button-background: #1c2135;
@@ -2354,6 +2354,7 @@ body.custom-bullets-enabled {
     border: 0px solid var(--background-modifier-border);
     border-bottom: 0;
     margin-top: 4px;
+    padding-bottom: 10px !important;
     transition-property: border-radius, max-width, margin, padding, transform, background-color !important;
     transition-duration: 0.4s, 0.4s, 0.4s, 0.4s, 0.3s, 0s !important;
     transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1), cubic-bezier(0.34, 1.56, 0.64, 1), cubic-bezier(0.34, 1.56, 0.64, 1), cubic-bezier(0.34, 1.56, 0.64, 1), cubic-bezier(0.68, -0.55, 0.265, 1.55), ease !important;
@@ -2375,9 +2376,9 @@ body.custom-bullets-enabled {
 .pin-icon-only .workspace-tab-header.is-active:has(.mod-pinned) {
     --tab-max-width: 58px !important;
     /* background-color: var(--tab-background) !important; */
-    border-radius: 6px 6px 0 0 !important;
+    border-radius: 10px 10px 0 0 !important;
     border: 0px solid var(--background-modifier-border);
-    margin-top: 2px;
+    margin-top: 0px;
     padding-bottom: 8px !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -2560,7 +2561,7 @@ body.custom-bullets-enabled {
         background-color: var(--background-primary) !important;
         border-radius: 20px !important;
         height: 27px !important;
-        padding-bottom: 3px !important;
+        padding-bottom: 0px !important;
     }
 }
 

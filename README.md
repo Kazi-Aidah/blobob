@@ -12,8 +12,10 @@ It supports [Style Settings](https://github.com/mgmeyers/obsidian-style-settings
 > I'd recommend trying this theme out without reading the rest of the README for surprises.
 
 ---
-# Colour Options
+# Colour Options (65)
 **Note:** Heading is green due to my current Obsidian accent color. Some themes override it with their own.
+
+> 6 Button Styles + 35 Dark Theme Colors + 30+ Light Theme Colors!!
 
 ### Dark Theme Colors
 
@@ -99,9 +101,17 @@ I personally have `Alt + <` and `Alt + >` for easy tab navigation.
 Design Idea: Essential buttons should stay fixed.
 
 ### Pinned Tabs
-![](assets/pinned-tabs.gif)
+<!-- ![](assets/pinned-tabs.gif) -->
+Default pinned tabs animation
 
-Design idea: Sharp when active, darkened and standing down when inactive (like bodyguards).
+![](assets/default-pinned-tabs.gif)
+
+
+Bubble pinned tabs animation
+
+![](assets/bubble-pinned-tabs.gif)
+
+<!-- Design idea: Sharp when active, darkened and standing down when inactive (like bodyguards). -->
 
 ## Callout Style
 ![](assets/callout-style.png)
@@ -109,10 +119,10 @@ Design idea: Sharp when active, darkened and standing down when inactive (like b
 # Style Settings
 You can use the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings#obsidian-style-settings-plugin) plugin to activate these extra styles!
 
-## Multiple Theme Colors
+<!-- ## Multiple Theme Colors
 ![](assets/theme-colors-dropdown.png)
 
-6 Button Styles + 35 Dark Theme Colors 👀 + 30+ Light Theme Colors!!
+6 Button Styles + 35 Dark Theme Colors 👀 + 30+ Light Theme Colors!! -->
 
 ## Active Line Highlighting
 ![](assets/active-line-highlight-w-face.png)
