@@ -131,6 +131,9 @@ You can use the [Style Settings](https://github.com/mgmeyers/obsidian-style-sett
 ## Active Line Dimming & Floating
 ![](assets/darken-inactive-lines.gif)
 
+## Active Line Prefix!
+![](assets/active-line-prefix.gif)
+
 ## Properties Styles
 The Properties Styling does not affect the "Show File Properties" brought via Command Palette.
 
