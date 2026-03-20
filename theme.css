@@ -1,5 +1,8 @@
 :root {
     --nav-hide-text: "My Vault";
+    --before-active-line: ">>";
+    --before-active-line-color: #7c3aed;
+    --before-active-line-margin: -20px;
 }
 
 .workspace-tab-container {
@@ -2036,6 +2039,12 @@ body.custom-bullets-enabled {
 /* ==================================================
    ACTIVE LINE
 ================================================== */
+.text-before-active-line .cm-line.cm-active::before {
+  content: var(--before-active-line);
+  color: var(--before-active-line-color);
+  margin-right: 6px;
+  margin-left: var(--before-active-line-margin);
+}
 
 .highlight-active-line .cm-active.cm-line {
     background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
@@ -2079,6 +2088,10 @@ body.custom-bullets-enabled {
 
 .center-active-line .cm-active.cm-line {
     text-align: center;
+}
+
+.huge-text-active-line .cm-active {
+    font-size: larger;
 }
 
 /* ==================================================
@@ -6025,7 +6038,6 @@ body:not(.disable-checkboxes) {
     }
 
     /* hide strikethrough */
-    .hide-strikethrough,
     .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"],
     .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="X"] {
         text-decoration: none !important;
@@ -6586,6 +6598,13 @@ li[data-task="D"] > input:checked:hover {
     }
 }
 
+/* hide strikethrough - works regardless of custom checkboxes */
+.hide-strikethrough .markdown-preview-view .task-list-item.is-checked,
+.hide-strikethrough .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"],
+.hide-strikethrough .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="X"] {
+    text-decoration: none !important;
+}
+
 /* ====== LOADING SCREEN TEXT ===== */
 .progress-bar-message::before {
     padding: 10px;
@@ -6880,6 +6899,13 @@ settings:
     type: heading
     level: 1
 
+  - id: lined
+    title: Lined Notebook
+    description: Adds lines to the editor
+    type: class-toggle
+    default: false
+    addCommand: true
+
   - id: highlight-active-line
     title: Highlight active line
     type: class-toggle
@@ -6892,7 +6918,13 @@ settings:
     default: false
     addCommand: false
 
-  - id: .center-active-line
+  - id: huge-text-active-line
+    title: Big active line text
+    type: class-toggle
+    default: false
+    addCommand: false
+
+  - id: center-active-line
     title: Center active line
     type: class-toggle
     default: false
@@ -6910,12 +6942,185 @@ settings:
     default: false
     addCommand: true
 
-  - id: lined
-    title: Lined Notebook
-    description: Adds lines to the editor
+  - id: text-before-active-line
+    title: Enable active line prefix
+    description: Text shown before the active line
     type: class-toggle
     default: false
-    addCommand: true
+
+  - id: before-active-line
+    title: Active line prefix text
+    description: Customize the text shown before the active line (e.g. ">>" or "→")
+    type: variable-text
+    default: ">>"
+    quotes: true
+
+  - id: before-active-line-margin
+    title: Active line prefix margin
+    description: Negative value pulls the prefix outside the editor edge
+    type: variable-number
+    default: -20
+    format: px
+
+  - id: before-active-line-color
+    title: Active line prefix color
+    description: Color of the prefix text shown before the active line
+    type: variable-color
+    format: hex
+    opacity: false
+    default: '#7c3aed'
+
+  - id: table-hor-lines-only
+    title: Hide Vertical Lines in Tables
+    type: class-toggle
+    default: true
+    addCommand: false
+
+  - id: inline-title
+    title: Align inline title
+    description:
+    type: class-select
+    default: center-inline-title
+    options:
+      - label: Center
+        value: center-inline-title
+      - label: Left
+        value: left-inline-title
+      - label: Right
+        value: right-inline-title
+
+  - id: view-title-casing
+    title: View title casing
+    description: Change the text transform of the view/tab title
+    type: class-select
+    default: view-title-case-none
+    options:
+      - label: No change
+        value: view-title-case-none
+      - label: Uppercase
+        value: view-title-case-upper
+      - label: Lowercase
+        value: view-title-case-lower
+
+  ########################################
+  # Text colours
+  ########################################
+
+  - id: heading-text-colors-section
+    title: Text Emphasis Colors
+    type: heading
+    level: 2
+    collapsed: true
+
+  - id: italic
+    title: Italic Text Color
+    description: Sets the color for all italic text (reading + editor)
+    type: class-select
+    default: italic-color-normal
+    options:
+      - label: Normal Color
+        value: italic-color-normal
+      - label: Muted Color
+        value: italic-color-muted
+      - label: Accent Color
+        value: italic-color-accent
+      - label: Red
+        value: italic-color-red
+      - label: Orange
+        value: italic-color-orange
+      - label: Yellow
+        value: italic-color-yellow
+      - label: Green
+        value: italic-color-green
+      - label: Cyan
+        value: italic-color-cyan
+      - label: Blue
+        value: italic-color-blue
+      - label: Purple
+        value: italic-color-purple
+      - label: Pink
+        value: italic-color-pink
+      - label: Gray
+        value: italic-color-gray
+      - label: Brown
+        value: italic-color-brown
+
+  - id: heading-bold
+    title: Bold Text Color
+    description: Sets the color for all bold text
+    type: class-select
+    default: bold-color-normal
+    options:
+      - label: Normal Color
+        value: bold-color-normal
+      - label: Muted Color
+        value: bold-color-muted
+      - label: Accent Color
+        value: bold-color-accent
+      - label: Red
+        value: bold-color-red
+      - label: Orange
+        value: bold-color-orange
+      - label: Yellow
+        value: bold-color-yellow
+      - label: Green
+        value: bold-color-green
+      - label: Cyan
+        value: bold-color-cyan
+      - label: Blue
+        value: bold-color-blue
+      - label: Purple
+        value: bold-color-purple
+      - label: Pink
+        value: bold-color-pink
+      - label: Gray
+        value: bold-color-gray
+      - label: Brown
+        value: bold-color-brown
+
+  - id: heading-bolditalic
+    title: Bold Italic Text Color
+    description: Sets the color for all bold italic text
+    type: class-select
+    default: bolditalic-color-normal
+    options:
+      - label: Normal Color
+        value: bolditalic-color-normal
+      - label: Muted Color
+        value: bolditalic-color-muted
+      - label: Accent Color
+        value: bolditalic-color-accent
+      - label: Red
+        value: bolditalic-color-red
+      - label: Orange
+        value: bolditalic-color-orange
+      - label: Yellow
+        value: bolditalic-color-yellow
+      - label: Green
+        value: bolditalic-color-green
+      - label: Cyan
+        value: bolditalic-color-cyan
+      - label: Blue
+        value: bolditalic-color-blue
+      - label: Purple
+        value: bolditalic-color-purple
+      - label: Pink
+        value: bolditalic-color-pink
+      - label: Gray
+        value: bolditalic-color-gray
+      - label: Brown
+        value: bolditalic-color-brown
+
+
+  ########################################
+  # Headings
+  ########################################
+
+  - id: heading-colors-section
+    title: Heading Colors
+    type: heading
+    level: 2
+    collapsed: true
 
   - id: heading-colors
     title: All Headings Color
@@ -7147,143 +7352,6 @@ settings:
       - label: Brown
         value: h6-color-brown
 
-  - id: heading-italic
-    title: Italic Text Color
-    description: Sets the color for all italic text (reading + editor)
-    type: class-select
-    default: italic-color-normal
-    options:
-      - label: Normal Color
-        value: italic-color-normal
-      - label: Muted Color
-        value: italic-color-muted
-      - label: Accent Color
-        value: italic-color-accent
-      - label: Red
-        value: italic-color-red
-      - label: Orange
-        value: italic-color-orange
-      - label: Yellow
-        value: italic-color-yellow
-      - label: Green
-        value: italic-color-green
-      - label: Cyan
-        value: italic-color-cyan
-      - label: Blue
-        value: italic-color-blue
-      - label: Purple
-        value: italic-color-purple
-      - label: Pink
-        value: italic-color-pink
-      - label: Gray
-        value: italic-color-gray
-      - label: Brown
-        value: italic-color-brown
-
-  - id: heading-bold
-    title: Bold Text Color
-    description: Sets the color for all bold text
-    type: class-select
-    default: bold-color-normal
-    options:
-      - label: Normal Color
-        value: bold-color-normal
-      - label: Muted Color
-        value: bold-color-muted
-      - label: Accent Color
-        value: bold-color-accent
-      - label: Red
-        value: bold-color-red
-      - label: Orange
-        value: bold-color-orange
-      - label: Yellow
-        value: bold-color-yellow
-      - label: Green
-        value: bold-color-green
-      - label: Cyan
-        value: bold-color-cyan
-      - label: Blue
-        value: bold-color-blue
-      - label: Purple
-        value: bold-color-purple
-      - label: Pink
-        value: bold-color-pink
-      - label: Gray
-        value: bold-color-gray
-      - label: Brown
-        value: bold-color-brown
-
-  - id: heading-bolditalic
-    title: Bold Italic Text Color
-    description: Sets the color for all bold italic text
-    type: class-select
-    default: bolditalic-color-normal
-    options:
-      - label: Normal Color
-        value: bolditalic-color-normal
-      - label: Muted Color
-        value: bolditalic-color-muted
-      - label: Accent Color
-        value: bolditalic-color-accent
-      - label: Red
-        value: bolditalic-color-red
-      - label: Orange
-        value: bolditalic-color-orange
-      - label: Yellow
-        value: bolditalic-color-yellow
-      - label: Green
-        value: bolditalic-color-green
-      - label: Cyan
-        value: bolditalic-color-cyan
-      - label: Blue
-        value: bolditalic-color-blue
-      - label: Purple
-        value: bolditalic-color-purple
-      - label: Pink
-        value: bolditalic-color-pink
-      - label: Gray
-        value: bolditalic-color-gray
-      - label: Brown
-        value: bolditalic-color-brown
-
-  - id: hide-strikethrough
-    title: Hide Strikethrough in checked list
-    type: class-toggle
-    default: true
-    addCommand: false
-
-  - id: table-hor-lines-only
-    title: Hide Vertical Lines in Tables
-    type: class-toggle
-    default: true
-    addCommand: false
-
-  - id: inline-title
-    title: Align inline title
-    description:
-    type: class-select
-    default: center-inline-title
-    options:
-      - label: Center
-        value: center-inline-title
-      - label: Left
-        value: left-inline-title
-      - label: Right
-        value: right-inline-title
-
-  - id: view-title-casing
-    title: View title casing
-    description: Change the text transform of the view/tab title
-    type: class-select
-    default: view-title-case-none
-    options:
-      - label: No change
-        value: view-title-case-none
-      - label: Uppercase
-        value: view-title-case-upper
-      - label: Lowercase
-        value: view-title-case-lower
-
   ########################################
   # Lists & Checkboxes
   ########################################
@@ -7317,6 +7385,12 @@ settings:
     description: Disable this if you don't want to use blobob theme's checkboxes.
     type: class-toggle
     default: false
+
+  - id: hide-strikethrough
+    title: Hide Strikethrough in checked list
+    type: class-toggle
+    default: true
+    addCommand: false
 
   ########################################
   # Tabs & Navigation
@@ -7525,6 +7599,8 @@ settings:
     max: 800
     step: 10
     format: ms
+
+
 
 */
 
