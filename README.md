@@ -23,6 +23,7 @@ It supports [Style Settings](https://github.com/mgmeyers/obsidian-style-settings
 |-----------------------------------------------|------------------------------------------------------------|
 | **Neutral Gray**<br>![](assets/themages/Neutral%20Gray.png) | **Slate Smoke**<br>![](assets/themages/Slate%20Smoke.png) |
 | **Arctic Ice**<br>![](assets/themages/Arctic%20Ice.png) | **Noble Blue**<br>![](assets/themages/Noble%20Blue.png) |
+| **Cold Memory**<br>![](assets/themages/Cold%20Memory.png) | **Green Road**<br>![](assets/themages/Green%20Road.png) |
 | **Dark Night**<br>![](assets/themages/Dark%20Night.png) | **Deep Blue**<br>![](assets/themages/Deep%20Blue.png) |
 | **Deep Purple**<br>![](assets/themages/Deep%20Purple.png) | **Violent Dream**<br>![](assets/themages/Violent%20Dream.png) |
 | **Magic Purple**<br>![](assets/themages/Magic%20Purple.png) | **Lavendar**<br>![](assets/themages/Lavendar.png) |
