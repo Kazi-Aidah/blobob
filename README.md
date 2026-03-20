@@ -12,10 +12,10 @@ It supports [Style Settings](https://github.com/mgmeyers/obsidian-style-settings
 > I'd recommend trying this theme out without reading the rest of the README for surprises.
 
 ---
-# Colour Options (65)
+# Colour Options (68)
 **Note:** Heading is green due to my current Obsidian accent color. Some themes override it with their own.
 
-> 6 Button Styles + 35 Dark Theme Colors + 30+ Light Theme Colors!!
+> 6 Button Styles + 38 Dark Theme Colors + 30+ Light Theme Colors!!
 
 ### Dark Theme Colors
 
@@ -57,7 +57,7 @@ It supports [Style Settings](https://github.com/mgmeyers/obsidian-style-settings
 
 **My favourites are:**
 
-*Favourite Dark Themes:* Dark Night, Golden Earth, Crimson Twilight, Emerald, Mafia Red
+*Favourite Dark Themes:* Dark Night, Golden Earth, Crimson Twilight, Emerald, Mafia Red, Cold Memory
 
 *Favourite Light Themes:* Payesh, Chicken, Corporate, Yellow Teeth
 
