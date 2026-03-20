@@ -134,6 +134,41 @@
     --background-modifier-border-focus: #2a3150;
 }
 
+.theme-dark.cold-memory {
+    --background-primary: #14161b;
+    --background-primary-alt: #1b202a;
+    --background-secondary: #1e222f;
+    --background-secondary-alt: #293042;
+    --titlebar-background: #1e222f;
+    --titlebar-background-focused: #1e222f;
+
+    --tab-container-background: var(--titlebar-background);
+
+    --code-background: #10182a;
+
+    --text-normal: #b7c4d6;
+    --text-muted: #7c8aa3;
+    --text-error: #ff8a8a;
+
+    --background-modifier-form-field: #293042;
+    --background-modifier-form-field-hover: #374057;
+
+    --dropdown-background: #293042;
+    --dropdown-background-hover: #374057;
+
+    --button-background: #293042;
+    --button-background-hover: #374057;
+
+    --background-modifier-border: #293045;
+    --background-modifier-border-hover: #303950;
+    --background-modifier-border-focus: #3a4661;
+
+    /* input {
+        background-color: var(--background-modifier-form-field) !important;
+        background: var(--background-modifier-form-field) !important;
+    } */
+}
+
 .theme-dark.amoled {
     --background-primary: #000000;
     --background-primary-alt: #111111;
@@ -4579,7 +4614,7 @@ input.prompt-input:focus {
 .workspace-leaf-content[data-type="file-properties"] .metadata-container {
     .metadata-content {
         background-color: var(--background-secondary) !important;
-        border-radius: var(--button-radius);
+        /* border-radius: var(--button-radius); */
     }
 }
 
@@ -6675,6 +6710,8 @@ settings:
         value: arctic-ice
       - label: Noble Blue
         value: noble-blue
+      - label: Cold Memory
+        value: cold-memory
       - label: Dark Night
         value: dark-night
       - label: Deep Blue
