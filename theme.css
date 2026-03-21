@@ -14,6 +14,7 @@
    Dark theme vars
    ========= */
 .theme-dark {
+    
     --button-shadow: #00000050;
     --canvas-background: var(--background-primary);
     --blockquote-border-thickness: 4px;
@@ -1126,6 +1127,7 @@ body mark {
    Light theme vars
    ========= */
 .theme-light {
+    --ribbon-background: var(--titlebar-background-focused);
     --button-shadow: #00000025;
     --blockquote-border-thickness: 4px;
     --toggle-thumb-color: var(--text-normal);
@@ -1956,6 +1958,166 @@ body mark {
     --icon-size: 18px !important;
     width: 22px;
 }
+/* ==================================================
+   RIBBON STYLE
+================================================== */
+
+/* Default ribbon styling */
+.workspace-ribbon.side-dock-ribbon,
+.sidebar-toggle-button {
+    background-color: var(--ribbon-background) !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.workspace-ribbon::before {
+    background-color: var(--ribbon-background);
+    border: 2px solid var(--ribbon-background) !important;
+    border-bottom: 0px solid var(--ribbon-background) !important;
+    transition: all 0.2s ease;
+}
+
+/* Ribbon icon */
+
+.side-dock-actions {
+    gap: 2px;
+    margin-top: -6px;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.workspace-ribbon.side-dock-ribbon:hover .side-dock-actions {
+    opacity: 1;
+}
+
+.workspace-ribbon.side-dock-ribbon .clickable-icon {
+    background-color: transparent;
+    border-radius: var(--button-radius) !important;
+    padding: 6px !important;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+.workspace-ribbon.side-dock-ribbon .clickable-icon:hover {
+    background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
+    color: var(--interactive-accent);
+    border-radius: var(--button-radius) !important;
+    transform: scale(1);
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), all 0.2s ease !important;
+}
+
+.workspace-ribbon.side-dock-ribbon .clickable-icon:active {
+    background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
+    color: var(--interactive-accent);
+    border-radius: var(--button-radius) !important;
+    transform: scale(0.8);
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), all 0.2s ease !important;
+}
+
+/* ----------- */
+
+.ribbon-no-anim .workspace-ribbon.side-dock-ribbon .clickable-icon {
+    transform: scale(0.9) !important;
+}
+
+.ribbon-no-anim .workspace-ribbon.side-dock-ribbon .clickable-icon:hover {
+    transform: scale(0.9) !important;
+}
+
+.workspace-ribbon.side-dock-ribbon .clickable-icon:active {
+    transform: scale(0.9) !important;
+}
+
+/* --------- */
+
+/* Left sidebar toggle button */
+.sidebar-toggle-button.mod-left .clickable-icon {
+    background-color: transparent !important;
+    color: var(--text-muted);
+    padding: 4px 4px !important;
+    height: 34px;
+    width: 40px;
+    margin-left: 6px;
+    transition: all 0.2s ease;
+}
+
+.workspace-tab-header-container .sidebar-toggle-button.mod-left .clickable-icon {
+    background-color: transparent !important;
+    color: var(--text-muted) !important;
+    border-radius: var(--button-radius) !important;
+    padding: 6px 8px !important;
+    height: 34px !important;
+    width: 40px !important;
+    margin-top: -6px;
+    margin-right: -14px;
+    transform: scale(1) translateX(0) !important;
+}
+
+.workspace-tab-header-container .sidebar-toggle-button.mod-left .clickable-icon:hover {
+    background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
+    color: var(--interactive-accent) !important;
+    border-radius: var(--button-radius) !important;
+    padding: 6px 8px !important;
+    height: 34px !important;
+    width: 40px !important;
+    margin-top: -6px;
+    margin-right: -14px;
+    transform: scale(1) translateX(0) !important;
+}
+
+/* Right sidebar toggle button */
+.sidebar-toggle-button.mod-right .clickable-icon {
+    background-color: transparent !important;
+    color: var(--text-muted) !important;
+    border-radius: var(--button-radius) !important;
+    padding: 6px 8px !important;
+    height: 34px;
+    width: 40px;
+    margin-top: -6px;
+    transition: all 0.2s ease;
+}
+
+.sidebar-toggle-button.mod-right .clickable-icon:hover {
+    background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
+    color: var(--interactive-accent);
+    border-radius: var(--button-radius) !important;
+    padding: 6px 8px !important;
+    height: 34px;
+    width: 40px;
+    margin-top: -6px;
+}
+
+.workspace-tab-header-container .sidebar-toggle-button.mod-right .clickable-icon {
+    background-color: transparent !important;
+    color: var(--text-muted) !important;
+    border-radius: var(--button-radius) !important;
+    padding: 6px 8px !important;
+    height: 34px !important;
+    width: 40px !important;
+    margin-top: -6px;
+    margin-right: 20px;
+}
+
+.workspace-tab-header-container .sidebar-toggle-button.mod-right .clickable-icon:hover {
+    background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
+    color: var(--interactive-accent) !important;
+    border-radius: var(--button-radius) !important;
+    padding: 6px 8px !important;
+    height: 34px !important;
+    width: 40px !important;
+    margin-top: -6px;
+    margin-right: 20px;
+}
+
+/* active + both sidebar toggle buttons */
+.workspace-tab-header-container .sidebar-toggle-button.mod-right .clickable-icon:active,
+.workspace-tab-header-container .sidebar-toggle-button.mod-left .clickable-icon:active {
+    transform: scale(0.8) !important;
+}
+
+.workspace-tab-header-container .workspace-tab-header-new-tab {
+    margin-right: 24px !important;
+}
+
 
 
 /* ==================================================
@@ -2592,6 +2754,8 @@ body.custom-bullets-enabled {
 
 /* dark outside */
 .bubble.theme-dark.bubble-focused-dark-outside {
+    --ribbon-background: var(--tab-background);
+    
     --tab-background: var(--background-primary-alt);
     .workspace-tab-header.is-active {
         background-color: var(--tab-background);
@@ -2640,6 +2804,24 @@ body.custom-bullets-enabled {
     }
 
     .titlebar-button-container {
+        background-color: var(--background-primary) !important;
+    }
+
+    .workspace-ribbon {
+        background-color: var(--background-primary) !important;
+    }
+
+    .sidebar-toggle-button {
+        background-color: var(--background-primary) !important;
+        border-bottom: 0px solid var(--background-primary) !important;
+    }
+
+    .workspace-ribbon::before {
+    background-color: var(--background-primary);
+    border-bottom: 2px solid var(--background-primary) !important;
+    }
+
+    .workspace-sidedock-vault-profile {
         background-color: var(--background-primary) !important;
     }
 }
@@ -2695,6 +2877,43 @@ body.custom-bullets-enabled {
     .titlebar-button-container {
         background-color: var(--background-primary) !important;
     }
+
+    .workspace-ribbon {
+        background-color: var(--background-primary) !important;
+    }
+
+    .sidebar-toggle-button {
+        background-color: var(--background-primary) !important;
+        border-bottom: 0px solid var(--background-primary) !important;
+    }
+
+    .workspace-ribbon::before {
+    background-color: var(--background-primary);
+    border-bottom: 2px solid var(--background-primary) !important;
+    }
+
+    .workspace-sidedock-vault-profile {
+        background-color: var(--background-primary) !important;
+    }
+}
+
+.bubble.theme-dark.bubble-dark-inside {
+        .workspace-ribbon {
+        background-color: var(--background-primary-alt) !important;
+    }
+
+    .sidebar-toggle-button {
+        background-color: var(--background-primary-alt) !important;
+        border-bottom: 0px solid var(--background-primary-alt) !important;
+    }
+
+    .workspace-ribbon::before {
+    background-color: var(--background-secondary-alt);
+    border-bottom: 2px solid var(--background-primary-alt) !important;
+    }
+    .workspace-sidedock-vault-profile {
+        background-color: var(--background-secondary-alt) !important;
+    }
 }
 
 .theme-light.bubble {
@@ -2703,6 +2922,10 @@ body.custom-bullets-enabled {
         border-radius: 20px !important;
         height: 27px !important;
         padding-bottom: 0px !important;
+    }
+
+    .workspace-tab-header.is-active {
+        background-color: var(--background-primary) !important;
     }
 }
 
@@ -3887,15 +4110,16 @@ body:not(.view-header) .button-bordered-3d button:active,
 /* ------------- */
 
 .clickable-icon {
-    transition: all calc(var(--animation-duration) * 0.3333) ease;
+    /* transition: all calc(var(--animation-duration) * 0.3333) ease; */
+    transition: all 0.2s ease;
     border-radius: 20px !important;
-    transition: var(--animation-duration) ease cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: 0.2s ease cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transform: scale(0.9);
 }
 
 .clickable-icon:hover {
     /* transform: scale(1.2); */
-    transition: all var(--animation-duration) ease;
+    transition: all 0.2s ease;
     border-radius: 20px !important;
     transform: scale(1);
 }
@@ -3938,15 +4162,22 @@ body:not(.view-header) .button-bordered-3d button:active,
 
 .workspace-tab-header-new-tab .clickable-icon:hover {
     border-radius: 20px !important;
-    color: var(--color-green);
-    background-color: rgba(var(--color-green-rgb), 0.2) !important;
+    color: var(--color-accent);
+    background-color: hsla(var(--interactive-accent-hsl), 0.2);
     transition: calc(var(--animation-duration) * 0.6667) ease !important;
 }
 
-.workspace-tab-header-new-tab .clickable-icon:active {
+/* .workspace-tab-header-new-tab .clickable-icon:active {
     border-radius: 8px !important;
     color: var(--color-green);
     background-color: rgba(var(--color-green-rgb), 0.2) !important;
+    transition: calc(var(--animation-duration) * 0.6667) ease !important;
+} */
+
+.workspace-tab-header-new-tab .clickable-icon:active {
+    border-radius: 8px !important;
+    color: var(--color-accent);
+    background-color: hsla(var(--interactive-accent-hsl), 0.2);
     transition: calc(var(--animation-duration) * 0.6667) ease !important;
 }
 
@@ -4417,11 +4648,25 @@ body {
     border: 2px solid var(--background-modifier-border) !important;
 }
 
+.suggestion-item {
+    transition: all 0.2s ease;
+}
+
 .suggestion-item.mod-complex.is-selected {
-    /* border-radius: var(--button-radius); */
+    border-radius: var(--button-radius);
     color: var(--color-accent-1);
     background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
-    transition: padding 0s ease;
+}
+
+.suggestion-item .suggestion-content {
+    margin-left: 0px;
+    transition: margin 0.2s ease;
+    transition-delay: margin 0.1s ease;
+}
+
+.suggestion-item.mod-complex.is-selected .suggestion-content {
+    margin: 4px;
+    margin-right: 0px;
 }
 
 /* .prompt::after {
@@ -5884,6 +6129,10 @@ th {
     gap: 4px;
 }
 
+.hide-tab-list .workspace-tab-header-tab-list {
+    display: none !important;
+}
+
 /* LEFT SIDEBAR TOGGLE */
 /* .sidebar-toggle-button.mod-left {
     order: -2;
@@ -6392,6 +6641,7 @@ body:not(.disable-checkboxes) {
         width: 23px;
         height: 23px;
         mask-position: calc(50% - -1px) 50%;
+        mask-size: 24px;
 
         -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="1.8 1 20 21"><path d="M12 22q-.4 0-.7-.2l-2.3-2.4C3.8 15.8 2 12.9 2 9.5 2 6.5 4.5 4 7.5 4c1.3 0 2.6.6 3.5 1.5C11.9 4.6 13.2 4 14.5 4 17.5 4 20 6.5 20 9.5c0 3.4-2.8 6.3-6.3 9.9l-0.7 0.8z" fill="black"/></svg>');
     }
@@ -7130,6 +7380,23 @@ settings:
         value: hide-status-bar
       - label: Centered
         value: centered-statusbar
+
+  - id: ribbon-style
+    title: Ribbon style
+    description: Set the ribbon style
+    type: class-select
+    default: default
+    options:
+      - label: Default
+        value: default
+      - label: Unanimated Ribbon
+        value: ribbon-no-anim
+
+  - id: hide-tab-list
+    title: Hide tab list
+    type: class-toggle
+    default: true
+
 
   - id: color-min-max
     title: Color Minimize & Maximize buttons
