@@ -3772,7 +3772,7 @@ a,
 
 /* bordered */
 
-.button-bordered button,
+body:not(.view-header) .button-bordered button,
 .button-bordered .setting-item-control button,
 .button-bordered select {
     border: 2px solid var(--background-modifier-border-focus) !important;
@@ -3784,7 +3784,7 @@ a,
 
 /* 3d */
 
-.button-3d button,
+body:not(.view-header) .button-3d button,
 .button-3d .mod-cta,
 .button-3d select,
 .button-3d .setting-item-control button {
@@ -3792,7 +3792,7 @@ a,
     transition: border-bottom 0.1s ease, transform 0.1s ease;
 }
 
-.button-3d button:hover,
+body:not(.view-header) .button-3d button:hover,
 .button-3d .mod-cta:hover,
 .button-3d select:hover,
 .button-3d .setting-item-control button:hover {
@@ -3800,7 +3800,7 @@ a,
     transform: translateY(-2px);
 }
 
-.button-3d button:active,
+body:not(.view-header) .button-3d button:active,
 .button-3d .mod-cta:active,
 .button-3d select:active,
 .button-3d .setting-item-control button:active {
@@ -3810,7 +3810,7 @@ a,
 
 /* boredered 3d */
 
-.button-bordered-3d button,
+body:not(.view-header) .button-bordered-3d button,
 .button-bordered-3d .mod-cta,
 .button-bordered-3d select,
 .button-bordered-3d .setting-item-control button {
@@ -3819,7 +3819,7 @@ a,
     transition: border-bottom 0.1s ease, transform 0.1s ease;
 }
 
-.button-bordered-3d button:hover,
+body:not(.view-header) .button-bordered-3d button:hover,
 .button-bordered-3d .mod-cta:hover,
 .button-bordered-3d select:hover,
 .button-bordered-3d .setting-item-control button:hover {
@@ -3829,7 +3829,7 @@ a,
 }
 
 
-.button-bordered-3d button:active,
+body:not(.view-header) .button-bordered-3d button:active,
 .button-bordered-3d .mod-cta:active,
 .button-bordered-3d select:active,
 .button-bordered-3d .setting-item-control button:active {
