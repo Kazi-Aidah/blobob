@@ -2111,6 +2111,35 @@ body.custom-bullets-enabled {
     margin-bottom: 15px;
 }
 
+.special-inline-title .inline-title {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    padding: 0 0px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    width: 100%;
+    transition: 0.3s all ease;
+    text-transform: uppercase;
+    color: var(--h3-color);
+}
+
+.special-inline-title .inline-title:before,
+.special-inline-title .inline-title:after {
+    content: "";
+    flex-grow: 1;
+    height: 3px;
+    background-color: var(--interactive-accent);
+    /* background-color: #cf5915; */
+    margin: 0px 0px;
+    /* opacity: 0.8; */
+    border-radius: 0px;
+    transition: all 0.3s ease;
+}
+
+
 /* ==================================================
    ACTIVE LINE
 ================================================== */
@@ -7084,6 +7113,34 @@ settings:
       - label: Yellow-min Green-max
         value: y-min-g-max
 
+  - id: inline-title
+    title: Align inline title
+    description:
+    type: class-select
+    default: center-inline-title
+    options:
+      - label: Center
+        value: center-inline-title
+      - label: Left
+        value: left-inline-title
+      - label: Right
+        value: right-inline-title
+      - label: --- special ---
+        value: special-inline-title
+
+  - id: view-title-casing
+    title: View title casing
+    description: Change the text case of the view header title
+    type: class-select
+    default: view-title-case-none
+    options:
+      - label: No change
+        value: view-title-case-none
+      - label: Uppercase
+        value: view-title-case-upper
+      - label: Lowercase
+        value: view-title-case-lower
+
   - id: hide-breadcrumbs
     title: Hide Breadcrumbs
     type: class-toggle
@@ -7095,6 +7152,10 @@ settings:
     type: class-toggle
     default: false
     addCommand: true
+
+
+
+
 
   - id: heading-editor
     title: Editor & Text Appearance
@@ -7195,31 +7256,7 @@ settings:
     default: true
     addCommand: false
 
-  - id: inline-title
-    title: Align inline title
-    description:
-    type: class-select
-    default: center-inline-title
-    options:
-      - label: Center
-        value: center-inline-title
-      - label: Left
-        value: left-inline-title
-      - label: Right
-        value: right-inline-title
 
-  - id: view-title-casing
-    title: View title casing
-    description: Change the text transform of the view/tab title
-    type: class-select
-    default: view-title-case-none
-    options:
-      - label: No change
-        value: view-title-case-none
-      - label: Uppercase
-        value: view-title-case-upper
-      - label: Lowercase
-        value: view-title-case-lower
 
 
 
@@ -7983,3 +8020,4 @@ settings:
 .HyperMD-quote.HyperMD-quote-1.cm-line {
     border-radius: 200px !important;
 }
+
