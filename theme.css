@@ -14,6 +14,7 @@
    Dark theme vars
    ========= */
 .theme-dark {
+    --button-shadow: #00000050;
     --canvas-background: var(--background-primary);
     --blockquote-border-thickness: 4px;
 
@@ -1125,6 +1126,7 @@ body mark {
    Light theme vars
    ========= */
 .theme-light {
+    --button-shadow: #00000025;
     --blockquote-border-thickness: 4px;
     --toggle-thumb-color: var(--text-normal);
     --caret-color: var(--color-accent);
@@ -3641,7 +3643,17 @@ em strong {
     --input-radius: 20px;
 }
 
+.round-tiptip {
+    --button-radius: 6px;
+    --input-radius: 6px;
+}
+
 .rounded-tiptip {
+    --button-radius: 10px;
+    --input-radius: 10px;
+}
+
+.lil-round-tiptip {
     --button-radius: 10px;
     --input-radius: 10px;
 }
@@ -3722,11 +3734,18 @@ a,
     border-radius: var(--button-radius) !important;
 }
 
+.round-tiptip .menu,
+.round-tiptip .modal,
+.round-tiptip .prompt {
+    border-radius: calc(var(--button-radius) + 2px) !important;
+}
+
 .rounded-tiptip .menu,
 .rounded-tiptip .modal,
 .rounded-tiptip .prompt {
     border-radius: calc(var(--button-radius) + 2px) !important;
 }
+
 
 .sharp-tiptip .menu,
 .sharp-tiptip .modal,
@@ -3749,6 +3768,91 @@ a,
 .eye-tiptip .suggestion-hotkey,
 .eye-tiptip .setting-hotkey {
     border-radius: var(--button-radius) !important;
+}
+
+/* bordered */
+
+.button-bordered button,
+.button-bordered .setting-item-control button,
+.button-bordered select {
+    border: 2px solid var(--background-modifier-border-focus) !important;
+}
+
+.button-bordered button.mod-cta {
+    border: 2px solid var(--color-accent-1) !important;
+}
+
+/* 3d */
+
+.button-3d button,
+.button-3d .mod-cta,
+.button-3d select,
+.button-3d .setting-item-control button {
+    border-bottom: 3px solid var(--button-shadow) !important;
+    transition: border-bottom 0.1s ease, transform 0.1s ease;
+}
+
+.button-3d button:hover,
+.button-3d .mod-cta:hover,
+.button-3d select:hover,
+.button-3d .setting-item-control button:hover {
+    border-bottom: 5px solid var(--button-shadow) !important;
+    transform: translateY(-2px);
+}
+
+.button-3d button:active,
+.button-3d .mod-cta:active,
+.button-3d select:active,
+.button-3d .setting-item-control button:active {
+    border-bottom: 0px solid var(--button-shadow) !important;
+    transform: translateY(2px);
+}
+
+/* boredered 3d */
+
+.button-bordered-3d button,
+.button-bordered-3d .mod-cta,
+.button-bordered-3d select,
+.button-bordered-3d .setting-item-control button {
+    border: 2px solid var(--background-modifier-border-focus) !important;
+    border-bottom: 3px solid var(--button-shadow) !important;
+    transition: border-bottom 0.1s ease, transform 0.1s ease;
+}
+
+.button-bordered-3d button:hover,
+.button-bordered-3d .mod-cta:hover,
+.button-bordered-3d select:hover,
+.button-bordered-3d .setting-item-control button:hover {
+    border: 2px solid var(--background-modifier-border-focus) !important;
+    border-bottom: 5px solid var(--button-shadow) !important;
+    transform: translateY(-2px);
+}
+
+
+.button-bordered-3d button:active,
+.button-bordered-3d .mod-cta:active,
+.button-bordered-3d select:active,
+.button-bordered-3d .setting-item-control button:active {
+    border: 2px solid var(--background-modifier-border-focus) !important;
+    border-bottom: 0px solid var(--button-shadow) !important;
+    transform: translateY(0px);
+}
+
+/* glw */
+
+.button-glow button,
+.button-glow .mod-cta,
+.button-glow select,
+.button-glow .setting-item-control button {
+    box-shadow: 0 0 0px var(--color-accent) !important;
+    transition: box-shadow 0.2s ease;
+}
+
+.button-glow button:hover,
+.button-glow .mod-cta:hover,
+.button-glow select:hover,
+.button-glow .setting-item-control button:hover {
+    box-shadow: 0 0 8px var(--text-normal) !important;
 }
 
 /* ------------- */
@@ -6912,6 +7016,8 @@ settings:
         value: circular-tiptip
       - label: Rounded
         value: rounded-tiptip
+      - label: Round
+        value: round-tiptip
       - label: Sharp
         value: sharp-tiptip
       - label: Hexagon
@@ -6920,6 +7026,22 @@ settings:
         value: sock-tiptip
       - label: Eye
         value: eye-tiptip
+
+  - id: button-style
+    title: Button & dropdown select Style
+    type: class-select
+    default: default
+    options:
+      - label: Default
+        value: default
+      - label: Bordered
+        value: button-bordered
+      - label: 3D
+        value: button-3d
+      - label: Bordered 3D
+        value: button-bordered-3d
+      - label: Glow
+        value: button-glow
 
   - id: icon-style
     title: Icon style
