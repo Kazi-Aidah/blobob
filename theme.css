@@ -2094,7 +2094,7 @@ body mark {
     height: 34px !important;
     width: 40px !important;
     margin-top: -6px;
-    margin-right: 20px;
+    margin-right: 34px;
 }
 
 .workspace-tab-header-container .sidebar-toggle-button.mod-right .clickable-icon:hover {
@@ -2105,7 +2105,6 @@ body mark {
     height: 34px !important;
     width: 40px !important;
     margin-top: -6px;
-    margin-right: 20px;
 }
 
 /* active + both sidebar toggle buttons */
@@ -2116,6 +2115,7 @@ body mark {
 
 .workspace-tab-header-container .workspace-tab-header-new-tab {
     margin-right: 24px !important;
+    margin-top: -2px !important;
 }
 
 
@@ -2284,8 +2284,8 @@ body.custom-bullets-enabled {
     gap: 0.5em;
     width: 100%;
     transition: 0.3s all ease;
-    text-transform: uppercase;
     color: var(--h3-color);
+    text-transform: none !important;
 }
 
 .special-inline-title .inline-title:before,
@@ -2921,7 +2921,7 @@ body.custom-bullets-enabled {
         background-color: var(--background-primary) !important;
         border-radius: 20px !important;
         height: 27px !important;
-        padding-bottom: 0px !important;
+        padding-bottom: 2px !important;
     }
 
     .workspace-tab-header.is-active {
