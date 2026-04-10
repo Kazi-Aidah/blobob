@@ -1970,18 +1970,59 @@ body mark {
     outline: none !important;
 }
 
-.workspace-ribbon::before {
-    background-color: var(--ribbon-background);
-    border: 2px solid var(--ribbon-background) !important;
-    border-bottom: 0px solid var(--ribbon-background) !important;
-    transition: all 0.2s ease;
+
+/* Only apply when the left ribbon is visible */
+
+/* Sidebar toggle button */
+
+/* ribbon on, sidebar off (collapsed) */
+.workspace-ribbon.is-collapsed .sidebar-toggle-button.mod-left .clickable-icon {
+    margin-bottom: 10px !important;
+    margin-left: 0px !important;
+    margin-top: -4px !important;
+}
+
+/* ribbon on, sidebar on (not collapsed) */
+.workspace-ribbon:not(.is-collapsed) .sidebar-toggle-button.mod-left .clickable-icon {
+    margin-bottom: 10px !important;
+    margin-left: 0px !important;
+    margin-top: -4px !important;
+}
+
+/* ribbon off, sidebar on — handled below in workspace-tab-header-container rules */
+
+
+/* .sidebar-toggle-button.mod-left .clickable-icon {
+    margin-bottom: 10px !important;
+    margin-left: 0px !important;
+    margin-top: -4px !important;
+} */
+
+/* .workspace:has(.workspace-ribbon:is(.is-collapsed)) .workspace-tab-header-container-inner {
+    margin-left: 0px !important;
+} */
+
+/* .workspace:has(.workspace-ribbon:is(.is-collapsed)) .workspace-tab-header-container-inner {
+    margin-left: -16px !important;
+}
+
+.workspace:has(.workspace-ribbon:not(.is-collapsed)) .workspace-tab-header-container-inner {
+    margin-left: 20px !important;
+} */
+
+.workspace:has(.workspace-ribbon:is(.is-collapsed)) .workspace-tab-header-container-inner {
+    margin-left: 0px !important;
+}
+
+.workspace-ribbon.mod-left.is-collapsed {
+    border-right: 1.5px solid var(--background-modifier-border) !important;
 }
 
 /* Ribbon icon */
 
 .side-dock-actions {
     gap: 2px;
-    margin-top: -6px;
+    margin-top: -3px;
     opacity: 0.7;
     transition: opacity 0.2s ease;
 }
@@ -2050,6 +2091,12 @@ body mark {
     margin-top: -6px;
     margin-right: -14px;
     transform: scale(1) translateX(0) !important;
+}
+
+/* ribbon off, sidebar on */
+.sidebar-toggle-button.mod-left .clickable-icon {
+    margin-right: -2px !important;
+    margin-left: 0px !important;
 }
 
 .workspace-tab-header-container .sidebar-toggle-button.mod-left .clickable-icon:hover {
@@ -2630,9 +2677,9 @@ body.custom-bullets-enabled {
     /* box-shadow: 0px 0px 0px 3px var(--color-brown); */
 }
 
-.sidebar-toggle-button.mod-left {
+/* .sidebar-toggle-button.mod-left {
     margin-inline-end: 10px !important;
-}
+} */
 
 
 
