@@ -1965,7 +1965,7 @@ body mark {
 /* Default ribbon styling */
 .workspace-ribbon.side-dock-ribbon,
 .sidebar-toggle-button {
-    background-color: var(--ribbon-background) !important;
+    /* background-color: var(--ribbon-background) !important; */
     border: none !important;
     outline: none !important;
 }
