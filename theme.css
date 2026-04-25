@@ -9277,3 +9277,6 @@ body.hide-folder-arrow .nav-folder-title {
     border: 2px solid red;
 } */
 
+.tree-item.nav-folder {
+    margin-bottom: 6px !important;
+}
