@@ -3462,7 +3462,7 @@ body.custom-bullets-enabled {
 
     .workspace-tab-header:not(.is-active)  {
         transform: translateY(8px);
-        opacity: 1 !important;
+        opacity: 0.6 !important;
     }
 }
 
