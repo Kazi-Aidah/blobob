@@ -44,10 +44,10 @@
 
     --background-modifier-form-field: #303439;
     --background-modifier-form-field-hover: #29292d;
-    --dropdown-background: #363636;
-    --dropdown-background-hover: #3f3f3f;
-    --button-background: #333639;
-    --button-background-hover: #32353c;
+    --dropdown-background: #303439;
+    --dropdown-background-hover: #3c4048;
+    --button-background: #303439;
+    --button-background-hover: #3c4048;
     --background-modifier-border: #31353e;
     --background-modifier-border-hover: #484848;
 
@@ -110,6 +110,7 @@
     --dropdown-background-hover: #404040;
     --button-background: #363636;
     --button-background-hover: #404040;
+    --background-modifier-border: #353535;
     --background-modifier-border-focus: #505050;
 }
 
@@ -2018,6 +2019,12 @@ body mark {
     border-right: 1.5px solid var(--background-modifier-border) !important;
 }
 
+.bubble {
+    .workspace-ribbon.mod-left.is-collapsed {
+    border-right: 0px solid var(--background-modifier-border) !important;
+    }
+}
+
 /* Ribbon icon */
 
 .side-dock-actions {
@@ -2580,19 +2587,22 @@ body.custom-bullets-enabled {
 .workspace .mod-right-split .workspace-tab-header.is-active {
     padding: 0px !important;
     margin: 0px !important;
-    transform: scale(1.05);
+    transform: scale(1);
+    transition: transform 0.2s ease;
 }
 
 .workspace .mod-left-split .workspace-tab-header:hover,
 .workspace .mod-right-split .workspace-tab-header:hover {
-    transform: scale(1.1);
+    transform: scale(1);
     filter: brightness(1.5);
+    transition: transform 0.2s ease;
 }
 
 .workspace .mod-left-split .workspace-tab-header.is-active:hover,
 .workspace .mod-right-split .workspace-tab-header.is-active:hover {
-    transform: scale(1.1);
+    transform: scale(1) translateY(0px);
     filter: brightness(1.05);
+    transition: transform 0.2s ease;
 }
 
 /* active tab for left sidebar */
@@ -2702,7 +2712,7 @@ body.custom-bullets-enabled {
     background-color: var(--tab-background);
     border: 0px solid var(--background-modifier-border);
     border-bottom: 0;
-    margin-top: 4px;
+    margin-top: 0px;
     padding-bottom: 10px !important;
     transition-property: border-radius, max-width, margin, padding, transform, background-color !important;
     transition-duration: calc(var(--animation-duration) * 1.3333), calc(var(--animation-duration) * 1.3333), calc(var(--animation-duration) * 1.3333), calc(var(--animation-duration) * 1.3333), calc(var(--animation-duration) * 1), 0s !important;
@@ -2790,12 +2800,19 @@ body.custom-bullets-enabled {
     --tab-background: var(--background-primary);
     .workspace-tab-header.is-active {
         outline: 2px solid var(--background-modifier-border-focus) !important;
+        background-color: var(--background-primary) !important;
     }
 
     .workspace-leaf {
         border: 2px solid var(--background-modifier-border-focus) !important;
         --tab-background: var(--background-primary);
         background-color: var(--tab-background);
+    }
+    .workspace-sidedock-vault-profile {
+        background-color: var(--background-primary-alt) !important;
+    }
+    .workspace-ribbon {
+        background-color: var(--background-primary-alt) !important;
     }
 }
 
@@ -2826,6 +2843,8 @@ body.custom-bullets-enabled {
 
     .workspace-sidedock-vault-profile {
         border-top: none !important;
+        /* background-color: none !important;
+        background: none !important; */
     }
 
     .workspace-tab-container {
@@ -2942,10 +2961,14 @@ body.custom-bullets-enabled {
     .workspace-sidedock-vault-profile {
         background-color: var(--background-primary) !important;
     }
+
+    /* .workspace-tab-header.is-active {
+        background-color: var(--background-primary) !important;
+    } */
 }
 
 .bubble.theme-dark.bubble-dark-inside {
-        .workspace-ribbon {
+    .workspace-ribbon {
         background-color: var(--background-primary-alt) !important;
     }
 
@@ -2959,7 +2982,11 @@ body.custom-bullets-enabled {
     border-bottom: 2px solid var(--background-primary-alt) !important;
     }
     .workspace-sidedock-vault-profile {
-        background-color: var(--background-secondary-alt) !important;
+        background-color: var(--background-primary-alt) !important;
+    }
+
+    .workspace-tab-header.is-active {
+        background-color: var(--background-primary-alt) !important;
     }
 }
 
@@ -3053,7 +3080,6 @@ body.custom-bullets-enabled {
     }
 
     .workspace-tab-header:hover {
-        color: var(--color-accent);
         transition: color 0s cubic-bezier(0.175, 0.885, 0.32, 1.4) !important;
     }
 
@@ -3183,6 +3209,7 @@ body.custom-bullets-enabled {
             background-color 0s ease !important;
     }
 
+
     /* border-bottom-left-radius: 0px !important;
     border-bottom-right-radius: 0px !important; */
 
@@ -3231,12 +3258,38 @@ body.custom-bullets-enabled {
             background-color 0s ease !important;
     }
 
+    /* come here */
     .workspace-tab-header.is-active:not(.mod-pinned) {
         margin-left: 5px !important;
         margin-right: 5px !important;
 
-        padding-left: 8px !important;
-        padding-right: 8px !important;
+        padding-left: 4px !important;
+        padding-right: 4px !important;
+    }
+
+    /* .workspace .mod-left-split .workspace-tab-header.is-active:not(.mod-pinned),
+    .workspace .mod-right-split .workspace-tab-header.is-active:not(.mod-pinned) {
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+        margin-bottom: -10px !important;
+
+        padding: 2px 2px 4px 2px !important;
+        border-radius: 10px 10px 0px 0px !important;
+        
+        background-color: var(--background-secondary);
+        border: 1.5px solid var(--background-modifier-border);
+    } */
+
+/* .workspace .mod-left-split .workspace-tab-header.is-active::before,
+.workspace .mod-right-split .workspace-tab-header.is-active::after {
+    box-shadow:
+        inset 0 0 0 var(--tab-outline-width) var(--tab-outline-color),
+        0 0 0 calc(var(--tab-curve) * 4) var(--tab-background-active) !important;
+    z-index: 0 !important;
+} */
+
+    .workspace-tab-header-container-inner {
+        margin-top: 8px !important;
     }
 
     /* .workspace-tab-header.is-active {
@@ -3254,8 +3307,6 @@ body.custom-bullets-enabled {
 } */
 
     .workspace-tab-header:hover {
-        color: var(--color-accent);
-
         transition: color 0s cubic-bezier(0.175, 0.885, 0.32, 1.4) !important;
     }
 
@@ -3281,6 +3332,7 @@ body.custom-bullets-enabled {
         margin-right: 2px;
         margin-left: 2px;
         margin-top: -2px !important;
+        transform: translateY(2px);
 
         transition: all calc(var(--animation-duration) * 1.3333) cubic-bezier(0.34, 1.56, 0.64, 1) !important;
     }
@@ -3318,6 +3370,99 @@ body.custom-bullets-enabled {
             0.32,
             1.2
         ) !important;
+    }
+}
+
+
+/* === default tab less rounded === */
+.default-tab-rounded {
+    .workspace-tab-header {
+        margin: 0px !important;
+        --tab-curve: 0px !important;
+        border-radius: 10px 10px 0px 0px !important;
+        padding-left: 0px !important;
+        box-shadow: 0px 0px 0px 1px transparent;
+        transition: all calc(var(--animation-duration) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1) !important;
+    }
+
+    /* Active tab spacing */
+    .workspace-tab-header.is-active:not(.mod-pinned) {
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+        padding-left: 4px !important;
+        padding-right: 4px !important;
+
+        border: 1px solid var(--background-modifier-border);
+        transition: padding cubic-bezier(0.175, 0.885, 0.32, 2),
+                    margin cubic-bezier(0.175, 0.885, 0.32, 2);
+    }
+
+    /* Side active tabs */
+    .workspace .mod-left-split .workspace-tab-header.is-active:not(.mod-pinned),
+    .workspace .mod-right-split .workspace-tab-header.is-active:not(.mod-pinned) {
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+        margin-bottom: -10px !important;
+        padding: 2px 2px 4px 2px !important;
+        border-radius: 10px 10px 0px 0px !important;
+        background-color: var(--background-secondary);
+        border: 1.5px solid var(--background-modifier-border);
+    }
+
+    .workspace-tab-header-container-inner {
+        margin-top: 8px !important;
+    }
+
+    .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+        height: 100%;
+        border-radius: 10px !important;
+        border-top-left-radius: 15px !important;
+        border-top-right-radius: 15px !important;
+        margin-right: 2px;
+        margin-left: 2px;
+        margin-top: -2px !important;
+        transition: all calc(var(--animation-duration) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1) !important;
+    }
+
+    .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:hover {
+        transition: all calc(var(--animation-duration) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1) !important;
+    }
+
+    .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:active {
+        border-radius: 10px 10px 0px 0px !important;
+        background-color: var(--background-secondary);
+        margin-bottom: -4px !important;
+        margin-top: 2px !important;
+        padding: 10px 8px !important;
+        padding-top: 14px !important;
+        opacity: 1 !important;
+        background-color: var(--background-secondary) !important;
+        box-shadow: 0px 0px 0px 1.5px var(--background-modifier-border);
+        transition: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1) !important;
+    }
+
+    .workspace-split.mod-vertical.mod-root .workspace-tab-header:not(.is-active):not(:has(.mod-pinned)) {
+        margin-left: 0px !important;
+        margin-right: -3px !important;
+    }
+
+    .workspace-tab-header .workspace-tab-header-inner {
+        transition: all calc(var(--animation-duration) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1) !important;
+    }
+
+    .workspace .mod-left-split .workspace-tab-header:not(.is-active):hover {
+        transform: translateY(1px) !important;
+        opacity: 0.8 !important;
+    }
+
+    .workspace-tab-header:not(.is-active):hover {
+        transform: translateY(-1px);
+        opacity: 1 !important;
+    }
+
+    .workspace-tab-header:not(.is-active)  {
+        transform: translateY(8px);
+        opacity: 1 !important;
     }
 }
 
@@ -4160,6 +4305,7 @@ body:not(.view-header) .button-bordered-3d button:active,
     /* transition: all calc(var(--animation-duration) * 0.3333) ease; */
     transition: all 0.2s ease;
     border-radius: 20px !important;
+    border: 2px solid transparent !important;
     transition: 0.2s ease cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transform: scale(0.9);
 }
@@ -4174,6 +4320,7 @@ body:not(.view-header) .button-bordered-3d button:active,
 .clickable-icon:active {
     border-radius: 10px !important;
     transform: scale(0.8);
+    border: 2px solid currentColor !important;
     color: var(--color-accent-1);
     background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
 }
@@ -4601,6 +4748,9 @@ input[type="color"]:hover {
 
 body {
     --animation-duration: calc(850ms - var(--animation-speed-raw));
+    --nav-indentation-guide-width: 0px;
+    --indentation-guide-width: 0px;
+    --indentation-guide-color: var(--text-muted);
 }
 
 .setting-item {
@@ -4775,7 +4925,7 @@ input.prompt-input:focus {
         position: relative;
         transition: opacity calc(var(--animation-duration) * 6.6667) ease;
         transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.6);
-        margin: -2.8px;
+        margin: -4.6px;
     }
 
     /* Hide the buttons and show text */
@@ -4821,6 +4971,10 @@ input.prompt-input:focus {
 }
 
 /* ===== FILE EXPLORER ===== */
+
+.tree-item-self:hover {
+    border-radius: var(--nav-file-radius) !important;
+}
 
 .file-exp-left {
     .nav-file-title .tree-item-icon {
@@ -4886,10 +5040,12 @@ input.prompt-input:focus {
         gap: 4px;
     }
 
+
     .tree-item-self.is-active:hover {
         background-color: hsla(var(--interactive-accent-hsl), 0.25) !important;
         color: var(--color-accent-1) !important;
         margin: 10px 0;
+        padding: 12px 4px;
         transition: all calc(var(--animation-duration) * 1) ease;
     }
 
@@ -4962,47 +5118,38 @@ input.prompt-input:focus {
     background-color: var(--background-modifier-border-hover) !important;
 }
 
-/* FOLDER STYLE 1 AHHH */
-.folders-2 .nav-folder-title {
-    --icon-color: var(--text-normal) !important;
-    --nav-collapse-icon-color: var(---text-normal);
-    --nav-collapse-icon-color-collapsed: var(--text-normal);
+/* base folder styling  */
+.nav-folder-title {
+    /* --icon-color: var(--color-accent-1); */
+    /* --nav-collapse-icon-color: var(--color-accent-1); */
+    /* --nav-collapse-icon-color-collapsed: var(--color-accent-1); */
 
-    border-radius: 8px;
+    border-radius: var(--nav-folder-radius) !important;
     padding-top: 6px !important;
     padding-bottom: 6px !important;
     margin-bottom: 6px !important;
+    padding-left: 30px !important;
 
-    background-color: var(--background-primary-alt);
-    background-image: linear-gradient(
-        180deg,
-        var(--background-primary-alt),
-        var(--background-secondary-alt)
-    ) !important;
-    color: var(--text-normal) !important;
+    /* background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
+    background-image: none !important; */
+    /* color: var(--color-accent-1) !important; */
+    box-shadow: none !important;
+    border: none;
 
-    border: 2px solid var(--background-modifier-border);
     transition:
         border calc(var(--animation-duration) * 0.6667) ease,
         padding calc(var(--animation-duration) * 0.6667) ease,
         padding-left 0s ease,
         margin calc(var(--animation-duration) * 0.6667) ease,
         border-radius calc(var(--animation-duration) * 0.6667),
-        box-shadow calc(var(--animation-duration) * 0.6667) ease !important;
+        box-shadow calc(var(--animation-duration) * 0.6667) ease,
+        background-color calc(var(--animation-duration) * 0.6667) ease !important;
 
-    &:hover {
-        border-radius: 12px;
+    /* &:hover {
+        border-radius: 6px;
 
-        background-image: linear-gradient(
-            180deg,
-            var(--background-secondary-alt),
-            var(--background-primary-alt)
-        );
-        border: 2px solid var(--text-faint);
-
-        padding-top: 10px !important;
-        padding-bottom: 10px !important;
-        box-shadow: 0px 2px 0px var(--text-faint);
+        background-color: hsla(var(--interactive-accent-hsl), 0.3) !important;
+        color: var(--color-accent-2) !important;
 
         transition:
             border calc(var(--animation-duration) * 0.6667) ease,
@@ -5010,16 +5157,31 @@ input.prompt-input:focus {
             padding-left 0s ease,
             margin calc(var(--animation-duration) * 0.6667) ease,
             border-radius calc(var(--animation-duration) * 0.6667),
-            box-shadow calc(var(--animation-duration) * 0.6667) ease !important;
-    }
+            box-shadow calc(var(--animation-duration) * 0.6667) ease,
+            background-color calc(var(--animation-duration) * 0.6667) ease !important;
+    } */
 }
 
-.nav-folder-title {
+.tree-item-self:hover {
+    background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
+}
+
+/* folder none */
+.folder-none .nav-folder-title {
+    border-radius: var(--nav-folder-radius) !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    margin-bottom: 3px !important;
+    box-shadow: none !important;
+    border: none;
+}
+
+.accented .nav-folder-title {
     --icon-color: var(--color-accent-1);
     --nav-collapse-icon-color: var(--color-accent-1);
     --nav-collapse-icon-color-collapsed: var(--color-accent-1);
 
-    border-radius: 8px !important;
+    border-radius: var(--nav-folder-radius) !important;
     padding-top: 6px !important;
     padding-bottom: 6px !important;
     margin-bottom: 6px !important;
@@ -5040,13 +5202,10 @@ input.prompt-input:focus {
         background-color calc(var(--animation-duration) * 0.6667) ease !important;
 
     &:hover {
-        border-radius: 6px;
+        border-radius: var(--nav-folder-radius) !important;
 
         background-color: hsla(var(--interactive-accent-hsl), 0.3) !important;
         color: var(--color-accent-2) !important;
-
-        /* padding-top: 10px !important;
-    padding-bottom: 10px !important; */
 
         transition:
             border calc(var(--animation-duration) * 0.6667) ease,
@@ -5059,6 +5218,65 @@ input.prompt-input:focus {
     }
 }
 
+.mechanical .nav-folder-title {
+    --icon-color: var(--text-normal) !important;
+    --nav-collapse-icon-color: var(--text-normal);
+    --nav-collapse-icon-color-collapsed: var(--text-normal);
+
+    border-radius: var(--nav-folder-radius);
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    margin-bottom: 6px !important;
+
+    background-color: var(--background-primary-alt);
+    background-image: linear-gradient(
+        180deg,
+        var(--background-primary-alt),
+        var(--background-secondary-alt)
+    ) !important;
+    color: var(--text-normal) !important;
+    border: 2px solid var(--background-modifier-border);
+    box-shadow: none;
+}
+
+.huge .nav-folder-title {
+    --icon-color: var(--color-accent-1);
+    --nav-collapse-icon-color: var(--color-accent-1);
+    --nav-collapse-icon-color-collapsed: var(--color-accent-1);
+
+    border-radius: var(--nav-folder-radius) !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    margin-bottom: 6px !important;
+    padding-left: 40px !important;
+
+    background-color: var(--background-secondary-alt);
+    /* background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
+    background-image: none !important;
+    color: var(--color-accent-1) !important; */
+    box-shadow: none !important;
+    border: none;
+}
+
+.thick .nav-folder-title {
+    --icon-color: var(--color-accent-1);
+    --nav-collapse-icon-color: var(--color-accent-1);
+    --nav-collapse-icon-color-collapsed: var(--color-accent-1);
+
+    border-radius: var(--nav-folder-radius) !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    padding-left: 30px !important;
+    margin-bottom: 6px !important;
+
+    background-color: var(--background-secondary-alt);
+    /* background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
+    background-image: none !important;
+    color: var(--color-accent-1) !important; */
+    box-shadow: none !important;
+    border: none;
+}
+
 /* .tree-item-self .tree-item-icon {
   --icon-color:
   --nav-collapse-icon-color:
@@ -5066,13 +5284,512 @@ input.prompt-input:focus {
 } */
 
 .svg-icon.help {
-    /* add a toggle for this */
+    /* todo: remember to add a toggle for this */
     display: none !important;
 }
 
-/* body:not(.is-grabbing) .nav-file-title.is-active:hover, body:not(.is-grabbing) .nav-folder-title.is-active:hover, .nav-file-title.is-active, .nav-folder-title.is-active {
+/* body .nav-file-title.is-active:hover, body .nav-folder-title.is-active:hover, .nav-file-title.is-active, .nav-folder-title.is-active {
     text-align: center !important;
 } */
+
+/* style setting color picker */
+.pickr .pcr-button::after,
+.pickr .pcr-button::before,
+.pickr,
+button.pcr-button {
+    border-radius: 50%;
+    border: none !important;
+}
+
+.button-bordered .pickr button {
+    border: none !important;
+    background-color: none !important;
+    background: none !important;
+    box-shadow: none !important;
+}
+
+.pcr-app {
+    background: var(--background-primary);
+    border: 3px solid var(--background-modifier-border);
+    border-radius: 10px;
+}
+
+.pcr-palette,
+.pcr-palette::before,
+.pcr-palette::after {
+    border-radius: 8px !important;
+}
+
+.pcr-result {
+    background-color: var(--background-modifier-form-field) !important;
+}
+
+.pcr-swatches button {
+    border-radius: 50% !important;
+}
+
+.style-settings-heading {
+    border-radius: var(--setting-items-radius);
+    background-color: var(--background-primary-alt);
+    padding: 10px 20px !important;
+    border: 2px solid var(--background-modifier-border);
+    margin: 16px 0px !important;
+    box-shadow: 0px 2px 4px var(--background-modifier-border);
+    transition: all 0.2s ease !important;
+    filter: brightness(1.3);
+}
+
+.style-settings-heading.is-collapsed {
+    padding: 8px 20px !important;
+    box-shadow: 0px 2px 2px var(--background-modifier-border);
+    filter: brightness(1);
+    transition: all 0.2s ease;
+}
+
+.style-settings-heading .setting-item-heading {
+  position: relative;
+}
+
+.style-settings-heading .setting-item-name {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  padding-top: 0 !important;
+}
+
+/* ===== FOLDER STYLES =====
+  Accent Dot       — folder-dot-accent
+  Rainbow Dot      — folder-dot-rainbow
+  Accent Frame     — folder-frame-accent
+  Rainbow Frame    — folder-frame-rainbow
+  Accent Subtle    — folder-subtle-accent
+  Rainbow Subtle   — folder-subtle-rainbow
+  Accent Solid     — folder-solid-accent
+  Rainbow Solid    — folder-solid-rainbow
+  Accent Gradient  — folder-gradient-hue
+*/
+
+
+
+/* ── Rainbow: assign --folder-color per nth-child ── */
+body:is(.folder-dot-rainbow, .folder-frame-rainbow, .folder-subtle-rainbow, .folder-solid-rainbow)
+    .nav-files-container > div > .nav-folder:nth-child(8n+2) { --folder-color: var(--color-red); --folder-color-rgb: var(--color-red-rgb); }
+body:is(.folder-dot-rainbow, .folder-frame-rainbow, .folder-subtle-rainbow, .folder-solid-rainbow)
+    .nav-files-container > div > .nav-folder:nth-child(8n+3) { --folder-color: var(--color-orange); --folder-color-rgb: var(--color-orange-rgb); }
+body:is(.folder-dot-rainbow, .folder-frame-rainbow, .folder-subtle-rainbow, .folder-solid-rainbow)
+    .nav-files-container > div > .nav-folder:nth-child(8n+4) { --folder-color: var(--color-yellow); --folder-color-rgb: var(--color-yellow-rgb); }
+body:is(.folder-dot-rainbow, .folder-frame-rainbow, .folder-subtle-rainbow, .folder-solid-rainbow)
+    .nav-files-container > div > .nav-folder:nth-child(8n+5) { --folder-color: var(--color-green); --folder-color-rgb: var(--color-green-rgb); }
+body:is(.folder-dot-rainbow, .folder-frame-rainbow, .folder-subtle-rainbow, .folder-solid-rainbow)
+    .nav-files-container > div > .nav-folder:nth-child(8n+6) { --folder-color: var(--color-cyan); --folder-color-rgb: var(--color-cyan-rgb); }
+body:is(.folder-dot-rainbow, .folder-frame-rainbow, .folder-subtle-rainbow, .folder-solid-rainbow)
+    .nav-files-container > div > .nav-folder:nth-child(8n+7) { --folder-color: var(--color-blue); --folder-color-rgb: var(--color-blue-rgb); }
+body:is(.folder-dot-rainbow, .folder-frame-rainbow, .folder-subtle-rainbow, .folder-solid-rainbow)
+    .nav-files-container > div > .nav-folder:nth-child(8n+8) { --folder-color: var(--color-purple); --folder-color-rgb: var(--color-purple-rgb); }
+body:is(.folder-dot-rainbow, .folder-frame-rainbow, .folder-subtle-rainbow, .folder-solid-rainbow)
+    .nav-files-container > div > .nav-folder:nth-child(8n+9) { --folder-color: var(--color-pink); --folder-color-rgb: var(--color-pink-rgb); }
+
+/* ── Shared: reset blobob's accent background on nav-folder-title for all folder styles ── */
+body:is(.folder-dot-accent, .folder-dot-rainbow,
+        .folder-frame-accent, .folder-frame-rainbow,
+        .folder-subtle-accent, .folder-subtle-rainbow,
+        .folder-solid-accent, .folder-solid-rainbow,
+        .folder-gradient-hue)
+    .nav-files-container > div > .nav-folder > .nav-folder-title {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+/* ── Shared: hide the SVG chevron for dot styles ── */
+body:is(.folder-dot-accent, .folder-dot-rainbow)
+    .nav-files-container > div > .nav-folder > .nav-folder-title > .collapse-icon svg {
+    display: none;
+}
+
+/* ── Shared: dot pseudo-element base ── */
+body:is(.folder-dot-accent, .folder-dot-rainbow)
+    .nav-files-container > div > .nav-folder > .nav-folder-title > .collapse-icon::before {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    content: "";
+}
+
+/* ── ACCENT DOT ── */
+body.folder-dot-accent
+    .nav-files-container > div > .nav-folder > .nav-folder-title > .collapse-icon::before {
+    background-color: var(--color-accent);
+}
+body.folder-dot-accent
+    .nav-files-container > div > .nav-folder > .nav-folder-title {
+    color: var(--color-accent) !important;
+    --nav-collapse-icon-color: var(--color-accent);
+    --icon-color: var(--color-accent);
+}
+
+/* ── RAINBOW DOT ── */
+body.folder-dot-rainbow
+    .nav-files-container > div > .nav-folder > .nav-folder-title > .collapse-icon::before {
+    background-color: var(--folder-color, var(--text-muted));
+}
+body.folder-dot-rainbow
+    .nav-files-container > div > .nav-folder > .nav-folder-title {
+    background-color: rgba(var(--folder-color-rgb, var(--color-red-rgb)), 0.15) !important;
+    color: var(--folder-color, var(--text-normal)) !important;
+    --nav-collapse-icon-color: var(--folder-color, var(--text-muted));
+    --icon-color: var(--folder-color, var(--text-muted));
+}
+
+/* ── ACCENT FRAME ── */
+body.folder-frame-accent
+    .nav-files-container > div > .nav-folder > .nav-folder-title {
+    border-radius: var(--nav-folder-radius) !important;
+    background-color: hsla(var(--interactive-accent-hsl), 0.1) !important;
+    border: 2px solid var(--color-accent) !important;
+    color: var(--color-accent) !important;
+    --nav-collapse-icon-color: var(--color-accent);
+    --icon-color: var(--color-accent);
+}
+
+/* ── RAINBOW FRAME ── */
+body.folder-frame-rainbow
+    .nav-files-container > div > .nav-folder > .nav-folder-title {
+    border-radius: var(--nav-folder-radius) !important;
+    background-color: rgba(var(--folder-color-rgb, var(--color-red-rgb)), 0.1) !important;
+    border: 2px solid var(--folder-color, var(--text-muted)) !important;
+    color: var(--folder-color, var(--text-normal)) !important;
+    --nav-collapse-icon-color: var(--folder-color, var(--text-muted));
+    --icon-color: var(--folder-color, var(--text-muted));
+}
+
+/* ── ACCENT SUBTLE ── */
+body.folder-subtle-accent
+    .nav-files-container > div > .nav-folder > .nav-folder-title {
+    border-radius: var(--nav-folder-radius) !important;
+    background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
+    color: var(--color-accent) !important;
+    --nav-collapse-icon-color: var(--color-accent);
+    --icon-color: var(--color-accent);
+}
+
+/* ── RAINBOW SUBTLE ── */
+body.folder-subtle-rainbow
+    .nav-files-container > div > .nav-folder > .nav-folder-title {
+    border-radius: var(--nav-folder-radius) !important;
+    background-color: rgba(var(--folder-color-rgb, var(--color-red-rgb)), 0.2) !important;
+    color: var(--folder-color, var(--text-normal)) !important;
+    --nav-collapse-icon-color: var(--folder-color, var(--text-muted));
+    --icon-color: var(--folder-color, var(--text-muted));
+}
+
+/* ── ACCENT SOLID ── */
+body.folder-solid-accent
+    .nav-files-container > div > .nav-folder > .nav-folder-title {
+    border-radius: var(--nav-folder-radius) !important;
+    background-color: var(--color-accent) !important;
+    color: var(--text-on-accent) !important;
+    --nav-collapse-icon-color: var(--text-on-accent);
+    --icon-color: var(--text-on-accent);
+}
+
+/* ── RAINBOW SOLID ── */
+body.folder-solid-rainbow
+    .nav-files-container > div > .nav-folder > .nav-folder-title {
+    border-radius: var(--nav-folder-radius) !important;
+    background-color: var(--folder-color, var(--text-muted)) !important;
+    color: white !important;
+    --nav-collapse-icon-color: white;
+    --icon-color: white;
+}
+
+/* ── ACCENT GRADIENT WITH LINEAR ANIMATION ── */
+body.folder-gradient-hue .nav-files-container > div > .nav-folder > .nav-folder-title {
+  border-radius: var(--nav-folder-radius) !important;
+  transition: all 0.3s ease !important;
+  animation: colorShift 8s linear infinite !important;
+}
+
+/* Keyframes for smooth color shifting */
+@keyframes colorShift {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+2) > .nav-folder-title {
+  background-color: hsla(var(--interactive-accent-hsl), 0.24) !important;
+  color: hsla(var(--interactive-accent-hsl), 1) !important;
+  --icon-color: hsla(var(--interactive-accent-hsl), 1) !important;
+  --nav-collapse-icon-color: hsla(var(--interactive-accent-hsl), 1) !important;
+  --nav-collapse-icon-color-collapsed: hsla(var(--interactive-accent-hsl), 1) !important;
+}
+
+body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+3) > .nav-folder-title {
+  background-color: hsla(var(--interactive-accent-hsl), 0.21) !important;
+  color: hsla(var(--interactive-accent-hsl), 0.9) !important;
+  --icon-color: hsla(var(--interactive-accent-hsl), 0.9) !important;
+  --nav-collapse-icon-color: hsla(var(--interactive-accent-hsl), 0.9) !important;
+  --nav-collapse-icon-color-collapsed: hsla(var(--interactive-accent-hsl), 0.9) !important;
+}
+
+body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+4) > .nav-folder-title {
+  background-color: hsla(var(--interactive-accent-hsl), 0.19) !important;
+  color: hsla(var(--interactive-accent-hsl), 0.85) !important;
+  --icon-color: hsla(var(--interactive-accent-hsl), 0.85) !important;
+  --nav-collapse-icon-color: hsla(var(--interactive-accent-hsl), 0.85) !important;
+  --nav-collapse-icon-color-collapsed: hsla(var(--interactive-accent-hsl), 0.85) !important;
+}
+
+body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+5) > .nav-folder-title {
+  background-color: hsla(var(--interactive-accent-hsl), 0.17) !important;
+  color: hsla(var(--interactive-accent-hsl), 0.8) !important;
+  --icon-color: hsla(var(--interactive-accent-hsl), 0.8) !important;
+  --nav-collapse-icon-color: hsla(var(--interactive-accent-hsl), 0.8) !important;
+  --nav-collapse-icon-color-collapsed: hsla(var(--interactive-accent-hsl), 0.8) !important;
+}
+
+body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+6) > .nav-folder-title {
+  background-color: hsla(var(--interactive-accent-hsl), 0.15) !important;
+  color: hsla(var(--interactive-accent-hsl), 0.75) !important;
+  --icon-color: hsla(var(--interactive-accent-hsl), 0.75) !important;
+  --nav-collapse-icon-color: hsla(var(--interactive-accent-hsl), 0.75) !important;
+  --nav-collapse-icon-color-collapsed: hsla(var(--interactive-accent-hsl), 0.75) !important;
+}
+
+body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+7) > .nav-folder-title {
+  background-color: hsla(var(--interactive-accent-hsl), 0.13) !important;
+  color: hsla(var(--interactive-accent-hsl), 0.7) !important;
+  --icon-color: hsla(var(--interactive-accent-hsl), 0.7) !important;
+  --nav-collapse-icon-color: hsla(var(--interactive-accent-hsl), 0.7) !important;
+  --nav-collapse-icon-color-collapsed: hsla(var(--interactive-accent-hsl), 0.7) !important;
+}
+
+body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+8) > .nav-folder-title {
+  background-color: hsla(var(--interactive-accent-hsl), 0.11) !important;
+  color: hsla(var(--interactive-accent-hsl), 0.65) !important;
+  --icon-color: hsla(var(--interactive-accent-hsl), 0.65) !important;
+  --nav-collapse-icon-color: hsla(var(--interactive-accent-hsl), 0.65) !important;
+  --nav-collapse-icon-color-collapsed: hsla(var(--interactive-accent-hsl), 0.65) !important;
+}
+
+body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+9) > .nav-folder-title {
+  background-color: hsla(var(--interactive-accent-hsl), 0.09) !important;
+  color: hsla(var(--interactive-accent-hsl), 0.6) !important;
+  --icon-color: hsla(var(--interactive-accent-hsl), 0.6) !important;
+  --nav-collapse-icon-color: hsla(var(--interactive-accent-hsl), 0.6) !important;
+  --nav-collapse-icon-color-collapsed: hsla(var(--interactive-accent-hsl), 0.6) !important;
+}
+
+/* ── Bouncy Folders toggle ── */
+body.bouncy-folders .nav-folder-title {
+    transition:
+        border calc(var(--animation-duration) * 0.6667) ease,
+        padding calc(var(--animation-duration) * 0.6667) ease-out,
+        padding-left 0s ease,
+        margin calc(var(--animation-duration) * 0.6667) ease,
+        border-radius calc(var(--animation-duration) * 0.6667),
+        box-shadow calc(var(--animation-duration) * 0.6667) ease !important;
+
+    &:hover {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        transition:
+            border calc(var(--animation-duration) * 0.6667) ease,
+            padding calc(var(--animation-duration) * 0.6667) cubic-bezier(0.175, 0.885, 0.32, 1.275),
+            padding-left 0s ease,
+            margin calc(var(--animation-duration) * 0.6667) ease,
+            border-radius calc(var(--animation-duration) * 0.6667),
+            box-shadow calc(var(--animation-duration) * 0.6667) ease !important;
+    }
+
+    &:active {
+        padding-top: 4px !important;
+        padding-bottom: 4px !important;
+    }
+}
+
+/* ===== HIDE SIDEBAR TOGGLE BUTTONS ===== */
+
+body.hide-sidebar-toggle-left .sidebar-toggle-button.mod-left {
+    display: none !important;
+}
+
+body.hide-sidebar-toggle-right .sidebar-toggle-button.mod-right {
+    display: none !important;
+}
+
+/* ===== BOLD FOLDER NAMES ===== */
+
+body.bold-folders .nav-folder-title {
+    font-weight: 700 !important;
+}
+
+/* ===== ACTIVE FILE STYLING FIX ===== */
+
+/* Ensure nav-file-title.is-active has clear, visible styling */
+body .nav-file-title.is-active,
+body .nav-file-title.is-active:hover {
+    color: var(--color-accent-1) !important;
+    font-weight: 600 !important;
+    padding: 6px;
+    transition: font-weight 0.2s ease;
+}
+
+body .nav-file-title,
+body .nav-file-title:hover {
+    padding: 6px;
+    transition: font-weight 0.2s ease;
+}
+
+/* Fix: active file background should not bleed through folder title overrides */
+.nav-file-title.is-active {
+    background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
+    border-radius: var(--nav-file-radius) !important;
+    color: var(--color-accent-1) !important;
+}
+
+.nav-file-title.is-active:hover {
+    background-color: hsla(var(--interactive-accent-hsl), 0.3) !important;
+    color: var(--color-accent-2) !important;
+}
+
+/* ===== TAB STYLE — LEFT TOP ===== */
+
+/* Labels Only */
+body.tab-top-left-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space {
+    --sidebar-tab-text-display: inline-block;
+}
+body.tab-top-left-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner-icon {
+    display: none;
+}
+body.tab-top-left-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+body.tab-top-left-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner {
+    width: auto !important;
+}
+
+/* Icons + Labels */
+body.tab-top-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space {
+    --sidebar-tab-text-display: inline-block;
+}
+body.tab-top-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+body.tab-top-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner {
+    width: auto !important;
+    gap: 6px;
+}
+
+/* Icons Only */
+body.tab-top-left-icons .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner-title {
+    display: none !important;
+}
+
+/* ===== TAB STYLE — RIGHT TOP ===== */
+
+/* Labels Only */
+body.tab-top-right-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space {
+    --sidebar-tab-text-display: inline-block;
+}
+body.tab-top-right-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner-icon {
+    display: none;
+}
+body.tab-top-right-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+body.tab-top-right-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner {
+    width: auto !important;
+}
+
+/* Icons + Labels */
+body.tab-top-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space {
+    --sidebar-tab-text-display: inline-block;
+}
+body.tab-top-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+body.tab-top-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner {
+    width: auto !important;
+    gap: 6px;
+}
+
+/* Icons Only */
+body.tab-top-right-icons .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner-title {
+    display: none !important;
+}
+
+/* ===== TAB STYLE — LEFT (bottom) ===== */
+
+/* Labels Only */
+body.tab-left-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) {
+    --sidebar-tab-text-display: inline-block;
+}
+body.tab-left-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-icon {
+    display: none;
+}
+body.tab-left-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+body.tab-left-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner {
+    width: auto !important;
+}
+
+/* Icons + Labels */
+body.tab-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) {
+    --sidebar-tab-text-display: inline-block;
+}
+body.tab-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+body.tab-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner {
+    width: auto !important;
+    gap: 6px;
+}
+
+/* Icons Only */
+body.tab-left-icons .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
+    display: none !important;
+}
+
+/* ===== TAB STYLE — RIGHT (bottom) ===== */
+
+/* Labels Only */
+body.tab-right-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) {
+    --sidebar-tab-text-display: inline-block;
+}
+body.tab-right-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-icon {
+    display: none;
+}
+body.tab-right-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+body.tab-right-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner {
+    width: auto !important;
+}
+
+/* Icons + Labels */
+body.tab-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) {
+    --sidebar-tab-text-display: inline-block;
+}
+body.tab-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+body.tab-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner {
+    width: auto !important;
+    gap: 6px;
+}
+
+/* Icons Only */
+body.tab-right-icons .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
+    display: none !important;
+}
 
 /* ===== PROPERTIES ====== */
 
@@ -7340,11 +8057,13 @@ settings:
     title: Layouts
     description: Set the workspace layout for desktop
     type: class-select
-    default: default-tab
+    default: default-tab-rounded
     options:
-      - label: Blobob Default
+      - label: One
         value: default-tab
-      - label: Bubble
+      - label: Two
+        value: default-tab-rounded
+      - label: Three
         value: bubble
 
   - id: bubble-styling
@@ -7505,6 +8224,7 @@ settings:
     title: Editor & Text Appearance
     type: heading
     level: 1
+    collapsed: true
 
   - id: highlight-styles
     title: Highlight styles
@@ -7534,7 +8254,7 @@ settings:
     title: Highlight active line
     type: class-toggle
     default: true
-    addCommand: false
+    addCommand: true
 
   - id: highlight-active-line-with-face
     title: Highlight active line with face
@@ -7546,13 +8266,13 @@ settings:
     title: Big active line text
     type: class-toggle
     default: false
-    addCommand: false
+    addCommand: true
 
   - id: center-active-line
     title: Center active line
     type: class-toggle
     default: false
-    addCommand: false
+    addCommand: true
 
   - id: dim-inactive
     title: Darken inactive lines
@@ -7961,6 +8681,7 @@ settings:
     title: Lists & Checkboxes
     type: heading
     level: 2
+    collapsed: true
 
   - id: custom-bullets-enabled
     title: Enable custom bullets
@@ -8001,6 +8722,7 @@ settings:
     title: Tabs & Navigation
     type: heading
     level: 2
+    collapsed: true
 
   - id: hide-tab-close-btn
     title: Hide tab close button
@@ -8022,6 +8744,80 @@ settings:
     title: File Explorer
     type: heading
     level: 1
+    collapsed: true
+
+  # ── Folders ──────────────────────────────
+
+  - id: folder-style
+    title: Folders Style
+    description: Select the folder style and color accent
+    type: class-select
+    default: none
+    options:
+      - label: None
+        value: folder-none
+      - label: Accented
+        value: accented
+      - label: Mechanical
+        value: mechanical
+      - label: Thick
+        value: thick
+      - label: Huge 
+        value: huge
+      - label: Accent Dot
+        value: folder-dot-accent
+      - label: Rainbow Dot
+        value: folder-dot-rainbow
+      - label: Accent Border
+        value: folder-frame-accent
+      - label: Rainbow Border
+        value: folder-frame-rainbow
+      - label: Accent Subtle
+        value: folder-subtle-accent
+      - label: Rainbow Subtle
+        value: folder-subtle-rainbow
+      - label: Accent Solid
+        value: folder-solid-accent
+      - label: Rainbow Solid
+        value: folder-solid-rainbow
+      - label: Animated Hue
+        value: folder-gradient-hue
+
+  - id: bouncy-folders
+    title: Bouncy Folders
+    description: "Adds a bounce animation to folders. Works with any folder style."
+    type: class-toggle
+    default: true
+
+  - id: nav-folder-radius
+    title: Folder Border Radius
+    description: Border radius of folders
+    type: variable-number-slider
+    default: 8
+    min: 0
+    max: 24
+    step: 1
+    format: px
+
+  - id: bold-folders
+    title: Bold folder title
+    description: Make folder names bold in the file explorer
+    type: class-toggle
+    default: false
+
+  - id: center-folder-title
+    title: Center folder title
+    type: class-toggle
+    default: false
+    addCommand: false
+
+  - id: hide-folder-arrow
+    title: Hide folder Collapse Arrow
+    description: Hides the chevron/arrow icon on folder titles (but shows iconic icons ;D)
+    type: class-toggle
+    default: false
+
+  # ── Files ────────────────────────────────
 
   - id: file-exp
     title: File Explorer active file styling
@@ -8036,6 +8832,18 @@ settings:
       - label: none
         value: none
 
+  - id: nav-file-radius
+    title: File Border Radius
+    description: Border radius of files
+    type: variable-number-slider
+    default: 8
+    min: 0
+    max: 24
+    step: 1
+    format: px
+
+  # ── Other ────────────────────────────────
+
   - id: nav-hide-text
     title: Hide Action Buttons in File Explorer with Text
     description: Text shown when buttons are hidden in file explorer. USE "" between your text
@@ -8043,24 +8851,76 @@ settings:
     default: My Vault
     quote: true
 
-  - id: center-folder-title
-    title: Center folder title
+  - id: nav-indentation-guide-width
+    title: File explorer indentation guides thickness
+    type: variable-number-slider
+    format: px
+    default: 0
+    min: 0
+    max: 3
+    step: 1
+
+  - id: tab-top-left-style
+    title: Tab Style (Left top)
+    description: Style for the top-left sidebar tab strip
+    type: class-select
+    default: tab-top-left-icons
+    options:
+      - label: Icons Only
+        value: tab-top-left-icons
+      - label: Labels Only
+        value: tab-top-left-labels
+      - label: Icons + Labels
+        value: tab-top-left-icons-labels
+
+  - id: tab-top-right-style
+    title: Tab Style (Right top)
+    description: Style for the top-right sidebar tab strip
+    type: class-select
+    default: tab-top-right-icons
+    options:
+      - label: Icons Only
+        value: tab-top-right-icons
+      - label: Labels Only
+        value: tab-top-right-labels
+      - label: Icons + Labels
+        value: tab-top-right-icons-labels
+
+  - id: tab-left-style
+    title: Tab Style (Left)
+    description: Style for the left sidebar tab strip
+    type: class-select
+    default: tab-left-icons
+    options:
+      - label: Icons Only
+        value: tab-left-icons
+      - label: Labels Only
+        value: tab-left-labels
+      - label: Icons + Labels
+        value: tab-left-icons-labels
+
+  - id: tab-right-style
+    title: Tab Style (Right)
+    description: Style for the right sidebar tab strip
+    type: class-select
+    default: tab-right-icons
+    options:
+      - label: Icons Only
+        value: tab-right-icons
+      - label: Labels Only
+        value: tab-right-labels
+      - label: Icons + Labels
+        value: tab-right-icons-labels
+
+  - id: hide-sidebar-toggle-left
+    title: Hide Left Sidebar Toggle Button
     type: class-toggle
     default: false
-    addCommand: false
 
-  - id: folder-style
-    title: Folders Style
-    description: Select the properties layout style
-    type: class-select
-    default: none
-    options:
-      - label: Folder Style 1
-        value: none
-      - label: Folder Style 2
-        value: folders-2
-      - label: Style 3
-        value: folders-3
+  - id: hide-sidebar-toggle-right
+    title: Hide Right Sidebar Toggle Button
+    type: class-toggle
+    default: false
 
   ########################################
   # Properties Panel
@@ -8069,6 +8929,7 @@ settings:
     title: Properties Panel
     type: heading
     level: 1
+    collapsed: true
 
   - id: properties-style
     title: Properties Style
@@ -8159,6 +9020,7 @@ settings:
     title: Command Palette
     type: heading
     level: 1
+    collapsed: true
 
   - id: hide-prompt-instructions
     title: Hide Instructions in Command Palette
@@ -8173,6 +9035,7 @@ settings:
     title: Animations
     type: heading
     level: 1
+    collapsed: true
 
   - id: disable-settings-animation
     title: Disable settings item animation
@@ -8201,6 +9064,9 @@ settings:
     max: 800
     step: 10
     format: ms
+
+
+
 
 
 
@@ -8364,4 +9230,50 @@ settings:
 .HyperMD-quote.HyperMD-quote-1.cm-line {
     border-radius: 200px !important;
 }
+
+/* ===== HIDE FOLDER COLLAPSE ARROW ===== */
+
+body.hide-folder-arrow .nav-folder-title .collapse-icon {
+    /* display: none !important; */
+    --nav-collapse-icon-color: transparent;
+    --nav-collapse-icon-color-collapsed: transparent;
+}
+
+/* body.hide-folder-arrow .tree-item-icon .collapse-icon .is-collapsed {
+    display: none !important;
+}
+
+body.hide-folder-arrow .nav-folder-title {
+    padding-inline-start: 0px !important;
+    padding-left: 0px !important;
+    margin-left: 0px !important;
+} */
+
+/* body.hide-folder-arrow .nav-folder-title {
+    padding-left: 10px !important;
+} */
+
+/* ===== FILE EXPLORER BORDER RADIUS ===== */
+
+:root {
+    --nav-folder-radius: 8px;
+    --nav-file-radius: 6px;
+}
+
+.nav-folder-title {
+    border-radius: var(--nav-folder-radius) !important;
+}
+
+/* file title radius — target tree-item-self containing a nav-file-title */
+.tree-item-self:has(.nav-file-title) {
+    border-radius: var(--nav-file-radius) !important;
+}
+
+.nav-file-title {
+    border-radius: var(--nav-file-radius) !important;
+}
+
+/* .nav-folder {
+    border: 2px solid red;
+} */
 
