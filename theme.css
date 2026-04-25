@@ -2015,7 +2015,7 @@ body mark {
     margin-left: 0px !important;
 }
 
-.workspace-ribbon.mod-left.is-collapsed {
+.workspace-ribbon.mod-left {
     border-right: 1.5px solid var(--background-modifier-border) !important;
 }
 
@@ -2734,7 +2734,7 @@ body.custom-bullets-enabled {
 /* Active pinned tab */
 .pin-icon-only .workspace-tab-header.is-active:has(.mod-pinned) {
     --tab-max-width: 58px !important;
-    /* background-color: var(--tab-background) !important; */
+    background-color: var(--tab-background-active) !important;
     border-radius: 10px 10px 0 0 !important;
     border: 0px solid var(--background-modifier-border);
     margin-top: 0px;
