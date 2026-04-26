@@ -14,7 +14,7 @@
    Dark theme vars
    ========= */
 .theme-dark {
-    
+    --tag-radius: var(--button-radius) !important;
     --button-shadow: #00000050;
     --canvas-background: var(--background-primary);
     --blockquote-border-thickness: 4px;
@@ -1128,6 +1128,7 @@ body mark {
    Light theme vars
    ========= */
 .theme-light {
+    --tag-radius: var(--button-radius) !important;
     --ribbon-background: var(--titlebar-background-focused);
     --button-shadow: #00000025;
     --blockquote-border-thickness: 4px;
@@ -4925,7 +4926,7 @@ input.prompt-input:focus {
         position: relative;
         transition: opacity calc(var(--animation-duration) * 6.6667) ease;
         transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.6);
-        margin: -4.6px;
+        margin: -6.2px;
     }
 
     /* Hide the buttons and show text */
@@ -5063,6 +5064,9 @@ input.prompt-input:focus {
         margin-right: 2px;
     }
 }
+
+
+
 
 /* === folder - I DO NOT LIKE IT ARGH === */
 /* .nav-folder-title {
@@ -6377,6 +6381,19 @@ body.tab-right-icons .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top)
 }
 
 /* ===== NOTICES ===== */
+
+.notice {
+    background-color: var(--background-primary);
+    color: var(--text-accent);
+    border: 2px solid var(--background-modifier-border);
+    border-radius: var(--button-radius);
+    padding: 20px;
+}
+
+.notice-message::before {
+    content: "Notice: ";
+    color: var(--color-red);
+}
 
 .notice,
 .notice-container {
@@ -9280,3 +9297,4 @@ body.hide-folder-arrow .nav-folder-title {
 .tree-item.nav-folder {
     margin-bottom: 6px !important;
 }
+
