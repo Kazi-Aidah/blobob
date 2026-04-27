@@ -6666,7 +6666,11 @@ a {
     text-decoration: none !important;
     /* padding: 2px 6px; */
     border-radius: 6px !important;
-    padding: 2px 2px;
+    padding: 2px 5px !important;
+}
+
+.cm-s-obsidian span.cm-underline, .markdown-preview-view u, u {
+    text-decoration: none !important;
 }
 
 /* === External Links === */
