@@ -4129,7 +4129,8 @@ em strong {
 .hexagon-tiptip .suggestion-item.mod-complex.is-selected,
 .hexagon-tiptip .suggestion-hotkey,
 .hexagon-tiptip .setting-hotkey,
-.hexagon-tiptip .kanban-plugin__item {
+.hexagon-tiptip .kanban-plugin__item,
+.hexagon-tiptip img {
     --cut: 6px;
     /* border: none !important;
     box-shadow: none !important;
@@ -4211,7 +4212,8 @@ a,
 .sock-tiptip .menu,
 .sock-tiptip .modal,
 .sock-tiptip .prompt,
-.sock-tiptip .kanban-plugin__lane {
+.sock-tiptip .kanban-plugin__lane,
+.sock-tiptip img {
     border-radius: 1.7% !important;
 }
 
@@ -4232,7 +4234,8 @@ a,
 .eye-tiptip .kanban-plugin__lane,
 .eye-tiptip .menu,
 .eye-tiptip .modal,
-.eye-tiptip .prompt {
+.eye-tiptip .prompt,
+.eye-tiptip img {
     border-radius: 4% !important;
 }
 
@@ -7072,6 +7075,49 @@ body.kanban-full .kanban-plugin__board > div {
   margin-left: 20px !important;
 }
 
+/* --- image captions support --- */
+body.image-captions-styling {
+.image-captions-figure, .theme-dark .image-captions-caption {
+    background-color: var(--background-secondary-alt);
+    color: var(--text-normal);
+    /* box-shadow: 0px 5px 0px -1px var(--text-faint); */
+    margin-bottom: 2px;
+}
+
+.image-captions-caption {
+    background-color: var(--background-secondary-alt);
+    border-radius: 0px 0px 14px 14px;
+    padding-bottom: 8px;
+}
+
+.image-captions-figure {
+    border-radius: 12px 12px 0px 0px;
+}
+
+.image-captions-figure img {
+    border-radius: 8px !important;
+    transform: scale(0.99);
+    corner-shape: squircle !important;
+}
+
+/* .internal-embed.media-embed.image-embed, */
+.image-captions-figure, .image-captions-caption {
+    border: 2.5px solid var(--background-modifier-border);
+    corner-shape: squircle;
+}
+
+.image-captions-caption {
+    border: 2.5px solid var(--background-modifier-border);
+    border-top: none !important;
+    border-bottom: 6px solid var(--background-modifier-border) !important;
+}
+}
+
+
+img {
+    border-radius: var(--button-radius);
+}
+
 /* =========================
    Add Card Button (PREPEND HOVER EXPAND)
 ========================= */
@@ -9284,6 +9330,12 @@ settings:
     description: Increases font size ON HOVER
     type: class-toggle
     default: false
+
+  - id: image-captions-styling
+    title: Enable Image Captions styling
+    description:
+    type: class-toggle
+    default: true
 
 */
 
