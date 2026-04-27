@@ -4128,7 +4128,8 @@ em strong {
 .hexagon-tiptip .vertical-tab-nav-item,
 .hexagon-tiptip .suggestion-item.mod-complex.is-selected,
 .hexagon-tiptip .suggestion-hotkey,
-.hexagon-tiptip .setting-hotkey {
+.hexagon-tiptip .setting-hotkey,
+.hexagon-tiptip .kanban-plugin__item {
     --cut: 6px;
     /* border: none !important;
     box-shadow: none !important;
@@ -4151,7 +4152,9 @@ em strong {
 .hexagon-tiptip .menu,
 .hexagon-tiptip .modal,
 .hexagon-tiptip .prompt,
-.hexagon-tiptip {
+.hexagon-tiptip,
+.hexagon-tiptip .notice,
+.hexagon-tiptip .kanban-plugin__lane {
     --cut: 12px;
     /* border: none !important;
     box-shadow: none !important;
@@ -4207,7 +4210,8 @@ a,
 
 .sock-tiptip .menu,
 .sock-tiptip .modal,
-.sock-tiptip .prompt {
+.sock-tiptip .prompt,
+.sock-tiptip .kanban-plugin__lane {
     border-radius: 1.7% !important;
 }
 
@@ -4219,6 +4223,17 @@ a,
 .eye-tiptip .suggestion-hotkey,
 .eye-tiptip .setting-hotkey {
     border-radius: var(--button-radius) !important;
+}
+
+.eye-tiptip .kanban-plugin__item {
+    border-radius: 20% !important;
+}
+
+.eye-tiptip .kanban-plugin__lane,
+.eye-tiptip .menu,
+.eye-tiptip .modal,
+.eye-tiptip .prompt {
+    border-radius: 4% !important;
 }
 
 /* bordered */
@@ -6634,7 +6649,8 @@ a {
     outline: none;
     text-decoration: none !important;
     /* padding: 2px 6px; */
-    border-radius: 6px;
+    border-radius: 6px !important;
+    padding: 2px 2px;
 }
 
 /* === External Links === */
@@ -6957,6 +6973,148 @@ th {
     .workspace-tab-header-container {
     padding-right: calc(-2% + var(--frame-right-space));
 }
+
+/* === other plugins support */
+.kanban-styling {
+/* --- mainbody --- */
+.kanban-plugin__lane {
+  border-radius: var(--button-radius);
+  border: 2.5px solid var(--background-modifier-border);
+  box-shadow: 0px 2px 0px var(--background-modifier-border);
+}
+
+
+/* --- item cards --- */
+
+.kanban-plugin__item {
+  border-radius: var(--button-radius);
+  border: 2px solid var(--background-modifier-border);
+  box-shadow: 0px 2px 0px var(--background-modifier-border);
+  margin-bottom: 4px;
+}
+
+.kanban-plugin__item-title-wrapper {
+  background-color: var(--background-primary) !important;
+  padding: 12px;
+}
+
+.kanban-plugin__item p {
+  font-size: 16px !important;
+  transition: font-size 0.2s ease-out;
+}
+
+/* Icons */
+.kanban-plugin__item .kanban-plugin__icon {
+  opacity: 0;
+}
+
+.kanban-plugin__item .kanban-plugin__icon:hover {
+  opacity: 1;
+}
+
+.kanban-plugin__item .kanban-plugin__icon svg {
+  --icon-size: 12px !important;
+}
+
+.kanban-plugin__item-title-wrapper .tag {
+  padding: 3px 5px !important;
+  margin-left: 1px;
+  border-radius: 8px !important;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button.kanban-plugin__new-item-button {
+  width: 100%;
+  background-color: var(--button-background);
+  color: var(--surface);
+  box-shadow: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1.5);
+}
+
+button.kanban-plugin__new-item-button:hover {
+  background-color: var(--button-background-hover);
+  color: var(--surface);
+  transform: scale(1);
+  opacity: 1;
+  box-shadow: none;
+}
+
+/* the + text */
+.kanban-plugin__item-button-plus {
+  margin-inline-end: 4px;
+}
+
+.kanban-plugin__item-input-wrapper {
+  border-radius: 0px !important;
+}
+
+}
+
+/* --- kanban boards take up 100% width --- */
+
+body.kanban-full .kanban-plugin__board {
+  display: flex !important;
+}
+
+body.kanban-full .kanban-plugin__lane-wrapper:not(.collapse-horizontal) {
+  flex: 100% !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 100%;
+}
+
+body.kanban-full .kanban-plugin__board > div {
+  width: 100% !important;
+  margin-left: 20px !important;
+}
+
+/* =========================
+   Add Card Button (PREPEND HOVER EXPAND)
+========================= */
+
+body.kanban-prepend-hover-expand 
+.kanban-plugin__item-button-wrapper {
+  max-height: 0;
+  overflow: hidden;
+}
+
+body.kanban-prepend-hover-expand 
+.kanban-plugin__item-button-wrapper:hover {
+  max-height: 60px;
+  transition: max-height 0.3s ease,
+              opacity 0.15s ease,
+              all 0.2s ease;
+}
+
+body.kanban-prepend-hover-expand 
+button.kanban-plugin__new-item-button {
+  transform: scale(1.2) translateY(2px);
+  transition: max-height 0.3s ease,
+              opacity 0.15s ease,
+              all 0.2s ease;
+}
+
+body.kanban-prepend-hover-expand 
+.kanban-plugin__item-button-wrapper:hover 
+button.kanban-plugin__new-item-button {
+  transform: scale(1);
+}
+
+/* --- extra --- */
+body.kanban-hover-biggen 
+.kanban-plugin__item:hover p {
+  font-size: 20px !important;
+}
+
+.kanban-redden-metadata .kanban-plugin__item-metadata {
+  color: var(--color-red);
+}
+
+
 
 /* ===== MIN MAX CLOSE BUTTONS ===== */
 
@@ -9088,10 +9246,44 @@ settings:
     step: 10
     format: ms
 
+  ########################################
+  # Other Plugin Styling
+  ########################################
+  - id: plugin-styling
+    title: Other Plugin Styling
+    type: heading
+    level: 1
+    collapsed: true
 
+  - id: kanban-styling
+    title: Enable Kanban styling
+    description:
+    type: class-toggle
+    default: true
 
+  - id: kanban-full
+    title: Kanban - take up full width
+    description: Makes kanban boards take up full width
+    type: class-toggle
+    default: true
 
+  - id: kanban-prepend-hover-expand
+    title: Kanban - Prepend Hover
+    description: Shows "+ Add a Card" button ON HOVER
+    type: class-toggle
+    default: false
 
+  - id: kanban-hover-biggen
+    title: Kanban - cards increase size on hover
+    description: Increases font size ON HOVER
+    type: class-toggle
+    default: false
+
+  - id: kanban-redden-metadata
+    title: Kanban - redden metadata date
+    description: Increases font size ON HOVER
+    type: class-toggle
+    default: false
 
 */
 
