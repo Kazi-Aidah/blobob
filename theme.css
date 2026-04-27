@@ -4130,7 +4130,7 @@ em strong {
 .hexagon-tiptip .suggestion-hotkey,
 .hexagon-tiptip .setting-hotkey {
     --cut: 6px;
-    border: none !important;
+    /* border: none !important;
     box-shadow: none !important;
     border-radius: 0 !important;
     clip-path: polygon(
@@ -4142,7 +4142,10 @@ em strong {
         var(--cut) 100%,
         0% calc(100% - var(--cut)),
         0% var(--cut)
-    );
+    ); */
+
+    corner-shape: bevel !important;
+    border-radius: 7px !important;
 }
 
 .hexagon-tiptip .menu,
@@ -4150,7 +4153,7 @@ em strong {
 .hexagon-tiptip .prompt,
 .hexagon-tiptip {
     --cut: 12px;
-    border: none !important;
+    /* border: none !important;
     box-shadow: none !important;
     border-radius: 0 !important;
     clip-path: polygon(
@@ -4162,7 +4165,10 @@ em strong {
         var(--cut) 100%,
         0% calc(100% - var(--cut)),
         0% var(--cut)
-    );
+    ); */
+
+    corner-shape: bevel !important;
+    border-radius: 10px !important;
 }
 
 select,
