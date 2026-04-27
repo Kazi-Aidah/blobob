@@ -4083,6 +4083,10 @@ em strong {
 
 /* ===== BASIC ELEMENTS ===== */
 
+.popover .markdown-embed-link {
+    margin: 10px 4px;
+}
+
 .circular-tiptip {
     --button-radius: 20px;
     --input-radius: 20px;
@@ -4155,7 +4159,8 @@ em strong {
 .hexagon-tiptip .prompt,
 .hexagon-tiptip,
 .hexagon-tiptip .notice,
-.hexagon-tiptip .kanban-plugin__lane {
+.hexagon-tiptip .kanban-plugin__lane,
+.hexagon-tiptip .popover {
     --cut: 12px;
     /* border: none !important;
     box-shadow: none !important;
@@ -4213,7 +4218,8 @@ a,
 .sock-tiptip .modal,
 .sock-tiptip .prompt,
 .sock-tiptip .kanban-plugin__lane,
-.sock-tiptip img {
+.sock-tiptip img,
+.sock-tiptip .popover {
     border-radius: 1.7% !important;
 }
 
@@ -4235,7 +4241,8 @@ a,
 .eye-tiptip .menu,
 .eye-tiptip .modal,
 .eye-tiptip .prompt,
-.eye-tiptip img {
+.eye-tiptip img,
+.eye-tiptip .popover {
     border-radius: 4% !important;
 }
 
@@ -6404,6 +6411,12 @@ body.tab-right-icons .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top)
     display: none !important;
 }
 
+/* popover */
+.popover {
+    border-radius: var(--button-radius);
+    border: 2px solid var(--background-modifier-border-focus)
+}
+
 /* ===== NOTICES ===== */
 
 .notice {
@@ -7093,6 +7106,7 @@ body.image-captions-styling {
 .image-captions-figure {
     border-radius: 12px 12px 0px 0px;
 }
+
 
 .image-captions-figure img {
     border-radius: 8px !important;
