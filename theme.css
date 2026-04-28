@@ -4169,6 +4169,7 @@ em strong {
 .scoop-tiptip img {
     corner-shape: scoop !important;
     border-radius: 7px !important;
+    --corner-shape: scoop;
 }
 
 .scoop-tiptip .menu,
@@ -4180,6 +4181,7 @@ em strong {
 .scoop-tiptip .popover {
     corner-shape: scoop !important;
     border-radius: 9px !important;
+    --corner-shape: scoop;
 }
 
 .squircle-tiptip select,
@@ -4197,6 +4199,7 @@ em strong {
 .squircle-tiptip img {
     corner-shape: squircle !important;
     border-radius: 7px !important;
+    --corner-shape: squircle;
 }
 
 .squircle-tiptip .menu,
@@ -4208,6 +4211,7 @@ em strong {
 .squircle-tiptip .popover {
     corner-shape: squircle !important;
     border-radius: 12px !important;
+    --corner-shape: squircle;
 }
 
 .hexagon-tiptip .menu,
@@ -4234,6 +4238,7 @@ em strong {
 
     corner-shape: bevel !important;
     border-radius: 10px !important;
+    --corner-shape: bevel;
 }
 
 select,
@@ -4406,6 +4411,14 @@ body:not(.view-header) .button-bordered-3d button:active,
 }
 
 .clickable-icon:active {
+    border-radius: 10px !important;
+    transform: scale(0.8);
+    /* border: 2px solid currentColor !important; */
+    color: var(--color-accent-1);
+    background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
+}
+
+.button-bordered .clickable-icon:active {
     border-radius: 10px !important;
     transform: scale(0.8);
     border: 2px solid currentColor !important;
@@ -5035,11 +5048,14 @@ body {
 }
 
 .suggestion-item {
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
     transition: all 0.2s ease;
 }
 
-.suggestion-item.mod-complex.is-selected {
+.suggestion-item.is-selected {
     border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
     color: var(--color-accent-1);
     background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
 }
@@ -5050,7 +5066,7 @@ body {
     transition-delay: margin 0.1s ease;
 }
 
-.suggestion-item.mod-complex.is-selected .suggestion-content {
+.suggestion-item.is-selected {
     margin: 4px;
     margin-right: 0px;
 }
@@ -9270,7 +9286,7 @@ settings:
   - id: heading-tabs
     title: Tabs & Navigation
     type: heading
-    level: 2
+    level: 1
     collapsed: true
 
   - id: hide-tab-list
