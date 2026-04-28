@@ -6666,7 +6666,7 @@ a {
     text-decoration: none !important;
     /* padding: 2px 6px; */
     border-radius: 6px !important;
-    padding: 2px 5px !important;
+    padding: 2px 5px;
 }
 
 .cm-s-obsidian span.cm-underline, .markdown-preview-view u, u {
@@ -7040,6 +7040,23 @@ th {
   padding: 3px 5px !important;
   margin-left: 1px;
   border-radius: 8px !important;
+}
+
+.kanban-plugin__item-title-wrapper p {
+    line-height: 1.6 !important;
+}
+
+.kanban-plugin__item-title-wrapper {
+  background-color: var(--background-primary) !important;
+  padding: 8px 10px !important;
+}
+
+.kanban-plugin__item-metadata-date-relative {
+    margin-top: -3px;
+}
+
+.kanban-plugin__date, .cm-kanban-time-wrapper, .cm-kanban-date-wrapper {
+    display: inline;
 }
 
 
@@ -9345,7 +9362,7 @@ settings:
 
   - id: kanban-redden-metadata
     title: Kanban - redden metadata date
-    description: Increases font size ON HOVER
+    description: Colors the date red
     type: class-toggle
     default: false
 
