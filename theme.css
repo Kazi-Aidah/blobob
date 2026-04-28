@@ -4154,6 +4154,62 @@ em strong {
     border-radius: 7px !important;
 }
 
+.scoop-tiptip select,
+.scoop-tiptip input,
+.scoop-tiptip textarea,
+.scoop-tiptip button,
+.scoop-tiptip .mod-cta,
+.scoop-tiptip .setting-item-control button,
+.scoop-tiptip .menu-item.tappable,
+.scoop-tiptip .vertical-tab-nav-item,
+.scoop-tiptip .suggestion-item.mod-complex.is-selected,
+.scoop-tiptip .suggestion-hotkey,
+.scoop-tiptip .setting-hotkey,
+.scoop-tiptip .kanban-plugin__item,
+.scoop-tiptip img {
+    corner-shape: scoop !important;
+    border-radius: 7px !important;
+}
+
+.scoop-tiptip .menu,
+.scoop-tiptip .modal,
+.scoop-tiptip .prompt,
+.scoop-tiptip,
+.scoop-tiptip .notice,
+.scoop-tiptip .kanban-plugin__lane,
+.scoop-tiptip .popover {
+    corner-shape: scoop !important;
+    border-radius: 9px !important;
+}
+
+.squircle-tiptip select,
+.squircle-tiptip input,
+.squircle-tiptip textarea,
+.squircle-tiptip button,
+.squircle-tiptip .mod-cta,
+.squircle-tiptip .setting-item-control button,
+.squircle-tiptip .menu-item.tappable,
+.squircle-tiptip .vertical-tab-nav-item,
+.squircle-tiptip .suggestion-item.mod-complex.is-selected,
+.squircle-tiptip .suggestion-hotkey,
+.squircle-tiptip .setting-hotkey,
+.squircle-tiptip .kanban-plugin__item,
+.squircle-tiptip img {
+    corner-shape: squircle !important;
+    border-radius: 7px !important;
+}
+
+.squircle-tiptip .menu,
+.squircle-tiptip .modal,
+.squircle-tiptip .prompt,
+.squircle-tiptip,
+.squircle-tiptip .notice,
+.squircle-tiptip .kanban-plugin__lane,
+.squircle-tiptip .popover {
+    corner-shape: squircle !important;
+    border-radius: 12px !important;
+}
+
 .hexagon-tiptip .menu,
 .hexagon-tiptip .modal,
 .hexagon-tiptip .prompt,
@@ -4407,8 +4463,19 @@ body:not(.view-header) .button-bordered-3d button:active,
     transition: calc(var(--animation-duration) * 0.6667) ease !important;
 }
 
+/* =========================
+   BUTTONS
+========================= */
 
-button {
+button, button:hover, button:active {
+    transition: background-color 0.2s ease,
+                border-radius 0.2s ease,
+                transform calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.5) !important;
+}
+
+/* scale butt */
+
+.button-scale button {
     transition:
         all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2),
         background-color calc(var(--animation-duration) * 0.6667) ease;
@@ -4416,22 +4483,112 @@ button {
     outline: 0px solid var(--background-modifier-border);
 }
 
-button:hover {
-    transform: scale(1.1);
-    /* outline: 2px solid var(--background-modifier-border);
-    box-shadow: 0px 2px 0px 2px var(--interactive-normal);
-    transform: translateY(-3px);
-    background-color: var(--background-secondary); */
+.button-scale button:hover {
+    transform: scale(1.06);
     z-index: 1000 !important;
 }
 
-button:active {
+.button-scale button:active {
     border-radius: 10px !important;
-    /* padding: 6px; */
     transform: scale(0.9);
     transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
     outline: 0px solid var(--background-modifier-border);
 }
+
+/* shrink butt */
+
+.button-shrink button {
+    transition:
+        all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2),
+        background-color calc(var(--animation-duration) * 0.6667) ease;
+    transform: scale(1);
+    outline: 0px solid var(--background-modifier-border);
+}
+
+.button-shrink button:hover {
+    transform: scale(0.9);
+    z-index: 1000 !important;
+}
+
+.button-shrink button:active {
+    border-radius: 10px !important;
+    transform: scale(0.7);
+    opacity: 0.7;
+    transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
+    outline: 0px solid var(--background-modifier-border);
+}
+
+/* tilt butt */
+
+.button-tilt button {
+    transition: 
+        transform 0.25s cubic-bezier(0.34, 1.2, 0.64, 1),
+        background-color 0.15s ease,
+        opacity 0.1s ease;
+    
+    transform: rotate(0deg);
+    will-change: transform;
+    display: inline-block;
+}
+
+.button-tilt button:hover {
+    transform: rotate(3deg);
+    z-index: 1;
+}
+
+.button-tilt button:active {
+    transform: rotate(-4deg) scale(0.97);
+    opacity: 0.85;
+    transition: transform 0.08s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.button-tilt button:focus-visible {
+    outline: 2px solid var(--background-modifier-border);
+    outline-offset: 2px;
+}
+
+
+
+/* bounce butt */
+
+.button-bounce button {
+    transform: scale(1);
+}
+
+.button-bounce button {
+    transition: transform 0.2s ease-out;
+}
+
+.button-bounce button:hover {
+    /* transform: scale(1.05); */
+    animation: softBounce 0.6s infinite;
+}
+
+@keyframes softBounce {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.02); }
+}
+
+/* @keyframes hoverBounce {
+    0%   { transform: scale(1, 1); }
+    100% { transform: scale(1.03, 0.97); }
+} */
+
+.button-bounce button:active {
+    animation: clickBounce 0.35s ease;
+}
+
+@keyframes clickBounce {
+    0%   { transform: scale(1, 1); }
+    30%  { transform: scale(1.1, 0.85); }
+    60%  { transform: scale(0.95, 1.05); }
+    100% { transform: scale(1, 1); }
+}
+
+
+/* =========================
+   SELECTS
+========================= */
 
 select {
     margin-right: 0px !important;
@@ -5363,6 +5520,7 @@ button.pcr-button {
     border-radius: 50% !important;
 }
 
+/* --- style settings --- */
 .style-settings-heading {
     border-radius: var(--setting-items-radius);
     background-color: var(--background-primary-alt);
@@ -5378,20 +5536,105 @@ button.pcr-button {
     padding: 8px 20px !important;
     box-shadow: 0px 2px 2px var(--background-modifier-border);
     filter: brightness(1);
-    transition: all 0.2s ease;
 }
 
-.style-settings-heading .setting-item-heading {
-  position: relative;
+/* center h1 heading */
+.setting-item-heading[data-level="1"] .setting-item-name {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    padding-top: 0 !important;
 }
 
-.style-settings-heading .setting-item-name {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
-  padding-top: 0 !important;
+/* Level 2 */
+.setting-item-heading[data-level="2"] {
+    background-color: var(--background-secondary) !important;
+    /* border-left: 6px solid var(--interactive-accent) !important; */
+    border-radius: 10px !important;
+    padding: 8px 16px !important;
+    margin-left: 16px !important;
+    width: calc(100% - 16px) !important;
+    filter: brightness(1) !important;
+}
+
+/* heading pretext */
+.setting-item-heading .setting-item-name::before {
+    letter-spacing: 0.1em;
+}
+
+.setting-item-heading[data-level="1"] .setting-item-name::before {
+    content: "#1 ";
+    color: var(--color-red);
+}
+
+.setting-item-heading[data-level="2"] .setting-item-name::before {
+    content: "#2 ";
+    color: var(--color-orange);
+}
+
+.setting-item-heading[data-level="3"] .setting-item-name::before {
+    content: "#3 ";
+    color: var(--color-yellow);
+}
+
+.setting-item-heading[data-level="4"] .setting-item-name::before {
+    content: "#4 ";
+    color: var(--color-green);
+}
+
+.setting-item-heading[data-level="5"] .setting-item-name::before {
+    content: "#5 ";
+    color: var(--color-blue);
+}
+
+/* hide arrow */
+.setting-item-heading[data-level="1"] .style-settings-collapse-indicator,
+.setting-item-heading[data-level="2"] .style-settings-collapse-indicator,
+.setting-item-heading[data-level="3"] .style-settings-collapse-indicator,
+.setting-item-heading[data-level="4"] .style-settings-collapse-indicator,
+.setting-item-heading[data-level="5"] .style-settings-collapse-indicator {
+    display: none;
+}
+/* Level 3 */
+.setting-item-heading[data-level="3"] {
+    background-color: var(--background-primary) !important;
+    border-bottom: 2px dotted var(--background-modifier-border) !important;
+    border-radius: 8px !important;
+    padding: 6px 12px !important;
+    margin-left: 32px !important;
+    width: calc(100% - 32px) !important;
+    font-size: 0.9em !important;
+    filter: brightness(1) !important;
+    box-shadow: none !important;
+}
+
+/* Level 4 */
+.setting-item-heading[data-level="4"] {
+    background: transparent !important;
+    border: none !important;
+    padding: 4px 8px !important;
+    margin-left: 48px !important;
+    width: calc(100% - 48px) !important;
+    font-size: 0.85em !important;
+    font-weight: normal !important;
+    box-shadow: none !important;
+    filter: brightness(1) !important;
+}
+
+/* Level 5 */
+.setting-item-heading[data-level="5"] {
+    background: transparent !important;
+    border: none !important;
+    padding: 2px 4px !important;
+    margin-left: 64px !important;
+    width: calc(100% - 64px) !important;
+    font-size: 0.8em !important;
+    font-weight: lighter !important;
+    opacity: 0.8 !important;
+    box-shadow: none !important;
+    filter: brightness(1) !important;
 }
 
 /* ===== FOLDER STYLES =====
@@ -8170,8 +8413,14 @@ collapsed: false
 settings:
 
   ########################################
-  # Editor & Text Appearance
+  # Theme
   ########################################
+
+  - id: heading-lf
+    title: Look & Feel
+    type: heading
+    level: 1
+    collapsed: false
 
   - id: dark-theme-colors
     title: Dark Theme Colors
@@ -8316,7 +8565,7 @@ settings:
         value: gray
 
   - id: workspace-layout
-    title: Layouts
+    title: Layout & Tab Style
     description: Set the workspace layout for desktop
     type: class-select
     default: default-tab-rounded
@@ -8329,7 +8578,7 @@ settings:
         value: bubble
 
   - id: bubble-styling
-    title: Bubble color options
+    title: Bubble Layout - Color options
     description: Only affects dark mode
     type: class-select
     default: bubble-dark-inside
@@ -8342,6 +8591,12 @@ settings:
         value: bubble-dark-outside
       - label: Focused Dark outside
         value: bubble-focused-dark-outside
+
+  - id: icons-buttons
+    title: Icons & Buttons
+    type: heading
+    level: 2
+    collapsed: true
 
   - id: tiptips
     title: Select, Buttons & Input Radiuses
@@ -8359,6 +8614,10 @@ settings:
         value: sharp-tiptip
       - label: Hexagon
         value: hexagon-tiptip
+      - label: Scoop
+        value: scoop-tiptip
+      - label: Squircle
+        value: squircle-tiptip
       - label: Sock
         value: sock-tiptip
       - label: Eye
@@ -8380,6 +8639,22 @@ settings:
       - label: Glow
         value: button-glow
 
+  - id: button-animation
+    title: Button Animation Style
+    type: class-select
+    default: default
+    options:
+      - label: None
+        value: none
+      - label: Scale
+        value: button-scale
+      - label: Shrink
+        value: button-shrink
+      - label: Bounce
+        value: button-bounce
+      - label: Tilt
+        value: button-tilt
+
   - id: icon-style
     title: Icon style
     description: Set the icon style
@@ -8395,51 +8670,21 @@ settings:
       - label: Big Filled
         value: big-filled
 
-  - id: status-bar
-    title: Status bar options
-    type: class-select
-    default: default
-    options:
-      - label: Default
-        value: default
-      - label: Show on hover
-        value: dim-status-bar
-      - label: Hidden
-        value: hide-status-bar
-      - label: Centered
-        value: centered-statusbar
+  - id: ui-elements
+    title: UI Elements
+    type: heading
+    level: 2
+    collapsed: true
 
-  - id: ribbon-style
-    title: Ribbon style
-    description: Set the ribbon style
-    type: class-select
-    default: default
-    options:
-      - label: Default
-        value: default
-      - label: Unanimated Ribbon
-        value: ribbon-no-anim
-
-  - id: hide-tab-list
-    title: Hide tab list
+  - id: focus-mode
+    title: Focus mode
+    description: Removes UI elements. You should assign a hotkey to use it.
     type: class-toggle
-    default: true
-
-
-  - id: color-min-max
-    title: Color Minimize & Maximize buttons
-    type: class-select
-    default: none
-    options:
-      - label: none
-        value: none
-      - label: Green-min Yellow-max
-        value: g-min-y-max
-      - label: Yellow-min Green-max
-        value: y-min-g-max
+    default: false
+    addCommand: true
 
   - id: inline-title
-    title: Align inline title
+    title: Inline Title Alignment
     description:
     type: class-select
     default: center-inline-title
@@ -8454,7 +8699,7 @@ settings:
         value: special-inline-title
 
   - id: view-title-casing
-    title: View title casing
+    title: View Header title casing
     description: Change the text case of the view header title
     type: class-select
     default: view-title-case-none
@@ -8471,14 +8716,48 @@ settings:
     type: class-toggle
     default: true
 
-  - id: focus-mode
-    title: Focus mode
-    description: Removes UI elements. You should assign a hotkey to use it.
+  - id: ribbon-style
+    title: Ribbon style
+    description: Set the ribbon style
+    type: class-select
+    default: default
+    options:
+      - label: Default
+        value: default
+      - label: Unanimated Ribbon
+        value: ribbon-no-anim
+
+  - id: status-bar
+    title: Status bar behaviour
+    type: class-select
+    default: default
+    options:
+      - label: Default
+        value: default
+      - label: Show on hover
+        value: dim-status-bar
+      - label: Hidden
+        value: hide-status-bar
+      - label: Centered
+        value: centered-statusbar
+
+  - id: color-min-max
+    title: Color Minimize & Maximize buttons
+    type: class-select
+    default: none
+    options:
+      - label: none
+        value: none
+      - label: Green-min Yellow-max
+        value: g-min-y-max
+      - label: Yellow-min Green-max
+        value: y-min-g-max
+
+  - id: table-hor-lines-only
+    title: Hide Vertical Lines in Tables
     type: class-toggle
-    default: false
-    addCommand: true
-
-
+    default: true
+    addCommand: false
 
 
 
@@ -8511,6 +8790,12 @@ settings:
     type: class-toggle
     default: false
     addCommand: true
+
+  - id: active-line
+    title: Active Line Behaviour
+    type: heading
+    level: 2
+    collapsed: true
 
   - id: highlight-active-line
     title: Highlight active line
@@ -8548,6 +8833,12 @@ settings:
     default: false
     addCommand: true
 
+  - id: pre-act-line
+    title: Active Line Prefix
+    type: heading
+    level: 3
+    collapsed: true
+
   - id: text-before-active-line
     title: Enable active line prefix
     description: Text shown before the active line
@@ -8576,11 +8867,7 @@ settings:
     opacity: false
     default: '#7c3aed'
 
-  - id: table-hor-lines-only
-    title: Hide Vertical Lines in Tables
-    type: class-toggle
-    default: true
-    addCommand: false
+
 
 
 
@@ -8598,7 +8885,7 @@ settings:
 
   - id: italic
     title: Italic Text Color
-    description: Sets the color for all italic text (reading + editor)
+    description: Sets the color for all italic text
     type: class-select
     default: italic-color-normal
     options:
@@ -8986,6 +9273,11 @@ settings:
     level: 2
     collapsed: true
 
+  - id: hide-tab-list
+    title: Hide tab list
+    type: class-toggle
+    default: true
+
   - id: hide-tab-close-btn
     title: Hide tab close button
     type: class-toggle
@@ -8997,6 +9289,69 @@ settings:
     type: class-toggle
     default: true
     addCommand: false
+
+  - id: hide-sidebar-toggle-left
+    title: Hide Left Sidebar Toggle Button
+    type: class-toggle
+    default: false
+
+  - id: hide-sidebar-toggle-right
+    title: Hide Right Sidebar Toggle Button
+    type: class-toggle
+    default: false
+
+
+  - id: tab-top-left-style
+    title: Tab Style (Left top)
+    description: Style for the top-left sidebar tab strip
+    type: class-select
+    default: tab-top-left-icons
+    options:
+      - label: Icons Only
+        value: tab-top-left-icons
+      - label: Labels Only
+        value: tab-top-left-labels
+      - label: Icons + Labels
+        value: tab-top-left-icons-labels
+
+  - id: tab-top-right-style
+    title: Tab Style (Right top)
+    description: Style for the top-right sidebar tab strip
+    type: class-select
+    default: tab-top-right-icons
+    options:
+      - label: Icons Only
+        value: tab-top-right-icons
+      - label: Labels Only
+        value: tab-top-right-labels
+      - label: Icons + Labels
+        value: tab-top-right-icons-labels
+
+  - id: tab-left-style
+    title: Tab Style (Left)
+    description: Style for the left sidebar tab strip
+    type: class-select
+    default: tab-left-icons
+    options:
+      - label: Icons Only
+        value: tab-left-icons
+      - label: Labels Only
+        value: tab-left-labels
+      - label: Icons + Labels
+        value: tab-left-icons-labels
+
+  - id: tab-right-style
+    title: Tab Style (Right)
+    description: Style for the right sidebar tab strip
+    type: class-select
+    default: tab-right-icons
+    options:
+      - label: Icons Only
+        value: tab-right-icons
+      - label: Labels Only
+        value: tab-right-labels
+      - label: Icons + Labels
+        value: tab-right-icons-labels
 
   ########################################
   # File Explorer
@@ -9122,67 +9477,6 @@ settings:
     max: 3
     step: 1
 
-  - id: tab-top-left-style
-    title: Tab Style (Left top)
-    description: Style for the top-left sidebar tab strip
-    type: class-select
-    default: tab-top-left-icons
-    options:
-      - label: Icons Only
-        value: tab-top-left-icons
-      - label: Labels Only
-        value: tab-top-left-labels
-      - label: Icons + Labels
-        value: tab-top-left-icons-labels
-
-  - id: tab-top-right-style
-    title: Tab Style (Right top)
-    description: Style for the top-right sidebar tab strip
-    type: class-select
-    default: tab-top-right-icons
-    options:
-      - label: Icons Only
-        value: tab-top-right-icons
-      - label: Labels Only
-        value: tab-top-right-labels
-      - label: Icons + Labels
-        value: tab-top-right-icons-labels
-
-  - id: tab-left-style
-    title: Tab Style (Left)
-    description: Style for the left sidebar tab strip
-    type: class-select
-    default: tab-left-icons
-    options:
-      - label: Icons Only
-        value: tab-left-icons
-      - label: Labels Only
-        value: tab-left-labels
-      - label: Icons + Labels
-        value: tab-left-icons-labels
-
-  - id: tab-right-style
-    title: Tab Style (Right)
-    description: Style for the right sidebar tab strip
-    type: class-select
-    default: tab-right-icons
-    options:
-      - label: Icons Only
-        value: tab-right-icons
-      - label: Labels Only
-        value: tab-right-labels
-      - label: Icons + Labels
-        value: tab-right-icons-labels
-
-  - id: hide-sidebar-toggle-left
-    title: Hide Left Sidebar Toggle Button
-    type: class-toggle
-    default: false
-
-  - id: hide-sidebar-toggle-right
-    title: Hide Right Sidebar Toggle Button
-    type: class-toggle
-    default: false
 
   ########################################
   # Properties Panel
