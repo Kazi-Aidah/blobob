@@ -3012,7 +3012,7 @@ body.custom-bullets-enabled {
 
     .workspace-tab-header.is-active:has(.mod-pinned) {
         background-color: var(--tab-background) !important;
-        border-radius: 20px !important;
+        border-radius: var(--button-radius, 20px) !important;
         height: 27px !important;
         padding-bottom: 3px !important;
     }
@@ -3020,7 +3020,7 @@ body.custom-bullets-enabled {
     .workspace-tab-header:has(.mod-pinned) {
         background-color: transparent !important;
         border: 0 !important;
-        border-radius: 20px !important;
+        border-radius: var(--button-radius, 20px) !important;
         height: 27px !important;
         padding-bottom: -px !important;
 
@@ -3029,7 +3029,7 @@ body.custom-bullets-enabled {
 
     .workspace-tab-header:has(.mod-pinned):hover {
         background-color: var(--tab-background) !important;
-        border-radius: 20px !important;
+        border-radius: var(--button-radius, 20px) !important;
         /* --tab-max-width: 52px !important; */
         transition: all calc(var(--animation-duration) * 0.6667) ease;
     }
@@ -3046,7 +3046,7 @@ body.custom-bullets-enabled {
     .workspace-tab-header {
         margin: 3px 5px 5px 3px;
         --tab-curve: 0 !important;
-        border-radius: 12px !important;
+        border-radius: var(--button-radius, 12px) !important;
         padding-left: 0px !important;
         transform: translateY(4px) !important;
 
@@ -3063,7 +3063,7 @@ body.custom-bullets-enabled {
         background-color: var(--tab-background-active);
         outline: 2px solid var(--background-modifier-border);
         margin: 3px 5px 5px 3px;
-        border-radius: 12px !important;
+        border-radius: var(--button-radius, 12px) !important;
         border-bottom: none !important;
         padding-bottom: 0px !important;
         padding-left: 8px !important;
@@ -3086,7 +3086,7 @@ body.custom-bullets-enabled {
 
     .workspace-tab-header.is-active:hover {
         --tab-curve: 0 !important;
-        border-radius: 12px !important;
+        border-radius: var(--button-radius, 12px) !important;
         transition:
             border-radius calc(var(--animation-duration) * 1) cubic-bezier(0.68, -0.55, 0.265, 1.55),
             background-color 0s ease,
@@ -3095,7 +3095,7 @@ body.custom-bullets-enabled {
 
     .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
         height: 100%;
-        border-radius: 12px !important;
+        border-radius: var(--button-radius, 12px) !important;
         margin-right: 2px;
         margin-left: 2px;
         margin-top: -2px !important;
@@ -3195,16 +3195,14 @@ body.custom-bullets-enabled {
 
 /* === default tab === */
 .default-tab {
-    .workspace-tab-header {
+    .workspace-tab-header,
+    .workspace-tab-header.is-active {
         margin: 0px;
-        --tab-curve: 16px !important;
-        border-radius: 18px !important;
-        /* border-bottom-left-radius: 0 !important;
-    border-bottom-right-radius: 0 !important; */
         padding-left: 0px !important;
+        border-radius: 20px !important;
+        corner-shape: initial !important;
 
         transition:
-            border-radius calc(var(--animation-duration) * 1.3333) cubic-bezier(0.34, 1.56, 0.64, 1),
             margin calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 1.2),
             padding calc(var(--animation-duration) * 1.6667) cubic-bezier(0.68, -0.55, 0.265, 1.55),
             background-color 0s ease !important;
@@ -3236,10 +3234,8 @@ body.custom-bullets-enabled {
 
     /* old animation - old is gold */
     .workspace-tab-header.is-active {
-        --tab-curve: 16px;
         color: var(--tab-text-color-focused-active);
         background-color: var(--tab-background-active);
-        border-radius: 18px !important;
 
         border-bottom: none !important;
 
@@ -3251,7 +3247,6 @@ body.custom-bullets-enabled {
         text-overflow: ellipsis;
 
         transition:
-            border-radius calc(var(--animation-duration) * 1.6667) cubic-bezier(0.68, -0.55, 0.265, 1.55),
             margin calc(var(--animation-duration) * 1.6667) cubic-bezier(0.68, -0.55, 0.265, 1.55),
             padding calc(var(--animation-duration) * 1) ease,
             background-color calc(var(--animation-duration) * 1.3333) cubic-bezier(0.34, 1.56, 0.64, 1),
@@ -3380,7 +3375,7 @@ body.custom-bullets-enabled {
     .workspace-tab-header {
         margin: 0px !important;
         --tab-curve: 0px !important;
-        border-radius: 10px 10px 0px 0px !important;
+        border-radius: var(--button-radius) var(--button-radius) 0px 0px !important;
         padding-left: 0px !important;
         box-shadow: 0px 0px 0px 1px transparent;
         transition: all calc(var(--animation-duration) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1) !important;
@@ -3405,7 +3400,7 @@ body.custom-bullets-enabled {
         margin-right: 5px !important;
         margin-bottom: -10px !important;
         padding: 2px 2px 4px 2px !important;
-        border-radius: 10px 10px 0px 0px !important;
+        border-radius: var(--button-radius) var(--button-radius) 0px 0px !important;
         background-color: var(--background-secondary);
         border: 1.5px solid var(--background-modifier-border);
     }
@@ -3426,11 +3421,14 @@ body.custom-bullets-enabled {
     }
 
     .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:hover {
+        /* border: 2px solid red !important; */
+        border-radius: 6px !important;
         transition: all calc(var(--animation-duration) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1) !important;
     }
 
     .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:active {
-        border-radius: 10px 10px 0px 0px !important;
+        border-radius: var(--button-radius) var(--button-radius) 0px 0px !important;
+        corner-shape: var(--corner-shape);
         background-color: var(--background-secondary);
         margin-bottom: -4px !important;
         margin-top: 2px !important;
@@ -3465,6 +3463,19 @@ body.custom-bullets-enabled {
         transform: translateY(8px);
         opacity: 0.6 !important;
     }
+}
+
+/* Toned down shapes for tabs - Specific Selectors */
+.default-tab-rounded.scoop .workspace-tab-header,
+.default-tab-rounded.scoop .workspace-tab-header.is-active {
+    border-radius: 3px 3px 0 0 !important;
+    corner-shape: scoop !important;
+}
+
+.default-tab-rounded.hexagon .workspace-tab-header,
+.default-tab-rounded.hexagon .workspace-tab-header.is-active {
+    border-radius: 3px 3px 0 0 !important;
+    corner-shape: bevel !important;
 }
 
 /* DO: Ease-out for all color changes */
@@ -4122,6 +4133,9 @@ em strong {
     --input-radius: 10%;
 }
 
+/* === Shape Tiptips === */
+
+/* Hexagon Tiptip */
 .hexagon-tiptip select,
 .hexagon-tiptip input,
 .hexagon-tiptip textarea,
@@ -4135,25 +4149,24 @@ em strong {
 .hexagon-tiptip .setting-hotkey,
 .hexagon-tiptip .kanban-plugin__item,
 .hexagon-tiptip img {
-    --cut: 6px;
-    /* border: none !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
-    clip-path: polygon(
-        var(--cut) 0%,
-        calc(100% - var(--cut)) 0%,
-        100% var(--cut),
-        100% calc(100% - var(--cut)),
-        calc(100% - var(--cut)) 100%,
-        var(--cut) 100%,
-        0% calc(100% - var(--cut)),
-        0% var(--cut)
-    ); */
-
     corner-shape: bevel !important;
-    border-radius: 7px !important;
+    border-radius: 6px !important;
 }
 
+/* increased */
+.hexagon-tiptip .menu,
+.hexagon-tiptip .modal,
+.hexagon-tiptip .prompt,
+.hexagon-tiptip,
+.hexagon-tiptip .notice,
+.hexagon-tiptip .kanban-plugin__lane,
+.hexagon-tiptip .popover {
+    corner-shape: bevel !important;
+    border-radius: 12px !important;
+    --corner-shape: bevel;
+}
+
+/* Scoop Tiptip */
 .scoop-tiptip select,
 .scoop-tiptip input,
 .scoop-tiptip textarea,
@@ -4168,7 +4181,7 @@ em strong {
 .scoop-tiptip .kanban-plugin__item,
 .scoop-tiptip img {
     corner-shape: scoop !important;
-    border-radius: 7px !important;
+    border-radius: 6px !important;
     --corner-shape: scoop;
 }
 
@@ -4180,10 +4193,54 @@ em strong {
 .scoop-tiptip .kanban-plugin__lane,
 .scoop-tiptip .popover {
     corner-shape: scoop !important;
-    border-radius: 9px !important;
+    border-radius: 7px !important;
     --corner-shape: scoop;
 }
 
+/* Decreased */
+.bubble.scoop-tiptip .menu,
+.bubble.scoop-tiptip .modal,
+.bubble.scoop-tiptip .prompt,
+.bubble.scoop-tiptip,
+.bubble.scoop-tiptip .notice,
+.bubble.scoop-tiptip .kanban-plugin__lane,
+.bubble.scoop-tiptip .popover,
+.bubble.scoop-tiptip .workspace-leaf {
+    border-radius: 10px !important;
+    corner-shape: scoop;
+}
+
+.bubble.scoop-tiptip .workspace-tab-header,
+.bubble.scoop-tiptip .workspace-tab-header:active {
+    border-radius: 6px !important;
+}
+
+.default-tab-rounded.scoop-tiptip .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:active {
+    border-radius: 6px 6px 0px 0px !important;
+}
+
+.bubble .workspace-leaf {
+    border-radius: var(--button-radius) !important;
+    corner-shape: var(--corner-shape) !important;
+}
+
+.bubble.sock-tiptip .workspace-leaf {
+    border-radius: 2% !important;
+    corner-shape: var(--corner-shape) !important;
+}
+
+.default-tab-rounded.hexagon-tiptip .workspace-tab-header,
+.default-tab-rounded.scoop-tiptip .workspace-tab-header {
+    border-radius: 8px 8px 0px 0px !important;
+}
+
+.default-tab-rounded.hexagon-tiptip .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:active {
+    border-radius: 8px 8px 0px 0px !important;
+}
+
+
+
+/* Squircle Tiptip */
 .squircle-tiptip select,
 .squircle-tiptip input,
 .squircle-tiptip textarea,
@@ -4214,67 +4271,25 @@ em strong {
     --corner-shape: squircle;
 }
 
-.hexagon-tiptip .menu,
-.hexagon-tiptip .modal,
-.hexagon-tiptip .prompt,
-.hexagon-tiptip,
-.hexagon-tiptip .notice,
-.hexagon-tiptip .kanban-plugin__lane,
-.hexagon-tiptip .popover {
-    --cut: 12px;
-    /* border: none !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
-    clip-path: polygon(
-        var(--cut) 0%,
-        calc(100% - var(--cut)) 0%,
-        100% var(--cut),
-        100% calc(100% - var(--cut)),
-        calc(100% - var(--cut)) 100%,
-        var(--cut) 100%,
-        0% calc(100% - var(--cut)),
-        0% var(--cut)
-    ); */
-
-    corner-shape: bevel !important;
-    border-radius: 10px !important;
-    --corner-shape: bevel;
-}
-
-select,
-input,
-textarea,
-button,
-.mod-cta,
-.setting-item-control button,
-.menu-item.tappable,
-a,
-.suggestion-item.mod-complex.is-selected,
-.suggestion-hotkey,
-.setting-hotkey {
-    border-radius: var(--button-radius) !important;
-}
-
+/* Round & Rounded Tiptips */
 .round-tiptip .menu,
 .round-tiptip .modal,
-.round-tiptip .prompt {
-    border-radius: calc(var(--button-radius) + 2px) !important;
-}
-
+.round-tiptip .prompt,
 .rounded-tiptip .menu,
 .rounded-tiptip .modal,
 .rounded-tiptip .prompt {
     border-radius: calc(var(--button-radius) + 2px) !important;
 }
 
-
+/* Sharp Tiptip */
 .sharp-tiptip .menu,
 .sharp-tiptip .modal,
 .sharp-tiptip .prompt,
 .sharp-tiptip .suggestion-item.mod-complex.is-selected {
-    border-radius: calc(var(--button-radius) + 2px) !important;
+    border-radius: 0px !important;
 }
 
+/* Sock Tiptip */
 .sock-tiptip .menu,
 .sock-tiptip .modal,
 .sock-tiptip .prompt,
@@ -4284,10 +4299,12 @@ a,
     border-radius: 1.7% !important;
 }
 
+/* Circular Tiptip */
 .circular-tiptip .suggestion-item.mod-complex.is-selected {
-    border-radius: var(--button-radius) !important;
+    border-radius: 100px !important;
 }
 
+/* Eye Tiptip */
 .eye-tiptip .suggestion-item.mod-complex.is-selected,
 .eye-tiptip .suggestion-hotkey,
 .eye-tiptip .setting-hotkey {
@@ -4305,6 +4322,135 @@ a,
 .eye-tiptip img,
 .eye-tiptip .popover {
     border-radius: 4% !important;
+}
+
+/* === Button Shapes === */
+
+/* Circular Buttons */
+.circular-tiptip select,
+.circular-tiptip input,
+.circular-tiptip textarea,
+.circular-tiptip button,
+.circular-tiptip .mod-cta,
+.circular-tiptip .setting-item-control button,
+.circular-tiptip .clickable-icon,
+.circular-tiptip .menu-item.tappable,
+.circular-tiptip .vertical-tab-nav-item,
+.circular-tiptip .suggestion-item.mod-complex.is-selected,
+.circular-tiptip .suggestion-hotkey,
+.circular-tiptip .setting-hotkey,
+.circular-tiptip .kanban-plugin__item,
+.circular-tiptip img {
+    border-radius: 100px !important;
+}
+
+/* Rounded Buttons */
+.rounded-tiptip select,
+.rounded-tiptip input,
+.rounded-tiptip textarea,
+.rounded-tiptip button,
+.rounded-tiptip .mod-cta,
+.rounded-tiptip .setting-item-control button,
+.rounded-tiptip .clickable-icon,
+.rounded-tiptip .menu-item.tappable,
+.rounded-tiptip .vertical-tab-nav-item,
+.rounded-tiptip .suggestion-item.mod-complex.is-selected,
+.rounded-tiptip .suggestion-hotkey,
+.rounded-tiptip .setting-hotkey,
+.rounded-tiptip .kanban-plugin__item,
+.rounded-tiptip img {
+    border-radius: 12px !important;
+}
+
+/* Round Buttons */
+.round-tiptip select,
+.round-tiptip input,
+.round-tiptip textarea,
+.round-tiptip button,
+.round-tiptip .mod-cta,
+.round-tiptip .setting-item-control button,
+.round-tiptip .clickable-icon,
+.round-tiptip .menu-item.tappable,
+.round-tiptip .vertical-tab-nav-item,
+.round-tiptip .suggestion-item.mod-complex.is-selected,
+.round-tiptip .suggestion-hotkey,
+.round-tiptip .setting-hotkey,
+.round-tiptip .kanban-plugin__item,
+.round-tiptip img {
+    border-radius: 8px !important;
+}
+
+/* Sharp Buttons */
+.sharp-tiptip select,
+.sharp-tiptip input,
+.sharp-tiptip textarea,
+.sharp-tiptip button,
+.sharp-tiptip .mod-cta,
+.sharp-tiptip .setting-item-control button,
+.sharp-tiptip .clickable-icon,
+.sharp-tiptip .menu-item.tappable,
+.sharp-tiptip .vertical-tab-nav-item,
+.sharp-tiptip .suggestion-item.mod-complex.is-selected,
+.sharp-tiptip .suggestion-hotkey,
+.sharp-tiptip .setting-hotkey,
+.sharp-tiptip .kanban-plugin__item,
+.sharp-tiptip img {
+    border-radius: 0px !important;
+}
+
+/* Sock Buttons */
+.sock-tiptip select,
+.sock-tiptip input,
+.sock-tiptip textarea,
+.sock-tiptip button,
+.sock-tiptip .mod-cta,
+.sock-tiptip .setting-item-control button,
+.sock-tiptip .clickable-icon,
+.sock-tiptip .menu-item.tappable,
+.sock-tiptip .vertical-tab-nav-item,
+.sock-tiptip .suggestion-item.mod-complex.is-selected,
+.sock-tiptip .suggestion-hotkey,
+.sock-tiptip .setting-hotkey,
+.sock-tiptip .kanban-plugin__item,
+.sock-tiptip img {
+    border-radius: 1.7% !important;
+}
+
+/* Eye Buttons */
+.eye-tiptip select,
+.eye-tiptip input,
+.eye-tiptip textarea,
+.eye-tiptip button,
+.eye-tiptip .mod-cta,
+.eye-tiptip .setting-item-control button,
+.eye-tiptip .clickable-icon,
+.eye-tiptip .menu-item.tappable,
+.eye-tiptip .vertical-tab-nav-item,
+.eye-tiptip .suggestion-item.mod-complex.is-selected,
+.eye-tiptip .suggestion-hotkey,
+.eye-tiptip .setting-hotkey,
+.eye-tiptip .kanban-plugin__item,
+.eye-tiptip img {
+    border-radius: 20% / 50% !important;
+}
+
+/* Global Shape */
+select, 
+input, 
+textarea, 
+button, 
+.mod-cta, 
+.setting-item-control button, 
+.clickable-icon, 
+.menu-item.tappable, 
+.vertical-tab-nav-item, 
+.suggestion-item.mod-complex.is-selected, 
+.suggestion-hotkey, 
+.setting-hotkey, 
+.kanban-plugin__item, 
+.workspace-tab-header,
+img {
+    corner-shape: var(--corner-shape, initial) !important;
 }
 
 /* bordered */
@@ -5177,8 +5323,9 @@ input.prompt-input:focus {
 
 /* ===== FILE EXPLORER ===== */
 
-.tree-item-self:hover {
+.tree-item-self, .tree-item-self:hover, .tree-item-self:active {
     border-radius: var(--nav-file-radius) !important;
+    transition: all 0.2s ease !important;
 }
 
 .file-exp-left {
@@ -5192,7 +5339,6 @@ input.prompt-input:focus {
 
     .tree-item-self.is-active {
         padding: 10px 4px;
-        border-radius: 10px;
         background-color: hsla(var(--interactive-accent-hsl), 0.2);
         color: var(--color-accent-1);
         margin: 8px 0;
@@ -5215,7 +5361,8 @@ input.prompt-input:focus {
 
 .file-exp-center {
     .tree-item-self {
-        border-radius: 10px;
+        border-radius: var(--button-radius);
+        corner-shape: var(--corner-shape);
         transition: background-color calc(var(--animation-duration) * 0.6667) ease;
     }
 
@@ -5234,11 +5381,10 @@ input.prompt-input:focus {
 
     .tree-item-self.is-active {
         padding: 10px 4px;
-        border-radius: 10px;
         background-color: hsla(var(--interactive-accent-hsl), 0.2);
         color: var(--color-accent-1);
         margin: 8px 0;
-        transition: all calc(var(--animation-duration) * 1) ease;
+        transition: all calc(var(--animation-duration) * 1) ease !important;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -5251,7 +5397,7 @@ input.prompt-input:focus {
         color: var(--color-accent-1) !important;
         margin: 10px 0;
         padding: 12px 4px;
-        transition: all calc(var(--animation-duration) * 1) ease;
+        transition: all calc(var(--animation-duration) * 1) ease !important;
     }
 
     .tree-item-self.is-active .nav-file-title,
@@ -6801,6 +6947,16 @@ body.theme-dark {
 }
 
 /* ===== CALLOUTS ===== */
+
+li.task-list-item {
+    display: flex;
+    /* this flex fixes a visual issue for checkboxes in callouts */
+    margin-bottom: 4px;
+}
+
+li.task-list-item .always-color-text-highlight {
+    margin-inline-start: 2px;
+}
 
 .callout {
     --callout-border-width: 3px;
