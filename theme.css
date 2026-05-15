@@ -2547,14 +2547,6 @@ body.custom-bullets-enabled {
     pointer-events: auto;
 }
 
-.workspace
-    .mod-root
-    .workspace-tab-header
-    .workspace-tab-header-inner-close-button:hover {
-    background-color: var(--background-modifier-hover) !important;
-    border: 2px solid var(--background-modifier-border);
-}
-
 /* close button - tab hover */
 .workspace
     .mod-root
@@ -2565,6 +2557,14 @@ body.custom-bullets-enabled {
     width: auto;
     margin-left: -4px;
     pointer-events: auto;
+}
+
+.workspace
+    .mod-root
+    .workspace-tab-header
+    .workspace-tab-header-inner-close-button:hover {
+    background-color: var(--background-modifier-hover) !important;
+    border: 2px solid var(--background-modifier-border);
 }
 
 /* hide icon on hover, show close btn */
@@ -2702,7 +2702,7 @@ body.custom-bullets-enabled {
 }
 
 /* Hide close button on pinned tabs */
-.pin-icon-only .workspace .mod-root .workspace-tab-header .workspace-tab-header-inner-close-button {
+.pin-icon-only .workspace .mod-root .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner-close-button {
     display: none !important;
 }
 
@@ -4217,6 +4217,11 @@ em strong {
 
 .default-tab-rounded.scoop-tiptip .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:active {
     border-radius: 6px 6px 0px 0px !important;
+}
+
+.default-tab-rounded.circular-tiptip .workspace-tab-header,
+.default-tab-rounded.circular-tiptip .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:active  {
+    border-radius: 14px 14px 0px 0px !important;
 }
 
 .bubble .workspace-leaf {
