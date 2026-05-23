@@ -1,0 +1,370 @@
+/* ===== FOLDER STYLES =====
+  Accent Dot       — folder-dot-accent
+  Rainbow Dot      — folder-dot-rainbow
+  Accent Frame     — folder-frame-accent
+  Rainbow Frame    — folder-frame-rainbow
+  Accent Subtle    — folder-subtle-accent
+  Rainbow Subtle   — folder-subtle-rainbow
+  Accent Solid     — folder-solid-accent
+  Rainbow Solid    — folder-solid-rainbow
+  Accent Gradient  — folder-gradient-hue
+*/
+
+/* folder none */
+.folder-none .nav-folder-title {
+    border-radius: var(--nav-folder-radius) !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    margin-bottom: 3px !important;
+    box-shadow: none !important;
+    border: none;
+}
+
+.accented .nav-folder-title {
+    --icon-color: var(--color-accent-1);
+    --nav-collapse-icon-color: var(--color-accent-1);
+    --nav-collapse-icon-color-collapsed: var(--color-accent-1);
+
+    border-radius: var(--nav-folder-radius) !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    margin-bottom: 6px !important;
+
+    background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
+    background-image: none !important;
+    color: var(--color-accent-1) !important;
+    box-shadow: none !important;
+    border: none;
+
+    transition:
+        border calc(var(--animation-duration) * 0.6667) ease,
+        padding calc(var(--animation-duration) * 0.6667) ease,
+        padding-left 0s ease,
+        margin calc(var(--animation-duration) * 0.6667) ease,
+        border-radius calc(var(--animation-duration) * 0.6667),
+        box-shadow calc(var(--animation-duration) * 0.6667) ease,
+        background-color calc(var(--animation-duration) * 0.6667) ease !important;
+
+    &:hover {
+        border-radius: var(--nav-folder-radius) !important;
+
+        background-color: hsla(var(--interactive-accent-hsl), 0.3) !important;
+        color: var(--color-accent-2) !important;
+
+        transition:
+            border calc(var(--animation-duration) * 0.6667) ease,
+            padding calc(var(--animation-duration) * 0.6667) ease,
+            padding-left 0s ease,
+            margin calc(var(--animation-duration) * 0.6667) ease,
+            border-radius calc(var(--animation-duration) * 0.6667),
+            box-shadow calc(var(--animation-duration) * 0.6667) ease,
+            background-color calc(var(--animation-duration) * 0.6667) ease !important;
+    }
+}
+
+.mechanical .nav-folder-title {
+    --icon-color: var(--text-normal) !important;
+    --nav-collapse-icon-color: var(--text-normal);
+    --nav-collapse-icon-color-collapsed: var(--text-normal);
+
+    border-radius: var(--nav-folder-radius);
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    margin-bottom: 6px !important;
+
+    background-color: var(--background-primary-alt);
+    background-image: linear-gradient(
+        180deg,
+        var(--background-primary-alt),
+        var(--background-secondary-alt)
+    ) !important;
+    color: var(--text-normal) !important;
+    border: 2px solid var(--background-modifier-border);
+    box-shadow: none;
+}
+
+.huge .nav-folder-title {
+    --icon-color: var(--color-accent-1);
+    --nav-collapse-icon-color: var(--color-accent-1);
+    --nav-collapse-icon-color-collapsed: var(--color-accent-1);
+
+    border-radius: var(--nav-folder-radius) !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    margin-bottom: 6px !important;
+    padding-left: 40px !important;
+
+    background-color: var(--background-secondary-alt);
+    box-shadow: none !important;
+    border: none;
+}
+
+.thick .nav-folder-title {
+    --icon-color: var(--color-accent-1);
+    --nav-collapse-icon-color: var(--color-accent-1);
+    --nav-collapse-icon-color-collapsed: var(--color-accent-1);
+
+    border-radius: var(--nav-folder-radius) !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    padding-left: 30px !important;
+    margin-bottom: 6px !important;
+
+    background-color: var(--background-secondary-alt);
+    box-shadow: none !important;
+    border: none;
+}
+
+/* ── Rainbow: assign --folder-color per nth-child ── */
+body:is(.folder-dot-rainbow, .folder-frame-rainbow, .folder-subtle-rainbow, .folder-solid-rainbow)
+    .nav-files-container > div > .nav-folder:nth-child(8n+2) { --folder-color: var(--color-red); --folder-color-rgb: var(--color-red-rgb); }
+body:is(.folder-dot-rainbow, .folder-frame-rainbow, .folder-subtle-rainbow, .folder-solid-rainbow)
+    .nav-files-container > div > .nav-folder:nth-child(8n+3) { --folder-color: var(--color-orange); --folder-color-rgb: var(--color-orange-rgb); }
+body:is(.folder-dot-rainbow, .folder-frame-rainbow, .folder-subtle-rainbow, .folder-solid-rainbow)
+    .nav-files-container > div > .nav-folder:nth-child(8n+4) { --folder-color: var(--color-yellow); --folder-color-rgb: var(--color-yellow-rgb); }
+body:is(.folder-dot-rainbow, .folder-frame-rainbow, .folder-subtle-rainbow, .folder-solid-rainbow)
+    .nav-files-container > div > .nav-folder:nth-child(8n+5) { --folder-color: var(--color-green); --folder-color-rgb: var(--color-green-rgb); }
+body:is(.folder-dot-rainbow, .folder-frame-rainbow, .folder-subtle-rainbow, .folder-solid-rainbow)
+    .nav-files-container > div > .nav-folder:nth-child(8n+6) { --folder-color: var(--color-cyan); --folder-color-rgb: var(--color-cyan-rgb); }
+body:is(.folder-dot-rainbow, .folder-frame-rainbow, .folder-subtle-rainbow, .folder-solid-rainbow)
+    .nav-files-container > div > .nav-folder:nth-child(8n+7) { --folder-color: var(--color-blue); --folder-color-rgb: var(--color-blue-rgb); }
+body:is(.folder-dot-rainbow, .folder-frame-rainbow, .folder-subtle-rainbow, .folder-solid-rainbow)
+    .nav-files-container > div > .nav-folder:nth-child(8n+8) { --folder-color: var(--color-purple); --folder-color-rgb: var(--color-purple-rgb); }
+body:is(.folder-dot-rainbow, .folder-frame-rainbow, .folder-subtle-rainbow, .folder-solid-rainbow)
+    .nav-files-container > div > .nav-folder:nth-child(8n+9) { --folder-color: var(--color-pink); --folder-color-rgb: var(--color-pink-rgb); }
+
+/* ── Shared: reset blobob's accent background on nav-folder-title for all folder styles ── */
+body:is(.folder-dot-accent, .folder-dot-rainbow,
+        .folder-frame-accent, .folder-frame-rainbow,
+        .folder-subtle-accent, .folder-subtle-rainbow,
+        .folder-solid-accent, .folder-solid-rainbow,
+        .folder-gradient-hue)
+    .nav-files-container > div > .nav-folder > .nav-folder-title {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+/* ── Shared: hide the SVG chevron for dot styles ── */
+body:is(.folder-dot-accent, .folder-dot-rainbow)
+    .nav-files-container > div > .nav-folder > .nav-folder-title > .collapse-icon svg {
+    display: none;
+}
+
+/* ── Shared: dot pseudo-element base ── */
+body:is(.folder-dot-accent, .folder-dot-rainbow)
+    .nav-files-container > div > .nav-folder > .nav-folder-title > .collapse-icon::before {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    content: "";
+}
+
+/* ── ACCENT DOT ── */
+body.folder-dot-accent
+    .nav-files-container > div > .nav-folder > .nav-folder-title > .collapse-icon::before {
+    background-color: var(--color-accent);
+}
+body.folder-dot-accent
+    .nav-files-container > div > .nav-folder > .nav-folder-title {
+    color: var(--color-accent) !important;
+    --nav-collapse-icon-color: var(--color-accent);
+    --icon-color: var(--color-accent);
+}
+
+/* ── RAINBOW DOT ── */
+body.folder-dot-rainbow
+    .nav-files-container > div > .nav-folder > .nav-folder-title > .collapse-icon::before {
+    background-color: var(--folder-color, var(--text-muted));
+}
+body.folder-dot-rainbow
+    .nav-files-container > div > .nav-folder > .nav-folder-title {
+    background-color: rgba(var(--folder-color-rgb, var(--color-red-rgb)), 0.15) !important;
+    color: var(--folder-color, var(--text-normal)) !important;
+    --nav-collapse-icon-color: var(--folder-color, var(--text-muted));
+    --icon-color: var(--folder-color, var(--text-muted));
+}
+
+/* ── ACCENT FRAME ── */
+body.folder-frame-accent
+    .nav-files-container > div > .nav-folder > .nav-folder-title {
+    border-radius: var(--nav-folder-radius) !important;
+    background-color: hsla(var(--interactive-accent-hsl), 0.1) !important;
+    border: 2px solid var(--color-accent) !important;
+    color: var(--color-accent) !important;
+    --nav-collapse-icon-color: var(--color-accent);
+    --icon-color: var(--color-accent);
+}
+
+/* ── RAINBOW FRAME ── */
+body.folder-frame-rainbow
+    .nav-files-container > div > .nav-folder > .nav-folder-title {
+    border-radius: var(--nav-folder-radius) !important;
+    background-color: rgba(var(--folder-color-rgb, var(--color-red-rgb)), 0.1) !important;
+    border: 2px solid var(--folder-color, var(--text-muted)) !important;
+    color: var(--folder-color, var(--text-normal)) !important;
+    --nav-collapse-icon-color: var(--folder-color, var(--text-muted));
+    --icon-color: var(--folder-color, var(--text-muted));
+}
+
+/* ── ACCENT SUBTLE ── */
+body.folder-subtle-accent
+    .nav-files-container > div > .nav-folder > .nav-folder-title {
+    border-radius: var(--nav-folder-radius) !important;
+    background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
+    color: var(--color-accent) !important;
+    --nav-collapse-icon-color: var(--color-accent);
+    --icon-color: var(--color-accent);
+}
+
+/* ── RAINBOW SUBTLE ── */
+body.folder-subtle-rainbow
+    .nav-files-container > div > .nav-folder > .nav-folder-title {
+    border-radius: var(--nav-folder-radius) !important;
+    background-color: rgba(var(--folder-color-rgb, var(--color-red-rgb)), 0.2) !important;
+    color: var(--folder-color, var(--text-normal)) !important;
+    --nav-collapse-icon-color: var(--folder-color, var(--text-muted));
+    --icon-color: var(--folder-color, var(--text-muted));
+}
+
+/* ── ACCENT SOLID ── */
+body.folder-solid-accent
+    .nav-files-container > div > .nav-folder > .nav-folder-title {
+    border-radius: var(--nav-folder-radius) !important;
+    background-color: var(--color-accent) !important;
+    color: var(--text-on-accent) !important;
+    --nav-collapse-icon-color: var(--text-on-accent);
+    --icon-color: var(--text-on-accent);
+}
+
+/* ── RAINBOW SOLID ── */
+body.folder-solid-rainbow
+    .nav-files-container > div > .nav-folder > .nav-folder-title {
+    border-radius: var(--nav-folder-radius) !important;
+    background-color: var(--folder-color, var(--text-muted)) !important;
+    color: white !important;
+    --nav-collapse-icon-color: white;
+    --icon-color: white;
+}
+
+/* ── ACCENT GRADIENT WITH LINEAR ANIMATION ── */
+body.folder-gradient-hue .nav-files-container > div > .nav-folder > .nav-folder-title {
+  border-radius: var(--nav-folder-radius) !important;
+  transition: all 0.3s ease !important;
+  animation: colorShift 8s linear infinite !important;
+}
+
+/* Keyframes for smooth color shifting */
+@keyframes colorShift {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+2) > .nav-folder-title {
+  background-color: hsla(var(--interactive-accent-hsl), 0.24) !important;
+  color: hsla(var(--interactive-accent-hsl), 1) !important;
+  --icon-color: hsla(var(--interactive-accent-hsl), 1) !important;
+  --nav-collapse-icon-color: hsla(var(--interactive-accent-hsl), 1) !important;
+  --nav-collapse-icon-color-collapsed: hsla(var(--interactive-accent-hsl), 1) !important;
+}
+
+body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+3) > .nav-folder-title {
+  background-color: hsla(var(--interactive-accent-hsl), 0.21) !important;
+  color: hsla(var(--interactive-accent-hsl), 0.9) !important;
+  --icon-color: hsla(var(--interactive-accent-hsl), 0.9) !important;
+  --nav-collapse-icon-color: hsla(var(--interactive-accent-hsl), 0.9) !important;
+  --nav-collapse-icon-color-collapsed: hsla(var(--interactive-accent-hsl), 0.9) !important;
+}
+
+body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+4) > .nav-folder-title {
+  background-color: hsla(var(--interactive-accent-hsl), 0.19) !important;
+  color: hsla(var(--interactive-accent-hsl), 0.85) !important;
+  --icon-color: hsla(var(--interactive-accent-hsl), 0.85) !important;
+  --nav-collapse-icon-color: hsla(var(--interactive-accent-hsl), 0.85) !important;
+  --nav-collapse-icon-color-collapsed: hsla(var(--interactive-accent-hsl), 0.85) !important;
+}
+
+body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+5) > .nav-folder-title {
+  background-color: hsla(var(--interactive-accent-hsl), 0.17) !important;
+  color: hsla(var(--interactive-accent-hsl), 0.8) !important;
+  --icon-color: hsla(var(--interactive-accent-hsl), 0.8) !important;
+  --nav-collapse-icon-color: hsla(var(--interactive-accent-hsl), 0.8) !important;
+  --nav-collapse-icon-color-collapsed: hsla(var(--interactive-accent-hsl), 0.8) !important;
+}
+
+body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+6) > .nav-folder-title {
+  background-color: hsla(var(--interactive-accent-hsl), 0.15) !important;
+  color: hsla(var(--interactive-accent-hsl), 0.75) !important;
+  --icon-color: hsla(var(--interactive-accent-hsl), 0.75) !important;
+  --nav-collapse-icon-color: hsla(var(--interactive-accent-hsl), 0.75) !important;
+  --nav-collapse-icon-color-collapsed: hsla(var(--interactive-accent-hsl), 0.75) !important;
+}
+
+body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+7) > .nav-folder-title {
+  background-color: hsla(var(--interactive-accent-hsl), 0.13) !important;
+  color: hsla(var(--interactive-accent-hsl), 0.7) !important;
+  --icon-color: hsla(var(--interactive-accent-hsl), 0.7) !important;
+  --nav-collapse-icon-color: hsla(var(--interactive-accent-hsl), 0.7) !important;
+  --nav-collapse-icon-color-collapsed: hsla(var(--interactive-accent-hsl), 0.7) !important;
+}
+
+body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+8) > .nav-folder-title {
+  background-color: hsla(var(--interactive-accent-hsl), 0.11) !important;
+  color: hsla(var(--interactive-accent-hsl), 0.65) !important;
+  --icon-color: hsla(var(--interactive-accent-hsl), 0.65) !important;
+  --nav-collapse-icon-color: hsla(var(--interactive-accent-hsl), 0.65) !important;
+  --nav-collapse-icon-color-collapsed: hsla(var(--interactive-accent-hsl), 0.65) !important;
+}
+
+body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+9) > .nav-folder-title {
+  background-color: hsla(var(--interactive-accent-hsl), 0.09) !important;
+  color: hsla(var(--interactive-accent-hsl), 0.6) !important;
+  --icon-color: hsla(var(--interactive-accent-hsl), 0.6) !important;
+  --nav-collapse-icon-color: hsla(var(--interactive-accent-hsl), 0.6) !important;
+  --nav-collapse-icon-color-collapsed: hsla(var(--interactive-accent-hsl), 0.6) !important;
+}
+
+/* Bouncy Folders */
+body.bouncy-folders .nav-folder-title {
+    transition:
+        border calc(var(--animation-duration) * 0.6667) ease,
+        padding calc(var(--animation-duration) * 0.6667) ease-out,
+        padding-left 0s ease,
+        margin calc(var(--animation-duration) * 0.6667) ease,
+        border-radius calc(var(--animation-duration) * 0.6667),
+        box-shadow calc(var(--animation-duration) * 0.6667) ease !important;
+
+    &:hover {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        transition:
+            border calc(var(--animation-duration) * 0.6667) ease,
+            padding calc(var(--animation-duration) * 0.6667) cubic-bezier(0.175, 0.885, 0.32, 1.275),
+            padding-left 0s ease,
+            margin calc(var(--animation-duration) * 0.6667) ease,
+            border-radius calc(var(--animation-duration) * 0.6667),
+            box-shadow calc(var(--animation-duration) * 0.6667) ease !important;
+    }
+
+    &:active {
+        padding-top: 4px !important;
+        padding-bottom: 4px !important;
+    }
+}
+
+
+/* bold folder names */
+body.bold-folders .nav-folder-title {
+    font-weight: 700 !important;
+}
+
+/* center folder title */
+.center-folder-title .nav-folder-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

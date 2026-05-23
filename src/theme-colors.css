@@ -1,0 +1,1862 @@
+:root {
+    --nav-hide-text: "My Vault";
+    --before-active-line: ">>";
+    --before-active-line-color: #7c3aed;
+    --before-active-line-margin: -20px;
+}
+
+.workspace-tab-container {
+    display: flex;
+    overflow: visible;
+}
+
+/* =========
+   Dark theme vars
+   ========= */
+.theme-dark {
+    --tag-radius: var(--button-radius) !important;
+    --button-shadow: #00000050;
+    --canvas-background: var(--background-primary);
+    --blockquote-border-thickness: 4px;
+
+    --toggle-thumb-color: var(--text-normal);
+    --caret-color: var(--color-accent);
+    --checkbox-color: var(--color-tang);
+    --text-error: rgb(255, 138, 138);
+
+    --background-primary: #1e1f22;
+    --background-primary-alt: #26272b;
+
+    --background-secondary: #1e1f22;
+    --background-secondary-alt: #36393d;
+
+    --titlebar-background: #1b1b1f;
+    --titlebar-background-focused: #19191d;
+    --tab-container-background: var(--titlebar-background);
+
+    --code-background: #19191d;
+    --code-border-color: var(--background-secondary-alt);
+    --code-border-width: 2px;
+    --code-radius: var(--button-radius);
+
+    --interactive-normal: var(--button-background);
+    --interactive-hover: var(--button-background-hover);
+
+    --background-modifier-form-field: #303439;
+    --background-modifier-form-field-hover: #29292d;
+    --dropdown-background: #303439;
+    --dropdown-background-hover: #3c4048;
+    --button-background: #303439;
+    --button-background-hover: #3c4048;
+    --background-modifier-border: #31353e;
+    --background-modifier-border-hover: #484848;
+
+    --accent-red: var(--color-red);
+    --accent-orange: var(--color-orange);
+    --accent-yellow: var(--color-yellow);
+    --accent-green: var(--color-green);
+    --accent-cyan: var(--color-cyan);
+    --accent-blue: var(--color-blue);
+    --accent-purple: var(--color-purple);
+    --accent-pink: var(--color-pink);
+    --accent-brown: var(--color-brown);
+    --accent-gray: var(--text-normal);
+
+    /* --color-red: #a93f3f; */
+    --color-red: #da4b4b;
+    --color-orange: #cc692a;
+    --color-yellow: #e8b05a;
+    --color-green: #a3bd6a;
+    --color-cyan: #42adbbff;
+    --color-blue: #4281bb;
+    --color-purple: #965daf;
+    --color-pink: #c85b92;
+    --color-brown: #9b674b;
+    --color-gray: var(--text-normal);
+
+    --text-normal: #bababa;
+    --text-muted: #80807c;
+    --text-faint: var(--text-muted);
+
+    --hr-color: var(--background-modifier-border-focus);
+
+    --tab-radius: 8px;
+
+    --text-highlight-bg: hsl(var(--interactive-accent-hsl), 0.5);
+
+    --button-radius: 20px;
+}
+
+/* === DARK THEME COLOR OPTIONS === */
+
+.theme-dark.neutral-gray {
+    --toggle-thumb-color: white;
+}
+.theme-dark.darker-gray {
+    --background-primary: #171717;
+    --background-primary-alt: #202020;
+    --background-secondary: #171717;
+    --background-secondary-alt: #2a2a2a;
+    --titlebar-background: #141414;
+    --titlebar-background-focused: #111111;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #191919;
+    --text-normal: #bababa;
+    --text-muted: #888888;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #2a2a2a;
+    --background-modifier-form-field-hover: #2e2e2e;
+    --dropdown-background: #363636;
+    --dropdown-background-hover: #404040;
+    --button-background: #363636;
+    --button-background-hover: #404040;
+    --background-modifier-border: #353535;
+    --background-modifier-border-focus: #505050;
+}
+
+.theme-dark.dark-night {
+    --background-primary: #0b0e16;
+    --background-primary-alt: #161b2a;
+    --background-secondary: #0e1220;
+    --background-secondary-alt: #1f2438;
+    --titlebar-background: #070a14;
+    --titlebar-background-focused: #05070f;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #0f1424;
+    --text-normal: #b4c2d2;
+    --text-muted: #7d8593;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #1c2135;
+    --background-modifier-form-field-hover: #262d46;
+    --dropdown-background: #1c2135;
+    --dropdown-background-hover: #242a42;
+    --button-background: #1c2135;
+    --button-background-hover: #242a42;
+    --background-modifier-border: #1c2135;
+    --background-modifier-border-hover: #242a42;
+    --background-modifier-border-focus: #2a3150;
+}
+
+.theme-dark.cold-memory {
+    --background-primary: #14161b;
+    --background-primary-alt: #1b202a;
+    --background-secondary: #1e222f;
+    --background-secondary-alt: #293042;
+    --titlebar-background: #1e222f;
+    --titlebar-background-focused: #1e222f;
+
+    --tab-container-background: var(--titlebar-background);
+
+    --code-background: #15171b;
+
+    --text-normal: #b7c4d6;
+    --text-muted: #7c8aa3;
+    --text-error: #ff8a8a;
+
+    --background-modifier-form-field: #293042;
+    --background-modifier-form-field-hover: #374057;
+
+    --dropdown-background: #293042;
+    --dropdown-background-hover: #374057;
+
+    --button-background: #293042;
+    --button-background-hover: #374057;
+
+    --background-modifier-border: #293045;
+    --background-modifier-border-hover: #303950;
+    --background-modifier-border-focus: #3a4661;
+
+    /* input {
+        background-color: var(--background-modifier-form-field) !important;
+        background: var(--background-modifier-form-field) !important;
+    } */
+}
+
+.theme-dark.amoled {
+    --background-primary: #000000;
+    --background-primary-alt: #111111;
+    --background-secondary: #000000;
+    --background-secondary-alt: #1a1a1a;
+    --titlebar-background: #000000;
+    --titlebar-background-focused: #000000;
+    --tab-container-background: #050505;
+    --code-background: #0a0a0a;
+    --text-normal: #e0e0e0;
+    --text-muted: #808080;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #0d0d0d;
+    --background-modifier-form-field-hover: #111111;
+    --dropdown-background: #1a1a1a;
+    --dropdown-background-hover: #222222;
+    --button-background: #1a1a1a;
+    --button-background-hover: #222222;
+    --background-modifier-border: #0d0d0d;
+    --background-modifier-border-hover: #1a1a1a;
+    --background-modifier-border-focus: #2a2a2a;
+}
+
+.theme-dark.noble-blue {
+    --background-primary: #0d1b2a;
+    --background-primary-alt: #1b263b;
+    --background-secondary: #0d1b2a;
+    --background-secondary-alt: #2d3748;
+    --titlebar-background: #0a1522;
+    --titlebar-background-focused: #08111c;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #0f1a29;
+    --text-normal: #e2e8f0;
+    --text-muted: #94a3b8;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #141d2c;
+    --background-modifier-form-field-hover: #1e293b;
+    --dropdown-background: #253147;
+    --dropdown-background-hover: #2d3b5a;
+    --button-background: #253147;
+    --button-background-hover: #2d3b5a;
+    --background-modifier-border: #1c2738;
+    --background-modifier-border-hover: #253147;
+    --background-modifier-border-focus: #324369;
+}
+
+.theme-dark.magic-purply {
+    --background-primary: #1a1034;
+    --background-primary-alt: #2c1f56;
+    --background-secondary: #1a1034;
+    --background-secondary-alt: #3d2a6a;
+    --titlebar-background: #150d2c;
+    --titlebar-background-focused: #120a25;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #1f153d;
+    --text-normal: #e9d5ff;
+    --text-muted: #8e81b6;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #251a45;
+    --background-modifier-form-field-hover: #2a1f4d;
+    --dropdown-background: #35255e;
+    --dropdown-background-hover: #3f2c70;
+    --button-background: #35255e;
+    --button-background-hover: #3f2c70;
+    --background-modifier-border: #2a1f4d;
+    --background-modifier-border-hover: #35255e;
+    --background-modifier-border-focus: #4a3482;
+}
+
+.theme-dark.midnight-emerald {
+    --background-primary: #0c2d2a;
+    --background-primary-alt: #17403c;
+    --background-secondary: #0c2d2a;
+    --background-secondary-alt: #235750;
+    --titlebar-background: #092421;
+    --titlebar-background-focused: #071d1a;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #0e3531;
+    --text-normal: #d1fae5;
+    --text-muted: #6ee7b7;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #153934;
+    --background-modifier-form-field-hover: #19433e;
+    --dropdown-background: #1f4e48;
+    --dropdown-background-hover: #255a53;
+    --button-background: #1f4e48;
+    --button-background-hover: #255a53;
+    --background-modifier-border: #1c3f3a;
+    --background-modifier-border-hover: #235750;
+    --background-modifier-border-focus: #2d6c63;
+}
+
+.theme-dark.deep-ocean {
+    --background-primary: #0f172a;
+    --background-primary-alt: #1e293b;
+    --background-secondary: #0f172a;
+    --background-secondary-alt: #334155;
+    --titlebar-background: #0c1424;
+    --titlebar-background-focused: #0a1120;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #131c30;
+    --text-normal: #b7cae1;
+    --text-muted: #94a3b8;
+    --text-error: #ff8a8a;
+    --toggle-thumb-color: #cfd9e7;
+    --background-modifier-form-field: #1a2536;
+    --background-modifier-form-field-hover: #1e293b;
+    --dropdown-background: #253147;
+    --dropdown-background-hover: #2d3b5a;
+    --button-background: #253147;
+    --button-background-hover: #2d3b5a;
+    --background-modifier-border: #1e293b;
+    --background-modifier-border-hover: #253147;
+    --background-modifier-border-focus: #344664;
+}
+
+.theme-dark.crimson-twilight {
+    --background-primary: #1f0a1a;
+    --background-primary-alt: #3d142f;
+    --background-secondary: #1f0a1a;
+    --background-secondary-alt: #5a1f44;
+    --titlebar-background: #1a0715;
+    --titlebar-background-focused: #150511;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #240f1e;
+    --text-normal: #fecdd3;
+    --text-muted: #cc9aa0;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #2d1426;
+    --background-modifier-form-field-hover: #34182c;
+    --dropdown-background: #422033;
+    --dropdown-background-hover: #4d263c;
+    --button-background: #422033;
+    --button-background-hover: #4d263c;
+    --background-modifier-border: #34182c;
+    --background-modifier-border-hover: #422033;
+    --background-modifier-border-focus: #5a2c46;
+}
+
+.theme-dark.golden-hour {
+    --background-primary: #2c1a0d;
+    --background-primary-alt: #4a2c1a;
+    --background-secondary: #2c1a0d;
+    --background-secondary-alt: #6b3f22;
+    --titlebar-background: #241508;
+    --titlebar-background-focused: #1d1106;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #311e10;
+    --text-normal: #fde68a;
+    --text-muted: #fbbf24;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #3a2414;
+    --background-modifier-form-field-hover: #422a18;
+    --dropdown-background: #52331d;
+    --dropdown-background-hover: #5e3b22;
+    --button-background: #52331d;
+    --button-background-hover: #5e3b22;
+    --background-modifier-border: #3a2414;
+    --background-modifier-border-hover: #48301c;
+    --background-modifier-border-focus: #6d4629;
+}
+
+.theme-dark.violet-dream {
+    --background-primary: #1e0f33;
+    --background-primary-alt: #341c5c;
+    --background-secondary: #1e0f33;
+    --background-secondary-alt: #4a2a7d;
+    --titlebar-background: #180c2b;
+    --titlebar-background-focused: #140a24;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #23133c;
+    --text-normal: #f3e8ff;
+    --text-muted: #d8b4fe;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #2a1a4a;
+    --background-modifier-form-field-hover: #301e55;
+    --dropdown-background: #3b256e;
+    --dropdown-background-hover: #452b81;
+    --button-background: #3b256e;
+    --button-background-hover: #452b81;
+    --background-modifier-border: #2a1a4a;
+    --background-modifier-border-hover: #362059;
+    --background-modifier-border-focus: #4c2f8c;
+}
+
+.theme-dark.slate-smoke {
+    --background-primary: #1a202c;
+    --background-primary-alt: #2d3748;
+    --background-secondary: #1a202c;
+    --background-secondary-alt: #4a5568;
+    --titlebar-background: #171d28;
+    --titlebar-background-focused: #141a24;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #1f2532;
+    --text-normal: #edf2f7;
+    --text-muted: #a0aec0;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #252c3b;
+    --background-modifier-form-field-hover: #293241;
+    --dropdown-background: #343e52;
+    --dropdown-background-hover: #3d4960;
+    --button-background: #343e52;
+    --button-background-hover: #3d4960;
+    --background-modifier-border: #2d3748;
+    --background-modifier-border-hover: #374151;
+    --background-modifier-border-focus: #4a5568;
+}
+
+.theme-dark.chocolate {
+    --background-primary: #2a1a0f;
+    --background-primary-alt: #3d2818;
+    --background-secondary: #2a1a0f;
+    --background-secondary-alt: #553723;
+    --titlebar-background: #23150c;
+    --titlebar-background-focused: #1d1209;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #2f1e12;
+    --text-normal: #f5e6d3;
+    --text-muted: #d4a574;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #311f11;
+    --background-modifier-form-field-hover: #3d2818;
+    --dropdown-background: #45321f;
+    --dropdown-background-hover: #513a25;
+    --button-background: #45321f;
+    --button-background-hover: #513a25;
+    --background-modifier-border: #362314;
+    --background-modifier-border-hover: #423021;
+    --background-modifier-border-focus: #5c422b;
+}
+
+.theme-dark.dark-chocolate {
+    --background-primary: #1b0f08;
+    --background-primary-alt: #2a170d;
+    --background-secondary: #1b0f08;
+    --background-secondary-alt: #3a2214;
+    --titlebar-background: #150b06;
+    --titlebar-background-focused: #110804;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #21120a;
+    --text-normal: #f1dcc6;
+    --text-muted: #c39a6b;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #1e0f08;
+    --background-modifier-form-field-hover: #2a170d;
+    --dropdown-background: #332013;
+    --dropdown-background-hover: #3b2617;
+    --button-background: #332013;
+    --button-background-hover: #3b2617;
+    --background-modifier-border: #25140b;
+    --background-modifier-border-hover: #332013;
+    --background-modifier-border-focus: #4a321e;
+}
+.theme-dark.rose-gold {
+    --background-primary: #2a1a1f;
+    --background-primary-alt: #3d252c;
+    --background-secondary: #2a1a1f;
+    --background-secondary-alt: #52303a;
+    --titlebar-background: #23151a;
+    --titlebar-background-focused: #1d1215;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #2f1e23;
+    --text-normal: #f4e0e9;
+    --text-muted: #e0b4c2;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #311e24;
+    --background-modifier-form-field-hover: #3d252c;
+    --dropdown-background: #453036;
+    --dropdown-background-hover: #503740;
+    --button-background: #453036;
+    --button-background-hover: #503740;
+    --background-modifier-border: #3d252c;
+    --background-modifier-border-hover: #453036;
+    --background-modifier-border-focus: #9c647a;
+}
+.theme-dark.arctic-ice {
+    --background-primary: #0f1a2a;
+    --background-primary-alt: #1a2840;
+    --background-secondary: #0f1a2a;
+    --background-secondary-alt: #24365a;
+    --titlebar-background: #0c1524;
+    --titlebar-background-focused: #0a1120;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #131e32;
+    --text-normal: #e0f2fe;
+    --text-muted: #a5d8ff;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #253654;
+    --background-modifier-form-field-hover: #1f2e4a;
+    --dropdown-background: #24365a;
+    --dropdown-background-hover: #2a3e68;
+    --button-background: #24365a;
+    --button-background-hover: #2a3e68;
+    --background-modifier-border: #1f2e4a;
+    --background-modifier-border-hover: #24365a;
+    --background-modifier-border-focus: #587598;
+}
+.theme-dark.comfort-choco {
+    --background-primary: #261e17;
+    --background-primary-alt: #372d23;
+    --background-secondary: #261e17;
+    --background-secondary-alt: #483c2f;
+    --titlebar-background: #201912;
+    --titlebar-background-focused: #1a140e;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #2b231a;
+    --text-normal: #f0e6d6;
+    --text-muted: #d4c4a8;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #31271e;
+    --background-modifier-form-field-hover: #372d23;
+    --dropdown-background: #3d3328;
+    --dropdown-background-hover: #473c30;
+    --button-background: #3d3328;
+    --button-background-hover: #473c30;
+    --background-modifier-border: #372d23;
+    --background-modifier-border-hover: #3d3328;
+    --background-modifier-border-focus: #6d5f43;
+}
+.theme-dark.lavendar {
+    --background-primary: #1c1a2e;
+    --background-primary-alt: #2a2744;
+    --background-secondary: #1c1a2e;
+    --background-secondary-alt: #38355c;
+    --titlebar-background: #171526;
+    --titlebar-background-focused: #131120;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #211e36;
+    --text-normal: #e6e4f2;
+    --text-muted: #b8b4d9;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #23203c;
+    --background-modifier-form-field-hover: #2a2744;
+    --dropdown-background: #302d50;
+    --dropdown-background-hover: #38355c;
+    --button-background: #302d50;
+    --button-background-hover: #38355c;
+    --background-modifier-border: #2a2744;
+    --background-modifier-border-hover: #302d50;
+    --background-modifier-border-focus: #5b5496;
+}
+
+.theme-dark.more-olives {
+    --background-primary: #181c18;
+    --background-primary-alt: #232823;
+    --background-secondary: #181c18;
+    --background-secondary-alt: #2f352f;
+    --titlebar-background: #141714;
+    --titlebar-background-focused: #101210;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #1c201c;
+    --text-normal: #eaf3ea;
+    --text-muted: #a4b9a4;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #1b1f1b;
+    --background-modifier-form-field-hover: #262b26;
+    --dropdown-background: #2a302a;
+    --dropdown-background-hover: #333a33;
+    --button-background: #2a302a;
+    --button-background-hover: #333a33;
+    --background-modifier-border: #232823;
+    --background-modifier-border-hover: #2a302a;
+    --background-modifier-border-focus: #404c40;
+}
+
+.theme-dark.caramel {
+    --background-primary: #261a0f;
+    --background-primary-alt: #382513;
+    --background-secondary: #261a0f;
+    --background-secondary-alt: #4a3019;
+    --titlebar-background: #1f140a;
+    --titlebar-background-focused: #191008;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #2d1e11;
+    --text-normal: #ffeccc;
+    --text-muted: #e0b879;
+    --text-error: #ff9966;
+    --background-modifier-form-field: #473017;
+    --background-modifier-form-field-hover: #432b15;
+    --dropdown-background: #4a3019;
+    --dropdown-background-hover: #55361d;
+    --button-background: #4a3019;
+    --button-background-hover: #55361d;
+    --background-modifier-border: #3a2611;
+    --background-modifier-border-hover: #462c16;
+    --background-modifier-border-focus: #63401f;
+}
+.theme-dark.mafia-red {
+    --background-primary: #0a0a0a;
+    --background-primary-alt: #111111;
+    --background-secondary: #0a0a0a;
+    --background-secondary-alt: #1a1a1a;
+    --titlebar-background: #050505;
+    --titlebar-background-focused: #000000;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #101010;
+    --text-normal: #dbd7d1;
+    --text-muted: #aaaaaa;
+    --text-error: #ff7070;
+    --background-modifier-form-field: #151515;
+    --background-modifier-form-field-hover: #1a1a1a;
+    --dropdown-background: #1a1a1a;
+    --dropdown-background-hover: #222222;
+    --button-background: #1a1a1a;
+    --button-background-hover: #222222;
+    --background-modifier-border: #222222;
+    --background-modifier-border-hover: #2a2a2a;
+    --background-modifier-border-focus: #333333;
+    --color-accent-hsl: 0, 100%, 50%;
+    --color-accent: #c51e1e;
+    --color-accent-1: #da3232;
+    --color-accent-2: #ff5151;
+    --interactive-accent: #b32626;
+    --text-on-accent: #fff;
+    --link-color: #be3a3a;
+    --link-unresolved-color: #a22525;
+    --link-color-hover: #8b0000;
+    --toggle-thumb-color: #b32626;
+
+    .checkbox-container.is-enabled::after {
+        box-shadow: none;
+    }
+
+    .checkbox-container.is-enabled:hover {
+        background-color: #710000;
+    }
+
+    /* .menu-item.tappable {
+      border-radius: 0 !important;
+    }
+
+    .menu {
+      border-radius: 0 !important;
+    }
+
+    a, .internal-link, .external-link {
+      border-radius: 0px !important;
+    } */
+}
+
+.theme-dark.golden-earth {
+    --background-primary: #18140a;
+    --background-primary-alt: #221c0f;
+    --background-secondary: #1e180c;
+    --background-secondary-alt: #2a2212;
+    --titlebar-background: #141108;
+    --titlebar-background-focused: #100d06;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #211b0e;
+    --background-modifier-form-field: #302615;
+    --background-modifier-form-field-hover: #2c2313;
+    --dropdown-background: #2a2212;
+    --dropdown-background-hover: #342a17;
+    --button-background: #3a2f18;
+    --button-background-hover: #4a3b1d;
+    --background-modifier-border: #4a3a1c;
+    --background-modifier-border-hover: #5c4822;
+    --background-modifier-border-focus: #7a5f2c;
+    --text-normal: #d6a967;
+    --text-muted: #cc9a3a;
+    --text-error: #ff7043;
+    --toggle-thumb-color: var(--background-primary);
+}
+
+.theme-dark.muted-green {
+    --background-primary: #1b2a20;
+    --background-primary-alt: #213328;
+    --background-secondary: #24382c;
+    --background-secondary-alt: #2a4234;
+    --titlebar-background: #16241b;
+    --titlebar-background-focused: #142018;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #1f3126;
+    --background-modifier-form-field: #2a4033;
+    --background-modifier-form-field-hover: #335244;
+    --dropdown-background: #24382c;
+    --dropdown-background-hover: #2f4a3b;
+    --button-background: #355c46;
+    --button-background-hover: #3f6f55;
+    --background-modifier-border: #3e5f4b;
+    --background-modifier-border-hover: #4e7a61;
+    --background-modifier-border-focus: #497356;
+    --text-normal: #e6f2e9;
+    --text-muted: #a7c0b1;
+    --text-error: #d46a5f;
+    --toggle-thumb-color: var(--background-primary);
+}
+
+.theme-dark.forest-green {
+    --background-primary: #0d1710;
+    --background-primary-alt: #111c14;
+    --background-secondary: #142117;
+    --background-secondary-alt: #18261c;
+    --titlebar-background: #0b140e;
+    --titlebar-background-focused: #0a120d;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #0f1a13;
+    --background-modifier-form-field: #132016;
+    --background-modifier-form-field-hover: #1a2b20;
+    --dropdown-background: #142117;
+    --dropdown-background-hover: #1e3527;
+    --button-background: #1a2f22;
+    --button-background-hover: #23482f;
+    --button-background-active: #2a5a3a;
+    --background-modifier-border: #2a5c38;
+    --background-modifier-border-hover: #38754c;
+    --background-modifier-border-focus: #4a8f62;
+    --text-normal: #bddec8;
+    --text-muted: #8ac99f;
+    --text-faint: #5e9a7a;
+    --text-accent: #a8e0b9;
+    --text-error: #ff9a85;
+    --toggle-thumb-color: var(--background-primary);
+    --toggle-track-color: #2a5c38;
+    --toggle-track-color-hover: #38754c;
+}
+
+.theme-dark.deep-purple {
+    --background-primary: #120d17;
+    --background-primary-alt: #18112b;
+    --background-secondary: #1a1429;
+    --background-secondary-alt: #231b35;
+    --titlebar-background: #0f0b1a;
+    --titlebar-background-focused: #0c0916;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #161128;
+    --background-modifier-form-field: #1d1530;
+    --background-modifier-form-field-hover: #2a1f40;
+    --dropdown-background: #1e1633;
+    --dropdown-background-hover: #2f2350;
+    --button-background: #36296b;
+    --button-background-hover: #4a3890;
+    --button-background-active: #5f47b5;
+    --background-modifier-border: #4a3a8a;
+    --background-modifier-border-hover: #624daa;
+    --background-modifier-border-focus: #7d63cf;
+    --text-normal: #d5c6f2;
+    --text-muted: #b29ae0;
+    --text-faint: #8a71b5;
+    --text-accent: #c7afff;
+    --text-error: #ffa58e;
+    --toggle-thumb-color: var(--background-primary);
+    --toggle-track-color: #4a3a8a;
+    --toggle-track-color-hover: #624daa;
+}
+
+.theme-dark.deep-red {
+    --background-primary: #170d0d;
+    --background-primary-alt: #2b1111;
+    --background-secondary: #291414;
+    --background-secondary-alt: #351b1b;
+    --titlebar-background: #1a0f0f;
+    --titlebar-background-focused: #160c0c;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #281212;
+    --background-modifier-form-field: #301616;
+    --background-modifier-form-field-hover: #402020;
+    --dropdown-background: #331717;
+    --dropdown-background-hover: #502727;
+    --button-background: #6b2a2a;
+    --button-background-hover: #903737;
+    --button-background-active: #b54545;
+    --background-modifier-border: #8a3a3a;
+    --background-modifier-border-hover: #aa4d4d;
+    --background-modifier-border-focus: #cf6363;
+    --text-normal: #f2cfcf;
+    --text-muted: #e0a1a1;
+    --text-faint: #b56f6f;
+    --text-accent: #ffb8b8;
+    --text-error: #ffb0a0;
+    --toggle-thumb-color: var(--background-primary);
+    --toggle-track-color: #8a3a3a;
+    --toggle-track-color-hover: #aa4d4d;
+}
+
+.theme-dark.deep-blue {
+    --background-primary: #0d1117;
+    --background-primary-alt: #11172b;
+    --background-secondary: #141c29;
+    --background-secondary-alt: #1b2635;
+    --titlebar-background: #0b0f1a;
+    --titlebar-background-focused: #090d16;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #0f1728;
+    --background-modifier-form-field: #162030;
+    --background-modifier-form-field-hover: #202e40;
+    --dropdown-background: #172133;
+    --dropdown-background-hover: #253950;
+    --button-background: #2a3f6b;
+    --button-background-hover: #355590;
+    --button-background-active: #426bb5;
+    --background-modifier-border: #3a558a;
+    --background-modifier-border-hover: #4d6daa;
+    --background-modifier-border-focus: #6389cf;
+    --text-normal: #c6dcf2;
+    --text-muted: #9abce0;
+    --text-faint: #7192b5;
+    --text-accent: #afd4ff;
+    --text-error: #ffa58e;
+    --toggle-thumb-color: var(--background-primary);
+    --toggle-track-color: #3a558a;
+    --toggle-track-color-hover: #4d6daa;
+}
+
+.theme-dark.deep-magenta {
+    --background-primary: #170d14;
+    --background-primary-alt: #281120;
+    --background-secondary: #25131e;
+    --background-secondary-alt: #311928;
+    --titlebar-background: #130b11;
+    --titlebar-background-focused: #10090e;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #22121b;
+    --background-modifier-form-field: #2b1521;
+    --background-modifier-form-field-hover: #381c2b;
+    --dropdown-background: #2e1723;
+    --dropdown-background-hover: #452133;
+    --button-background: #632652;
+    --button-background-hover: #82306b;
+    --button-background-active: #a13d84;
+    --background-modifier-border: #7a3365;
+    --background-modifier-border-hover: #94417e;
+    --background-modifier-border-focus: #b3549f;
+    --text-normal: #f2c6e6;
+    --text-muted: #e09ad0;
+    --text-faint: #b571a6;
+    --text-accent: #ffafe9;
+    --text-error: #ffa58e;
+    --toggle-thumb-color: var(--background-primary);
+    --toggle-track-color: #7a3365;
+    --toggle-track-color-hover: #94417e;
+}
+
+.theme-dark.deep-hotpink {
+    --background-primary: #1a0d12;
+    --background-primary-alt: #24111a;
+    --background-secondary: #20131b;
+    --background-secondary-alt: #2c1925;
+    --titlebar-background: #160b10;
+    --titlebar-background-focused: #12090e;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #23121b;
+    --background-modifier-form-field: #271520;
+    --background-modifier-form-field-hover: #301a27;
+    --dropdown-background: #2c1925;
+    --dropdown-background-hover: #3a202a;
+    --button-background: #4a2636;
+    --button-background-hover: #612f46;
+    --background-modifier-border: #68374b;
+    --background-modifier-border-hover: #804460;
+    --background-modifier-border-focus: #a8597a;
+    --text-normal: #ffb8dd;
+    --text-muted: #ff85c0;
+    --text-error: #ff7b6b;
+    --toggle-thumb-color: var(--background-primary);
+}
+
+.theme-dark.wine {
+    --background-primary: #1a050f;
+    --background-primary-alt: #2d0b1c;
+    --background-secondary: #1a050f;
+    --background-secondary-alt: #3c1028;
+    --titlebar-background: #16040d;
+    --titlebar-background-focused: #13030b;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #1f0714;
+    --text-normal: #f0d9e6;
+    --text-muted: #d4b0c9;
+    --text-error: #ff8a8a;
+    --background-modifier-form-field: #3d0d25;
+    --background-modifier-form-field-hover: #350e22;
+    --dropdown-background: #3c1028;
+    --dropdown-background-hover: #481332;
+    --button-background: #3c1028;
+    --button-background-hover: #481332;
+    --background-modifier-border: #2d0b1c;
+    --background-modifier-border-hover: #3c1028;
+    --background-modifier-border-focus: #5c1a40;
+    --link-color: #cc338a;
+    --link-unresolved-color: #b32d7a;
+    --link-color-hover: #b32670;;
+}
+
+
+
+.theme-dark.tasty-chocolate {
+    --background-primary: #1a140d;
+    --background-primary-alt: #2c1f14;
+    --background-secondary: #1a140d;
+    --background-secondary-alt: #3a2a20;
+    --titlebar-background: #16110c;
+    --titlebar-background-focused: #140f0a;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #1e1810;
+    --text-normal: #e6d8c9;
+    --text-muted: #b8a58e;
+    --text-error: #d46b5f;
+    --background-modifier-form-field: #241a12;
+    --background-modifier-form-field-hover: #352618;
+    --dropdown-background: #3a2a20;
+    --dropdown-background-hover: #453323;
+    --button-background: #3a2a20;
+    --button-background-hover: #453323;
+    --background-modifier-border: #2c1f14;
+    --background-modifier-border-hover: #3a2a20;
+    --background-modifier-border-focus: #55402e;
+}
+
+
+.theme-dark.tasty-chocolate-2 {
+    --background-primary: #1f1810;
+    --background-primary-alt: #312619;
+    --background-secondary: #1f1810;
+    --background-secondary-alt: #433421;
+    --titlebar-background: #1b150e;
+    --titlebar-background-focused: #18120c;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #241d14;
+    --text-normal: #f0e6d6;
+    --text-muted: #d4c4a8;
+    --text-error: #d46b5f;
+    --background-modifier-form-field: #453522;
+    --background-modifier-form-field-hover: #392c1f;
+    --dropdown-background: #433421;
+    --dropdown-background-hover: #4e3c26;
+    --button-background: #433421;
+    --button-background-hover: #4e3c26;
+    --background-modifier-border: #312619;
+    --background-modifier-border-hover: #403325;
+    --background-modifier-border-focus: #5c4a35;
+}
+
+.theme-dark.velvet {
+    --background-primary: #1a0f0f;
+    --background-primary-alt: #2c1818;
+    --background-secondary: #1a0f0f;
+    --background-secondary-alt: #3a2222;
+    --titlebar-background: #160d0d;
+    --titlebar-background-focused: #130b0b;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #1e1313;
+    --text-normal: #f2cfcf;
+    --text-muted: #d4a8a8;
+    --text-error: #d46b5f;
+    --background-modifier-form-field: #3e2424;
+    --background-modifier-form-field-hover: #351d1d;
+    --dropdown-background: #3a2222;
+    --dropdown-background-hover: #462828;
+    --button-background: #3a2222;
+    --button-background-hover: #462828;
+    --background-modifier-border: #2c1818;
+    --background-modifier-border-hover: #3a2222;
+    --background-modifier-border-focus: #553434;
+}
+
+.theme-dark.leather {
+    --background-primary: #201a14;
+    --background-primary-alt: #332a20;
+    --background-secondary: #201a14;
+    --background-secondary-alt: #443829;
+    --titlebar-background: #1c1712;
+    --titlebar-background-focused: #191410;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #251e18;
+    --text-normal: #f2e8dc;
+    --text-muted: #d4c8b8;
+    --text-error: #d46b5f;
+    --background-modifier-form-field: #3e3326;
+    --background-modifier-form-field-hover: #3b3025;
+    --dropdown-background: #443829;
+    --dropdown-background-hover: #504330;
+    --button-background: #443829;
+    --button-background-hover: #504330;
+    --background-modifier-border: #332a20;
+    --background-modifier-border-hover: #443829;
+    --background-modifier-border-focus: #5d503c;
+}
+
+.theme-dark.green-road {
+    --background-primary: #161a20;
+    --background-primary-alt: #222831;
+    --background-secondary: #15181d;
+    --background-secondary-alt: #353d42;
+    --titlebar-background: #12151a;
+    --titlebar-background-focused: #101318;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #1b1f26;
+
+    --text-normal: #e6e9e3;
+    --text-muted: #b8beb6;
+
+    --background-modifier-form-field: #333743;
+    --background-modifier-form-field-hover: #2f3833;
+
+    --dropdown-background: #2b3236;
+    --dropdown-background-hover: #353d42;
+
+    --button-background: #474f27;
+    --button-background-hover: #464f1d;
+
+    --background-modifier-border: #404d58;
+    --background-modifier-border-hover: #3a4248;
+    --background-modifier-border-focus: #5e6b52;
+    
+    --color-accent-hsl: 75, 28%, 38%;
+    --color-accent: #7f8d42;
+    --color-accent-1: #6f7a42;
+    --color-accent-2: #8f9f4f;
+
+    --interactive-accent: #60a590;
+    --text-on-accent: #ffffff;
+
+    --link-color: #6f8a5a;
+    --link-unresolved-color: #5f7a5f;
+    --link-color-hover: #7f8d42;
+
+    --toggle-thumb-color: #6f7a42;
+
+    .checkbox-container.is-enabled::after {
+        box-shadow: none;
+    }
+
+    .checkbox-container.is-enabled,
+    .checkbox-container.is-enabled::after {
+        background-color: #68823e;
+    }
+
+    .checkbox-container.is-enabled:hover {
+        background-color: #2e4036;
+    }
+
+    /* .checkbox-container {
+        background-color: #2e4036;
+    } */
+}
+
+
+.theme-dark.red-forest {
+    --background-primary: #2f2f2f;
+    --background-primary-alt: #262626;
+    --background-secondary: #262626;
+    --background-secondary-alt: #333333;
+    --titlebar-background: #242424;
+    --titlebar-background-focused: #1f1f1f;
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #1f1f1f;
+    --text-normal: #e6e9e3;
+    --text-muted: #b8beb6;
+    --text-error: #b54a45;
+    --background-modifier-form-field: #383838;
+    --background-modifier-form-field-hover: #444444;
+    --dropdown-background: #353535;
+    --dropdown-background-hover: #404040;
+
+    --button-background: #944b4b;
+    --button-background-hover: #b34949;
+    
+    --background-modifier-border: #4a2a2a;
+    --background-modifier-border-hover: #5a3333;
+    --background-modifier-border-focus: #7a3f3f;
+
+    --color-accent-hsl: 0, 45%, 40%;
+    --color-accent: #b34949;
+    --color-accent-1: #a04646;
+    --color-accent-2: #b85656;
+
+
+    /* red accent buttons */
+    --interactive-accent: #944b4b;
+    --interactive-accent-hover: #944b4b;
+    
+    /* green normal buttons */
+    --interactive-normal: #6f7a42;
+    --interactive-hover: #7f8d42;
+
+    --text-on-accent: #ffffff;
+    --link-color: #6f8a5a;
+    --link-unresolved-color: #7a3f3f;
+    --link-color-hover: #7f8d42;
+    --toggle-thumb-color: #6f7a42;
+
+    .checkbox-container {
+        background-color: #484848;
+    }
+
+    .checkbox-container.is-enabled {
+        background-color: #944b4b;
+    }
+
+    .checkbox-container.is-enabled::after {
+        background-color: #b8a577;
+    }
+
+    .checkbox-container.is-enabled:hover {
+        background-color: #2e4036;
+    }
+}
+
+
+
+
+
+.theme-dark ::selection,
+.theme-light ::selection {
+    background-color: hsl(var(--interactive-accent-hsl), 0.3) !important;
+}
+
+
+.cm-s-obsidian span.cm-highlight, mark,
+body .cm-s-obsidian span.cm-highlight,
+body mark {
+    border-radius: 6px;
+    padding: 2px 4px;
+    background-color: hsla(var(--interactive-accent-hsl), 0.4) !important;
+    border: none;
+    border-bottom: none;
+}
+
+.underlined-highlight .cm-s-obsidian span.cm-highlight,
+.underlined-highlight mark {
+    background-color: hsla(var(--interactive-accent-hsl), 0.3) !important;
+    border-bottom: 2px solid hsla(var(--interactive-accent-hsl), 0.6) !important;
+    padding: 2px 4px;
+    border-radius: 0;
+}
+
+.bordered-highlight .cm-s-obsidian span.cm-highlight,
+.bordered-highlight mark {
+    background-color: hsla(var(--interactive-accent-hsl), 0.4) !important;
+    border: 2px solid hsla(var(--interactive-accent-hsl), 0.6) !important;
+    padding: 0px 4px;
+    padding-top: 2px;
+    border-radius: 7px;
+}
+
+.only-underline .cm-s-obsidian span.cm-highlight,
+.only-underline mark {
+    background-color: transparent !important;
+    border-bottom: 2px solid hsla(var(--interactive-accent-hsl), 0.6) !important;
+    padding: 2px 4px;
+    border-radius: 0;
+}
+
+.only-border .cm-s-obsidian span.cm-highlight,
+.only-border mark {
+    background-color: transparent !important;
+    border: 2px solid hsla(var(--interactive-accent-hsl), 0.6) !important;
+    padding: 0px 4px;
+    padding-top: 2px;
+    border-radius: 7px;
+}
+
+/* =========
+   Light theme vars
+   ========= */
+.theme-light {
+    --tag-radius: var(--button-radius) !important;
+    --ribbon-background: var(--titlebar-background-focused);
+    --button-shadow: #00000025;
+    --blockquote-border-thickness: 4px;
+    --toggle-thumb-color: var(--text-normal);
+    --caret-color: var(--color-accent);
+    --checkbox-color: var(--color-blue);
+    --text-error: rgb(220, 80, 80);
+
+    --background-primary: #f8f9fa;
+    --background-primary-alt: #e9ecef;
+
+    --background-secondary: #f1f3f5;
+    --background-secondary-alt: #e9ecef;
+
+    --titlebar-background: #f1f3f5;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+
+    --code-background: var(--background-secondary);
+    --code-border-color: var(--background-secondary-alt);
+    --code-border-width: 2px;
+    --code-radius: var(--button-radius);
+
+    --interactive-normal: var(--button-background);
+    --interactive-hover: var(--button-background-hover);
+
+    --background-modifier-form-field: #ffffff;
+    --background-modifier-form-field-hover: #f8f9fa;
+    --dropdown-background: #ffffff;
+    --dropdown-background-hover: #f8f9fa;
+    --button-background: #e9ecef;
+    --button-background-hover: #dee2e6;
+    --background-modifier-border: #dee2e6;
+    --background-modifier-border-hover: #ced4da;
+
+    --accent-red: var(--color-red);
+    --accent-orange: var(--color-orange);
+    --accent-yellow: var(--color-yellow);
+    --accent-green: var(--color-green);
+    --accent-cyan: var(--color-cyan);
+    --accent-blue: var(--color-blue);
+    --accent-purple: var(--color-purple);
+    --accent-pink: var(--color-pink);
+    --accent-brown: var(--color-brown);
+    --accent-gray: var(--text-muted);
+
+    --color-red: #e03131;
+    --color-orange: #e8590c;
+    --color-yellow: #f08c00;
+    --color-green: #2f9e44;
+    --color-cyan: #0c8599;
+    --color-blue: #1971c2;
+    --color-purple: #5f3dc4;
+    --color-pink: #c2255c;
+    --color-brown: #7b4b11;
+    --color-gray: #868e96;
+
+    --text-normal: #212529;
+    --text-muted: #495057;
+    --text-faint: #6c757d;
+
+    --hr-color: var(--background-modifier-border);
+
+    --tab-radius: 8px;
+    --text-highlight-bg: rgba(255, 224, 130, 0.5);
+    --button-radius: 20px;
+}
+
+.theme-light.paper-white {
+    --background-primary: #ffffff;
+    --background-primary-alt: #f8f9fa;
+    --background-secondary: #f8f9fa;
+    --background-secondary-alt: #e9ecef;
+    --titlebar-background: #f8f9fa;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+    
+    --text-normal: #212529;
+    --text-muted: #495057;
+    --text-error: #e03131;
+    --background-modifier-form-field: #ffffff;
+    --background-modifier-form-field-hover: #f8f9fa;
+    --dropdown-background: #ffffff;
+    --dropdown-background-hover: #f8f9fa;
+    --button-background: #e9ecef;
+    --button-background-hover: #dee2e6;
+    --background-modifier-border: #dee2e6;
+    --background-modifier-border-hover: #ced4da;
+    --toggle-thumb-color: var(--background-primary);
+}
+
+.theme-light.light-gray {
+    --background-primary: #f0f2f5;
+    --background-primary-alt: #e6e8eb;
+    --background-secondary: #e6e8eb;
+    --background-secondary-alt: #d8dbdf;
+    --titlebar-background: #e6e8eb;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+    
+    --text-normal: #2d3748;
+    --text-muted: #4a5568;
+    --text-error: #c53030;
+    --background-modifier-form-field: #ffffff;
+    --background-modifier-form-field-hover: #f7fafc;
+    --dropdown-background: #ffffff;
+    --dropdown-background-hover: #f7fafc;
+    --button-background: #e2e8f0;
+    --button-background-hover: #cbd5e0;
+    --background-modifier-border: #e2e8f0;
+    --background-modifier-border-hover: #cbd5e0;
+    --toggle-thumb-color: var(--background-primary);
+}
+
+.theme-light.soft-sand {
+    --background-primary: #fdf6e3;
+    --background-primary-alt: #f5e9d1;
+    --background-secondary: #f5e9d1;
+    --background-secondary-alt: #eed9b7;
+    --titlebar-background: #f5e9d1;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #fffef8;
+    --text-normal: #5c4b3a;
+    --text-muted: #8a7a6b;
+    --text-error: #c44141;
+    --background-modifier-form-field: #fffef8;
+    --background-modifier-form-field-hover: #fdf6e3;
+    --dropdown-background: #fffef8;
+    --dropdown-background-hover: #fdf6e3;
+    --button-background: #f0e0c2;
+    --button-background-hover: #e6d1af;
+    --background-modifier-border: #e6d1af;
+    --background-modifier-border-hover: #d4be9c;
+    --toggle-thumb-color: var(--background-primary);
+}
+
+.theme-light.green {
+    --background-primary: #f0fdf4;
+    --background-primary-alt: #dcfce7;
+    --background-secondary: #dcfce7;
+    --background-secondary-alt: #bbf7d0;
+    --titlebar-background: #dcfce7;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+    
+    --text-normal: #14532d;
+    --text-muted: #166534;
+    --text-error: #dc2626;
+    --background-modifier-form-field: #ffffff;
+    --background-modifier-form-field-hover: #f0fdf4;
+    --dropdown-background: #ffffff;
+    --dropdown-background-hover: #f0fdf4;
+    --button-background: #bbf7d0;
+    --button-background-hover: #86efac;
+    --background-modifier-border: #86efac;
+    --background-modifier-border-hover: #4ade80;
+    --toggle-thumb-color: var(--background-primary);
+}
+
+.theme-light.purple {
+    --background-primary: #faf5ff;
+    --background-primary-alt: #f3e8ff;
+    --background-secondary: #f3e8ff;
+    --background-secondary-alt: #e9d5ff;
+    --titlebar-background: #f3e8ff;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+    
+    --text-normal: #581c87;
+    --text-muted: #7c3aed;
+    --text-error: #be185d;
+    --background-modifier-form-field: #ffffff;
+    --background-modifier-form-field-hover: #faf5ff;
+    --dropdown-background: #ffffff;
+    --dropdown-background-hover: #faf5ff;
+    --button-background: #e9d5ff;
+    --button-background-hover: #d8b4fe;
+    --background-modifier-border: #d8b4fe;
+    --background-modifier-border-hover: #c084fc;
+    --toggle-thumb-color: var(--background-primary);
+}
+
+.theme-light.blue {
+    --background-primary: #f0f9ff;
+    --background-primary-alt: #e0f2fe;
+    --background-secondary: #e0f2fe;
+    --background-secondary-alt: #bae6fd;
+    --titlebar-background: #e0f2fe;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+    
+    --text-normal: #0c4a6e;
+    --text-muted: #0369a1;
+    --text-error: #be123c;
+    --background-modifier-form-field: #ffffff;
+    --background-modifier-form-field-hover: #f0f9ff;
+    --dropdown-background: #ffffff;
+    --dropdown-background-hover: #f0f9ff;
+    --button-background: #bae6fd;
+    --button-background-hover: #7dd3fc;
+    --background-modifier-border: #7dd3fc;
+    --background-modifier-border-hover: #38bdf8;
+    --toggle-thumb-color: var(--background-primary);
+}
+
+.theme-light.peach {
+    --background-primary: #fff7ed;
+    --background-primary-alt: #ffedd5;
+    --background-secondary: #ffedd5;
+    --background-secondary-alt: #fed7aa;
+    --titlebar-background: #ffedd5;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+    
+    --text-normal: #7c2d12;
+    --text-muted: #c2410c;
+    --text-error: #b91c1c;
+    --background-modifier-form-field: #ffffff;
+    --background-modifier-form-field-hover: #fff7ed;
+    --dropdown-background: #ffffff;
+    --dropdown-background-hover: #fff7ed;
+    --button-background: #fed7aa;
+    --button-background-hover: #fdba74;
+    --background-modifier-border: #fdba74;
+    --background-modifier-border-hover: #fb923c;
+    --toggle-thumb-color: var(--background-primary);
+}
+
+.theme-light.pink {
+    --background-primary: #fff1f2;
+    --background-primary-alt: #ffe4e6;
+    --background-secondary: #ffe4e6;
+    --background-secondary-alt: #fecdd3;
+    --titlebar-background: #ffe4e6;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+    
+    --text-normal: #881337;
+    --text-muted: #be123c;
+    --text-error: #b91c1c;
+    --background-modifier-form-field: #ffffff;
+    --background-modifier-form-field-hover: #fff1f2;
+    --dropdown-background: #ffffff;
+    --dropdown-background-hover: #fff1f2;
+    --button-background: #fecdd3;
+    --button-background-hover: #fda4af;
+    --background-modifier-border: #fda4af;
+    --background-modifier-border-hover: #fb7185;
+    --toggle-thumb-color: var(--background-primary);
+}
+
+.theme-light.cyan {
+    --background-primary: #f0fdfa;
+    --background-primary-alt: #ccfbf1;
+    --background-secondary: #ccfbf1;
+    --background-secondary-alt: #99f6e4;
+    --titlebar-background: #ccfbf1;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+    
+    --text-normal: #134e4a;
+    --text-muted: #0d9488;
+    --text-error: #dc2626;
+    --background-modifier-form-field: #ffffff;
+    --background-modifier-form-field-hover: #f0fdfa;
+    --dropdown-background: #ffffff;
+    --dropdown-background-hover: #f0fdfa;
+    --button-background: #99f6e4;
+    --button-background-hover: #5eead4;
+    --background-modifier-border: #5eead4;
+    --background-modifier-border-hover: #2dd4bf;
+    --toggle-thumb-color: var(--background-primary);
+}
+
+.theme-light.yellow {
+    --background-primary: #fefce8;
+    --background-primary-alt: #fef9c3;
+    --background-secondary: #fef9c3;
+    --background-secondary-alt: #fef08a;
+    --titlebar-background: #fef9c3;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+    
+    --text-normal: #854d0e;
+    --text-muted: #ca8a04;
+    --text-error: #b91c1c;
+    --background-modifier-form-field: #ffffff;
+    --background-modifier-form-field-hover: #fefce8;
+    --dropdown-background: #ffffff;
+    --dropdown-background-hover: #fefce8;
+    --button-background: #fef08a;
+    --button-background-hover: #fde047;
+    --background-modifier-border: #fde047;
+    --background-modifier-border-hover: #facc15;
+    --toggle-thumb-color: var(--background-primary);
+}
+
+.theme-light.cloud-white {
+    --background-primary: #f8fafc;
+    --background-primary-alt: #f1f5f9;
+    --background-secondary: #f1f5f9;
+    --background-secondary-alt: #e2e8f0;
+    --titlebar-background: #f1f5f9;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+    
+    --text-normal: #1e293b;
+    --text-muted: #475569;
+    --text-error: #dc2626;
+    --background-modifier-form-field: #ffffff;
+    --background-modifier-form-field-hover: #f8fafc;
+    --dropdown-background: #ffffff;
+    --dropdown-background-hover: #f8fafc;
+    --button-background: #e2e8f0;
+    --button-background-hover: #cbd5e1;
+    --background-modifier-border: #cbd5e1;
+    --background-modifier-border-hover: #94a3b8;
+    --toggle-thumb-color: var(--background-primary);
+}
+
+.theme-light.azure {
+    --background-primary: #eff6ff;
+    --background-primary-alt: #dbeafe;
+    --background-secondary: #dbeafe;
+    --background-secondary-alt: #bfdbfe;
+    --titlebar-background: #dbeafe;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+    
+    --text-normal: #1e3a8a;
+    --text-muted: #1d4ed8;
+    --text-error: #b91c1c;
+    --background-modifier-form-field: #ffffff;
+    --background-modifier-form-field-hover: #eff6ff;
+    --dropdown-background: #ffffff;
+    --dropdown-background-hover: #eff6ff;
+    --button-background: #bfdbfe;
+    --button-background-hover: #93c5fd;
+    --background-modifier-border: #93c5fd;
+    --background-modifier-border-hover: #60a5fa;
+    --toggle-thumb-color: var(--background-primary);
+}
+
+.theme-light.herb {
+    --background-primary: #f1f8e9;
+    --background-primary-alt: #e1f2da;
+    --background-secondary: #e8f5e9;
+    --background-secondary-alt: #c8e6c9;
+    --titlebar-background: #e8f5e9;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+    
+    --text-normal: #2e7d32;
+    --text-muted: #4caf50;
+    --text-error: #c62828;
+    --background-modifier-form-field: #ffffff;
+    --background-modifier-form-field-hover: #f1f8e9;
+    --dropdown-background: #ffffff;
+    --dropdown-background-hover: #f1f8e9;
+    --button-background: #c8e6c9;
+    --button-background-hover: #a5d6a7;
+    --background-modifier-border: #a5d6a7;
+    --background-modifier-border-hover: #81c784;
+    --toggle-thumb-color: var(--background-primary);
+}
+
+.theme-light.toothpaste {
+    --background-primary: #d0f7ff;
+    --background-primary-alt: #a8f0ff;
+    --background-secondary: #a8f0ff;
+    --background-secondary-alt: #70e0ff;
+    --titlebar-background: #a8f0ff;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+    
+    --text-normal: #004f63;
+    --text-muted: #007a8f;
+    --text-error: #c62828;
+    --background-modifier-form-field: #ffffff;
+    --background-modifier-form-field-hover: #d0f7ff;
+    --dropdown-background: #ffffff;
+    --dropdown-background-hover: #d0f7ff;
+    --button-background: #70e0ff;
+    --button-background-hover: #3fd4ff;
+    --background-modifier-border: #33c7e0;
+    --background-modifier-border-hover: #00b4d9;
+    --toggle-thumb-color: var(--background-primary);
+}
+
+.theme-light.rose {
+    --background-primary: #f6d6df;
+    --background-primary-alt: #efb9c8;
+    --background-secondary: #efb9c8;
+    --background-secondary-alt: #e79aad;
+    --titlebar-background: #efb9c8;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+    
+    --text-normal: #6b1238;
+    --text-muted: #8c2a52;
+    --text-error: #a61d2d;
+    --background-modifier-form-field: #fffafa;
+    --background-modifier-form-field-hover: #f6d6df;
+    --dropdown-background: #fffafa;
+    --dropdown-background-hover: #f6d6df;
+    --button-background: #e79aad;
+    --button-background-hover: #dc7f99;
+    --background-modifier-border: #d86c8a;
+    --background-modifier-border-hover: #c95678;
+    --toggle-thumb-color: var(--background-primary);
+}
+
+.theme-light.yellow-teeth {
+    --background-primary: #f5f2d8;
+    --background-primary-alt: #ece6b8;
+    --background-secondary: #ece6b8;
+    --background-secondary-alt: #e0d68f;
+    --titlebar-background: #ece6b8;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #fffef8;
+    --text-normal: #6f6400;
+    --text-muted: #8a7f1a;
+    --text-error: #9e2a2b;
+    --background-modifier-form-field: #fffef8;
+    --background-modifier-form-field-hover: #f5f2d8;
+    --dropdown-background: #fffef8;
+    --dropdown-background-hover: #f5f2d8;
+    --button-background: #e0d68f;
+    --button-background-hover: #d4c96a;
+    --background-modifier-border: #c2b83f;
+    --background-modifier-border-hover: #b0a62c;
+    --toggle-thumb-color: var(--background-primary);
+}
+
+.theme-light.blood {
+    --background-primary: #f2d6d9;
+    --background-primary-alt: #e6b3b8;
+    --background-secondary: #e6b3b8;
+    --background-secondary-alt: #d48a92;
+    --titlebar-background: #e6b3b8;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+    
+    --text-normal: #6f0f14;
+    --text-muted: #8a2a2f;
+    --text-error: #4d0000;
+    --background-modifier-form-field: #fffafa;
+    --background-modifier-form-field-hover: #f2d6d9;
+    --dropdown-background: #fffafa;
+    --dropdown-background-hover: #f2d6d9;
+    --button-background: #d48a92;
+    --button-background-hover: #c46b74;
+    --background-modifier-border: #b94a52;
+    --background-modifier-border-hover: #a33239;
+    --toggle-thumb-color: var(--background-secondary-alt);
+    --color-accent: #c51e1e;
+    --color-accent-1: #da3232;
+    --color-accent-2: #ff5151;
+    --interactive-accent: #b32626;
+}
+
+.theme-light.corporate {
+    --background-primary: #e7ebef;
+    --background-primary-alt: #d6dde5;
+    --background-secondary: #d6dde5;
+    --background-secondary-alt: #c1ccd8;
+    --titlebar-background: #d6dde5;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+    
+    --text-normal: #1f2a37;
+    --text-muted: #3a4a5e;
+    --text-error: #8b1d1d;
+    --background-modifier-form-field: #ffffff;
+    --background-modifier-form-field-hover: #e7ebef;
+    --dropdown-background: #ffffff;
+    --dropdown-background-hover: #e7ebef;
+    --button-background: #c1ccd8;
+    --button-background-hover: #aebccc;
+    --background-modifier-border: #8fa3b8;
+    --background-modifier-border-hover: #738aa3;
+}
+
+.theme-light.payesh {
+    --background-primary: #e7e7de;
+    --background-primary-alt: #d8d8c9;
+    --background-secondary: #d8d8c9;
+    --background-secondary-alt: #c9c9b5;
+    --titlebar-background: #d8d8c9;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+    
+    --text-normal: #5d5c5a;
+    --text-muted: #7a7976;
+    --text-error: #c62828;
+    --background-modifier-form-field: #ffffff;
+    --background-modifier-form-field-hover: #f5f5f0;
+    --dropdown-background: #ffffff;
+    --dropdown-background-hover: #f5f5f0;
+    --button-background: #c9c9b5;
+    --button-background-hover: #b8b8a0;
+    --background-modifier-border: #a9a98c;
+    --background-modifier-border-hover: #989876;
+    --toggle-thumb-color: var(--background-primary);
+}
+
+.theme-light.chicken {
+    --background-primary: #fff8e1;
+    --background-primary-alt: #ffecb3;
+    --background-secondary: #ffecb3;
+    --background-secondary-alt: #ffe082;
+    --titlebar-background: #ffecb3;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+    
+    --text-normal: #eb8502;
+    --text-muted: #ffa000;
+    --text-error: #c62828;
+    --background-modifier-form-field: #ffffff;
+    --background-modifier-form-field-hover: #fff8e1;
+    --dropdown-background: #ffffff;
+    --dropdown-background-hover: #fff8e1;
+    --button-background: #ffe082;
+    --button-background-hover: #ffd54f;
+    --background-modifier-border: #ffca28;
+    --background-modifier-border-hover: #ffb300;
+    --toggle-thumb-color: var(--background-primary);
+}
+
+.theme-light.disgust {
+    --toggle-thumb-color: white;
+    --background-primary: #f2f4e6;
+    --background-primary-alt: #e1e5c0;
+    --background-secondary: #e1e5c0;
+    --background-secondary-alt: #c8d197;
+    --titlebar-background: #e1e5c0;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #f9f9f2;
+    --text-normal: #7a7015;
+    --text-muted: #9c9a3c;
+    --text-error: #9e2a2b;
+    --background-modifier-form-field: #f9f9f2;
+    --background-modifier-form-field-hover: #f2f4e6;
+    --dropdown-background: #f9f9f2;
+    --dropdown-background-hover: #f2f4e6;
+    --button-background: #c8d197;
+    --button-background-hover: #aeb761;
+    --background-modifier-border: #aeb761;
+    --background-modifier-border-hover: #8e944c;
+}
+
+.theme-light.gray {
+    --toggle-thumb-color: var(--background-primary);
+    --caret-color: black;
+    --background-primary: #808080;
+    --background-primary-alt: #7a7a7a;
+    --background-secondary: #7a7a7a;
+    --background-secondary-alt: #737373;
+    --titlebar-background: #7a7a7a;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #dcdcdc;
+    --text-normal: #000000;
+    --text-muted: #333333;
+    --text-error: #c62828;
+    --background-modifier-form-field: #dcdcdc;
+    --background-modifier-form-field-hover: #e0e0e0;
+    --dropdown-background: #dcdcdc;
+    --dropdown-background-hover: #e0e0e0;
+    --button-background: #737373;
+    --button-background-hover: #6a6a6a;
+    --background-modifier-border: #666666;
+    --background-modifier-border-hover: #5c5c5c;
+}
+
+.theme-light.jade {
+    --background-primary: #dcedc8;
+    --background-primary-alt: #c5e1a5;
+    --background-secondary: #c8e6c9;
+    --background-secondary-alt: #a5d6a7;
+    --titlebar-background: #c8e6c9;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #e8f5e9;
+    --text-normal: #1b5e20;
+    --text-muted: #2e7d32;
+    --text-error: #b71c1c;
+    --background-modifier-form-field: #f1f8e9;
+    --background-modifier-form-field-hover: #dcedc8;
+    --dropdown-background: #f1f8e9;
+    --dropdown-background-hover: #dcedc8;
+    --button-background: #a5d6a7;
+    --button-background-hover: #81c784;
+    --background-modifier-border: #81c784;
+    --background-modifier-border-hover: #66bb6a;
+    --toggle-thumb-color: var(--background-primary);
+}
+
+.theme-light.olive {
+    --olive-base: #636b2f;
+    --background-primary: #e3e7d6;
+    --background-primary-alt: #d3d9bf;
+    --background-secondary: #d0d6ba;
+    --background-secondary-alt: #bfc7a1;
+    --titlebar-background: #d0d6ba;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #f0f3e8;
+    --text-normal: #2f3316;
+    --text-muted: #4a5030;
+    --text-error: #8b1d1d;
+    --background-modifier-form-field: #f0f3e8;
+    --background-modifier-form-field-hover: #e3e7d6;
+    --dropdown-background: #f0f3e8;
+    --dropdown-background-hover: #e3e7d6;
+    --button-background: #bfc7a1;
+    --button-background-hover: #aeb88c;
+    --background-modifier-border: #aeb88c;
+    --background-modifier-border-hover: #9aa56f;
+    --toggle-thumb-color: var(--background-primary);
+    --color-accent: #636b2f;
+    --color-accent-1: #747d38;
+    --color-accent-2: #8a9446;
+}
+
+.theme-light.cream-blue {
+    --cream-base: #f6f1e7;
+    --red-accent: #e53935;
+    --cyan-accent: #00acc1;
+    --background-primary: #f6f1e7;
+    --background-primary-alt: #efe7d8;
+    --background-secondary: #efe7d8;
+    --background-secondary-alt: #e5dcc8;
+    --titlebar-background: #efe7d8;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #fbf8f2;
+    --text-normal: #3b3328;
+    --text-muted: #6b6256;
+    --text-error: var(--red-accent);
+    --background-modifier-form-field: #fbf8f2;
+    --background-modifier-form-field-hover: #f6f1e7;
+    --dropdown-background: #fbf8f2;
+    --dropdown-background-hover: #f6f1e7;
+    --button-background: #e5dcc8;
+    --button-background-hover: #d9cfb8;
+    --background-modifier-border: #d9cfb8;
+    --background-modifier-border-hover: #cbbf9f;
+    --toggle-thumb-color: var(--background-primary);
+    --color-accent: #007f8f;
+    --color-accent-1: #26c6da;
+    --color-accent-2: #4dd0e1;
+    --interactive-accent: #26c6da;
+    --interactive-accent-hsl: 187, 71%, 50%;
+    --accent-red: var(--red-accent);
+}
+
+.theme-light.cream {
+    --cream-base: #f6f1e7;
+    --red-accent: #e53935;
+    --cyan-accent: #00acc1;
+    --background-primary: #f6f1e7;
+    --background-primary-alt: #efe7d8;
+    --background-secondary: #efe7d8;
+    --background-secondary-alt: #e5dcc8;
+    --titlebar-background: #efe7d8;
+    --titlebar-background-focused: var(--titlebar-background);
+    --tab-container-background: var(--titlebar-background);
+    --code-background: #fbf8f2;
+    --text-normal: #3b3328;
+    --text-muted: #6b6256;
+    --text-error: var(--red-accent);
+    --background-modifier-form-field: #fbf8f2;
+    --background-modifier-form-field-hover: #f6f1e7;
+    --dropdown-background: #fbf8f2;
+    --dropdown-background-hover: #f6f1e7;
+    --button-background: #e5dcc8;
+    --button-background-hover: #d9cfb8;
+    --background-modifier-border: #d9cfb8;
+    --background-modifier-border-hover: #cbbf9f;
+    --toggle-thumb-color: var(--background-primary);
+    --accent-red: var(--red-accent);
+}
+
+/* RETRO ISH STYLING, NO MORE */
+/*
+.theme-light ::selection {
+    background: rgba(74, 111, 165, 0.2);
+    color: var(--text-normal);
+}
+
+.theme-light textarea,
+.theme-light select {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    color: var(--text-normal);
+    font-family: inherit;
+}
+
+.theme-light button {
+    background: linear-gradient(180deg,
+        rgba(255, 255, 255, 0.9),
+        rgba(230, 232, 235, 0.9));
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 6px 12px;
+    margin: auto 2px;
+    color: var(--text-normal);
+    font-family: inherit;
+    cursor: pointer;
+    transition: all calc(var(--animation-duration) * 0.6667) ease;
+    gap: 4px !important;
+}
+
+.theme-light button:hover {
+    background: linear-gradient(180deg,
+        rgba(230, 232, 235, 0.9),
+        rgba(255, 255, 255, 0.9));
+    border-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.theme-light button:active {
+    background: linear-gradient(180deg,
+        rgba(255, 255, 255, 0.9),
+        rgba(230, 232, 235, 0.9));
+    transform: translateY(1px);
+} */
+

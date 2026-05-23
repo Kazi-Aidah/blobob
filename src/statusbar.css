@@ -1,0 +1,48 @@
+/* ===== hide status bar ===== */
+.hide-status-bar .status-bar {
+    display: none !important;
+}
+
+/* ===== center status bar ===== */
+.centered-statusbar {
+    .status-bar {
+        background-color: transparent !important;
+        position: fixed;
+        right: 33% !important;
+        bottom: 0px;
+        backdrop-filter: blur(15px);
+        border-top: 1px solid var(--shade-plus-darker);
+        border-left: 1px solid var(--shade-plus-darker);
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        line-height: 1;
+        padding: 8px 12px 8px 0;
+        opacity: 0.5 !important;
+        transition: calc(var(--animation-duration) * 0.6667);
+        background-color: transparent !important;
+        border: none;
+        padding: 8px !important;
+        transform: none !important;
+        font-size: smaller;
+    }
+
+    .status-bar:hover {
+        opacity: 1 !important;
+        transition: calc(var(--animation-duration) * 0.6667);
+        background-color: transparent !important;
+        padding: 8px !important;
+        transform: none !important;
+        transition: none;
+    }
+
+    .status-bar-item {
+        padding: 0 0 0 10px;
+    }
+
+    .workspace-tab-container:has(.cm-scroller) {
+        padding-bottom: 40px !important;
+        padding-top: 8px !important;
+    }
+}

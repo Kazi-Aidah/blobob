@@ -7599,6 +7599,157 @@ input.prompt-input:focus {
     }
 }
 
+/* ===== FILE EXPLORER ===== */
+
+.tree-item-self, .tree-item-self:hover, .tree-item-self:active {
+    border-radius: var(--nav-file-radius) !important;
+    transition: all 0.2s ease !important;
+}
+
+.file-exp-left {
+    .nav-file-title .tree-item-icon {
+        margin-inline-start: -20.5px !important;
+    }
+
+    .nav-file-title.is-active .tree-item-icon {
+        margin-inline-start: -15.5px !important;
+    }
+
+    .tree-item-self.is-active {
+        padding: 10px 4px;
+        background-color: hsla(var(--interactive-accent-hsl), 0.2);
+        color: var(--color-accent-1);
+        margin: 8px 0;
+        transition: all calc(var(--animation-duration) * 1) ease;
+        gap: 4px;
+    }
+
+    .tree-item-self.is-active:hover {
+        background-color: hsla(var(--interactive-accent-hsl), 0.25) !important;
+        color: var(--color-accent-1) !important;
+        margin: 10px 0;
+        transition: all calc(var(--animation-duration) * 1) ease;
+    }
+
+    .tree-item-self.is-active .tree-item-icon {
+        position: static !important;
+        margin-right: 3px;
+    }
+}
+
+.file-exp-center {
+    .tree-item-self {
+        border-radius: var(--button-radius);
+        corner-shape: var(--corner-shape);
+        transition: background-color calc(var(--animation-duration) * 0.6667) ease;
+    }
+
+    .nav-file-title.is-active .tree-item-icon {
+        margin-inline-start: -15.5px !important;
+    }
+
+    /* .tree-item-self .nav-file-title {
+      display: flex;
+      justify-content: center;
+  } */
+
+    .nav-file-title .tree-item-icon {
+        margin-inline-start: -20.5px !important;
+    }
+
+    .tree-item-self.is-active {
+        padding: 10px 4px;
+        background-color: hsla(var(--interactive-accent-hsl), 0.2);
+        color: var(--color-accent-1);
+        margin: 8px 0;
+        transition: all calc(var(--animation-duration) * 1) ease !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+    }
+
+
+    .tree-item-self.is-active:hover {
+        background-color: hsla(var(--interactive-accent-hsl), 0.25) !important;
+        color: var(--color-accent-1) !important;
+        margin: 10px 0;
+        padding: 12px 4px;
+        transition: all calc(var(--animation-duration) * 1) ease !important;
+    }
+
+    .tree-item-self.is-active .nav-file-title,
+    .tree-item-self.is-active .tree-item-inner.nav-file-title-content,
+    .tree-item-self.is-active .nav-file-tag {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        white-space: nowrap;
+    }
+
+    .tree-item-self.is-active .tree-item-icon {
+        position: static !important;
+        margin-right: 2px;
+    }
+}
+
+
+
+
+/* === folder - I DO NOT LIKE IT ARGH === */
+/* .nav-folder-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px 4px;
+    margin: 4px 0;
+    border-radius: 8px;
+    background-color: var(--background-modifier-hover);
+    transition: all calc(var(--animation-duration) * 1) ease;
+
+    border-top: 2px solid var(--background-modifier-border-hover);
+}
+
+.nav-folder-title .tree-item-icon {
+    position: static !important;
+    margin-right: 6px;
+}
+
+.nav-folder-title:hover {
+    background-color: var(--background-modifier-border-hover) !important;
+}
+
+
+.tree-item-children {
+    padding-inline-start: 6px;
+    margin-inline-start: 10px;
+    margin-inline-end: 4px;
+
+    border-inline-start: 2px dashed var(--background-modifier-border-hover);
+
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+    border-bottom: 2px dashed var(--background-modifier-border-hover);
+    border-bottom-left-radius: 12px;
+} */
+
+/* Center Font Text */
+.center-folder-title .nav-folder-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-folder-title .nav-folder-title .tree-item-icon {
+    position: static !important;
+    margin-right: 6px;
+}
+
+.nav-folder-title:hover {
+    background-color: var(--background-modifier-border-hover) !important;
+}
+
 /* base folder styling  */
 .nav-folder-title {
     /* --icon-color: var(--color-accent-1); */
@@ -7619,10 +7770,9 @@ input.prompt-input:focus {
 
     transition:
         border calc(var(--animation-duration) * 0.6667) ease,
-        padding-top calc(var(--animation-duration) * 0.6667) ease,
-        padding-bottom calc(var(--animation-duration) * 0.6667) ease,
-        margin-top calc(var(--animation-duration) * 0.6667) ease,
-        margin-bottom calc(var(--animation-duration) * 0.6667) ease,
+        padding calc(var(--animation-duration) * 0.6667) ease,
+        padding-left 0s ease,
+        margin calc(var(--animation-duration) * 0.6667) ease,
         border-radius calc(var(--animation-duration) * 0.6667),
         box-shadow calc(var(--animation-duration) * 0.6667) ease,
         background-color calc(var(--animation-duration) * 0.6667) ease !important;
@@ -7647,17 +7797,6 @@ input.prompt-input:focus {
 .tree-item-self:hover {
     background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
 }
-/* ===== FOLDER STYLES =====
-  Accent Dot       — folder-dot-accent
-  Rainbow Dot      — folder-dot-rainbow
-  Accent Frame     — folder-frame-accent
-  Rainbow Frame    — folder-frame-rainbow
-  Accent Subtle    — folder-subtle-accent
-  Rainbow Subtle   — folder-subtle-rainbow
-  Accent Solid     — folder-solid-accent
-  Rainbow Solid    — folder-solid-rainbow
-  Accent Gradient  — folder-gradient-hue
-*/
 
 /* folder none */
 .folder-none .nav-folder-title {
@@ -7744,6 +7883,9 @@ input.prompt-input:focus {
     padding-left: 40px !important;
 
     background-color: var(--background-secondary-alt);
+    /* background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
+    background-image: none !important;
+    color: var(--color-accent-1) !important; */
     box-shadow: none !important;
     border: none;
 }
@@ -7760,9 +7902,30 @@ input.prompt-input:focus {
     margin-bottom: 6px !important;
 
     background-color: var(--background-secondary-alt);
+    /* background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
+    background-image: none !important;
+    color: var(--color-accent-1) !important; */
     box-shadow: none !important;
     border: none;
 }
+
+/* .tree-item-self .tree-item-icon {
+  --icon-color:
+  --nav-collapse-icon-color:
+  --nav-collapse-icon-color-collapsed:
+} */
+/* ===== FOLDER STYLES =====
+  Accent Dot       — folder-dot-accent
+  Rainbow Dot      — folder-dot-rainbow
+  Accent Frame     — folder-frame-accent
+  Rainbow Frame    — folder-frame-rainbow
+  Accent Subtle    — folder-subtle-accent
+  Rainbow Subtle   — folder-subtle-rainbow
+  Accent Solid     — folder-solid-accent
+  Rainbow Solid    — folder-solid-rainbow
+  Accent Gradient  — folder-gradient-hue
+*/
+
 
 /* ── Rainbow: assign --folder-color per nth-child ── */
 body:is(.folder-dot-rainbow, .folder-frame-rainbow, .folder-subtle-rainbow, .folder-solid-rainbow)
@@ -8025,19 +8188,7 @@ body.bold-folders .nav-folder-title {
 /* ===== ACTIVE FILE STYLING ===== */
 .tree-item-self {
     border-radius: var(--nav-file-radius, var(--button-radius, 20px)) !important;
-    margin-inline-start: 0 !important;
-    padding-inline-start: 20px !important;
-    transition: font-weight 0.2s ease, background-color 0.2s ease, color 0.2s ease, filter 0.2s ease;
-}
-
-.nav-file-title {
-    margin-inline-start: 0 !important;
-    padding-inline-start: 20px !important;
-}
-
-.nav-folder-title {
-    margin-inline-start: 0 !important;
-    padding-inline-start: 30px !important;
+    transition: font-weight 0.2s ease, all 0.2s ease;
 }
 
 .tree-item-self:hover {
@@ -8084,9 +8235,7 @@ body.bold-folders .nav-folder-title {
 }
 
 .center-active-file-title .tree-item-self.is-active {
-    transition: font-weight 0.2s ease, background-color 0.2s ease, color 0.2s ease, filter 0.2s ease !important;
-    margin-inline-start: 0 !important;
-    padding-inline-start: 0 !important;
+    transition: all calc(var(--animation-duration, 0.2s) * 1) ease !important;
     display: flex;
     justify-content: center;
     align-items: center;

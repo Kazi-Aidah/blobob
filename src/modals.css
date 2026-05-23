@@ -1,0 +1,123 @@
+/* ==================================================
+   MODALS & PROMPTS
+================================================== */
+
+.modal {
+    border-radius: 20px !important;
+    border: 2px solid var(--background-modifier-border) !important;
+    z-index: 1005;
+}
+
+/* OLD MODAL OPENING ANIM */
+/* .modal-container {
+    animation: modal-bounce-in calc(var(--animation-duration) * 0.7333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
+    transform-origin: center;
+}
+@keyframes modal-bounce-in {
+    0% {
+        opacity: 0;
+        transform: translateY(18px) scale(0.97);
+    }
+    65% {
+        opacity: 1;
+        transform: translateY(-1px) scale(1.01);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+} */
+
+.modal-container {
+    transform-origin: center;
+    animation: modal-open calc(var(--animation-duration) * 0.8333) cubic-bezier(0.175, 0.885, 0.32, 1.7);
+}
+
+@keyframes modal-open {
+    0% {
+        transform: translateY(18px) scale(0.99);
+    }
+    65% {
+        transform: translateY(-1px) scale(1.01);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ==== COMMAND PALETTE ==== */
+
+.prompt {
+    border-radius: 20px;
+    border: 2px solid var(--background-modifier-border) !important;
+}
+
+.suggestion-item {
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+    transition: all 0.2s ease;
+}
+
+.suggestion-item.is-selected {
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+    color: var(--color-accent-1);
+    background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
+}
+
+.suggestion-item .suggestion-content {
+    margin-left: 0px;
+    transition: margin 0.2s ease;
+    transition-delay: margin 0.1s ease;
+}
+
+.suggestion-item.is-selected {
+    margin: 4px;
+    margin-right: 0px;
+}
+
+/* .prompt::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  height: 34px;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    var(--background-primary)
+  );
+} */
+
+input.prompt-input {
+    border-radius: 0px !important;
+    border-bottom: 2px solid var(--background-modifier-border);
+}
+
+input.prompt-input:focus {
+    border-radius: 0px !important;
+    border-bottom: 2px solid var(--background-modifier-border);
+}
+
+/* ===== hide prompt instructions ===== */
+
+.hide-prompt-instructions .prompt-instructions {
+    display: none;
+}
+
+.hide-prompt-instructions .prompt::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    height: 34px;
+    pointer-events: none;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        var(--background-primary)
+    );
+}
+

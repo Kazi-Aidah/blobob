@@ -1,0 +1,214 @@
+/* === other plugins support */
+.kanban-styling {
+/* --- mainbody --- */
+.kanban-plugin__lane {
+  border-radius: var(--button-radius);
+  border: 2.5px solid var(--background-modifier-border);
+  box-shadow: 0px 2px 0px var(--background-modifier-border);
+}
+
+
+/* --- item cards --- */
+
+.kanban-plugin__item {
+  border-radius: var(--button-radius);
+  border: 2px solid var(--background-modifier-border);
+  box-shadow: 0px 2px 0px var(--background-modifier-border);
+  margin-bottom: 4px;
+}
+
+.kanban-plugin__item-title-wrapper {
+  background-color: var(--background-primary) !important;
+  padding: 12px;
+}
+
+.kanban-plugin__item p {
+  font-size: 16px !important;
+  transition: font-size 0.2s ease-out;
+}
+
+/* Icons */
+.kanban-plugin__item .kanban-plugin__icon {
+  opacity: 0;
+}
+
+.kanban-plugin__item .kanban-plugin__icon:hover {
+  opacity: 1;
+}
+
+.kanban-plugin__item .kanban-plugin__icon svg {
+  --icon-size: 12px !important;
+}
+
+.kanban-plugin__item-title-wrapper .tag {
+  padding: 3px 5px !important;
+  margin-left: 1px;
+  border-radius: 8px !important;
+}
+
+.kanban-plugin__item-title-wrapper p {
+    line-height: 1.6 !important;
+}
+
+.kanban-plugin__item-title-wrapper {
+  background-color: var(--background-primary) !important;
+  padding: 8px 10px !important;
+}
+
+.kanban-plugin__item-metadata-date-relative {
+    margin-top: -3px;
+}
+
+.kanban-plugin__date, .cm-kanban-time-wrapper, .cm-kanban-date-wrapper {
+    display: inline;
+}
+
+
+/* buttons */
+button.kanban-plugin__new-item-button {
+  width: 100%;
+  background-color: var(--button-background);
+  color: var(--surface);
+  box-shadow: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1.5);
+}
+
+button.kanban-plugin__new-item-button:hover {
+  background-color: var(--button-background-hover);
+  color: var(--surface);
+  transform: scale(1);
+  opacity: 1;
+  box-shadow: none;
+}
+
+/* the + text */
+.kanban-plugin__item-button-plus {
+  margin-inline-end: 4px;
+}
+
+.kanban-plugin__item-input-wrapper {
+  border-radius: 0px !important;
+}
+
+}
+
+/* --- kanban boards take up 100% width --- */
+
+body.kanban-full .kanban-plugin__board {
+  display: flex !important;
+}
+
+body.kanban-full .kanban-plugin__lane-wrapper:not(.collapse-horizontal) {
+  flex: 100% !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 100%;
+}
+
+body.kanban-full .kanban-plugin__board > div {
+  width: 100% !important;
+  margin-left: 20px !important;
+}
+
+
+
+/* =========================
+   Add Card Button (PREPEND HOVER EXPAND)
+========================= */
+
+body.kanban-prepend-hover-expand 
+.kanban-plugin__item-button-wrapper {
+  max-height: 0;
+  overflow: hidden;
+}
+
+body.kanban-prepend-hover-expand 
+.kanban-plugin__item-button-wrapper:hover {
+  max-height: 60px;
+  transition: max-height 0.3s ease,
+              opacity 0.15s ease,
+              all 0.2s ease;
+}
+
+body.kanban-prepend-hover-expand 
+button.kanban-plugin__new-item-button {
+  transform: scale(1.2) translateY(2px);
+  transition: max-height 0.3s ease,
+              opacity 0.15s ease,
+              all 0.2s ease;
+}
+
+body.kanban-prepend-hover-expand 
+.kanban-plugin__item-button-wrapper:hover 
+button.kanban-plugin__new-item-button {
+  transform: scale(1);
+}
+
+/* --- extra --- */
+body.kanban-hover-biggen 
+.kanban-plugin__item:hover p {
+  font-size: 20px !important;
+}
+
+.kanban-redden-metadata .kanban-plugin__item-metadata {
+  color: var(--color-red);
+}
+
+
+/* --- image captions support --- */
+body.image-captions-styling {
+.image-captions-figure, .theme-dark .image-captions-caption {
+    background-color: var(--background-secondary-alt);
+    color: var(--text-normal);
+    /* box-shadow: 0px 5px 0px -1px var(--text-faint); */
+    margin-bottom: 2px;
+}
+
+.image-captions-caption {
+    background-color: var(--background-secondary-alt);
+    border-radius: 0px 0px 14px 14px;
+    padding-bottom: 8px;
+}
+
+.image-captions-figure {
+    border-radius: 12px 12px 0px 0px;
+}
+
+
+.image-captions-figure img {
+    border-radius: 8px !important;
+    transform: scale(0.99);
+    corner-shape: squircle !important;
+}
+
+/* .internal-embed.media-embed.image-embed, */
+.image-captions-figure, .image-captions-caption {
+    border: 2.5px solid var(--background-modifier-border);
+    corner-shape: squircle;
+}
+
+.image-captions-caption {
+    border: 2.5px solid var(--background-modifier-border);
+    border-top: none !important;
+    border-bottom: 6px solid var(--background-modifier-border) !important;
+}
+}
+
+
+/* Vertical Tabs Plugin Fix */
+.workspace-leaf.obsidian-vertical-tabs-tab-content .tree-item-self.is-active {
+    padding: 0px;
+}
+
+.workspace-leaf.obsidian-vertical-tabs-tab-content
+    .tree-item-self.is-active
+    .tree-item-icon,
+.workspace-leaf.obsidian-vertical-tabs-tab-content
+    .tree-item-self.is-active
+    .tree-item-inner {
+    margin: 8px 2px;
+    margin-inline-start: 6px;
+    margin-inline-end: -4px;
+    color: var(--color-accent-1);
+    font-weight: 500;
+}

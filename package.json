@@ -1,0 +1,7 @@
+{
+  "name": "blobob",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "node -e \"const { execSync } = require('child_process'); const os = require('os'); if (os.platform() === 'win32') { execSync('powershell -ExecutionPolicy Bypass -File build.ps1', { stdio: 'inherit' }); } else { execSync('./build.sh', { stdio: 'inherit' }); }\""
+  }
+}

@@ -1,0 +1,27 @@
+/* =========================
+///////// ICON STYLES
+========================= */
+.filled svg {
+    fill: currentColor;
+    fill-opacity: 25%;
+}
+
+.big svg,
+.big svg.svg-icon,
+.big .clickable-icon {
+    --icon-size: 22px !important;
+}
+
+.big-filled svg,
+.big-filled svg.svg-icon,
+.big-filled .clickable-icon {
+    --icon-size: 22px !important;
+    fill: currentColor;
+    fill-opacity: 25%;
+}
+
+.big-filled .workspace-tab-header .workspace-tab-header-inner-icon,
+.big .workspace-tab-header .workspace-tab-header-inner-icon {
+    --icon-size: 18px !important;
+    width: 22px;
+}

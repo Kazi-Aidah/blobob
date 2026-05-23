@@ -1,0 +1,419 @@
+/* ==================================================
+   PROPERTIES
+================================================== */
+
+/* ------------------------------------------- */
+
+/* sidebar file properties UNcustomization */
+.workspace-leaf-content[data-type="file-properties"] .metadata-container {
+    .metadata-content {
+        background-color: var(--background-secondary) !important;
+        /* border-radius: var(--button-radius); */
+    }
+}
+
+/* ===== RESET FOR FILE PROPERTIES WORKSPACE ===== */
+.workspace-leaf-content[data-type="file-properties"] .metadata-container {
+    /* Reset all the custom styles */
+    background-color: var(--background-primary) !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+    opacity: 1 !important;
+    animation: none !important;
+    transition: none !important;
+    width: auto !important;
+    justify-content: normal !important;
+}
+
+.workspace-leaf-content[data-type="file-properties"] .metadata-property-value {
+    padding-bottom: 10px !important;
+    /* border-bottom: 0px !important; */
+}
+
+/* Reset any specific property styles for file properties workspace */
+.workspace-leaf-content[data-type="file-properties"]
+    .properties-1
+    .metadata-container,
+.workspace-leaf-content[data-type="file-properties"]
+    .properties-2
+    .metadata-container,
+.workspace-leaf-content[data-type="file-properties"]
+    .properties-3
+    .metadata-container,
+.workspace-leaf-content[data-type="file-properties"]
+    .properties-4
+    .metadata-container,
+.workspace-leaf-content[data-type="file-properties"]
+    .properties-5
+    .metadata-container {
+    background-color: var(--background-primary) !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+    opacity: 1 !important;
+    animation: none !important;
+    transition: none !important;
+}
+
+/* Reset heading styles */
+.workspace-leaf-content[data-type="file-properties"]
+    .metadata-properties-heading {
+    border: none !important;
+    padding: 0 !important;
+    justify-content: normal !important;
+    text-align: left !important;
+}
+
+/* Reset content styles */
+.workspace-leaf-content[data-type="file-properties"] .metadata-content {
+    padding: 0 !important;
+    transform: none !important;
+    opacity: 1 !important;
+    animation: none !important;
+    transition: none !important;
+}
+
+/* Reset animations */
+.workspace-leaf-content[data-type="file-properties"]
+    .metadata-container
+    .metadata-content,
+.workspace-leaf-content[data-type="file-properties"]
+    .metadata-container.is-collapsed
+    .metadata-content,
+.workspace-leaf-content[data-type="file-properties"]
+    .metadata-container:not(.is-collapsed)
+    .metadata-content {
+    transform: none !important;
+    opacity: 1 !important;
+    animation: none !important;
+    transition: none !important;
+}
+
+/* ------------------------------ */
+
+/* = dim unless hovered = */
+.dim-properties .metadata-container {
+    opacity: 0.6 !important;
+    transition: opacity calc(var(--animation-duration) * 1) ease !important;
+}
+
+.dim-properties .metadata-container:hover {
+    opacity: 1 !important;
+    transition: opacity calc(var(--animation-duration) * 1) ease !important;
+}
+
+/* 1 */
+.properties-1 .metadata-container {
+    border: 2px solid var(--text-faint) !important;
+    border-radius: 20px;
+    --input-height: var(--metadata-input-height);
+    background-color: var(--background-secondary-alt);
+    width: 100%;
+    justify-content: space-between;
+    box-shadow: 0px 3px 0px 0px var(--text-faint);
+}
+
+.properties-1 .metadata-properties-heading {
+    border-bottom: 2px solid var(--text-faint) !important;
+    width: 100%;
+    padding: 0.5em 1.4em;
+    padding-bottom: 16px;
+    transition: border-bottom 0s ease;
+    transition-delay: border-bottom 0.2s;
+}
+
+.properties-1 .metadata-content {
+    padding: 10px 20px;
+}
+
+.properties-1 .metadata-container.is-collapsed .metadata-properties-heading {
+    border-bottom: 0px !important;
+    padding-bottom: 0px;
+}
+
+/* 2 */
+.properties-2 .metadata-container {
+    border: solid 2px var(--text-faint) !important;
+    margin-bottom: 1.3rem;
+    padding: 1.4rem 1.5rem;
+    border-radius: 20px;
+    --input-height: var(--metadata-input-height);
+    background-color: var(--background-secondary-alt);
+    width: 100%;
+    justify-content: space-between;
+    box-shadow: 0px 3px 0px 0px var(--text-faint);
+}
+
+.properties-2 .metadata-container.is-collapsed {
+    padding-top: 0.5em;
+    padding-bottom: 0.2em;
+}
+
+.properties-2 .metadata-container.is-collapsed .metadata-properties-heading {
+    border-bottom: none !important;
+    padding-bottom: 0px;
+}
+
+/* 3 */
+.properties-3 .metadata-container {
+    margin-top: -15px;
+    margin-bottom: 1.3rem;
+    border-radius: 0 0 8px 8px;
+    --input-height: var(--metadata-input-height);
+    background: var(--background-secondary-alt);
+    padding: 1rem;
+    width: 100%;
+    border-bottom: solid 3.5px var(--color-accent);
+    border-top: solid 3.5px var(--color-accent);
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.properties-3 .metadata-container .is-collapsed {
+    padding-bottom: 0px;
+}
+
+/* 4 */
+.properties-4 .metadata-container {
+    border-top: solid 3.5px var(--color-accent);
+    border: solid 2px var(--text-faint);
+    margin-bottom: 1.3rem;
+    margin-top: -10px;
+    border-radius: 0 0 10px 10px;
+    --input-height: var(--metadata-input-height);
+    background: var(--background-secondary-alt);
+    padding: 1rem 1.3rem;
+    width: 100%;
+    justify-content: space-between;
+    box-shadow: 0px 4px 0px 0px var(--text-faint);
+}
+
+/* 5 */
+.properties-5 .metadata-container {
+    border-bottom: 2px solid var(--text-faint);
+    border-top: 2px solid var(--text-faint);
+    padding: 20px 20px;
+}
+
+/* arrow chevron */
+/* .hide-properties-arrow.properties-1 .collapse-indicator.collapse-icon,
+.hide-properties-arrow.properties-2 .collapse-indicator.collapse-icon,
+.hide-properties-arrow.properties-3 .collapse-indicator.collapse-icon,
+.hide-properties-arrow.properties-4 .collapse-indicator.collapse-icon,
+.hide-properties-arrow.properties-5 .collapse-indicator.collapse-icon {
+  opacity: 0 !important;
+} */
+
+/* hide properties arrow */
+.hide-properties-arrow
+    .metadata-container
+    .metadata-properties-heading
+    .collapse-indicator.collapse-icon {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+.hide-properties-arrow
+    .metadata-container
+    .metadata-properties-heading
+    .collapse-indicator.collapse-icon {
+    display: none !important;
+}
+
+.hide-properties-arrow
+    .metadata-container
+    .metadata-properties-heading
+    .collapse-indicator.collapse-icon
+    svg {
+    display: none !important;
+}
+
+/* MY default behaviour: SHOW ARROW ONLY WHEN HOVERED */
+.metadata-container
+    .metadata-properties-heading
+    .collapse-indicator.collapse-icon {
+    opacity: 0 !important;
+    transition: opacity calc(var(--animation-duration) * 0.6667) ease;
+}
+
+.metadata-container.is-collapsed
+    .metadata-properties-heading:hover
+    .collapse-indicator.collapse-icon,
+.metadata-container:not(.is-collapsed)
+    .metadata-properties-heading
+    .collapse-indicator.collapse-icon {
+    opacity: 1 !important;
+}
+
+/* center properties */
+.center-properties-heading.properties-1 .metadata-properties-heading,
+.center-properties-heading.properties-2 .metadata-properties-heading,
+.center-properties-heading.properties-3 .metadata-properties-heading,
+.center-properties-heading.properties-4 .metadata-properties-heading,
+.center-properties-heading.properties-5 .metadata-properties-heading {
+    justify-content: center;
+    text-align: center;
+}
+
+/* ===== PROPERTIES CONTENTS ANIMATION AHHH ======= */
+
+.properties-1 .metadata-container .metadata-content,
+.properties-2 .metadata-container .metadata-content,
+.properties-3 .metadata-container .metadata-content,
+.properties-4 .metadata-container .metadata-content,
+.properties-5 .metadata-container .metadata-content {
+    transform-origin: top;
+    transition:
+        transform calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
+        opacity calc(var(--animation-duration) * 1.3333) ease;
+}
+
+/* Collapsed state */
+.metadata-container.is-collapsed .metadata-content {
+    transform: scaleY(0.9);
+    opacity: 0;
+}
+
+/* Expanded state */
+.metadata-container:not(.is-collapsed) .metadata-content {
+    transform: scaleY(1.05);
+    opacity: 1;
+    transition:
+        transform calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
+        opacity calc(var(--animation-duration) * 1.3333) ease;
+}
+
+/* settle back from overshoot */
+.metadata-container:not(.is-collapsed) .metadata-content {
+    animation: settle-bounce calc(var(--animation-duration) * 1.3333) forwards;
+}
+
+@keyframes settle-bounce {
+    0% {
+        transform: scaleY(1.05);
+    }
+    60% {
+        transform: scaleY(0.98);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+/* ======= ANIMATE PROPERTIES CONATINER POOSOSO ===== */
+.properties-1 .metadata-container,
+.properties-2 .metadata-container,
+.properties-3 .metadata-container,
+.properties-4 .metadata-container,
+.properties-5 .metadata-container {
+    transform-origin: top;
+    transition:
+        transform calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
+        padding calc(var(--animation-duration) * 1.3333) ease,
+        opacity calc(var(--animation-duration) * 1.3333) ease;
+}
+
+/* Collapsed state */
+.metadata-container.is-collapsed {
+    transform: scaleY(1);
+    opacity: 0.6;
+}
+
+/* Expanded state */
+.metadata-container:not(.is-collapsed) {
+    transform: scaleY(1.15);
+    opacity: 1;
+    transition: transform calc(var(--animation-duration) * 1.6667) cubic-bezier(0.175, 0.885, 0.32, 2);
+    animation: settle-container calc(var(--animation-duration) * 1.6667) forwards;
+}
+
+/* Bounce back to normal scale */
+@keyframes settle-container {
+    0% {
+        transform: scaleY(1);
+    }
+    /* 16% { transform: scaleY(0.9); } */
+    40% {
+        transform: scaleY(1.025);
+    }
+    /* 95% { transform: scaleY(0.99); } */
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+/* Closing animation */
+.metadata-container.is-collapsed {
+    animation: collapse-bounce calc(var(--animation-duration) * 1.5) cubic-bezier(0.175, 0.885, 0.32, 2)
+        forwards;
+    opacity: 0.6;
+}
+
+/* Closing bouncey baby */
+@keyframes collapse-bounce {
+    0% {
+        transform: scaleY(1);
+    }
+    /* 40% { transform: scaleY(1.06); } */
+    60% {
+        transform: scaleY(0.94);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+/* === TAGS === */
+.metadata-property[data-property-key="tags"] .multi-select-pill,
+.metadata-property[data-property-key="cssclasses"] .multi-select-pill {
+    transition: all calc(var(--animation-duration) * 0.5) ease;
+}
+
+.metadata-property[data-property-key="tags"] .multi-select-pill {
+    letter-spacing: 0.08em;
+    border-radius: 20px !important;
+    padding: 4px 4px !important;
+    padding-top: 0.35em !important;
+    /* border: 0.15em solid var(--tag-color);
+  box-shadow: 0px 1.5px 0px 0px var(--tag-color); */
+    /* text-transform: uppercase; */
+    letter-spacing: 0.09em;
+    font-size: 0.9em;
+    background-color: var(--tag-background);
+    color: var(--tag-color) !important;
+}
+
+.metadata-property[data-property-key="tags"] .multi-select-pill:hover {
+    /* border: 0.15em solid var(--tag-color-hover);
+  box-shadow: 0px 1.5px 0px 0px var(--tag-color-hover); */
+
+    background-color: var(--tag-background-hover);
+    /* border: 0.2em solid var(--tag-color); */
+    /* font-weight: bold; */
+}
+
+/* x icon */
+.metadata-property[data-property-key="tags"] .multi-select-pill svg {
+    color: var(--tag-color) !important;
+    margin: 1px;
+    margin-right: 0px;
+}
+
+/* metadata property key casing */
+.meta-key-case-upper .metadata-property-key-input {
+    text-transform: uppercase;
+}
+.meta-key-case-lower .metadata-property-key-input {
+    text-transform: lowercase;
+}
+.meta-key-case-none .metadata-property-key-input {
+    text-transform: none;
+}
