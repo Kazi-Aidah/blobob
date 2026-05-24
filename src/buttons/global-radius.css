@@ -365,6 +365,15 @@ img {
     --input-radius: 50%;
 }
 
+.eye-tiptip .workspace-leaf {
+  border-radius: 4% !important;
+}
+
+.eye-tiptip .workspace-leaf:has(.cm-editor) {
+  border: 2px solid red !important;
+  border-radius: 90% !important;
+}
+
 /* Eye Adjustments */
 .eye-tiptip .suggestion-item.mod-complex.is-selected,
 .eye-tiptip .suggestion-hotkey,

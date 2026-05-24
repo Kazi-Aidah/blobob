@@ -157,6 +157,31 @@ settings:
       - label: 50% Gray
         value: gray
 
+  - id: tiptips
+    title: Global Radius
+    description: Set the border radius for all UI Elements
+    type: class-select
+    default: circular-tiptip
+    options:
+      - label: Circular
+        value: circular-tiptip
+      - label: Rounded
+        value: rounded-tiptip
+      - label: Round
+        value: round-tiptip
+      - label: Sharp
+        value: sharp-tiptip
+      - label: Hexagon
+        value: hexagon-tiptip
+      - label: Scoop
+        value: scoop-tiptip
+      - label: Squircle
+        value: squircle-tiptip
+      - label: Sock
+        value: sock-tiptip
+      - label: Eye
+        value: eye-tiptip
+
   - id: workspace-layout
     title: Layout & Tab Style
     description: Set the workspace layout for desktop
@@ -191,31 +216,6 @@ settings:
     level: 2
     collapsed: true
 
-  - id: tiptips
-    title: Select, Buttons & Input Radiuses
-    description: Set the border radius for selects, buttons, and inputs
-    type: class-select
-    default: circular-tiptip
-    options:
-      - label: Circular
-        value: circular-tiptip
-      - label: Rounded
-        value: rounded-tiptip
-      - label: Round
-        value: round-tiptip
-      - label: Sharp
-        value: sharp-tiptip
-      - label: Hexagon
-        value: hexagon-tiptip
-      - label: Scoop
-        value: scoop-tiptip
-      - label: Squircle
-        value: squircle-tiptip
-      - label: Sock
-        value: sock-tiptip
-      - label: Eye
-        value: eye-tiptip
-
   - id: button-style
     title: Button & dropdown select Style
     type: class-select
@@ -235,7 +235,7 @@ settings:
   - id: button-animation
     title: Button Animation Style
     type: class-select
-    default: default
+    default: button-shrink
     options:
       - label: None
         value: none
@@ -962,6 +962,16 @@ settings:
 
   # ── Folders ──────────────────────────────
 
+  - id: verti-folder
+    title: Vertical Folder
+    type: class-toggle
+    default: true
+
+  - id: disable-foldy-basic-bordered
+    title: Disable Basic Bordered Folder
+    type: class-toggle
+    default: false
+
   - id: folder-style
     title: Folders Style
     description: Select the folder style and color accent
@@ -970,32 +980,37 @@ settings:
     options:
       - label: None
         value: folder-none
-      - label: Accented
-        value: accented
-      - label: Mechanical
-        value: mechanical
       - label: Thick
         value: thick
       - label: Huge 
         value: huge
-      - label: Accent Dot
+      - label: Mechanical
+        value: mechanical
+      - label: ---
+        value: 
+      - label: Just Dot
         value: folder-dot-accent
-      - label: Rainbow Dot
-        value: folder-dot-rainbow
-      - label: Accent Border
-        value: folder-frame-accent
-      - label: Rainbow Border
-        value: folder-frame-rainbow
-      - label: Accent Subtle
-        value: folder-subtle-accent
-      - label: Rainbow Subtle
-        value: folder-subtle-rainbow
+      - label: Accented Subtle
+        value: accented
       - label: Accent Solid
         value: folder-solid-accent
+      - label: Accent Border
+        value: folder-frame-accent
+      - label: ---
+        value: 
+      - label: Rainbow Dot
+        value: folder-dot-rainbow
+      - label: Rainbow Subtle
+        value: folder-subtle-rainbow
       - label: Rainbow Solid
         value: folder-solid-rainbow
+      - label: Rainbow Border
+        value: folder-frame-rainbow
+      - label: ---
+        value: 
       - label: Animated Hue
         value: folder-gradient-hue
+        
 
   - id: bouncy-folders
     title: Bouncy Folders

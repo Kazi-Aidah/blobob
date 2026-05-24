@@ -2,29 +2,30 @@
   TAB HEADER
 ================================================== */
 
+:root {
+    --tab-sidebar-radius: clamp(8px, var(--button-radius, 8px), 20px);
+}
+
+.circular-tiptip { --tab-sidebar-radius: 14px;}
+.rounded-tiptip { --tab-sidebar-radius: 10px;}
+.round-tiptip { --tab-sidebar-radius: 7px;}
+.sharp-tiptip { --tab-sidebar-radius: 0px;}
+.hexagon-tiptip { --tab-sidebar-radius: 8px;}
+.scoop-tiptip { --tab-sidebar-radius: 7px;}
+.squircle-tiptip { --tab-sidebar-radius: 40%;}
+.sock-tiptip { --tab-sidebar-radius: 20%;}
+.eye-tiptip { --tab-sidebar-radius: 40%;}
+
 .workspace-split.mod-root .workspace-tab-header.is-active::before,
 .workspace-split.mod-root .workspace-tab-header.is-active::after {
     box-shadow: none;
-    /* box-shadow: inset 0 0 0 var(--tab-outline-width) var(--tab-outline-color), 0 0 0 calc(var(--tab-curve)* 4) var(--tab-background-active); */
 }
 
-/* .workspace-split.mod-vertical.mod-root .workspace-tab-header.autofit-tab {
-    width: var(--header-width) !important;
-    min-width: var(--header-width) !important;
-    max-width: var(--header-width) !important;
-    position: relative;
-    /* margin-bottom: 8px; */
-/* margin-left: -10px !important;
-} */
-
-.workspace .mod-root .workspace-tab-header-inner::after {
-    display: none;
-}
+.workspace .mod-root .workspace-tab-header-inner::after { display: none; }
 
 .workspace-tab-header.is-active {
     color: var(--tab-text-color-focused-active);
     background-color: var(--background-primary);
-    /* border-radius: 20px !important; */
     border-bottom: none !important;
     padding-bottom: 0px !important;
 }
@@ -32,67 +33,40 @@
 .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
     height: 100%;
     border-radius: 0px !important;
-    /* padding-bottom: 4px !important; */
     margin-top: -2px !important;
 }
 
 .workspace-tab-header-container {
-    /* border-bottom: var(--tab-outline-width) solid var(--tab-outline-color); */
     border-bottom: none;
     background-color: var(--tab-container-background);
-}
-
-.workspace-tab-header-container {
     box-shadow: inset 0 -1px 0 var(--tab-outline-color);
 }
 
-.mod-root .workspace-tab-header-container {
-    /* padding-left: 4px !important; */
-    padding-top: 2px;
-}
+.mod-root .workspace-tab-header-container { padding-top: 2px; }
 
 .bubble .workspace-tab-header-container-inner {
     padding-bottom: -6px;
     margin-bottom: -2px;
 }
 
-.view-header {
-    border-bottom: 1.5px solid var(--tab-outline-color);
-    /* height: 50px;  */
-}
+.view-header { border-bottom: 1.5px solid var(--tab-outline-color); }
 
 .view-header-title {
-    /* font-size: 20px !important; */
     color: var(--text-muted) !important;
     text-transform: uppercase;
     letter-spacing: 2px;
-    /* text-decoration: underline;
-    text-underline-offset: 3px; */
 }
 
-/* view title casing overrides */
-.view-title-case-none .view-header-title {
-    text-transform: none;
-    letter-spacing: normal;
-}
-.view-title-case-upper .view-header-title {
-    text-transform: uppercase;
-}
-.view-title-case-lower .view-header-title {
-    text-transform: lowercase;
-}
+.view-title-case-none .view-header-title  { text-transform: none; letter-spacing: normal; }
+.view-title-case-upper .view-header-title { text-transform: uppercase; }
+.view-title-case-lower .view-header-title { text-transform: lowercase; }
 
-
-/* tab close btn */
-.workspace
-    .mod-root
-    .workspace-tab-header
-    .workspace-tab-header-inner-close-button {
+/* tab close button */
+.workspace .mod-root .workspace-tab-header .workspace-tab-header-inner-close-button {
     margin-right: 2px !important;
     z-index: 1001 !important;
     border-radius: 20px;
     order: -1;
-
     display: flex !important;
     transform: scale(0.1);
     opacity: 0;
@@ -104,15 +78,10 @@
         width calc(var(--animation-duration) * 0.6667) ease-out,
         margin-left calc(var(--animation-duration) * 0.6667) ease-out !important;
     pointer-events: none;
-
     border: 2px solid transparent;
 }
 
-/* close button - tab hover */
-.workspace
-    .mod-root
-    .workspace-tab-header:hover
-    .workspace-tab-header-inner-close-button {
+.workspace .mod-root .workspace-tab-header:hover .workspace-tab-header-inner-close-button {
     transform: scale(1);
     opacity: 1;
     width: auto;
@@ -120,11 +89,7 @@
     pointer-events: auto;
 }
 
-/* close button - tab hover */
-.workspace
-    .mod-root
-    .workspace-tab-header.is-active:hover
-    .workspace-tab-header-inner-close-button {
+.workspace .mod-root .workspace-tab-header.is-active:hover .workspace-tab-header-inner-close-button {
     transform: scale(1);
     opacity: 1;
     width: auto;
@@ -132,20 +97,12 @@
     pointer-events: auto;
 }
 
-.workspace
-    .mod-root
-    .workspace-tab-header
-    .workspace-tab-header-inner-close-button:hover {
+.workspace .mod-root .workspace-tab-header .workspace-tab-header-inner-close-button:hover {
     background-color: var(--background-modifier-hover) !important;
     border: 2px solid var(--background-modifier-border);
 }
 
-/* hide icon on hover, show close btn */
-/* .workspace .mod-root .workspace-tab-header .workspace-tab-header-inner-close-button:hover .workspace-tab-header-inner-icon {
-  display: none;
-} */
-
-/* tabs in left and right sidebars */
+/* sidebar tabs */
 .workspace .mod-left-split .workspace-tab-header,
 .workspace .mod-right-split .workspace-tab-header {
     transition:
@@ -179,49 +136,12 @@
     transition: transform 0.2s ease;
 }
 
-/* active tab for left sidebar */
-/* .workspace .mod-left-split .workspace-tab-header.is-active {
-  padding: 0px !important;
-} */
+/* non-active tab icon brightness */
+.workspace-tab-header-inner:has(.workspace-tab-header-inner-title) { filter: brightness(0.7); }
+.workspace-tab-header.is-active .workspace-tab-header-inner:has(.workspace-tab-header-inner-title) { filter: brightness(1); }
 
-/* for right sidebar */
-/* .workspace .mod-right-split .workspace-tab-header.is-active {
-  padding: 0px !important;
-} */
-
-/* body:not(.workspace):not(.mod-root) .workspace-tab-header.is-active {
-  padding: 20px !important;
-} */
-
-/* .workspace .mod-root .workspace-tab-header.is-active {
-  padding: 20px !important;
-} */
-
-/* .workspace-tab-header-inner-icon {
-    z-index: 1001 !important;
-}
-
-.workspace-tab-header-inner-title, workspace-tab-header-inner {
-  z-index: 2000 !important;
-} */
-
-
-
-/* non active tab icon darkening */
-.workspace-tab-header-inner:has(.workspace-tab-header-inner-title) {
-    filter: brightness(0.7);
-}
-
-/* tab icon brightening if active */
-.workspace-tab-header.is-active
-    .workspace-tab-header-inner:has(.workspace-tab-header-inner-title) {
-    filter: brightness(1);
-}
-
-/* THE CURVE */
-.theme-dark {
-    --tab-curve: 20px;
-}
+/* curve */
+.theme-dark { --tab-curve: 20px; }
 
 .workspace-split.mod-root .workspace-tab-header.is-active::before,
 .workspace-split.mod-root .workspace-tab-header.is-active::after {
@@ -231,47 +151,28 @@
     z-index: 0 !important;
 }
 
-.workspace
-    .mod-root
-    .workspace-tab-header.is-active
-    .workspace-tab-header-inner-close-button {
+.workspace .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner-close-button {
     margin-right: 2px !important;
     z-index: 1005 !important;
 }
 
-/* Remove styles when tab has a pinned icon sob */
-.workspace-split.mod-root
-    .workspace-tab-header.is-active:has(.mod-pinned)::before,
-.workspace-split.mod-root
-    .workspace-tab-header.is-active:has(.mod-pinned)::after {
+.workspace-split.mod-root .workspace-tab-header.is-active:has(.mod-pinned)::before,
+.workspace-split.mod-root .workspace-tab-header.is-active:has(.mod-pinned)::after {
     box-shadow: none !important;
 }
 
 .pin-icon-only .workspace-tab-header:has(.mod-pinned) {
     border-radius: 2px !important;
     margin: 0px 2px;
-    /* box-shadow: 0px 0px 0px 3px var(--color-brown); */
 }
 
-/* .sidebar-toggle-button.mod-left {
-    margin-inline-end: 10px !important;
-} */
+/* pinned tabs */
+.workspace-tab-header-status-container { z-index: 1001 !important; }
 
-
-
-/* === pinned tab styling === */
-
-/* Pin icon z-index */
-.workspace-tab-header-status-container {
-    z-index: 1001 !important;
-}
-
-/* Hide close button on pinned tabs */
 .pin-icon-only .workspace .mod-root .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner-close-button {
     display: none !important;
 }
 
-/* Base pinned tab styling */
 .pin-icon-only .workspace-tab-header:has(.mod-pinned) {
     --tab-max-width: 38px !important;
     border-radius: 10px 10px 0 0 !important;
@@ -279,25 +180,41 @@
     border: 0px solid var(--background-modifier-border);
     border-bottom: 0;
     margin-top: 0px;
-    padding-bottom: 10px !important;
+    /* padding-bottom: 10px !important; */
     transition-property: border-radius, max-width, margin, padding, transform, background-color !important;
-    transition-duration: calc(var(--animation-duration) * 1.3333), calc(var(--animation-duration) * 1.3333), calc(var(--animation-duration) * 1.3333), calc(var(--animation-duration) * 1.3333), calc(var(--animation-duration) * 1), 0s !important;
-    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1), cubic-bezier(0.34, 1.56, 0.64, 1), cubic-bezier(0.34, 1.56, 0.64, 1), cubic-bezier(0.34, 1.56, 0.64, 1), cubic-bezier(0.68, -0.55, 0.265, 1.55), ease !important;
+    transition-duration:
+        calc(var(--animation-duration) * 1.3333),
+        calc(var(--animation-duration) * 1.3333),
+        calc(var(--animation-duration) * 1.3333),
+        calc(var(--animation-duration) * 1.3333),
+        calc(var(--animation-duration) * 1),
+        0s !important;
+    transition-timing-function:
+        cubic-bezier(0.34, 1.56, 0.64, 1),
+        cubic-bezier(0.34, 1.56, 0.64, 1),
+        cubic-bezier(0.34, 1.56, 0.64, 1),
+        cubic-bezier(0.34, 1.56, 0.64, 1),
+        cubic-bezier(0.68, -0.55, 0.265, 1.55),
+        ease !important;
 }
 
-/* Hover state - tab and icon */
 .pin-icon-only .workspace-tab-header:has(.mod-pinned):hover,
 .pin-icon-only .workspace-tab-header:has(.mod-pinned):hover .workspace-tab-header-inner-icon {
-    /* --tab-max-width: 64px !important; */
-    /* margin: 4px 2px !important; */
     border-radius: 14px 14px 0 0 !important;
     transform: scale(1.03);
     transition-property: border-radius, max-width, margin, transform !important;
-    transition-duration: calc(var(--animation-duration) * 1), calc(var(--animation-duration) * 1), calc(var(--animation-duration) * 1), calc(var(--animation-duration) * 0.8333) !important;
-    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55), cubic-bezier(0.68, -0.55, 0.265, 1.55), cubic-bezier(0.68, -0.55, 0.265, 1.55), cubic-bezier(0.68, -0.6, 0.32, 1.6) !important;
+    transition-duration:
+        calc(var(--animation-duration) * 1),
+        calc(var(--animation-duration) * 1),
+        calc(var(--animation-duration) * 1),
+        calc(var(--animation-duration) * 0.8333) !important;
+    transition-timing-function:
+        cubic-bezier(0.68, -0.55, 0.265, 1.55),
+        cubic-bezier(0.68, -0.55, 0.265, 1.55),
+        cubic-bezier(0.68, -0.55, 0.265, 1.55),
+        cubic-bezier(0.68, -0.6, 0.32, 1.6) !important;
 }
 
-/* Active pinned tab */
 .pin-icon-only .workspace-tab-header.is-active:has(.mod-pinned) {
     --tab-max-width: 58px !important;
     background-color: var(--tab-background-active) !important;
@@ -305,32 +222,42 @@
     border: 0px solid var(--background-modifier-border);
     margin-top: 0px;
     padding-bottom: 8px !important;
-    margin-top: 0px;
     padding-left: 0 !important;
     padding-right: 0 !important;
     height: 40px;
     transition-property: border-radius, margin, padding, background-color, max-width !important;
-    transition-duration: calc(var(--animation-duration) * 1.3333), calc(var(--animation-duration) * 1.3333), calc(var(--animation-duration) * 1.3333), 0s !important;
-    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275), cubic-bezier(0.175, 0.885, 0.32, 1.275), cubic-bezier(0.175, 0.885, 0.32, 1.275), ease !important;
+    transition-duration:
+        calc(var(--animation-duration) * 1.3333),
+        calc(var(--animation-duration) * 1.3333),
+        calc(var(--animation-duration) * 1.3333),
+        0s !important;
+    transition-timing-function:
+        cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        ease !important;
 }
 
-/* Inner hover for non-active tabs */
 .pin-icon-only .workspace-tab-header:has(.mod-pinned):not(.is-active):hover .workspace-tab-header-inner {
     height: 30px;
     border-radius: 8px !important;
     background: none !important;
-    transform: translateY(-1px);
+    transform: translateY(0px);
     transition-property: max-width, border-radius, transform !important;
-    transition-duration: calc(var(--animation-duration) * 0.8333), calc(var(--animation-duration) * 0.8333), calc(var(--animation-duration) * 0.6667) !important;
-    transition-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6), cubic-bezier(0.68, -0.6, 0.32, 1.6), cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+    transition-duration:
+        calc(var(--animation-duration) * 0.8333),
+        calc(var(--animation-duration) * 0.8333),
+        calc(var(--animation-duration) * 0.6667) !important;
+    transition-timing-function:
+        cubic-bezier(0.68, -0.6, 0.32, 1.6),
+        cubic-bezier(0.68, -0.6, 0.32, 1.6),
+        cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
 }
 
-/* Inner transition */
 .pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner {
     transition: transform calc(var(--animation-duration) * 1) cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
 }
 
-/* Icon hover effect */
 .pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner-icon:hover {
     transform: scale(1.1) rotate(5deg);
     transition: transform calc(var(--animation-duration) * 1) cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
@@ -345,237 +272,109 @@
     display: none !important;
 }
 
-/* === bubble tab === */
-/* .bubble .workspace-tab-header,
-.bubble .workspace-tab-header.is-active,
-.bubble .workspace-tab-header.is-active:hover,
-.bubble .workspace-tab-header:not(.is-active)
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  --tab-curve: 0px !important;
-  border-radius: 12px !important;
-  transition: border-radius 0s ease !important;
-} */
+.default-tab .workspace-tab-header,
+.default-tab .workspace-tab-header-inner {
+    corner-shape: initial !important;
+}
 
-.bubble.theme-dark {
-    --tab-background: var(--background-primary);
+/* ==================================================
+  BUBBLE TAB
+================================================== */
+
+.bubble.theme-dark { --tab-background: var(--background-primary); }
+
+.bubble.theme-dark.bubble-dark-outside,
+.bubble.theme-dark.bubble-focused-dark-outside {
+    --tab-background: var(--background-primary-alt);
+
+    .workspace-leaf {
+        border-radius: 20px;
+        background-color: var(--background-primary-alt) !important;
+        background: var(--background-primary-alt) !important;
+    }
+    .workspace-leaf-content,
+    .view-header,
+    .view-content {
+        background-color: var(--background-primary-alt) !important;
+        background: var(--background-primary-alt) !important;
+    }
+    .workspace-sidedock-vault-profile { border-top: none !important; }
+    .workspace-tab-container         { background-color: var(--background-primary); }
+    .app-container                   { background-color: var(--background-primary) !important; }
+    .workspace-tab-header-container  { background-color: var(--background-primary) !important; box-shadow: none !important; }
+    .titlebar-button                 { background-color: var(--background-primary) !important; }
+    .titlebar-button.mod-close:hover { color: var(--text-error); background-color: rgba(var(--color-red-rgb), 0.2) !important; }
+    .titlebar-button-container       { background-color: var(--background-primary) !important; }
+    .workspace-ribbon                { background-color: var(--background-primary) !important; }
+    .sidebar-toggle-button           { background-color: var(--background-primary) !important; border-bottom: 0px solid var(--background-primary) !important; }
+    .workspace-ribbon::before        { background-color: var(--background-primary); border-bottom: 2px solid var(--background-primary) !important; }
+    .workspace-sidedock-vault-profile { background-color: var(--background-primary) !important; }
+}
+
+/* dark outside */
+.bubble.theme-dark.bubble-dark-outside {
+    .workspace-tab-header.is-active { background-color: var(--background-primary-alt); }
+}
+
+/* focused dark outside */
+.bubble.theme-dark.bubble-focused-dark-outside {
+    --ribbon-background: var(--tab-background);
+
+    .workspace-tab-header.is-active {
+        background-color: var(--tab-background);
+        outline: 2px solid var(--background-modifier-border-focus);
+    }
+    .workspace-leaf {
+        border: 2px solid var(--background-modifier-border-focus);
+        background-color: var(--background-primary-alt) !important;
+        background: var(--background-primary-alt) !important;
+    }
+    .workspace-leaf-content,
+    .view-header,
+    .view-content { border-color: var(--background-modifier-border-focus); }
+}
+
+/* dark inside */
+.bubble.theme-dark.bubble-dark-inside {
+    .workspace-tab-header.is-active  { background-color: var(--background-primary-alt) !important; }
+    .workspace-ribbon                { background-color: var(--background-primary-alt) !important; }
+    .sidebar-toggle-button           { background-color: var(--background-primary-alt) !important; border-bottom: 0px solid var(--background-primary-alt) !important; }
+    .workspace-ribbon::before        { background-color: var(--background-secondary-alt); border-bottom: 2px solid var(--background-primary-alt) !important; }
+    .workspace-sidedock-vault-profile { background-color: var(--background-primary-alt) !important; }
 }
 
 /* focused dark inside */
 .bubble.theme-dark.bubble-border {
     --tab-background: var(--background-primary);
+
     .workspace-tab-header.is-active {
         outline: 2px solid var(--background-modifier-border-focus) !important;
         background-color: var(--background-primary) !important;
     }
-
     .workspace-leaf {
         border: 2px solid var(--background-modifier-border-focus) !important;
         --tab-background: var(--background-primary);
         background-color: var(--tab-background);
     }
-    .workspace-sidedock-vault-profile {
-        background-color: var(--background-primary-alt) !important;
-    }
-    .workspace-ribbon {
-        background-color: var(--background-primary-alt) !important;
-    }
+    .workspace-sidedock-vault-profile { background-color: var(--background-primary-alt) !important; }
+    .workspace-ribbon                 { background-color: var(--background-primary-alt) !important; }
 }
 
-/* dark outside */
-.bubble.theme-dark.bubble-focused-dark-outside {
-    --ribbon-background: var(--tab-background);
-    
-    --tab-background: var(--background-primary-alt);
-    .workspace-tab-header.is-active {
-        background-color: var(--tab-background);
-        outline: 2px solid var(--background-modifier-border-focus);
-    }
-
-    .workspace-leaf {
-        border: 2px solid var(--background-modifier-border-focus);
-        border-radius: 20px;
-        background-color: var(--background-primary-alt) !important;
-        background: var(--background-primary-alt) !important;
-    }
-
-    .workspace-leaf-content,
-    .view-header,
-    .view-content {
-        border-color: var(--background-modifier-border-focus);
-        background-color: var(--background-primary-alt) !important;
-        background: var(--background-primary-alt) !important;
-    }
-
-    .workspace-sidedock-vault-profile {
-        border-top: none !important;
-        /* background-color: none !important;
-        background: none !important; */
-    }
-
-    .workspace-tab-container {
-        background-color: var(--background-primary);
-    }
-
-    .app-container {
-        background-color: var(--background-primary) !important;
-    }
-
-    .workspace-tab-header-container {
-        background-color: var(--background-primary) !important;
-        box-shadow: none !important;
-    }
-
-    .titlebar-button {
-        background-color: var(--background-primary) !important;
-    }
-
-    .titlebar-button.mod-close:hover {
-        color: var(--text-error);
-        background-color: rgba(var(--color-red-rgb), 0.2) !important;
-    }
-
-    .titlebar-button-container {
-        background-color: var(--background-primary) !important;
-    }
-
-    .workspace-ribbon {
-        background-color: var(--background-primary) !important;
-    }
-
-    .sidebar-toggle-button {
-        background-color: var(--background-primary) !important;
-        border-bottom: 0px solid var(--background-primary) !important;
-    }
-
-    .workspace-ribbon::before {
-    background-color: var(--background-primary);
-    border-bottom: 2px solid var(--background-primary) !important;
-    }
-
-    .workspace-sidedock-vault-profile {
-        background-color: var(--background-primary) !important;
-    }
-}
-
-/* dark outside */
-.bubble.theme-dark.bubble-dark-outside {
-    --tab-background: var(--background-primary-alt);
-    .workspace-tab-header.is-active {
-        background-color: var(--background-primary-alt);
-    }
-
-    .workspace-leaf {
-        border-radius: 20px;
-        background-color: var(--tab-background) !important;
-        background: var(--tab-background) !important;
-
-        --tab-background: var(--background-primary-alt);
-    }
-
-    .workspace-leaf-content,
-    .view-header,
-    .view-content {
-        background-color: var(--background-primary-alt) !important;
-        background: var(--background-primary-alt) !important;
-    }
-
-    .workspace-sidedock-vault-profile {
-        border-top: none !important;
-    }
-
-    .workspace-tab-container {
-        background-color: var(--background-primary);
-    }
-
-    .app-container {
-        background-color: var(--background-primary) !important;
-    }
-
-    .workspace-tab-header-container {
-        background-color: var(--background-primary) !important;
-        box-shadow: none !important;
-    }
-
-    .titlebar-button {
-        background-color: var(--background-primary) !important;
-    }
-
-    .titlebar-button.mod-close:hover {
-        color: var(--text-error);
-        background-color: rgba(var(--color-red-rgb), 0.2) !important;
-    }
-
-    .titlebar-button-container {
-        background-color: var(--background-primary) !important;
-    }
-
-    .workspace-ribbon {
-        background-color: var(--background-primary) !important;
-    }
-
-    .sidebar-toggle-button {
-        background-color: var(--background-primary) !important;
-        border-bottom: 0px solid var(--background-primary) !important;
-    }
-
-    .workspace-ribbon::before {
-    background-color: var(--background-primary);
-    border-bottom: 2px solid var(--background-primary) !important;
-    }
-
-    .workspace-sidedock-vault-profile {
-        background-color: var(--background-primary) !important;
-    }
-
-    /* .workspace-tab-header.is-active {
-        background-color: var(--background-primary) !important;
-    } */
-}
-
-.bubble.theme-dark.bubble-dark-inside {
-    .workspace-ribbon {
-        background-color: var(--background-primary-alt) !important;
-    }
-
-    .sidebar-toggle-button {
-        background-color: var(--background-primary-alt) !important;
-        border-bottom: 0px solid var(--background-primary-alt) !important;
-    }
-
-    .workspace-ribbon::before {
-    background-color: var(--background-secondary-alt);
-    border-bottom: 2px solid var(--background-primary-alt) !important;
-    }
-    .workspace-sidedock-vault-profile {
-        background-color: var(--background-primary-alt) !important;
-    }
-
-    .workspace-tab-header.is-active {
-        background-color: var(--background-primary-alt) !important;
-    }
-}
-
+/* light theme */
 .theme-light.bubble {
+    .workspace-tab-header.is-active { background-color: var(--background-primary) !important; }
     .workspace-tab-header.is-active:has(.mod-pinned) {
         background-color: var(--background-primary) !important;
         border-radius: 20px !important;
         height: 27px !important;
         padding-bottom: 2px !important;
     }
-
-    .workspace-tab-header.is-active {
-        background-color: var(--background-primary) !important;
-    }
 }
 
+/* === bubble shared === */
 .bubble {
-    /* pinned tabs */
     .workspace-tab-header.is-active:has(.mod-pinned) {
         margin-top: 2px !important;
-    }
-
-    .workspace-tab-header.is-active:has(.mod-pinned) {
         background-color: var(--tab-background) !important;
         border-radius: var(--button-radius, 20px) !important;
         height: 27px !important;
@@ -587,34 +386,26 @@
         border: 0 !important;
         border-radius: var(--button-radius, 20px) !important;
         height: 27px !important;
-        padding-bottom: -px !important;
-
         transition: all calc(var(--animation-duration) * 0.6667) ease;
     }
 
     .workspace-tab-header:has(.mod-pinned):hover {
         background-color: var(--tab-background) !important;
         border-radius: var(--button-radius, 20px) !important;
-        /* --tab-max-width: 52px !important; */
         transition: all calc(var(--animation-duration) * 0.6667) ease;
     }
 
-
-    .mod-sidedock
-        .workspace-tab-header-container-inner
-        .workspace-tab-header.is-active {
+    .mod-sidedock .workspace-tab-header-container-inner .workspace-tab-header.is-active {
         transform: translateY(2px) translateX(0px) !important;
         margin: -2px 2px !important;
     }
 
-    /* bubble rounded tab */
     .workspace-tab-header {
         margin: 3px 5px 5px 3px;
         --tab-curve: 0 !important;
         border-radius: var(--button-radius, 12px) !important;
         padding-left: 0px !important;
         transform: translateY(4px) !important;
-
         transition:
             border-radius calc(var(--animation-duration) * 1.3333) cubic-bezier(0.34, 1.56, 0.64, 1),
             margin calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 1.2),
@@ -628,14 +419,13 @@
         background-color: var(--tab-background-active);
         outline: 2px solid var(--background-modifier-border);
         margin: 3px 5px 5px 3px;
-        border-radius: var(--button-radius, 12px) !important;
+        border-radius: var(--button-radius, 8px) !important;
         border-bottom: none !important;
         padding-bottom: 0px !important;
         padding-left: 8px !important;
         padding-right: 8px !important;
         text-overflow: ellipsis;
         transform: translateY(-1px) !important;
-
         transition:
             border-radius calc(var(--animation-duration) * 1.6667) cubic-bezier(0.68, -0.55, 0.265, 1.55),
             margin calc(var(--animation-duration) * 1.6667) cubic-bezier(0.68, -0.55, 0.265, 1.55),
@@ -651,7 +441,7 @@
 
     .workspace-tab-header.is-active:hover {
         --tab-curve: 0 !important;
-        border-radius: var(--button-radius, 12px) !important;
+        border-radius: var(--button-radius, 8px) !important;
         transition:
             border-radius calc(var(--animation-duration) * 1) cubic-bezier(0.68, -0.55, 0.265, 1.55),
             background-color 0s ease,
@@ -660,15 +450,14 @@
 
     .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
         height: 100%;
-        border-radius: var(--button-radius, 12px) !important;
+        border-radius: var(--tab-sidebar-radius) !important;
         margin-right: 2px;
         margin-left: 2px;
         margin-top: -2px !important;
         transition: all calc(var(--animation-duration) * 1.3333) cubic-bezier(0.34, 1.56, 0.64, 1) !important;
     }
 
-    .workspace-split.mod-vertical.mod-root
-        .workspace-tab-header:not(.is-active):not(:has(.mod-pinned)) {
+    .workspace-split.mod-vertical.mod-root .workspace-tab-header:not(.is-active):not(:has(.mod-pinned)) {
         margin-left: 0px !important;
         margin-right: -3px !important;
         transition:
@@ -691,29 +480,19 @@
     }
 
     .workspace-tab-header {
-        transition-timing-function: cubic-bezier(
-            0.175,
-            0.885,
-            0.32,
-            1.2
-        ) !important;
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.2) !important;
     }
 
-    .workspace-tab-container:has(.cm-scroller) {
-        padding-bottom: 16px;
-    }
+    .workspace-tab-container:has(.cm-scroller) { padding-bottom: 16px; }
 
     .workspace-leaf {
-        margin-top: none !important;
         margin: 4px !important;
         border: 2px solid var(--background-modifier-border);
         border-radius: 20px;
         background-color: var(--background-primary);
     }
 
-    .workspace-sidedock-vault-profile {
-        border-top: none !important;
-    }
+    .workspace-sidedock-vault-profile { border-top: none !important; }
 
     .workspace-tab-container {
         background-color: var(--background-primary-alt);
@@ -721,22 +500,10 @@
         padding-top: 0px !important;
     }
 
-    .app-container {
-        background-color: var(--background-primary-alt) !important;
-    }
-
-    .horizontal-main-container {
-        padding: 3px;
-    }
-
-    .workspace-leaf-resize-handle {
-        --divider-width: 0px !important;
-    }
-
-    .workspace-tab-header-container {
-        background-color: var(--background-primary-alt) !important;
-        box-shadow: none !important;
-    }
+    .app-container                   { background-color: var(--background-primary-alt) !important; }
+    .horizontal-main-container       { padding: 3px; }
+    .workspace-leaf-resize-handle    { --divider-width: 0px !important; }
+    .workspace-tab-header-container  { background-color: var(--background-primary-alt) !important; box-shadow: none !important; }
 
     .titlebar-button {
         background-color: var(--background-primary-alt) !important;
@@ -751,14 +518,44 @@
         margin-left: 0 !important;
     }
 
-    .bubble .workspace-tab-header-container::after {
-        opacity: 0 !important;
-        width: 0 !important;
-        background: transparent !important;
+    /* sidebar tabs */
+    .workspace .mod-left-split .workspace-tab-header-container-inner {
+        transform: translateY(4px) !important;
+    }
+    
+    .workspace .mod-left-split .workspace-tab-header,
+    .workspace .mod-right-split .workspace-tab-header {
+        border-radius: var(--tab-sidebar-radius) !important;
+        transform: none !important;
+    }
+
+    .workspace .mod-left-split .workspace-tab-header:not(.is-active),
+    .workspace .mod-right-split .workspace-tab-header:not(.is-active) {
+        border-radius: var(--tab-sidebar-radius) !important;
+        transform: none !important;
+    }
+
+    .workspace .mod-left-split .workspace-tab-header.is-active,
+    .workspace .mod-right-split .workspace-tab-header.is-active {
+        border-radius: var(--tab-sidebar-radius) !important;
+        transform: scale(0.9) !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        outline: none;
+    }
+
+    .workspace .mod-left-split .workspace-tab-header:hover,
+    .workspace .mod-right-split .workspace-tab-header:hover {
+        border-radius: var(--tab-sidebar-radius) !important;
+        transform: scale(0.9) !important;
+        filter: brightness(1.5);
     }
 }
 
-/* === default tab === */
+/* ==================================================
+  DEFAULT TAB
+================================================== */
+
 .default-tab {
     .workspace-tab-header,
     .workspace-tab-header.is-active {
@@ -766,51 +563,18 @@
         padding-left: 0px !important;
         border-radius: 20px !important;
         corner-shape: initial !important;
-
         transition:
             margin calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 1.2),
             padding calc(var(--animation-duration) * 1.6667) cubic-bezier(0.68, -0.55, 0.265, 1.55),
             background-color 0s ease !important;
     }
 
-
-    /* border-bottom-left-radius: 0px !important;
-    border-bottom-right-radius: 0px !important; */
-
-    /* .workspace-tab-header.is-active {
-    --tab-curve: 18px !important;
-    color: var(--tab-text-color-focused-active);
-    background-color: var(--background-primary);
-    border-radius: 16px !important;
-
-    border-bottom: none !important;
-    padding: 0px 4px !important;
-    padding-bottom: 0px !important;
-    margin-inline-start: 7px;
-    transition: border-radius calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 4),
-                padding 0.3s ease,
-                margin 0.3s cubic-bezier(0.175, 0.885, 0.32, 4),
-                margin-inline-start 0s ease !important;
-    z-index: -1 !important;
-
-    padding: 0 10px !important;
-
-} */
-
-    /* old animation - old is gold */
     .workspace-tab-header.is-active {
         color: var(--tab-text-color-focused-active);
         background-color: var(--tab-background-active);
-
         border-bottom: none !important;
-
-        /* border-bottom-left-radius: 0 !important;
-    border-bottom-right-radius: 0 !important; */
-
         padding-bottom: 0px !important;
-
         text-overflow: ellipsis;
-
         transition:
             margin calc(var(--animation-duration) * 1.6667) cubic-bezier(0.68, -0.55, 0.265, 1.55),
             padding calc(var(--animation-duration) * 1) ease,
@@ -819,53 +583,18 @@
             background-color 0s ease !important;
     }
 
-    /* come here */
     .workspace-tab-header.is-active:not(.mod-pinned) {
         margin-left: 5px !important;
         margin-right: 5px !important;
-
         padding-left: 4px !important;
         padding-right: 4px !important;
     }
 
-    /* .workspace .mod-left-split .workspace-tab-header.is-active:not(.mod-pinned),
-    .workspace .mod-right-split .workspace-tab-header.is-active:not(.mod-pinned) {
-        margin-left: 5px !important;
-        margin-right: 5px !important;
-        margin-bottom: -10px !important;
+    .workspace-tab-header-container-inner { margin-top: 8px !important; }
 
-        padding: 2px 2px 4px 2px !important;
-        border-radius: 10px 10px 0px 0px !important;
-        
-        background-color: var(--background-secondary);
-        border: 1.5px solid var(--background-modifier-border);
-    } */
-
-/* .workspace .mod-left-split .workspace-tab-header.is-active::before,
-.workspace .mod-right-split .workspace-tab-header.is-active::after {
-    box-shadow:
-        inset 0 0 0 var(--tab-outline-width) var(--tab-outline-color),
-        0 0 0 calc(var(--tab-curve) * 4) var(--tab-background-active) !important;
-    z-index: 0 !important;
-} */
-
-    .workspace-tab-header-container-inner {
-        margin-top: 8px !important;
+    .workspace-tab-header:not(.is-active):not(:hover) {
+        transform: translateY(2px);
     }
-
-    /* .workspace-tab-header.is-active {
-    --tab-curve: 16px;
-    color: var(--tab-text-color-focused-active);
-    background-color: var(--tab-background-active);
-    border-radius: 20px !important;
-
-    border-bottom: none !important;
-    padding-bottom: 0px !important;
-    margin-left: 7px;
-    transition: border-radius calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 4),
-                 margin 0.4s cubic-bezier(0.175, 0.885, 0.32, 2) !important;
-
-} */
 
     .workspace-tab-header:hover {
         transition: color 0s cubic-bezier(0.175, 0.885, 0.32, 1.4) !important;
@@ -873,11 +602,6 @@
 
     .workspace-tab-header.is-active:hover {
         --tab-curve: 14px !important;
-        /* border-radius: 20px !important; */
-
-        /* border-bottom-left-radius: 0 !important;
-    border-bottom-right-radius: 0 !important; */
-
         transition:
             border-radius calc(var(--animation-duration) * 1) cubic-bezier(0.68, -0.55, 0.265, 1.55),
             background-color 0s ease,
@@ -889,20 +613,16 @@
         border-radius: 10px !important;
         border-top-left-radius: 15px !important;
         border-top-right-radius: 15px !important;
-        /* padding-bottom: 4px !important; */
         margin-right: 2px;
         margin-left: 2px;
         margin-top: -2px !important;
         transform: translateY(2px);
-
         transition: all calc(var(--animation-duration) * 1.3333) cubic-bezier(0.34, 1.56, 0.64, 1) !important;
     }
 
-    .workspace-split.mod-vertical.mod-root
-        .workspace-tab-header:not(.is-active):not(:has(.mod-pinned)) {
+    .workspace-split.mod-vertical.mod-root .workspace-tab-header:not(.is-active):not(:has(.mod-pinned)) {
         margin-left: 0px !important;
         margin-right: -3px !important;
-
         transition:
             margin-left calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 1.2),
             margin-right calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 1.2) !important;
@@ -915,7 +635,6 @@
             padding calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 1.2) !important;
     }
 
-    /* non-active tabs  hover */
     .workspace-tab-header:not(.is-active):hover {
         transform: translateY(-1px);
         transition:
@@ -923,19 +642,28 @@
             border-radius calc(var(--animation-duration) * 1) cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
     }
 
-    /* hpver -> no hover */
     .workspace-tab-header {
-        transition-timing-function: cubic-bezier(
-            0.175,
-            0.885,
-            0.32,
-            1.2
-        ) !important;
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.2) !important;
+    }
+
+    /* sidebar tabs — corner-shape: initial, fixed large radius */
+    .workspace .mod-left-split .workspace-tab-header,
+    .workspace .mod-right-split .workspace-tab-header {
+        corner-shape: initial !important;
+        border-radius: 14px !important;
+    }
+
+    .workspace .mod-left-split .workspace-tab-header.is-active,
+    .workspace .mod-right-split .workspace-tab-header.is-active {
+        corner-shape: initial !important;
+        border-radius: 14px !important;
     }
 }
 
+/* ==================================================
+  DEFAULT TAB ROUNDED
+================================================== */
 
-/* === default tab less rounded === */
 .default-tab-rounded {
     .workspace-tab-header {
         margin: 0px !important;
@@ -946,39 +674,34 @@
         transition: all calc(var(--animation-duration) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1) !important;
     }
 
-    /* Active tab spacing */
     .workspace-tab-header.is-active:not(.mod-pinned) {
         margin-left: 5px !important;
         margin-right: 5px !important;
         padding-left: 4px !important;
         padding-right: 4px !important;
-
         border: 1px solid var(--background-modifier-border);
-        transition: padding cubic-bezier(0.175, 0.885, 0.32, 2),
-                    margin cubic-bezier(0.175, 0.885, 0.32, 2);
+        transition:
+            padding cubic-bezier(0.175, 0.885, 0.32, 2),
+            margin cubic-bezier(0.175, 0.885, 0.32, 2);
     }
 
-    /* Side active tabs */
+    /* sidebar active — clamped radius, inherits corner-shape */
     .workspace .mod-left-split .workspace-tab-header.is-active:not(.mod-pinned),
     .workspace .mod-right-split .workspace-tab-header.is-active:not(.mod-pinned) {
         margin-left: 5px !important;
         margin-right: 5px !important;
         margin-bottom: -10px !important;
         padding: 2px 2px 4px 2px !important;
-        border-radius: var(--button-radius) var(--button-radius) 0px 0px !important;
+        border-radius: var(--tab-sidebar-radius) var(--tab-sidebar-radius) 0px 0px !important;
         background-color: var(--background-secondary);
         border: 1.5px solid var(--background-modifier-border);
     }
 
-    .workspace-tab-header-container-inner {
-        margin-top: 8px !important;
-    }
+    .workspace-tab-header-container-inner { margin-top: 8px !important; }
 
     .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
         height: 100%;
-        border-radius: 10px !important;
-        border-top-left-radius: 15px !important;
-        border-top-right-radius: 15px !important;
+        border-radius: 4px !important;
         margin-right: 2px;
         margin-left: 2px;
         margin-top: -2px !important;
@@ -986,7 +709,6 @@
     }
 
     .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:hover {
-        /* border: 2px solid red !important; */
         border-radius: 6px !important;
         transition: all calc(var(--animation-duration) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1) !important;
     }
@@ -994,13 +716,11 @@
     .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:active {
         border-radius: var(--button-radius) var(--button-radius) 0px 0px !important;
         corner-shape: var(--corner-shape);
-        background-color: var(--background-secondary);
+        background-color: var(--background-secondary) !important;
         margin-bottom: -4px !important;
         margin-top: 2px !important;
         padding: 10px 8px !important;
         padding-top: 14px !important;
-        opacity: 1 !important;
-        background-color: var(--background-secondary) !important;
         box-shadow: 0px 0px 0px 1.5px var(--background-modifier-border);
         transition: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1) !important;
     }
@@ -1024,9 +744,17 @@
         opacity: 1 !important;
     }
 
-    .workspace-tab-header:not(.is-active)  {
+    .workspace-tab-header:not(.is-active) {
         transform: translateY(8px);
         opacity: 0.6 !important;
+    }
+
+    /* sidebar inactive — clamped radius, resets transform/opacity bleed, inherits corner-shape */
+    .workspace .mod-left-split .workspace-tab-header,
+    .workspace .mod-right-split .workspace-tab-header {
+        border-radius: var(--tab-sidebar-radius) var(--tab-sidebar-radius) 0 0 !important;
+        transform: none !important;
+        opacity: 1 !important;
     }
 }
 
@@ -1041,7 +769,3 @@
     border-radius: 3px 3px 0 0 !important;
     corner-shape: bevel !important;
 }
-
-/* DO: Ease-out for all color changes */
-/* DO: Add a dropdown for cssclasses case style */
-

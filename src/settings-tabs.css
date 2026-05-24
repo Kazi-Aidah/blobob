@@ -149,7 +149,7 @@ body {
     --animation-duration: calc(850ms - var(--animation-speed-raw));
     --nav-indentation-guide-width: 0px;
     --indentation-guide-width: 0px;
-    --indentation-guide-color: var(--text-muted);
+    --indentation-guide-color: var(--background-modifier-border);
 }
 
 .setting-item {
