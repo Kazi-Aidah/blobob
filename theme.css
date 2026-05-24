@@ -5548,6 +5548,35 @@ body:is(.hexagon-tiptip) .workspace-tab-header-container-inner {
     padding-left: 12px !important;
 }
 
+
+/* move right sidedock when open */
+.sidebar-toggle-button.mod-right,
+.workspace-tab-header-new-tab {
+    transform: translateX(40px) !important;
+}
+
+.workspace-tab-header-container::after {
+    /* border: 2px solid red !important; */
+    padding-left: -70px !important;
+    transform: translateX(20px);
+}
+
+/* .workspace-split.mod-horizontal.mod-sidedock.mod-right-split {
+    border: 2px solid red !important;
+} */
+
+/* When the right dock is visible (not collapsed), reset the transform */
+body:has(.workspace-split.mod-right-split:not(.is-sidedock-collapsed)) .sidebar-toggle-button.mod-right,
+body:has(.workspace-split.mod-right-split:not(.is-sidedock-collapsed)) .workspace-tab-header-new-tab {
+    transform: translateX(0px) !important;
+}
+
+/* default collapsed state */
+.sidebar-toggle-button.mod-right,
+.workspace-tab-header-new-tab {
+    transform: translateX(40px) !important;
+}
+
 /* ORDERING & TAB POSITION */
 
 /* orders of tab header container */
@@ -5571,7 +5600,8 @@ body:is(.hexagon-tiptip) .workspace-tab-header-container-inner {
     /* padding: 0 6px !important; */
     margin-right: 6px !important;
     background: transparent !important;
-    order: 999; /* force at the end */
+    /* order: 999;  */
+    /* force at the end */
     flex: 0 0 auto;
 }
 

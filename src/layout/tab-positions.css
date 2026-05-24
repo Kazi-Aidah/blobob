@@ -21,7 +21,8 @@
     /* padding: 0 6px !important; */
     margin-right: 6px !important;
     background: transparent !important;
-    order: 999; /* force at the end */
+    /* order: 999;  */
+    /* force at the end */
     flex: 0 0 auto;
 }
 
