@@ -51,6 +51,11 @@ body:not(.verti-folder) .tree-item-self:is(.nav-folder-title) .tree-item-inner {
     padding-inline-start: 30px !important;
 }
 
+.tree-item-self:hover {
+    filter: brightness(1.1);
+    color: var(--color-accent-2) !important;
+}
+
 .tree-item-self.is-active {
     border-radius: var(--button-radius) !important;
     font-weight: bold !important;

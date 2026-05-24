@@ -7642,7 +7642,181 @@ body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+9
     box-shadow: none !important;
     border: none;
 }
+:root {
+    --nav-folder-radius: var(--button-radius);
+    --nav-file-radius: var(--button-radius);
+}
 
+/* all file paddin */
+.tree-item-self:not(.nav-folder-title) .tree-item-icon {
+  margin-left: -10px !important;
+}
+.tree-item-self:not(.nav-folder-title) .tree-item-inner {
+  margin-left: 12px !important;
+}
+
+/* all folder paddin except verti foldy */
+body:not(.verti-folder) .tree-item-self:is(.nav-folder-title) .tree-item-icon {
+  margin-left: -22px !important;
+}
+body:not(.verti-folder) .tree-item-self:is(.nav-folder-title) .tree-item-inner {
+  margin-left: 0px !important;
+}
+
+/* center folder title + fix paddin */
+.center-folder-title .nav-folder-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center-folder-title .tree-item-self:is(.nav-folder-title) .tree-item-inner {
+  margin-left: -22px !important;
+}
+.center-folder-title .tree-item-self:is(.nav-folder-title) .tree-item-icon {
+  margin-left: -98% !important;
+}
+
+
+/* active file styling */
+.tree-item-self {
+    border-radius: var(--button-radius) !important;
+    margin-inline-start: 0 !important;
+    padding-inline-start: 20px !important;
+    transition: font-weight 0.2s ease, background-color 0.2s ease, color 0.2s ease, filter 0.2s ease;
+}
+
+.nav-file-title {
+    margin-inline-start: 0 !important;
+    padding-inline-start: 20px !important;
+}
+
+.nav-folder-title {
+    margin-inline-start: 0 !important;
+    padding-inline-start: 30px !important;
+}
+
+.tree-item-self:hover {
+    filter: brightness(1.1);
+    color: var(--color-accent-2) !important;
+}
+
+.tree-item-self.is-active {
+    border-radius: var(--button-radius) !important;
+    font-weight: bold !important;
+    background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
+    color: var(--color-accent-1) !important;
+}
+
+.tree-item-self.is-active:hover {
+    font-weight: bold !important;
+    background-color: hsla(var(--interactive-accent-hsl), 0.3) !important;
+    color: var(--color-accent-2) !important;
+}
+
+/* bigger active file */
+.bigger-active-file .tree-item-self.is-active {
+    padding: 10px 0 !important;
+}
+
+/* ===== FILE EXPLORER BORDER RADIUS ===== */
+.tree-item-self:has(.nav-file-title),
+.nav-file-title {
+    border-radius: var(--nav-file-radius) !important;
+}
+
+.nav-folder,
+.nav-folder-title {
+    border-radius: var(--nav-folder-radius) !important;
+}
+
+.tree-item.nav-folder,
+.tree-item {
+    margin-bottom: 4px;
+}
+
+/* ===== FILE CENTER ALIGNMENT ===== */
+.center-active-file-title .nav-file-title.is-active .tree-item-icon {
+    margin-inline-start: -20px !important;
+}
+
+.center-active-file-title .tree-item-self.is-active {
+    transition: font-weight 0.2s ease, background-color 0.2s ease, color 0.2s ease, filter 0.2s ease !important;
+    margin-inline-start: 0 !important;
+    padding-inline-start: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.center-active-file-title .tree-item-self.is-active .tree-item-icon {
+    position: static !important;
+    margin-right: 2px;
+}
+
+
+
+
+
+/* ==================================================
+   NAV HIDE TEXT
+================================================== */
+
+@media (min-width: 600px) {
+    .nav-header {
+        /* margin-top: -30px; */
+        transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.2);
+        border-bottom: 1.5px solid var(--background-modifier-border);
+    }
+
+    .nav-buttons-container {
+        position: relative;
+        transition: opacity calc(var(--animation-duration) * 6.6667) ease;
+        transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.6);
+        margin: -6.2px;
+    }
+
+    /* Hide the buttons and show text */
+    .workspace-leaf-content[data-type="file-explorer"]
+        .nav-buttons-container::after {
+        content: var(--nav-hide-text) !important;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--text-muted);
+        opacity: 1;
+        pointer-events: none;
+        transition: opacity 0s ease;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* On hover, show buttons + hide text */
+    .workspace-leaf-content[data-type="file-explorer"]
+        .nav-buttons-container:hover {
+        opacity: 1;
+        padding: 10px 0 !important;
+    }
+
+    .workspace-leaf-content[data-type="file-explorer"]
+        .nav-buttons-container:hover::after {
+        opacity: 0;
+    }
+
+    /* Initially hide buttons */
+    .workspace-leaf-content[data-type="file-explorer"]
+        .nav-buttons-container:not(:hover)
+        > * {
+        opacity: 0;
+        transition: opacity 0ms ease;
+        margin: auto !important;
+    }
+
+    .workspace-leaf-content[data-type="file-explorer"] .nav-files-container {
+        padding-top: 10px;
+    }
+}
 /* ==================================================
    PROPERTIES
 ================================================== */
