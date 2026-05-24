@@ -3,6 +3,7 @@
     --nav-file-radius: var(--button-radius);
 }
 
+
 /* all file paddin */
 .tree-item-self:not(.nav-folder-title) .tree-item-icon {
   margin-left: -10px !important;
@@ -13,10 +14,10 @@
 
 /* all folder paddin except verti foldy */
 body:not(.verti-folder) .tree-item-self:is(.nav-folder-title) .tree-item-icon {
-  margin-left: -22px !important;
+  margin-left: -16px !important;
 }
 body:not(.verti-folder) .tree-item-self:is(.nav-folder-title) .tree-item-inner {
-  margin-left: 0px !important;
+  margin-left: 6px !important;
 }
 
 /* center folder title + fix paddin */

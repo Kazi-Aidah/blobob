@@ -17,12 +17,30 @@
   margin-bottom: 0px !important;
 }
 
+/* folder padding slider */
+.nav-folder-title {
+    padding: var(--folder-padding) !important;
+}
+
 /* ----- Bordered Folders ----- */
 body:not(.disable-foldy-basic-bordered) {
     .nav-folder {
     background-color: var(--background-secondary-alt) !important;
     border: 2px solid var(--background-modifier-border-focus);
     margin-bottom: 6px !important;
+    transition: all 0.2s ease;
+    }
+
+    .nav-folder-title {
+        transition: all 0.2s ease !important;
+    }
+
+    .nav-folder:not(.is-collapsed) .nav-folder-title {
+    box-shadow: 0px 1.5px 0px var(--background-modifier-border-focus);
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    margin-bottom: 6px !important;
+    transition: all 0.2s ease;
     }
 }
 
@@ -218,6 +236,7 @@ body:is(.folder-dot-accent, .folder-dot-rainbow)
     height: 8px !important;
     border-radius: 50%;
     content: "";
+    margin-left: 10px;
 }
 
 /* ── ACCENT DOT ── */
@@ -388,34 +407,4 @@ body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+9
     color: var(--text-normal) !important;
     border: 2px solid var(--background-modifier-border);
     box-shadow: none;
-}
-
-.huge .nav-folder-title {
-    --icon-color: var(--color-accent-1);
-    --nav-collapse-icon-color: var(--color-accent-1);
-    --nav-collapse-icon-color-collapsed: var(--color-accent-1);
-
-    border-radius: var(--nav-folder-radius) !important;
-    padding-top: 20px !important;
-    padding-bottom: 20px !important;
-    padding-left: 40px !important;
-
-    background-color: var(--background-secondary-alt);
-    box-shadow: none !important;
-    border: none;
-}
-
-.thick .nav-folder-title {
-    --icon-color: var(--color-accent-1);
-    --nav-collapse-icon-color: var(--color-accent-1);
-    --nav-collapse-icon-color-collapsed: var(--color-accent-1);
-
-    border-radius: var(--nav-folder-radius) !important;
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
-    padding-left: 30px !important;
-
-    background-color: var(--background-secondary-alt);
-    box-shadow: none !important;
-    border: none;
 }
