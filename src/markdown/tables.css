@@ -1,0 +1,147 @@
+/* ===== TABLE ===== */
+.markdown-source-view.mod-cm6 .table-wrapper {
+    width: 95% !important;
+    max-height: none !important;
+    outline: 3px solid var(--table-border-color);
+}
+
+.markdown-preview-view table {
+    border: 3px solid var(--table-border-color);
+}
+
+td,
+th {
+    outline: 1px solid var(--table-border-color);
+}
+
+/* ===== TABLEQUAL – equal-width columns ===== */
+.table-equal.markdown-preview-view table,
+.table-equal.markdown-source-view.mod-cm6 .cm-table-widget table {
+    width: 100% !important;
+    table-layout: fixed !important; /* FORCE equal column widths */
+    border-collapse: collapse;
+}
+
+.table-equal.markdown-preview-view table td,
+.table-equal.markdown-preview-view table th,
+.table-equal.markdown-source-view.mod-cm6 .cm-table-widget td,
+.table-equal.markdown-source-view.mod-cm6 .cm-table-widget th {
+    white-space: normal !important;
+    word-break: break-word;
+    padding: 6px;
+}
+
+/* ===== naturale resizing ===== */
+.markdown-preview-view table,
+.markdown-source-view.mod-cm6 .cm-table-widget table {
+    width: 100% !important;
+    table-layout: auto !important; /* allow natural sizing okie? */
+
+    /* margin-top: -30px !important; */
+}
+
+.markdown-preview-view table td,
+.markdown-preview-view table th,
+.markdown-source-view.mod-cm6 .cm-table-widget td,
+.markdown-source-view.mod-cm6 .cm-table-widget th {
+    white-space: normal !important;
+    word-break: break-word;
+}
+
+/* ===== TABLE VISUALS ====== */
+
+/* === Live Preview: SPACE INSIDE CELLS === */
+.markdown-source-view.mod-cm6 .table-cell-wrapper {
+    margin: 4px 6px;
+}
+
+.cm-html-embed thead > tr > th,
+.markdown-rendered thead > tr > th,
+.cm-html-embed tbody > tr > td,
+.markdown-rendered tbody > tr > td {
+    border-radius: 0;
+}
+
+.cm-html-embed thead > tr > th,
+.markdown-rendered thead > tr > th,
+.cm-html-embed tbody > tr > td,
+.markdown-rendered tbody > tr > td {
+    border-radius: 0;
+}
+
+/* === Reading View === */
+.markdown-preview-view table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 0;
+    outline: 1px solid var(--table-border-color);
+    overflow: hidden;
+    margin: 1em 0;
+}
+
+.markdown-preview-view th,
+.markdown-preview-view td {
+    padding: 8px 12px;
+}
+
+/* Table headers: darkened background */
+.markdown-preview-view table th,
+.markdown-source-view.mod-cm6 .cm-table-widget th {
+    --titlebar-background-focused: var(--titlebar-background);
+    color: var(--text-normal);
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+/* === Horizontal lines only mode === */
+
+.table-hor-lines-only.markdown-preview-view table td,
+.table-hor-lines-only.markdown-preview-view table th,
+.table-hor-lines-only.markdown-source-view.mod-cm6 .cm-table-widget td,
+.table-hor-lines-only.markdown-source-view.mod-cm6 .cm-table-widget th {
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+}
+
+.table-hor-lines-only.markdown-preview-view table tr + tr td,
+.table-hor-lines-only.markdown-source-view.mod-cm6 .cm-table-widget tr + tr td {
+    border-top: 1.5px solid var(--background-modifier-border) !important;
+}
+
+.table-hor-lines-only.markdown-preview-view table th,
+.table-hor-lines-only.markdown-source-view.mod-cm6 .cm-table-widget th {
+    border-bottom: 2px solid var(--background-modifier-border) !important;
+}
+
+.table-hor-lines-only td,
+.table-hor-lines-only th {
+    outline: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+}
+
+/* === Vertical lines only mode === */
+
+.table-ver-lines-only.markdown-preview-view table td,
+.table-ver-lines-only.markdown-preview-view table th,
+.table-ver-lines-only.markdown-source-view.mod-cm6 .cm-table-widget td,
+.table-ver-lines-only.markdown-source-view.mod-cm6 .cm-table-widget th {
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+.table-ver-lines-only.markdown-preview-view table td,
+.table-ver-lines-only.markdown-preview-view table th,
+.table-ver-lines-only.markdown-source-view.mod-cm6 .cm-table-widget td,
+.table-ver-lines-only.markdown-source-view.mod-cm6 .cm-table-widget th {
+    border-left: 1.5px solid var(--background-modifier-border) !important;
+    border-right: 1.5px solid var(--background-modifier-border) !important;
+}
+
+.table-ver-lines-only td,
+.table-ver-lines-only th {
+    outline: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+}

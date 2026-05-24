@@ -80,13 +80,20 @@ I absolutely love how this looks.
 ![](assets/toggle.gif)
 
 ## Checkboxes
-![](assets/checkboxes.png)
-![](assets/clicking-checkbox.gif)
+![](assets/CheckboxesMay26.png)
+![](assets/CheckboxesMay26.gif)
 
 ## Hide Nav Buttons
 ![](assets/text-hide-nav.gif)
 
-## Animated Tabs
+## Vertical Folder Style
+![](assets/Verti-Folders.gif)
+
+## Bouncy Folders (+ Lots of Folder Styles!)
+![](assets/Bouncy-Folders.gif)
+
+
+## Animated Tabs (3 Styles)
 ![](assets/tabs.gif)
 
 I personally have `Alt + <` and `Alt + >` for easy tab navigation.

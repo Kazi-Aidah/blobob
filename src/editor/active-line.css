@@ -1,0 +1,135 @@
+/* ==================================================
+   ACTIVE LINE
+================================================== */
+
+.text-before-active-line .cm-line.cm-active::before {
+  content: var(--before-active-line);
+  color: var(--before-active-line-color);
+  margin-right: 6px;
+  margin-left: var(--before-active-line-margin);
+}
+
+.highlight-active-line .cm-active.cm-line {
+    background-color: hsl(var(--interactive-accent-hsl), 0.2) !important;
+
+    /* padding-left: 10px; */
+    border-radius: 0;
+    border-inline-start: 3px solid hsl(var(--interactive-accent-hsl), 0.8);
+
+    padding-inline-start: 6px;
+
+    transition: background-color 0s ease;
+}
+
+.highlight-active-line-with-face .cm-active.cm-line::before {
+    transition:
+        background-color calc(var(--animation-duration) * 0.6667) ease,
+        background-image calc(var(--animation-duration) * 66.6667) !important;
+    transition-delay: 2s !important;
+    padding: 0;
+    margin-inline: -28px 10px;
+
+    content: "";
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 12px;
+    background-color: var(--color-yellow) !important;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='13' cy='60' r='16' fill='orange'/><circle cx='87' cy='58' r='16' fill='orange'/><path d='M15 40 Q25 65 40 40' stroke='black' stroke-width='10' fill='none' stroke-linecap='round'/><path d='M60 40 Q65 65 85 40' stroke='black' stroke-width='10' fill='none' stroke-linecap='round'/><ellipse cx='50' cy='78' rx='15' ry='18' fill='maroon'/></svg>");
+    background-size: 70% 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    z-index: 0 !important;
+}
+
+.highlight-active-line-with-face .cm-active.cm-line {
+    border-inline-start: 3px solid hsl(var(--interactive-accent-hsl), 0.8);
+}
+
+.center-active-line .cm-active.cm-line {
+    text-align: center;
+}
+
+.huge-text-active-line .cm-active {
+    font-size: larger;
+}
+
+
+/* FLOAT INACTIVE */
+.float-inactive
+    .cm-line:not(.cm-active, .HyperMD-codeblock, .HyperMD-codeblock-bg, .HyperMD-codeblock-end, .HyperMD-codeblock-end-bg) {
+    animation: float-up-down calc(var(--animation-duration) * 10) ease-in-out infinite;
+}
+
+.float-inactive
+    .cm-line:not(.cm-active, .HyperMD-codeblock, .HyperMD-codeblock-bg, .HyperMD-codeblock-end, .HyperMD-codeblock-end-bg):nth-child(
+        8n + 1
+    ) {
+    animation-delay: 0s;
+}
+
+.float-inactive
+    .cm-line:not(.cm-active, .HyperMD-codeblock, .HyperMD-codeblock-bg, .HyperMD-codeblock-end, .HyperMD-codeblock-end-bg):nth-child(
+        8n + 2
+    ) {
+    animation-delay: 0.15s;
+}
+
+.float-inactive
+    .cm-line:not(.cm-active, .HyperMD-codeblock, .HyperMD-codeblock-bg, .HyperMD-codeblock-end, .HyperMD-codeblock-end-bg):nth-child(
+        8n + 3
+    ) {
+    animation-delay: 0.3s;
+}
+
+.float-inactive
+    .cm-line:not(.cm-active, .HyperMD-codeblock, .HyperMD-codeblock-bg, .HyperMD-codeblock-end, .HyperMD-codeblock-end-bg):nth-child(
+        8n + 4
+    ) {
+    animation-delay: 0.45s;
+}
+
+.float-inactive
+    .cm-line:not(.cm-active, .HyperMD-codeblock, .HyperMD-codeblock-bg, .HyperMD-codeblock-end, .HyperMD-codeblock-end-bg):nth-child(
+        8n + 5
+    ) {
+    animation-delay: 0.6s;
+}
+
+.float-inactive
+    .cm-line:not(.cm-active, .HyperMD-codeblock, .HyperMD-codeblock-bg, .HyperMD-codeblock-end, .HyperMD-codeblock-end-bg):nth-child(
+        8n + 6
+    ) {
+    animation-delay: 0.75s;
+}
+
+.float-inactive
+    .cm-line:not(.cm-active, .HyperMD-codeblock, .HyperMD-codeblock-bg, .HyperMD-codeblock-end, .HyperMD-codeblock-end-bg):nth-child(
+        8n + 7
+    ) {
+    animation-delay: 0.9s;
+}
+
+.float-inactive
+    .cm-line:not(.cm-active, .HyperMD-codeblock, .HyperMD-codeblock-bg, .HyperMD-codeblock-end, .HyperMD-codeblock-end-bg):nth-child(
+        8n + 8
+    ) {
+    animation-delay: 1.05s;
+}
+
+@keyframes float-up-down {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* dim inactive */
+.dim-inactive .cm-line:not(.cm-active) {
+    opacity: 0.6;
+}
