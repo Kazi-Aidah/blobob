@@ -18,7 +18,7 @@ body.custom-bullets-enabled {
     }
 
     /* Reading Mode Bullets */
-    ul > li::before {
+    ul > li:not(.task-list-item)::before {
         content: var(--custom-bullet-level-1, "+") !important;
         font-weight: 500 !important;
         font-size: 20px !important;
@@ -26,14 +26,14 @@ body.custom-bullets-enabled {
         color: var(--italic-color) !important;
     }
 
-    ul ul > li::before {
+    ul ul > li:not(.task-list-item)::before {
         content: var(--custom-bullet-level-2, "-") !important;
         font-weight: normal !important;
         margin-right: 0.5em !important;
         color: var(--text-faint) !important;
     }
 
-    ul ul ul > li::before {
+    ul ul ul > li:not(.task-list-item)::before {
         content: var(--custom-bullet-level-3, "=") !important;
         font-weight: normal !important;
         margin-right: 0.5em !important;
@@ -53,10 +53,10 @@ body.custom-bullets-enabled {
         /* Keep default numbering */
     }
 
-    ul ul > li::before,
-    ul ol > li::before,
-    ol ul > li::before,
-    ol ol > li::before {
+    ul ul > li:not(.task-list-item)::before,
+    ul ol > li:not(.task-list-item)::before,
+    ol ul > li:not(.task-list-item)::before,
+    ol ol > li:not(.task-list-item)::before {
         content: var(--custom-bullet-level-2, "-") !important;
         font-weight: normal !important;
         margin-right: 0.5em !important;

@@ -21,7 +21,7 @@ body:not(.view-header) .button-bordered button,
 }
 
 .button-bordered .clickable-icon:active {
-    border-radius: var(--clicky-radius) !important;
+    border-radius: var(--button-radius) !important;
     corner-shape: var(--corner-shape) !important;
     transform: scale(0.8);
     border: 2px solid currentcolor !important;

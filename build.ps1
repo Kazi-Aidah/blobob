@@ -6,6 +6,11 @@ $srcDir = "src"
 $files = @(
     "base/style-settings.css",
     "base/theme-colors.css",
+    "components/buttons/global-radius.css",
+    "components/buttons/button-animations.css",
+    "components/buttons/button-styles.css",
+    "components/buttons/icon-styles.css",
+    "components/buttons/select.css",
     "base/elements.css",
     "base/toggles.css",
     "base/inputs.css",
@@ -35,11 +40,6 @@ $files = @(
     "markdown/links.css",
     "markdown/codes.css",
     "markdown/embeds.css",
-    "components/buttons/global-radius.css",
-    "components/buttons/button-animations.css",
-    "components/buttons/button-styles.css",
-    "components/buttons/icon-styles.css",
-    "components/buttons/select.css",
     "others/cssclasses.css",
     "others/plugin-support.css",
     "others/hidden.css"

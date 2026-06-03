@@ -1,6 +1,20 @@
 /* =========================
 ///////// ICON STYLES
 ========================= */
+.clickable-icon {
+    border-radius: var(--button-radius) !important;
+    corner-shape: var(--corner-shape) !important;
+}
+body.hexagon-tiptip .clickable-icon { 
+    border-radius: 6px !important;
+    corner-shape: bevel !important;
+}
+body.scoop-tiptip .clickable-icon { 
+    border-radius: 6px !important;
+    corner-shape: scoop !important;
+}
+
+
 .filled svg {
     fill: currentcolor;
     fill-opacity: 0.25;

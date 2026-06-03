@@ -196,7 +196,8 @@ img {
 .hexagon-tiptip .prompt,
 .hexagon-tiptip .notice,
 .hexagon-tiptip .kanban-plugin__lane,
-.hexagon-tiptip .popover {
+.hexagon-tiptip .popover,
+.hexagon-tiptip .metadata-container {
     corner-shape: bevel !important;
     border-radius: 12px !important;
 
@@ -239,7 +240,8 @@ img {
 .scoop-tiptip .prompt,
 .scoop-tiptip .notice,
 .scoop-tiptip .kanban-plugin__lane,
-.scoop-tiptip .popover {
+.scoop-tiptip .popover,
+.scoop-tiptip .metadata-container {
     corner-shape: scoop !important;
     border-radius: 7px !important;
 
@@ -282,7 +284,8 @@ img {
 .squircle-tiptip .prompt,
 .squircle-tiptip .notice,
 .squircle-tiptip .kanban-plugin__lane,
-.squircle-tiptip .popover {
+.squircle-tiptip .popover,
+.squircle-tiptip .metadata-container {
     corner-shape: squircle !important;
     border-radius: 12px !important;
 
@@ -365,7 +368,6 @@ img {
 }
 
 .eye-tiptip .workspace-leaf:has(.cm-editor) {
-  border: 2px solid red !important;
   border-radius: 90% !important;
 }
 

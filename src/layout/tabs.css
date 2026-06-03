@@ -780,11 +780,11 @@
 }
 
 /* move sidebar containers when */
-body:is(.scoop-tiptip) .workspace-tab-header-container-inner {
+body:is(.scoop-tiptip).bubble .workspace-tab-header-container-inner {
     padding-left: 4px !important;
 }
 
-body:is(.hexagon-tiptip) .workspace-tab-header-container-inner {
+body:is(.hexagon-tiptip).bubble .workspace-tab-header-container-inner {
     padding-left: 12px !important;
 }
 
@@ -799,6 +799,13 @@ body:is(.hexagon-tiptip) .workspace-tab-header-container-inner {
     /* border: 2px solid red !important; */
     padding-left: -70px !important;
     transform: translateX(20px);
+}
+
+/* fix newtab plus button when two tabs split vertically */
+.workspace-tabs.mod-top:not(.mod-top-right-space) .sidebar-toggle-button.mod-right,
+.workspace-tabs.mod-top:not(.mod-top-right-space) .workspace-tab-header-new-tab {
+    transform: translateX(20px) !important;
+    /* border: 2px solid red; */
 }
 
 /* .workspace-split.mod-horizontal.mod-sidedock.mod-right-split {
@@ -818,4 +825,28 @@ body:has(.workspace-split.mod-right-split:not(.is-sidedock-collapsed)) .workspac
 }
 
 
-/* compact tabs */
+/* forcing hexagon on tabs */
+body.default-tab-rounded.hexagon-tiptip .workspace-tab-header {
+    corner-shape: bevel !important;
+}
+body.bubble.hexagon-tiptip .workspace-tab-header {
+    border-radius: 6px !important;
+    corner-shape: bevel !important;
+}
+body.bubble.hexagon-tiptip .workspace-leaf {
+    border-radius: 12px !important;
+    corner-shape: bevel !important;
+}
+
+/* forcing scoop on tabs */
+body.default-tab-rounded.scoop-tiptip .workspace-tab-header {
+    corner-shape: scoop !important;
+}
+body.bubble.scoop-tiptip .workspace-tab-header {
+    border-radius: 8px !important;
+    corner-shape: scoop !important;
+}
+body.bubble.scoop-tiptip .workspace-leaf {
+    border-radius: 12px !important;
+    corner-shape: scoop !important;
+}

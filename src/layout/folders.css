@@ -45,7 +45,7 @@ body:not(.disable-foldy-basic-bordered) {
 }
 
 .nav-folder-title {
-  --nav-folder-radius: var(--button-radius);
+  /* --nav-folder-radius: var(--button-radius); */
 
   border-radius: var(--nav-folder-radius) !important;
   corner-shape: var(--corner-shape) !important;
@@ -72,9 +72,32 @@ body:not(.disable-foldy-basic-bordered) {
   transition: border-radius 0.2s ease;
 }
 
+.hexagon-tiptip .nav-folder, 
+.hexagon-tiptip .nav-folder-title { 
+    corner-shape: bevel !important; 
+    border-radius: 6px !important; 
+}
+.scoop-tiptip .nav-folder, 
+.scoop-tiptip .nav-folder-title { 
+    corner-shape: scoop !important;
+    border-radius: 6px !important; 
+}
+
+body.verti-folder.hexagon-tiptip .nav-folder, 
+body.verti-folder.hexagon-tiptip.nav-folder-title { 
+    corner-shape: bevel !important; 
+    border-radius: 10px !important; 
+}
+body.verti-folder.scoop-tiptip .nav-folder, 
+body.verti-folder.scoop-tiptip .nav-folder-title { 
+    corner-shape: scoop !important;
+    border-radius: 10px !important; 
+}
+
+
 /* bordered folder & active file adjustments */
-.scoop-tiptip .nav-folder, .scoop-tiptip .tree-item-self { --button-radius: 6px; --nav-folder-radius: 8px; }
-.hexagon-tiptip .nav-folder, .hexagon-tiptip .tree-item-self { --button-radius: 6px; --nav-folder-radius: 8px; }
+.scoop-tiptip .nav-folder, .scoop-tiptip .tree-item-self { --button-radius: 6px; --nav-folder-radius: 8px; corner-shape: scoop !important; }
+.hexagon-tiptip .nav-folder, .hexagon-tiptip .tree-item-self { --button-radius: 6px; --nav-folder-radius: 8px; corner-shape: bevel !important; }
 .round-tiptip .nav-folder, .round-tiptip .tree-item-self { --nav-folder-radius: 7px; }
 .rounded-tiptip .nav-folder, .rounded-tiptip .tree-item-self { --nav-folder-radius: 11px; }
 
