@@ -18,6 +18,7 @@ $files = @(
     "layout/file-exp.css",
     "layout/folders.css",
     "layout/tabs.css",
+    "layout/tabs-compact.css",
     "layout/tab-positions.css",
     "layout/mobile.css",
     "layout/settings-tabs.css",

@@ -20,6 +20,7 @@ files=(
     "layout/folders.css"
     "layout/tabs.css"
     "layout/tab-positions.css"
+    "layout/tabs-compact.css"
     "layout/settings-tabs.css"
     "editor/active-line.css"
     "editor/inline-title.css"

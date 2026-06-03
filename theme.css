@@ -196,8 +196,14 @@ settings:
       - label: Three
         value: bubble
 
+  - id: compact-tabs
+    title: Compact Tabs
+    type: class-toggle
+    default: false
+    addCommand: true
+
   - id: bubble-styling
-    title: Bubble Layout - Color options
+    title: Layout Three - Color options
     description: Only affects dark mode
     type: class-select
     default: bubble-dark-inside
@@ -3794,6 +3800,39 @@ input.slider::-webkit-slider-thumb:hover {
     display: none !important;
 }
 
+.status-bar {
+    border-radius: 14px !important;
+    transition: all calc(var(--animation-duration) * 0.6667) cubic-bezier(0.175, 0.885, 0.32, 1.5) !important;
+    /* padding: 0px 30px !important; */
+    overflow: auto !important;
+    opacity: 1;
+    /* filter: brightness(0.7); */
+    /* transform: translateY(10%); */
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+.status-bar:hover {
+    border-radius: 10px !important;
+    padding: 10px 8px !important;
+    transition: all calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
+    /* filter: brightness(1); */
+    transform: translateX(0);
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    color: var(--text-normal) !important;
+}
+
+.dim-status-bar .status-bar {
+    opacity: 0 !important;
+}
+
+.dim-status-bar .status-bar:hover {
+    opacity: 1 !important;
+}
+
 /* ===== center status bar ===== */
 .centered-statusbar {
     .status-bar {
@@ -5575,6 +5614,169 @@ body:has(.workspace-split.mod-right-split:not(.is-sidedock-collapsed)) .workspac
 .sidebar-toggle-button.mod-right,
 .workspace-tab-header-new-tab {
     transform: translateX(40px) !important;
+}
+
+/* ---- Root variable adjustment ---- */
+body.compact-tabs {
+    --header-height: 25px;
+    /* --tab-sidebar-radius: 0px; */
+}
+
+/* ---- Main tab container & inner container ---- */
+.compact-tabs .workspace-tab-header-container {
+    --tab-curve: 10px;
+    padding-top: 2px !important;
+    align-items: stretch !important;
+}
+
+.compact-tabs .workspace-tab-header-container-inner {
+    align-items: stretch !important;
+    gap: 0 !important;
+}
+
+/* ---- All tab headers - universal reset ---- */
+.compact-tabs .workspace-tab-header {
+    height: 100% !important;
+    align-self: stretch !important;
+    padding: 0 !important;
+    /* border-radius: 0 !important; */
+}
+
+/* ---- Tab inner content ---- */
+.compact-tabs .workspace-tab-header-inner {
+    height: 100% !important;
+    align-items: center !important;
+}
+
+/* ---- Active tab specific ---- */
+.compact-tabs .workspace-tab-header.is-active {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+}
+
+/* ---- Inactive tab inner margin fix ---- */
+.compact-tabs .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+    margin-top: 0 !important;
+}
+
+/* ---- Bubble theme shape overrides ---- */
+.compact-tabs.bubble .workspace-tab-header,
+.compact-tabs.bubble .workspace-tab-header:hover,
+.compact-tabs.bubble .workspace-tab-header.is-active {
+    transform: translateY(-2px) !important;
+    height: 20px !important;
+}
+
+.workspace-tab-header-container-inner {
+    margin-top: 0 !important;
+}
+
+/*.compact-tabs.bubble .workspace-tab-header-container {*/
+/*    padding-bottom: 2px;*/
+/*}*/
+
+/* body.compact-tabs.bubble {
+    .workspace .mod-left-split .workspace-tab-header-container-inner {
+        transform: translateY(-4px) !important;
+    }
+} */
+
+/* ---- Default tab & default tab rounded ---- */
+.compact-tabs.default-tab .workspace-tab-header-container-inner,
+.compact-tabs.default-tab-rounded .workspace-tab-header-container-inner {
+    margin-top: 0 !important;
+}
+
+.compact-tabs.default-tab .workspace-tab-header,
+.compact-tabs.default-tab-rounded .workspace-tab-header {
+    transform: translateY(0) !important;
+}
+
+/* ---- Sidebar tabs (left & right splits) - full reset ---- */
+.compact-tabs .mod-left-split .workspace-tab-header-container,
+.compact-tabs .mod-right-split .workspace-tab-header-container {
+    align-items: flex-start !important;
+}
+
+.compact-tabs .mod-left-split .workspace-tab-header-container-inner,
+.compact-tabs .mod-right-split .workspace-tab-header-container-inner {
+    align-items: stretch !important;
+}
+
+.compact-tabs .mod-left-split .workspace-tab-header,
+.compact-tabs .mod-right-split .workspace-tab-header {
+    transform: translateY(0) scale(1) !important;
+    padding: 0 !important;
+    height: 100% !important;
+    align-self: stretch !important;
+    /* border-radius: 0 !important; */
+}
+
+.compact-tabs .mod-left-split .workspace-tab-header-inner,
+.compact-tabs .mod-right-split .workspace-tab-header-inner {
+    margin-top: 0 !important;
+}
+
+/* ---- Sidebar hover states - no movement ---- */
+.compact-tabs .mod-left-split .workspace-tab-header:hover,
+.compact-tabs .mod-right-split .workspace-tab-header:hover {
+    transform: translateY(0) scale(1) !important;
+    padding: 0 !important;
+}
+
+/* ---- Bubble theme sidebar hover (no scale, only brightness) ---- */
+.compact-tabs.bubble .mod-left-split .workspace-tab-header:hover,
+.compact-tabs.bubble .mod-right-split .workspace-tab-header:hover {
+    transform: none !important;
+    scale: 1 !important;
+    filter: brightness(1.5);
+}
+
+/* ---- Sidebar toggle button vertical offset ---- */
+.compact-tabs .sidebar-toggle-button.mod-left .clickable-icon {
+    margin-bottom: 10px !important;
+    margin-left: 0 !important;
+    margin-top: -13.5px !important;
+}
+
+/*!* ---- Hexagon-tiptip shape override ---- *!*/
+/*body.compact-tabs.default-tab-rounded.hexagon-tiptip .workspace-tab-header {*/
+/*    border-radius: 0 !important;*/
+/*    corner-shape: sharp;*/
+/*}*/
+
+/*!* ---- Reset pseudo-elements that could add spacing ---- *!*/
+/*.compact-tabs .workspace-tab-header::before,*/
+/*.compact-tabs .workspace-tab-header::after {*/
+/*    display: none !important;*/
+/*    content: none !important;*/
+/*}*/
+
+/* ---- Line-height fix for tab text/icons ---- */
+.compact-tabs .workspace-tab-header-inner-title,
+.compact-tabs .workspace-tab-header-inner-icon {
+    line-height: 1 !important;
+    vertical-align: middle !important;
+}
+
+/* ---- Focus mode header adjustment ---- */
+body.compact-tabs.focus-mode .view-header {
+    --header-height: 25px;
+    height: var(--header-height);
+    margin-top: -4px !important;
+}
+
+
+
+.compact-tabs.default-tab-rounded,
+.compact-tabs.default-tab {
+    .workspace-tab-header-container {
+        padding-left: 0 !important;
+    }
+}
+
+.workspace-tab-header-inner {
+    margin-right: 4px !important;
 }
 
 /* ORDERING & TAB POSITION */
@@ -8993,7 +9195,6 @@ img {
 .hexagon-tiptip .menu,
 .hexagon-tiptip .modal,
 .hexagon-tiptip .prompt,
-.hexagon-tiptip,
 .hexagon-tiptip .notice,
 .hexagon-tiptip .kanban-plugin__lane,
 .hexagon-tiptip .popover {
@@ -9037,7 +9238,6 @@ img {
 .scoop-tiptip .menu,
 .scoop-tiptip .modal,
 .scoop-tiptip .prompt,
-.scoop-tiptip,
 .scoop-tiptip .notice,
 .scoop-tiptip .kanban-plugin__lane,
 .scoop-tiptip .popover {
@@ -9051,7 +9251,6 @@ img {
 .bubble.scoop-tiptip .menu,
 .bubble.scoop-tiptip .modal,
 .bubble.scoop-tiptip .prompt,
-.bubble.scoop-tiptip,
 .bubble.scoop-tiptip .notice,
 .bubble.scoop-tiptip .kanban-plugin__lane,
 .bubble.scoop-tiptip .popover,
@@ -9082,7 +9281,6 @@ img {
 .squircle-tiptip .menu,
 .squircle-tiptip .modal,
 .squircle-tiptip .prompt,
-.squircle-tiptip,
 .squircle-tiptip .notice,
 .squircle-tiptip .kanban-plugin__lane,
 .squircle-tiptip .popover {

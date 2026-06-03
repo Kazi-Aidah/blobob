@@ -816,3 +816,6 @@ body:has(.workspace-split.mod-right-split:not(.is-sidedock-collapsed)) .workspac
 .workspace-tab-header-new-tab {
     transform: translateX(40px) !important;
 }
+
+
+/* compact tabs */

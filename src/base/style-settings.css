@@ -196,8 +196,14 @@ settings:
       - label: Three
         value: bubble
 
+  - id: compact-tabs
+    title: Compact Tabs
+    type: class-toggle
+    default: false
+    addCommand: true
+
   - id: bubble-styling
-    title: Bubble Layout - Color options
+    title: Layout Three - Color options
     description: Only affects dark mode
     type: class-select
     default: bubble-dark-inside
