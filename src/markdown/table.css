@@ -35,7 +35,7 @@ th {
 .markdown-preview-view table,
 .markdown-source-view.mod-cm6 .cm-table-widget table {
     width: 100% !important;
-    table-layout: auto !important; /* allow natural sizing okie? */
+    table-layout: auto !important; /* imp */
 
     /* margin-top: -30px !important; */
 }

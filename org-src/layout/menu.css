@@ -1,0 +1,72 @@
+/* menu & menu items */
+
+.menu {
+    border-radius: 20px;
+    overflow: auto !important;
+    opacity: 1;
+    transition: all calc(var(--animation-duration) * 0.6667) cubic-bezier(0.175, 0.885, 0.32, 2) !important;
+}
+
+.menu-item.tappable {
+    border-radius: 20px;
+    padding: 6px 8px !important;
+    transition: all calc(var(--animation-duration) * 0.3333) ease !important;
+}
+
+.menu-item.tappable.selected {
+    color: var(--color-accent) !important;
+    background-color: hsl(var(--interactive-accent-hsl), 0.2) !important;
+}
+
+.menu-item.tappable.selected .menu-item-icon {
+    color: var(--color-accent) !important;
+}
+
+.menu-item.tappable.selected:active {
+    border-radius: 26px;
+    transform: scale(0.9);
+    transition: all calc(var(--animation-duration) * 0.3333) ease;
+}
+
+/* Destructive items (delete / remove) */
+.menu-item.tappable:is([data-section*="delete"], [data-section*="Delete"], [data-section*="DELETE"],
+                         [data-section*="remove"], [data-section*="Remove"], [data-section*="REMOVE"]):not(.is-disabled),
+.menu-item.tappable.is-warning {
+    color: var(--text-error) !important;
+}
+
+.menu-item.tappable:is([data-section*="delete"], [data-section*="Delete"], [data-section*="DELETE"],
+                         [data-section*="remove"], [data-section*="Remove"], [data-section*="REMOVE"]):not(.is-disabled),
+.menu-item.tappable.is-warning.selected {
+    background-color: rgb(var(--color-red-rgb), 0.3) !important;
+}
+
+.menu-item.tappable:is([data-section*="delete"], [data-section*="Delete"], [data-section*="DELETE"],
+                         [data-section*="remove"], [data-section*="Remove"], [data-section*="REMOVE"]):not(.is-disabled) .menu-item-icon,
+.menu-item.tappable.is-warning .menu-item-icon {
+    color: var(--text-error) !important;
+}
+
+/* mobile */
+/* Standalone menu item (outside any group) */
+.is-mobile .menu-item.tappable:not(.menu-group .menu-item.tappable) {
+    border-radius: clamp(8px, var(--button-radius, 8px), 0px) !important;
+}
+
+/* Menu group – just add a background and radius (no overflow: hidden) */
+.is-mobile .menu-group:has(.menu-item.tappable) {
+    border-radius: clamp(8px, var(--button-radius, 8px), 0px) !important;
+}
+.is-mobile .menu-group:has(.menu-item.tappable) .menu-item.tappable {
+    border-radius: 0px !important;
+}
+
+.is-mobile .menu-group:has(.menu-item.tappable) .menu-item.tappable:first-child {
+    border-top-left-radius: clamp(8px, var(--button-radius, 8px), 0px) !important;
+    border-top-right-radius: clamp(8px, var(--button-radius, 8px), 0px) !important;
+}
+
+.is-mobile .menu-group:has(.menu-item.tappable) .menu-item.tappable:last-child {
+    border-bottom-left-radius: clamp(8px, var(--button-radius, 8px), 0px) !important;
+    border-bottom-right-radius: clamp(8px, var(--button-radius, 8px), 0px) !important;
+}

@@ -22,7 +22,6 @@ settings:
     type: class-select
     default: neutral-gray
     options:
-
       - label: Amoled
         value: amoled
       - label: Darker Gray
@@ -47,6 +46,8 @@ settings:
         value: violet-dream
       - label: Magic Purple
         value: magic-purply
+      - label: Nocturne
+        value: nocturne
       - label: Lavendar
         value: lavendar
       - label: Emerald
@@ -55,8 +56,14 @@ settings:
         value: muted-green
       - label: More Olives
         value: more-olives
+      - label: Greenwood
+        value: greenwood
+      - label: Viridan Regalia
+        value: viridian-regalia
       - label: Deep Green
         value: forest-green
+      - label: Lime
+        value: dark-lime
       - label: Rose Gold
         value: rose-gold
       - label: Crimson Twilight
@@ -67,6 +74,10 @@ settings:
         value: deep-hotpink
       - label: Deep Magenta
         value: deep-magenta
+      - label: Urban
+        value: urban
+      - label: Citrine
+        value: citrine
       - label: Golden Earth
         value: golden-earth
       - label: Golden Hour
@@ -95,8 +106,6 @@ settings:
         value: red-forest
       - label: Green Road
         value: green-road
-
-
 
 
   - id: light-theme-colors
@@ -129,6 +138,8 @@ settings:
         value: purple
       - label: Pink
         value: pink
+      - label: Brinjal
+        value: brinjal
       - label: Herb
         value: herb
       - label: Olive
@@ -137,6 +148,10 @@ settings:
         value: jade
       - label: Rose
         value: rose
+      - label: Joy
+        value: joy
+      - label: choco milk
+        value: choco
       - label: Yellow Teeth
         value: yellow-teeth
       - label: Toothpaste
@@ -157,6 +172,8 @@ settings:
         value: cream-blue
       - label: 50% Gray
         value: gray
+      - label: Delta
+        value: delta
 
   - id: tiptips
     title: Global Radius
@@ -187,35 +204,36 @@ settings:
     title: Layout & Tab Style
     description: Set the workspace layout for desktop
     type: class-select
-    default: default-tab-rounded
+    default: tab-joined
     options:
-      - label: One
-        value: default-tab
-      - label: Two
-        value: default-tab-rounded
-      - label: Three
-        value: bubble
+      - label: Joined
+        value: tab-joined
+      - label: Floating
+        value: tab-float
+      - label: None
+        value: tab-none
+
+  - id: tab-floating-border
+    title: floating layout - border colour
+    description: 
+    type: class-select
+    default: tab-float-border-focus
+    options:
+      - label: No border
+        value: tab-float-border-none
+      - label: Faded border
+        value: tab-float-border-less
+      - label: Bright Border
+        value: tab-float-border-hover
+      - label: Brightest Border
+        value: tab-float-border-focus
+
 
   - id: compact-tabs
     title: Compact Tabs
     type: class-toggle
     default: false
     addCommand: true
-
-  - id: bubble-styling
-    title: Layout Three - Color options
-    description: Only affects dark mode
-    type: class-select
-    default: bubble-dark-inside
-    options:
-      - label: Dark inside
-        value: bubble-dark-inside
-      - label: Focused dark inside
-        value: bubble-border
-      - label: Dark outside
-        value: bubble-dark-outside
-      - label: Focused Dark outside
-        value: bubble-focused-dark-outside
 
   - id: icons-buttons
     title: Icons & Buttons
@@ -276,17 +294,6 @@ settings:
     level: 2
     collapsed: true
 
-  - id: ribbon-style
-    title: Ribbon style
-    description: Set the ribbon style
-    type: class-select
-    default: default
-    options:
-      - label: Default
-        value: default
-      - label: Unanimated Ribbon
-        value: ribbon-no-anim
-
   - id: status-bar
     title: Status bar behaviour
     type: class-select
@@ -321,25 +328,12 @@ settings:
     options:
       - label: No change
         value: view-title-case-none
+      - label: Capitalize
+        value: view-title-case-capi
       - label: Uppercase
         value: view-title-case-upper
       - label: Lowercase
         value: view-title-case-lower
-
-  - id: inline-title
-    title: Inline Title Alignment
-    description:
-    type: class-select
-    default: center-inline-title
-    options:
-      - label: Center
-        value: center-inline-title
-      - label: Left
-        value: left-inline-title
-      - label: Right
-        value: right-inline-title
-      - label: --- special ---
-        value: special-inline-title
 
   - id: table-hor-lines-only
     title: Hide Vertical Lines in Tables
@@ -371,6 +365,23 @@ settings:
     level: 1
     collapsed: true
 
+  - id: inline-title
+    title: Inline Title Alignment
+    description:
+    type: class-select
+    default: special-inline-title
+    options:
+      - label: Center
+        value: center-inline-title
+      - label: Left
+        value: left-inline-title
+      - label: Right
+        value: right-inline-title
+      - label: --- special ---
+        value: special-inline-title
+      - label: ███ special wide ███
+        value: special-wide-inline-title
+
   - id: highlight-styles
     title: Highlight styles
     description: change the style of ==highlight==
@@ -388,6 +399,13 @@ settings:
       - label: Only underline
         value: only-underline
 
+  - id: hide-hash
+    title: Hide "#" in tags
+    description: 
+    type: class-toggle
+    default: true
+    addCommand: true
+
   - id: lined
     title: Lined Notebook
     description: Adds lines to the editor
@@ -401,17 +419,38 @@ settings:
     level: 2
     collapsed: true
 
-  - id: highlight-active-line
-    title: Highlight active line
-    type: class-toggle
-    default: true
+  - id: active-line-highlighting
+    title: Active line highlight style
+    type: class-select
     addCommand: true
+    default: active-line-highlight-imperfect
+    options:
+      - label: Highlighted
+        value: active-line-highlight
+      - label: Highlighted with Borders
+        value: active-line-highlight-focused
+      - label: Underlined
+        value: active-line-underline
+      - label: Imperfectly Highlighted
+        value: active-line-highlight-imperfect
+      - label: Highlighted Beyond
+        value: active-line-highlight-beyond
 
-  - id: highlight-active-line-with-face
-    title: Highlight active line with face
-    type: class-toggle
-    default: false
-    addCommand: false
+  - id: active-line-highlight-color
+    title: Active line highlight colour
+    type: class-select
+    default: active-line-highlight-color-mono
+    options:
+      - label: Mono
+        value: active-line-highlight-color-mono
+      - label: Mono 2
+        value: active-line-highlight-color-mono-2
+      - label: Accent
+        value: active-line-highlight-color-accent
+      - label: Fully Accented
+        value: active-line-highlight-color-accent-full
+      - label: Solid Accent
+        value: active-line-highlight-color-accent-solid
 
   - id: huge-text-active-line
     title: Big active line text
@@ -430,6 +469,19 @@ settings:
     type: class-toggle
     default: false
     addCommand: true
+
+  - id: blur-inactive
+    title: Blur inactive lines
+    type: class-toggle
+    default: false
+    addCommand: true
+
+  - id: blur-inactive-strength
+    title: Blur inactuve lines strength
+    description: How much blurry.
+    type: variable-number
+    default: 2
+    format: px
 
   - id: float-inactive
     title: Make inactive lines float
@@ -836,34 +888,41 @@ settings:
     level: 2
     collapsed: true
 
-  - id: custom-bullets-enabled
-    title: Enable custom bullets
+  - id: list-default-bullet
+    title: Disable custom bullets
     type: class-toggle
-    default: true
-  - id: custom-bullet-level-1
+    default: false
+  - id: bullet-1
     title: 1st level bullet
     type: variable-text
-    default: "+"
+    default: "–"
     quotes: true
-  - id: custom-bullet-level-2
+  - id: bullet-2
     title: 2nd level bullet
     type: variable-text
-    default: "-"
+    default: "•"
     quotes: true
-  - id: custom-bullet-level-3
+  - id: bullet-3
     title: 3rd level bullet
     type: variable-text
-    default: "="
+    default: "◦"
     quotes: true
 
   - id: disable-checkboxes
-    title: Disable checkboxes
+    title: Disable blobob-style checkboxes
     description: Disable this if you don't want to use blobob theme's checkboxes.
     type: class-toggle
     default: false
 
   - id: hide-strikethrough
     title: Hide Strikethrough in checked list
+    type: class-toggle
+    default: true
+    addCommand: false
+
+  - id: blur-checked
+    title: Blur checked list
+    desc: hello
     type: class-toggle
     default: true
     addCommand: false
@@ -876,6 +935,20 @@ settings:
     type: heading
     level: 1
     collapsed: true
+
+  - id: disable-fixed-newtab
+    title: Disable fixed new tab button
+    description: Resets the fixed new tab button
+    type: class-toggle
+    default: false
+    addCommand: false
+
+  - id: fixed-left-sidebar-button
+    title: Enable fixed left sidebar button
+    description: 
+    type: class-toggle
+    default: false
+    addCommand: false
 
   - id: hide-tab-list
     title: Hide tab list
@@ -971,6 +1044,7 @@ settings:
 
   - id: verti-folder
     title: Vertical Folder
+    description: Enabling/Disabling this may cause strange layouts, just "Collapse all" to fix them.
     type: class-toggle
     default: true
 
@@ -996,14 +1070,12 @@ settings:
     options:
       - label: None
         value: folder-none
-      - label: Mechanical
-        value: mechanical
       - label: ---
         value: 
       - label: Just Dot
         value: folder-dot-accent
       - label: Accented Subtle
-        value: accented
+        value: folder-subtle-accent
       - label: Accent Solid
         value: folder-solid-accent
       - label: Accent Border
@@ -1129,19 +1201,19 @@ settings:
     default: false
     addCommand: false
 
-  - id: cssclasses-properties-style
-    title: Cssclasses Style
+  - id: properties-pill-style
+    title: Multi select pill style
     type: class-select
-    default: cssclasses-3
+    default: msp-0
     options:
+      - label: default
+        value: msp-0
       - label: Style 1
-        value: cssclasses-1
+        value: msp-1
       - label: Style 2
-        value: cssclasses-2
+        value: msp-2
       - label: Style 3
-        value: cssclasses-3
-      - label: Obsidian Default
-        value: Obsidian-default
+        value: msp-3
 
   - id: metadata-key-style
     title: Properties metadata key Style
@@ -1169,9 +1241,11 @@ settings:
     options:
       - label: No change
         value: meta-key-case-none
-      - label: Uppercase
+      - label: Capitalize
+        value: meta-key-case-capi
+      - label: UPPERCASE
         value: meta-key-case-upper
-      - label: Lowercase
+      - label: lowercase
         value: meta-key-case-lower
 
   ########################################
@@ -1186,7 +1260,7 @@ settings:
   - id: hide-prompt-instructions
     title: Hide Instructions in Command Palette
     type: class-toggle
-    default: false
+    default: true
     addCommand: false
 
   ########################################
@@ -1231,6 +1305,49 @@ settings:
     max: 800
     step: 10
     format: ms
+
+  ########################################
+  # Mobile
+  ########################################
+
+  - id: mobile
+    title: Mobile Settings
+    type: heading
+    level: 1
+    collapsed: true
+
+  - id: mobile-font-size
+    title: Mobile font size
+    description: Set a different font size on mobile
+    type: variable-number
+    default: 14
+    format: px
+
+  - id: mob-tab-list-compact
+    title: Compact Mobile tab list
+    type: class-toggle
+    default: false
+    addCommand: true
+
+  - id: bb-mobile-hide-arrows
+    title: Mobile Navbar - Hide Arrows
+    type: class-toggle
+    default: false
+
+  - id: bb-mobile-hide-searchnote
+    title: Mobile Navbar - Hide Search Note button
+    type: class-toggle
+    default: false
+
+  - id: bb-mobile-hide-newtab
+    title: Mobile Navbar - Hide New Tab button
+    type: class-toggle
+    default: false
+
+  - id: bb-mobile-hide-tabs
+    title: Mobile Navbar - Hide Tabs button
+    type: class-toggle
+    default: false
 
   ########################################
   # Other Plugin Styling
@@ -1278,175 +1395,3 @@ settings:
     default: true
 
 */
-
-/* hide arrow */
-.setting-item-heading[data-level="1"] .style-settings-collapse-indicator,
-.setting-item-heading[data-level="2"] .style-settings-collapse-indicator,
-.setting-item-heading[data-level="3"] .style-settings-collapse-indicator,
-.setting-item-heading[data-level="4"] .style-settings-collapse-indicator,
-.setting-item-heading[data-level="5"] .style-settings-collapse-indicator {
-    display: none;
-    --icon-color: transparent;
-    --icon-size: 0;
-}
-
-.style-settings-collapse-indicator {
-  display: none !important;
-}
-
-/* --- style setting ui elements --- */
-.style-settings-heading {
-    border-radius: var(--tab-sidebar-radius) !important;
-    corner-shape: var(--corner-shape) !important;
-    background-color: var(--background-primary-alt);
-    padding: 10px 20px !important;
-    border: 2px solid var(--background-modifier-border);
-    margin: 16px 0 !important;
-    box-shadow: 0 2px 4px var(--background-modifier-border);
-    transition: background-color 0.2s ease, 
-                transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 2.275),
-                padding 0.2s cubic-bezier(0.175, 0.885, 0.32, 2.275) !important;
-    filter: brightness(1.3);
-}
-
-.style-settings-heading.is-collapsed {
-    padding: 8px 20px !important;
-    box-shadow: 0 2px 2px var(--background-modifier-border);
-    filter: brightness(1);
-}
-
-/* center h1 heading */
-.setting-item-heading[data-level="1"] .setting-item-name {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    white-space: nowrap;
-    padding-top: 0 !important;
-}
-
-/* Level 2 */
-.setting-item-heading[data-level="2"] {
-    background-color: var(--background-secondary) !important;
-
-    /* border-left: 6px solid var(--interactive-accent) !important; */
-    border-radius: var(--tab-sidebar-radius) !important;
-    corner-shape: var(--corner-shape) !important;
-    padding: 8px 16px !important;
-    margin-left: 16px !important;
-    width: calc(100% - 16px) !important;
-    filter: brightness(1) !important;
-}
-
-/* heading pretext */
-.setting-item-heading .setting-item-name::before {
-    letter-spacing: 0.1em;
-}
-
-.setting-item-heading[data-level="1"] .setting-item-name::before {
-    content: "#1 ";
-    color: var(--color-red);
-}
-
-.setting-item-heading[data-level="2"] .setting-item-name::before {
-    content: "#2 ";
-    color: var(--color-orange);
-}
-
-.setting-item-heading[data-level="3"] .setting-item-name::before {
-    content: "#3 ";
-    color: var(--color-yellow);
-}
-
-.setting-item-heading[data-level="4"] .setting-item-name::before {
-    content: "#4 ";
-    color: var(--color-green);
-}
-
-.setting-item-heading[data-level="5"] .setting-item-name::before {
-    content: "#5 ";
-    color: var(--color-blue);
-}
-
-/* Level 3 */
-.setting-item-heading[data-level="3"] {
-    background-color: var(--background-primary) !important;
-    border-bottom: 2px dotted var(--background-modifier-border) !important;
-    border-radius: var(--tab-sidebar-radius) !important;
-    corner-shape: var(--corner-shape) !important;
-    padding: 6px 12px !important;
-    margin-left: 32px !important;
-    width: calc(100% - 32px) !important;
-    font-size: 0.9em !important;
-    filter: brightness(1) !important;
-    box-shadow: none !important;
-}
-
-/* Level 4 */
-.setting-item-heading[data-level="4"] {
-    background: transparent !important;
-    border: none !important;
-    padding: 4px 8px !important;
-    margin-left: 48px !important;
-    width: calc(100% - 48px) !important;
-    font-size: 0.85em !important;
-    font-weight: normal !important;
-    box-shadow: none !important;
-    filter: brightness(1) !important;
-}
-
-/* Level 5 */
-.setting-item-heading[data-level="5"] {
-    background: transparent !important;
-    border: none !important;
-    padding: 2px 4px !important;
-    margin-left: 64px !important;
-    width: calc(100% - 64px) !important;
-    font-size: 0.8em !important;
-    font-weight: lighter !important;
-    opacity: 0.8 !important;
-    box-shadow: none !important;
-    filter: brightness(1) !important;
-}
-
-/* --- center style settins headings */
-
-/* body .nav-file-title.is-active:hover, body .nav-folder-title.is-active:hover, .nav-file-title.is-active, .nav-folder-title.is-active {
-    text-align: center !important;
-} */
-
-/* --- style setting color picker */
-.pickr .pcr-button::after,
-.pickr .pcr-button::before,
-.pickr,
-button.pcr-button {
-    border-radius: 50%;
-    border: none !important;
-}
-
-.pcr-app {
-    background: var(--background-primary);
-    border: 3px solid var(--background-modifier-border);
-    border-radius: 10px;
-}
-
-.pcr-palette,
-.pcr-palette::before,
-.pcr-palette::after {
-    border-radius: 8px !important;
-}
-
-.pcr-result {
-    background-color: var(--background-modifier-form-field) !important;
-}
-
-.pcr-swatches button {
-    border-radius: 50% !important;
-}
-
-.button-bordered .pickr button {
-    border: none !important;
-    background-color: none !important;
-    background: none !important;
-    box-shadow: none !important;
-}

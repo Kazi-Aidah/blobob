@@ -3,59 +3,15 @@
 $output = "theme.css"
 $srcDir = "src"
 
-$files = @(
-    "base/style-settings.css",
-    "base/theme-colors.css",
-    "components/buttons/global-radius.css",
-    "components/buttons/button-animations.css",
-    "components/buttons/button-styles.css",
-    "components/buttons/icon-styles.css",
-    "components/buttons/select.css",
-    "base/elements.css",
-    "base/toggles.css",
-    "base/inputs.css",
-    "layout/ribbon.css",
-    "layout/statusbar.css",
-    "layout/titlebar.css",
-    "layout/navigation.css",
-    "layout/modals.css",
-    "layout/menu.css",
-    "layout/file-exp.css",
-    "layout/folders.css",
-    "layout/tabs.css",
-    "layout/tabs-compact.css",
-    "layout/tab-positions.css",
-    "layout/mobile.css",
-    "layout/settings-tabs.css",
-    "editor/active-line.css",
-    "editor/inline-title.css",
-    "editor/text-formatting.css",
-    "editor/properties.css",
-    "editor/canvas.css",
-    "markdown/checkboxes.css",
-    "markdown/bullets.css",
-    "markdown/blockquotes.css",
-    "markdown/callouts.css",
-    "markdown/tables.css",
-    "markdown/links.css",
-    "markdown/codes.css",
-    "markdown/embeds.css",
-    "others/cssclasses.css",
-    "others/plugin-support.css",
-    "others/hidden.css"
-)
+# Get all .css files recursively, sort by full path for deterministic order
+$files = Get-ChildItem -Path $srcDir -Recurse -Filter "*.css" | Sort-Object FullName
 
 $parts = @()
 
 foreach ($file in $files) {
-    $path = Join-Path $srcDir $file
-    if (Test-Path $path) {
-        $content = Get-Content $path -Raw -Encoding UTF8
-        $parts += $content
-        Write-Host "  + $file"
-    } else {
-        Write-Warning "Missing: $path"
-    }
+    $content = Get-Content $file.FullName -Raw -Encoding UTF8
+    $parts += $content
+    Write-Host "  + $($file.FullName.Replace($srcDir, '').TrimStart('\'))"
 }
 
 $result = $parts -join "`n`n"
@@ -63,4 +19,4 @@ $result = $parts -join "`n`n"
 
 $lineCount = (Get-Content $output).Count
 Write-Host ""
-Write-Host "Built $output ($lineCount lines)"
+Write-Host "Built $output ($lineCount lines) from $($files.Count) CSS files"

@@ -1,0 +1,63 @@
+/* shared: tab close button animation */
+
+/* tab close button */
+.workspace .mod-root .workspace-tab-header .workspace-tab-header-inner-close-button {
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+    display: flex !important;
+    z-index: 1001 !important;
+    opacity: 0;
+    width: 0;
+    order: -1;
+
+    margin-left: -8px;
+    margin-right: 2px;
+
+    transform: scale(0.1);
+    
+    transition:
+        transform calc(var(--animation-duration) * 0.6667) cubic-bezier(0.34, 1.56, 0.64, 1),
+        opacity calc(var(--animation-duration) * 0.6667) ease-out,
+        width calc(var(--animation-duration) * 0.6667) ease-out,
+        margin-left calc(var(--animation-duration) * 0.6667) ease-out !important;
+    pointer-events: none;
+    border: 2px solid transparent;
+}
+
+/* all close buttons */
+.workspace-tab-header-inner-close-button {
+    transform: scale(0.9) !important;
+}
+.workspace-tab-header-inner-close-button:hover {
+    background-color: var(--background-modifier-hover) !important;
+    border-radius: calc(var(--button-radius) + 2px) !important;
+    corner-shape: var(--corner-shape);
+}
+
+/* active tab close button */
+.workspace .mod-root .workspace-tab-header.is-active:hover .workspace-tab-header-inner-close-button {
+    transform: scale(0.9);
+    opacity: 1;
+    width: auto;
+    margin-left: -4px !important;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    pointer-events: auto;
+}
+
+/* all inactive tab close button */
+.workspace .mod-root .workspace-tab-header:hover .workspace-tab-header-inner-close-button {
+    transform: scale(0.9);
+    opacity: 1;
+    width: auto;
+    margin-left: -2px !important;
+    pointer-events: auto;
+}
+
+.workspace-tab-header:not(.is-active) .workspace-tab-header-inner-close-button {
+    margin-left: -2px !important;
+}
+
+
+
+

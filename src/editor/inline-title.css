@@ -64,4 +64,28 @@
     transition: all 0.3s ease;
 }
 
+.special-wide-inline-title .inline-title {
+    text-align: center;
+    position: relative;
+    padding: 0;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    width: 100%;
+    transition: 0.3s all ease;
+    color: var(--h3-color);
+    text-transform: none !important;
+}
+
+.special-wide-inline-title .inline-title::before,
+.special-wide-inline-title .inline-title::after {
+    content: "";
+    flex-grow: 1;
+    height: 30px;
+    background-color: var(--interactive-accent);
+    margin: 0;
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
 

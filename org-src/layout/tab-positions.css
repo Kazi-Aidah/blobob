@@ -1,0 +1,192 @@
+/* ORDERING & TAB POSITION */
+
+/* orders of tab header container */
+.workspace-tab-header-tab-list {
+    order: -1;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 20px;
+    gap: 4px;
+}
+
+/* LEFT SIDEBAR TOGGLE */
+
+/* .sidebar-toggle-button.mod-left {
+    order: -1;
+    margin-right: 8px;
+} */
+
+/* NEW TAB BUTTON */
+.workspace-tab-header-new-tab {
+    /* padding: 0 6px !important; */
+    margin-right: 6px !important;
+    background: transparent !important;
+    order: 999; 
+    /* force at the end */
+    flex: 0 0 auto;
+}
+
+/* RIGHT SIDEBAR TOGGLE */
+.sidebar-toggle-button.mod-right {
+    order: 1000; /* after new tab */
+    flex: 0 0 auto;
+    align-self: center;
+    background: transparent !important;
+    box-shadow: none !important;
+    height: 24px;
+    width: 24px;
+    padding: 0;
+}
+
+/* ===== TAB STYLE — LEFT TOP ===== */
+
+/* Labels Only */
+body.tab-top-left-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space {
+    --sidebar-tab-text-display: inline-block;
+}
+
+body.tab-top-left-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner-icon {
+    display: none;
+}
+
+body.tab-top-left-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+
+body.tab-top-left-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner {
+    width: auto !important;
+}
+
+/* Icons + Labels */
+body.tab-top-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space {
+    --sidebar-tab-text-display: inline-block;
+}
+
+body.tab-top-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+
+body.tab-top-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner {
+    width: auto !important;
+    gap: 6px;
+}
+
+/* Icons Only */
+body.tab-top-left-icons .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner-title {
+    display: none !important;
+}
+
+/* ===== TAB STYLE — RIGHT TOP ===== */
+
+/* Labels Only */
+body.tab-top-right-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space {
+    --sidebar-tab-text-display: inline-block;
+}
+
+body.tab-top-right-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner-icon {
+    display: none;
+}
+
+body.tab-top-right-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+
+body.tab-top-right-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner {
+    width: auto !important;
+}
+
+/* Icons + Labels */
+body.tab-top-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space {
+    --sidebar-tab-text-display: inline-block;
+}
+
+body.tab-top-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+
+body.tab-top-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner {
+    width: auto !important;
+    gap: 6px;
+}
+
+/* Icons Only */
+body.tab-top-right-icons .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner-title {
+    display: none !important;
+}
+
+/* ===== TAB STYLE — LEFT (bottom) ===== */
+
+/* Labels Only */
+body.tab-left-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) {
+    --sidebar-tab-text-display: inline-block;
+}
+
+body.tab-left-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-icon {
+    display: none;
+}
+
+body.tab-left-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+
+body.tab-left-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner {
+    width: auto !important;
+}
+
+/* Icons + Labels */
+body.tab-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) {
+    --sidebar-tab-text-display: inline-block;
+}
+
+body.tab-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+
+body.tab-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner {
+    width: auto !important;
+    gap: 6px;
+}
+
+/* Icons Only */
+body.tab-left-icons .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
+    display: none !important;
+}
+
+/* ===== TAB STYLE — RIGHT (bottom) ===== */
+
+/* Labels Only */
+body.tab-right-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) {
+    --sidebar-tab-text-display: inline-block;
+}
+
+body.tab-right-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-icon {
+    display: none;
+}
+
+body.tab-right-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+
+body.tab-right-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner {
+    width: auto !important;
+}
+
+/* Icons + Labels */
+body.tab-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) {
+    --sidebar-tab-text-display: inline-block;
+}
+
+body.tab-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+
+body.tab-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner {
+    width: auto !important;
+    gap: 6px;
+}
+
+/* Icons Only */
+body.tab-right-icons .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
+    display: none !important;
+}
+

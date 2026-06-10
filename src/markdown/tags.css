@@ -1,0 +1,35 @@
+body {
+    --tag-background: hsla(var(--interactive-accent-hsl), 0.13);
+    --tag-background-hover: hsla(var(--interactive-accent-hsl), 0.25);
+}
+
+/* toggle: hide # in tags */
+.hide-hash .cm-hashtag.cm-hashtag-begin { display: none; }
+.hide-hash .cm-hashtag.cm-hashtag-end {
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+    padding: 5px 12px;
+}
+
+/* tag shape */
+.cm-hashtag.cm-hashtag-begin {
+    border-radius: var(--button-radius) 0px 0px var(--button-radius);
+    corner-shape: var(--corner-shape);
+}
+.cm-hashtag.cm-hashtag-end {
+    border-radius: 0px var(--button-radius) var(--button-radius) 0px;
+    corner-shape: var(--corner-shape);
+}
+
+
+/* tag */
+.cm-hashtag.cm-hashtag-begin, .cm-hashtag.cm-hashtag-end {
+    background-color: var(--tag-background);
+
+    transition: background-color 0.15s ease, transform calc(var(--animation-duration) * 0.6)  cubic-bezier(0.17, 0.86, 0.17, 1.2);
+}
+
+.cm-hashtag.cm-hashtag-begin:hover, .cm-hashtag.cm-hashtag-end:hover {
+    background-color: var(--tag-background-hover);
+    transform: scale(1.2);
+}

@@ -1,0 +1,172 @@
+
+/* hide arrow */
+.setting-item-heading[data-level="1"] .style-settings-collapse-indicator,
+.setting-item-heading[data-level="2"] .style-settings-collapse-indicator,
+.setting-item-heading[data-level="3"] .style-settings-collapse-indicator,
+.setting-item-heading[data-level="4"] .style-settings-collapse-indicator,
+.setting-item-heading[data-level="5"] .style-settings-collapse-indicator {
+    display: none;
+    --icon-color: transparent;
+    --icon-size: 0;
+}
+
+.style-settings-collapse-indicator {
+  display: none;
+}
+
+/* --- style setting ui elements --- */
+.style-settings-heading {
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+    background-color: var(--background-primary-alt);
+    padding: 10px 20px;
+    border: 2px solid var(--background-modifier-border);
+    margin: 16px 0;
+    box-shadow: 0 2px 4px var(--background-modifier-border);
+    transition: background-color 0.2s ease, 
+                transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 2.275),
+                padding 0.2s cubic-bezier(0.175, 0.885, 0.32, 2.275);
+    filter: brightness(1.3);
+}
+
+.style-settings-heading.is-collapsed {
+    padding: 8px 20px;
+    box-shadow: 0 2px 2px var(--background-modifier-border);
+    filter: brightness(1);
+}
+
+/* center h1 heading */
+.setting-item-heading[data-level="1"] .setting-item-name {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    padding-top: 0;
+}
+
+/* Level 2 */
+.setting-item-heading[data-level="2"] {
+    background-color: var(--background-secondary);
+
+    /* border-left: 6px solid var(--interactive-accent); */
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+    padding: 8px 16px;
+    margin-left: 16px;
+    width: calc(100% - 16px);
+    filter: brightness(1);
+}
+
+/* heading pretext */
+.setting-item-heading .setting-item-name::before {
+    letter-spacing: 0.1em;
+}
+
+.setting-item-heading[data-level="1"] .setting-item-name::before {
+    content: "#1 ";
+    color: var(--color-red);
+}
+
+.setting-item-heading[data-level="2"] .setting-item-name::before {
+    content: "#2 ";
+    color: var(--color-orange);
+}
+
+.setting-item-heading[data-level="3"] .setting-item-name::before {
+    content: "#3 ";
+    color: var(--color-yellow);
+}
+
+.setting-item-heading[data-level="4"] .setting-item-name::before {
+    content: "#4 ";
+    color: var(--color-green);
+}
+
+.setting-item-heading[data-level="5"] .setting-item-name::before {
+    content: "#5 ";
+    color: var(--color-blue);
+}
+
+/* Level 3 */
+.setting-item-heading[data-level="3"] {
+    background-color: var(--background-primary);
+    border-bottom: 2px dotted var(--background-modifier-border);
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+    padding: 6px 12px;
+    margin-left: 32px;
+    width: calc(100% - 32px);
+    font-size: 0.9em;
+    filter: brightness(1);
+    box-shadow: none;
+}
+
+/* Level 4 */
+.setting-item-heading[data-level="4"] {
+    background: transparent;
+    border: none;
+    padding: 4px 8px;
+    margin-left: 48px;
+    width: calc(100% - 48px);
+    font-size: 0.85em;
+    font-weight: normal;
+    box-shadow: none;
+    filter: brightness(1);
+}
+
+/* Level 5 */
+.setting-item-heading[data-level="5"] {
+    background: transparent;
+    border: none;
+    padding: 2px 4px;
+    margin-left: 64px;
+    width: calc(100% - 64px);
+    font-size: 0.8em;
+    font-weight: lighter;
+    opacity: 0.8;
+    box-shadow: none;
+    filter: brightness(1);
+}
+
+/* --- center style settins headings */
+
+/* body .nav-file-title.is-active:hover, body .nav-folder-title.is-active:hover, .nav-file-title.is-active, .nav-folder-title.is-active {
+    text-align: center;
+} */
+
+/* --- style setting color picker */
+.pickr .pcr-button::after,
+.pickr .pcr-button::before,
+.pickr,
+button.pcr-button {
+    border-radius: 50%;
+    border: none;
+}
+
+.pcr-app {
+    background: var(--background-primary);
+    border: 3px solid var(--background-modifier-border);
+    border-radius: 10px;
+}
+
+.pcr-palette,
+.pcr-palette::before,
+.pcr-palette::after {
+    border-radius: 8px;
+}
+
+.pcr-result {
+    background-color: var(--background-modifier-form-field);
+}
+
+.pcr-swatches button {
+    border-radius: 50%;
+}
+
+.button-bordered .pickr button {
+    border: none;
+    background-color: none;
+    background: none;
+    box-shadow: none;
+}

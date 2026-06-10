@@ -1,34 +1,25 @@
-/* ================================== */
+/* setting items */
+/* .setting-item, .setting-items {
+    --setting-items-radius: calc(var(--button-radius) + 8px);
+    border-radius: calc(var(--button-radius) + 8px) !important;
+    corner-shape: var(--corner-shape);
+} */
 
-/* ===== SETTINGS VERTICAL TABS ===== */
-
-/* ================================== */
-
-/* vertical-tab-nav-item-icon, */
+/* vertical settings tabs */
 .horizontal-tab-nav-item.is-active .vertical-tab-nav-item-icon,
 .vertical-tab-nav-item.is-active .vertical-tab-nav-item-icon {
     color: var(--text-on-accent);
     transition: color 0s;
-
-    /* display: none; */
 }
 
-.vertical-tab-nav-item.is-active {
+body:not(.is-mobile) .vertical-tab-nav-item.is-active {
     border-radius: var(--button-radius);
-
-    transition:
-        padding calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.8),
-        background-color 0s ease,
-        color 0s ease;
-
-    /* animation-delay: background-color 0.1s, color 0.1s; */
-
-    padding: 8px !important;
+    transition: transform calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
+    padding: 6px 8px !important;
     text-align: center;
     color: var(--text-on-accent);
     background-color: var(--interactive-accent) !important;
     font-weight: bolder;
-
     flex-direction: column;
     gap: 3px;
     transform: scaleX(1) translateX(0);
@@ -44,11 +35,8 @@
     transform: translateX(6px);
     padding: 8px;
     transition: all calc(var(--animation-duration) * 0.3333) ease-out;
-
-    /* text-align: center; */
-    transition-delay:
-        text-center 4s ease,
-        background-color 2s ease !important;
+    transition-delay: text-center 4s ease, background-color 2s ease !important;
+    background: none !important;
 }
 
 .vertical-tab-nav-item:not(.is-active) {
@@ -56,185 +44,10 @@
     padding: 8px;
 }
 
-/* ======== OLD VERTICAL TAB ============ */
-
-/* ===== TABS ===== */
-
-.vertical-tab-nav-item.is-active {
-    /* border-radius: 10px; */
-    transition: transform calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
-    padding: 6px 8px !important;
-    text-align: center;
-}
-
-.vertical-tab-nav-item {
-    /* border-radius: 20px; */
-    transition: all calc(var(--animation-duration) * 0.3333) ease-out;
-}
-
-.vertical-tab-nav-item:not(.is-active):hover {
-    background: none !important;
-
-    /* border-radius: 20px; */
-    transform: translateX(6px);
-    transition: all calc(var(--animation-duration) * 0.3333) ease-out;
-}
-
-.vertical-tab-nav-item:not(.is-active):active {
-    /* background-color: var(--color-accent) !important; */
-
-    /* border-radius: 20px; */
-    transform: translateX(30px) !important;
-    transition: transform calc(var(--animation-duration) * 0.1667) ease-in;
-
-    /* background-color 0.2s ease-in;
-    transition-delay: background-color 0.05s ease; */
-}
-
-/* .vertical-tab-nav-item:not(.is-active):hover .vertical-tab-nav-item-title {
-    transform: translateX(10px);
-    transition: all calc(var(--animation-duration) * 0.3333) ease-out;
-} */
-
-.vertical-tab-nav-item:not(.is-active):active {
-    /* background-color: var(--color-accent) !important; */
-    transform: scaleX(6px) translateX(10px) !important;
-    padding: 10px 8px;
-    transition: all calc(var(--animation-duration) * 0.1667);
-
-    /* text-align: center; */
-    flex-direction: column;
-
-    /* background-color 0.2s ease-in;
-    transition-delay: background-color 0.05s ease; */
-}
-
-/* .vertical-tab-nav-item:not(.is-active):active:hover {
-    transform: ScaleX(6px), translateX(0) !important;
-} */
-
-/* .vertical-tab-nav-item:not(.is-active):active .vertical-tab-nav-item-icon {
-    display: none;
-} */
-
-/* .vertical-tab-nav-item:not(.is-active):hover .vertical-tab-nav-item-icon {
-  display: none;
-} */
-
 .vertical-tab-nav-item:not(.is-active):active {
     background-color: transparent;
     transform: translateX(30px) !important;
+    padding: 10px 8px;
     transition: all calc(var(--animation-duration) * 0.1667);
     flex-direction: row;
-}
-
-
-/* ===== SETTINGS UI ===== */
-
-.setting-hotkey,
-.suggestion-hotkey {
-    /* color: var(--color-accent-2) !important; */
-
-    /* color: var(--text-on-accent); */
-    background-color: hsl(var(--interactive-accent-hsl), 0.3) !important;
-    border-radius: 20px;
-}
-
-input[type="color"].color {
-    border-radius: 20px !important;
-    transition: all calc(var(--animation-duration) * 1) ease-out;
-    transform: scale(1);
-    outline: 0 solid var(--background-modifier-border);
-}
-
-input[type="color"]:hover {
-    transform: scale(1.1) !important;
-}
-
-/* === ANIMATION SPEED VARIABLE === */
-:root {
-    --animation-speed-raw: 550ms;
-}
-
-body {
-    --animation-duration: calc(850ms - var(--animation-speed-raw));
-    --nav-indentation-guide-width: 0px;
-    --indentation-guide-width: 0px;
-    --indentation-guide-color: var(--background-modifier-border);
-}
-
-body:is(.settings-hover) {
-    .setting-item {
-        transform: translateX(0) !important;
-        transition: all var(--animation-duration) cubic-bezier(0.175, 0.885, 0.32, 2);
-    }
-
-    .setting-item:hover {
-        transform: translateY(-3px) !important;
-        transition: transform var(--animation-duration) cubic-bezier(0.175, 0.885, 0.32, 2);
-    }
-}
-
-/* disable settings animation */
-/* body:not(.disable-settings-animation) .setting-item {
-    transform: none !important;
-    transition: none !important;
-}
-
-body:not(.disable-settings-animation) .setting-item:hover {
-    transform: none !important;
-    transition: none !important;
-} */
-
-/* disable button/dropdown/input animations */
-.disable-ui-animations button,
-.disable-ui-animations select,
-.disable-ui-animations input,
-.disable-ui-animations textarea,
-.disable-ui-animations .mod-cta,
-.disable-ui-animations .setting-item-control button,
-.disable-ui-animations .dropdown {
-    transition: none !important;
-    animation: none !important;
-}
-
-/* disable clickable icon animations */
-.disable-icon-animations .clickable-icon,
-.disable-icon-animations .clickable-icon:hover,
-.disable-icon-animations .clickable-icon:active {
-    transition: none !important;
-    animation: none !important;
-    transform: none !important;
-}
-
-/* MOBILE: disable all animations */
-.is-mobile.disable-ui-animations-mobile button,
-.is-mobile.disable-ui-animations-mobile select,
-.is-mobile.disable-ui-animations-mobile input,
-.is-mobile.disable-ui-animations-mobile textarea,
-.is-mobile.disable-ui-animations-mobile .mod-cta,
-.is-mobile.disable-ui-animations-mobile .setting-item-control button,
-.is-mobile.disable-ui-animations-mobile .dropdown,
-.is-mobile.disable-ui-animations-mobile .clickable-icon,
-.is-mobile.disable-ui-animations-mobile .clickable-icon:hover,
-.is-mobile.disable-ui-animations-mobile .clickable-icon:active,
-.is-mobile.disable-ui-animations-mobile .setting-item,
-.is-mobile.disable-ui-animations-mobile .setting-item:hover,
-.is-mobile.disable-ui-animations-mobile .vertical-tab-nav-item,
-.is-mobile.disable-ui-animations-mobile .vertical-tab-nav-item:hover,
-.is-mobile.disable-ui-animations-mobile .vertical-tab-nav-item:active,
-.is-mobile.disable-ui-animations-mobile .task-list-item-checkbox,
-.is-mobile.disable-ui-animations-mobile .task-list-item-checkbox:checked,
-.is-mobile.disable-ui-animations-mobile .task-list-item-checkbox:hover {
-    transition: none !important;
-    animation: none !important;
-    transform: none !important;
-}
-
-/* Global catch-all for other transitions/animations on mobile */
-.is-mobile.disable-ui-animations-mobile *,
-.is-mobile.disable-ui-animations-mobile *::before,
-.is-mobile.disable-ui-animations-mobile *::after {
-    transition: none !important;
-    animation: none !important;
 }

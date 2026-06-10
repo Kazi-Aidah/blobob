@@ -1,0 +1,71 @@
+/* mb-toolbar: main page buttons + navbar + toolbar */
+/* view header + view action buttons */
+.is-mobile .view-header {
+    border-bottom: 0px;
+}
+
+.is-mobile .view-actions {
+    border-radius: var(--button-radius) !important;
+    corner-shape: var(--corner-shape) !important;
+    border: 2px solid var(--background-modifier-border-focus) !important;
+}
+
+.is-mobile .clickable-icon {
+    border-radius: var(--button-radius) !important;
+    corner-shape: var(--corner-shape) !important;
+}
+
+.is-mobile .view-action.clickable-icon {
+    border: 2px solid var(--background-modifier-border-focus);
+    width: 48px;
+}
+
+.is-mobile .view-actions .clickable-icon.view-action {
+    border: none !important;
+}
+
+.is-mobile .view-actions button:nth-child(3) { /* ellipsis */
+    box-shadow: -2px 0px 0px var(--background-modifier-border-hover);
+    border-radius: 0px !important;
+    max-width: 30px;
+}
+
+/* make navbar wide + fixed at bottom */
+.is-mobile .mobile-navbar {
+    background-color: var(--background-primary-alt) !important;
+    background: var(--background-primary-alt) !important;
+    border-top: 2px solid var(--background-modifier-border-focus) !important;
+    border-radius: 0 !important;
+    corner-shape: sharp !important;
+    min-width: 100%;
+    bottom: 0% !important;
+    padding: 0px 10px;
+}
+.is-floating-nav .mobile-navbar {
+    margin-bottom: 0px;
+}
+
+
+/* toolbar */
+.mobile-toolbar-options-list-container {
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    border-radius: calc(var(--button-radius) + 4px) !important;
+    corner-shape: var(--corner-shape);
+}
+.mobile-toolbar-options-list {
+    background-color: var(--background-secondary) !important;
+    border-radius: calc(var(--button-radius) + 4px) !important;
+    corner-shape: var(--corner-shape);
+    border: 2px solid var(--background-modifier-border-focus);
+}
+
+.mobile-toolbar-option {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+/* .mobile-toolbar > :has(.mobile-toolbar-option) {
+    background-color: var(--background-secondary-alt) !important;
+} */

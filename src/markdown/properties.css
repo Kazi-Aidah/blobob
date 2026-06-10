@@ -1,0 +1,302 @@
+.metadata-container {
+    border-radius: var(--touch-radius-s);
+    corner-shape: var(--corner-shape);
+}
+
+/* toggle: dim unless hovered */
+.dim-properties .metadata-container {
+    opacity: 0.6;
+    transition: opacity calc(var(--animation-duration) * 1) ease;
+}
+
+.dim-properties .metadata-container:hover {
+    opacity: 1;
+}
+
+/* shared base */
+.properties-1 .metadata-container,
+.properties-2 .metadata-container,
+.properties-3 .metadata-container,
+.properties-4 .metadata-container,
+.properties-5 .metadata-container,
+.properties-6 .metadata-container {
+    --input-height: var(--metadata-input-height);
+    width: 100%;
+    background-color: var(--background-secondary-alt);
+    justify-content: space-between;
+}
+
+.properties-1 .metadata-container,
+.properties-2 .metadata-container,
+.properties-4 .metadata-container,
+.properties-6 .metadata-container {
+    border: 2px solid var(--text-faint);
+    box-shadow: 0 3px 0 0 var(--text-faint);
+}
+
+.properties-3 .metadata-container {
+    border-top: 3.5px solid var(--color-accent);
+    border-bottom: 3.5px solid var(--color-accent);
+}
+
+.properties-5 .metadata-container {
+    border-top: 2px solid var(--text-faint);
+    border-bottom: 2px solid var(--text-faint);
+}
+
+/* ===== STYLE 1 ===== */
+.properties-1 .metadata-container {
+    background-color: var(--background-secondary-alt);
+    transform-origin: top;
+    transition:
+        transform calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
+        padding calc(var(--animation-duration) * 1.3333) ease,
+        opacity calc(var(--animation-duration) * 1.3333) ease;
+}
+
+.properties-1 .metadata-container.is-collapsed {
+    opacity: 0.6;
+    animation: collapse-bounce calc(var(--animation-duration) * 1.5) cubic-bezier(0.175, 0.885, 0.32, 2) forwards;
+}
+
+.properties-1 .metadata-container:not(.is-collapsed) {
+    opacity: 1;
+    animation: settle-container calc(var(--animation-duration) * 1.6667) forwards;
+}
+
+.properties-1 .metadata-properties-heading {
+    border-bottom: 2px solid var(--text-faint);
+    width: 100%;
+    padding: 0.5em 1.4em 16px;
+    transition: border-bottom 0s ease;
+    transition-delay: border-bottom 0.2s;
+}
+
+.properties-1 .metadata-content {
+    padding: 10px 20px;
+}
+
+.properties-1 .metadata-container.is-collapsed .metadata-properties-heading {
+    padding-top: 6px;
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* ===== STYLE 2 ===== */
+.properties-2 .metadata-container {
+    margin-bottom: 1.3rem;
+    padding: 1rem 1.5rem;
+    transform-origin: top;
+    transition: opacity calc(var(--animation-duration) * 0.3) ease;
+}
+
+.properties-2 .metadata-container.is-collapsed {
+    opacity: 0.6;
+    padding-top: 0.5em;
+    padding-bottom: 0.2em;
+    animation: bounce-scale-translate 0.35s cubic-bezier(0.34, 1.2, 0.64, 1) forwards;
+}
+
+.properties-2 .metadata-container:not(.is-collapsed) {
+    opacity: 1;
+    animation: bounce-back-scale-translate 0.4s cubic-bezier(0.34, 1.2, 0.64, 1) forwards;
+}
+
+/* ===== STYLE 3 ===== */
+.properties-3 .metadata-container {
+    margin-bottom: 1.3rem;
+    margin-top: -10px;
+    border-radius: 0 0 var(--touch-radius-s) var(--touch-radius-s);
+    padding: 1rem 1.3rem;
+    transform-origin: top;
+    transition: opacity calc(var(--animation-duration) * 0.3) ease;
+}
+
+.properties-3 .metadata-container.is-collapsed {
+    opacity: 0.6;
+    padding-top: 0.3rem;
+    padding-bottom: 0.2rem;
+    animation: bounce-scale-translate 0.35s cubic-bezier(0.34, 1.2, 0.64, 1) forwards;
+}
+
+.properties-3 .metadata-container:not(.is-collapsed) {
+    opacity: 1;
+    animation: bounce-back-scale-translate 0.4s cubic-bezier(0.34, 1.2, 0.64, 1) forwards;
+}
+
+/* ===== STYLE 4 ===== */
+.properties-4 .metadata-container {
+    margin: -15px 0 1.3rem 4px;
+    border-radius: 0 0 8px 8px;
+    padding: 1rem;
+    background: var(--background-secondary-alt);
+    transform-origin: top;
+    transition: opacity calc(var(--animation-duration) * 0.3) ease;
+}
+
+.properties-4 .metadata-container.is-collapsed {
+    padding: 0.3rem !important;
+    opacity: 0.6;
+    animation: bounce-scale-translate 0.35s cubic-bezier(0.34, 1.2, 0.64, 1) forwards;
+}
+
+.properties-4 .metadata-container:not(.is-collapsed) {
+    opacity: 1;
+    animation: bounce-back-scale-translate 0.4s cubic-bezier(0.34, 1.2, 0.64, 1) forwards;
+}
+
+/* ===== STYLE 5 ===== */
+.properties-5 .metadata-container {
+    border: 0;
+    margin-bottom: 1.3rem;
+    padding: 0.9rem 1.5rem;
+    transform-origin: top;
+    transition: opacity calc(var(--animation-duration) * 0.3) ease;
+}
+
+.properties-5 .metadata-container.is-collapsed {
+    opacity: 0.6;
+    padding-top: 0.3rem;
+    padding-bottom: 0.2rem;
+    animation: bounce-scale-translate 0.35s cubic-bezier(0.34, 1.2, 0.64, 1) forwards;
+}
+
+.properties-5 .metadata-container:not(.is-collapsed) {
+    opacity: 1;
+    animation: bounce-back-scale-translate 0.4s cubic-bezier(0.34, 1.2, 0.64, 1) forwards;
+}
+
+/* ===== SMOOTH BOUNCE KEYFRAMES ===== */
+@keyframes bounce-scale-translate {
+    0% {
+        transform: scale(1) translateY(0);
+    }
+    45% {
+        transform: scale(0.97) translateY(4px);
+    }
+    100% {
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes bounce-back-scale-translate {
+    0% {
+        transform: scale(1) translateY(0);
+    }
+    40% {
+        transform: scale(0.98) translateY(-2px);
+    }
+    100% {
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* ===== KEYFRAMES FOR STYLE 1 ===== */
+@keyframes settle-container {
+    0% { transform: scaleY(1); }
+    40% { transform: scaleY(1.025); }
+    100% { transform: scaleY(1); }
+}
+
+@keyframes collapse-bounce {
+    0% { transform: scaleY(1); }
+    60% { transform: scaleY(0.94); }
+    100% { transform: scaleY(1); }
+}
+
+/* ===== COLLAPSE ARROW — SHOW ON HOVER ONLY ===== */
+.metadata-container .metadata-properties-heading .collapse-indicator.collapse-icon {
+    opacity: 0;
+    transition: opacity calc(var(--animation-duration) * 0.6667) ease;
+}
+
+.metadata-container.is-collapsed .metadata-properties-heading:hover .collapse-indicator.collapse-icon,
+.metadata-container:not(.is-collapsed) .metadata-properties-heading .collapse-indicator.collapse-icon {
+    opacity: 1;
+}
+
+/* toggle: hide properties arrow */
+.hide-properties-arrow
+.metadata-container
+.metadata-properties-heading
+.collapse-indicator.collapse-icon {
+    display: none;
+}
+
+/* toggle: center properties heading */
+.center-properties-heading .metadata-container .metadata-properties-heading {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+/* ===== PROPERTIES CONTENT ANIMATION ===== */
+.properties-1 .metadata-container .metadata-content,
+.properties-2 .metadata-container .metadata-content,
+.properties-3 .metadata-container .metadata-content,
+.properties-4 .metadata-container .metadata-content,
+.properties-5 .metadata-container .metadata-content {
+    transform-origin: top;
+    transition:
+        transform calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
+        opacity calc(var(--animation-duration) * 1.3333) ease;
+}
+
+.metadata-container.is-collapsed .metadata-content {
+    transform: scaleY(0.9);
+    opacity: 0;
+}
+
+.metadata-container:not(.is-collapsed) .metadata-content {
+    animation: settle-bounce calc(var(--animation-duration) * 1.3333) forwards;
+}
+
+@keyframes settle-bounce {
+    0% { transform: scaleY(1.05); }
+    60% { transform: scaleY(0.98); }
+    100% { transform: scaleY(1); }
+}
+
+
+/* toggle: property key casing */
+.meta-key-case-capi .metadata-property-key-input { text-transform: capitalize; }
+.meta-key-case-upper .metadata-property-key-input { text-transform: uppercase; }
+.meta-key-case-lower .metadata-property-key-input { text-transform: lowercase; }
+.meta-key-case-none  .metadata-property-key-input { text-transform: none; }
+
+
+/* ===== RESET FOR FILE PROPERTIES SIDEBAR ===== */
+.workspace-leaf-content[data-type="file-properties"] .metadata-container {
+    background-color: var(--background-primary);
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    transform: none;
+    opacity: 1;
+    animation: none;
+    transition: none;
+    width: auto;
+    justify-content: normal;
+}
+
+.workspace-leaf-content[data-type="file-properties"] .metadata-content {
+    background-color: var(--background-secondary);
+    padding: 0;
+    transform: none;
+    opacity: 1;
+    animation: none;
+    transition: none;
+}
+
+.workspace-leaf-content[data-type="file-properties"] .metadata-properties-heading {
+    border: none;
+    padding: 0;
+    justify-content: normal;
+    text-align: left;
+}
+
+.workspace-leaf-content[data-type="file-properties"] .metadata-property-value {
+    padding-bottom: 10px;
+}

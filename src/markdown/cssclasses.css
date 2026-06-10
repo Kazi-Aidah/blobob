@@ -1,0 +1,212 @@
+/* shared */
+.multi-select-pill {
+    background-color: var(--tag-background);
+    color: var(--tag-color);
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+}
+
+/* cssclasses */
+.metadata-property[data-property-key="cssclasses"] .multi-select-pill {
+    background-color: var(--tag-background);
+    color: var(--tag-color);
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+
+    padding: 2px 10px;
+}
+
+.metadata-property[data-property-key="cssclasses"] .multi-select-pill:hover {
+    background-color: var(--tag-background-hover);
+}
+
+/* tags */
+.metadata-property[data-property-key="tags"] .multi-select-pill {
+    padding-right: 12px;
+}
+
+.metadata-property[data-property-key="tags"] .multi-select-pill:hover {
+    padding-right: 2px;
+}
+
+/* x button */
+.multi-select-pill .multi-select-pill-remove-button {
+    color: var(--tag-color);
+    display: none;
+    padding-right: 0px;
+    
+    align-content: center;
+    justify-content: center;
+}
+
+.multi-select-pill:hover .multi-select-pill-remove-button {
+    display: block;
+}
+
+/* file properties sidebar X BUTTON COMMANDEERING */
+.workspace-leaf-content[data-type="file-properties"] .multi-select-pill {
+    display: flex !important;
+    align-items: center !important;
+    gap: 4px;
+}
+
+.workspace-leaf-content[data-type="file-properties"] .multi-select-pill-remove-button {
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.workspace-leaf-content[data-type="file-properties"] .multi-select-pill-remove-button svg {
+    display: block !important;
+    width: 1em;
+    height: 1em;
+}
+
+/* dropdown options: multi select pill styles */
+.msp-1 .multi-select-pill {
+    border: 2px solid var(--tag-border-color);
+}
+
+.msp-2 .multi-select-pill {
+    border: 2px solid var(--tag-color);
+}
+
+.msp-3 .multi-select-pill,
+.msp-3 .metadata-property[data-property-key="cssclasses"] .multi-select-pill,
+.msp-3 .metadata-property[data-property-key="tags"] .multi-select-pill {
+    background: none;
+    background-color: none;
+    border: none;
+
+    padding: 2px;
+}
+
+.msp-3 .metadata-property[data-property-key="tags"] .multi-select-pill {
+    margin-left: -13px;
+}
+
+.msp-3 .workspace-leaf-content[data-type="file-properties"] .metadata-property[data-property-key="tags"] .multi-select-pill {
+    margin-left: -9px;
+}
+
+
+
+/* target file properties sidebar */
+.workspace-leaf-content[data-type="file-properties"] .metadata-container,
+.workspace-leaf-content[data-type="file-properties"] .metadata-content {
+    background-color: var(--background-secondary) !important;
+    border-radius: var(--button-radius) !important;
+    corner-shape: var(--corner-shape);
+    padding: 8px !important;
+}
+
+.workspace-leaf-content[data-type="file-properties"] .metadata-property[data-property-key="tags"] .multi-select-pill {
+    padding-right: 10px;
+}
+
+.workspace-leaf-content[data-type="file-properties"] .metadata-property[data-property-key="tags"] .multi-select-pill:hover {
+    padding-right: 6px;
+}
+
+.workspace-leaf-content[data-type="file-properties"] .metadata-property-value {
+    padding: 4px !important;
+}
+
+.metadata-property,
+.metadata-property-key,
+.metadata-property-value {
+    border: none !important;
+}
+
+
+/* dropdown: property key icon styles: accent color, normal text color, muted color, hidden */
+.mpk-accent-color .metadata-property-key-input {
+    border-radius: var(--button-radius) !important;
+    corner-shape: var(--corner-shape) !important;
+    padding: 4px 10px !important;
+    letter-spacing: 0.09em;
+    background-color: transparent;
+    color: var(--color-accent-1) !important;
+    font-size: 0.8em;
+}
+
+.mpk-accent-color .metadata-property-icon {
+    color: var(--color-accent-1) !important;
+}
+
+/* accent-color + hidden */
+.mpk-accent-color-hidden .metadata-property-key-input {
+    border-radius: var(--button-radius) !important;
+    corner-shape: var(--corner-shape) !important;
+    letter-spacing: 0.09em;
+    background-color: transparent;
+    color: var(--color-accent-1) !important;
+    font-size: 0.8em;
+}
+
+.mpk-accent-color-hidden .metadata-property-icon {
+    color: var(--color-accent-1) !important;
+    display: none;
+}
+
+/* ? normal */
+.mpk-normal-color .metadata-property-key-input {
+    border-radius: var(--button-radius) !important;
+    corner-shape: var(--corner-shape) !important;
+    padding: 4px 12px !important;
+    letter-spacing: 0.09em;
+    background-color: transparent;
+    color: var(--text-normal) !important;
+}
+
+.mpk-normal-color .metadata-property-icon {
+    color: var(--text-normal) !important;
+}
+
+/* ? muted */
+.mpk-muted-color .metadata-property-key-input {
+    border-radius: var(--button-radius) !important;
+    corner-shape: var(--corner-shape) !important;   
+    padding: 4px 12px !important;
+    letter-spacing: 0.09em;
+    background-color: transparent;
+    color: var(--text-muted) !important;
+}
+
+.mpk-key-only .metadata-property-icon {
+    color: var(--text-muted) !important;
+}
+
+/* ? hidden */
+.mpk-key-only .metadata-property-key-input {
+    border-radius: var(--button-radius) !important;
+    corner-shape: var(--corner-shape) !important;   
+    padding: 4px 12px !important;
+    letter-spacing: 0.09em;
+    background-color: transparent;
+    color: var(--text-muted) !important;
+}
+
+.mpk-key-only .metadata-property-icon {
+    color: var(--text-muted) !important;
+    display: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

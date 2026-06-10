@@ -1,0 +1,158 @@
+/* ---- Root variable adjustment ---- */
+body.compact-tabs {
+    --header-height: 25px;
+    /* --tab-sidebar-radius: 0px; */
+}
+
+/* ---- Main tab container & inner container ---- */
+.compact-tabs .workspace-tab-header-container {
+    --tab-curve: 10px;
+    padding-top: 2px !important;
+    align-items: stretch !important;
+}
+
+.compact-tabs .workspace-tab-header-container-inner {
+    align-items: stretch !important;
+    gap: 0 !important;
+}
+
+/* ---- All tab headers - universal reset ---- */
+.compact-tabs .workspace-tab-header {
+    height: 100% !important;
+    align-self: stretch !important;
+    padding: 0 !important;
+    /* border-radius: 0 !important; */
+}
+
+/* ---- Tab inner content ---- */
+.compact-tabs .workspace-tab-header-inner {
+    height: 100% !important;
+    align-items: center !important;
+}
+
+/* ---- Active tab specific ---- */
+.compact-tabs .workspace-tab-header.is-active {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+}
+
+/* ---- Inactive tab inner margin fix ---- */
+.compact-tabs .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+    margin-top: 0 !important;
+}
+
+/* ---- Bubble theme shape overrides ---- */
+.compact-tabs.bubble .workspace-tab-header,
+.compact-tabs.bubble .workspace-tab-header:hover,
+.compact-tabs.bubble .workspace-tab-header.is-active {
+    transform: translateY(-2px) !important;
+    height: 20px !important;
+}
+
+.workspace-tab-header-container-inner {
+    margin-top: 0 !important;
+}
+
+/*.compact-tabs.bubble .workspace-tab-header-container {*/
+/*    padding-bottom: 2px;*/
+/*}*/
+
+/* body.compact-tabs.bubble {
+    .workspace .mod-left-split .workspace-tab-header-container-inner {
+        transform: translateY(-4px) !important;
+    }
+} */
+
+/* ---- Default tab & default tab rounded ---- */
+.compact-tabs.default-tab .workspace-tab-header-container-inner,
+.compact-tabs.default-tab-rounded .workspace-tab-header-container-inner {
+    margin-top: 0 !important;
+}
+
+.compact-tabs.default-tab .workspace-tab-header,
+.compact-tabs.default-tab-rounded .workspace-tab-header {
+    transform: translateY(0) !important;
+}
+
+/* ---- Sidebar tabs (left & right splits) - full reset ---- */
+.compact-tabs .mod-left-split .workspace-tab-header-container,
+.compact-tabs .mod-right-split .workspace-tab-header-container {
+    align-items: flex-start !important;
+}
+
+.compact-tabs .mod-left-split .workspace-tab-header-container-inner,
+.compact-tabs .mod-right-split .workspace-tab-header-container-inner {
+    align-items: stretch !important;
+}
+
+.compact-tabs .mod-left-split .workspace-tab-header,
+.compact-tabs .mod-right-split .workspace-tab-header {
+    transform: translateY(0) scale(1) !important;
+    padding: 0 !important;
+    height: 100% !important;
+    align-self: stretch !important;
+    /* border-radius: 0 !important; */
+}
+
+.compact-tabs .mod-left-split .workspace-tab-header-inner,
+.compact-tabs .mod-right-split .workspace-tab-header-inner {
+    margin-top: 0 !important;
+}
+
+/* ---- Sidebar hover states - no movement ---- */
+.compact-tabs .mod-left-split .workspace-tab-header:hover,
+.compact-tabs .mod-right-split .workspace-tab-header:hover {
+    transform: translateY(0) scale(1) !important;
+    padding: 0 !important;
+}
+
+/* ---- Bubble theme sidebar hover (no scale, only brightness) ---- */
+.compact-tabs.bubble .mod-left-split .workspace-tab-header:hover,
+.compact-tabs.bubble .mod-right-split .workspace-tab-header:hover {
+    transform: none !important;
+    scale: 1 !important;
+    filter: brightness(1.5);
+}
+
+/* ---- Sidebar toggle button vertical offset ---- */
+.compact-tabs .sidebar-toggle-button.mod-left .clickable-icon {
+    margin-bottom: 10px !important;
+    margin-left: 0 !important;
+    margin-top: -13.5px !important;
+}
+
+/*!* ---- Hexagon-tiptip shape override ---- *!*/
+/*body.compact-tabs.default-tab-rounded.hexagon-tiptip .workspace-tab-header {*/
+/*    border-radius: 0 !important;*/
+/*    corner-shape: sharp;*/
+/*}*/
+
+/*!* ---- Reset pseudo-elements that could add spacing ---- *!*/
+/*.compact-tabs .workspace-tab-header::before,*/
+/*.compact-tabs .workspace-tab-header::after {*/
+/*    display: none !important;*/
+/*    content: none !important;*/
+/*}*/
+
+/* ---- Line-height fix for tab text/icons ---- */
+.compact-tabs .workspace-tab-header-inner-title,
+.compact-tabs .workspace-tab-header-inner-icon {
+    line-height: 1 !important;
+    vertical-align: middle !important;
+}
+
+/* ---- Focus mode header adjustment ---- */
+body.compact-tabs.focus-mode .view-header {
+    --header-height: 25px;
+    height: var(--header-height);
+    margin-top: -4px !important;
+}
+
+
+
+.compact-tabs.default-tab-rounded,
+.compact-tabs.default-tab {
+    .workspace-tab-header-container {
+        padding-left: 0 !important;
+    }
+}

@@ -1,0 +1,25 @@
+/* mobile: hide buttons from wide navbar */
+.bb-mobile-hide-arrows {
+    .mobile-navbar-actions > .mobile-navbar-action:nth-child(1),
+    .mobile-navbar-actions > .mobile-navbar-action:nth-child(2) {
+        display: none;
+    }
+}
+
+.bb-mobile-hide-searchnote {
+    .mobile-navbar-actions > .mobile-navbar-action:nth-child(3) {
+        display: none;
+    }
+}
+
+.bb-mobile-hide-newtab {
+    .mobile-navbar-actions > .mobile-navbar-action:nth-child(4) {
+        display: none;
+    }
+}
+
+.bb-mobile-hide-tabs {
+    .mobile-navbar-actions > .mobile-navbar-action:nth-child(5) {
+        display: none;
+    }
+}

@@ -1,0 +1,145 @@
+/* ---
+1. Root variables
+2. Border radius: Circular, Rounded, Round, Sharp
+3. Corner shape: Hexagon, Scoop, Squircle
+4. Strange border radius: Sock, Eye
+5. Layout color switches: dark inside, dark outside, focused dark inside, focused dark outside
+---*/
+
+/* --- Root */
+:root {
+    --button-radius: 4px;
+    --input-radius: 4px;
+    --modal-radius: 8px;
+    --nav-item-radius: 4px;
+    --tag-radius: 4px;
+    --corner-shape: initial;
+    --tab-sidebar-radius: clamp(8px, var(--button-radius, 8px), 20px);
+}
+
+/* .circular-tiptip { --tab-sidebar-radius: 14px;}
+.rounded-tiptip { --tab-sidebar-radius: 10px;}
+.round-tiptip { --tab-sidebar-radius: 7px;}
+.sharp-tiptip { --tab-sidebar-radius: 0px;}
+.hexagon-tiptip { --tab-sidebar-radius: 8px;}
+.scoop-tiptip { --tab-sidebar-radius: 7px;}
+.squircle-tiptip { --tab-sidebar-radius: 40%;}
+.sock-tiptip { --tab-sidebar-radius: 20%;}
+.eye-tiptip { --tab-sidebar-radius: 40%;} */
+
+/* --- Tiptips */
+
+/* RADIUS */
+body.circular-tiptip {
+    --button-radius: 16px;
+    --input-radius: 50px;
+    --modal-radius: 24px;
+    --nav-item-radius: 50px;
+    --tag-radius: 50px;
+}
+
+body.rounded-tiptip {
+    --button-radius: 12px;
+    --input-radius: 12px;
+    --modal-radius: 16px;
+    --nav-item-radius: 12px;
+    --tag-radius: 12px;
+}
+
+body.round-tiptip {
+    --button-radius: 6px;
+    --input-radius: 6px;
+    --modal-radius: 8px;
+    --nav-item-radius: 6px;
+    --tag-radius: 6px;
+}
+
+body.sharp-tiptip {
+    --button-radius: 0px;
+    --input-radius: 0px;
+    --modal-radius: 0px;
+    --nav-item-radius: 0px;
+    --tag-radius: 0px;
+}
+
+/* CORNER SHAPES */
+body.squircle-tiptip {
+    --corner-shape: squircle;
+    --button-radius: 12px;
+    --input-radius: 12px;
+    --modal-radius: 18px;
+    --nav-item-radius: 12px;
+    --tag-radius: 12px;
+}
+
+body.scoop-tiptip {
+    --corner-shape: scoop;
+    --button-radius: 8px;
+    --input-radius: 8px;
+    --modal-radius: 12px;
+    --nav-item-radius: 8px;
+    --tag-radius: 8px;
+}
+
+body.hexagon-tiptip {
+    --corner-shape: bevel;
+    --button-radius: 6px;
+    --input-radius: 6px;
+    --modal-radius: 10px;
+    --nav-item-radius: 6px;
+    --tag-radius: 6px;
+}
+
+body.sock-tiptip {
+    --corner-shape: initial;
+    --button-radius: 30% / 50%;
+    --input-radius: 30% / 50%;
+    --modal-radius: 4%;
+    --nav-item-radius: 30% / 50%;
+    --tag-radius: 30% / 50%;
+}
+
+body.eye-tiptip {
+    --corner-shape: initial;
+    --button-radius: 40% / 60%;
+    --input-radius: 40% / 60%;
+    --modal-radius: 20px / 30px;
+    --nav-item-radius: 40% / 60%;
+    --tag-radius: 40% / 60%;
+}
+
+/* APPLY VARIABLES TO ALL UI ELEMENTS */
+button,
+.mod-cta,
+.setting-item-control button,
+.menu-item,
+.vertical-tab-nav-item,
+.suggestion-item,
+.suggestion-hotkey,
+.setting-hotkey,
+.kanban-plugin__item,
+.workspace-tab-header,
+input,
+textarea,
+select,
+.tag {
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+}
+
+.modal,
+.prompt,
+.menu,
+.notice,
+.popover,
+.kanban-plugin__lane,
+.metadata-container {
+    border-radius: var(--modal-radius);
+    corner-shape: var(--corner-shape);
+}
+
+/* --- layout color switches */
+/* dark inside */
+/* dark outside */
+/* focused dark inside */
+/* focused dark outside */

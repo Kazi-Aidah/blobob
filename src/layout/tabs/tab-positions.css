@@ -3,39 +3,39 @@
 /* orders of tab header container */
 .workspace-tab-header-tab-list {
     order: -1;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    border-radius: 20px;
+    margin-left: 0;
+    margin-right: 0;
     gap: 4px;
 }
 
-/* LEFT SIDEBAR TOGGLE */
+body:not(.disable-fixed-newtab) {
+    /* NEW TAB BUTTON */
+    .workspace-tab-header-new-tab {
+        /* padding: 0 6px !important; */
+        margin-right: 6px;
+        background: transparent;
+        order: 999; 
+        /* force at the end */
+        flex: 0 0 auto;
+    }
 
-/* .sidebar-toggle-button.mod-left {
-    order: -1;
-    margin-right: 8px;
-} */
-
-/* NEW TAB BUTTON */
-.workspace-tab-header-new-tab {
-    /* padding: 0 6px !important; */
-    margin-right: 6px !important;
-    background: transparent !important;
-    order: 999; 
-    /* force at the end */
-    flex: 0 0 auto;
+    /* RIGHT SIDEBAR TOGGLE */
+    .sidebar-toggle-button.mod-right {
+        order: 1000;
+        flex: 0 0 auto;
+        align-self: center;
+        background: transparent;
+        box-shadow: none;
+        height: 24px;
+        width: 24px;
+        padding: 0;
+    }
 }
 
-/* RIGHT SIDEBAR TOGGLE */
-.sidebar-toggle-button.mod-right {
-    order: 1000; /* after new tab */
-    flex: 0 0 auto;
-    align-self: center;
-    background: transparent !important;
-    box-shadow: none !important;
-    height: 24px;
-    width: 24px;
-    padding: 0;
+/* FIXED LEFT SIDEBAR TOGGLE */
+body.fixed-left-sidebar-button .sidebar-toggle-button.mod-left {
+    order: -1;
+    margin-right: 8px;
 }
 
 /* ===== TAB STYLE — LEFT TOP ===== */
@@ -189,4 +189,5 @@ body.tab-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.m
 body.tab-right-icons .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
     display: none !important;
 }
+
 

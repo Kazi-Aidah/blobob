@@ -1,0 +1,129 @@
+/* select { */
+/*   appearance: base-select !important;  */
+/*   background-color: var(--dropdown-background); */
+
+/*   text-align: center; */
+/*   line-height: 1.5; */
+
+/*   display: flex; */
+/*   align-items: center; */
+
+/*   corner-shape: var(--corner-shape); */
+/* } */
+
+/* ::picker(select){ */
+/*    appearance: base-select !important; */
+/*    color: var(--background-modifier-border-focus); */
+/*    border-radius: 0px 0px 10px 10px; */
+/*    corner-shape: var(--corner-shape) !important; */
+/* } */
+
+/* select:open { */
+/*    border-radius: 10px 10px 0px 0px; */
+/* } */
+
+/* select::picker-icon { */
+/*    display: none !important; */
+/* } */
+
+/* select option::checkmark { */
+/*    content: "★" */
+/* } */
+
+
+
+select {
+  padding: 6px;
+  text-align: center;
+  appearance: base-select !important;
+  background-color: var(--dropdown-background);
+  text-align: center;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  corner-shape: var(--corner-shape);
+  transition: background-color 0.2s ease, 
+              all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
+        
+}
+
+select:hover {
+  transform: scale(1.02);
+  background-color: var(--dropdown-background-hover);
+}
+
+select:active {
+    transform: scale(1);
+}
+
+select:open {
+  background-color: var(--dropdown-background-hover);
+}
+
+select:open:hover {
+  transform: scale(1);
+  background-color: var(--dropdown-background-hover);
+}
+
+/* Dropdown panel / picker */
+::picker(select) {
+  appearance: base-select !important;
+  color: var(--background-modifier-border-focus);
+  border-radius: var(--button-radius);
+  corner-shape: var(--corner-shape) !important;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  background-color: var(--dropdown-background-hover);
+  /* padding: 4px; */
+  box-shadow: 0px 2px 4px #00000070;
+}
+
+/* hide default picker arrow icon */
+select::picker-icon {
+  display: none !important;
+}
+
+/* selected option */
+select option::checkmark {
+  content: "★";
+}
+
+/* Individual select options */
+select option {
+  height: 30px;
+  margin: 4px;
+  border-radius: calc(var(--button-radius) - 2px);
+  corner-shape: var(--corner-shape) !important;
+  color: var(--text-normal);
+  background-color: var(--dropdown-background-hover) !important;
+  transition: all 0.15s ease;
+}
+
+select option:hover {
+  transform: scale(0.98);
+  filter: brightness(0.8);
+  background-color: var(--dropdown-background) !important;
+}
+
+select option:active {
+  transform: scale(0.9);
+}
+
+select option:checked {
+  background-color: hsla(var(--interactive-accent-hsl), 0.3) !important;
+  color: var(--text-accent) !important;
+}
+
+select option:checked:hover {
+  background-color: hsla(var(--interactive-accent-hsl), 0.3) !important;
+  color: var(--text-accent) !important;
+  filter: brightness(1);
+  transform: scale(1);
+}
+
+
+/* scrollbar */
+::picker(select) {
+  scrollbar-color: hsla(var(--interactive-accent-hsl), 0.3) var(--dropdown-background-hover);
+  scrollbar-width: 10px;
+}

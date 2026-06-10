@@ -1,0 +1,27 @@
+/* center tab title */   
+.tab-title-center .workspace-tab-header-inner-title {
+   text-align: center;
+}
+
+/* hide tab close button */
+.hide-tab-close-button .workspace-tab-header-inner-close-button {
+   display: none;
+}
+
+/* Tab float colours */
+.tab-float-border-none {
+    --tab-float-border-color: 0;
+}
+
+.tab-float-border-less {
+    --tab-float-border-color: var(--background-modifier-border);
+}
+
+.tab-float-border-hover {
+    --tab-float-border-color: var(--background-modifier-border-hover);
+}
+
+.tab-float-border-focus {
+    --tab-float-border-color: var(--background-modifier-border-focus);
+}
+

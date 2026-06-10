@@ -1,0 +1,75 @@
+/* ===== hide status bar ===== */
+.hide-status-bar .status-bar {
+    display: none !important;
+}
+
+.status-bar {
+    border-radius: 14px !important;
+    transition: all calc(var(--animation-duration) * 0.6667) cubic-bezier(0.175, 0.885, 0.32, 1.5) !important;
+    /* padding: 0px 30px !important; */
+    overflow: auto !important;
+    opacity: 1;
+    /* filter: brightness(0.7); */
+    /* transform: translateY(10%); */
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+.status-bar:hover {
+    border-radius: 10px !important;
+    padding: 10px 8px !important;
+    transition: all calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
+    /* filter: brightness(1); */
+    transform: translateX(0);
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    color: var(--text-normal) !important;
+}
+
+.dim-status-bar .status-bar {
+    opacity: 0 !important;
+}
+
+.dim-status-bar .status-bar:hover {
+    opacity: 1 !important;
+}
+
+/* ===== center status bar ===== */
+.centered-statusbar {
+    .status-bar {
+        position: fixed;
+        right: 33% !important;
+        bottom: 0;
+        backdrop-filter: blur(15px);
+        border-top: 1px solid var(--shade-plus-darker);
+        border-left: 1px solid var(--shade-plus-darker);
+        border-radius: 5px;
+        line-height: 1;
+        opacity: 0.5 !important;
+        transition: calc(var(--animation-duration) * 0.6667);
+        background-color: transparent !important;
+        border: none;
+        padding: 8px !important;
+        transform: none !important;
+        font-size: smaller;
+    }
+
+    .status-bar:hover {
+        opacity: 1 !important;
+        background-color: transparent !important;
+        padding: 8px !important;
+        transform: none !important;
+        transition: none;
+    }
+
+    .status-bar-item {
+        padding: 0 0 0 10px;
+    }
+
+    .workspace-tab-container:has(.cm-scroller) {
+        padding-bottom: 40px !important;
+        padding-top: 8px !important;
+    }
+}

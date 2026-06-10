@@ -1,32 +1,4 @@
-:root {
-    --nav-hide-text: "My Vault";
-    --before-active-line: ">>";
-    --before-active-line-color: #7c3aed;
-    --before-active-line-margin: -20px;
-    --italic-color: var(--color-normal);
-    --bold-color: var(--color-normal);
-    --bolditalic-color: var(--color-normal);
-     --tab-sidebar-radius: clamp(8px, var(--button-radius, 8px), 20px);
-    --animation-speed-raw: 550ms;
-    --nav-folder-radius: var(--button-radius);
-    --nav-file-radius: var(--button-radius);
-    --link-decoration: none;
-    --link-color: var(--color-accent-2);
-    --checklist-done-decoration: none;
-    --color-tang: #e59c58;
-    --clicky-radius: calc(var(--button-radius, 8px) - 4px);
-}
-
-.workspace-tab-container {
-    display: flex;
-    overflow: visible;
-}
-
-/* =========
-   Dark theme vars
-   ========= */
 .theme-dark {
-    --tag-radius: var(--button-radius) !important;
     --button-shadow: #00000050;
     --canvas-background: var(--background-primary);
     --blockquote-border-thickness: 4px;
@@ -34,27 +6,31 @@
     --caret-color: var(--color-accent);
     --checkbox-color: var(--color-tang);
     --text-error: rgb(255, 138, 138);
+
     --background-primary: #1e1f22;
     --background-primary-alt: #26272b;
     --background-secondary: #1e1f22;
     --background-secondary-alt: #36393d;
     --titlebar-background: #1b1b1f;
-    --titlebar-background-focused: #19191d;
+    --titlebar-background-focused: var(---titlebar-background);
+    
     --tab-container-background: var(--titlebar-background);
     --code-background: #19191d;
     --code-border-color: var(--background-secondary-alt);
-    --code-border-width: 2px;
+    --code-border-width: 3px;
     --code-radius: var(--button-radius);
     --interactive-normal: var(--button-background);
     --interactive-hover: var(--button-background-hover);
     --background-modifier-form-field: #303439;
     --background-modifier-form-field-hover: #29292d;
+    --background-modifier-border-focus: var(--background-modifier-border-hover);
     --dropdown-background: #303439;
     --dropdown-background-hover: #3c4048;
     --button-background: #303439;
     --button-background-hover: #3c4048;
     --background-modifier-border: #31353e;
     --background-modifier-border-hover: #484848;
+
     --accent-red: var(--color-red);
     --accent-orange: var(--color-orange);
     --accent-yellow: var(--color-yellow);
@@ -66,7 +42,6 @@
     --accent-brown: var(--color-brown);
     --accent-gray: var(--text-normal);
 
-    /* --color-red: #a93f3f; */
     --color-red: #da4b4b;
     --color-orange: #cc692a;
     --color-yellow: #e8b05a;
@@ -76,22 +51,23 @@
     --color-purple: #965daf;
     --color-pink: #c85b92;
     --color-brown: #9b674b;
-    --color-gray: var(--text-normal);
+    --color-gray: #a6a6a6;
+    
     --text-normal: #bababa;
     --text-muted: #80807c;
     --text-faint: var(--text-muted);
+
     --hr-color: var(--background-modifier-border-focus);
-    --tab-radius: 8px;
     --text-highlight-bg: hsl(var(--interactive-accent-hsl), 0.5);
-    --button-radius: 20px;
 }
 
-/* === DARK THEME COLOR OPTIONS === */
+/* ==========================================
+   DARK THEME VARIANTS
+   ========================================== */
 
 .theme-dark.neutral-gray {
     --toggle-thumb-color: white;
 }
-
 .theme-dark.darker-gray {
     --background-primary: #171717;
     --background-primary-alt: #202020;
@@ -99,7 +75,6 @@
     --background-secondary-alt: #2a2a2a;
     --titlebar-background: #141414;
     --titlebar-background-focused: #111;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #191919;
     --text-normal: #bababa;
     --text-muted: #888;
@@ -112,6 +87,7 @@
     --button-background-hover: #404040;
     --background-modifier-border: #353535;
     --background-modifier-border-focus: #505050;
+    --background-modifier-border-hover: #404040;
 }
 
 .theme-dark.dark-night {
@@ -121,7 +97,6 @@
     --background-secondary-alt: #1f2438;
     --titlebar-background: #070a14;
     --titlebar-background-focused: #05070f;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #0f1424;
     --text-normal: #b4c2d2;
     --text-muted: #7d8593;
@@ -144,7 +119,6 @@
     --background-secondary-alt: #293042;
     --titlebar-background: #1e222f;
     --titlebar-background-focused: #1e222f;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #15171b;
     --text-normal: #b7c4d6;
     --text-muted: #7c8aa3;
@@ -158,11 +132,6 @@
     --background-modifier-border: #293045;
     --background-modifier-border-hover: #303950;
     --background-modifier-border-focus: #3a4661;
-
-    /* input {
-        background-color: var(--background-modifier-form-field) !important;
-        background: var(--background-modifier-form-field) !important;
-    } */
 }
 
 .theme-dark.amoled {
@@ -195,7 +164,6 @@
     --background-secondary-alt: #2d3748;
     --titlebar-background: #0a1522;
     --titlebar-background-focused: #08111c;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #0f1a29;
     --text-normal: #e2e8f0;
     --text-muted: #94a3b8;
@@ -218,7 +186,6 @@
     --background-secondary-alt: #3d2a6a;
     --titlebar-background: #150d2c;
     --titlebar-background-focused: #120a25;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #1f153d;
     --text-normal: #e9d5ff;
     --text-muted: #8e81b6;
@@ -234,6 +201,34 @@
     --background-modifier-border-focus: #4a3482;
 }
 
+.theme-dark.nocturne {
+    --background-primary: #0f1327;
+    --background-primary-alt: #2A2647;
+    --background-secondary: #0f1327;
+    --background-secondary-alt: #262050;
+    --titlebar-background: #0a0d1f;
+    --titlebar-background-focused: #0f1327;
+    --code-background: #1c183e;
+    --text-normal: #e5dac2;
+    --text-muted: #9a7ca7;
+    --text-error: #ffb0a4;
+    --text-accent: #c5aedb;
+    --text-accent-hover: #e5dac2;
+    --background-modifier-form-field: #16133a;
+    --background-modifier-form-field-hover: #201c47;
+    --dropdown-background: #443c6a;
+    --dropdown-background-hover: #514783;
+    --button-background: #3d3964;
+    --button-background-hover: #47417d;
+    --background-modifier-border: #3d3964;
+    --background-modifier-border-hover: #7a6097;
+    --background-modifier-border-focus: #9e82bb;
+    --interactive-accent: #8e6d9e;
+    --interactive-accent-hover: #a885bc;
+    --tag-background: #282152;
+    --tag-background-hover: #3b2e6b;
+}
+
 .theme-dark.midnight-emerald {
     --background-primary: #0c2d2a;
     --background-primary-alt: #17403c;
@@ -241,7 +236,6 @@
     --background-secondary-alt: #235750;
     --titlebar-background: #092421;
     --titlebar-background-focused: #071d1a;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #0e3531;
     --text-normal: #d1fae5;
     --text-muted: #6ee7b7;
@@ -257,6 +251,32 @@
     --background-modifier-border-focus: #2d6c63;
 }
 
+.theme-dark.greenwood {
+    --background-primary: #111412;
+    --background-primary-alt: #171c18;
+    --background-secondary: #1c231d;
+    --background-secondary-alt: #242d25;
+    --titlebar-background: #1c231d;
+    --titlebar-background-focused: #1c231d;
+
+    --text-normal: #c4d7b6;
+    --text-muted: #8da086;
+    --text-error: #d96b96;
+
+    --background-modifier-form-field: #252b25;
+    --background-modifier-form-field-hover: #2f3830;
+    --dropdown-background: #252b25;
+    --dropdown-background-hover: #2f3830;
+
+    --button-background: #563b68;
+    --button-background-hover: #6a4a82;
+
+    --background-modifier-border: #55744d;
+    --background-modifier-border-hover: #6c9860;
+
+    --toggle-thumb-color: #b0d49e;
+}
+
 .theme-dark.deep-ocean {
     --background-primary: #0f172a;
     --background-primary-alt: #1e293b;
@@ -264,7 +284,6 @@
     --background-secondary-alt: #334155;
     --titlebar-background: #0c1424;
     --titlebar-background-focused: #0a1120;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #131c30;
     --text-normal: #b7cae1;
     --text-muted: #94a3b8;
@@ -288,7 +307,6 @@
     --background-secondary-alt: #5a1f44;
     --titlebar-background: #1a0715;
     --titlebar-background-focused: #150511;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #240f1e;
     --text-normal: #fecdd3;
     --text-muted: #cc9aa0;
@@ -311,7 +329,6 @@
     --background-secondary-alt: #6b3f22;
     --titlebar-background: #241508;
     --titlebar-background-focused: #1d1106;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #311e10;
     --text-normal: #fde68a;
     --text-muted: #fbbf24;
@@ -334,7 +351,6 @@
     --background-secondary-alt: #4a2a7d;
     --titlebar-background: #180c2b;
     --titlebar-background-focused: #140a24;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #23133c;
     --text-normal: #f3e8ff;
     --text-muted: #d8b4fe;
@@ -357,7 +373,6 @@
     --background-secondary-alt: #4a5568;
     --titlebar-background: #171d28;
     --titlebar-background-focused: #141a24;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #1f2532;
     --text-normal: #edf2f7;
     --text-muted: #a0aec0;
@@ -380,7 +395,6 @@
     --background-secondary-alt: #553723;
     --titlebar-background: #23150c;
     --titlebar-background-focused: #1d1209;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #2f1e12;
     --text-normal: #f5e6d3;
     --text-muted: #d4a574;
@@ -403,7 +417,6 @@
     --background-secondary-alt: #3a2214;
     --titlebar-background: #150b06;
     --titlebar-background-focused: #110804;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #21120a;
     --text-normal: #f1dcc6;
     --text-muted: #c39a6b;
@@ -426,7 +439,6 @@
     --background-secondary-alt: #52303a;
     --titlebar-background: #23151a;
     --titlebar-background-focused: #1d1215;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #2f1e23;
     --text-normal: #f4e0e9;
     --text-muted: #e0b4c2;
@@ -449,7 +461,6 @@
     --background-secondary-alt: #24365a;
     --titlebar-background: #0c1524;
     --titlebar-background-focused: #0a1120;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #131e32;
     --text-normal: #e0f2fe;
     --text-muted: #a5d8ff;
@@ -472,7 +483,6 @@
     --background-secondary-alt: #483c2f;
     --titlebar-background: #201912;
     --titlebar-background-focused: #1a140e;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #2b231a;
     --text-normal: #f0e6d6;
     --text-muted: #d4c4a8;
@@ -495,7 +505,6 @@
     --background-secondary-alt: #38355c;
     --titlebar-background: #171526;
     --titlebar-background-focused: #131120;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #211e36;
     --text-normal: #e6e4f2;
     --text-muted: #b8b4d9;
@@ -518,7 +527,6 @@
     --background-secondary-alt: #2f352f;
     --titlebar-background: #141714;
     --titlebar-background-focused: #101210;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #1c201c;
     --text-normal: #eaf3ea;
     --text-muted: #a4b9a4;
@@ -541,7 +549,6 @@
     --background-secondary-alt: #4a3019;
     --titlebar-background: #1f140a;
     --titlebar-background-focused: #191008;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #2d1e11;
     --text-normal: #ffeccc;
     --text-muted: #e0b879;
@@ -564,7 +571,6 @@
     --background-secondary-alt: #1a1a1a;
     --titlebar-background: #050505;
     --titlebar-background-focused: #000;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #101010;
     --text-normal: #dbd7d1;
     --text-muted: #aaa;
@@ -588,26 +594,6 @@
     --link-unresolved-color: #a22525;
     --link-color-hover: #8b0000;
     --toggle-thumb-color: #b32626;
-
-    .checkbox-container.is-enabled::after {
-        box-shadow: none;
-    }
-
-    .checkbox-container.is-enabled:hover {
-        background-color: #710000;
-    }
-
-    /* .menu-item.tappable {
-      border-radius: 0 !important;
-    }
-
-    .menu {
-      border-radius: 0 !important;
-    }
-
-    a, .internal-link, .external-link {
-      border-radius: 0px !important;
-    } */
 }
 
 .theme-dark.golden-earth {
@@ -617,7 +603,6 @@
     --background-secondary-alt: #2a2212;
     --titlebar-background: #141108;
     --titlebar-background-focused: #100d06;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #211b0e;
     --background-modifier-form-field: #302615;
     --background-modifier-form-field-hover: #2c2313;
@@ -641,7 +626,6 @@
     --background-secondary-alt: #2a4234;
     --titlebar-background: #16241b;
     --titlebar-background-focused: #142018;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #1f3126;
     --background-modifier-form-field: #2a4033;
     --background-modifier-form-field-hover: #335244;
@@ -650,7 +634,7 @@
     --button-background: #355c46;
     --button-background-hover: #3f6f55;
     --background-modifier-border: #3e5f4b;
-    --background-modifier-border-hover: #4e7a61;
+    --background-modifier-border-hover: #3d5f4a;
     --background-modifier-border-focus: #497356;
     --text-normal: #e6f2e9;
     --text-muted: #a7c0b1;
@@ -665,7 +649,6 @@
     --background-secondary-alt: #18261c;
     --titlebar-background: #0b140e;
     --titlebar-background-focused: #0a120d;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #0f1a13;
     --background-modifier-form-field: #132016;
     --background-modifier-form-field-hover: #1a2b20;
@@ -694,7 +677,6 @@
     --background-secondary-alt: #231b35;
     --titlebar-background: #0f0b1a;
     --titlebar-background-focused: #0c0916;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #161128;
     --background-modifier-form-field: #1d1530;
     --background-modifier-form-field-hover: #2a1f40;
@@ -723,7 +705,6 @@
     --background-secondary-alt: #351b1b;
     --titlebar-background: #1a0f0f;
     --titlebar-background-focused: #160c0c;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #281212;
     --background-modifier-form-field: #301616;
     --background-modifier-form-field-hover: #402020;
@@ -752,7 +733,6 @@
     --background-secondary-alt: #1b2635;
     --titlebar-background: #0b0f1a;
     --titlebar-background-focused: #090d16;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #0f1728;
     --background-modifier-form-field: #162030;
     --background-modifier-form-field-hover: #202e40;
@@ -781,7 +761,6 @@
     --background-secondary-alt: #311928;
     --titlebar-background: #130b11;
     --titlebar-background-focused: #10090e;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #22121b;
     --background-modifier-form-field: #2b1521;
     --background-modifier-form-field-hover: #381c2b;
@@ -810,7 +789,6 @@
     --background-secondary-alt: #2c1925;
     --titlebar-background: #160b10;
     --titlebar-background-focused: #12090e;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #23121b;
     --background-modifier-form-field: #271520;
     --background-modifier-form-field-hover: #301a27;
@@ -834,7 +812,6 @@
     --background-secondary-alt: #3c1028;
     --titlebar-background: #16040d;
     --titlebar-background-focused: #13030b;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #1f0714;
     --text-normal: #f0d9e6;
     --text-muted: #d4b0c9;
@@ -850,10 +827,8 @@
     --background-modifier-border-focus: #5c1a40;
     --link-color: #cc338a;
     --link-unresolved-color: #b32d7a;
-    --link-color-hover: #b32670;;
+    --link-color-hover: #b32670;
 }
-
-
 
 .theme-dark.tasty-chocolate {
     --background-primary: #1a140d;
@@ -862,7 +837,6 @@
     --background-secondary-alt: #3a2a20;
     --titlebar-background: #16110c;
     --titlebar-background-focused: #140f0a;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #1e1810;
     --text-normal: #e6d8c9;
     --text-muted: #b8a58e;
@@ -878,7 +852,6 @@
     --background-modifier-border-focus: #55402e;
 }
 
-
 .theme-dark.tasty-chocolate-2 {
     --background-primary: #1f1810;
     --background-primary-alt: #312619;
@@ -886,7 +859,6 @@
     --background-secondary-alt: #433421;
     --titlebar-background: #1b150e;
     --titlebar-background-focused: #18120c;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #241d14;
     --text-normal: #f0e6d6;
     --text-muted: #d4c4a8;
@@ -909,7 +881,6 @@
     --background-secondary-alt: #3a2222;
     --titlebar-background: #160d0d;
     --titlebar-background-focused: #130b0b;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #1e1313;
     --text-normal: #f2cfcf;
     --text-muted: #d4a8a8;
@@ -932,7 +903,6 @@
     --background-secondary-alt: #443829;
     --titlebar-background: #1c1712;
     --titlebar-background-focused: #191410;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #251e18;
     --text-normal: #f2e8dc;
     --text-muted: #d4c8b8;
@@ -955,7 +925,6 @@
     --background-secondary-alt: #353d42;
     --titlebar-background: #12151a;
     --titlebar-background-focused: #101318;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #1b1f26;
     --text-normal: #e6e9e3;
     --text-muted: #b8beb6;
@@ -978,25 +947,7 @@
     --link-unresolved-color: #5f7a5f;
     --link-color-hover: #7f8d42;
     --toggle-thumb-color: #6f7a42;
-
-    .checkbox-container.is-enabled::after {
-        box-shadow: none;
-    }
-
-    .checkbox-container.is-enabled,
-    .checkbox-container.is-enabled::after {
-        background-color: #68823e;
-    }
-
-    .checkbox-container.is-enabled:hover {
-        background-color: #2e4036;
-    }
-
-    /* .checkbox-container {
-        background-color: #2e4036;
-    } */
 }
-
 
 .theme-dark.red-forest {
     --background-primary: #2f2f2f;
@@ -1005,7 +956,6 @@
     --background-secondary-alt: #333;
     --titlebar-background: #242424;
     --titlebar-background-focused: #1f1f1f;
-    --tab-container-background: var(--titlebar-background);
     --code-background: #1f1f1f;
     --text-normal: #e6e9e3;
     --text-muted: #b8beb6;
@@ -1023,13 +973,8 @@
     --color-accent: #b34949;
     --color-accent-1: #a04646;
     --color-accent-2: #b85656;
-
-
-    /* red accent buttons */
     --interactive-accent: #944b4b;
     --interactive-accent-hover: #944b4b;
-    
-    /* green normal buttons */
     --interactive-normal: #6f7a42;
     --interactive-hover: #7f8d42;
     --text-on-accent: #fff;
@@ -1037,33 +982,126 @@
     --link-unresolved-color: #7a3f3f;
     --link-color-hover: #7f8d42;
     --toggle-thumb-color: #6f7a42;
+}
 
-    .checkbox-container {
-        background-color: #484848;
-    }
 
-    .checkbox-container.is-enabled {
-        background-color: #944b4b;
-    }
+.theme-dark.dark-lime {
+    --background-primary: #12140c;
+    --background-primary-alt: #1a1d12;
+    --background-secondary: #12140c;
+    --background-secondary-alt: #222618;
+    --titlebar-background: #0d0f09;
+    --titlebar-background-focused: #12140c;
+    --code-background: #1a1d12;
+    --text-normal: #e8e5d8;
+    --text-muted: #9faa30;
+    --text-error: #e06c6c;
+    --text-accent: #9faa30;
+    --text-accent-hover: #b8c54a;
+    --background-modifier-form-field: #1a1d12;
+    --background-modifier-form-field-hover: #222618;
+    --dropdown-background: #1a1d12;
+    --dropdown-background-hover: #222618;
+    --button-background: #2a2e1c;
+    --button-background-hover: #9faa30;
+    --background-modifier-border: #2a2e1c;
+    --background-modifier-border-hover: #7a8225;
+    --background-modifier-border-focus: #9faa30;
+    --interactive-accent: #9faa30;
+    --interactive-accent-hover: #b8c54a;
+    --tag-background: #222618;
+    --tag-background-hover: #9faa30;
+    --toggle-thumb-color: var(--background-primary);
+}
 
-    .checkbox-container.is-enabled::after {
-        background-color: #b8a577;
-    }
 
-    .checkbox-container.is-enabled:hover {
-        background-color: #2e4036;
-    }
+.theme-dark.citrine {
+    --background-primary: #140f08;
+    --background-primary-alt: #1f180e;
+    --background-secondary: #140f08;
+    --background-secondary-alt: #2a1f12;
+    --titlebar-background: #0e0a05;
+    --titlebar-background-focused: #140f08;
+    --code-background: #1f180e;
+    --text-normal: #f2ede4;
+    --text-muted: #e89d2d;
+    --text-error: #e06c6c;
+    --text-accent: #e89d2d;
+    --text-accent-hover: #f0b85a;
+    --background-modifier-form-field: #1f180e;
+    --background-modifier-form-field-hover: #2a1f12;
+    --dropdown-background: #1f180e;
+    --dropdown-background-hover: #2a1f12;
+    --button-background: #332617;
+    --button-background-hover: #e89d2d;
+    --background-modifier-border: #332617;
+    --background-modifier-border-hover: #8a6321;
+    --background-modifier-border-focus: #b2812b;
+    --interactive-accent: #e89d2d;
+    --interactive-accent-hover: #f0b85a;
+    --tag-background: #2a1f12;
+    --tag-background-hover: #e89d2d;
+    --toggle-thumb-color: var(--background-primary);
 }
 
 
 
+.theme-dark.urban {
+    --background-primary: #1a0f0a;
+    --background-primary-alt: #2a1a12;
+    --background-secondary: #1a0f0a;
+    --background-secondary-alt: #332018;
+    --titlebar-background: #140c08;
+    --text-normal: #ffdec2;
+    --text-muted: #b95c33;
+    --text-error: #b95c33;
+    --background-modifier-form-field: #241610;
+    --background-modifier-form-field-hover: #2e1d15;
+    --dropdown-background: #241610;
+    --dropdown-background-hover: #2e1d15;
+    --button-background: #332018;
+    --button-background-hover: #b95c33;
+    --background-modifier-border: #3b251b;
+    --background-modifier-border-hover: #b95c33;
+    --toggle-thumb-color: var(--background-primary);
+}
 
+.theme-dark.viridian-regalia {
+    --background-primary: #1a241c;
+    --background-primary-alt: #273325;
+    --background-secondary: #1a241c;
+    --background-secondary-alt: #3b4a2e;
+    --titlebar-background: #0f1510;
+    --titlebar-background-focused: #1a241c;
+    --code-background: #273325;
+    --text-normal: #b8b2a6;
+    --text-muted: #ab7832;
+    --text-error: #d9753e;
+    --text-accent: #ad9960;
+    --text-accent-hover: #c9b87a;
+    --background-modifier-form-field: #1e2a1d;
+    --background-modifier-form-field-hover: #2a3a24;
+    --dropdown-background: #1e2a1d;
+    --dropdown-background-hover: #2a3a24;
+    --button-background: #6d360d;
+    --button-background-hover: #855a3c;
+    --background-modifier-border: #3b2f22;
+    --background-modifier-border-hover: #ad9960;
+    --background-modifier-border-focus: #ab7832;
+    --interactive-accent: #ab7832;
+    --interactive-accent-hover: #c49b4a;
+    --tag-background: #3b2a1a;
+    --tag-background-hover: #6d360d;
+}
+
+/* ==========================================
+   GLOBAL SELECTION & HIGHLIGHT STYLES
+   ========================================== */
 
 .theme-dark ::selection,
 .theme-light ::selection {
     background-color: hsl(var(--interactive-accent-hsl), 0.3) !important;
 }
-
 
 .cm-s-obsidian span.cm-highlight, mark,
 body .cm-s-obsidian span.cm-highlight,
@@ -1109,9 +1147,9 @@ body mark {
     border-radius: 7px;
 }
 
-/* =========
-   Light theme vars
-   ========= */
+/* ==========================================
+   BASE LIGHT THEME
+   ========================================== */
 .theme-light {
     --tag-radius: var(--button-radius) !important;
     --ribbon-background: var(--titlebar-background-focused);
@@ -1134,14 +1172,15 @@ body mark {
     --code-radius: var(--button-radius);
     --interactive-normal: var(--button-background);
     --interactive-hover: var(--button-background-hover);
-    --background-modifier-form-field: #fff;
-    --background-modifier-form-field-hover: #f8f9fa;
-    --dropdown-background: #fff;
-    --dropdown-background-hover: #f8f9fa;
-    --button-background: #e9ecef;
-    --button-background-hover: #dee2e6;
+    --background-modifier-form-field: #dee2e6;
+    --background-modifier-form-field-hover: #ced4da;
+    --dropdown-background: #dee2e6;
+    --dropdown-background-hover: #ced4da;
+    --button-background: #ced4da;
+    --button-background-hover: #bdc3cb;
     --background-modifier-border: #dee2e6;
     --background-modifier-border-hover: #ced4da;
+    --background-modifier-border-focus: var(--background-modifier-border-hover);
     --accent-red: var(--color-red);
     --accent-orange: var(--color-orange);
     --accent-yellow: var(--color-yellow);
@@ -1166,10 +1205,14 @@ body mark {
     --text-muted: #495057;
     --text-faint: #6c757d;
     --hr-color: var(--background-modifier-border);
-    --tab-radius: 8px;
+
     --text-highlight-bg: rgb(255, 224, 130, 0.5);
     --button-radius: 20px;
 }
+
+/* ==========================================
+   LIGHT THEME VARIANTS
+   ========================================== */
 
 .theme-light.paper-white {
     --background-primary: #fff;
@@ -1177,17 +1220,15 @@ body mark {
     --background-secondary: #f8f9fa;
     --background-secondary-alt: #e9ecef;
     --titlebar-background: #f8f9fa;
-    --titlebar-background-focused: var(--titlebar-background);
-    --tab-container-background: var(--titlebar-background);
     --text-normal: #212529;
     --text-muted: #495057;
     --text-error: #e03131;
-    --background-modifier-form-field: #fff;
-    --background-modifier-form-field-hover: #f8f9fa;
-    --dropdown-background: #fff;
-    --dropdown-background-hover: #f8f9fa;
-    --button-background: #e9ecef;
-    --button-background-hover: #dee2e6;
+    --background-modifier-form-field: #e9ecef;
+    --background-modifier-form-field-hover: #dee2e6;
+    --dropdown-background: #e9ecef;
+    --dropdown-background-hover: #dee2e6;
+    --button-background: #dee2e6;
+    --button-background-hover: #ced4da;
     --background-modifier-border: #dee2e6;
     --background-modifier-border-hover: #ced4da;
     --toggle-thumb-color: var(--background-primary);
@@ -1199,196 +1240,257 @@ body mark {
     --background-secondary: #e6e8eb;
     --background-secondary-alt: #d8dbdf;
     --titlebar-background: #e6e8eb;
-    --titlebar-background-focused: var(--titlebar-background);
-    --tab-container-background: var(--titlebar-background);
     --text-normal: #2d3748;
     --text-muted: #4a5568;
     --text-error: #c53030;
-    --background-modifier-form-field: #fff;
-    --background-modifier-form-field-hover: #f7fafc;
-    --dropdown-background: #fff;
-    --dropdown-background-hover: #f7fafc;
-    --button-background: #e2e8f0;
-    --button-background-hover: #cbd5e0;
+    --background-modifier-form-field: #d8dbdf;
+    --background-modifier-form-field-hover: #cbd0d6;
+    --dropdown-background: #d8dbdf;
+    --dropdown-background-hover: #cbd0d6;
+    --button-background: #cbd0d6;
+    --button-background-hover: #bcc2c9;
     --background-modifier-border: #e2e8f0;
     --background-modifier-border-hover: #cbd5e0;
     --toggle-thumb-color: var(--background-primary);
 }
-
 .theme-light.soft-sand {
-    --background-primary: #fdf6e3;
-    --background-primary-alt: #f5e9d1;
-    --background-secondary: #f5e9d1;
-    --background-secondary-alt: #eed9b7;
-    --titlebar-background: #f5e9d1;
-    --titlebar-background-focused: var(--titlebar-background);
-    --tab-container-background: var(--titlebar-background);
-    --code-background: #fffef8;
-    --text-normal: #5c4b3a;
-    --text-muted: #8a7a6b;
-    --text-error: #c44141;
-    --background-modifier-form-field: #fffef8;
-    --background-modifier-form-field-hover: #fdf6e3;
-    --dropdown-background: #fffef8;
-    --dropdown-background-hover: #fdf6e3;
-    --button-background: #f0e0c2;
-    --button-background-hover: #e6d1af;
-    --background-modifier-border: #e6d1af;
-    --background-modifier-border-hover: #d4be9c;
+    --background-primary: #e8dfcc;
+    --background-primary-alt: #dcccb3;
+    --background-secondary: #dcccb3;
+    --background-secondary-alt: #cdb996;
+    --titlebar-background: #dcccb3;
+    --code-background: #f5efe6;
+    --text-normal: #4a3e2e;
+    --text-muted: #7a6b55;
+    --text-error: #b03a3a;
+    --background-modifier-form-field: #cdb996;
+    --background-modifier-form-field-hover: #bca37c;
+    --dropdown-background: #cdb996;
+    --dropdown-background-hover: #bca37c;
+    --button-background: #bca37c;
+    --button-background-hover: #a88f68;
+    --background-modifier-border: #d1bd9a;
+    --background-modifier-border-hover: #bca37c;
     --toggle-thumb-color: var(--background-primary);
 }
 
 .theme-light.green {
-    --background-primary: #f0fdf4;
-    --background-primary-alt: #dcfce7;
-    --background-secondary: #dcfce7;
-    --background-secondary-alt: #bbf7d0;
-    --titlebar-background: #dcfce7;
-    --titlebar-background-focused: var(--titlebar-background);
-    --tab-container-background: var(--titlebar-background);
-    --text-normal: #14532d;
-    --text-muted: #166534;
-    --text-error: #dc2626;
-    --background-modifier-form-field: #fff;
-    --background-modifier-form-field-hover: #f0fdf4;
-    --dropdown-background: #fff;
-    --dropdown-background-hover: #f0fdf4;
-    --button-background: #bbf7d0;
-    --button-background-hover: #86efac;
-    --background-modifier-border: #86efac;
-    --background-modifier-border-hover: #4ade80;
+    --background-primary: #e2f0e4;
+    --background-primary-alt: #cbe3d0;
+    --background-secondary: #cbe3d0;
+    --background-secondary-alt: #aad0b3;
+    --titlebar-background: #cbe3d0;
+    --text-normal: #1f4d2e;
+    --text-muted: #2c6e41;
+    --text-error: #bc3a2a;
+    --background-modifier-form-field: #aad0b3;
+    --background-modifier-form-field-hover: #8bc89a;
+    --dropdown-background: #aad0b3;
+    --dropdown-background-hover: #8bc89a;
+    --button-background: #8bc89a;
+    --button-background-hover: #6eb87e;
+    --background-modifier-border: #8bc89a;
+    --background-modifier-border-hover: #5eb473;
     --toggle-thumb-color: var(--background-primary);
 }
 
 .theme-light.purple {
-    --background-primary: #faf5ff;
-    --background-primary-alt: #f3e8ff;
-    --background-secondary: #f3e8ff;
-    --background-secondary-alt: #e9d5ff;
-    --titlebar-background: #f3e8ff;
-    --titlebar-background-focused: var(--titlebar-background);
-    --tab-container-background: var(--titlebar-background);
-    --text-normal: #581c87;
-    --text-muted: #7c3aed;
-    --text-error: #be185d;
-    --background-modifier-form-field: #fff;
-    --background-modifier-form-field-hover: #faf5ff;
-    --dropdown-background: #fff;
-    --dropdown-background-hover: #faf5ff;
-    --button-background: #e9d5ff;
-    --button-background-hover: #d8b4fe;
-    --background-modifier-border: #d8b4fe;
-    --background-modifier-border-hover: #c084fc;
+    --background-primary: #ece3f5;
+    --background-primary-alt: #ddd0ec;
+    --background-secondary: #ddd0ec;
+    --background-secondary-alt: #c9b6e0;
+    --titlebar-background: #ddd0ec;
+    --text-normal: #3e2860;
+    --text-muted: #5d3e8c;
+    --text-error: #a6325a;
+    --background-modifier-form-field: #c9b6e0;
+    --background-modifier-form-field-hover: #b89bd4;
+    --dropdown-background: #c9b6e0;
+    --dropdown-background-hover: #b89bd4;
+    --button-background: #b89bd4;
+    --button-background-hover: #a27cc2;
+    --background-modifier-border: #b89bd4;
+    --background-modifier-border-hover: #9c78c2;
     --toggle-thumb-color: var(--background-primary);
 }
 
 .theme-light.blue {
-    --background-primary: #f0f9ff;
-    --background-primary-alt: #e0f2fe;
-    --background-secondary: #e0f2fe;
-    --background-secondary-alt: #bae6fd;
-    --titlebar-background: #e0f2fe;
-    --titlebar-background-focused: var(--titlebar-background);
-    --tab-container-background: var(--titlebar-background);
-    --text-normal: #0c4a6e;
-    --text-muted: #0369a1;
-    --text-error: #be123c;
-    --background-modifier-form-field: #fff;
-    --background-modifier-form-field-hover: #f0f9ff;
-    --dropdown-background: #fff;
-    --dropdown-background-hover: #f0f9ff;
-    --button-background: #bae6fd;
-    --button-background-hover: #7dd3fc;
-    --background-modifier-border: #7dd3fc;
-    --background-modifier-border-hover: #38bdf8;
+    --background-primary: #e0edf7;
+    --background-primary-alt: #ccdfef;
+    --background-secondary: #ccdfef;
+    --background-secondary-alt: #aacbe2;
+    --titlebar-background: #ccdfef;
+    --text-normal: #1d4462;
+    --text-muted: #2b628b;
+    --text-error: #a83048;
+    --background-modifier-form-field: #aacbe2;
+    --background-modifier-form-field-hover: #8bb7d6;
+    --dropdown-background: #aacbe2;
+    --dropdown-background-hover: #8bb7d6;
+    --button-background: #8bb7d6;
+    --button-background-hover: #6ea0c4;
+    --background-modifier-border: #8bb7d6;
+    --background-modifier-border-hover: #5e9bc4;
     --toggle-thumb-color: var(--background-primary);
 }
 
 .theme-light.peach {
-    --background-primary: #fff7ed;
-    --background-primary-alt: #ffedd5;
-    --background-secondary: #ffedd5;
-    --background-secondary-alt: #fed7aa;
-    --titlebar-background: #ffedd5;
-    --titlebar-background-focused: var(--titlebar-background);
-    --tab-container-background: var(--titlebar-background);
-    --text-normal: #7c2d12;
-    --text-muted: #c2410c;
-    --text-error: #b91c1c;
-    --background-modifier-form-field: #fff;
-    --background-modifier-form-field-hover: #fff7ed;
-    --dropdown-background: #fff;
-    --dropdown-background-hover: #fff7ed;
-    --button-background: #fed7aa;
-    --button-background-hover: #fdba74;
-    --background-modifier-border: #fdba74;
-    --background-modifier-border-hover: #fb923c;
+    --background-primary: #f2e6db;
+    --background-primary-alt: #e8d5c4;
+    --background-secondary: #e8d5c4;
+    --background-secondary-alt: #dbbc9f;
+    --titlebar-background: #e8d5c4;
+    --text-normal: #5e2c14;
+    --text-muted: #8a4624;
+    --text-error: #a83228;
+    --background-modifier-form-field: #dbbc9f;
+    --background-modifier-form-field-hover: #cea67f;
+    --dropdown-background: #dbbc9f;
+    --dropdown-background-hover: #cea67f;
+    --button-background: #cea67f;
+    --button-background-hover: #b88858;
+    --background-modifier-border: #cea67f;
+    --background-modifier-border-hover: #b88858;
     --toggle-thumb-color: var(--background-primary);
 }
 
 .theme-light.pink {
-    --background-primary: #fff1f2;
-    --background-primary-alt: #ffe4e6;
-    --background-secondary: #ffe4e6;
-    --background-secondary-alt: #fecdd3;
-    --titlebar-background: #ffe4e6;
-    --titlebar-background-focused: var(--titlebar-background);
-    --tab-container-background: var(--titlebar-background);
-    --text-normal: #881337;
-    --text-muted: #be123c;
-    --text-error: #b91c1c;
-    --background-modifier-form-field: #fff;
-    --background-modifier-form-field-hover: #fff1f2;
-    --dropdown-background: #fff;
-    --dropdown-background-hover: #fff1f2;
-    --button-background: #fecdd3;
-    --button-background-hover: #fda4af;
-    --background-modifier-border: #fda4af;
-    --background-modifier-border-hover: #fb7185;
+    --background-primary: #f5e4e8;
+    --background-primary-alt: #eed2da;
+    --background-secondary: #eed2da;
+    --background-secondary-alt: #e2b8c4;
+    --titlebar-background: #eed2da;
+    --text-normal: #6e1f38;
+    --text-muted: #993c58;
+    --text-error: #a83038;
+    --background-modifier-form-field: #e2b8c4;
+    --background-modifier-form-field-hover: #d69cac;
+    --dropdown-background: #e2b8c4;
+    --dropdown-background-hover: #d69cac;
+    --button-background: #d69cac;
+    --button-background-hover: #c2748a;
+    --background-modifier-border: #d69cac;
+    --background-modifier-border-hover: #c2748a;
     --toggle-thumb-color: var(--background-primary);
 }
 
 .theme-light.cyan {
-    --background-primary: #f0fdfa;
-    --background-primary-alt: #ccfbf1;
-    --background-secondary: #ccfbf1;
-    --background-secondary-alt: #99f6e4;
-    --titlebar-background: #ccfbf1;
-    --titlebar-background-focused: var(--titlebar-background);
-    --tab-container-background: var(--titlebar-background);
-    --text-normal: #134e4a;
-    --text-muted: #0d9488;
-    --text-error: #dc2626;
-    --background-modifier-form-field: #fff;
-    --background-modifier-form-field-hover: #f0fdfa;
-    --dropdown-background: #fff;
-    --dropdown-background-hover: #f0fdfa;
-    --button-background: #99f6e4;
-    --button-background-hover: #5eead4;
-    --background-modifier-border: #5eead4;
-    --background-modifier-border-hover: #2dd4bf;
+    --background-primary: #ddf0ee;
+    --background-primary-alt: #c8e5e0;
+    --background-secondary: #c8e5e0;
+    --background-secondary-alt: #aad4cc;
+    --titlebar-background: #c8e5e0;
+    --text-normal: #1d4945;
+    --text-muted: #2c6e66;
+    --text-error: #bc3a32;
+    --background-modifier-form-field: #aad4cc;
+    --background-modifier-form-field-hover: #8bc4b9;
+    --dropdown-background: #aad4cc;
+    --dropdown-background-hover: #8bc4b9;
+    --button-background: #8bc4b9;
+    --button-background-hover: #6eab9f;
+    --background-modifier-border: #8bc4b9;
+    --background-modifier-border-hover: #5eab9f;
     --toggle-thumb-color: var(--background-primary);
 }
 
 .theme-light.yellow {
-    --background-primary: #fefce8;
-    --background-primary-alt: #fef9c3;
-    --background-secondary: #fef9c3;
-    --background-secondary-alt: #fef08a;
-    --titlebar-background: #fef9c3;
-    --titlebar-background-focused: var(--titlebar-background);
-    --tab-container-background: var(--titlebar-background);
-    --text-normal: #854d0e;
-    --text-muted: #ca8a04;
-    --text-error: #b91c1c;
-    --background-modifier-form-field: #fff;
-    --background-modifier-form-field-hover: #fefce8;
-    --dropdown-background: #fff;
-    --dropdown-background-hover: #fefce8;
-    --button-background: #fef08a;
-    --button-background-hover: #fde047;
-    --background-modifier-border: #fde047;
-    --background-modifier-border-hover: #facc15;
+    --background-primary: #faf2cf;
+    --background-primary-alt: #f5e9b5;
+    --background-secondary: #f5e9b5;
+    --background-secondary-alt: #ecdc93;
+    --titlebar-background: #f5e9b5;
+    --text-normal: #6b4a14;
+    --text-muted: #9b6e24;
+    --text-error: #bc3a28;
+    --background-modifier-form-field: #ecdc93;
+    --background-modifier-form-field-hover: #e2cf78;
+    --dropdown-background: #ecdc93;
+    --dropdown-background-hover: #e2cf78;
+    --button-background: #e2cf78;
+    --button-background-hover: #ceb55a;
+    --background-modifier-border: #e2cf78;
+    --background-modifier-border-hover: #ceb55a;
+    --toggle-thumb-color: var(--background-primary);
+}
+
+.theme-light.azure {
+    --background-primary: #e3ecf5;
+    --background-primary-alt: #d1dfef;
+    --background-secondary: #d1dfef;
+    --background-secondary-alt: #b8cce6;
+    --titlebar-background: #d1dfef;
+    --text-normal: #1e3a6b;
+    --text-muted: #2b5396;
+    --text-error: #bc3038;
+    --background-modifier-form-field: #b8cce6;
+    --background-modifier-form-field-hover: #9eb6db;
+    --dropdown-background: #b8cce6;
+    --dropdown-background-hover: #9eb6db;
+    --button-background: #9eb6db;
+    --button-background-hover: #7896cc;
+    --background-modifier-border: #9eb6db;
+    --background-modifier-border-hover: #7896cc;
+    --toggle-thumb-color: var(--background-primary);
+}
+
+.theme-light.brinjal {
+    --background-primary: #e8dcec;
+    --background-primary-alt: #d8c7e0;
+    --background-secondary: #d8c7e0;
+    --background-secondary-alt: #c2abce;
+    --titlebar-background: #d1b7dc;
+    --text-normal: #2e1c35;
+    --text-muted: #4a2e55;
+    --text-error: #942a42;
+    --background-modifier-form-field: #c2abce;
+    --background-modifier-form-field-hover: #a27cb5;
+    --dropdown-background: #c2abce;
+    --dropdown-background-hover: #a27cb5;
+    --button-background: #a27cb5;
+    --button-background-hover: #8c68a2;
+    --background-modifier-border: #8c68a2;
+    --background-modifier-border-hover: #73558a;
+    --toggle-thumb-color: var(--background-primary);
+}
+
+.theme-light.joy {
+    --background-primary: #f5e8dd;
+    --background-primary-alt: #ecdbc9;
+    --background-secondary: #ecdbc9;
+    --background-secondary-alt: #e0c4a8;
+    --titlebar-background: #e8cdb5;
+    --text-normal: #4a2a16;
+    --text-muted: #6a4024;
+    --text-error: #a83028;
+    --background-modifier-form-field: #e0c4a8;
+    --background-modifier-form-field-hover: #ce8a58;
+    --dropdown-background: #e0c4a8;
+    --dropdown-background-hover: #ce8a58;
+    --button-background: #ce8a58;
+    --button-background-hover: #bb7444;
+    --background-modifier-border: #ce8a58;
+    --background-modifier-border-hover: #bb7444;
+    --toggle-thumb-color: var(--background-primary);
+}
+
+.theme-light.choco {
+    --background-primary: #ece2d6;
+    --background-primary-alt: #dfcfbf;
+    --background-secondary: #dfcfbf;
+    --background-secondary-alt: #ccb59b;
+    --titlebar-background: #ddc5aa;
+    --text-normal: #312218;
+    --text-muted: #523a28;
+    --text-error: #942e22;
+    --background-modifier-form-field: #ccb59b;
+    --background-modifier-form-field-hover: #b89170;
+    --dropdown-background: #ccb59b;
+    --dropdown-background-hover: #b89170;
+    --button-background: #b89170;
+    --button-background-hover: #a37d5c;
+    --background-modifier-border: #8c684a;
+    --background-modifier-border-hover: #735536;
     --toggle-thumb-color: var(--background-primary);
 }
 
@@ -1398,41 +1500,17 @@ body mark {
     --background-secondary: #f1f5f9;
     --background-secondary-alt: #e2e8f0;
     --titlebar-background: #f1f5f9;
-    --titlebar-background-focused: var(--titlebar-background);
-    --tab-container-background: var(--titlebar-background);
     --text-normal: #1e293b;
     --text-muted: #475569;
     --text-error: #dc2626;
-    --background-modifier-form-field: #fff;
-    --background-modifier-form-field-hover: #f8fafc;
-    --dropdown-background: #fff;
-    --dropdown-background-hover: #f8fafc;
-    --button-background: #e2e8f0;
-    --button-background-hover: #cbd5e1;
+    --background-modifier-form-field: #e2e8f0;
+    --background-modifier-form-field-hover: #cbd5e1;
+    --dropdown-background: #e2e8f0;
+    --dropdown-background-hover: #cbd5e1;
+    --button-background: #cbd5e1;
+    --button-background-hover: #b9c4d3;
     --background-modifier-border: #cbd5e1;
     --background-modifier-border-hover: #94a3b8;
-    --toggle-thumb-color: var(--background-primary);
-}
-
-.theme-light.azure {
-    --background-primary: #eff6ff;
-    --background-primary-alt: #dbeafe;
-    --background-secondary: #dbeafe;
-    --background-secondary-alt: #bfdbfe;
-    --titlebar-background: #dbeafe;
-    --titlebar-background-focused: var(--titlebar-background);
-    --tab-container-background: var(--titlebar-background);
-    --text-normal: #1e3a8a;
-    --text-muted: #1d4ed8;
-    --text-error: #b91c1c;
-    --background-modifier-form-field: #fff;
-    --background-modifier-form-field-hover: #eff6ff;
-    --dropdown-background: #fff;
-    --dropdown-background-hover: #eff6ff;
-    --button-background: #bfdbfe;
-    --button-background-hover: #93c5fd;
-    --background-modifier-border: #93c5fd;
-    --background-modifier-border-hover: #60a5fa;
     --toggle-thumb-color: var(--background-primary);
 }
 
@@ -1442,17 +1520,15 @@ body mark {
     --background-secondary: #e8f5e9;
     --background-secondary-alt: #c8e6c9;
     --titlebar-background: #e8f5e9;
-    --titlebar-background-focused: var(--titlebar-background);
-    --tab-container-background: var(--titlebar-background);
     --text-normal: #2e7d32;
     --text-muted: #4caf50;
     --text-error: #c62828;
-    --background-modifier-form-field: #fff;
-    --background-modifier-form-field-hover: #f1f8e9;
-    --dropdown-background: #fff;
-    --dropdown-background-hover: #f1f8e9;
-    --button-background: #c8e6c9;
-    --button-background-hover: #a5d6a7;
+    --background-modifier-form-field: #c8e6c9;
+    --background-modifier-form-field-hover: #a5d6a7;
+    --dropdown-background: #c8e6c9;
+    --dropdown-background-hover: #a5d6a7;
+    --button-background: #a5d6a7;
+    --button-background-hover: #81c784;
     --background-modifier-border: #a5d6a7;
     --background-modifier-border-hover: #81c784;
     --toggle-thumb-color: var(--background-primary);
@@ -1464,17 +1540,15 @@ body mark {
     --background-secondary: #a8f0ff;
     --background-secondary-alt: #70e0ff;
     --titlebar-background: #a8f0ff;
-    --titlebar-background-focused: var(--titlebar-background);
-    --tab-container-background: var(--titlebar-background);
     --text-normal: #004f63;
     --text-muted: #007a8f;
     --text-error: #c62828;
-    --background-modifier-form-field: #fff;
-    --background-modifier-form-field-hover: #d0f7ff;
-    --dropdown-background: #fff;
-    --dropdown-background-hover: #d0f7ff;
-    --button-background: #70e0ff;
-    --button-background-hover: #3fd4ff;
+    --background-modifier-form-field: #70e0ff;
+    --background-modifier-form-field-hover: #3fd4ff;
+    --dropdown-background: #70e0ff;
+    --dropdown-background-hover: #3fd4ff;
+    --button-background: #3fd4ff;
+    --button-background-hover: #1fc6f0;
     --background-modifier-border: #33c7e0;
     --background-modifier-border-hover: #00b4d9;
     --toggle-thumb-color: var(--background-primary);
@@ -1486,17 +1560,15 @@ body mark {
     --background-secondary: #efb9c8;
     --background-secondary-alt: #e79aad;
     --titlebar-background: #efb9c8;
-    --titlebar-background-focused: var(--titlebar-background);
-    --tab-container-background: var(--titlebar-background);
     --text-normal: #6b1238;
     --text-muted: #8c2a52;
     --text-error: #a61d2d;
-    --background-modifier-form-field: #fffafa;
-    --background-modifier-form-field-hover: #f6d6df;
-    --dropdown-background: #fffafa;
-    --dropdown-background-hover: #f6d6df;
-    --button-background: #e79aad;
-    --button-background-hover: #dc7f99;
+    --background-modifier-form-field: #e79aad;
+    --background-modifier-form-field-hover: #dc7f99;
+    --dropdown-background: #e79aad;
+    --dropdown-background-hover: #dc7f99;
+    --button-background: #dc7f99;
+    --button-background-hover: #c95678;
     --background-modifier-border: #d86c8a;
     --background-modifier-border-hover: #c95678;
     --toggle-thumb-color: var(--background-primary);
@@ -1508,18 +1580,16 @@ body mark {
     --background-secondary: #ece6b8;
     --background-secondary-alt: #e0d68f;
     --titlebar-background: #ece6b8;
-    --titlebar-background-focused: var(--titlebar-background);
-    --tab-container-background: var(--titlebar-background);
     --code-background: #fffef8;
     --text-normal: #6f6400;
     --text-muted: #8a7f1a;
     --text-error: #9e2a2b;
-    --background-modifier-form-field: #fffef8;
-    --background-modifier-form-field-hover: #f5f2d8;
-    --dropdown-background: #fffef8;
-    --dropdown-background-hover: #f5f2d8;
-    --button-background: #e0d68f;
-    --button-background-hover: #d4c96a;
+    --background-modifier-form-field: #e0d68f;
+    --background-modifier-form-field-hover: #d4c96a;
+    --dropdown-background: #e0d68f;
+    --dropdown-background-hover: #d4c96a;
+    --button-background: #d4c96a;
+    --button-background-hover: #c2b83f;
     --background-modifier-border: #c2b83f;
     --background-modifier-border-hover: #b0a62c;
     --toggle-thumb-color: var(--background-primary);
@@ -1531,17 +1601,15 @@ body mark {
     --background-secondary: #e6b3b8;
     --background-secondary-alt: #d48a92;
     --titlebar-background: #e6b3b8;
-    --titlebar-background-focused: var(--titlebar-background);
-    --tab-container-background: var(--titlebar-background);
     --text-normal: #6f0f14;
     --text-muted: #8a2a2f;
     --text-error: #4d0000;
-    --background-modifier-form-field: #fffafa;
-    --background-modifier-form-field-hover: #f2d6d9;
-    --dropdown-background: #fffafa;
-    --dropdown-background-hover: #f2d6d9;
-    --button-background: #d48a92;
-    --button-background-hover: #c46b74;
+    --background-modifier-form-field: #d48a92;
+    --background-modifier-form-field-hover: #c46b74;
+    --dropdown-background: #d48a92;
+    --dropdown-background-hover: #c46b74;
+    --button-background: #c46b74;
+    --button-background-hover: #b94a52;
     --background-modifier-border: #b94a52;
     --background-modifier-border-hover: #a33239;
     --toggle-thumb-color: var(--background-secondary-alt);
@@ -1557,17 +1625,15 @@ body mark {
     --background-secondary: #d6dde5;
     --background-secondary-alt: #c1ccd8;
     --titlebar-background: #d6dde5;
-    --titlebar-background-focused: var(--titlebar-background);
-    --tab-container-background: var(--titlebar-background);
     --text-normal: #1f2a37;
     --text-muted: #3a4a5e;
     --text-error: #8b1d1d;
-    --background-modifier-form-field: #fff;
-    --background-modifier-form-field-hover: #e7ebef;
-    --dropdown-background: #fff;
-    --dropdown-background-hover: #e7ebef;
-    --button-background: #c1ccd8;
-    --button-background-hover: #aebccc;
+    --background-modifier-form-field: #c1ccd8;
+    --background-modifier-form-field-hover: #aebccc;
+    --dropdown-background: #c1ccd8;
+    --dropdown-background-hover: #aebccc;
+    --button-background: #aebccc;
+    --button-background-hover: #8fa3b8;
     --background-modifier-border: #8fa3b8;
     --background-modifier-border-hover: #738aa3;
 }
@@ -1578,17 +1644,15 @@ body mark {
     --background-secondary: #d8d8c9;
     --background-secondary-alt: #c9c9b5;
     --titlebar-background: #d8d8c9;
-    --titlebar-background-focused: var(--titlebar-background);
-    --tab-container-background: var(--titlebar-background);
     --text-normal: #5d5c5a;
     --text-muted: #7a7976;
     --text-error: #c62828;
-    --background-modifier-form-field: #fff;
-    --background-modifier-form-field-hover: #f5f5f0;
-    --dropdown-background: #fff;
-    --dropdown-background-hover: #f5f5f0;
-    --button-background: #c9c9b5;
-    --button-background-hover: #b8b8a0;
+    --background-modifier-form-field: #c9c9b5;
+    --background-modifier-form-field-hover: #b8b8a0;
+    --dropdown-background: #c9c9b5;
+    --dropdown-background-hover: #b8b8a0;
+    --button-background: #b8b8a0;
+    --button-background-hover: #a9a98c;
     --background-modifier-border: #a9a98c;
     --background-modifier-border-hover: #989876;
     --toggle-thumb-color: var(--background-primary);
@@ -1600,17 +1664,15 @@ body mark {
     --background-secondary: #ffecb3;
     --background-secondary-alt: #ffe082;
     --titlebar-background: #ffecb3;
-    --titlebar-background-focused: var(--titlebar-background);
-    --tab-container-background: var(--titlebar-background);
     --text-normal: #eb8502;
     --text-muted: #ffa000;
     --text-error: #c62828;
-    --background-modifier-form-field: #fff;
-    --background-modifier-form-field-hover: #fff8e1;
-    --dropdown-background: #fff;
-    --dropdown-background-hover: #fff8e1;
-    --button-background: #ffe082;
-    --button-background-hover: #ffd54f;
+    --background-modifier-form-field: #ffe082;
+    --background-modifier-form-field-hover: #ffd54f;
+    --dropdown-background: #ffe082;
+    --dropdown-background-hover: #ffd54f;
+    --button-background: #ffd54f;
+    --button-background-hover: #ffca28;
     --background-modifier-border: #ffca28;
     --background-modifier-border-hover: #ffb300;
     --toggle-thumb-color: var(--background-primary);
@@ -1623,18 +1685,16 @@ body mark {
     --background-secondary: #e1e5c0;
     --background-secondary-alt: #c8d197;
     --titlebar-background: #e1e5c0;
-    --titlebar-background-focused: var(--titlebar-background);
-    --tab-container-background: var(--titlebar-background);
     --code-background: #f9f9f2;
     --text-normal: #7a7015;
     --text-muted: #9c9a3c;
     --text-error: #9e2a2b;
-    --background-modifier-form-field: #f9f9f2;
-    --background-modifier-form-field-hover: #f2f4e6;
-    --dropdown-background: #f9f9f2;
-    --dropdown-background-hover: #f2f4e6;
-    --button-background: #c8d197;
-    --button-background-hover: #aeb761;
+    --background-modifier-form-field: #c8d197;
+    --background-modifier-form-field-hover: #aeb761;
+    --dropdown-background: #c8d197;
+    --dropdown-background-hover: #aeb761;
+    --button-background: #aeb761;
+    --button-background-hover: #8e944c;
     --background-modifier-border: #aeb761;
     --background-modifier-border-hover: #8e944c;
 }
@@ -1647,18 +1707,16 @@ body mark {
     --background-secondary: #7a7a7a;
     --background-secondary-alt: #737373;
     --titlebar-background: #7a7a7a;
-    --titlebar-background-focused: var(--titlebar-background);
-    --tab-container-background: var(--titlebar-background);
     --code-background: #dcdcdc;
     --text-normal: #000;
     --text-muted: #333;
     --text-error: #c62828;
-    --background-modifier-form-field: #dcdcdc;
-    --background-modifier-form-field-hover: #e0e0e0;
-    --dropdown-background: #dcdcdc;
-    --dropdown-background-hover: #e0e0e0;
-    --button-background: #737373;
-    --button-background-hover: #6a6a6a;
+    --background-modifier-form-field: #737373;
+    --background-modifier-form-field-hover: #6a6a6a;
+    --dropdown-background: #737373;
+    --dropdown-background-hover: #6a6a6a;
+    --button-background: #6a6a6a;
+    --button-background-hover: #5c5c5c;
     --background-modifier-border: #666;
     --background-modifier-border-hover: #5c5c5c;
 }
@@ -1669,18 +1727,16 @@ body mark {
     --background-secondary: #c8e6c9;
     --background-secondary-alt: #a5d6a7;
     --titlebar-background: #c8e6c9;
-    --titlebar-background-focused: var(--titlebar-background);
-    --tab-container-background: var(--titlebar-background);
     --code-background: #e8f5e9;
     --text-normal: #1b5e20;
     --text-muted: #2e7d32;
     --text-error: #b71c1c;
-    --background-modifier-form-field: #f1f8e9;
-    --background-modifier-form-field-hover: #dcedc8;
-    --dropdown-background: #f1f8e9;
-    --dropdown-background-hover: #dcedc8;
-    --button-background: #a5d6a7;
-    --button-background-hover: #81c784;
+    --background-modifier-form-field: #a5d6a7;
+    --background-modifier-form-field-hover: #81c784;
+    --dropdown-background: #a5d6a7;
+    --dropdown-background-hover: #81c784;
+    --button-background: #81c784;
+    --button-background-hover: #66bb6a;
     --background-modifier-border: #81c784;
     --background-modifier-border-hover: #66bb6a;
     --toggle-thumb-color: var(--background-primary);
@@ -1693,18 +1749,16 @@ body mark {
     --background-secondary: #d0d6ba;
     --background-secondary-alt: #bfc7a1;
     --titlebar-background: #d0d6ba;
-    --titlebar-background-focused: var(--titlebar-background);
-    --tab-container-background: var(--titlebar-background);
     --code-background: #f0f3e8;
     --text-normal: #2f3316;
     --text-muted: #4a5030;
     --text-error: #8b1d1d;
-    --background-modifier-form-field: #f0f3e8;
-    --background-modifier-form-field-hover: #e3e7d6;
-    --dropdown-background: #f0f3e8;
-    --dropdown-background-hover: #e3e7d6;
-    --button-background: #bfc7a1;
-    --button-background-hover: #aeb88c;
+    --background-modifier-form-field: #bfc7a1;
+    --background-modifier-form-field-hover: #aeb88c;
+    --dropdown-background: #bfc7a1;
+    --dropdown-background-hover: #aeb88c;
+    --button-background: #aeb88c;
+    --button-background-hover: #9aa56f;
     --background-modifier-border: #aeb88c;
     --background-modifier-border-hover: #9aa56f;
     --toggle-thumb-color: var(--background-primary);
@@ -1722,18 +1776,16 @@ body mark {
     --background-secondary: #efe7d8;
     --background-secondary-alt: #e5dcc8;
     --titlebar-background: #efe7d8;
-    --titlebar-background-focused: var(--titlebar-background);
-    --tab-container-background: var(--titlebar-background);
     --code-background: #fbf8f2;
     --text-normal: #3b3328;
     --text-muted: #6b6256;
     --text-error: var(--red-accent);
-    --background-modifier-form-field: #fbf8f2;
-    --background-modifier-form-field-hover: #f6f1e7;
-    --dropdown-background: #fbf8f2;
-    --dropdown-background-hover: #f6f1e7;
-    --button-background: #e5dcc8;
-    --button-background-hover: #d9cfb8;
+    --background-modifier-form-field: #e5dcc8;
+    --background-modifier-form-field-hover: #d9cfb8;
+    --dropdown-background: #e5dcc8;
+    --dropdown-background-hover: #d9cfb8;
+    --button-background: #d9cfb8;
+    --button-background-hover: #cbbf9f;
     --background-modifier-border: #d9cfb8;
     --background-modifier-border-hover: #cbbf9f;
     --toggle-thumb-color: var(--background-primary);
@@ -1754,66 +1806,41 @@ body mark {
     --background-secondary: #efe7d8;
     --background-secondary-alt: #e5dcc8;
     --titlebar-background: #efe7d8;
-    --titlebar-background-focused: var(--titlebar-background);
-    --tab-container-background: var(--titlebar-background);
     --code-background: #fbf8f2;
     --text-normal: #3b3328;
     --text-muted: #6b6256;
     --text-error: var(--red-accent);
-    --background-modifier-form-field: #fbf8f2;
-    --background-modifier-form-field-hover: #f6f1e7;
-    --dropdown-background: #fbf8f2;
-    --dropdown-background-hover: #f6f1e7;
-    --button-background: #e5dcc8;
-    --button-background-hover: #d9cfb8;
+    --background-modifier-form-field: #e5dcc8;
+    --background-modifier-form-field-hover: #d9cfb8;
+    --dropdown-background: #e5dcc8;
+    --dropdown-background-hover: #d9cfb8;
+    --button-background: #d9cfb8;
+    --button-background-hover: #cbbf9f;
     --background-modifier-border: #d9cfb8;
     --background-modifier-border-hover: #cbbf9f;
     --toggle-thumb-color: var(--background-primary);
     --accent-red: var(--red-accent);
 }
 
-/* RETRO ISH STYLING, NO MORE */
 
-/*
-.theme-light ::selection {
-    background: rgba(74, 111, 165, 0.2);
-    color: var(--text-normal);
+.theme-light.delta {
+    --background-primary: #f5e8dc;
+    --background-primary-alt: #e3bc2e;
+    --background-secondary: #e3bc2e;
+    --background-secondary-alt: #376f85;
+    --titlebar-background: #31241c;
+    --text-normal: #2c221b;
+    --text-muted: #a9422b;
+    --text-error: #d65c41;
+    --background-modifier-form-field: #ffffff;
+    --background-modifier-form-field-hover: #eaded3;
+    --dropdown-background: #ffffff;
+    --dropdown-background-hover: #eaded3;
+    --button-background: #e3bc2e;
+    --button-background-hover: #d65c41;
+    --background-modifier-border: #e3bc2e;
+    --background-modifier-border-hover: #d65c41;
+    --toggle-thumb-color: var(--background-primary);
 }
 
-.theme-light textarea,
-.theme-light select {
-    background: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    color: var(--text-normal);
-    font-family: inherit;
-}
-
-.theme-light button {
-    background: linear-gradient(180deg,
-        rgba(255, 255, 255, 0.9),
-        rgba(230, 232, 235, 0.9));
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    padding: 6px 12px;
-    margin: auto 2px;
-    color: var(--text-normal);
-    font-family: inherit;
-    cursor: pointer;
-    transition: all calc(var(--animation-duration) * 0.6667) ease;
-    gap: 4px !important;
-}
-
-.theme-light button:hover {
-    background: linear-gradient(180deg,
-        rgba(230, 232, 235, 0.9),
-        rgba(255, 255, 255, 0.9));
-    border-color: rgba(0, 0, 0, 0.2);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.theme-light button:active {
-    background: linear-gradient(180deg,
-        rgba(255, 255, 255, 0.9),
-        rgba(230, 232, 235, 0.9));
-    transform: translateY(1px);
-} */
 

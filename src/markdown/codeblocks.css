@@ -1,0 +1,59 @@
+:root {
+    --code-border-color: var(--background-modifier-border);
+}
+
+/* reading */
+.markdown-rendered pre {
+    background-color: var(--code-background);
+    border-radius: var(--touch-radius-s);
+    border: 3px solid var(--background-modifier-border);
+    corner-shape: var(--corner-shape);
+}
+
+.markdown-rendered code {
+    background-color: var(--code-background);
+}
+
+
+/* live preview */
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+    background-color: var(--code-background);
+    font-family: var(--font-monospace);
+    font-size: 0.9em;
+    color: var(--text-normal);
+    padding: 0 16px;
+    border-left: 3px solid var(--background-modifier-border);
+    border-right: 3px solid var(--background-modifier-border);
+}
+
+/* top border + radius on the first line */
+.markdown-source-view.mod-cm6 .HyperMD-codeblock-begin {
+    border-top: 3px solid var(--background-modifier-border);
+    border-top-left-radius: var(--touch-radius-s);
+    border-top-right-radius: var(--touch-radius-s);
+    corner-shape: var(--corner-shape);
+}
+
+/* bottom border + radius on the last line */
+.markdown-source-view.mod-cm6 .HyperMD-codeblock-end {
+    border-bottom: 3px solid var(--background-modifier-border);
+    border-bottom-left-radius: var(--touch-radius-s);
+    border-bottom-right-radius: var(--touch-radius-s);
+    corner-shape: var(--corner-shape);
+}
+
+
+
+/* code block copy icon */
+.markdown-source-view.mod-cm6 .code-block-flair {
+    transform: scale(1);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 2.275);
+}
+
+.markdown-source-view.mod-cm6 .code-block-flair:hover {
+    transform: scale(1.05);
+}
+
+.markdown-source-view.mod-cm6 .code-block-flair:active {
+    transform: scale(0.9);
+}

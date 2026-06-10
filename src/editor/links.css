@@ -1,0 +1,97 @@
+/* ==== LINKS ==== */
+
+a {
+    font-weight: var(--link-weight);
+    outline: none;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 2px 5px;
+}
+
+.cm-s-obsidian span.cm-underline,
+.markdown-preview-view u,
+u {
+    text-decoration: none !important;
+}
+
+
+/* ==== EXTERNAL LINKS ==== */
+
+a.external-link,
+.external-link {
+    background-color: transparent;
+    text-decoration: underline !important;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
+    background-image: none;
+    margin-right: 0;
+    padding: 2px 0;
+    transition: all calc(var(--animation-duration) * 0.6667) ease;
+}
+
+a.external-link {
+    color: var(--text-normal);
+}
+
+.external-link {
+    color: var(--color-accent);
+}
+
+a.external-link:hover {
+    background-color: var(--background-secondary-alt);
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration-thickness: 2px;
+    padding: 2px 6px;
+}
+
+.external-link:hover {
+    background-color: var(--background-secondary-alt);
+}
+
+/* ==== LIVE PREVIEW LINKS ==== */
+
+.markdown-source-view.mod-cm6 .cm-link .cm-underline,
+.markdown-source-view.mod-cm6 .cm-url .cm-underline {
+    background-color: transparent;
+    color: var(--text-normal);
+    text-decoration: underline !important;
+    padding: 2px 0;
+    transition: all calc(var(--animation-duration) * 0.5) ease;
+}
+
+.markdown-source-view.mod-cm6 .cm-link .cm-underline:hover,
+.markdown-source-view.mod-cm6 .cm-url .cm-underline:hover {
+    background-color: var(--background-secondary-alt);
+    border-radius: 8px;
+    text-decoration-thickness: 2px;
+    padding: 2px 6px;
+    transition: all calc(var(--animation-duration) * 0.5) ease;
+}
+
+/* ==== INTERNAL LINKS ==== */
+
+.markdown-source-view.mod-cm6 .cm-hmd-internal-link,
+.markdown-rendered .internal-link {
+    color: var(--link-color);
+    background-color: hsl(var(--interactive-accent-hsl), 0.2);
+    border-radius: 6px;
+    padding: 0 5px;
+    box-decoration-break: clone;
+    transition: background-color calc(var(--animation-duration) * 1.6667) ease;
+}
+
+.markdown-source-view.mod-cm6 .cm-hmd-internal-link:hover,
+.markdown-rendered .internal-link:hover {
+    color: var(--link-color);
+}
+
+/* active */
+a:active,
+.external-link:active,
+.markdown-source-view.mod-cm6 .cm-hmd-internal-link:active,
+.markdown-rendered .internal-link:active,
+.markdown-source-view.mod-cm6 .cm-link .cm-underline:active,
+.markdown-source-view.mod-cm6 .cm-url .cm-underline:active {
+    outline: 2px solid hsl(var(--interactive-accent-hsl), 0.7);
+}

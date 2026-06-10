@@ -8,9 +8,26 @@
     --color-tang: #e59c58;
 }
 
+/* toggle: blur on checking */
+body.blur-checked .HyperMD-task-line[data-task="x"],
+body.blur-checked .HyperMD-task-line[data-task="X"],
+body.blur-checked .task-list-item.is-checked {
+    filter: blur(2px) !important;
+    transition: filter 0.1s ease;
+}
+
+/* Remove blur on the active task line */
+body.blur-checked .HyperMD-task-line[data-task="x"].cm-active,
+body.blur-checked .HyperMD-task-line[data-task="X"].cm-active,
+body.blur-checked .task-list-item.is-checked.cm-active {
+    filter: blur(0px) !important;
+}
+
 /* ===== LE CHECKBOXES ===== */
 
 body:not(.disable-checkboxes) {
+    --color-tang: #e59c58;
+    
     /* ensure checkboxes are not affected by global radius/shape */
     .task-list-item-checkbox,
     input[data-task] {
@@ -20,14 +37,14 @@ body:not(.disable-checkboxes) {
     /* base */
     .task-list-item-checkbox {
         /* padding: 16px !important; enable this to scale babies up */
-        color: var(--text-muted);
+        color: #bababa;
         border-color: currentcolor !important;
         border-radius: 8px !important;
         corner-shape: initial !important;
         border-width: 2px !important;
         width: 23px !important;
         height: 23px !important;
-        background-color: var(--text-normal);
+        background-color: #bababa;
         position: relative;
         appearance: none;
 
@@ -113,7 +130,8 @@ body:not(.disable-checkboxes) {
 
     /* hide strikethrough */
     .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"],
-    .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="X"] {
+    .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="X"],
+    .task-list-item.is-checked {
         text-decoration: none !important;
         color: var(--checklist-done-color);
     }

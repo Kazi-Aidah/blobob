@@ -1,0 +1,15 @@
+.input-right-decorator {
+    position: absolute;
+    transform: translateY(-50%) !important;
+    top: 50%;
+}
+
+img {
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+}
+
+.popover .markdown-embed-link {
+    margin: 10px 4px;
+}
+

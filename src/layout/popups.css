@@ -1,7 +1,45 @@
-/* ==================================================
-   MODALS & PROMPTS
-================================================== */
 
+/* popover */
+.popover {
+    border-radius: var(--button-radius);
+    border: 2px solid var(--background-modifier-border-focus)
+}
+
+/* ===== NOTICES ===== */
+
+.notice {
+    background-color: var(--background-primary);
+    color: var(--text-accent);
+    border: 2px solid var(--background-modifier-border);
+    border-radius: var(--button-radius);
+    padding: 20px;
+}
+
+.notice-message::before {
+    content: "Notice: ";
+    color: var(--color-red);
+}
+
+.notice,
+.notice-container {
+    animation: notice-in calc(var(--animation-duration) * 1.1667) cubic-bezier(0.175, 0.885, 0.32, 2);
+    transform-origin: top center;
+    z-index: 2000;
+}
+
+@keyframes notice-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-8px) scale(0.96);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ==== MODAL ==== */
 .modal {
     border-radius: 20px !important;
     border: 2px solid var(--background-modifier-border) !important;
@@ -103,7 +141,7 @@ input.prompt-input:focus {
     border-bottom: 2px solid var(--background-modifier-border);
 }
 
-/* ===== hide prompt instructions ===== */
+/* hide prompt instructions */
 
 .hide-prompt-instructions .prompt-instructions {
     display: none;

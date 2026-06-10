@@ -1,0 +1,137 @@
+body.tab-joined.compact-tabs { --header-height: 25px; }
+body.tab-float.compact-tabs { --header-height: 30px; }
+body.tab-none.compact-tabs { --header-height: 25px; }
+
+/* shared */
+.compact-tabs .workspace-tab-header-container {
+    --tab-curve: 10px;
+    padding-top: 2px !important;
+    align-items: stretch !important;
+}
+
+.compact-tabs .workspace-tab-header-container-inner,
+.compact-tabs .workspace-tab-header-container-inner {
+    margin-top: 0 !important;
+}
+
+/* all tab margin */
+.compact-tabs .workspace-tab-header.is-active,
+.compact-tabs .workspace-tab-header {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+/* ! tab float margin */
+.compact-tabs.tab-float .workspace-tab-header {
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
+}
+
+.compact-tabs.tab-float .workspace-tab-header.is-active {
+    min-height: 20px;
+    margin-top: 3px !important;
+    margin-bottom: 6px !important;
+}
+
+/* all tab padding */
+body.compact-tabs .workspace-tab-header.is-active .workspace-tab-header-inner {
+  padding-top: 8px !important;
+}
+
+/* ! tab float padding */
+body.tab-float.compact-tabs .workspace-tab-header.is-active .workspace-tab-header-inner {
+  padding-top: 0px !important;
+}
+
+/* joined tabs refinement */
+body.tab-joined.compact-tabs .workspace-tab-header:not(.is-active) {
+  transform: translateY(2px) !important;
+}
+
+/* text + icon overflow: fixes cutoff */
+body.compact-tabs .workspace-tab-header.is-active .workspace-tab-header-inner {
+    overflow: visible !important;
+}
+
+/* sidebar toggle button vertical offset */
+.compact-tabs .sidebar-toggle-button.mod-left .clickable-icon {
+    margin-bottom: 10px !important;
+    margin-left: 0 !important;
+    margin-top: 0px !important;
+}
+
+/* line-height fix for tab text/icons */
+.compact-tabs .workspace-tab-header-inner-title,
+.compact-tabs .workspace-tab-header-inner-icon {
+    line-height: 1 !important;
+    vertical-align: middle !important;
+}
+
+/* compact tab + focus mode header adjustment */
+body.compact-tabs.focus-mode .view-header {
+    --header-height: 25px;
+    height: var(--header-height);
+    margin-top: -4px !important;
+}
+
+
+/* sidebar tabs */
+body.tab-float.compact-tabs {
+    .workspace-split.mod-left-split .workspace-tab-header,
+    .workspace-split.mod-right-split .workspace-tab-header,
+    .workspace-split.mod-left-split .workspace-tab-header.is-active,
+    .workspace-split.mod-right-split .workspace-tab-header.is-active,
+    .workspace-split.mod-left-split .workspace-tab-header:not(.is-active):hover,
+    .workspace-split.mod-right-split .workspace-tab-header:not(.is-active):hover {
+        /* padding: 11px 0px !important; */
+        height: 22px;
+        width: 30px;
+        padding: auto;
+        overflow: visible !important;
+    }
+    .workspace-split.mod-left-split .workspace-tab-header:not(.is-active),
+    .workspace-split.mod-right-split .workspace-tab-header:not(.is-active) {
+        padding-bottom: 4px !important;
+    }
+}
+
+body.tab-joined.compact-tabs {
+    .workspace-split.mod-left-split .workspace-tab-header.is-active,
+    .workspace-split.mod-right-split .workspace-tab-header.is-active {
+        padding: 11px 0px !important;
+        height: 24px;
+    }
+
+    .workspace-split.mod-left-split .workspace-tab-header:not(.is-active),
+    .workspace-split.mod-right-split .workspace-tab-headre:not(.is-active) {
+        height: 20px;
+    }
+
+    .workspace-split.mod-left-split .workspace-tab-header-inner:active,
+    .workspace-split.mod-right-split .workspace-tab-header-inner:active {
+        height: 20px;
+        box-shadow: none !important;
+        background-color: var(--background-primary) !important;
+    }
+}
+
+body.tab-none.compact-tabs {
+    .workspace-split.mod-left-split .workspace-tab-header,
+    .workspace-split.mod-right-split .workspace-tab-header,
+    .workspace-split.mod-left-split .workspace-tab-header.is-active,
+    .workspace-split.mod-right-split .workspace-tab-header.is-active,
+    .workspace-split.mod-left-split .workspace-tab-header:not(.is-active):hover,
+    .workspace-split.mod-right-split .workspace-tab-header:not(.is-active):hover {
+        /* padding: 11px 0px !important; */
+        height: 19px;
+        width: 34px;
+        padding: auto;
+        overflow: visible !important;
+    }
+
+    .workspace-split.mod-left-split .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+        padding-bottom: 8px !important;
+    }
+}
+
+

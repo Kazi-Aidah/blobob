@@ -1,0 +1,55 @@
+/* ===== focus mode ===== */
+.focus-mode .titlebar-button-container {
+    display: none !important;
+}
+
+.focus-mode .workspace-tab-header-container,
+/* .focus-mode .status-bar, */
+.focus-mode .metadata-container,
+.focus-mode ::-webkit-scrollbar {
+    display: none !important;
+}
+
+.focus-mode .workspace-tab-container:has(.cm-scroller) {
+    padding-bottom: 14px;
+    padding-top: 4px !important;
+}
+
+/* matching the sidebar toggle bottom border with the view header */
+.tab-joined.focus-mode {
+    .workspace-ribbon.mod-left::before,
+    .workspace-ribbon.mod-left::after {
+        border-bottom: 1px solid var(--background-modifier-border);
+        border-right: 1px solid var(--background-modifier-border);
+    }
+
+    .sidebar-toggle-button.mod-left::before {
+        height: var(--header-height);
+    }
+
+    .workspace-ribbon.side-dock-ribbon.mod-left {
+        transform: translateY(-4.1%);
+    }
+
+    .side-dock-actions {
+        transform: translateY(15%);
+    }
+}
+
+/* ===== Lined Notebook ===== */
+.lined .cm-line {
+    border-bottom: 1.5px solid rgb(128, 128, 128, 0.178) !important;
+}
+
+
+.view-header:not(.is-mobile) { border-bottom: 1.5px solid var(--tab-outline-color); }
+.view-header-title {
+    color: var(--text-muted);
+    letter-spacing: 2px;
+}
+/* dropdown: view-title-casing */
+.view-title-case-none .view-header-title  { text-transform: none; letter-spacing: normal; }
+.view-title-case-capi .view-header-title { text-transform: capitalize; }
+.view-title-case-upper .view-header-title { text-transform: uppercase; }
+.view-title-case-lower .view-header-title { text-transform: lowercase; }
+

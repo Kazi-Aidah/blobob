@@ -1,116 +1,96 @@
-/* ==================================================
-   BULLET STUFF
-================================================== */
+.theme-dark,
+.theme-light {
+  --bullet-1: "–";
+  --bullet-2: "•";
+  --bullet-3: "◦";
+  --bullet-font: monospace;
+  --list-marker-color: var(--accent);
+  --list-numbered-color: var(--headers);
+  --list-spacing: 1px;
+  --root-list-spacing: 10px;
+}
 
-body.custom-bullets-enabled {
-    /* Remove default bullets from everywhere */
-    .markdown-rendered ul {
-        list-style-type: none !important;
-    }
+/* Hide original bullet characters */
+body:not(.list-default-bullet) .list-bullet {
+  display: none;
+}
 
-    .markdown-rendered .list-bullet::after {
-        display: none;
-        margin-inline-start: 0 !important;
-    }
+/* Live Preview */
+body:not(.list-default-bullet) .is-live-preview .cm-formatting-list-ul::before {
+  font-family: var(--bullet-font);
+  font-size: var(--font-text-size);
+  font-weight: normal;
+  color: var(--list-marker-color);
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
 
-    .list-bullet::after {
-        content: "" !important;
-    }
+/* Live Preview – level 1 */
+body:not(.list-default-bullet) .is-live-preview .cm-list-1.cm-formatting-list-ul::before {
+  content: var(--bullet-1) !important;
+}
+/* Live Preview – level 2 */
+body:not(.list-default-bullet) .is-live-preview .cm-list-2.cm-formatting-list-ul::before {
+  content: var(--bullet-2) !important;
+}
+/* Live Preview – level 3 */
+body:not(.list-default-bullet) .is-live-preview .cm-list-3.cm-formatting-list-ul::before {
+  content: var(--bullet-3) !important;
+}
 
-    /* Reading Mode Bullets */
-    ul > li:not(.task-list-item)::before {
-        content: var(--custom-bullet-level-1, "+") !important;
-        font-weight: 500 !important;
-        font-size: 20px !important;
-        margin-right: 0.5em !important;
-        color: var(--italic-color) !important;
-    }
+/* Reading view – level 1 */
+body:not(.list-default-bullet) ul > li:not(.task-list-item)::before {
+  content: var(--bullet-1);
+  font-family: var(--bullet-font);
+  font-size: var(--font-text-size);
+  font-weight: normal;
+  color: var(--list-marker-color);
+  display: inline-block;
+  width: auto;
+  height: auto;
+  float: inline-start;
+}
+/* Reading view – level 2 */
+body:not(.list-default-bullet) ul ul > li:not(.task-list-item)::before {
+  content: var(--bullet-2);
+}
+/* Reading view – level 3 */
+body:not(.list-default-bullet) ul ul ul > li:not(.task-list-item)::before {
+  content: var(--bullet-3);
+}
 
-    ul ul > li:not(.task-list-item)::before {
-        content: var(--custom-bullet-level-2, "-") !important;
-        font-weight: normal !important;
-        margin-right: 0.5em !important;
-        color: var(--text-faint) !important;
-    }
+/* Hide default marker */
+body:not(.list-default-bullet) ul > li:not(.task-list-item)::marker,
+body:not(.list-default-bullet) .is-live-preview .cm-formatting-list-ul {
+  color: transparent;
+}
 
-    ul ul ul > li:not(.task-list-item)::before {
-        content: var(--custom-bullet-level-3, "=") !important;
-        font-weight: normal !important;
-        margin-right: 0.5em !important;
-        color: var(--text-faint) !important;
-    }
+/* Spacing adjustment for reading view */
+ul > li:not(.task-list-item)::before {
+  float: inline-start;
+  margin-inline-start: -18px;
+  margin-inline-end: 4px;
+}
 
-    /* Preserve Ordered List Numbering */
-    ol > li::before {
-        content: "" !important;
-    }
+li::before {
+  margin-inline-end: 10px !important;
+}
 
-    ol {
-        list-style-type: decimal !important;
-    }
+/* Numbered list colour */
+ol > li::marker,
+.cm-line .cm-formatting-list-ol {
+  color: var(--list-numbered-color);
+}
 
-    ol > li::marker {
-        /* Keep default numbering */
-    }
-
-    ul ul > li:not(.task-list-item)::before,
-    ul ol > li:not(.task-list-item)::before,
-    ol ul > li:not(.task-list-item)::before,
-    ol ol > li:not(.task-list-item)::before {
-        content: var(--custom-bullet-level-2, "-") !important;
-        font-weight: normal !important;
-        margin-right: 0.5em !important;
-        color: var(--italic-color) !important;
-    }
-
-    /* Live Preview Bullets - Level 1 */
-    .HyperMD-list-line.HyperMD-list-line-1.cm-line:not(
-            :has(.cm-formatting-list-ol)
-        )::before {
-        content: var(--custom-bullet-level-1, "+") !important;
-        color: var(--italic-color);
-        font-weight: 500;
-        margin-right: -20px !important;
-        font-size: 20px !important;
-    }
-
-    /* Level 2 */
-    .cm-list-2 .list-bullet::after {
-        content: var(--custom-bullet-level-2, "-") !important;
-        color: var(--text-faint) !important;
-        font-weight: normal;
-        margin-right: 0.5em !important;
-        display: inline !important;
-        background: none !important;
-        border: none !important;
-        width: auto !important;
-        height: auto !important;
-        min-width: 0 !important;
-        min-height: 0 !important;
-        line-height: normal !important;
-    }
-
-    .cm-list-1 .list-bullet::after {
-        content: "" !important;
-        display: none !important;
-    }
-
-    /* Level 3 */
-    .cm-list-3 .list-bullet::after {
-        content: var(--custom-bullet-level-3, "=") !important;
-        color: var(--text-faint) !important;
-        font-weight: normal;
-        margin-right: 0.5em !important;
-        background: none !important;
-        border: none !important;
-        width: auto !important;
-        height: auto !important;
-        display: inline !important;
-    }
-
-    /* Hide bullet for checkboxes */
-    .HyperMD-list-line:has(input[type="checkbox"])::before {
-        display: none !important;
-    }
+/* Restore default disc bullet */
+.list-default-bullet {
+  --list-marker-color: var(--text-faint);
+  --list-marker-color-hover: var(--text-muted);
+  --list-marker-color-collapsed: var(--inactive);
+  --list-bullet-border: none;
+  --list-bullet-radius: 50%;
+  /* --list-bullet-size: 0.4em; */
+  --list-bullet-transform: none;
 }
 
