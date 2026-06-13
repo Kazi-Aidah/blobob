@@ -23,3 +23,13 @@
         display: none;
     }
 }
+
+/* hide toolbar */
+.bb-hide-toolbar {
+    .mobile-toolbar,
+    .mobile-toolbar-spacer,
+    .mobile-toolbar-options-list,
+    .mobile-toolbar-options-list-container {
+        display: none !important;
+    }
+}

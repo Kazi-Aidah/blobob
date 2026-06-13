@@ -1,6 +1,5 @@
 body {
-    --animation-speed-raw: 550;
-    --animation-duration: calc(850ms - var(--animation-speed-raw));
+    --animation-duration: 300ms;
     --nav-indentation-guide-width: 0px;
     --indentation-guide-width: 0px;
     --indentation-guide-color: var(--background-modifier-border);
@@ -8,23 +7,38 @@ body {
 
 /* anims */
 .modal, .prompt {
-    animation: bottom-slide-in calc(var(--animation-duration) * 0.3) cubic-bezier(0.17, 0.86, 0.17, 1) both;
+    animation-name: bottom-slide-in;
+    animation-duration: calc(var(--animation-duration) * 0.3);
+    animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
+    animation-fill-mode: both;
 }
 
 .prompt-results {
-    animation: bottom-slide-in calc(var(--animation-duration) * 1.667) cubic-bezier(0.17, 0.86, 0.17, 1) both;
+    animation-name: bottom-slide-in;
+    animation-duration: calc(var(--animation-duration) * 1.667);
+    animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
+    animation-fill-mode: both;
 }
 
 .suggestion-item.is-selected {
-    animation: bottom-slide-in-small calc(var(--animation-duration) * 1.667) cubic-bezier(0.17, 0.86, 0.17, 1) both;
+    animation-name: bottom-slide-in-small;
+    animation-duration: calc(var(--animation-duration) * 1.667);
+    animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
+    animation-fill-mode: both;
 }
 
 .menu {
-    animation: bottom-slide-in calc(var(--animation-duration) * 0.4667) cubic-bezier(0.17, 0.86, 0.17, 1.2) both;
+    animation-name: bottom-slide-in;
+    animation-duration: calc(var(--animation-duration) * 0.4667);
+    animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1.2);
+    animation-fill-mode: both;
 }
 
 .menu-group, .menu-separator {
-    animation: bottom-slide-in calc(var(--animation-duration) * 0.6667) cubic-bezier(0.17, 0.86, 0.17, 1.1) both;
+    animation-name: bottom-slide-in;
+    animation-duration: calc(var(--animation-duration) * 0.6667);
+    animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1.1);
+    animation-fill-mode: both;
 }
 
 @keyframes bottom-slide-in {
@@ -60,19 +74,34 @@ body {
 }
 
 .modal-content {
-    animation: bottom-slide-in calc(var(--animation-duration) * 2.6667) cubic-bezier(0.17, 0.86, 0.17, 1.2) both;
+    animation-name: bottom-slide-in;
+    animation-duration: calc(var(--animation-duration) * 2.6667);
+    animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1.2);
+    animation-fill-mode: both;
 }
 .vertical-tab-header, .vertical-tab-content-container {
-    animation: bottom-slide-in calc(var(--animation-duration) * 2.6667) cubic-bezier(0.17, 0.86, 0.17, 1) both;
+    animation-name: bottom-slide-in;
+    animation-duration: calc(var(--animation-duration) * 2.6667);
+    animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
+    animation-fill-mode: both;
 }
 .vertical-tab-header-group-items {
-    animation: bottom-slide-in calc(var(--animation-duration) * 2.6667) cubic-bezier(0.17, 0.86, 0.17, 1) both;
+    animation-name: bottom-slide-in;
+    animation-duration: calc(var(--animation-duration) * 2.6667);
+    animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
+    animation-fill-mode: both;
 }
 .vertical-tab-header-group-title {
-    animation: bottom-slide-in calc(var(--animation-duration) * 2.3) cubic-bezier(0.17, 0.86, 0.17, 1) both;
+    animation-name: bottom-slide-in;
+    animation-duration: calc(var(--animation-duration) * 2.3);
+    animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
+    animation-fill-mode: both;
 }
 .cm-sizer, .markdown-preview-sizer.markdown-preview-section {
-    animation: bottom-slide-in calc(var(--animation-duration) * 2.6667) cubic-bezier(0.17, 0.86, 0.17, 1.2) both;
+    animation-name: bottom-slide-in;
+    animation-duration: calc(var(--animation-duration) * 2.6667);
+    animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1.2);
+    animation-fill-mode: both;
 }
 
 
@@ -81,11 +110,17 @@ body {
 .workspace-split.mod-horizontal.mod-sidedock.mod-left-split .nav-buttons-container,
 .workspace-split.mod-horizontal.mod-sidedock.mod-left-split .workspace-drawer-vault-switcher,
 .workspace-split.mod-horizontal.mod-sidedock.mod-left-split .workspace-leaf-content {
-    animation: left-slide-in calc(var(--animation-duration) * 1.6667) cubic-bezier(0.17, 0.86, 0.17, 1) both;
+    animation-name: left-slide-in;
+    animation-duration: calc(var(--animation-duration) * 1.6667);
+    animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
+    animation-fill-mode: both;
 }
 
 .workspace-split.mod-horizontal.mod-sidedock.mod-left-split .nav-file {
-    animation: left-slide-in calc(var(--animation-duration) * 2) cubic-bezier(0.17, 0.86, 0.17, 1) both;
+    animation-name: left-slide-in;
+    animation-duration: calc(var(--animation-duration) * 2);
+    animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
+    animation-fill-mode: both;
 }
 
 
@@ -126,7 +161,10 @@ body {
 .workspace-split.mod-horizontal.mod-sidedock.mod-right-split .nav-folder,
 .workspace-split.mod-horizontal.mod-sidedock.mod-right-split .nav-buttons-container,
 .workspace-split.mod-horizontal.mod-sidedock.mod-right-split .view-content {
-    animation: right-slide-in calc(var(--animation-duration) * 1.6667) cubic-bezier(0.17, 0.86, 0.17, 1) both;
+    animation-name: right-slide-in;
+    animation-duration: calc(var(--animation-duration) * 1.6667);
+    animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
+    animation-fill-mode: both;
 }
 
 @keyframes right-scale-slide-in {
@@ -155,12 +193,4 @@ body {
     100% {
         transform: translateX(0) scale(1);
     }
-}
-
-.workspace-split.mod-left-split .workspace-tab-header {
-    animation: left-slide-in calc(var(--animation-duration) * 1.6667) cubic-bezier(0.17, 0.86, 0.17, 1) both;
-}
-
-.workspace-split.mod-right-split .workspace-tab-header {
-    animation: right-slide-in calc(var(--animation-duration) * 1.6667) cubic-bezier(0.17, 0.86, 0.17, 1) both;
 }

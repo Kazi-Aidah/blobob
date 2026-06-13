@@ -42,7 +42,7 @@
 }
 
 
-.view-header:not(.is-mobile) { border-bottom: 1.5px solid var(--tab-outline-color); }
+
 .view-header-title {
     color: var(--text-muted);
     letter-spacing: 2px;

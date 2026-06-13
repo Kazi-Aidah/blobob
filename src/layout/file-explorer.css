@@ -133,7 +133,7 @@ body:not(.verti-folder) .tree-item-self:is(.nav-folder-title) .tree-item-inner {
 /* ==================================================
    NAV HIDE TEXT
 ================================================== */
-
+body:not(.is-tablet) {
 @media (width >= 600px) {
     .nav-header {
         /* margin-top: -30px; */
@@ -145,7 +145,7 @@ body:not(.verti-folder) .tree-item-self:is(.nav-folder-title) .tree-item-inner {
         position: relative;
         transition: opacity calc(var(--animation-duration) * 6.6667) ease;
         transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.6);
-        margin: -6.2px;
+        margin: -2.2px;
     }
 
     /* Hide the buttons and show text */
@@ -188,4 +188,5 @@ body:not(.verti-folder) .tree-item-self:is(.nav-folder-title) .tree-item-inner {
     .workspace-leaf-content[data-type="file-explorer"] .nav-files-container {
         padding-top: 10px;
     }
+}
 }

@@ -101,7 +101,7 @@ select option {
 
 select option:hover {
   transform: scale(0.98);
-  filter: brightness(0.8);
+  filter: brightness(1) contrast(1.2);
   background-color: var(--dropdown-background) !important;
 }
 
@@ -117,7 +117,7 @@ select option:checked {
 select option:checked:hover {
   background-color: hsla(var(--interactive-accent-hsl), 0.3) !important;
   color: var(--text-accent) !important;
-  filter: brightness(1);
+  filter: brightness(1) contrast(1);
   transform: scale(1);
 }
 

@@ -80,7 +80,8 @@ body:not(.disable-foldy-basic-bordered) {
   transition: border-radius 0.2s ease;
 }
 
-.hexagon-tiptip .nav-folder, 
+/* forcing */
+/* .hexagon-tiptip .nav-folder, 
 .hexagon-tiptip .nav-folder-title { 
     corner-shape: bevel !important; 
     border-radius: 6px !important; 
@@ -100,7 +101,7 @@ body.verti-folder.scoop-tiptip .nav-folder,
 body.verti-folder.scoop-tiptip .nav-folder-title { 
     corner-shape: scoop !important;
     border-radius: 10px !important; 
-}
+} */
 
 
 /* bordered folder & active file adjustments */
@@ -146,21 +147,16 @@ body.bouncy-folders .nav-folder-title {
 
 
 
-
 /* bold folder names */
 body.bold-folders .nav-folder-title {
     font-weight: 700 !important;
 }
 
 
-
 /* vertical folder toggle */
 .verti-folder {
-    .nav-folder-title {
-        height: 75px;
-    }
 
-    .nav-folder-title.tree-item-self {
+    .tree-item-self.nav-folder-title {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
@@ -168,6 +164,13 @@ body.bold-folders .nav-folder-title {
         padding-inline-start: 0 !important;
         margin-inline-start: 0 !important;
         gap: 16px;
+    }
+
+    .tree-item-self.nav-folder-title.is-active .nav-folder-title-content,
+    .tree-item-self.nav-folder-title:active .nav-folder-title-content,
+    .tree-item-self.nav-folder-title:hover .nav-folder-title-content {
+        height: 100%;
+        overflow: visible !important;
     }
 
     .nav-folder-title .tree-item-icon {
@@ -199,6 +202,29 @@ body.bold-folders .nav-folder-title {
         margin: 0 !important;
         padding: 0 !important;
         font-weight: normal;
+    }
+}
+
+
+/* fix verti folders for mobile */
+.is-mobile {
+    .nav-folder {
+        padding: 10px auto;
+    }
+
+    .nav-folder-title {
+        height: 100px;
+    }
+
+    .nav-folder-title-content {
+        overflow: visible !important;
+    }
+
+    .nav-folder-title .tree-item-icon svg {
+        width: 120% !important;
+        height: 120% !important;
+        min-width: 200px !important;
+        margin-top: -10px !important;
     }
 }
 
@@ -601,4 +627,3 @@ body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+9
 .tree-item-children .nav-folder-title:hover {
   background-color: transparent !important;
 }
-

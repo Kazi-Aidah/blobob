@@ -1,19 +1,25 @@
 /* shared: tab close button animation */
 
 /* tab close button */
-.workspace .mod-root .workspace-tab-header .workspace-tab-header-inner-close-button {
+.is-mobile .workspace .mod-root .workspace-tab-header .workspace-tab-header-inner-close-button {
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+    padding: 4px;
+} /* for mobile */
+
+body:not(.is-mobile) .workspace .mod-root .workspace-tab-header .workspace-tab-header-inner-close-button {
     border-radius: var(--button-radius);
     corner-shape: var(--corner-shape);
     display: flex !important;
     z-index: 1001 !important;
+    
+    transform: scale(0.1);
     opacity: 0;
     width: 0;
     order: -1;
 
     margin-left: -8px;
     margin-right: 2px;
-
-    transform: scale(0.1);
     
     transition:
         transform calc(var(--animation-duration) * 0.6667) cubic-bezier(0.34, 1.56, 0.64, 1),
@@ -22,7 +28,7 @@
         margin-left calc(var(--animation-duration) * 0.6667) ease-out !important;
     pointer-events: none;
     border: 2px solid transparent;
-}
+} /* for desktop */
 
 /* all close buttons */
 .workspace-tab-header-inner-close-button {
@@ -57,7 +63,3 @@
 .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-close-button {
     margin-left: -2px !important;
 }
-
-
-
-

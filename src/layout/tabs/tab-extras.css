@@ -1,3 +1,12 @@
+/* tab full width */
+body.tab-full-width .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner { 
+    flex:100%;
+}
+
+body.tab-width {
+    --tab-width: 200px;
+}
+
 /* center tab title */   
 .tab-title-center .workspace-tab-header-inner-title {
    text-align: center;

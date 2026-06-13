@@ -66,7 +66,11 @@ icon specified colours: donate to support, uninstall, delete, remove, close, new
 
 
 /* sidebar toggle buttons */
-.sidebar-toggle-button .clickable-icon {
+:is(.button-scale, .button-shrink, .button-tilt, .button-bounce) .sidebar-toggle-button .clickable-icon {
+    /* animation classes handle transition — don't override */
+}
+
+body:not(.button-scale):not(.button-shrink):not(.button-tilt):not(.button-bounce) .sidebar-toggle-button .clickable-icon {
     transition: all 0.2s ease;
 }
 
@@ -81,7 +85,5 @@ icon specified colours: donate to support, uninstall, delete, remove, close, new
     width: 40px; */
     margin-top: -4px;
     margin-bottom: -4px;
-
-    transform: scale(1);
 }
 

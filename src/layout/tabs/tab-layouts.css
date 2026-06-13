@@ -1,319 +1,363 @@
-/* body {
-   --tab-container-background: magenta;
-} */
-
-/* shared: hide | between tabs */   
+/* shared: hide | between tabs */
 .workspace .mod-root .workspace-tab-header-inner::after { display: none; }
-
-.view-header { border-bottom: 1.5px solid var(--background-modifier-border); }
 
 /* tabs: close button adjustment */
 .workspace-tab-header .workspace-tab-header-inner-close-button {
-   border-radius: var(--button-radius) !important;
-   corner-shape: var(--corner-shape);
+  border-radius: var(--button-radius) !important;
+  corner-shape: var(--corner-shape);
 }
+
 
 /* JOINED TABS */
-body:not(.is-mobile).tab-joined,
-body:not(.is-mobile):not(.tab-none):not(.tab-float) {
+body.tab-joined,
+body:not(.tab-none):not(.tab-float) {
+  --system-status-background: var(--titlebar-background);
 
-   /* close button fine tuning */   
-   .workspace .mod-root .workspace-tab-header.is-active:hover .workspace-tab-header-inner-close-button {
-      transform: scale(0.9);
-      opacity: 1;
-      width: auto;
-      margin-left: -4px !important;
-      margin-bottom: 4px;
-      pointer-events: auto;
-   }
+  /* close button fine tuning */
+  .workspace .mod-root .workspace-tab-header-container .workspace-tab-header.is-active:hover .workspace-tab-header-inner-close-button {
+    transform: scale(0.9);
+    opacity: 1;
+    width: auto;
+    margin-left: -4px !important;
+    margin-bottom: 4px;
+    pointer-events: auto;
+  }
 
-   /* hide tab under line */
-   .workspace-tab-header-container {
-      border-bottom: none;
-      background-color: var(--tab-container-background);
-      box-shadow: inset 0 -1px 0 var(--tab-outline-color);
-   }
+  /* hide tab under line */
+  .workspace-tab-header-container {
+    border-bottom: none;
+    background-color: var(--tab-container-background);
+    box-shadow: inset 0 -1px 0 var(--tab-outline-color);
+  }
 
-    /* base tab */   
-    .workspace-tab-header {
-        margin: 0;
-        --tab-curve: 0px;
-        border-radius: var(--button-radius) var(--button-radius) 0 0;
-        padding-left: 0;
-        box-shadow: 0 0 0 1px transparent;
-        transition: background-color 0.2s ease,
-        transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.2),
-        padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
-        margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
-    }
+  /* base tab */
+  .workspace-tab-header-container .workspace-tab-header {
+    margin: 0;
+    --tab-curve: 0px;
+    border-radius: var(--button-radius) var(--button-radius) 0 0;
+    padding-left: 0;
+    box-shadow: 0 0 0 1px transparent;
+    transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.2),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1), margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
+  }
 
-    /* tab active */
-   .workspace-tab-header:active {
-      background-color: var(--background-primary);
-      border: 2px solid var(--background-modifier-border);
-      transform: scale(0.8) !important;
+  /* tab active */
+  .workspace-tab-header-container .workspace-tab-header:active {
+    background-color: var(--background-primary);
+    border: 2px solid var(--background-modifier-border);
+    transform: scale(0.8) !important;
+    border-radius: calc(var(--button-radius) + 2px) !important;
+    corner-shape: var(--corner-shape);
+  }
 
-      border-radius: calc(var(--button-radius) + 2px) !important;
-      corner-shape: var(--corner-shape);
-   }
+  /* tab actually active (root, left, right) */
+  .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active,
+  .mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active,
+  .mod-root .workspace-tab-header-container .workspace-tab-header.is-active {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: -10px;
+    padding: 2px 2px 4px;
+    border-radius: var(--button-radius) var(--button-radius) 0 0;
+    corner-shape: var(--corner-shape);
+    border: 1.5px solid var(--background-modifier-border);
+    transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1), margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
+  }
 
-    /* tab actually active */
-    .mod-left-split .workspace-tab-header.is-active,
-    .mod-right-split .workspace-tab-header.is-active,
-    .mod-root .workspace-tab-header.is-active {
-        margin-top: 5px;
-        /* margin-bottom: -5px; */
-        margin-left: 5px;
-        margin-right: 5px;
-        margin-bottom: -10px;
-        padding: 2px 2px 4px;
-        border-radius: var(--button-radius) var(--button-radius) 0 0;
-        corner-shape: var(--corner-shape);
-        border: 1.5px solid var(--background-modifier-border);
+  .workspace-tab-header-container-inner {
+    margin-top: 8px;
+  }
 
-        transition: background-color 0.2s ease,
-        transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
-        padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
-        margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
+  /* Main hover effect */
+  .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  .workspace-tab-header-container .workspace-tab-header:not(.is-active) {
+    transform: translateY(8px);
+    opacity: 0.6;
+  }
 
-    }
+  /* Sidebar hover effects */
+  .workspace .mod-left-split .workspace-tab-header-container .workspace-tab-header:active {
+    z-index: 1001 !important;
+  }
 
-    .workspace-tab-header-container-inner {
-      margin-top: 8px;
-    }
+  /* Sidebar not active + its hover */
+  .workspace .mod-left-split .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner,
+  .workspace .mod-right-split .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+    transform: translateY(4px);
+  }
 
+  /* not active + its hover (root) */
+  .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+    transform: translateY(0px);
+    height: 100%;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-top: -2px;
+    transition: all calc(var(--animation-duration) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1), background-color 0s ease;
+  }
+  .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:hover {
+    background-color: var(--background-primary-alt);
+    transition: all calc(var(--animation-duration) * 1.2) ease-out;
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+  }
+  .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:active {
+    background-color: var(--background-primary);
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+    padding: 10px 6px;
+    padding-top: -10px;
+    transform: scale(0.9) translateY(4px);
+    transition: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  }
 
-    /* Main hover effect */
-    .workspace-tab-header:not(.is-active):hover {
-        transform: translateY(0px);
-        opacity: 1;
-    }
+  .workspace-split.mod-vertical.mod-root .workspace-tab-header-container .workspace-tab-header:not(.is-active, :has(.mod-pinned)) {
+    margin-left: 0;
+    margin-right: -3px;
+  }
 
-    .workspace-tab-header:not(.is-active) {
-        transform: translateY(8px);
-        opacity: 0.6;
-    }
+  /* left sidebar icon adjustment */
+  .workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header.is-active {
+    padding-top: 5px !important;
+  }
 
-     /* Sidebar hover effects */
-    .workspace .mod-left-split .workspace-tab-header:active {
-        z-index: 1001 !important;
-    }
+  /* main tabs text adjustment */
+  .workspace-split.mod-vertical.mod-root .workspace-tab-header-container .workspace-tab-header.is-active {
+    padding-top: 0px !important;
+  }
 
+  .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner {
+    transition: all calc(var(--animation-duration) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  }
 
-    /* not active + its hover */    
-    .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
-        height: 100%;
-        margin-right: 2px;
-        margin-left: 2px;
-        margin-top: -2px;
-        transition: all calc(var(--animation-duration) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1), background-color 0s ease;
-    }
-
-    .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:hover {
-        background-color: var(--background-primary-alt);
-        transition: all calc(var(--animation-duration) * 1.2) ease-out;
-
-        border-radius: var(--button-radius);
-        corner-shape: var(--corner-shape);
-    }
-
-     .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:active {
-        /* box-shadow: 0 0 0 1px var(--background-modifier-border); */
-        background-color: var(--background-primary);
-        border-radius: var(--button-radius);
-        corner-shape: var(--corner-shape);
-
-        padding: 10px 6px;
-        padding-top: -10px;
-        transform: scale(0.9) translateY(4px);
-        
-        transition: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-    }
-
-    .workspace-split.mod-vertical.mod-root .workspace-tab-header:not(.is-active, :has(.mod-pinned)) {
-        margin-left: 0;
-        margin-right: -3px;
-    }
-
-    /* left sidebar icon adjustment */
-    .workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header.is-active {
-        padding-top: 5px !important;
-    }
-
-    /* main tabs text adjustment */
-    .workspace-split.mod-vertical.mod-root .workspace-tab-header.is-active {
-        padding-top: 0px !important;
-    }
-
-    .workspace-tab-header .workspace-tab-header-inner {
-        transition: all calc(var(--animation-duration) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1);
-    }
-
-    /* sidebar tabs color */   
-    .workspace-split.mod-left-split .workspace-tab-header.is-active,
-    .workspace-split.mod-right-split .workspace-tab-header.is-active {
-        background-color: var(--background-secondary);
-    }
+  /* sidebar tabs color */
+  .workspace-split.mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active,
+  .workspace-split.mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active {
+    background-color: var(--background-secondary);
+  }
 }
-
-
-
 
 
 /* FLOATING TAB */
+.tab-float {
+  --system-status-background: var(--background-primary);
 
-body:not(.is-mobile).tab-float {
+  /* tab close button */
+  .workspace .mod-root .workspace-tab-header-container .workspace-tab-header:hover .workspace-tab-header-inner-close-button {
+    margin-left: -6px !important;
+  }
 
-   /* tab close button */
-   /* all inactive tab close button */
-   .workspace .mod-root .workspace-tab-header:hover .workspace-tab-header-inner-close-button {
-      margin-left: -6px !important;
-   }
+  /* tabs themselves */
+  .workspace-tab-header-container .workspace-tab-header-inner {
+    background-color: transparent !important;
+  }
 
-   /* tabs themselves */  
-   .workspace-tab-header-inner {
-      background-color: transparent !important;
-   }
-   
-   .workspace-tab-header {
-      --tab-curve: 0px;
-      border-radius: var(--button-radius);
-      corner-shape: var(--corner-shape);
+  .workspace-tab-header-container .workspace-tab-header {
+    --tab-curve: 0px;
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+    filter: brightness(1);
+    margin-top: 1px;
+    margin-bottom: 8px;
+    margin-right: 4px;
+    padding: 2px 3px;
+    transform: translateY(0px) scale(0.98);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease,
+                transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.4),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
+                margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
+  }
 
-      filter: brightness(1);
+  .workspace-tab-header-container .workspace-tab-header.is-active {
+    min-height: 24px;
+    background-color: var(--background-primary-alt);
+    box-shadow: 0px 0px 0px 1.6px var(--tab-float-border-color);
+    margin: 1px 10px 8px 10px;
+    padding: 2px 3px;
+    transform: translateY(1px) scale(1);
+  }
 
-      margin-top: 1px;
-      margin-bottom: 8px;
+  .workspace .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active {
+    margin: 0px 3px;
+    padding: 2px 3px;
+    margin-left: 10px !important;
+  }
 
-      /* margin-left: 0px !important; */
-      margin-right: 4px;
+  .workspace-tab-header-container .workspace-tab-header:not(.is-active) {
+    transform: translateY(4px);
+  }
+  .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover {
+    background-color: var(--background-primary-alt);
+    box-shadow: 0px 0px 0px 1.6px var(--tab-float-border-color);
+    padding: 2px 2px;
+    transform: translateY(1px) scale(0.9);
+  }
+  .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
+    background-color: var(--background-primary-alt);
+    box-shadow: 0px 0px 0px 1.6px var(--tab-float-border-color);
+    transform: translateY(1px) scale(0.8);
+  }
 
-      padding: 2px 3px;
+  /* tab darkening / brightening */
+  &.theme-dark .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover,
+  &.theme-dark .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
+    filter: brightness(1.4);
+  }
+  &.theme-light .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover,
+  &.theme-light .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
+    filter: brightness(1.1);
+  }
 
-      transform: translateY(0px) scale(0.98);
-      
-      transition: background-color 0.2s ease,
-      box-shadow 0.2s ease,
-      transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.4),
-      padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
-      margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
-   }
+  /* sidebar tabs */
+  .workspace-split.mod-left-split .workspace-tab-header-container .workspace-tab-header,
+  .workspace-split.mod-right-split .workspace-tab-header-container .workspace-tab-header,
+  .workspace-split.mod-left-split,
+  .workspace-split.mod-left-split .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover,
+  .workspace-split.mod-right-split .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover {
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+    height: 100%;
+  }
 
-   .workspace-tab-header.is-active {
-      min-height: 24px;
-      background-color: var(--background-primary-alt);
-      box-shadow: 0px 0px 0px 1.6px var(--tab-float-border-color);
+  /* non-sidebar tab inner */
+  .workspace-split.mod-root .workspace-tab-header-container .workspace-tab-header {
+    margin-left: 0px !important;
+  }
 
-      margin: 1px 10px 8px 10px;
-      padding: 2px 3px;
-      transform: translateY(1px) scale(1);
-   }
+  /* all active tabs */
+  .workspace-tab-header-container .workspace-tab-header.is-active,
+  .workspace-split.mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active,
+  .workspace-split.mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active {
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+    background-color: var(--background-primary-alt) !important;
+  }
 
-   .workspace .mod-left-split .workspace-tab-header.is-active {
-      margin: 0px 3px;
-      padding: 2px 3px;
-      margin-left: 10px !important;
-   }
+  /* layout adjustments */
+  .workspace-tab-header-container {
+    border: none;
+    background-color: var(--background-primary);
+    margin-bottom: -4px;
+  }
+  .workspace-tab-container {
+    margin: 6px;
+    border: 2px solid var(--tab-float-border-color);
+    border-radius: var(--modal-radius);
+    corner-shape: var(--corner-shape);
+  }
+  .workspace-tabs {
+    background-color: var(--background-primary);
+  }
 
-   .workspace-tab-header:not(.is-active) {
-      transform: translateY(4px);
-   }
+  /* live preview editor bg */
+  .workspace-leaf, .workspace-leaf-content, .cm-scroller, .workspace-leaf-content .view-header, .empty-state {
+    --file-header-background-focused: var(--background-primary-alt);
+    background-color: var(--background-primary-alt);
+  }
+  /* reading editor bg */
+  .markdown-reading-view .markdown-preview-view {
+    --file-header-background-focused: var(--background-primary-alt);
+    background-color: var(--background-primary-alt);
+  }
 
-   .workspace-tab-header:not(.is-active):hover {
-      background-color: var(--background-primary-alt);
-      box-shadow: 0px 0px 0px 1.6px var(--tab-float-border-color);
-      padding: 2px 2px;
-      transform: translateY(1px) scale(0.9);
-   }
-   
-   .workspace-tab-header:not(.is-active):active {
-      background-color: var(--background-primary-alt);
-      box-shadow: 0px 0px 0px 1.6px var(--tab-float-border-color);
-      transform: translateY(1px) scale(0.8);
-   }
+  .titlebar-button-container {
+    background-color: var(--background-primary) !important;
+  }
+  .workspace-sidedock-vault-profile {
+    border-top: 0px;
+    background-color: var(--background-primary) !important;
+    margin-top: -8px;
+  }
 
-   /* tab darkening / brightening */
-   &.theme-dark .workspace-tab-header:not(.is-active):hover,
-   &.theme-dark .workspace-tab-header:not(.is-active):active {
-      filter: brightness(1.4);
-   }
+  /* tab float sidebar tabs */
+  .workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header {
+    margin-top: 2px !important;
+    margin-left: 0px;
+    margin-right: 0px;
+    transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.2),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1), margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6) !important;
+  }
+  .workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover {
+    transform: translateY(-2px) scale(0.9) !important;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+  .workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
+    transform: translateY(1px) scale(0.8) !important;
+  }
+  .workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header.is-active {
+    margin-top: 2px !important;
+    margin-left: 4px !important;
+    margin-right: 4px !important;
+    transform: translateY(1px) scale(1) !important;
+    transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.2),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1), margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6) !important;
+  }
 
-   &.theme-light .workspace-tab-header:not(.is-active):hover,
-   &.theme-light .workspace-tab-header:not(.is-active):active {
-      filter: brightness(1.1);
-   }
+  /* move left sidebar tabs left to avoid cutoff */
+  .workspace-split.mod-left-split .workspace-tab-header-container-inner {
+    width: 100%;
+    padding-left: 4px;
+  }
+}
 
-   /* sidebar tabs */
-   .workspace-split.mod-left-split .workspace-tab-header,
-   .workspace-split.mod-right-split .workspace-tab-header,
-   .workspace-split.mod-left-split,
-   .workspace-split.mod-left-split .workspace-tab-header:not(.is-active):hover,
-   .workspace-split.mod-right-split .workspace-tab-header:not(.is-active):hover {
-      border-radius: var(--button-radius);
-      corner-shape: var(--corner-shape);
-   }
-
-   /* non-sidebar tab inner */
-   .workspace-split.mod-root .workspace-tab-header {   
-         margin-left: 0px !important;
-   }
-
-   /* all active tabs */
-   .workspace-tab-header.is-active,
-   .workspace-split.mod-right-split .workspace-tab-header.is-active {
-      border-radius: var(--button-radius);
-      corner-shape: var(--corner-shape);
-   }
-   
-
-   /* layout adjustments */
-   .workspace-tab-header-container {
-      border: none;
-      background-color: var(--background-primary);
-      margin-bottom: -4px;
-   }
-   
-   .workspace-tab-container {
-      margin: 6px;
-      border: 2px solid var(--tab-float-border-color);
-      border-radius: var(--modal-radius);
-      corner-shape: var(--corner-shape);
-   }
-
-
-   .workspace-tabs { background-color: var(--background-primary); }
-
-   /* live preview editor bg */   
-   .workspace-leaf, .workspace-leaf-content, .cm-scroller, .workspace-leaf-content .view-header, .empty-state {
-        --file-header-background-focused: var(--background-primary-alt);
-        background-color: var(--background-primary-alt);
-   }
-   /* reading editor bg */   
-   .markdown-preview-view {
-      --file-header-background-focused: var(--background-primary-alt);
-        background-color: var(--background-primary-alt);
-   }
-
-   .titlebar-button-container {
-      background-color: var(--background-primary) !important;
-   }
-
-   .workspace-sidedock-vault-profile {
-      border-top: 0px;
-      background-color: var(--background-primary) !important;
-      margin-top: -8px;
-   }
-
+/* tab float sidebar color fix - apply only to workspace drawer */
+.is-mobile .workspace-drawer-active-tab-content .workspace-leaf,
+.is-mobile .workspace-drawer-active-tab-content .workspace-leaf-content,
+.is-mobile .workspace-drawer-active-tab-content .cm-scroller,
+.is-mobile .workspace-drawer-active-tab-content .view-header,
+.is-mobile .workspace-drawer-active-tab-content .empty-state {
+  --file-header-background-focused: var(--background-secondary);
+  background-color: var(--background-secondary) !important;
 }
 
 
+/* tablet when tab joined: active tab color */
+body:is(.is-tablet):is(.tab-joined) .workspace-tab-header.is-active,
+body:is(.is-tablet):is(.tab-joined) .view-header:not(.is-mobile) {
+  background-color: var(--background-primary) !important;
+}
+
+/* tablet: increased active tab height */
+body:is(.is-tablet):not(.compact-tabs):not(.tab-none) .workspace-tab-header-container {
+  height: 50px;
+}
+/* tablet: increased margin around text and x */
+body:is(.is-tablet):not(.compact-tabs):not(.tab-none) .workspace-tab-header.is-active .workspace-tab-header-inner {
+  margin: auto 5px;
+}
+
+/* tablet: tab float header color */
+body:is(.is-tablet):is(.tab-float) .view-header {
+  background-color: var(--background-primary-alt) !important;
+  border-bottom: 2px solid var(--background-modifier-border-focus);
+}
+/* tablet: tab joined header border */
+body:is(.is-tablet):is(.tab-joined) .view-header {
+  border-bottom: 2px solid var(--background-modifier-border-hover);
+}
+
+/* desktop: tab float header color */
+body.tab-float .view-header:not(.is-mobile) {
+  background-color: var(--background-primary-alt) !important;
+  border-bottom: 2px solid var(--background-modifier-border);
+}
+/* desktop: tab joined header border */
+body.tab-joined .view-header:not(.is-mobile) {
+  border-bottom: 2px solid var(--background-modifier-border-hover);
+}
 
 
-/* 
-.workspace-tab-header {
-   transition: background-color 0s ease;
+/*
+.workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header:not(.is-active) {
+    transition: width 0.3s ease, height 0.3s ease, padding 0.3s ease, margin 0.3s ease, transform 0.3s ease, border-radius 0.3s ease !important;
+}
+
+.workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
+    transition: width 0.3s ease, height 0.3s ease, padding 0.3s ease, margin 0.3s ease !important;
 } */
-
-
-
-

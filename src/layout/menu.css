@@ -52,27 +52,26 @@
 }
 
 
-
 /* mobile */
 .is-mobile .menu-item.tappable:not(.menu-group .menu-item.tappable) {
-    border-radius: clamp(8px, var(--button-radius, 8px), 0px);
+    border-radius: var(--touch-radius-xs);
 }
 
 .is-mobile .menu-group:has(.menu-item.tappable) {
-    border-radius: clamp(8px, var(--button-radius, 8px), 0px);
+    border-radius: var(--touch-radius-xs);
 }
 .is-mobile .menu-group:has(.menu-item.tappable) .menu-item.tappable {
     border-radius: 0px;
 }
 
 .is-mobile .menu-group:has(.menu-item.tappable) .menu-item.tappable:first-child {
-    border-top-left-radius: clamp(8px, var(--button-radius, 8px), 0px);
-    border-top-right-radius: clamp(8px, var(--button-radius, 8px), 0px);
+    border-top-left-radius: var(--touch-radius-xs);
+    border-top-right-radius: var(--touch-radius-xs);
 }
 
 .is-mobile .menu-group:has(.menu-item.tappable) .menu-item.tappable:last-child {
-    border-bottom-left-radius: clamp(8px, var(--button-radius, 8px), 0px);
-    border-bottom-right-radius: clamp(8px, var(--button-radius, 8px), 0px);
+    border-bottom-left-radius: var(--touch-radius-xs);
+    border-bottom-right-radius: var(--touch-radius-xs);
 }
 
 /* menu */
@@ -88,4 +87,8 @@
 }
 .is-mobile .menu-group:has(.menu-item + .menu-item) .menu-item:not(:last-child) {
   border-bottom: 2px solid var(--background-modifier-border-hover);
+}
+.is-mobile .menu-group {
+    border-radius: var(--touch-radius-xs);
+    corner-shape: var(--corner-shape);
 }

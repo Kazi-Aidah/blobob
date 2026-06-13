@@ -1,6 +1,5 @@
 .theme-dark {
     --button-shadow: #00000050;
-    --canvas-background: var(--background-primary);
     --blockquote-border-thickness: 4px;
     --toggle-thumb-color: var(--text-normal);
     --caret-color: var(--color-accent);

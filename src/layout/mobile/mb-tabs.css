@@ -1,3 +1,18 @@
+.is-tablet .workspace-drawer .clickable-icon:not(.nav-action-button) {
+    background-color: var(--background-secondary-alt);
+    color: var(--text-normal);
+}
+
+.is-tablet .nav-buttons-container {
+    margin-top: 10px;
+}
+
+.is-tablet .workspace-drawer {
+    border-radius: var(--touch-radius-xl) !important;
+    corner-shape: var(--corner-shape);
+    border: 2px solid var(--background-modifier-border-focus) !important;
+}
+
 body {
     --mobile-font-size: "14px";
 }
@@ -6,7 +21,7 @@ body.cm-sizer {
     font-size: var(--mobile-font-size) !important;
 }
 
-body{
+body {
     --clickable-icon-radius: var(--button-radius);
     --touch-radius-xxs: calc(var(--button-radius) * 1.25);
     --touch-radius-xs: calc(var(--button-radius) * 1.5);
@@ -38,17 +53,17 @@ body.is-mobile, .body.is-phone {
 /* workspace tab dropdowns */
 .workspace-drawer-tab-options-list {
     border-radius: calc(var(--button-radius) + 8px) !important;
-    border-bottom-left-radius: 0px !important;
-    border-bottom-right-radius: 0px !important;
     corner-shape: var(--corner-shape) !important;
 
-    padding: 10px 10px !important;
-    padding-right: 0px !important;
+    /* padding: 10px 10px !important;
+    padding-right: 0px !important; */
+
+    margin-top: 6px; margin-bottom: 6px;
 
     transition: all 0.2s ease;
 }
 
-.workspace-tab-header.is-active .workspace-tab-header-inner {
+.workspace-drawer-tab-options .workspace-tab-header.is-active .workspace-tab-header-inner {
     border: 2px solid var(--text-faint);
 }
 
@@ -63,6 +78,12 @@ body.is-mobile, .body.is-phone {
 .workspace-drawer-tab-options:not(.is-collapsed)
 > .workspace-tab-header
 > .workspace-tab-header-inner {
+    border: 2px solid var(--background-modifier-border-focus);
+}
+
+body.is-mobile .workspace-drawer-tab-options:not(.is-collapsed)
+> .workspace-tab-header
+> .workspace-tab-header-inner {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
 
@@ -74,10 +95,28 @@ body.is-mobile, .body.is-phone {
     border: 2px solid var(--background-modifier-border-focus);
 }
 
+.prompt, .modal {
+    border-radius: calc(var(--touch-radius-m) + 2px) !important;
+    corner-shape: var(--corner-shape);
+}
 .prompt-input-container {
     border-radius: var(--touch-radius-m);
     corner-shape: var(--corner-shape);
     border: 2px solid var(--background-modifier-border-focus) !important;
 }
+.prompt-input {
+    border-radius: var(--touch-radius-m) !important;
+    corner-shape: var(--corner-shape);
+    border: none !important;
+}
 }
 
+
+.is-tablet .view-actions {
+    height: 45px;
+}
+
+.is-tablet .view-action.clickable-icon {
+    margin: 0px !important;
+    padding: 0px;
+}

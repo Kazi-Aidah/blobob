@@ -44,3 +44,37 @@ body.pin-icon-only .workspace-tab-header:has(.mod-pinned) {
 .pin-icon-only .workspace-tab-header.is-active:has(.mod-pinned) .workspace-tab-header-status-icon {
     margin-right: 2.5px;
 }
+
+
+body.pin-icon-only .workspace-tab-header:has(.mod-pinned) 
+.workspace-tab-header-inner-close-button,
+body.pin-icon-only .workspace-tab-header:has(.mod-pinned):hover 
+.workspace-tab-header-inner-close-button {
+    display: none !important;
+}
+
+/* pinned tabs, replace icon pin icon with file icon */
+.workspace-tab-header-status-container { z-index: 1001 !important; }
+
+.pin-icon-only .workspace .mod-root .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner-close-button {
+    display: none !important;
+}
+
+.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner {
+    transition: transform calc(var(--animation-duration) * 1) cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+}
+
+.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner .workspace-tab-header-inner-icon {
+    transform: scale(1) rotate(0deg);
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+}
+
+.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner:hover .workspace-tab-header-inner-icon {
+    transform: scale(1.1) rotate(5deg);
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+}
+
+.pin-icon-only .workspace-tab-header-inner:has(.mod-pinned):has(.workspace-tab-header-inner-icon.iconic-icon) .workspace-tab-header-status-container {
+    z-index: 1001 !important;
+    display: none;
+}

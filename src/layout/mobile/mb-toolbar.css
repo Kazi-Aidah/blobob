@@ -61,11 +61,16 @@
     border: 2px solid var(--background-modifier-border-focus);
 }
 
-.mobile-toolbar-option {
+/* .mobile-toolbar-option {
     margin-left: 2px;
     margin-right: 2px;
-}
+} */
 
 /* .mobile-toolbar > :has(.mobile-toolbar-option) {
     background-color: var(--background-secondary-alt) !important;
 } */
+
+/* fix in focus mode */
+.is-tablet .mobile-toolbar {
+    margin-top: -10px;
+}

@@ -179,7 +179,7 @@ settings:
     title: Global Radius
     description: Set the border radius for all UI Elements
     type: class-select
-    default: circular-tiptip
+    default: hexagon-tiptip
     options:
       - label: Circular
         value: circular-tiptip
@@ -204,7 +204,7 @@ settings:
     title: Layout & Tab Style
     description: Set the workspace layout for desktop
     type: class-select
-    default: tab-joined
+    default: tab-float
     options:
       - label: Joined
         value: tab-joined
@@ -936,6 +936,20 @@ settings:
     level: 1
     collapsed: true
 
+  - id: tab-full-width
+    title: Make tab full width
+    type: class-toggle
+    default: false
+
+  - id: tab-width
+    title: Tab Width
+    type: variable-number-slider
+    format: px
+    default: 200
+    min: 40
+    max: 400
+    step: 1
+
   - id: disable-fixed-newtab
     title: Disable fixed new tab button
     description: Resets the fixed new tab button
@@ -1029,6 +1043,13 @@ settings:
         value: tab-right-labels
       - label: Icons + Labels
         value: tab-right-icons-labels
+
+  - id: hide-prompt-instructions
+    title: Hide Instructions in Command Palette
+    type: class-toggle
+    default: true
+    addCommand: false
+
 
   ########################################
   # File Explorer
@@ -1248,20 +1269,6 @@ settings:
       - label: lowercase
         value: meta-key-case-lower
 
-  ########################################
-  # Command Palette
-  ########################################
-  - id: heading-command-palette
-    title: Command Palette
-    type: heading
-    level: 1
-    collapsed: true
-
-  - id: hide-prompt-instructions
-    title: Hide Instructions in Command Palette
-    type: class-toggle
-    default: true
-    addCommand: false
 
   ########################################
   # Animations
@@ -1296,11 +1303,11 @@ settings:
     type: class-toggle
     default: false
 
-  - id: animation-speed-raw
+  - id: animation-duration
     title: Animation speed
     description: Drag left for slower, right for faster animations. Default is the middle.
     type: variable-number-slider
-    default: 550
+    default: 300
     min: 50
     max: 800
     step: 10
@@ -1325,6 +1332,12 @@ settings:
 
   - id: mob-tab-list-compact
     title: Compact Mobile tab list
+    type: class-toggle
+    default: false
+    addCommand: true
+   
+  - id: bb-hide-toolbar
+    title: Mobile - Hide toolbar
     type: class-toggle
     default: false
     addCommand: true

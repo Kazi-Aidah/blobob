@@ -1,3 +1,7 @@
+.setting-item {
+    border-radius: var(--touch-radius-xs);
+    corner-shape: var(--corner-shape);
+}
 
 /* hide arrow */
 .setting-item-heading[data-level="1"] .style-settings-collapse-indicator,
