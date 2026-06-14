@@ -10,7 +10,7 @@
     display: none !important;
 }
 
-.focus-mode .workspace-tab-container:has(.cm-scroller) {
+body:not(.tab-float) .focus-mode .workspace-tab-container:has(.cm-scroller) {
     padding-bottom: 14px;
     padding-top: 4px !important;
 }

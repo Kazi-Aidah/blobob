@@ -173,8 +173,8 @@
     --dropdown-background-hover: #2d3b5a;
     --button-background: #253147;
     --button-background-hover: #2d3b5a;
-    --background-modifier-border: #1c2738;
-    --background-modifier-border-hover: #253147;
+    --background-modifier-border: #33445b;
+    --background-modifier-border-hover: #425270;
     --background-modifier-border-focus: #324369;
 }
 
@@ -195,7 +195,7 @@
     --dropdown-background-hover: #3f2c70;
     --button-background: #35255e;
     --button-background-hover: #3f2c70;
-    --background-modifier-border: #2a1f4d;
+    --background-modifier-border: #3d3263;
     --background-modifier-border-hover: #35255e;
     --background-modifier-border-focus: #4a3482;
 }
@@ -316,7 +316,7 @@
     --dropdown-background-hover: #4d263c;
     --button-background: #422033;
     --button-background-hover: #4d263c;
-    --background-modifier-border: #34182c;
+    --background-modifier-border: #542848;
     --background-modifier-border-hover: #422033;
     --background-modifier-border-focus: #5a2c46;
 }
@@ -338,7 +338,7 @@
     --dropdown-background-hover: #5e3b22;
     --button-background: #52331d;
     --button-background-hover: #5e3b22;
-    --background-modifier-border: #3a2414;
+    --background-modifier-border: #523520;
     --background-modifier-border-hover: #48301c;
     --background-modifier-border-focus: #6d4629;
 }
@@ -360,7 +360,7 @@
     --dropdown-background-hover: #452b81;
     --button-background: #3b256e;
     --button-background-hover: #452b81;
-    --background-modifier-border: #2a1a4a;
+    --background-modifier-border: #3e2d61;
     --background-modifier-border-hover: #362059;
     --background-modifier-border-focus: #4c2f8c;
 }
@@ -382,9 +382,9 @@
     --dropdown-background-hover: #3d4960;
     --button-background: #343e52;
     --button-background-hover: #3d4960;
-    --background-modifier-border: #2d3748;
-    --background-modifier-border-hover: #374151;
-    --background-modifier-border-focus: #4a5568;
+    --background-modifier-border: #455167;
+    --background-modifier-border-hover: #475872;
+    --background-modifier-border-focus: #546581;
 }
 
 .theme-dark.chocolate {
@@ -404,9 +404,9 @@
     --dropdown-background-hover: #513a25;
     --button-background: #45321f;
     --button-background-hover: #513a25;
-    --background-modifier-border: #362314;
-    --background-modifier-border-hover: #423021;
-    --background-modifier-border-focus: #5c422b;
+    --background-modifier-border: #4a3220;
+    --background-modifier-border-hover: #5a3d28;
+    --background-modifier-border-focus: #7a5838;
 }
 
 .theme-dark.dark-chocolate {
@@ -426,9 +426,9 @@
     --dropdown-background-hover: #3b2617;
     --button-background: #332013;
     --button-background-hover: #3b2617;
-    --background-modifier-border: #25140b;
-    --background-modifier-border-hover: #332013;
-    --background-modifier-border-focus: #4a321e;
+    --background-modifier-border: #3a2214;
+    --background-modifier-border-hover: #4a2c1c;
+    --background-modifier-border-focus: #63402a;
 }
 
 .theme-dark.rose-gold {
@@ -492,9 +492,9 @@
     --dropdown-background-hover: #473c30;
     --button-background: #3d3328;
     --button-background-hover: #473c30;
-    --background-modifier-border: #372d23;
-    --background-modifier-border-hover: #3d3328;
-    --background-modifier-border-focus: #6d5f43;
+    --background-modifier-border: #4d4030;
+    --background-modifier-border-hover: #5a4c3a;
+    --background-modifier-border-focus: #7a6650;
 }
 
 .theme-dark.lavendar {
@@ -558,9 +558,9 @@
     --dropdown-background-hover: #55361d;
     --button-background: #4a3019;
     --button-background-hover: #55361d;
-    --background-modifier-border: #3a2611;
-    --background-modifier-border-hover: #462c16;
-    --background-modifier-border-focus: #63401f;
+    --background-modifier-border: #503520;
+    --background-modifier-border-hover: #60402a;
+    --background-modifier-border-focus: #7a5535;
 }
 
 .theme-dark.mafia-red {
@@ -821,7 +821,7 @@
     --dropdown-background-hover: #481332;
     --button-background: #3c1028;
     --button-background-hover: #481332;
-    --background-modifier-border: #2d0b1c;
+    --background-modifier-border: #44162d;
     --background-modifier-border-hover: #3c1028;
     --background-modifier-border-focus: #5c1a40;
     --link-color: #cc338a;
@@ -846,9 +846,9 @@
     --dropdown-background-hover: #453323;
     --button-background: #3a2a20;
     --button-background-hover: #453323;
-    --background-modifier-border: #2c1f14;
-    --background-modifier-border-hover: #3a2a20;
-    --background-modifier-border-focus: #55402e;
+    --background-modifier-border: #423020;
+    --background-modifier-border-hover: #503c2a;
+    --background-modifier-border-focus: #6a5040;
 }
 
 .theme-dark.tasty-chocolate-2 {
@@ -868,9 +868,9 @@
     --dropdown-background-hover: #4e3c26;
     --button-background: #433421;
     --button-background-hover: #4e3c26;
-    --background-modifier-border: #312619;
-    --background-modifier-border-hover: #403325;
-    --background-modifier-border-focus: #5c4a35;
+    --background-modifier-border: #4a3828;
+    --background-modifier-border-hover: #584432;
+    --background-modifier-border-focus: #705840;
 }
 
 .theme-dark.velvet {
@@ -890,9 +890,9 @@
     --dropdown-background-hover: #462828;
     --button-background: #3a2222;
     --button-background-hover: #462828;
-    --background-modifier-border: #2c1818;
-    --background-modifier-border-hover: #3a2222;
-    --background-modifier-border-focus: #553434;
+    --background-modifier-border: #3d2828;
+    --background-modifier-border-hover: #4c3232;
+    --background-modifier-border-focus: #664444;
 }
 
 .theme-dark.leather {
@@ -912,9 +912,9 @@
     --dropdown-background-hover: #504330;
     --button-background: #443829;
     --button-background-hover: #504330;
-    --background-modifier-border: #332a20;
-    --background-modifier-border-hover: #443829;
-    --background-modifier-border-focus: #5d503c;
+    --background-modifier-border: #4a3c2c;
+    --background-modifier-border-hover: #5a4a38;
+    --background-modifier-border-focus: #706050;
 }
 
 .theme-dark.green-road {
