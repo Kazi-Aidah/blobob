@@ -1,4 +1,4 @@
-/* ====== LOADING SCREEN TEXT ===== */
+﻿/* ====== LOADING SCREEN TEXT ===== */
 .progress-bar-message::before {
     padding: 10px;
     content: "";
@@ -22,7 +22,7 @@
     vertical-align: middle;
 
     animation-name: float;
-    animation-duration: calc(var(--animation-duration) * 6.6667);
+    animation-duration: calc(var(--anim) * 6.6667);
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
 }

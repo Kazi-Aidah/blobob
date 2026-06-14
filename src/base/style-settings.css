@@ -1307,11 +1307,10 @@ settings:
     title: Animation speed
     description: Drag left for slower, right for faster animations. Default is the middle.
     type: variable-number-slider
-    default: 300
+    default: 600
     min: 50
     max: 800
     step: 10
-    format: ms
 
   ########################################
   # Mobile

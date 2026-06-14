@@ -1,11 +1,11 @@
-/* ===== hide status bar ===== */
+﻿/* ===== hide status bar ===== */
 .hide-status-bar .status-bar {
     display: none !important;
 }
 
 .status-bar {
     border-radius: 14px !important;
-    transition: all calc(var(--animation-duration) * 0.6667) cubic-bezier(0.175, 0.885, 0.32, 1.5) !important;
+    transition: all calc(var(--anim) * 0.6667) cubic-bezier(0.175, 0.885, 0.32, 1.5) !important;
     /* padding: 0px 30px !important; */
     overflow: auto !important;
     opacity: 1;
@@ -19,7 +19,7 @@
 .status-bar:hover {
     border-radius: 10px !important;
     padding: 10px 8px !important;
-    transition: all calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
+    transition: all calc(var(--anim) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
     /* filter: brightness(1); */
     transform: translateX(0);
     border-bottom-left-radius: 0 !important;
@@ -47,7 +47,7 @@
         border-radius: 5px;
         line-height: 1;
         opacity: 0.5;
-        transition: calc(var(--animation-duration) * 0.6667);
+        transition: calc(var(--anim) * 0.6667);
         background-color: transparent;
         border: none;
         padding: 8px !important;

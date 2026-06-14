@@ -1,5 +1,6 @@
-body {
-    --animation-duration: 300ms;
+﻿body {
+    --animation-duration: 600;
+    --anim: calc(var(--animation-duration) * 1ms);
     --nav-indentation-guide-width: 0px;
     --indentation-guide-width: 0px;
     --indentation-guide-color: var(--background-modifier-border);
@@ -8,35 +9,35 @@ body {
 /* anims */
 .modal, .prompt {
     animation-name: bottom-slide-in;
-    animation-duration: calc(var(--animation-duration) * 0.3);
+    animation-duration: calc(var(--anim) * 0.3);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
     animation-fill-mode: both;
 }
 
 .prompt-results {
     animation-name: bottom-slide-in;
-    animation-duration: calc(var(--animation-duration) * 1.667);
+    animation-duration: calc(var(--anim) * 1.667);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
     animation-fill-mode: both;
 }
 
 .suggestion-item.is-selected {
     animation-name: bottom-slide-in-small;
-    animation-duration: calc(var(--animation-duration) * 1.667);
+    animation-duration: calc(var(--anim) * 1.667);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
     animation-fill-mode: both;
 }
 
 .menu {
     animation-name: bottom-slide-in;
-    animation-duration: calc(var(--animation-duration) * 0.4667);
+    animation-duration: calc(var(--anim) * 0.4667);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1.2);
     animation-fill-mode: both;
 }
 
 .menu-group, .menu-separator {
     animation-name: bottom-slide-in;
-    animation-duration: calc(var(--animation-duration) * 0.6667);
+    animation-duration: calc(var(--anim) * 0.6667);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1.1);
     animation-fill-mode: both;
 }
@@ -75,31 +76,31 @@ body {
 
 .modal-content {
     animation-name: bottom-slide-in;
-    animation-duration: calc(var(--animation-duration) * 2.6667);
+    animation-duration: calc(var(--anim) * 2.6667);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1.2);
     animation-fill-mode: both;
 }
 .vertical-tab-header, .vertical-tab-content-container {
     animation-name: bottom-slide-in;
-    animation-duration: calc(var(--animation-duration) * 2.6667);
+    animation-duration: calc(var(--anim) * 2.6667);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
     animation-fill-mode: both;
 }
 .vertical-tab-header-group-items {
     animation-name: bottom-slide-in;
-    animation-duration: calc(var(--animation-duration) * 2.6667);
+    animation-duration: calc(var(--anim) * 2.6667);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
     animation-fill-mode: both;
 }
 .vertical-tab-header-group-title {
     animation-name: bottom-slide-in;
-    animation-duration: calc(var(--animation-duration) * 2.3);
+    animation-duration: calc(var(--anim) * 2.3);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
     animation-fill-mode: both;
 }
 .cm-sizer, .markdown-preview-sizer.markdown-preview-section {
     animation-name: bottom-slide-in;
-    animation-duration: calc(var(--animation-duration) * 2.6667);
+    animation-duration: calc(var(--anim) * 2.6667);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1.2);
     animation-fill-mode: both;
 }
@@ -111,14 +112,14 @@ body {
 .workspace-split.mod-horizontal.mod-sidedock.mod-left-split .workspace-drawer-vault-switcher,
 .workspace-split.mod-horizontal.mod-sidedock.mod-left-split .workspace-leaf-content {
     animation-name: left-slide-in;
-    animation-duration: calc(var(--animation-duration) * 1.6667);
+    animation-duration: calc(var(--anim) * 1.6667);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
     animation-fill-mode: both;
 }
 
 .workspace-split.mod-horizontal.mod-sidedock.mod-left-split .nav-file {
     animation-name: left-slide-in;
-    animation-duration: calc(var(--animation-duration) * 2);
+    animation-duration: calc(var(--anim) * 2);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
     animation-fill-mode: both;
 }
@@ -162,7 +163,7 @@ body {
 .workspace-split.mod-horizontal.mod-sidedock.mod-right-split .nav-buttons-container,
 .workspace-split.mod-horizontal.mod-sidedock.mod-right-split .view-content {
     animation-name: right-slide-in;
-    animation-duration: calc(var(--animation-duration) * 1.6667);
+    animation-duration: calc(var(--anim) * 1.6667);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
     animation-fill-mode: both;
 }

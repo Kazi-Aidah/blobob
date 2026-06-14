@@ -1,10 +1,10 @@
-/* ---
+﻿/* ---
 button styles: bordered, 3d, bordered 3d, glow 
 ---*/
 
 button, button:hover, button:active {
     transition: background-color 0.2s ease,
-                transform calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.5);
+                transform calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.5);
 }
 
 

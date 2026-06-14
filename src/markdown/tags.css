@@ -1,4 +1,4 @@
-body {
+﻿body {
     --tag-background: hsla(var(--interactive-accent-hsl), 0.13);
     --tag-background-hover: hsla(var(--interactive-accent-hsl), 0.25);
 }
@@ -26,7 +26,7 @@ body {
 .cm-hashtag.cm-hashtag-begin, .cm-hashtag.cm-hashtag-end {
     background-color: var(--tag-background);
 
-    transition: background-color 0.15s ease, transform calc(var(--animation-duration) * 0.6)  cubic-bezier(0.17, 0.86, 0.17, 1.2);
+    transition: background-color 0.15s ease, transform calc(var(--anim) * 0.6)  cubic-bezier(0.17, 0.86, 0.17, 1.2);
 }
 
 .cm-hashtag.cm-hashtag-begin:hover, .cm-hashtag.cm-hashtag-end:hover {

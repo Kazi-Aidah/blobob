@@ -1,4 +1,4 @@
-/* ==================================================
+﻿/* ==================================================
    PINNED TABS RELATED CSS
    ================================================== */
 
@@ -13,11 +13,11 @@ body.pin-icon-only .workspace-tab-header:has(.mod-pinned) {
     /* jumping pinned tab tansiiton */    
     /* transition-property: border-radius, max-width, margin, padding, transform, background-color !important;
     transition-duration:
-        calc(var(--animation-duration) * 1.3333),
-        calc(var(--animation-duration) * 1.3333),
-        calc(var(--animation-duration) * 1.3333),
-        calc(var(--animation-duration) * 1.3333),
-        calc(var(--animation-duration) * 1),
+        calc(var(--anim) * 1.3333),
+        calc(var(--anim) * 1.3333),
+        calc(var(--anim) * 1.3333),
+        calc(var(--anim) * 1.3333),
+        calc(var(--anim) * 1),
         0s !important;
     transition-timing-function:
         cubic-bezier(0.34, 1.56, 0.64, 1),
@@ -61,7 +61,7 @@ body.pin-icon-only .workspace-tab-header:has(.mod-pinned):hover
 }
 
 .pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner {
-    transition: transform calc(var(--animation-duration) * 1) cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+    transition: transform calc(var(--anim) * 1) cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
 }
 
 .pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner .workspace-tab-header-inner-icon {

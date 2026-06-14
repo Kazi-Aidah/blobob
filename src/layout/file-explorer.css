@@ -1,4 +1,4 @@
-:root {
+﻿:root {
     --nav-folder-radius: var(--button-radius);
     --nav-file-radius: var(--button-radius);
     --nav-hide-text: "My Vault";
@@ -137,14 +137,14 @@ body:not(.is-tablet) {
 @media (width >= 600px) {
     .nav-header {
         /* margin-top: -30px; */
-        transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.2);
+        transition: all calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.2);
         border-bottom: 1.5px solid var(--background-modifier-border);
     }
 
     .nav-buttons-container {
         position: relative;
-        transition: opacity calc(var(--animation-duration) * 6.6667) ease;
-        transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.6);
+        transition: opacity calc(var(--anim) * 6.6667) ease;
+        transition: all calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.6);
         margin: -2.2px;
     }
 

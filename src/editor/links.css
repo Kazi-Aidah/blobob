@@ -1,4 +1,4 @@
-/* ==== LINKS ==== */
+﻿/* ==== LINKS ==== */
 
 a {
     font-weight: var(--link-weight);
@@ -26,7 +26,7 @@ a.external-link,
     background-image: none;
     margin-right: 0;
     padding: 2px 0;
-    transition: all calc(var(--animation-duration) * 0.6667) ease;
+    transition: all calc(var(--anim) * 0.6667) ease;
 }
 
 a.external-link {
@@ -57,7 +57,7 @@ a.external-link:hover {
     color: var(--text-normal);
     text-decoration: underline !important;
     padding: 2px 0;
-    transition: all calc(var(--animation-duration) * 0.5) ease;
+    transition: all calc(var(--anim) * 0.5) ease;
 }
 
 .markdown-source-view.mod-cm6 .cm-link .cm-underline:hover,
@@ -66,7 +66,7 @@ a.external-link:hover {
     border-radius: 8px;
     text-decoration-thickness: 2px;
     padding: 2px 6px;
-    transition: all calc(var(--animation-duration) * 0.5) ease;
+    transition: all calc(var(--anim) * 0.5) ease;
 }
 
 /* ==== INTERNAL LINKS ==== */
@@ -78,7 +78,7 @@ a.external-link:hover {
     border-radius: 6px;
     padding: 0 5px;
     box-decoration-break: clone;
-    transition: background-color calc(var(--animation-duration) * 1.6667) ease;
+    transition: background-color calc(var(--anim) * 1.6667) ease;
 }
 
 .markdown-source-view.mod-cm6 .cm-hmd-internal-link:hover,

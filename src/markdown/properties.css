@@ -1,4 +1,4 @@
-.metadata-container {
+﻿.metadata-container {
     border-radius: var(--touch-radius-s);
     corner-shape: var(--corner-shape);
 }
@@ -6,7 +6,7 @@
 /* toggle: dim unless hovered */
 .dim-properties .metadata-container {
     opacity: 0.6;
-    transition: opacity calc(var(--animation-duration) * 1) ease;
+    transition: opacity calc(var(--anim) * 1) ease;
 }
 
 .dim-properties .metadata-container:hover {
@@ -49,15 +49,15 @@
     background-color: var(--background-secondary-alt);
     transform-origin: top;
     transition:
-        transform calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
-        padding calc(var(--animation-duration) * 1.3333) ease,
-        opacity calc(var(--animation-duration) * 1.3333) ease;
+        transform calc(var(--anim) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
+        padding calc(var(--anim) * 1.3333) ease,
+        opacity calc(var(--anim) * 1.3333) ease;
 }
 
 .properties-1 .metadata-container.is-collapsed {
     opacity: 0.6;
     animation-name: collapse-bounce;
-    animation-duration: calc(var(--animation-duration) * 1.5);
+    animation-duration: calc(var(--anim) * 1.5);
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 2);
     animation-fill-mode: forwards;
 }
@@ -65,7 +65,7 @@
 .properties-1 .metadata-container:not(.is-collapsed) {
     opacity: 1;
     animation-name: settle-container;
-    animation-duration: calc(var(--animation-duration) * 1.6667);
+    animation-duration: calc(var(--anim) * 1.6667);
     animation-fill-mode: forwards;
 }
 
@@ -92,7 +92,7 @@
     margin-bottom: 1.3rem;
     padding: 1rem 1.5rem;
     transform-origin: top;
-    transition: opacity calc(var(--animation-duration) * 0.3) ease;
+    transition: opacity calc(var(--anim) * 0.3) ease;
 }
 
 .properties-2 .metadata-container.is-collapsed {
@@ -114,7 +114,7 @@
     border-radius: 0 0 var(--touch-radius-s) var(--touch-radius-s);
     padding: 1rem 1.3rem;
     transform-origin: top;
-    transition: opacity calc(var(--animation-duration) * 0.3) ease;
+    transition: opacity calc(var(--anim) * 0.3) ease;
 }
 
 .properties-3 .metadata-container.is-collapsed {
@@ -136,7 +136,7 @@
     padding: 1rem;
     background: var(--background-secondary-alt);
     transform-origin: top;
-    transition: opacity calc(var(--animation-duration) * 0.3) ease;
+    transition: opacity calc(var(--anim) * 0.3) ease;
 }
 
 .properties-4 .metadata-container.is-collapsed {
@@ -156,7 +156,7 @@
     margin-bottom: 1.3rem;
     padding: 0.9rem 1.5rem;
     transform-origin: top;
-    transition: opacity calc(var(--animation-duration) * 0.3) ease;
+    transition: opacity calc(var(--anim) * 0.3) ease;
 }
 
 .properties-5 .metadata-container.is-collapsed {
@@ -212,7 +212,7 @@
 /* ===== COLLAPSE ARROW — SHOW ON HOVER ONLY ===== */
 .metadata-container .metadata-properties-heading .collapse-indicator.collapse-icon {
     opacity: 0;
-    transition: opacity calc(var(--animation-duration) * 0.6667) ease;
+    transition: opacity calc(var(--anim) * 0.6667) ease;
 }
 
 .metadata-container.is-collapsed .metadata-properties-heading:hover .collapse-indicator.collapse-icon,
@@ -243,8 +243,8 @@
 .properties-5 .metadata-container .metadata-content {
     transform-origin: top;
     transition:
-        transform calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
-        opacity calc(var(--animation-duration) * 1.3333) ease;
+        transform calc(var(--anim) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
+        opacity calc(var(--anim) * 1.3333) ease;
 }
 
 .metadata-container.is-collapsed .metadata-content {
@@ -254,7 +254,7 @@
 
 .metadata-container:not(.is-collapsed) .metadata-content {
     animation-name: settle-bounce;
-    animation-duration: calc(var(--animation-duration) * 1.3333);
+    animation-duration: calc(var(--anim) * 1.3333);
     animation-fill-mode: forwards;
 }
 

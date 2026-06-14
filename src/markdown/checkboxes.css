@@ -1,4 +1,4 @@
-/* =============
+﻿/* =============
    CHECKBOXES
 ============= */
 
@@ -50,9 +50,9 @@ body:not(.disable-checkboxes) {
 
         cursor: pointer;
         transition:
-            all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2),
-            padding calc(var(--animation-duration) * 0.3333) ease,
-            border-radius calc(var(--animation-duration) * 0.6667) ease !important;
+            all calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 2),
+            padding calc(var(--anim) * 0.3333) ease,
+            border-radius calc(var(--anim) * 0.6667) ease !important;
     }
 
     /* hide tick */
@@ -76,9 +76,9 @@ body:not(.disable-checkboxes) {
         border-radius: 20px !important;
         transform: scale(0.96) !important;
         transition:
-            transform calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2),
-            padding calc(var(--animation-duration) * 0.3333) ease,
-            border-radius calc(var(--animation-duration) * 0.6667) ease !important;
+            transform calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 2),
+            padding calc(var(--anim) * 0.3333) ease,
+            border-radius calc(var(--anim) * 0.6667) ease !important;
     }
 
     /* sad */
@@ -537,7 +537,7 @@ body:not(.disable-checkboxes) {
   border-bottom-left-radius: 0px;
   padding: 2px 4px;
   margin: -4.8px;
-  transition: background-color calc(var(--animation-duration) * 0.6667) ease;
+  transition: background-color calc(var(--anim) * 0.6667) ease;
 }
 
 .HyperMD-list-line[data-task="D"] > label {

@@ -1,4 +1,4 @@
-/* shared: hide | between tabs */
+﻿/* shared: hide | between tabs */
 .workspace .mod-root .workspace-tab-header-inner::after { display: none; }
 
 /* tabs: close button adjustment */
@@ -98,11 +98,11 @@ body:not(.tab-none):not(.tab-float) {
     margin-right: 2px;
     margin-left: 2px;
     margin-top: -2px;
-    transition: all calc(var(--animation-duration) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1), background-color 0s ease;
+    transition: all calc(var(--anim) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1), background-color 0s ease;
   }
   .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:hover {
     background-color: var(--background-primary-alt);
-    transition: all calc(var(--animation-duration) * 1.2) ease-out;
+    transition: all calc(var(--anim) * 1.2) ease-out;
     border-radius: var(--button-radius);
     corner-shape: var(--corner-shape);
   }
@@ -132,7 +132,7 @@ body:not(.tab-none):not(.tab-float) {
   }
 
   .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner {
-    transition: all calc(var(--animation-duration) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    transition: all calc(var(--anim) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1);
   }
 
   /* sidebar tabs color */

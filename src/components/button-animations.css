@@ -1,4 +1,4 @@
-/* ---
+﻿/* ---
 button animations: scale, shrink, tilt, bounce
 --- */
 
@@ -6,8 +6,8 @@ button animations: scale, shrink, tilt, bounce
 .button-scale button,
 .button-scale .clickable-icon {
     transition:
-        all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2),
-        background-color calc(var(--animation-duration) * 0.6667) ease;
+        all calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 2),
+        background-color calc(var(--anim) * 0.6667) ease;
     transform: scale(1);
     outline: 0 solid var(--background-modifier-border);
 }
@@ -20,7 +20,7 @@ button animations: scale, shrink, tilt, bounce
 
 .button-scale button:active {
     transform: scale(0.9);
-    transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
     outline: 0 solid var(--background-modifier-border);
 }
 
@@ -28,8 +28,8 @@ button animations: scale, shrink, tilt, bounce
 .button-shrink button,
 .button-shrink .clickable-icon {
     transition:
-        all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2),
-        background-color calc(var(--animation-duration) * 0.6667) ease;
+        all calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 2),
+        background-color calc(var(--anim) * 0.6667) ease;
     transform: scale(1);
     outline: 0 solid var(--background-modifier-border);
 }
@@ -45,7 +45,7 @@ button animations: scale, shrink, tilt, bounce
 .button-shrink .clickable-icon:focus-visible {
     transform: scale(0.7);
     opacity: 0.7;
-    transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
     outline: 0 solid var(--background-modifier-border);
 }
 
@@ -130,7 +130,7 @@ button animations: scale, shrink, tilt, bounce
 .button-scale .sidebar-toggle-button.mod-right .clickable-icon:active {
     transform: scale(-0.9 ,0.9);
     opacity: 0.7;
-    transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
     outline: 0 solid var(--background-modifier-border);
 }
 
@@ -143,7 +143,7 @@ button animations: scale, shrink, tilt, bounce
 .button-shrink .sidebar-toggle-button.mod-right .clickable-icon:active {
     transform: scale(-0.7, 0.7);
     opacity: 0.7;
-    transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
     outline: 0 solid var(--background-modifier-border);
 }
 
@@ -156,7 +156,7 @@ button animations: scale, shrink, tilt, bounce
 .button-tilt .sidebar-toggle-button.mod-right .clickable-icon:active {
     transform: scale(-0.9, 0.9) rotate(4deg);
     opacity: 0.7;
-    transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
     outline: 0 solid var(--background-modifier-border);
 }
 
@@ -169,6 +169,6 @@ button animations: scale, shrink, tilt, bounce
 .button-tilt .sidebar-toggle-button.mod-left .clickable-icon:active {
     transform: scale(0.9) rotate(4deg);
     opacity: 0.7;
-    transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
     outline: 0 solid var(--background-modifier-border);
 }
