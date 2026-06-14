@@ -210,6 +210,10 @@ settings:
         value: tab-joined
       - label: Floating
         value: tab-float
+      - label: Underlined
+        value: tab-lined
+      - label: Contained
+        value: tab-contained
       - label: None
         value: tab-none
 
@@ -315,13 +319,21 @@ settings:
     default: false
     addCommand: true
 
+  - id: canvas-sharp-cards
+    title: Canvas - Sharp default card
+    description: 
+    type: class-toggle
+    default: false
+    addCommand: true
+
   - id: hide-breadcrumbs
-    title: Hide Breadcrumbs
+    title: View header - Hide Breadcrumbs
+    description: Shows the file name instead of the whole folder path
     type: class-toggle
     default: true
 
   - id: view-title-casing
-    title: View Header title casing
+    title: View Header - Title casing
     description: Change the text case of the view header title
     type: class-select
     default: view-title-case-none
@@ -336,19 +348,19 @@ settings:
         value: view-title-case-lower
 
   - id: table-hor-lines-only
-    title: Hide Vertical Lines in Tables
+    title: Table - Hide Vertical Lines
     type: class-toggle
     default: false
     addCommand: false
 
   - id: table-ver-lines-only
-    title: Hide Horizontal Lines in Tables
+    title: Table - Hide Horizontal Lines
     type: class-toggle
     default: false
     addCommand: false
 
   - id: color-min-max
-    title: Color Minimize & Maximize buttons
+    title: Titlebar - Color Minimize & Maximize buttons
     type: class-select
     default: none
     options:

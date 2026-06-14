@@ -54,11 +54,11 @@ body.compact-tabs .workspace-tab-header.is-active .workspace-tab-header-inner {
 }
 
 /* sidebar toggle button vertical offset */
-.compact-tabs .sidebar-toggle-button.mod-left .clickable-icon {
+/* .compact-tabs .sidebar-toggle-button.mod-left .clickable-icon {
     margin-bottom: 10px !important;
     margin-left: 0 !important;
     margin-top: 0px !important;
-}
+} */
 
 /* line-height fix for tab text/icons */
 .compact-tabs .workspace-tab-header-inner-title,
