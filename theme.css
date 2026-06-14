@@ -722,6 +722,18 @@ settings:
       - label: Yellow-min Green-max
         value: y-min-g-max
 
+  - id: disable-bases-undim
+    title: Bases - Disable dim toolbar
+    type: class-toggle
+    default: false
+    addCommand: false
+
+  - id: hide-bases-labels
+    title: Bases - Hide toolbar labels
+    type: class-toggle
+    default: true
+    addCommand: false
+
   - id: heading-editor
     title: Editor & Text Appearance
     type: heading
@@ -835,6 +847,7 @@ settings:
 
   - id: blur-inactive
     title: Blur inactive lines
+    description: set a strength below for this to work.
     type: class-toggle
     default: false
     addCommand: true
@@ -851,44 +864,6 @@ settings:
     type: class-toggle
     default: false
     addCommand: true
-
-  - id: pre-act-line
-    title: Active Line Prefix
-    type: heading
-    level: 3
-    collapsed: true
-
-  - id: text-before-active-line
-    title: Enable active line prefix
-    description: Text shown before the active line
-    type: class-toggle
-    default: false
-
-  - id: before-active-line
-    title: Active line prefix text
-    description: Customize the text shown before the active line (e.g. ">>" or "→")
-    type: variable-text
-    default: ">>"
-    quotes: true
-
-  - id: before-active-line-margin
-    title: Active line prefix margin
-    description: Negative value pulls the prefix outside the editor edge
-    type: variable-number
-    default: -20
-    format: px
-
-  - id: before-active-line-color
-    title: Active line prefix color
-    description: Color of the prefix text shown before the active line
-    type: variable-color
-    format: hex
-    opacity: false
-    default: '#7c3aed'
-
-
-
-
 
 
 
@@ -1428,7 +1403,7 @@ settings:
 
   - id: verti-folder
     title: Vertical Folder
-    description: Enabling/Disabling this may cause strange layouts, just "Collapse all" to fix them.
+    description: Enabling/Disabling this may cause a folder layout break at first, just "Collapse all" to fix them.
     type: class-toggle
     default: true
 
@@ -1631,7 +1606,6 @@ settings:
         value: meta-key-case-upper
       - label: lowercase
         value: meta-key-case-lower
-
 
   ########################################
   # Animations
@@ -5865,6 +5839,36 @@ body.image-captions-styling {
 }
 
 
+/* reset bases suggestion item animations */
+.bases-toolbar-menu-container 
+.bases-toolbar-menu-item.is-selected {
+  margin: 0 !important;
+  margin-right: 0 !important;
+  animation: none;
+}
+
+/* undim on hover */
+body:not(.disable-bases-undim) {
+    .bases-header {
+        opacity: 0.5;
+        transition: all 0.2s ease;
+    }
+    .bases-header:hover {
+        opacity: 1;
+    }
+}
+
+/* hide bases labels */
+.hide-bases-labels .bases-toolbar-item .text-icon-button .text-button-label {
+    display: none !important;
+}
+
+body {
+    --bases-table-row-height: 40px;
+    --metadata-input-padding: 20px 8px;
+    --bases-table-font-size: var(--font-ui-medium);
+}
+
 /* 
 canvas-sharp-cards
  */
@@ -6403,7 +6407,7 @@ body.bold-folders .nav-folder-title {
     .nav-folder-title .tree-item-icon svg {
         width: 100% !important;
         height: 100% !important;
-        min-width: 200px !important;
+        min-width: 100px !important;
     }
 
     .tree-item-inner {
@@ -9192,6 +9196,7 @@ body:not(.list-default-bullet) .is-live-preview .cm-formatting-list-ul::before {
   display: inline-block;
   width: auto;
   height: auto;
+  margin-inline-end: 10px;
 }
 
 /* Live Preview – level 1 */
@@ -9203,7 +9208,7 @@ body:not(.list-default-bullet) .is-live-preview .cm-list-2.cm-formatting-list-ul
   content: var(--bullet-2) !important;
 }
 /* Live Preview – level 3 */
-body:not(.list-default-bullet) .is-live-preview .cm-list-3.cm-formatting-list-ul::before {
+body:not(.list-default-bullet) .is-live-preview .cm-formatting-list-ul:not(.cm-list-1):not(.cm-list-2)::before {
   content: var(--bullet-3) !important;
 }
 
@@ -9229,10 +9234,15 @@ body:not(.list-default-bullet) ul ul ul > li:not(.task-list-item)::before {
 }
 
 /* Hide default marker */
-body:not(.list-default-bullet) ul > li:not(.task-list-item)::marker,
-body:not(.list-default-bullet) .is-live-preview .cm-formatting-list-ul {
+body:not(.list-default-bullet) ul > li:not(.task-list-item)::marker {
   color: transparent;
 }
+
+/* Hide original asterisk in live preview without affecting ::before color */
+body:not(.list-default-bullet) .is-live-preview .cm-formatting-list-ul {
+  font-size: 0;
+}
+
 
 /* Spacing adjustment for reading view */
 ul > li:not(.task-list-item)::before {

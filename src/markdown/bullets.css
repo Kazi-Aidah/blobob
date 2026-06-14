@@ -24,6 +24,7 @@ body:not(.list-default-bullet) .is-live-preview .cm-formatting-list-ul::before {
   display: inline-block;
   width: auto;
   height: auto;
+  margin-inline-end: 10px;
 }
 
 /* Live Preview – level 1 */
@@ -61,10 +62,15 @@ body:not(.list-default-bullet) ul ul ul > li:not(.task-list-item)::before {
 }
 
 /* Hide default marker */
-body:not(.list-default-bullet) ul > li:not(.task-list-item)::marker,
-body:not(.list-default-bullet) .is-live-preview .cm-formatting-list-ul {
+body:not(.list-default-bullet) ul > li:not(.task-list-item)::marker {
   color: transparent;
 }
+
+/* Hide original asterisk in live preview without affecting ::before color */
+body:not(.list-default-bullet) .is-live-preview .cm-formatting-list-ul {
+  font-size: 0;
+}
+
 
 /* Spacing adjustment for reading view */
 ul > li:not(.task-list-item)::before {

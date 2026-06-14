@@ -194,7 +194,7 @@ body.bold-folders .nav-folder-title {
     .nav-folder-title .tree-item-icon svg {
         width: 100% !important;
         height: 100% !important;
-        min-width: 200px !important;
+        min-width: 100px !important;
     }
 
     .tree-item-inner {

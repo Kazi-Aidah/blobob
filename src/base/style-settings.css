@@ -371,6 +371,18 @@ settings:
       - label: Yellow-min Green-max
         value: y-min-g-max
 
+  - id: disable-bases-undim
+    title: Bases - Disable dim toolbar
+    type: class-toggle
+    default: false
+    addCommand: false
+
+  - id: hide-bases-labels
+    title: Bases - Hide toolbar labels
+    type: class-toggle
+    default: true
+    addCommand: false
+
   - id: heading-editor
     title: Editor & Text Appearance
     type: heading
@@ -484,6 +496,7 @@ settings:
 
   - id: blur-inactive
     title: Blur inactive lines
+    description: set a strength below for this to work.
     type: class-toggle
     default: false
     addCommand: true
@@ -500,44 +513,6 @@ settings:
     type: class-toggle
     default: false
     addCommand: true
-
-  - id: pre-act-line
-    title: Active Line Prefix
-    type: heading
-    level: 3
-    collapsed: true
-
-  - id: text-before-active-line
-    title: Enable active line prefix
-    description: Text shown before the active line
-    type: class-toggle
-    default: false
-
-  - id: before-active-line
-    title: Active line prefix text
-    description: Customize the text shown before the active line (e.g. ">>" or "→")
-    type: variable-text
-    default: ">>"
-    quotes: true
-
-  - id: before-active-line-margin
-    title: Active line prefix margin
-    description: Negative value pulls the prefix outside the editor edge
-    type: variable-number
-    default: -20
-    format: px
-
-  - id: before-active-line-color
-    title: Active line prefix color
-    description: Color of the prefix text shown before the active line
-    type: variable-color
-    format: hex
-    opacity: false
-    default: '#7c3aed'
-
-
-
-
 
 
 
@@ -1077,7 +1052,7 @@ settings:
 
   - id: verti-folder
     title: Vertical Folder
-    description: Enabling/Disabling this may cause strange layouts, just "Collapse all" to fix them.
+    description: Enabling/Disabling this may cause a folder layout break at first, just "Collapse all" to fix them.
     type: class-toggle
     default: true
 
@@ -1280,7 +1255,6 @@ settings:
         value: meta-key-case-upper
       - label: lowercase
         value: meta-key-case-lower
-
 
   ########################################
   # Animations
