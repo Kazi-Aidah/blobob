@@ -1,43 +1,48 @@
 ﻿body {
-    --animation-duration: 600;
-    --anim: calc(var(--animation-duration) * 1ms);
+    --animation-duration: 600ms;
     --nav-indentation-guide-width: 0px;
     --indentation-guide-width: 0px;
     --indentation-guide-color: var(--background-modifier-border);
 }
 
+body.anim-instant  { --animation-duration: 0ms; }
+body.anim-fast     { --animation-duration: 200ms; }
+body.anim-normal   { --animation-duration: 600ms; }
+body.anim-slow     { --animation-duration: 900ms; }
+body.anim-slower   { --animation-duration: 1400ms; }
+
 /* anims */
 .modal, .prompt {
     animation-name: bottom-slide-in;
-    animation-duration: calc(var(--anim) * 0.3);
+    animation-duration: calc(var(--animation-duration) * 0.3);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
     animation-fill-mode: both;
 }
 
 .prompt-results {
     animation-name: bottom-slide-in;
-    animation-duration: calc(var(--anim) * 1.667);
+    animation-duration: calc(var(--animation-duration) * 1.667);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
     animation-fill-mode: both;
 }
 
 .suggestion-item.is-selected {
     animation-name: bottom-slide-in-small;
-    animation-duration: calc(var(--anim) * 1.667);
+    animation-duration: calc(var(--animation-duration) * 1.667);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
     animation-fill-mode: both;
 }
 
 .menu {
     animation-name: bottom-slide-in;
-    animation-duration: calc(var(--anim) * 0.4667);
+    animation-duration: calc(var(--animation-duration) * 0.4667);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1.2);
     animation-fill-mode: both;
 }
 
 .menu-group, .menu-separator {
     animation-name: bottom-slide-in;
-    animation-duration: calc(var(--anim) * 0.6667);
+    animation-duration: calc(var(--animation-duration) * 0.6667);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1.1);
     animation-fill-mode: both;
 }
@@ -76,31 +81,31 @@
 
 .modal-content {
     animation-name: bottom-slide-in;
-    animation-duration: calc(var(--anim) * 2.6667);
+    animation-duration: calc(var(--animation-duration) * 2.6667);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1.2);
     animation-fill-mode: both;
 }
 .vertical-tab-header, .vertical-tab-content-container {
     animation-name: bottom-slide-in;
-    animation-duration: calc(var(--anim) * 2.6667);
+    animation-duration: calc(var(--animation-duration) * 2.6667);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
     animation-fill-mode: both;
 }
 .vertical-tab-header-group-items {
     animation-name: bottom-slide-in;
-    animation-duration: calc(var(--anim) * 2.6667);
+    animation-duration: calc(var(--animation-duration) * 2.6667);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
     animation-fill-mode: both;
 }
 .vertical-tab-header-group-title {
     animation-name: bottom-slide-in;
-    animation-duration: calc(var(--anim) * 2.3);
+    animation-duration: calc(var(--animation-duration) * 2.3);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
     animation-fill-mode: both;
 }
 .cm-sizer, .markdown-preview-sizer.markdown-preview-section {
     animation-name: bottom-slide-in;
-    animation-duration: calc(var(--anim) * 2.6667);
+    animation-duration: calc(var(--animation-duration) * 2.6667);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1.2);
     animation-fill-mode: both;
 }
@@ -112,14 +117,14 @@
 .workspace-split.mod-horizontal.mod-sidedock.mod-left-split .workspace-drawer-vault-switcher,
 .workspace-split.mod-horizontal.mod-sidedock.mod-left-split .workspace-leaf-content {
     animation-name: left-slide-in;
-    animation-duration: calc(var(--anim) * 1.6667);
+    animation-duration: calc(var(--animation-duration) * 1.6667);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
     animation-fill-mode: both;
 }
 
 .workspace-split.mod-horizontal.mod-sidedock.mod-left-split .nav-file {
     animation-name: left-slide-in;
-    animation-duration: calc(var(--anim) * 2);
+    animation-duration: calc(var(--animation-duration) * 2);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
     animation-fill-mode: both;
 }
@@ -163,7 +168,7 @@
 .workspace-split.mod-horizontal.mod-sidedock.mod-right-split .nav-buttons-container,
 .workspace-split.mod-horizontal.mod-sidedock.mod-right-split .view-content {
     animation-name: right-slide-in;
-    animation-duration: calc(var(--anim) * 1.6667);
+    animation-duration: calc(var(--animation-duration) * 1.6667);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
     animation-fill-mode: both;
 }
@@ -1649,14 +1654,21 @@ settings:
     type: class-toggle
     default: false
 
-  - id: animation-duration
+  - id: animation-speed
     title: Animation speed
-    description: Drag left for slower, right for faster animations. Default is the middle.
-    type: variable-number-slider
-    default: 600
-    min: 50
-    max: 800
-    step: 10
+    type: class-select
+    default: anim-normal
+    options:
+      - label: Instant (off)
+        value: anim-instant
+      - label: Fast
+        value: anim-fast
+      - label: Normal
+        value: anim-normal
+      - label: Slow
+        value: anim-slow
+      - label: Slower
+        value: anim-slower
 
   ########################################
   # Mobile
@@ -3610,8 +3622,8 @@ button animations: scale, shrink, tilt, bounce
 .button-scale button,
 .button-scale .clickable-icon {
     transition:
-        all calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 2),
-        background-color calc(var(--anim) * 0.6667) ease;
+        all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2),
+        background-color calc(var(--animation-duration) * 0.6667) ease;
     transform: scale(1);
     outline: 0 solid var(--background-modifier-border);
 }
@@ -3624,7 +3636,7 @@ button animations: scale, shrink, tilt, bounce
 
 .button-scale button:active {
     transform: scale(0.9);
-    transition: all calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
     outline: 0 solid var(--background-modifier-border);
 }
 
@@ -3632,8 +3644,8 @@ button animations: scale, shrink, tilt, bounce
 .button-shrink button,
 .button-shrink .clickable-icon {
     transition:
-        all calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 2),
-        background-color calc(var(--anim) * 0.6667) ease;
+        all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2),
+        background-color calc(var(--animation-duration) * 0.6667) ease;
     transform: scale(1);
     outline: 0 solid var(--background-modifier-border);
 }
@@ -3649,7 +3661,7 @@ button animations: scale, shrink, tilt, bounce
 .button-shrink .clickable-icon:focus-visible {
     transform: scale(0.7);
     opacity: 0.7;
-    transition: all calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
     outline: 0 solid var(--background-modifier-border);
 }
 
@@ -3734,7 +3746,7 @@ button animations: scale, shrink, tilt, bounce
 .button-scale .sidebar-toggle-button.mod-right .clickable-icon:active {
     transform: scale(-0.9 ,0.9);
     opacity: 0.7;
-    transition: all calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
     outline: 0 solid var(--background-modifier-border);
 }
 
@@ -3747,7 +3759,7 @@ button animations: scale, shrink, tilt, bounce
 .button-shrink .sidebar-toggle-button.mod-right .clickable-icon:active {
     transform: scale(-0.7, 0.7);
     opacity: 0.7;
-    transition: all calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
     outline: 0 solid var(--background-modifier-border);
 }
 
@@ -3760,7 +3772,7 @@ button animations: scale, shrink, tilt, bounce
 .button-tilt .sidebar-toggle-button.mod-right .clickable-icon:active {
     transform: scale(-0.9, 0.9) rotate(4deg);
     opacity: 0.7;
-    transition: all calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
     outline: 0 solid var(--background-modifier-border);
 }
 
@@ -3773,7 +3785,7 @@ button animations: scale, shrink, tilt, bounce
 .button-tilt .sidebar-toggle-button.mod-left .clickable-icon:active {
     transform: scale(0.9) rotate(4deg);
     opacity: 0.7;
-    transition: all calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
     outline: 0 solid var(--background-modifier-border);
 }
 
@@ -3783,7 +3795,7 @@ button styles: bordered, 3d, bordered 3d, glow
 
 button, button:hover, button:active {
     transition: background-color 0.2s ease,
-                transform calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.5);
+                transform calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.5);
 }
 
 
@@ -3927,19 +3939,19 @@ icon specified colours: donate to support, uninstall, delete, remove, close, new
 .modal-close-button.clickable-icon:hover {
     color: var(--text-error);
     background-color: rgba(var(--color-red-rgb), 0.2);
-    transition: calc(var(--anim) * 0.6667) ease;
+    transition: calc(var(--animation-duration) * 0.6667) ease;
 }
 
 .workspace-tab-header-new-tab .clickable-icon:hover {
     color: var(--color-accent);
     background-color: hsla(var(--interactive-accent-hsl), 0.2);
-    transition: calc(var(--anim) * 0.6667) ease;
+    transition: calc(var(--animation-duration) * 0.6667) ease;
 }
 
 .workspace-tab-header-new-tab .clickable-icon:active {
     color: var(--color-accent);
     background-color: hsla(var(--interactive-accent-hsl), 0.2);
-    transition: calc(var(--anim) * 0.6667) ease;
+    transition: calc(var(--animation-duration) * 0.6667) ease;
 }
 
 
@@ -4012,7 +4024,7 @@ select {
   align-items: center;
   corner-shape: var(--corner-shape);
   transition: background-color 0.2s ease, 
-              all calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
+              all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
         
 }
 
@@ -4105,27 +4117,27 @@ select option:checked:hover {
 /* unenabled body */
 .checkbox-container {
     border-radius: 10px;
-    transition: all calc(var(--anim) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2);
 }
 
 /* unenabled thumb */
 .checkbox-container:not(.is-enabled)::after {
     border-radius: 10px;
-    transition: all calc(var(--anim) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2);
 }
 
 /* enabled body */
 .checkbox-container.is-enabled {
     border-radius: 6px;
-    transition: all calc(var(--anim) * 0.3333) ease-out;
+    transition: all calc(var(--animation-duration) * 0.3333) ease-out;
 }
 
 /* enabled thumb */
 .checkbox-container.is-enabled::after {
     border-radius: 6px;
     transition:
-        transform calc(var(--anim) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
-        border-radius calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
+        transform calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
+        border-radius calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
 }
 
 .checkbox-container::after {
@@ -4139,8 +4151,8 @@ select option:checked:hover {
     background-position: center;
     background-size: 70%;
     transition:
-        background-size calc(var(--anim) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
-        transform calc(var(--anim) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
+        background-size calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
+        transform calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
 }
 
 /* accessibility adjustment */
@@ -4151,8 +4163,8 @@ select option:checked:hover {
 .theme-light .checkbox-container.is-enabled:hover::after {
     border: 1px solid var(--background-modifier-border) !important;
     transition:
-        transform calc(var(--anim) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
-        border calc(var(--anim) * 0.3333) ease;
+        transform calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
+        border calc(var(--animation-duration) * 0.3333) ease;
 }
 
 /* here comes in the faces */
@@ -4178,13 +4190,13 @@ select option:checked:hover {
     </svg>");
     transform: scale(1.5) translateX(1em);
     transition:
-        transform calc(var(--anim) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
-        border calc(var(--anim) * 0.3333) ease;
+        transform calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
+        border calc(var(--animation-duration) * 0.3333) ease;
 }
 
 input[type="checkbox"] {
     transform: scale(1);
-    transition: transform calc(var(--anim) * 0.3333) ease !important;
+    transition: transform calc(var(--animation-duration) * 0.3333) ease !important;
 }
 
 input[type="checkbox"]:checked:hover {
@@ -4324,7 +4336,7 @@ mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox=
 .float-inactive
     .cm-line:not(.cm-active, .HyperMD-codeblock, .HyperMD-codeblock-bg, .HyperMD-codeblock-end, .HyperMD-codeblock-end-bg) {
     animation-name: float-up-down;
-    animation-duration: calc(var(--anim) * 10);
+    animation-duration: calc(var(--animation-duration) * 10);
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
 }
@@ -4424,7 +4436,7 @@ mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox=
     text-align: center;
     display: inline-block;
     padding: 20px;
-    transition: all calc(var(--anim) * 0.6667) ease;
+    transition: all calc(var(--animation-duration) * 0.6667) ease;
     width: 100%;
     justify-content: space-between;
     margin-bottom: 15px;
@@ -4435,7 +4447,7 @@ mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox=
     text-align: left;
     display: inline-block;
     padding: 20px;
-    transition: all calc(var(--anim) * 0.6667) ease;
+    transition: all calc(var(--animation-duration) * 0.6667) ease;
     width: 100%;
     justify-content: space-between;
     margin-bottom: 15px;
@@ -4446,7 +4458,7 @@ mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox=
     text-align: right;
     display: inline-block;
     padding: 20px;
-    transition: all calc(var(--anim) * 0.6667) ease;
+    transition: all calc(var(--animation-duration) * 0.6667) ease;
     width: 100%;
     justify-content: space-between;
     margin-bottom: 15px;
@@ -4536,7 +4548,7 @@ a.external-link,
     background-image: none;
     margin-right: 0;
     padding: 2px 0;
-    transition: all calc(var(--anim) * 0.6667) ease;
+    transition: all calc(var(--animation-duration) * 0.6667) ease;
 }
 
 a.external-link {
@@ -4567,7 +4579,7 @@ a.external-link:hover {
     color: var(--text-normal);
     text-decoration: underline !important;
     padding: 2px 0;
-    transition: all calc(var(--anim) * 0.5) ease;
+    transition: all calc(var(--animation-duration) * 0.5) ease;
 }
 
 .markdown-source-view.mod-cm6 .cm-link .cm-underline:hover,
@@ -4576,7 +4588,7 @@ a.external-link:hover {
     border-radius: 8px;
     text-decoration-thickness: 2px;
     padding: 2px 6px;
-    transition: all calc(var(--anim) * 0.5) ease;
+    transition: all calc(var(--animation-duration) * 0.5) ease;
 }
 
 /* ==== INTERNAL LINKS ==== */
@@ -4588,7 +4600,7 @@ a.external-link:hover {
     border-radius: 6px;
     padding: 0 5px;
     box-decoration-break: clone;
-    transition: background-color calc(var(--anim) * 1.6667) ease;
+    transition: background-color calc(var(--animation-duration) * 1.6667) ease;
 }
 
 .markdown-source-view.mod-cm6 .cm-hmd-internal-link:hover,
@@ -4990,7 +5002,7 @@ body.image-captions-styling {
     vertical-align: middle;
 
     animation-name: float;
-    animation-duration: calc(var(--anim) * 6.6667);
+    animation-duration: calc(var(--animation-duration) * 6.6667);
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
 }
@@ -5150,14 +5162,14 @@ body:not(.is-tablet) {
 @media (width >= 600px) {
     .nav-header {
         /* margin-top: -30px; */
-        transition: all calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.2);
+        transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.2);
         border-bottom: 1.5px solid var(--background-modifier-border);
     }
 
     .nav-buttons-container {
         position: relative;
-        transition: opacity calc(var(--anim) * 6.6667) ease;
-        transition: all calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.6);
+        transition: opacity calc(var(--animation-duration) * 6.6667) ease;
+        transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.6);
         margin: -2.2px;
     }
 
@@ -5326,23 +5338,23 @@ body.bouncy-folders.circular-tiptip .nav-folder:not(.is-collapsed):hover {
 /* toggle: Bouncy Folders */
 body.bouncy-folders .nav-folder-title {
     transition:
-        border calc(var(--anim) * 0.6667) ease,
-        padding calc(var(--anim) * 0.6667) ease-out,
+        border calc(var(--animation-duration) * 0.6667) ease,
+        padding calc(var(--animation-duration) * 0.6667) ease-out,
         padding-left 0s ease,
-        margin calc(var(--anim) * 0.6667) ease,
-        border-radius calc(var(--anim) * 0.6667),
-        box-shadow calc(var(--anim) * 0.6667) ease !important;
+        margin calc(var(--animation-duration) * 0.6667) ease,
+        border-radius calc(var(--animation-duration) * 0.6667),
+        box-shadow calc(var(--animation-duration) * 0.6667) ease !important;
 
     &:hover {
         padding-top: 14px !important;
         padding-bottom: 14px !important;
         transition:
-            border calc(var(--anim) * 0.6667) ease,
-            padding calc(var(--anim) * 0.6667) cubic-bezier(0.175, 0.885, 0.32, 1.275),
+            border calc(var(--animation-duration) * 0.6667) ease,
+            padding calc(var(--animation-duration) * 0.6667) cubic-bezier(0.175, 0.885, 0.32, 1.275),
             padding-left 0s ease,
-            margin calc(var(--anim) * 0.6667) ease,
-            border-radius calc(var(--anim) * 0.6667),
-            box-shadow calc(var(--anim) * 0.6667) ease !important;
+            margin calc(var(--animation-duration) * 0.6667) ease,
+            border-radius calc(var(--animation-duration) * 0.6667),
+            box-shadow calc(var(--animation-duration) * 0.6667) ease !important;
     }
 
     &:active {
@@ -5843,7 +5855,7 @@ body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+9
     corner-shape: var(--corner-shape);
     overflow: auto;
     opacity: 1;
-    transition: all calc(var(--anim) * 0.6667) cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--animation-duration) * 0.6667) cubic-bezier(0.175, 0.885, 0.32, 2);
 }
 
 .menu-item.tappable {
@@ -6372,7 +6384,7 @@ body.is-mobile .workspace-drawer-tab-options:not(.is-collapsed)
 .notice,
 .notice-container {
     animation-name: notice-in;
-    animation-duration: calc(var(--anim) * 1.1667);
+    animation-duration: calc(var(--animation-duration) * 1.1667);
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 2);
     transform-origin: top center;
     z-index: 2000;
@@ -6400,7 +6412,7 @@ body.is-mobile .workspace-drawer-tab-options:not(.is-collapsed)
 /* OLD MODAL OPENING ANIM */
 
 /* .modal-container {
-    animation: modal-bounce-in calc(var(--anim) * 0.7333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
+    animation: modal-bounce-in calc(var(--animation-duration) * 0.7333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
     transform-origin: center;
 }
 @keyframes modal-bounce-in {
@@ -6420,7 +6432,7 @@ body.is-mobile .workspace-drawer-tab-options:not(.is-collapsed)
 .modal-container {
     transform-origin: center;
     animation-name: modal-open;
-    animation-duration: calc(var(--anim) * 0.8333);
+    animation-duration: calc(var(--animation-duration) * 0.8333);
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.7);
 }
 
@@ -6595,7 +6607,7 @@ input.prompt-input:focus {
 
 body:not(.is-mobile) .vertical-tab-nav-item.is-active {
     border-radius: var(--button-radius);
-    transition: transform calc(var(--anim) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
+    transition: transform calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
     padding: 6px 8px !important;
     text-align: center;
     color: var(--text-on-accent);
@@ -6608,14 +6620,14 @@ body:not(.is-mobile) .vertical-tab-nav-item.is-active {
 
 .vertical-tab-nav-item {
     border-radius: 20px;
-    transition: all calc(var(--anim) * 0.3333) ease-out;
+    transition: all calc(var(--animation-duration) * 0.3333) ease-out;
 }
 
 .vertical-tab-nav-item:not(.is-active):hover {
     border-radius: var(--button-radius);
     transform: translateX(6px);
     padding: 8px;
-    transition: all calc(var(--anim) * 0.3333) ease-out;
+    transition: all calc(var(--animation-duration) * 0.3333) ease-out;
     transition-delay: text-center 4s ease, background-color 2s ease !important;
     background: none !important;
 }
@@ -6629,7 +6641,7 @@ body:not(.is-mobile) .vertical-tab-nav-item.is-active {
     background-color: transparent;
     transform: translateX(30px) !important;
     padding: 10px 8px;
-    transition: all calc(var(--anim) * 0.1667);
+    transition: all calc(var(--animation-duration) * 0.1667);
     flex-direction: row;
 }
 
@@ -6641,7 +6653,7 @@ body:not(.is-mobile) .vertical-tab-nav-item.is-active {
 
 .status-bar {
     border-radius: 14px !important;
-    transition: all calc(var(--anim) * 0.6667) cubic-bezier(0.175, 0.885, 0.32, 1.5) !important;
+    transition: all calc(var(--animation-duration) * 0.6667) cubic-bezier(0.175, 0.885, 0.32, 1.5) !important;
     /* padding: 0px 30px !important; */
     overflow: auto !important;
     opacity: 1;
@@ -6655,7 +6667,7 @@ body:not(.is-mobile) .vertical-tab-nav-item.is-active {
 .status-bar:hover {
     border-radius: 10px !important;
     padding: 10px 8px !important;
-    transition: all calc(var(--anim) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
+    transition: all calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
     /* filter: brightness(1); */
     transform: translateX(0);
     border-bottom-left-radius: 0 !important;
@@ -6683,7 +6695,7 @@ body:not(.is-mobile) .vertical-tab-nav-item.is-active {
         border-radius: 5px;
         line-height: 1;
         opacity: 0.5;
-        transition: calc(var(--anim) * 0.6667);
+        transition: calc(var(--animation-duration) * 0.6667);
         background-color: transparent;
         border: none;
         padding: 8px !important;
@@ -6903,10 +6915,10 @@ body:not(.is-mobile) .workspace .mod-root .workspace-tab-header .workspace-tab-h
     margin-right: 2px;
     
     transition:
-        transform calc(var(--anim) * 0.6667) cubic-bezier(0.34, 1.56, 0.64, 1),
-        opacity calc(var(--anim) * 0.6667) ease-out,
-        width calc(var(--anim) * 0.6667) ease-out,
-        margin-left calc(var(--anim) * 0.6667) ease-out !important;
+        transform calc(var(--animation-duration) * 0.6667) cubic-bezier(0.34, 1.56, 0.64, 1),
+        opacity calc(var(--animation-duration) * 0.6667) ease-out,
+        width calc(var(--animation-duration) * 0.6667) ease-out,
+        margin-left calc(var(--animation-duration) * 0.6667) ease-out !important;
     pointer-events: none;
     border: 2px solid transparent;
 } /* for desktop */
@@ -7083,11 +7095,11 @@ body:not(.tab-none):not(.tab-float) {
     margin-right: 2px;
     margin-left: 2px;
     margin-top: -2px;
-    transition: all calc(var(--anim) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1), background-color 0s ease;
+    transition: all calc(var(--animation-duration) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1), background-color 0s ease;
   }
   .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:hover {
     background-color: var(--background-primary-alt);
-    transition: all calc(var(--anim) * 1.2) ease-out;
+    transition: all calc(var(--animation-duration) * 1.2) ease-out;
     border-radius: var(--button-radius);
     corner-shape: var(--corner-shape);
   }
@@ -7117,7 +7129,7 @@ body:not(.tab-none):not(.tab-float) {
   }
 
   .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner {
-    transition: all calc(var(--anim) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    transition: all calc(var(--animation-duration) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1);
   }
 
   /* sidebar tabs color */
@@ -7362,11 +7374,11 @@ body.pin-icon-only .workspace-tab-header:has(.mod-pinned) {
     /* jumping pinned tab tansiiton */    
     /* transition-property: border-radius, max-width, margin, padding, transform, background-color !important;
     transition-duration:
-        calc(var(--anim) * 1.3333),
-        calc(var(--anim) * 1.3333),
-        calc(var(--anim) * 1.3333),
-        calc(var(--anim) * 1.3333),
-        calc(var(--anim) * 1),
+        calc(var(--animation-duration) * 1.3333),
+        calc(var(--animation-duration) * 1.3333),
+        calc(var(--animation-duration) * 1.3333),
+        calc(var(--animation-duration) * 1.3333),
+        calc(var(--animation-duration) * 1),
         0s !important;
     transition-timing-function:
         cubic-bezier(0.34, 1.56, 0.64, 1),
@@ -7410,7 +7422,7 @@ body.pin-icon-only .workspace-tab-header:has(.mod-pinned):hover
 }
 
 .pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner {
-    transition: transform calc(var(--anim) * 1) cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+    transition: transform calc(var(--animation-duration) * 1) cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
 }
 
 .pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner .workspace-tab-header-inner-icon {
@@ -7802,7 +7814,7 @@ body.tab-none.compact-tabs {
     mask-position: center;
     mask-size: contain;
     pointer-events: none;
-    transition: transform calc(var(--anim) * 0.5) cubic-bezier(0.175, 0.885, 0.32, 1.2);
+    transition: transform calc(var(--animation-duration) * 0.5) cubic-bezier(0.175, 0.885, 0.32, 1.2);
 }
 
 .titlebar-button.mod-close:hover {
@@ -7885,7 +7897,7 @@ input.slider::-webkit-slider-thumb {
     background-color: var(--interactive-accent);
     cursor: pointer;
     width: 20px !important;
-    transition: all calc(var(--anim) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
+    transition: all calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
     background-image: url("data:image/svg+xml;utf8,\
 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>\
 <!-- Angry eyes \\/ -->\
@@ -7902,7 +7914,7 @@ input.slider::-webkit-slider-thumb:hover {
     appearance: none;
     border-radius: 20px !important;
     width: 18px !important;
-    transition: all calc(var(--anim) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2);
     background-image: url("data:image/svg+xml;utf8,\
 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>\
 <circle cx='35' cy='40' r='5' fill='black'/>\
@@ -8073,7 +8085,7 @@ ol > li::marker,
     align-items: flex-start;
     border-bottom: 2px solid
         rgb(var(--callout-color), var(--callout-border-opacity));
-    transition: border-bottom-width calc(var(--anim) * 0.3333) ease;
+    transition: border-bottom-width calc(var(--animation-duration) * 0.3333) ease;
 }
 
 .callout.is-collapsed > .callout-title {
@@ -8100,10 +8112,10 @@ ol > li::marker,
 .callout {
     transform-origin: top;
     transition:
-        transform calc(var(--anim) * 1.5) cubic-bezier(0.175, 0.885, 0.32, 2.2),
-        max-height calc(var(--anim) * 1.5) ease,
-        padding calc(var(--anim) * 1) ease,
-        opacity calc(var(--anim) * 1) ease;
+        transform calc(var(--animation-duration) * 1.5) cubic-bezier(0.175, 0.885, 0.32, 2.2),
+        max-height calc(var(--animation-duration) * 1.5) ease,
+        padding calc(var(--animation-duration) * 1) ease,
+        opacity calc(var(--animation-duration) * 1) ease;
     overflow: hidden;
     opacity: 1;
 }
@@ -8153,7 +8165,7 @@ ol > li::marker,
 }
 
 .callout-title {
-    transition: border-bottom-width calc(var(--anim) * 0.5) ease;
+    transition: border-bottom-width calc(var(--animation-duration) * 0.5) ease;
     gap: 10px;
 }
 
@@ -8214,9 +8226,9 @@ body:not(.disable-checkboxes) {
 
         cursor: pointer;
         transition:
-            all calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 2),
-            padding calc(var(--anim) * 0.3333) ease,
-            border-radius calc(var(--anim) * 0.6667) ease !important;
+            all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2),
+            padding calc(var(--animation-duration) * 0.3333) ease,
+            border-radius calc(var(--animation-duration) * 0.6667) ease !important;
     }
 
     /* hide tick */
@@ -8240,9 +8252,9 @@ body:not(.disable-checkboxes) {
         border-radius: 20px !important;
         transform: scale(0.96) !important;
         transition:
-            transform calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 2),
-            padding calc(var(--anim) * 0.3333) ease,
-            border-radius calc(var(--anim) * 0.6667) ease !important;
+            transform calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2),
+            padding calc(var(--animation-duration) * 0.3333) ease,
+            border-radius calc(var(--animation-duration) * 0.6667) ease !important;
     }
 
     /* sad */
@@ -8701,7 +8713,7 @@ body:not(.disable-checkboxes) {
   border-bottom-left-radius: 0px;
   padding: 2px 4px;
   margin: -4.8px;
-  transition: background-color calc(var(--anim) * 0.6667) ease;
+  transition: background-color calc(var(--animation-duration) * 0.6667) ease;
 }
 
 .HyperMD-list-line[data-task="D"] > label {
@@ -9253,7 +9265,7 @@ li[data-task="D"] > input:checked:hover {
 
 .markdown-embed-link {
     border-radius: 20px !important;
-    transition: all calc(var(--anim) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2);
     z-index: 1000 !important;
     top: -4px;
     transform: scale(0.8);
@@ -9261,7 +9273,7 @@ li[data-task="D"] > input:checked:hover {
 
 .markdown-embed-link:hover {
     transform: scale(0.9);
-    transition: all calc(var(--anim) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2);
 }
 
 .markdown-embed-link:active {
@@ -9279,7 +9291,7 @@ li[data-task="D"] > input:checked:hover {
 /* toggle: dim unless hovered */
 .dim-properties .metadata-container {
     opacity: 0.6;
-    transition: opacity calc(var(--anim) * 1) ease;
+    transition: opacity calc(var(--animation-duration) * 1) ease;
 }
 
 .dim-properties .metadata-container:hover {
@@ -9322,15 +9334,15 @@ li[data-task="D"] > input:checked:hover {
     background-color: var(--background-secondary-alt);
     transform-origin: top;
     transition:
-        transform calc(var(--anim) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
-        padding calc(var(--anim) * 1.3333) ease,
-        opacity calc(var(--anim) * 1.3333) ease;
+        transform calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
+        padding calc(var(--animation-duration) * 1.3333) ease,
+        opacity calc(var(--animation-duration) * 1.3333) ease;
 }
 
 .properties-1 .metadata-container.is-collapsed {
     opacity: 0.6;
     animation-name: collapse-bounce;
-    animation-duration: calc(var(--anim) * 1.5);
+    animation-duration: calc(var(--animation-duration) * 1.5);
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 2);
     animation-fill-mode: forwards;
 }
@@ -9338,7 +9350,7 @@ li[data-task="D"] > input:checked:hover {
 .properties-1 .metadata-container:not(.is-collapsed) {
     opacity: 1;
     animation-name: settle-container;
-    animation-duration: calc(var(--anim) * 1.6667);
+    animation-duration: calc(var(--animation-duration) * 1.6667);
     animation-fill-mode: forwards;
 }
 
@@ -9365,7 +9377,7 @@ li[data-task="D"] > input:checked:hover {
     margin-bottom: 1.3rem;
     padding: 1rem 1.5rem;
     transform-origin: top;
-    transition: opacity calc(var(--anim) * 0.3) ease;
+    transition: opacity calc(var(--animation-duration) * 0.3) ease;
 }
 
 .properties-2 .metadata-container.is-collapsed {
@@ -9387,7 +9399,7 @@ li[data-task="D"] > input:checked:hover {
     border-radius: 0 0 var(--touch-radius-s) var(--touch-radius-s);
     padding: 1rem 1.3rem;
     transform-origin: top;
-    transition: opacity calc(var(--anim) * 0.3) ease;
+    transition: opacity calc(var(--animation-duration) * 0.3) ease;
 }
 
 .properties-3 .metadata-container.is-collapsed {
@@ -9409,7 +9421,7 @@ li[data-task="D"] > input:checked:hover {
     padding: 1rem;
     background: var(--background-secondary-alt);
     transform-origin: top;
-    transition: opacity calc(var(--anim) * 0.3) ease;
+    transition: opacity calc(var(--animation-duration) * 0.3) ease;
 }
 
 .properties-4 .metadata-container.is-collapsed {
@@ -9429,7 +9441,7 @@ li[data-task="D"] > input:checked:hover {
     margin-bottom: 1.3rem;
     padding: 0.9rem 1.5rem;
     transform-origin: top;
-    transition: opacity calc(var(--anim) * 0.3) ease;
+    transition: opacity calc(var(--animation-duration) * 0.3) ease;
 }
 
 .properties-5 .metadata-container.is-collapsed {
@@ -9485,7 +9497,7 @@ li[data-task="D"] > input:checked:hover {
 /* ===== COLLAPSE ARROW — SHOW ON HOVER ONLY ===== */
 .metadata-container .metadata-properties-heading .collapse-indicator.collapse-icon {
     opacity: 0;
-    transition: opacity calc(var(--anim) * 0.6667) ease;
+    transition: opacity calc(var(--animation-duration) * 0.6667) ease;
 }
 
 .metadata-container.is-collapsed .metadata-properties-heading:hover .collapse-indicator.collapse-icon,
@@ -9516,8 +9528,8 @@ li[data-task="D"] > input:checked:hover {
 .properties-5 .metadata-container .metadata-content {
     transform-origin: top;
     transition:
-        transform calc(var(--anim) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
-        opacity calc(var(--anim) * 1.3333) ease;
+        transform calc(var(--animation-duration) * 1.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
+        opacity calc(var(--animation-duration) * 1.3333) ease;
 }
 
 .metadata-container.is-collapsed .metadata-content {
@@ -9527,7 +9539,7 @@ li[data-task="D"] > input:checked:hover {
 
 .metadata-container:not(.is-collapsed) .metadata-content {
     animation-name: settle-bounce;
-    animation-duration: calc(var(--anim) * 1.3333);
+    animation-duration: calc(var(--animation-duration) * 1.3333);
     animation-fill-mode: forwards;
 }
 
@@ -9759,7 +9771,7 @@ body {
 .cm-hashtag.cm-hashtag-begin, .cm-hashtag.cm-hashtag-end {
     background-color: var(--tag-background);
 
-    transition: background-color 0.15s ease, transform calc(var(--anim) * 0.6)  cubic-bezier(0.17, 0.86, 0.17, 1.2);
+    transition: background-color 0.15s ease, transform calc(var(--animation-duration) * 0.6)  cubic-bezier(0.17, 0.86, 0.17, 1.2);
 }
 
 .cm-hashtag.cm-hashtag-begin:hover, .cm-hashtag.cm-hashtag-end:hover {

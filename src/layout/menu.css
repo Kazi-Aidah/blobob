@@ -6,7 +6,7 @@
     corner-shape: var(--corner-shape);
     overflow: auto;
     opacity: 1;
-    transition: all calc(var(--anim) * 0.6667) cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--animation-duration) * 0.6667) cubic-bezier(0.175, 0.885, 0.32, 2);
 }
 
 .menu-item.tappable {

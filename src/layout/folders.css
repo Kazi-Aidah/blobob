@@ -120,23 +120,23 @@ body.bouncy-folders.circular-tiptip .nav-folder:not(.is-collapsed):hover {
 /* toggle: Bouncy Folders */
 body.bouncy-folders .nav-folder-title {
     transition:
-        border calc(var(--anim) * 0.6667) ease,
-        padding calc(var(--anim) * 0.6667) ease-out,
+        border calc(var(--animation-duration) * 0.6667) ease,
+        padding calc(var(--animation-duration) * 0.6667) ease-out,
         padding-left 0s ease,
-        margin calc(var(--anim) * 0.6667) ease,
-        border-radius calc(var(--anim) * 0.6667),
-        box-shadow calc(var(--anim) * 0.6667) ease !important;
+        margin calc(var(--animation-duration) * 0.6667) ease,
+        border-radius calc(var(--animation-duration) * 0.6667),
+        box-shadow calc(var(--animation-duration) * 0.6667) ease !important;
 
     &:hover {
         padding-top: 14px !important;
         padding-bottom: 14px !important;
         transition:
-            border calc(var(--anim) * 0.6667) ease,
-            padding calc(var(--anim) * 0.6667) cubic-bezier(0.175, 0.885, 0.32, 1.275),
+            border calc(var(--animation-duration) * 0.6667) ease,
+            padding calc(var(--animation-duration) * 0.6667) cubic-bezier(0.175, 0.885, 0.32, 1.275),
             padding-left 0s ease,
-            margin calc(var(--anim) * 0.6667) ease,
-            border-radius calc(var(--anim) * 0.6667),
-            box-shadow calc(var(--anim) * 0.6667) ease !important;
+            margin calc(var(--animation-duration) * 0.6667) ease,
+            border-radius calc(var(--animation-duration) * 0.6667),
+            box-shadow calc(var(--animation-duration) * 0.6667) ease !important;
     }
 
     &:active {

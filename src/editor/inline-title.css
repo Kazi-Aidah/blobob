@@ -7,7 +7,7 @@
     text-align: center;
     display: inline-block;
     padding: 20px;
-    transition: all calc(var(--anim) * 0.6667) ease;
+    transition: all calc(var(--animation-duration) * 0.6667) ease;
     width: 100%;
     justify-content: space-between;
     margin-bottom: 15px;
@@ -18,7 +18,7 @@
     text-align: left;
     display: inline-block;
     padding: 20px;
-    transition: all calc(var(--anim) * 0.6667) ease;
+    transition: all calc(var(--animation-duration) * 0.6667) ease;
     width: 100%;
     justify-content: space-between;
     margin-bottom: 15px;
@@ -29,7 +29,7 @@
     text-align: right;
     display: inline-block;
     padding: 20px;
-    transition: all calc(var(--anim) * 0.6667) ease;
+    transition: all calc(var(--animation-duration) * 0.6667) ease;
     width: 100%;
     justify-content: space-between;
     margin-bottom: 15px;

@@ -24,7 +24,7 @@
     align-items: flex-start;
     border-bottom: 2px solid
         rgb(var(--callout-color), var(--callout-border-opacity));
-    transition: border-bottom-width calc(var(--anim) * 0.3333) ease;
+    transition: border-bottom-width calc(var(--animation-duration) * 0.3333) ease;
 }
 
 .callout.is-collapsed > .callout-title {
@@ -51,10 +51,10 @@
 .callout {
     transform-origin: top;
     transition:
-        transform calc(var(--anim) * 1.5) cubic-bezier(0.175, 0.885, 0.32, 2.2),
-        max-height calc(var(--anim) * 1.5) ease,
-        padding calc(var(--anim) * 1) ease,
-        opacity calc(var(--anim) * 1) ease;
+        transform calc(var(--animation-duration) * 1.5) cubic-bezier(0.175, 0.885, 0.32, 2.2),
+        max-height calc(var(--animation-duration) * 1.5) ease,
+        padding calc(var(--animation-duration) * 1) ease,
+        opacity calc(var(--animation-duration) * 1) ease;
     overflow: hidden;
     opacity: 1;
 }
@@ -104,7 +104,7 @@
 }
 
 .callout-title {
-    transition: border-bottom-width calc(var(--anim) * 0.5) ease;
+    transition: border-bottom-width calc(var(--animation-duration) * 0.5) ease;
     gap: 10px;
 }
 

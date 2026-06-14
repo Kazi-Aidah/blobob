@@ -38,7 +38,7 @@
     mask-position: center;
     mask-size: contain;
     pointer-events: none;
-    transition: transform calc(var(--anim) * 0.5) cubic-bezier(0.175, 0.885, 0.32, 1.2);
+    transition: transform calc(var(--animation-duration) * 0.5) cubic-bezier(0.175, 0.885, 0.32, 1.2);
 }
 
 .titlebar-button.mod-close:hover {
@@ -121,7 +121,7 @@ input.slider::-webkit-slider-thumb {
     background-color: var(--interactive-accent);
     cursor: pointer;
     width: 20px !important;
-    transition: all calc(var(--anim) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
+    transition: all calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
     background-image: url("data:image/svg+xml;utf8,\
 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>\
 <!-- Angry eyes \\/ -->\
@@ -138,7 +138,7 @@ input.slider::-webkit-slider-thumb:hover {
     appearance: none;
     border-radius: 20px !important;
     width: 18px !important;
-    transition: all calc(var(--anim) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2);
     background-image: url("data:image/svg+xml;utf8,\
 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>\
 <circle cx='35' cy='40' r='5' fill='black'/>\

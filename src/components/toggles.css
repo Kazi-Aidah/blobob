@@ -5,27 +5,27 @@
 /* unenabled body */
 .checkbox-container {
     border-radius: 10px;
-    transition: all calc(var(--anim) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2);
 }
 
 /* unenabled thumb */
 .checkbox-container:not(.is-enabled)::after {
     border-radius: 10px;
-    transition: all calc(var(--anim) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2);
+    transition: all calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2);
 }
 
 /* enabled body */
 .checkbox-container.is-enabled {
     border-radius: 6px;
-    transition: all calc(var(--anim) * 0.3333) ease-out;
+    transition: all calc(var(--animation-duration) * 0.3333) ease-out;
 }
 
 /* enabled thumb */
 .checkbox-container.is-enabled::after {
     border-radius: 6px;
     transition:
-        transform calc(var(--anim) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
-        border-radius calc(var(--anim) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
+        transform calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
+        border-radius calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
 }
 
 .checkbox-container::after {
@@ -39,8 +39,8 @@
     background-position: center;
     background-size: 70%;
     transition:
-        background-size calc(var(--anim) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
-        transform calc(var(--anim) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
+        background-size calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
+        transform calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
 }
 
 /* accessibility adjustment */
@@ -51,8 +51,8 @@
 .theme-light .checkbox-container.is-enabled:hover::after {
     border: 1px solid var(--background-modifier-border) !important;
     transition:
-        transform calc(var(--anim) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
-        border calc(var(--anim) * 0.3333) ease;
+        transform calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
+        border calc(var(--animation-duration) * 0.3333) ease;
 }
 
 /* here comes in the faces */
@@ -78,13 +78,13 @@
     </svg>");
     transform: scale(1.5) translateX(1em);
     transition:
-        transform calc(var(--anim) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
-        border calc(var(--anim) * 0.3333) ease;
+        transform calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2),
+        border calc(var(--animation-duration) * 0.3333) ease;
 }
 
 input[type="checkbox"] {
     transform: scale(1);
-    transition: transform calc(var(--anim) * 0.3333) ease !important;
+    transition: transform calc(var(--animation-duration) * 0.3333) ease !important;
 }
 
 input[type="checkbox"]:checked:hover {

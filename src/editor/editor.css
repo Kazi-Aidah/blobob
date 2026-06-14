@@ -128,7 +128,7 @@ mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox=
 .float-inactive
     .cm-line:not(.cm-active, .HyperMD-codeblock, .HyperMD-codeblock-bg, .HyperMD-codeblock-end, .HyperMD-codeblock-end-bg) {
     animation-name: float-up-down;
-    animation-duration: calc(var(--anim) * 10);
+    animation-duration: calc(var(--animation-duration) * 10);
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
 }

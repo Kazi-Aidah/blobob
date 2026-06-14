@@ -1303,14 +1303,21 @@ settings:
     type: class-toggle
     default: false
 
-  - id: animation-duration
+  - id: animation-speed
     title: Animation speed
-    description: Drag left for slower, right for faster animations. Default is the middle.
-    type: variable-number-slider
-    default: 600
-    min: 50
-    max: 800
-    step: 10
+    type: class-select
+    default: anim-normal
+    options:
+      - label: Instant (off)
+        value: anim-instant
+      - label: Fast
+        value: anim-fast
+      - label: Normal
+        value: anim-normal
+      - label: Slow
+        value: anim-slow
+      - label: Slower
+        value: anim-slower
 
   ########################################
   # Mobile

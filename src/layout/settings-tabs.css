@@ -14,7 +14,7 @@
 
 body:not(.is-mobile) .vertical-tab-nav-item.is-active {
     border-radius: var(--button-radius);
-    transition: transform calc(var(--anim) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
+    transition: transform calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
     padding: 6px 8px !important;
     text-align: center;
     color: var(--text-on-accent);
@@ -27,14 +27,14 @@ body:not(.is-mobile) .vertical-tab-nav-item.is-active {
 
 .vertical-tab-nav-item {
     border-radius: 20px;
-    transition: all calc(var(--anim) * 0.3333) ease-out;
+    transition: all calc(var(--animation-duration) * 0.3333) ease-out;
 }
 
 .vertical-tab-nav-item:not(.is-active):hover {
     border-radius: var(--button-radius);
     transform: translateX(6px);
     padding: 8px;
-    transition: all calc(var(--anim) * 0.3333) ease-out;
+    transition: all calc(var(--animation-duration) * 0.3333) ease-out;
     transition-delay: text-center 4s ease, background-color 2s ease !important;
     background: none !important;
 }
@@ -48,6 +48,6 @@ body:not(.is-mobile) .vertical-tab-nav-item.is-active {
     background-color: transparent;
     transform: translateX(30px) !important;
     padding: 10px 8px;
-    transition: all calc(var(--anim) * 0.1667);
+    transition: all calc(var(--animation-duration) * 0.1667);
     flex-direction: row;
 }
