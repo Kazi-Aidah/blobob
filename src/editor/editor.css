@@ -108,10 +108,10 @@ body.active-line-highlight-imperfect
   content: "";
   background: var(--active-line-highlight-color);
   z-index: -2;
-  center / 100% 100% no-repeat;
+  mask: center / 100% 100% no-repeat;
 
 mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M0 5.6 C3 5.4 6 5.9 9 5.5 S15 6.0 18 5.7 S23 5.3 27 5.7 S33 6.0 37 5.5 S42 5.9 46 5.7 S51 5.4 55 5.8 S60 6.0 64 5.5 S69 5.9 73 5.7 S78 5.3 82 5.8 S87 5.9 91 5.5 S96 5.8 100 5.6 C99.3 8.0 100.8 11.5 99.5 14.4 C97 14.6 94 14.1 90 14.5 S84 14.0 80 14.4 S74 14.7 70 14.3 S64 14.1 60 14.5 S54 14.0 50 14.4 S44 14.7 40 14.2 S34 14.1 30 14.5 S24 14.0 20 14.4 S14 14.6 10 14.2 S5 14.1 0 14.4 C0.8 11.0 -0.6 8.5 0 5.6 Z'/%3E%3C/svg%3E")
-  center / 100% 100% no-repeat;
+  mask: center / 100% 100% no-repeat;
 }
 
 /* 
@@ -126,10 +126,10 @@ body.active-line-highlight-imperfect
   background: var(--active-line-highlight-color) !important;
 
 mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M0 5.6 C3 5.4 6 5.9 9 5.5 S15 6.0 18 5.7 S23 5.3 27 5.7 S33 6.0 37 5.5 S42 5.9 46 5.7 S51 5.4 55 5.8 S60 6.0 64 5.5 S69 5.9 73 5.7 S78 5.3 82 5.8 S87 5.9 91 5.5 S96 5.8 100 5.6 C99.3 8.0 100.8 11.5 99.5 14.4 C97 14.6 94 14.1 90 14.5 S84 14.0 80 14.4 S74 14.7 70 14.3 S64 14.1 60 14.5 S54 14.0 50 14.4 S44 14.7 40 14.2 S34 14.1 30 14.5 S24 14.0 20 14.4 S14 14.6 10 14.2 S5 14.1 0 14.4 C0.8 11.0 -0.6 8.5 0 5.6 Z'/%3E%3C/svg%3E")
-  center / 100% 100% no-repeat;
+  mask: center / 100% 100% no-repeat;
 
 -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M0 5.6 C3 5.4 6 5.9 9 5.5 S15 6.0 18 5.7 S23 5.3 27 5.7 S33 6.0 37 5.5 S42 5.9 46 5.7 S51 5.4 55 5.8 S60 6.0 64 5.5 S69 5.9 73 5.7 S78 5.3 82 5.8 S87 5.9 91 5.5 S96 5.8 100 5.6 C99.3 8.0 100.8 11.5 99.5 14.4 C97 14.6 94 14.1 90 14.5 S84 14.0 80 14.4 S74 14.7 70 14.3 S64 14.1 60 14.5 S54 14.0 50 14.4 S44 14.7 40 14.2 S34 14.1 30 14.5 S24 14.0 20 14.4 S14 14.6 10 14.2 S5 14.1 0 14.4 C0.8 11.0 -0.6 8.5 0 5.6 Z'/%3E%3C/svg%3E")
-  center / 100% 100% no-repeat;
+  mask: center / 100% 100% no-repeat;
 } */
 
 
