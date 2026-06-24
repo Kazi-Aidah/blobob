@@ -1,191 +1,215 @@
-<!-- <img src="assets/bob%20squircle.png" width="100" /> -->
-
 # blobob theme
 An animated theme for Obsidian!
-![](assets/screenshot-HQ.png)
-![](assets/bubble-tabs.gif)
 
-As a self-taught animator with 7 years of experience, I love seeing motion in interactions. So I created this theme with 60+ colour options and, of course, ANIMATIONS! ( ≧ᗜ≦ )
-
-It supports [Style Settings](https://github.com/mgmeyers/obsidian-style-settings#obsidian-style-settings-plugin) for lots of customization. Blobob Theme is currently in development, so if you find issues or want features or more styles, please create an issue [here](https://github.com/Kazi-Aidah/blobob/issues).
+![](assets/0.2.0/blobob-banner.png)
 
 > I'd recommend trying this theme out without reading the rest of the README for surprises.
 
----
-# Colour Options (68)
-**Note:** Heading is green due to my current Obsidian accent color. Some themes override it with their own.
+As a self-taught animator of 7 years, I love seeing motion in interactions. So I created this theme with 70+ colour options and, of course, ANIMATIONS! ( ≧ᗜ≦ )
 
-> 6 Button Styles + 38 Dark Theme Colors + 30+ Light Theme Colors!!
-
-### Dark Theme Colors
-
-| **Amoled**<br>![](assets/themages/Amoled.png) | **Darker Gray**<br>![](assets/themages/Darker%20Gray.png) |
-|-----------------------------------------------|------------------------------------------------------------|
-| **Neutral Gray**<br>![](assets/themages/Neutral%20Gray.png) | **Slate Smoke**<br>![](assets/themages/Slate%20Smoke.png) |
-| **Arctic Ice**<br>![](assets/themages/Arctic%20Ice.png) | **Noble Blue**<br>![](assets/themages/Noble%20Blue.png) |
-| **Cold Memory**<br>![](assets/themages/Cold%20Memory.png) | **Green Road**<br>![](assets/themages/Green%20Road.png) |
-| **Dark Night**<br>![](assets/themages/Dark%20Night.png) | **Deep Blue**<br>![](assets/themages/Deep%20Blue.png) |
-| **Deep Purple**<br>![](assets/themages/Deep%20Purple.png) | **Violent Dream**<br>![](assets/themages/Violent%20Dream.png) |
-| **Magic Purple**<br>![](assets/themages/Magic%20Purple.png) | **Lavendar**<br>![](assets/themages/Lavendar.png) |
-| **Emerald**<br>![](assets/themages/Emerald.png) | **Muted Green**<br>![](assets/themages/Muted%20Green.png) |
-| **More Olives**<br>![](assets/themages/More%20Olives.png) | **Deep Green**<br>![](assets/themages/Deep%20Green.png) |
-| **Rose Gold**<br>![](assets/themages/Rose%20Gold.png) | **Crimson Twilight**<br>![](assets/themages/Crimson%20Twilight.png) |
-| **Wine**<br>![](assets/themages/Wine.png) | **Deep Hotpink**<br>![](assets/themages/Deep%20Hotpink.png) |
-| **Deep Magenta**<br>![](assets/themages/Deep%20Magenta.png) | **Golden Earth**<br>![](assets/themages/Golden%20Earth.png) |
-| **Golden Hour**<br>![](assets/themages/Golden%20Hour.png) | **Caramel**<br>![](assets/themages/Caramel.png) |
-| **Chocolate**<br>![](assets/themages/Chocolate.png) | **Dark Chocolate**<br>![](assets/themages/Dark%20Chocolate.png) |
-| **Comfort Chocolate**<br>![](assets/themages/Comfort%20Chocolate.png) | **Tasty Chocolate**<br>![](assets/themages/Tasty%20Chocolate.png) |
-| **Tasty Chocolate 2**<br>![](assets/themages/Tasty%20Chocolate%202.png) | **Leather**<br>![](assets/themages/Leather.png) |
-| **Mafia Red**<br>![](assets/themages/Mafia%20Red.png) | **Deep Red**<br>![](assets/themages/Deep%20Red.png) |
-
-### Light Theme Colors
-
-| **Cloud White**<br>![](assets/themages/Cloud%20White.png) | **Paper White**<br>![](assets/themages/Paper%20White.png) |
-|------------------------------------------------------------|------------------------------------------------------------|
-| **Light Gray**<br>![](assets/themages/Light%20Gray.png) | **Sand**<br>![](assets/themages/Sand.png) |
-| **Peach**<br>![](assets/themages/Peach.png) | **Yellow**<br>![](assets/themages/Yellow.png) |
-| **Green**<br>![](assets/themages/Green.png) | **Cyan**<br>![](assets/themages/Cyan.png) |
-| **Blue**<br>![](assets/themages/Blue.png) | **Azure**<br>![](assets/themages/Azure.png) |
-| **Purple**<br>![](assets/themages/Purple.png) | **Pink**<br>![](assets/themages/Pink.png) |
-| **Herb**<br>![](assets/themages/Herb.png) | **Olive**<br>![](assets/themages/Olive.png) |
-| **Jade**<br>![](assets/themages/Jade.png) | **Rose**<br>![](assets/themages/Rose.png) |
-| **Yellow Teeth**<br>![](assets/themages/Yellow%20Teeth.png) | **Toothpaste**<br>![](assets/themages/Toothpaste.png) |
-| **Blood**<br>![](assets/themages/Blood.png) | **Corporate**<br>![](assets/themages/Corporate.png) |
-| **Disgust**<br>![](assets/themages/Disgust.png) | **Payesh**<br>![](assets/themages/Payesh.png) |
-| **Chicken**<br>![](assets/themages/Chicken.png) | **Cream**<br>![](assets/themages/Cream.png) |
-| **Cream Blue**<br>![](assets/themages/Cream%20Blue.png) | **50% Gray**<br>![](assets/themages/50%20Gray.png) |
-
-**My favourites are:**
-
-*Favourite Dark Themes:* Dark Night, Golden Earth, Crimson Twilight, Emerald, Mafia Red, Cold Memory
-
-*Favourite Light Themes:* Payesh, Chicken, Corporate, Yellow Teeth
+It supports [Style Settings](https://github.com/mgmeyers/obsidian-style-settings#obsidian-style-settings-plugin) for lots of customization. Blobob Theme is currently in development, so if you find issues or want features or more styles, please create an issue [here](https://github.com/Kazi-Aidah/blobob/issues).
 
 ---
 
-## Settings Tabs
-<!-- ![](assets/settings-vertical-tabs.gif) -->
-![](assets/settings-vertical-tabs.gif)
+## Table of Contents
+- [Colour Options (73)](#colour-options-73)
+- [Tab Bar](#tab-bar)
+  - [Animated Tabs](#animated-tabs)
+  - [Compact Tabs & Focus Mode](#compact-tabs--focus-mode)
+- [Editor](#editor)
+  - [Active Line Styles](#active-line-styles)
+  - [Dimmed & Floating Inactive Lines](#dimmed--floating-inactive-lines)
+- [File Explorer](#file-explorer)
+  - [Bouncy Folders](#bouncy-folders)
+  - [Vertical Folder Style](#vertical-folder-style)
+  - [Hide Nav Buttons](#hide-nav-buttons)
+- [Checkboxes](#checkboxes)
+- [Properties](#properties)
+- [UI Enhancements](#ui-enhancements)
+  - [Settings Tabs](#settings-tabs)
+  - [Setting Items](#setting-items)
+  - [Right-click Menu](#right-click-menu)
+  - [Toggle Animation](#toggle-animation)
+- [Mobile](#mobile)
+- [About the Name](#about-the-name)
 
-It is animated using ease-in-ease-out and anticipation animation principles.
+---
 
-## Setting Items
-![](assets/setting-items.gif)
+## Colour Options (73)
+**Note:** Heading colour is peach/pink due to my current Obsidian accent colour. Some themes override it with their own.
 
-## Right-click Menu
-I absolutely love how this looks.
-![](assets/right-click-menu.gif)
+> 6 Button Styles + 43 Dark Theme Colours + 30 Light Theme Colours!!
 
-## Toggle Animation
-![](assets/toggle.gif)
+### Dark Theme Colours
+
+| **Amoled**<br>![](assets/themages/amoled.png) | **Darker Gray**<br>![](assets/themages/darker-gray.png) |
+|-----------------------------------------------|---------------------------------------------------------|
+| **Neutral Gray**<br>![](assets/themages/neutral-gray.png) | **Slate Smoke**<br>![](assets/themages/slate-smoke.png) |
+| **Arctic Ice**<br>![](assets/themages/arctic-ice.png) | **Noble Blue**<br>![](assets/themages/noble-blue.png) |
+| **Cold Memory**<br>![](assets/themages/cold-memory.png) | **Dark Night**<br>![](assets/themages/dark-night.png) |
+| **Deep Blue**<br>![](assets/themages/deep-blue.png) | **Deep Purple**<br>![](assets/themages/deep-purple.png) |
+| **Violet Dream**<br>![](assets/themages/violet-dream.png) | **Magic Purple**<br>![](assets/themages/magic-purple.png) |
+| **Nocturne**<br>![](assets/themages/nocturne.png) | **Lavendar**<br>![](assets/themages/lavendar.png) |
+| **Emerald**<br>![](assets/themages/emerald.png) | **Muted Green**<br>![](assets/themages/muted-green.png) |
+| **More Olives**<br>![](assets/themages/more-olives.png) | **Greenwood**<br>![](assets/themages/greenwood.png) |
+| **Viridian Regalia**<br>![](assets/themages/viridian-regalia.png) | **Deep Green**<br>![](assets/themages/deep-green.png) |
+| **Lime**<br>![](assets/themages/lime.png) | **Rose Gold**<br>![](assets/themages/rose-gold.png) |
+| **Crimson Twilight**<br>![](assets/themages/crimson-twilight.png) | **Wine**<br>![](assets/themages/wine.png) |
+| **Deep Hotpink**<br>![](assets/themages/deep-hotpink.png) | **Deep Magenta**<br>![](assets/themages/deep-magenta.png) |
+| **Urban**<br>![](assets/themages/urban.png) | **Citrine**<br>![](assets/themages/citrine.png) |
+| **Golden Earth**<br>![](assets/themages/golden-earth.png) | **Golden Hour**<br>![](assets/themages/golden-hour.png) |
+| **Caramel**<br>![](assets/themages/caramel.png) | **Chocolate**<br>![](assets/themages/chocolate.png) |
+| **Dark Chocolate**<br>![](assets/themages/dark-chocolate.png) | **Comfort Chocolate**<br>![](assets/themages/comfort-chocolate.png) |
+| **Tasty Chocolate**<br>![](assets/themages/tasty-chocolate.png) | **Tasty Chocolate 2**<br>![](assets/themages/tasty-chocolate-2.png) |
+| **Leather**<br>![](assets/themages/leather.png) | **Velvet Maroon**<br>![](assets/themages/velvet-maroon.png) |
+| **Deep Red**<br>![](assets/themages/deep-red.png) | **Mafia Red**<br>![](assets/themages/mafia-red.png) |
+| **Red Forest**<br>![](assets/themages/red-forest.png) | **Green Road**<br>![](assets/themages/green-road.png) |
+
+### Light Theme Colours
+
+| **Cloud White**<br>![](assets/themages/cloud-white.png) | **Paper White**<br>![](assets/themages/paper-white.png) |
+|---------------------------------------------------------|---------------------------------------------------------|
+| **Light Gray**<br>![](assets/themages/light-gray.png) | **Sand**<br>![](assets/themages/sand.png) |
+| **Peach**<br>![](assets/themages/peach.png) | **Yellow**<br>![](assets/themages/yellow.png) |
+| **Green**<br>![](assets/themages/green.png) | **Cyan**<br>![](assets/themages/cyan.png) |
+| **Blue**<br>![](assets/themages/blue.png) | **Azure**<br>![](assets/themages/azure.png) |
+| **Purple**<br>![](assets/themages/purple.png) | **Pink**<br>![](assets/themages/pink.png) |
+| **Brinjal**<br>![](assets/themages/brinjal.png) | **Herb**<br>![](assets/themages/herb.png) |
+| **Olive**<br>![](assets/themages/olive.png) | **Jade**<br>![](assets/themages/jade.png) |
+| **Rose**<br>![](assets/themages/rose.png) | **Joy**<br>![](assets/themages/joy.png) |
+| **Choco Milk**<br>![](assets/themages/choco-milk.png) | **Yellow Teeth**<br>![](assets/themages/yellow-teeth.png) |
+| **Toothpaste**<br>![](assets/themages/toothpaste.png) | **Blood**<br>![](assets/themages/blood.png) |
+| **Corporate**<br>![](assets/themages/corporate.png) | **Disgust**<br>![](assets/themages/disgust.png) |
+| **Payesh**<br>![](assets/themages/payesh.png) | **Chicken**<br>![](assets/themages/chicken.png) |
+| **Cream**<br>![](assets/themages/cream.png) | **Cream Blue**<br>![](assets/themages/cream-blue.png) |
+| **50% Gray**<br>![](assets/themages/50-gray.png) | **Delta**<br>![](assets/themages/delta.png) |
+
+### My Favourites
+**Dark Themes:** Dark Night, Golden Earth, Crimson Twilight, Cold Memory, & Mafia Red
+
+**Light Themes:** Payesh, Chicken, Corporate, Yellow Teeth
+
+---
+
+## Tab Bar
+
+### Animated Tabs
+**Joined**
+
+![](assets/0.2.0/hexagon-tab-joined.gif)
+![](assets/0.2.0/clicking-tab-joined.gif)
+
+**Floating**
+
+![](assets/0.2.0/hexagon-tab-float.gif)
+![](assets/0.2.0/clicking-tab-float.gif)
+![](assets/bubble-tabs.gif)
+
+**Underlined**
+
+![](assets/0.2.0/tab-underlined.gif)
+![](assets/0.2.0/clicking-tab-underlined.gif)
+
+**Contained**
+
+![](assets/0.2.0/squircle-tab-contained.gif)
+
+### Compact Tabs & Focus Mode
+Don't like how much space the tab bar takes up? Enable Compact Tabs!
+
+![](assets/0.2.0/compact-tabs.gif)
+
+Or enable Focus Mode!
+
+![](assets/0.2.0/focus-mode.gif)
+
+---
+
+## Editor
+
+### Active Line Styles
+You can blur, center & make the active line bigger!
+
+![](assets/0.2.0/active-line-stuff.png)
+
+Check out several active line styles:
+
+![](assets/0.2.0/bordered-active-line.png)
+
+### Dimmed & Floating Inactive Lines
+
+![](assets/darken-inactive-lines.gif)
+
+---
+
+## File Explorer
+
+### Bouncy Folders
+Lots of folder styles with bouncy animations!
+
+![](assets/Bouncy-Folders.gif)
+
+### Vertical Folder Style
+
+![](assets/Verti-Folders.gif)
+
+### Hide Nav Buttons
+
+![](assets/text-hide-nav.gif)
+
+---
 
 ## Checkboxes
+
 ![](assets/CheckboxesMay26.png)
 ![](assets/CheckboxesMay26.gif)
 
-## Hide Nav Buttons
-![](assets/text-hide-nav.gif)
+---
 
-## Vertical Folder Style
-![](assets/Verti-Folders.gif)
+## Properties
+The Properties styling does not affect the "Show File Properties" brought via Command Palette.
 
-## Bouncy Folders (+ Lots of Folder Styles!)
-![](assets/Bouncy-Folders.gif)
-
-
-## Animated Tabs (3 Styles)
-![](assets/tabs.gif)
-
-I personally have `Alt + <` and `Alt + >` for easy tab navigation.
-
-## Tab Bar
-| ![](assets/tab-bar-left.png) | ![](assets/tab-bar-right.png) |
-| ---------------------------- | ----------------------------- |
-
-**Left:** Fixed stack tabs button along with the left sidebar button (which moves into the sidebar when active).
-
-**Right:** Fixed + Add Tab button & right sidebar button, custom mix-max-close buttons.
-
-Design Idea: Essential buttons should stay fixed.
-
-### Pinned Tabs
-<!-- ![](assets/pinned-tabs.gif) -->
-Default pinned tabs animation
-
-![](assets/default-pinned-tabs.gif)
-
-
-Bubble pinned tabs animation
-
-![](assets/bubble-pinned-tabs.gif)
-
-<!-- Design idea: Sharp when active, darkened and standing down when inactive (like bodyguards). -->
-
-## Callout Style
-![](assets/callout-style.png)
-
-# Style Settings
-You can use the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings#obsidian-style-settings-plugin) plugin to activate these extra styles!
-
-<!-- ## Multiple Theme Colors
-![](assets/theme-colors-dropdown.png)
-
-6 Button Styles + 35 Dark Theme Colors 👀 + 30+ Light Theme Colors!! -->
-
-## Active Line Highlighting
-![](assets/active-line-highlight-w-face.png)
-
-## Active Line Dimming & Floating
-![](assets/darken-inactive-lines.gif)
-
-## Active Line Prefix!
-![](assets/active-line-prefix.gif)
-
-## Properties Styles
-The Properties Styling does not affect the "Show File Properties" brought via Command Palette.
-
-Style 1:
-![](assets/properties-style-1.png)
-
-Style 2:
-![](assets/properties-style-2.png)
-
-Style 3:
-![](assets/properties-style-3.png)
-
-Style 4:
-![](assets/properties-style-4.png)
-
-### Cool Properties Features
-1. Dim properties unless hovered
 ![](assets/dim-properties.gif)
 
-2. Hide arrows in the properties heading
-3. Center the properties heading
-4. cssclasses & tag styles
-5. Metadata key colors
+---
 
-## Folder Styles
-| ![](assets/folders-accent.png) | ![](assets/folders-butonica.png) |
-| ------------------------------ | -------------------------------- |
+## UI Enhancements
 
-<!-- ## Hide Calendar Tab Icon -->
+### Settings Tabs
 
-## Custom Bullets
-Define Custom Bullets!
+![](assets/0.2.0/vertical-settings-tab.gif)
 
-![](assets/custom-list-bullets.png)
+### Setting Items
 
-## Hiding
-1. Focus Mode – Hides the tab bar, min-max-close buttons & status bar
-2. Hide Status Bar - Hides the Status Bar
-3. Hide Breadcrumbs - Hides the parent paths in view-header
+![](assets/setting-items.gif)
 
-## Why is the theme named ***blobob***?
+### Right-click Menu
+I absolutely love how this looks.
 
-I drew **Blob** a long time ago as a simple character concept.
+![](assets/right-click-menu.gif)
 
-At one point, I planned to turn it into a small animated task-reminder app using Rive, but the idea never went further. The character stayed with me, though.
+### Toggle Animation
+
+![](assets/toggle.gif)
+
+---
+
+## Mobile
+You can hide the buttons you don't need through Style Settings.
+
+![](assets/0.2.0/mobile-view.png)
+
+### Mobile Views
+
+| Gallery View | List View |
+|--------------|-----------|
+| ![](assets/0.2.0/gallery-1.jpg) | ![](assets/0.2.0/gallery-list.png) |
+
+---
+
+## About the Name
+
+I loved the blob I drew.
 
 ![](assets/original-blob.png)
 
@@ -193,8 +217,5 @@ In the theme, the main face you see is the yellow character I named **Bob**:
 
 ![](assets/blob-bob.png)
 
-**Blob** is the original concept, **Bob** is the face used in the theme. 
+**Blob** is the original concept, **Bob** is the face used in the theme.
 Together, they became **blobob**.
-
-
-
