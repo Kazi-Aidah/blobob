@@ -72,7 +72,7 @@ It supports [Style Settings](https://github.com/mgmeyers/obsidian-style-settings
 | **Light Gray**<br>![](assets/themages/light-gray.png) | **Sand**<br>![](assets/themages/Sand.png) |
 | **Peach**<br>![](assets/themages/Peach.png) | **Yellow**<br>![](assets/themages/Yellow.png) |
 | **Green**<br>![](assets/themages/Green.png) | **Cyan**<br>![](assets/themages/Cyan.png) |
-| **Blue**<br>![](assets/themages/blue.png) | **Azure**<br>![](assets/themages/Azure.png) |
+| **Blue**<br>![](assets/themages/Blue.png) | **Azure**<br>![](assets/themages/Azure.png) |
 | **Purple**<br>![](assets/themages/Purple.png) | **Pink**<br>![](assets/themages/Pink.png) |
 | **Brinjal**<br>![](assets/themages/brinjal.png) | **Herb**<br>![](assets/themages/Herb.png) |
 | **Olive**<br>![](assets/themages/Olive.png) | **Jade**<br>![](assets/themages/Jade.png) |
@@ -81,7 +81,7 @@ It supports [Style Settings](https://github.com/mgmeyers/obsidian-style-settings
 | **Toothpaste**<br>![](assets/themages/Toothpaste.png) | **Blood**<br>![](assets/themages/Blood.png) |
 | **Corporate**<br>![](assets/themages/Corporate.png) | **Disgust**<br>![](assets/themages/Disgust.png) |
 | **Payesh**<br>![](assets/themages/Payesh.png) | **Chicken**<br>![](assets/themages/Chicken.png) |
-| **Cream**<br>![](assets/themages/Cream.png) | **Cream Blue**<br>![](assets/themages/Cream-blue.png) |
+| **Cream**<br>![](assets/themages/Cream.png) | **Cream Blue**<br>![](assets/themages/cream-blue.png) |
 | **50% Gray**<br>![](assets/themages/50-gray.png) | **Delta**<br>![](assets/themages/delta.png) |
 
 ### My Favourites
