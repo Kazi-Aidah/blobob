@@ -31,10 +31,12 @@ body:not(.list-default-bullet) .is-live-preview .cm-formatting-list-ul::before {
 body:not(.list-default-bullet) .is-live-preview .cm-list-1.cm-formatting-list-ul::before {
   content: var(--bullet-1) !important;
 }
+
 /* Live Preview – level 2 */
 body:not(.list-default-bullet) .is-live-preview .cm-list-2.cm-formatting-list-ul::before {
   content: var(--bullet-2) !important;
 }
+
 /* Live Preview – level 3 */
 body:not(.list-default-bullet) .is-live-preview .cm-list-3.cm-formatting-list-ul::before {
   content: var(--bullet-3) !important;
@@ -52,10 +54,12 @@ body:not(.list-default-bullet) ul > li:not(.task-list-item)::before {
   height: auto;
   float: inline-start;
 }
+
 /* Reading view – level 2 */
 body:not(.list-default-bullet) ul ul > li:not(.task-list-item)::before {
   content: var(--bullet-2);
 }
+
 /* Reading view – level 3 */
 body:not(.list-default-bullet) ul ul ul > li:not(.task-list-item)::before {
   content: var(--bullet-3);
@@ -75,8 +79,7 @@ body:not(.list-default-bullet) .is-live-preview .cm-formatting-list-ul {
 /* Spacing adjustment for reading view */
 ul > li:not(.task-list-item)::before {
   float: inline-start;
-  margin-inline-start: -18px;
-  margin-inline-end: 4px;
+  margin-inline: -18px 4px;
 }
 
 li::before {
@@ -96,7 +99,9 @@ ol > li::marker,
   --list-marker-color-collapsed: var(--inactive);
   --list-bullet-border: none;
   --list-bullet-radius: 50%;
+
   /* --list-bullet-size: 0.4em; */
   --list-bullet-transform: none;
 }
+
 

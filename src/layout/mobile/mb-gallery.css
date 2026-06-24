@@ -27,6 +27,7 @@ body.is-mobile, .body.is-phone {
 .mobile-tab.is-active .mobile-tab-preview-empty {
     --tab-switcher-preview-radius: var(--touch-radius-xs);
     corner-shape: var(--corner-shape);
+
     /* background: none; */
 }
 
@@ -51,12 +52,12 @@ body.is-mobile, .body.is-phone {
 /* active */
 .mobile-tab.is-active {
     border: 2px solid var(--color-accent);
-    background-color: hsla(var(--interactive-accent-hsl), 0.2);
+    background-color: hsl(var(--interactive-accent-hsl), 0.2);
     corner-shape: var(--corner-shape);
 }
 
 .mobile-tab.is-active .mobile-tab-preview {
-    border: 2px solid hsla(var(--interactive-accent-hsl), 0.7) !important;
+    border: 2px solid hsl(var(--interactive-accent-hsl), 0.7) !important;
 }
 
 .mobile-tab.is-active .mobile-tab-preview svg {
@@ -68,8 +69,7 @@ body.is-mobile, .body.is-phone {
 /* Force single column layout - one item per row */
 .mobile-tab-group-container {
     display: flex !important;
-    flex-direction: column !important;
-    flex-wrap: nowrap !important;
+    flex-flow: column nowrap !important;
     gap: 4px !important;
 }
 
@@ -88,6 +88,7 @@ body.mob-tab-list-compact {
         --tab-switcher-preview-radius: var(--touch-radius-xs);
         corner-shape: var(--corner-shape) !important;
         background: none;
+
         --icon-size: 22px;
     }
 
@@ -150,10 +151,11 @@ body.mob-tab-list-compact {
 
 body.is-mobile, .body.is-phone {
     .mobile-tab.is-active .mobile-tab-preview {
-        border: 0px solid hsla(var(--interactive-accent-hsl), 0.7) !important;
+        border: 0 solid hsl(var(--interactive-accent-hsl), 0.7) !important;
     }
 
     .mobile-tab .mobile-tab-preview {
         border: none;
     }
 }
+

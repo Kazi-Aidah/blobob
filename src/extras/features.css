@@ -47,9 +47,12 @@ body:not(.tab-float) .focus-mode .workspace-tab-container:has(.cm-scroller) {
     color: var(--text-muted);
     letter-spacing: 2px;
 }
+
 /* dropdown: view-title-casing */
 .view-title-case-none .view-header-title  { text-transform: none; letter-spacing: normal; }
 .view-title-case-capi .view-header-title { text-transform: capitalize; }
 .view-title-case-upper .view-header-title { text-transform: uppercase; }
 .view-title-case-lower .view-header-title { text-transform: lowercase; }
+
+
 

@@ -30,7 +30,6 @@ canvas-sharp-cards
 .canvas-control-item:hover {
     transform: scale(1.2);
     color: var(--color-accent-1) !important;
-    background-color: hsl(var(--interactive-accent-hsl), 0.2);
     background-color: var(--background-secondary-alt) !important;
 }
 
@@ -60,7 +59,7 @@ canvas-sharp-cards
     border-radius: var(--touch-radius-m);
     corner-shape: var(--corner-shape);
     opacity: 1;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 /* ===== CANVAS STYLING ===== */
@@ -115,9 +114,11 @@ body.theme-dark {
     transform: scale(1);
     transition: all 0.2s ease-out;
 }
+
 .canvas-node:hover .canvas-node-container {
     transform: scale(1.05);
 }
+
 .canvas-node:active .canvas-node-container {
     transform: scale(1);
 }
@@ -131,16 +132,21 @@ body.theme-dark {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.05);
   }
+
   75% {
     transform: scale(0.98);
   }
+
   100% {
     transform: scale(1);
   }
 }
+
+
 
 
 

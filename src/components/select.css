@@ -1,40 +1,55 @@
-﻿/* select { */
+/* select { */
+
 /*   appearance: base-select !important;  */
+
 /*   background-color: var(--dropdown-background); */
 
 /*   text-align: center; */
+
 /*   line-height: 1.5; */
 
 /*   display: flex; */
+
 /*   align-items: center; */
 
 /*   corner-shape: var(--corner-shape); */
+
 /* } */
 
 /* ::picker(select){ */
+
 /*    appearance: base-select !important; */
+
 /*    color: var(--background-modifier-border-focus); */
+
 /*    border-radius: 0px 0px 10px 10px; */
+
 /*    corner-shape: var(--corner-shape) !important; */
+
 /* } */
 
 /* select:open { */
+
 /*    border-radius: 10px 10px 0px 0px; */
+
 /* } */
 
 /* select::picker-icon { */
+
 /*    display: none !important; */
+
 /* } */
 
 /* select option::checkmark { */
+
 /*    content: "★" */
+
 /* } */
 
 
 
 select {
   padding: 6px;
-  text-align: center;
   appearance: base-select !important;
   background-color: var(--dropdown-background);
   text-align: center;
@@ -74,8 +89,9 @@ select:open:hover {
   margin-top: 4px;
   margin-bottom: 4px;
   background-color: var(--dropdown-background-hover);
+
   /* padding: 4px; */
-  box-shadow: 0px 2px 4px #00000070;
+  box-shadow: 0 2px 4px #00000070;
 }
 
 /* hide default picker arrow icon */
@@ -110,12 +126,12 @@ select option:active {
 }
 
 select option:checked {
-  background-color: hsla(var(--interactive-accent-hsl), 0.3) !important;
+  background-color: hsl(var(--interactive-accent-hsl), 0.3) !important;
   color: var(--text-accent) !important;
 }
 
 select option:checked:hover {
-  background-color: hsla(var(--interactive-accent-hsl), 0.3) !important;
+  background-color: hsl(var(--interactive-accent-hsl), 0.3) !important;
   color: var(--text-accent) !important;
   filter: brightness(1) contrast(1);
   transform: scale(1);
@@ -124,7 +140,7 @@ select option:checked:hover {
 
 /* scrollbar */
 ::picker(select) {
-  scrollbar-color: hsla(var(--interactive-accent-hsl), 0.3) var(--dropdown-background-hover);
+  scrollbar-color: hsl(var(--interactive-accent-hsl), 0.3) var(--dropdown-background-hover);
   scrollbar-width: 10px;
 }
 
@@ -132,3 +148,4 @@ select option:checked:hover {
 .is-phone select option {
   padding: 20px;
 }
+

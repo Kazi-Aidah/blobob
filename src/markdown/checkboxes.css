@@ -1,4 +1,4 @@
-﻿/* =============
+/* =============
    CHECKBOXES
 ============= */
 
@@ -20,7 +20,7 @@ body.blur-checked .task-list-item.is-checked {
 body.blur-checked .HyperMD-task-line[data-task="x"].cm-active,
 body.blur-checked .HyperMD-task-line[data-task="X"].cm-active,
 body.blur-checked .task-list-item.is-checked.cm-active {
-    filter: blur(0px) !important;
+    filter: blur(0) !important;
 }
 
 /* ===== LE CHECKBOXES ===== */
@@ -654,7 +654,6 @@ li[data-task="D"] > input:checked:hover {
     li[data-task="b"] > .task-list-item-checkbox:checked::before {
         border: 2px solid white !important;
         background-color: currentcolor;
-        background-image: none;
         background-image: url("data:image/svg+xml;utf8,\
 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>\
 <circle cx='27' cy='50' r='7' fill='pink'/>\
@@ -722,6 +721,7 @@ li[data-task="D"] > input:checked:hover {
     <ellipse cx='52' cy='65' rx='10' ry='14' fill='black'/>\
     </svg>");
     }
+
     /* X - X icon */
     input[data-task="X"]:checked,
     li[data-task="X"] > input:checked,
@@ -778,5 +778,6 @@ li[data-task="D"] > input:checked:hover {
         background-color: currentcolor;
     }
 }
+
 
 

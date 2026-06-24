@@ -1,4 +1,5 @@
-﻿/* setting items */
+/* setting items */
+
 /* .setting-item, .setting-items {
     --setting-items-radius: calc(var(--button-radius) + 8px);
     border-radius: calc(var(--button-radius) + 8px) !important;
@@ -63,3 +64,5 @@ body.is-phone .vertical-tab-nav-item {
     border-radius: var(--button-radius);
     corner-shape: var(--corner-shape);
 }
+
+

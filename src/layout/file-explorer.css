@@ -1,4 +1,4 @@
-﻿:root {
+:root {
     --nav-folder-radius: var(--button-radius);
     --nav-file-radius: var(--button-radius);
     --nav-hide-text: "My Vault";
@@ -9,7 +9,7 @@
     margin-top: 6px;
     margin-bottom: 5px;
     margin-inline-start: 8px;
-    padding-inline-start: 0px;
+    padding-inline-start: 0;
     padding-right: 15.5px;
     padding-bottom: 1px;
 }
@@ -143,7 +143,6 @@ body:not(.is-tablet) {
 
     .nav-buttons-container {
         position: relative;
-        transition: opacity calc(var(--animation-duration) * 6.6667) ease;
         transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.6);
         margin: -2.2px;
     }
@@ -190,3 +189,4 @@ body:not(.is-tablet) {
     }
 }
 }
+

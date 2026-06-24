@@ -17,8 +17,8 @@ body.tab-none.compact-tabs { --header-height: 25px; }
 /* all tab margin */
 .compact-tabs .workspace-tab-header.is-active,
 .compact-tabs .workspace-tab-header {
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 /* ! tab float margin */
@@ -40,7 +40,7 @@ body.compact-tabs .workspace-tab-header.is-active .workspace-tab-header-inner {
 
 /* ! tab float padding */
 body.tab-float.compact-tabs .workspace-tab-header.is-active .workspace-tab-header-inner {
-  padding-top: 0px !important;
+  padding-top: 0 !important;
 }
 
 /* joined tabs refinement */
@@ -54,6 +54,7 @@ body.compact-tabs .workspace-tab-header.is-active .workspace-tab-header-inner {
 }
 
 /* sidebar toggle button vertical offset */
+
 /* .compact-tabs .sidebar-toggle-button.mod-left .clickable-icon {
     margin-bottom: 10px !important;
     margin-left: 0 !important;
@@ -89,6 +90,7 @@ body.tab-float.compact-tabs {
         padding: auto;
         overflow: visible !important;
     }
+
     .workspace-split.mod-left-split .workspace-tab-header:not(.is-active),
     .workspace-split.mod-right-split .workspace-tab-header:not(.is-active) {
         padding-bottom: 4px !important;
@@ -98,7 +100,7 @@ body.tab-float.compact-tabs {
 body.tab-joined.compact-tabs {
     .workspace-split.mod-left-split .workspace-tab-header.is-active,
     .workspace-split.mod-right-split .workspace-tab-header.is-active {
-        padding: 11px 0px !important;
+        padding: 11px 0 !important;
         height: 24px;
     }
 
@@ -133,5 +135,6 @@ body.tab-none.compact-tabs {
         padding-bottom: 8px !important;
     }
 }
+
 
 

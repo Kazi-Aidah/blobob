@@ -1,7 +1,8 @@
 /* mb-toolbar: main page buttons + navbar + toolbar */
+
 /* view header + view action buttons */
 .is-mobile .view-header {
-    border-bottom: 0px;
+    border-bottom: 0;
 }
 
 .is-mobile .view-actions {
@@ -42,14 +43,14 @@
 }
 
 .is-mobile .view-actions {
-    padding: 0px !important;
+    padding: 0 !important;
 }
 
 /* ellipsis */
 .is-mobile .view-actions button:nth-child(3),
 .is-tablet .view-actions button:nth-child(3) {
-    box-shadow: -2px 0px 0px var(--shadow-color);
-    border-radius: 0px !important;
+    box-shadow: -2px 0 0 var(--shadow-color);
+    border-radius: 0 !important;
     max-width: 30px;
     border-left: 2px solid var(--shadow-color);
 }
@@ -58,6 +59,7 @@
 .is-mobile {
     --shadow-color: var(--background-modifier-border-focus);
 }
+
 .is-tablet {
     --shadow-color: var(--tab-float-border-color);
 }
@@ -66,7 +68,7 @@
 .is-mobile .view-actions button:hover:nth-child(3),
 .is-tablet .view-actions button:hover:nth-child(3) {
     border-radius: var(--button-radius) !important;
-    box-shadow: 0px 0px 0px var(--shadow-color);
+    box-shadow: 0 0 0 var(--shadow-color);
 }
 
 /* hide ellipsis border when reading mode (2) hovered */
@@ -87,10 +89,11 @@
     corner-shape: sharp !important;
     min-width: 100%;
     bottom: 0% !important;
-    padding: 0px 10px;
+    padding: 0 10px;
 }
+
 .is-floating-nav .mobile-navbar {
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 
@@ -102,6 +105,7 @@
     border-radius: calc(var(--button-radius) + 4px) !important;
     corner-shape: var(--corner-shape);
 }
+
 .mobile-toolbar-options-list {
     background-color: var(--interactive-normal) !important;
     border-radius: calc(var(--button-radius) + 4px) !important;

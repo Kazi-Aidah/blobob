@@ -15,6 +15,7 @@ body:not(.disable-fixed-newtab) {
         margin-right: 6px;
         background: transparent;
         order: 999; 
+
         /* force at the end */
         flex: 0 0 auto;
     }
@@ -189,5 +190,6 @@ body.tab-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.m
 body.tab-right-icons .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
     display: none !important;
 }
+
 
 

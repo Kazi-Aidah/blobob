@@ -1,4 +1,4 @@
-﻿.metadata-container {
+.metadata-container {
     border-radius: var(--touch-radius-s);
     corner-shape: var(--corner-shape);
 }
@@ -176,9 +176,11 @@
     0% {
         transform: scale(1) translateY(0);
     }
+
     45% {
         transform: scale(0.97) translateY(4px);
     }
+
     100% {
         transform: scale(1) translateY(0);
     }
@@ -188,9 +190,11 @@
     0% {
         transform: scale(1) translateY(0);
     }
+
     40% {
         transform: scale(0.98) translateY(-2px);
     }
+
     100% {
         transform: scale(1) translateY(0);
     }
@@ -307,3 +311,4 @@
 .workspace-leaf-content[data-type="file-properties"] .metadata-property-value {
     padding-bottom: 10px;
 }
+

@@ -1,4 +1,4 @@
-.input-right-decorator {
+﻿.input-right-decorator {
     position: absolute;
     transform: translateY(-50%) !important;
     top: 50%;
@@ -12,4 +12,6 @@ img {
 .popover .markdown-embed-link {
     margin: 10px 4px;
 }
+
+
 

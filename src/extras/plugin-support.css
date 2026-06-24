@@ -1,4 +1,4 @@
-/* === other plugins support */
+﻿/* === other plugins support */
 .kanban-styling {
 /* --- mainbody --- */
 .kanban-plugin__lane {
@@ -212,3 +212,5 @@ body.image-captions-styling {
     color: var(--color-accent-1);
     font-weight: 500;
 }
+
+

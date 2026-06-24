@@ -30,9 +30,8 @@ body {
     --touch-radius-l: calc(var(--button-radius) * 2.5);
     --touch-radius-xl: calc(var(--button-radius) * 3);
     --view-header-action-radius: var(--button-radius);
-
-    --tab-switcher-preview-shadow: 0 0 0 0 #00000000;
-    --tab-switcher-preview-shadow-active: 0 0 0 0 #00000000;
+    --tab-switcher-preview-shadow: 0 0 0 0 #0000;
+    --tab-switcher-preview-shadow-active: 0 0 0 0 #0000;
 }
 
 body.is-mobile, .body.is-phone {
@@ -84,8 +83,8 @@ body.is-mobile, .body.is-phone {
 body.is-mobile .workspace-drawer-tab-options:not(.is-collapsed)
 > .workspace-tab-header
 > .workspace-tab-header-inner {
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 
     border: 2px solid var(--background-modifier-border-focus);
 }
@@ -102,9 +101,11 @@ body.is-mobile .workspace-drawer-tab-options:not(.is-collapsed)
 }
 
 .is-tablet .view-action.clickable-icon {
-    margin: 0px !important;
-    padding: 0px;
+    margin: 0 !important;
+    padding: 0;
 }
+
+
 
 
 

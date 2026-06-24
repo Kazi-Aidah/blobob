@@ -4,7 +4,7 @@
 3. Corner shape: Hexagon, Scoop, Squircle
 4. Strange border radius: Sock, Eye
 5. Layout color switches: dark inside, dark outside, focused dark inside, focused dark outside
----*/
+--- */
 
 /* --- Root */
 :root {
@@ -139,7 +139,13 @@ select,
 }
 
 /* --- layout color switches */
+
 /* dark inside */
+
 /* dark outside */
+
 /* focused dark inside */
+
 /* focused dark outside */
+
+

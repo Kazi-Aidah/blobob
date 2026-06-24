@@ -1,7 +1,7 @@
-﻿/* ---
+/* ---
 icons sizes: filled, big, big-filled
 icon specified colours: donate to support, uninstall, delete, remove, close, new tab
----*/
+--- */
 
 .filled svg {
     fill: currentcolor;
@@ -32,35 +32,35 @@ icon specified colours: donate to support, uninstall, delete, remove, close, new
 /* icon specified colours */
 .clickable-icon.extra-setting-button[aria-label*="donate to support" i]:hover {
     color: var(--color-pink);
-    background-color: rgba(var(--color-pink-rgb), 0.1);
+    background-color: rgb(var(--color-pink-rgb), 0.1);
 }
 
 .clickable-icon.extra-setting-button[aria-label*="uninstall" i]:hover,
 .clickable-icon.extra-setting-button[aria-label*="delete" i]:hover {
     color: var(--text-error);
-    background-color: rgba(var(--color-red-rgb), 0.2);
+    background-color: rgb(var(--color-red-rgb), 0.2);
 }
 
 .clickable-icon.extra-setting-button[aria-label*="remove" i]:hover {
     color: var(--text-error);
-    background-color: rgba(var(--color-red-rgb), 0.2);
+    background-color: rgb(var(--color-red-rgb), 0.2);
 }
 
 .modal-close-button.clickable-icon:hover {
     color: var(--text-error);
-    background-color: rgba(var(--color-red-rgb), 0.2);
+    background-color: rgb(var(--color-red-rgb), 0.2);
     transition: calc(var(--animation-duration) * 0.6667) ease;
 }
 
 .workspace-tab-header-new-tab .clickable-icon:hover {
     color: var(--color-accent);
-    background-color: hsla(var(--interactive-accent-hsl), 0.2);
+    background-color: hsl(var(--interactive-accent-hsl), 0.2);
     transition: calc(var(--animation-duration) * 0.6667) ease;
 }
 
 .workspace-tab-header-new-tab .clickable-icon:active {
     color: var(--color-accent);
-    background-color: hsla(var(--interactive-accent-hsl), 0.2);
+    background-color: hsl(var(--interactive-accent-hsl), 0.2);
     transition: calc(var(--animation-duration) * 0.6667) ease;
 }
 
@@ -70,7 +70,7 @@ icon specified colours: donate to support, uninstall, delete, remove, close, new
     /* animation classes handle transition — don't override */
 }
 
-body:not(.button-scale):not(.button-shrink):not(.button-tilt):not(.button-bounce) .sidebar-toggle-button .clickable-icon {
+body:not(.button-scale, .button-shrink, .button-tilt, .button-bounce) .sidebar-toggle-button .clickable-icon {
     transition: all 0.2s ease;
 }
 
@@ -81,9 +81,12 @@ body:not(.button-scale):not(.button-shrink):not(.button-tilt):not(.button-bounce
     corner-shape: var(--corner-shape);
     
     padding: 6px 8px;
+
     /* height: 34px;
     width: 40px; */
     margin-top: -4px;
     margin-bottom: -4px;
 }
+
+
 

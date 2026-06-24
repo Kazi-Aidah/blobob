@@ -34,7 +34,7 @@
   }
 
   .is-mobile .metadata-container {
-    padding: 0px !important;
+    padding: 0 !important;
     padding-right: 24px !important;
     padding-top: 8px !important;
   }
@@ -53,7 +53,7 @@
 
 @container (max-width: 800px) {
     .is-mobile .metadata-container {
-        padding-right: 0px !important;
+        padding-right: 0 !important;
     }
 
     .is-mobile .metadata-content {
@@ -61,3 +61,4 @@
         width: 100%;
     }
 }
+

@@ -1,4 +1,4 @@
-﻿/* ---
+/* ---
 button animations: scale, shrink, tilt, bounce
 --- */
 
@@ -121,6 +121,7 @@ button animations: scale, shrink, tilt, bounce
 
 
 /* >> sidebar button adjustments */
+
 /* scale */
 .button-scale .sidebar-toggle-button.mod-right .clickable-icon:hover {
     transform: scale(-1.06, 1.06);
@@ -172,3 +173,4 @@ button animations: scale, shrink, tilt, bounce
     transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
     outline: 0 solid var(--background-modifier-border);
 }
+

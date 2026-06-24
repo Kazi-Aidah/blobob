@@ -1,4 +1,4 @@
-﻿/* ==================================================
+/* ==================================================
    PINNED TABS RELATED CSS
    ================================================== */
 
@@ -11,6 +11,7 @@ body.pin-icon-only .workspace-tab-header:has(.mod-pinned) {
     --tab-max-width: 40px !important;
 
     /* jumping pinned tab tansiiton */    
+
     /* transition-property: border-radius, max-width, margin, padding, transform, background-color !important;
     transition-duration:
         calc(var(--animation-duration) * 1.3333),

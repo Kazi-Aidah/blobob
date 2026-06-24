@@ -1,4 +1,4 @@
-.tab-float:not(.is-mobile) {
+﻿.tab-float:not(.is-mobile) {
     .sidebar-toggle-button.mod-left {
         background-color: var(--background-primary);
         border-bottom: none;
@@ -51,6 +51,8 @@
     transform: scale(1);
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.2s ease;
 }
+
+
 
 
 

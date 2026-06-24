@@ -10,6 +10,7 @@
 .setting-item-heading[data-level="4"] .style-settings-collapse-indicator,
 .setting-item-heading[data-level="5"] .style-settings-collapse-indicator {
     display: none;
+
     --icon-color: transparent;
     --icon-size: 0;
 }
@@ -174,3 +175,5 @@ button.pcr-button {
     background: none;
     box-shadow: none;
 }
+
+

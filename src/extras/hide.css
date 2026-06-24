@@ -1,4 +1,4 @@
-/* hide help icon */
+﻿/* hide help icon */
 .svg-icon.help {
     display: none;
 }
@@ -63,6 +63,8 @@ body.hide-folder-arrow .nav-folder-title .collapse-icon {
 body.hide-folder-arrow .nav-folder-title .tree-item-icon {
     display: none;
 }
+
+
 
 
 

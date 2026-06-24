@@ -1,4 +1,4 @@
-﻿body {
+body {
     --titlebar-background-focused: var(--titlebar-background) !important;
 }
 
@@ -14,7 +14,7 @@
 
 /* JOINED TABS */
 body.tab-joined,
-body:not(.tab-none):not(.tab-float):not(.tab-lined):not(.tab-contained) {
+body:not(.tab-none, .tab-float, .tab-lined, .tab-contained) {
   --system-status-background: var(--titlebar-background);
 
   /* close button fine tuning */
@@ -37,6 +37,7 @@ body:not(.tab-none):not(.tab-float):not(.tab-lined):not(.tab-contained) {
   /* base tab */
   .workspace-tab-header-container .workspace-tab-header {
     margin: 0;
+
     --tab-curve: 0px;
     border-radius: var(--button-radius) var(--button-radius) 0 0;
     padding-left: 0;
@@ -58,10 +59,7 @@ body:not(.tab-none):not(.tab-float):not(.tab-lined):not(.tab-contained) {
   .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active,
   .mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active,
   .mod-root .workspace-tab-header-container .workspace-tab-header.is-active {
-    margin-top: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: -10px;
+    margin: 5px 5px -10px;
     padding: 2px 2px 4px;
     border-radius: var(--button-radius) var(--button-radius) 0 0;
     corner-shape: var(--corner-shape);
@@ -76,9 +74,10 @@ body:not(.tab-none):not(.tab-float):not(.tab-lined):not(.tab-contained) {
 
   /* Main hover effect */
   .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover {
-    transform: translateY(0px);
+    transform: translateY(0);
     opacity: 1;
   }
+
   .workspace-tab-header-container .workspace-tab-header:not(.is-active) {
     transform: translateY(8px);
     opacity: 0.6;
@@ -97,19 +96,21 @@ body:not(.tab-none):not(.tab-float):not(.tab-lined):not(.tab-contained) {
 
   /* not active + its hover (root) */
   .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
-    transform: translateY(0px);
+    transform: translateY(0);
     height: 100%;
     margin-right: 2px;
     margin-left: 2px;
     margin-top: -2px;
     transition: all calc(var(--animation-duration) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1), background-color 0s ease;
   }
+
   .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:hover {
     background-color: var(--background-primary-alt);
     transition: all calc(var(--animation-duration) * 1.2) ease-out;
     border-radius: var(--button-radius);
     corner-shape: var(--corner-shape);
   }
+
   .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:active {
     background-color: var(--background-primary);
     border-radius: var(--button-radius);
@@ -132,7 +133,7 @@ body:not(.tab-none):not(.tab-float):not(.tab-lined):not(.tab-contained) {
 
   /* main tabs text adjustment */
   .workspace-split.mod-vertical.mod-root .workspace-tab-header-container .workspace-tab-header.is-active {
-    padding-top: 0px !important;
+    padding-top: 0 !important;
   }
 
   .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner {
@@ -175,7 +176,7 @@ body:not(.tab-none):not(.tab-float):not(.tab-lined):not(.tab-contained) {
     margin-bottom: 8px;
     margin-right: 4px;
     padding: 2px 3px;
-    transform: translateY(0px) scale(0.98);
+    transform: translateY(0) scale(0.98);
     transition: background-color 0.2s ease, box-shadow 0.2s ease,
                 transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.4),
                 padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
@@ -185,14 +186,14 @@ body:not(.tab-none):not(.tab-float):not(.tab-lined):not(.tab-contained) {
   .workspace-tab-header-container .workspace-tab-header.is-active {
     min-height: 24px;
     background-color: var(--background-primary-alt);
-    box-shadow: 0px 0px 0px 1.6px var(--tab-float-border-color);
-    margin: 1px 10px 8px 10px;
+    box-shadow: 0 0 0 1.6px var(--tab-float-border-color);
+    margin: 1px 10px 8px;
     padding: 2px 3px;
     transform: translateY(1px) scale(1);
   }
 
   .workspace .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active {
-    margin: 0px 3px;
+    margin: 0 3px;
     padding: 2px 3px;
     margin-left: 10px !important;
   }
@@ -200,15 +201,17 @@ body:not(.tab-none):not(.tab-float):not(.tab-lined):not(.tab-contained) {
   .workspace-tab-header-container .workspace-tab-header:not(.is-active) {
     transform: translateY(4px);
   }
+
   .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover {
     background-color: var(--background-primary-alt);
-    box-shadow: 0px 0px 0px 1.6px var(--tab-float-border-color);
-    padding: 2px 2px;
+    box-shadow: 0 0 0 1.6px var(--tab-float-border-color);
+    padding: 2px;
     transform: translateY(1px) scale(0.9);
   }
+
   .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
     background-color: var(--background-primary-alt);
-    box-shadow: 0px 0px 0px 1.6px var(--tab-float-border-color);
+    box-shadow: 0 0 0 1.6px var(--tab-float-border-color);
     transform: translateY(1px) scale(0.8);
   }
 
@@ -217,6 +220,7 @@ body:not(.tab-none):not(.tab-float):not(.tab-lined):not(.tab-contained) {
   &.theme-dark .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
     filter: brightness(1.4);
   }
+
   &.theme-light .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover,
   &.theme-light .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
     filter: brightness(1.1);
@@ -235,7 +239,7 @@ body:not(.tab-none):not(.tab-float):not(.tab-lined):not(.tab-contained) {
 
   /* non-sidebar tab inner */
   .workspace-split.mod-root .workspace-tab-header-container .workspace-tab-header {
-    margin-left: 0px !important;
+    margin-left: 0 !important;
   }
 
   /* all active tabs */
@@ -253,12 +257,14 @@ body:not(.tab-none):not(.tab-float):not(.tab-lined):not(.tab-contained) {
     background-color: var(--background-primary);
     margin-bottom: -4px;
   }
+
   .workspace-tab-container {
     margin: 6px;
     border: 2px solid var(--tab-float-border-color);
     border-radius: var(--modal-radius);
     corner-shape: var(--corner-shape);
   }
+
   .workspace-tabs {
     background-color: var(--background-primary);
   }
@@ -268,6 +274,7 @@ body:not(.tab-none):not(.tab-float):not(.tab-lined):not(.tab-contained) {
     --file-header-background-focused: var(--background-primary-alt);
     background-color: var(--background-primary-alt);
   }
+
   /* reading editor bg */
   .markdown-reading-view .markdown-preview-view {
     --file-header-background-focused: var(--background-primary-alt);
@@ -277,8 +284,9 @@ body:not(.tab-none):not(.tab-float):not(.tab-lined):not(.tab-contained) {
   .titlebar-button-container {
     background-color: var(--background-primary) !important;
   }
+
   .workspace-sidedock-vault-profile {
-    border-top: 0px;
+    border-top: 0;
     background-color: var(--background-primary) !important;
     margin-top: -8px;
   }
@@ -286,19 +294,22 @@ body:not(.tab-none):not(.tab-float):not(.tab-lined):not(.tab-contained) {
   /* tab float sidebar tabs */
   .workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header {
     margin-top: 2px !important;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
     transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.2),
                 padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1), margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6) !important;
   }
+
   .workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover {
     transform: translateY(-2px) scale(0.9) !important;
     margin-left: 4px;
     margin-right: 4px;
   }
+
   .workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
     transform: translateY(1px) scale(0.8) !important;
   }
+
   .workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header.is-active {
     margin-top: 2px !important;
     margin-left: 4px !important;
@@ -333,11 +344,12 @@ body:is(.is-tablet):is(.tab-joined) .view-header:not(.is-mobile) {
 }
 
 /* tablet: increased active tab height */
-body:is(.is-tablet):not(.compact-tabs):not(.tab-none) .workspace-tab-header-container {
+body:is(.is-tablet):not(.compact-tabs, .tab-none) .workspace-tab-header-container {
   height: 50px;
 }
+
 /* tablet: increased margin around text and x */
-body:is(.is-tablet):not(.compact-tabs):not(.tab-none) .workspace-tab-header.is-active .workspace-tab-header-inner {
+body:is(.is-tablet):not(.compact-tabs, .tab-none) .workspace-tab-header.is-active .workspace-tab-header-inner {
   margin: auto 5px;
 }
 
@@ -357,6 +369,7 @@ body:is(.tab-float):not(.is-mobile) .view-header {
   background-color: var(--background-primary-alt) !important;
   border-bottom: 2px solid var(--background-modifier-border);
 }
+
 /* desktop: tab joined header border */
 body:is(.tab-joined):not(.is-mobile) .view-header {
   border-bottom: 2px solid var(--background-modifier-border-hover);
@@ -377,6 +390,7 @@ body:is(.tab-joined):not(.is-mobile) .view-header {
 /* UNDERLINED TABS */
 body.tab-lined {
     /* non active tab icon darkening */
+
     /* .workspace-tab-header
         .workspace-tab-header-inner-icon {
         filter: brightness(0.8);
@@ -388,6 +402,7 @@ body.tab-lined {
     .workspace-tab-header:active
         .workspace-tab-header-inner-icon {
         filter: brightness(1);
+
         --icon-color: var(--text-normal);
         color: var(--text-normal);
     }
@@ -409,10 +424,10 @@ body.tab-lined {
         background: 
             linear-gradient(to bottom, 
             var(--titlebar-background), 
-            hsla(var(--interactive-accent-hsl), 0.2));
+            hsl(var(--interactive-accent-hsl), 0.2));
             
-        padding-bottom: 0px;
-        border-radius: 0px;
+        padding-bottom: 0;
+        border-radius: 0;
     }
 
     body:is(.compact-tabs) .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner {
@@ -421,13 +436,13 @@ body.tab-lined {
 
     .workspace-tab-header-container 
     .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
-        border-radius: 0px;
+        border-radius: 0;
         background: 
             linear-gradient(to bottom, 
             var(--titlebar-background), 
             var(--titlebar-background));
 
-        border-bottom: 2px solid hsla(var(--interactive-accent-hsl), 0);
+        border-bottom: 2px solid hsl(var(--interactive-accent-hsl), 0);
         transform: translateY(2px);
         transition: all 0.2s ease-out;
     }
@@ -437,8 +452,8 @@ body.tab-lined {
         background: 
             linear-gradient(to bottom, 
             var(--titlebar-background), 
-            hsla(var(--interactive-accent-hsl), 0.1));
-        border-bottom: 2px solid hsla(var(--interactive-accent-hsl), 0.1);
+            hsl(var(--interactive-accent-hsl), 0.1));
+        border-bottom: 2px solid hsl(var(--interactive-accent-hsl), 0.1);
         transform: translateY(-2px);
     }
 
@@ -447,10 +462,11 @@ body.tab-lined {
         background: 
             linear-gradient(to bottom, 
             var(--titlebar-background), 
-            hsla(var(--interactive-accent-hsl), 0.2));
+            hsl(var(--interactive-accent-hsl), 0.2));
         color: var(--text-normal);
+
         --icon-color: ar(--text-normal) !important;
-        border-bottom: 2px solid hsla(var(--interactive-accent-hsl), 1);
+        border-bottom: 2px solid hsl(var(--interactive-accent-hsl), 1);
         transform: translateY(4px);
     }
 
@@ -469,7 +485,7 @@ body.tab-lined {
     .workspace-split:not(.mod-vertical.mod-root) 
     .workspace-tab-header-container 
     .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner {
-        transform: translateY(0px);
+        transform: translateY(0);
     }
 }
 
@@ -485,6 +501,7 @@ body.tab-lined {
     .workspace-tab-header-container .workspace-tab-header,
     .workspace-tab-header-container .workspace-tab-header.is-active {
         --tab-curve: 0px;
+
         /* box-shadow: none; */
     }
 
@@ -494,12 +511,12 @@ body.tab-lined {
     }
 
     .workspace-tab-header-container-inner {
-        margin-top: 0px;
+        margin-top: 0;
         margin-left: 5px;
-        padding-left: 0px !important;
+        padding-left: 0 !important;
 
         margin-right: 10px;
-        padding-right: 0px !important;
+        padding-right: 0 !important;
 
         border-radius: var(--touch-radius-xs);
         corner-shape: var(--corner-shape);
@@ -537,6 +554,7 @@ body:is(.tab-contained):is(.compact-tabs) {
         padding: 4px;
         height: 32px;
     }
+
     .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner {
         margin-top: -2px;
     }
@@ -561,8 +579,8 @@ body:is(.tab-contained):is(.compact-tabs) {
 
     .workspace-split:not(.mod-vertical.mod-root) 
     .workspace-tab-header-container .workspace-tab-header.is-active {
-        margin-left: 0px !important;
-        margin-right: 0px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 
     .workspace-split.mod-left-split .workspace-tab-header,
@@ -577,6 +595,7 @@ body:is(.tab-contained):is(.compact-tabs) {
         overflow: visible !important;
     }
 }
+
 
 
 

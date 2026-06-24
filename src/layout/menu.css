@@ -1,4 +1,4 @@
-﻿
+
 /* menu & menu items */
 
 .menu {
@@ -60,8 +60,9 @@
 .is-mobile .menu-group:has(.menu-item.tappable) {
     border-radius: var(--touch-radius-xs);
 }
+
 .is-mobile .menu-group:has(.menu-item.tappable) .menu-item.tappable {
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 .is-mobile .menu-group:has(.menu-item.tappable) .menu-item.tappable:first-child {
@@ -78,13 +79,16 @@
 .is-mobile .menu-item {
     padding: 10px 16px;
 }
+
 .is-mobile .menu-separator {
     margin: 4px 0;
 }
+
 .is-mobile .menu-group {
     border: 2px solid var(--background-modifier-border-focus);
     corner-shape: var(--corner-shape);
 }
+
 /* .is-mobile .menu-group:has(.menu-item + .menu-item) .menu-item:not(:last-child) {
 } */
 .is-mobile .menu-group {
@@ -97,3 +101,4 @@
     background-color: var(--interactive-normal);
     padding: 6px 12px;
 }
+

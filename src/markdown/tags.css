@@ -1,10 +1,11 @@
-﻿body {
-    --tag-background: hsla(var(--interactive-accent-hsl), 0.13);
-    --tag-background-hover: hsla(var(--interactive-accent-hsl), 0.25);
+body {
+    --tag-background: hsl(var(--interactive-accent-hsl), 0.13);
+    --tag-background-hover: hsl(var(--interactive-accent-hsl), 0.25);
 }
 
 /* toggle: hide # in tags */
 .hide-hash .cm-hashtag.cm-hashtag-begin { display: none; }
+
 .hide-hash .cm-hashtag.cm-hashtag-end {
     border-radius: var(--button-radius);
     corner-shape: var(--corner-shape);
@@ -13,11 +14,12 @@
 
 /* tag shape */
 .cm-hashtag.cm-hashtag-begin {
-    border-radius: var(--button-radius) 0px 0px var(--button-radius);
+    border-radius: var(--button-radius) 0 0 var(--button-radius);
     corner-shape: var(--corner-shape);
 }
+
 .cm-hashtag.cm-hashtag-end {
-    border-radius: 0px var(--button-radius) var(--button-radius) 0px;
+    border-radius: 0 var(--button-radius) var(--button-radius) 0;
     corner-shape: var(--corner-shape);
 }
 
@@ -33,3 +35,4 @@
     background-color: var(--tag-background-hover);
     transform: scale(1.2);
 }
+

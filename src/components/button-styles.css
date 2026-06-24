@@ -1,6 +1,6 @@
-﻿/* ---
+/* ---
 button styles: bordered, 3d, bordered 3d, glow 
----*/
+--- */
 
 button, button:hover, button:active {
     transition: background-color 0.2s ease,
@@ -95,3 +95,5 @@ body:not(.view-header) .button-bordered-3d button:active,
 .button-glow .setting-item-control button:hover {
     box-shadow: 0 0 8px var(--text-normal);
 }
+
+

@@ -2,7 +2,6 @@
 .bases-toolbar-menu-container 
 .bases-toolbar-menu-item.is-selected {
   margin: 0 !important;
-  margin-right: 0 !important;
   animation: none;
 }
 
@@ -12,6 +11,7 @@ body:not(.disable-bases-undim) {
         opacity: 0.5;
         transition: all 0.2s ease;
     }
+
     .bases-header:hover {
         opacity: 1;
     }
@@ -27,3 +27,4 @@ body {
     --metadata-input-padding: 20px 8px;
     --bases-table-font-size: var(--font-ui-medium);
 }
+

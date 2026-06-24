@@ -1,4 +1,4 @@
-﻿/* ===== FOLDER STYLES =====
+/* ===== FOLDER STYLES =====
   Accent Dot       — folder-dot-accent
   Rainbow Dot      — folder-dot-rainbow
   Accent Frame     — folder-frame-accent
@@ -21,6 +21,7 @@
 }
 
 /* folder padding slider */
+
 /* .nav-folder-title {
     padding: var(--folder-padding) !important;
 } */
@@ -42,6 +43,7 @@ body:not(.disable-foldy-basic-bordered) {
     /* box-shadow: 0 1.5px 0 var(--background-modifier-border-focus); */
     border-bottom-left-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
+
     /* margin-bottom: 6px !important; */
     transition: all 0.2s ease;
     }
@@ -58,7 +60,7 @@ body:not(.disable-foldy-basic-bordered) {
   border-radius: var(--nav-folder-radius) !important;
   corner-shape: var(--corner-shape) !important;
   margin-bottom: 0 !important;
-  border-bottom: 0px solid var(--background-modifier-border);
+  border-bottom: 0 solid var(--background-modifier-border);
 
   transition: border-radius 0.2s ease, background-color 0.2s ease;
 }
@@ -82,6 +84,7 @@ body:not(.disable-foldy-basic-bordered) {
 }
 
 /* forcing */
+
 /* .hexagon-tiptip .nav-folder, 
 .hexagon-tiptip .nav-folder-title { 
     corner-shape: bevel !important; 
@@ -156,7 +159,6 @@ body.bold-folders .nav-folder-title {
 
 /* vertical folder toggle */
 body:is(.verti-folder):not(.bb-mobile-disable-verti) {
-
     .tree-item-self.nav-folder-title {
         display: flex !important;
         flex-direction: column !important;
@@ -328,7 +330,7 @@ body.folder-dot-rainbow
 body.folder-dot-rainbow
     .nav-files-container > div > .nav-folder {
     background-color: rgb(var(--folder-color-rgb, var(--color-red-rgb)), 0.15) !important;
-    border: 0px solid var(--folder-color, var(--text-normal)) !important;
+    border: 0 solid var(--folder-color, var(--text-normal)) !important;
     color: var(--folder-color, var(--text-normal)) !important;
 
     --nav-collapse-icon-color: var(--folder-color, var(--text-muted));
@@ -338,7 +340,7 @@ body.folder-dot-rainbow
 body.folder-dot-rainbow
     .nav-folder {
     background-color: rgb(var(--folder-color-rgb, var(--color-red-rgb)), 0.15) !important;
-    border: 0px solid var(--folder-color, var(--text-normal)) !important;
+    border: 0 solid var(--folder-color, var(--text-normal)) !important;
     color: var(--folder-color, var(--text-normal)) !important;
 
     --nav-collapse-icon-color: var(--folder-color, var(--text-muted));
@@ -356,7 +358,7 @@ body.folder-dot-rainbow
 
 body.folder-dot-rainbow
 .nav-files-container > div > .nav-folder:not(.is-collapsed) > .nav-folder-title {
-    border-bottom: 2px solid rgba(var(--folder-color-rgb), 0.2) !important;
+    border-bottom: 2px solid rgb(var(--folder-color-rgb), 0.2) !important;
 }
 
 /* ── ACCENT FRAME ── */
@@ -372,6 +374,7 @@ body.folder-frame-accent
 
 body.folder-frame-accent .nav-folder-title {
     color: var(--folder-color, var(--text-normal)) !important;
+
     --nav-collapse-icon-color: var(--folder-color, var(--text-muted));
     --icon-color: var(--folder-color, var(--text-muted));
 }
@@ -392,17 +395,19 @@ body.folder-frame-rainbow
 body.folder-frame-rainbow 
     .nav-folder {
     background-color: rgb(var(--folder-color-rgb, var(--color-red-rgb)), 0.15) !important;
-    border: 0px solid var(--folder-color, var(--text-muted)) !important;
+    border: 0 solid var(--folder-color, var(--text-muted)) !important;
 }
+
 body.folder-frame-rainbow .nav-folder-title {
     color: var(--folder-color, var(--text-normal)) !important;
+
     --nav-collapse-icon-color: var(--folder-color, var(--text-muted));
     --icon-color: var(--folder-color, var(--text-muted));
 }
 
 body.folder-frame-rainbow
 .nav-files-container > div > .nav-folder:not(.is-collapsed) > .nav-folder-title {
-    border-bottom: 2px solid rgba(var(--folder-color-rgb), 0.3) !important;
+    border-bottom: 2px solid rgb(var(--folder-color-rgb), 0.3) !important;
 }
 
 
@@ -430,7 +435,7 @@ body.folder-subtle-accent
     .nav-folder {
     background-color: hsl(var(--interactive-accent-hsl), 0.15) !important;
     color: var(--color-accent) !important;
-    border: 0px solid transparent;
+    border: 0 solid transparent;
 
     --nav-collapse-icon-color: var(--color-accent);
     --icon-color: var(--color-accent);
@@ -454,7 +459,7 @@ body.folder-subtle-rainbow
 body.folder-subtle-rainbow
     .nav-folder {
     background-color: rgb(var(--folder-color-rgb, var(--color-red-rgb)), 0.15) !important;
-    border: 0px solid transparent;
+    border: 0 solid transparent;
     color: var(--folder-color, var(--text-normal)) !important;
 
     --nav-collapse-icon-color: var(--folder-color, var(--text-muted));
@@ -463,7 +468,7 @@ body.folder-subtle-rainbow
 
 body.folder-subtle-rainbow
     .nav-files-container > div > .nav-folder:not(.is-collapsed) > .nav-folder-title {
-    border-bottom: 2px solid rgba(var(--folder-color-rgb), 0.2) !important;
+    border-bottom: 2px solid rgb(var(--folder-color-rgb), 0.2) !important;
 }
 
 
@@ -514,7 +519,7 @@ body.folder-solid-rainbow {
     }
 
     .nav-files-container > div > .nav-folder:not(.is-collapsed) > .nav-folder-title {
-        border-bottom: 2px solid rgba(var(--folder-color-rgb), 0.9) !important;
+        border-bottom: 2px solid rgb(var(--folder-color-rgb), 0.9) !important;
     }
 
 }
@@ -523,81 +528,106 @@ body.folder-solid-rainbow {
 body.folder-gradient-hue .nav-folder {
     animation: colorShift 8s linear infinite !important;
 }
+
 @keyframes colorShift {
     0%   { filter: hue-rotate(0deg); }
     100% { filter: hue-rotate(360deg); }
 }
+
 /* Gradient – different opacities per nth‑child (applied to .nav-folder) */
 body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+2) {
     background-color: hsl(var(--interactive-accent-hsl), 0.24) !important;
 }
+
 body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+3) {
     background-color: hsl(var(--interactive-accent-hsl), 0.21) !important;
 }
+
 body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+4) {
     background-color: hsl(var(--interactive-accent-hsl), 0.19) !important;
 }
+
 body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+5) {
     background-color: hsl(var(--interactive-accent-hsl), 0.17) !important;
 }
+
 body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+6) {
     background-color: hsl(var(--interactive-accent-hsl), 0.15) !important;
 }
+
 body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+7) {
     background-color: hsl(var(--interactive-accent-hsl), 0.13) !important;
 }
+
 body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+8) {
     background-color: hsl(var(--interactive-accent-hsl), 0.11) !important;
 }
+
 body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+9) {
     background-color: hsl(var(--interactive-accent-hsl), 0.09) !important;
 }
+
 /* text colours for gradient – also per nth‑child on titles */
 body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+2) .nav-folder-title,
 body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+2) .nav-file-title {
     color: hsl(var(--interactive-accent-hsl), 1) !important;
+
     --icon-color: hsl(var(--interactive-accent-hsl), 1) !important;
     --nav-collapse-icon-color: hsl(var(--interactive-accent-hsl), 1) !important;
 }
+
 body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+3) .nav-folder-title,
 body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+3) .nav-file-title {
     color: hsl(var(--interactive-accent-hsl), 0.9) !important;
+
     --icon-color: hsl(var(--interactive-accent-hsl), 0.9) !important;
     --nav-collapse-icon-color: hsl(var(--interactive-accent-hsl), 0.9) !important;
 }
+
 body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+4) .nav-folder-title,
 body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+4) .nav-file-title {
     color: hsl(var(--interactive-accent-hsl), 0.85) !important;
+
     --icon-color: hsl(var(--interactive-accent-hsl), 0.85) !important;
     --nav-collapse-icon-color: hsl(var(--interactive-accent-hsl), 0.85) !important;
 }
+
 body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+5) .nav-folder-title,
 body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+5) .nav-file-title {
     color: hsl(var(--interactive-accent-hsl), 0.8) !important;
+
     --icon-color: hsl(var(--interactive-accent-hsl), 0.8) !important;
     --nav-collapse-icon-color: hsl(var(--interactive-accent-hsl), 0.8) !important;
 }
+
 body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+6) .nav-folder-title,
 body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+6) .nav-file-title {
     color: hsl(var(--interactive-accent-hsl), 0.75) !important;
+
     --icon-color: hsl(var(--interactive-accent-hsl), 0.75) !important;
     --nav-collapse-icon-color: hsl(var(--interactive-accent-hsl), 0.75) !important;
 }
+
 body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+7) .nav-folder-title,
 body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+7) .nav-file-title {
     color: hsl(var(--interactive-accent-hsl), 0.7) !important;
+
     --icon-color: hsl(var(--interactive-accent-hsl), 0.7) !important;
     --nav-collapse-icon-color: hsl(var(--interactive-accent-hsl), 0.7) !important;
 }
+
 body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+8) .nav-folder-title,
 body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+8) .nav-file-title {
     color: hsl(var(--interactive-accent-hsl), 0.65) !important;
+
     --icon-color: hsl(var(--interactive-accent-hsl), 0.65) !important;
     --nav-collapse-icon-color: hsl(var(--interactive-accent-hsl), 0.65) !important;
 }
+
 body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+9) .nav-folder-title,
 body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+9) .nav-file-title {
     color: hsl(var(--interactive-accent-hsl), 0.6) !important;
+
     --icon-color: hsl(var(--interactive-accent-hsl), 0.6) !important;
     --nav-collapse-icon-color: hsl(var(--interactive-accent-hsl), 0.6) !important;
 }
@@ -628,3 +658,5 @@ body.folder-gradient-hue .nav-files-container > div > .nav-folder:nth-child(8n+9
 .tree-item-children .nav-folder-title:hover {
   background-color: transparent !important;
 }
+
+

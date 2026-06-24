@@ -5,14 +5,12 @@
     --caret-color: var(--color-accent);
     --checkbox-color: var(--color-tang);
     --text-error: rgb(255, 138, 138);
-
     --background-primary: #1e1f22;
     --background-primary-alt: #26272b;
     --background-secondary: #1e1f22;
     --background-secondary-alt: #36393d;
     --titlebar-background: #1b1b1f;
     --titlebar-background-focused: var(---titlebar-background);
-    
     --tab-container-background: var(--titlebar-background);
     --code-background: #19191d;
     --code-border-color: var(--background-secondary-alt);
@@ -22,7 +20,6 @@
     --interactive-hover: var(--button-background-hover);
     --background-modifier-form-field: #303439;
     --background-modifier-form-field-hover: #29292d;
-
     --dropdown-background: #303439;
     --dropdown-background-hover: #3c4048;
     --button-background: #303439;
@@ -30,7 +27,6 @@
     --background-modifier-border: #31353e;
     --background-modifier-border-hover: #46494e;
     --background-modifier-border-focus: #565d68;
-
     --accent-red: var(--color-red);
     --accent-orange: var(--color-orange);
     --accent-yellow: var(--color-yellow);
@@ -41,7 +37,6 @@
     --accent-pink: var(--color-pink);
     --accent-brown: var(--color-brown);
     --accent-gray: var(--text-normal);
-
     --color-red: #da4b4b;
     --color-orange: #cc692a;
     --color-yellow: #e8b05a;
@@ -52,11 +47,9 @@
     --color-pink: #c85b92;
     --color-brown: #9b674b;
     --color-gray: #a6a6a6;
-    
     --text-normal: #bababa;
     --text-muted: #80807c;
     --text-faint: var(--text-muted);
-
     --hr-color: var(--background-modifier-border-focus);
     --text-highlight-bg: hsl(var(--interactive-accent-hsl), 0.5);
 }
@@ -68,6 +61,7 @@
 .theme-dark.neutral-gray {
     --toggle-thumb-color: white;
 }
+
 .theme-dark.darker-gray {
     --background-primary: #171717;
     --background-primary-alt: #202020;
@@ -258,22 +252,17 @@
     --background-secondary-alt: #242d25;
     --titlebar-background: #1c231d;
     --titlebar-background-focused: #1c231d;
-
     --text-normal: #c4d7b6;
     --text-muted: #8da086;
     --text-error: #d96b96;
-
     --background-modifier-form-field: #252b25;
     --background-modifier-form-field-hover: #2f3830;
     --dropdown-background: #252b25;
     --dropdown-background-hover: #2f3830;
-
     --button-background: #563b68;
     --button-background-hover: #6a4a82;
-
     --background-modifier-border: #55744d;
     --background-modifier-border-hover: #6c9860;
-
     --toggle-thumb-color: #b0d49e;
 }
 
@@ -893,7 +882,7 @@
     --button-background-hover: #462828;
     --background-modifier-border: #3d2828;
     --background-modifier-border-hover: #4c3232;
-    --background-modifier-border-focus: #664444;
+    --background-modifier-border-focus: #644;
 }
 
 .theme-dark.leather {
@@ -1205,7 +1194,6 @@ body mark {
     --text-muted: #495057;
     --text-faint: #6c757d;
     --hr-color: var(--background-modifier-border);
-
     --text-highlight-bg: rgb(255, 224, 130, 0.5);
     --button-radius: 20px;
 }
@@ -1253,6 +1241,7 @@ body mark {
     --background-modifier-border-hover: #cbd5e0;
     --toggle-thumb-color: var(--background-primary);
 }
+
 .theme-light.soft-sand {
     --background-primary: #e8dfcc;
     --background-primary-alt: #dcccb3;
@@ -1832,9 +1821,9 @@ body mark {
     --text-normal: #2c221b;
     --text-muted: #a9422b;
     --text-error: #d65c41;
-    --background-modifier-form-field: #ffffff;
+    --background-modifier-form-field: #fff;
     --background-modifier-form-field-hover: #eaded3;
-    --dropdown-background: #ffffff;
+    --dropdown-background: #fff;
     --dropdown-background-hover: #eaded3;
     --button-background: #e3bc2e;
     --button-background-hover: #d65c41;
@@ -1842,5 +1831,7 @@ body mark {
     --background-modifier-border-hover: #d65c41;
     --toggle-thumb-color: var(--background-primary);
 }
+
+
 
 

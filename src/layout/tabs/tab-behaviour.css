@@ -1,4 +1,4 @@
-﻿/* shared: tab close button animation */
+/* shared: tab close button animation */
 
 /* tab close button */
 .is-mobile .workspace .mod-root .workspace-tab-header .workspace-tab-header-inner-close-button {
@@ -34,6 +34,7 @@ body:not(.is-mobile) .workspace .mod-root .workspace-tab-header .workspace-tab-h
 .workspace-tab-header-inner-close-button {
     transform: scale(0.9) !important;
 }
+
 .workspace-tab-header-inner-close-button:hover {
     background-color: var(--background-modifier-hover) !important;
     border-radius: calc(var(--button-radius) + 2px) !important;
