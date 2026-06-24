@@ -223,6 +223,27 @@
     --tag-background-hover: #3b2e6b;
 }
 
+.theme-dark.urban {
+    --background-primary: #1a0f0a;
+    --background-primary-alt: #2a1a12;
+    --background-secondary: #1a0f0a;
+    --background-secondary-alt: #332018;
+    --titlebar-background: #140c08;
+    --text-normal: #ffdec2;
+    --text-muted: #b95c33;
+    --text-error: #b95c33;
+    --background-modifier-form-field: #241610;
+    --background-modifier-form-field-hover: #2e1d15;
+    --dropdown-background: #241610;
+    --dropdown-background-hover: #2e1d15;
+    --button-background: #332018;
+    --button-background-hover: #b95c33;
+    --background-modifier-border: #3b251b;
+    --background-modifier-border-hover: #92492a;
+    --background-modifier-border-focus: #b95c33;
+    --toggle-thumb-color: var(--background-primary);
+}
+
 .theme-dark.midnight-emerald {
     --background-primary: #0c2d2a;
     --background-primary-alt: #17403c;
@@ -1035,25 +1056,7 @@
 
 
 
-.theme-dark.urban {
-    --background-primary: #1a0f0a;
-    --background-primary-alt: #2a1a12;
-    --background-secondary: #1a0f0a;
-    --background-secondary-alt: #332018;
-    --titlebar-background: #140c08;
-    --text-normal: #ffdec2;
-    --text-muted: #b95c33;
-    --text-error: #b95c33;
-    --background-modifier-form-field: #241610;
-    --background-modifier-form-field-hover: #2e1d15;
-    --dropdown-background: #241610;
-    --dropdown-background-hover: #2e1d15;
-    --button-background: #332018;
-    --button-background-hover: #b95c33;
-    --background-modifier-border: #3b251b;
-    --background-modifier-border-hover: #b95c33;
-    --toggle-thumb-color: var(--background-primary);
-}
+
 
 .theme-dark.viridian-regalia {
     --background-primary: #1a241c;
