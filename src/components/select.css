@@ -127,3 +127,8 @@ select option:checked:hover {
   scrollbar-color: hsla(var(--interactive-accent-hsl), 0.3) var(--dropdown-background-hover);
   scrollbar-width: 10px;
 }
+
+
+.is-phone select option {
+  padding: 20px;
+}

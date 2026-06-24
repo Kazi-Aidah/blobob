@@ -1,4 +1,4 @@
-.tab-float {
+.tab-float:not(.is-mobile) {
     .sidebar-toggle-button.mod-left {
         background-color: var(--background-primary);
         border-bottom: none;

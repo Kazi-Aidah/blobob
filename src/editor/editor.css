@@ -217,3 +217,60 @@ mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox=
     font-size: larger;
 }
 
+
+/* Center everything everywhere (but NOT code blocks) */
+.center-all-lines h1,
+.center-all-lines h2,
+.center-all-lines h3,
+.center-all-lines h4,
+.center-all-lines h5,
+.center-all-lines h6,
+.center-all-lines p,
+.center-all-lines img,
+.center-all-lines video,
+.center-all-lines audio,
+.center-all-lines iframe,
+.center-all-lines .cm-image,
+.center-all-lines .internal-embed,
+.center-all-lines .internal-embed.image-embed,
+.center-all-lines .internal-embed.image-embed img,
+.center-all-lines .media-embed,
+.center-all-lines .image-embed,
+.center-all-lines .cm-line:not(.HyperMD-codeblock),
+.center-all-lines .cm-header-1,
+.center-all-lines .cm-header-2,
+.center-all-lines .cm-header-3,
+.center-all-lines .cm-header-4,
+.center-all-lines .cm-header-5,
+.center-all-lines .cm-header-6 {
+  text-align: center;
+}
+
+
+/* cssclass: Center everything (but NOT code blocks) */
+.centerall h1,
+.centerall h2,
+.centerall h3,
+.centerall h4,
+.centerall h5,
+.centerall h6,
+.centerall p,
+.centerall img,
+.centerall video,
+.centerall audio,
+.centerall iframe,
+.centerall .cm-image,
+.centerall .internal-embed,
+.centerall .internal-embed.image-embed,
+.centerall .internal-embed.image-embed img,
+.centerall .media-embed,
+.centerall .image-embed,
+.centerall .cm-line:not(.HyperMD-codeblock),
+.centerall .cm-header-1,
+.centerall .cm-header-2,
+.centerall .cm-header-3,
+.centerall .cm-header-4,
+.centerall .cm-header-5,
+.centerall .cm-header-6 {
+  text-align: center;
+}

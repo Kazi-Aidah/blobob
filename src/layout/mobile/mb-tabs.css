@@ -94,21 +94,6 @@ body.is-mobile .workspace-drawer-tab-options:not(.is-collapsed)
 .workspace-drawer-tab-options-list:not(.is-collapsed) {
     border: 2px solid var(--background-modifier-border-focus);
 }
-
-.prompt, .modal {
-    border-radius: calc(var(--touch-radius-m) + 2px) !important;
-    corner-shape: var(--corner-shape);
-}
-.prompt-input-container {
-    border-radius: var(--touch-radius-m);
-    corner-shape: var(--corner-shape);
-    border: 2px solid var(--background-modifier-border-focus) !important;
-}
-.prompt-input {
-    border-radius: var(--touch-radius-m) !important;
-    corner-shape: var(--corner-shape);
-    border: none !important;
-}
 }
 
 
@@ -120,3 +105,6 @@ body.is-mobile .workspace-drawer-tab-options:not(.is-collapsed)
     margin: 0px !important;
     padding: 0px;
 }
+
+
+

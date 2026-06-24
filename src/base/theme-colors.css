@@ -22,13 +22,14 @@
     --interactive-hover: var(--button-background-hover);
     --background-modifier-form-field: #303439;
     --background-modifier-form-field-hover: #29292d;
-    --background-modifier-border-focus: var(--background-modifier-border-hover);
+
     --dropdown-background: #303439;
     --dropdown-background-hover: #3c4048;
     --button-background: #303439;
     --button-background-hover: #3c4048;
     --background-modifier-border: #31353e;
-    --background-modifier-border-hover: #484848;
+    --background-modifier-border-hover: #46494e;
+    --background-modifier-border-focus: #565d68;
 
     --accent-red: var(--color-red);
     --accent-orange: var(--color-orange);

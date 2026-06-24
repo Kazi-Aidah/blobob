@@ -85,10 +85,15 @@
     border: 2px solid var(--background-modifier-border-focus);
     corner-shape: var(--corner-shape);
 }
-.is-mobile .menu-group:has(.menu-item + .menu-item) .menu-item:not(:last-child) {
-  border-bottom: 2px solid var(--background-modifier-border-hover);
-}
+/* .is-mobile .menu-group:has(.menu-item + .menu-item) .menu-item:not(:last-child) {
+} */
 .is-mobile .menu-group {
     border-radius: var(--touch-radius-xs);
     corner-shape: var(--corner-shape);
+}
+
+/* tablet */
+.is-mobile.is-tablet .menu-item {
+    background-color: var(--interactive-normal);
+    padding: 6px 12px;
 }

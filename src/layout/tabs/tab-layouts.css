@@ -151,6 +151,11 @@ body:not(.tab-none):not(.tab-float):not(.tab-lined):not(.tab-contained) {
 .tab-float {
   --system-status-background: var(--background-primary);
 
+  .workspace-leaf-content {
+    border-radius: var(--touch-radius-s);
+    corner-shape: var(--corner-shape)
+  }
+
   /* tab close button */
   .workspace .mod-root .workspace-tab-header-container .workspace-tab-header:hover .workspace-tab-header-inner-close-button {
     margin-left: -6px !important;
@@ -339,20 +344,21 @@ body:is(.is-tablet):not(.compact-tabs):not(.tab-none) .workspace-tab-header.is-a
 /* tablet: tab float header color */
 body:is(.is-tablet):is(.tab-float) .view-header {
   background-color: var(--background-primary-alt) !important;
-  border-bottom: 2px solid var(--background-modifier-border-focus);
+  border-bottom: 2px solid var(--tab-float-border-color);
 }
+
 /* tablet: tab joined header border */
 body:is(.is-tablet):is(.tab-joined) .view-header {
   border-bottom: 2px solid var(--background-modifier-border-hover);
 }
 
 /* desktop: tab float header color */
-body.tab-float .view-header:not(.is-mobile) {
+body:is(.tab-float):not(.is-mobile) .view-header {
   background-color: var(--background-primary-alt) !important;
   border-bottom: 2px solid var(--background-modifier-border);
 }
 /* desktop: tab joined header border */
-body.tab-joined .view-header:not(.is-mobile) {
+body:is(.tab-joined):not(.is-mobile) .view-header {
   border-bottom: 2px solid var(--background-modifier-border-hover);
 }
 
@@ -571,6 +577,9 @@ body:is(.tab-contained):is(.compact-tabs) {
         overflow: visible !important;
     }
 }
+
+
+
 
 
 

@@ -28,7 +28,7 @@
 /* ----- Bordered Folders ----- */
 body:not(.disable-foldy-basic-bordered) {
     .nav-folder {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--interactive-normal);
     border: 2px solid var(--background-modifier-border-focus);
     margin-bottom: 6px !important;
     transition: all 0.2s ease;
@@ -58,8 +58,9 @@ body:not(.disable-foldy-basic-bordered) {
   border-radius: var(--nav-folder-radius) !important;
   corner-shape: var(--corner-shape) !important;
   margin-bottom: 0 !important;
+  border-bottom: 0px solid var(--background-modifier-border);
 
-  transition: border-radius 0.2s ease;
+  transition: border-radius 0.2s ease, background-color 0.2s ease;
 }
 
 .nav-folder {
@@ -154,7 +155,7 @@ body.bold-folders .nav-folder-title {
 
 
 /* vertical folder toggle */
-.verti-folder {
+body:is(.verti-folder):not(.bb-mobile-disable-verti) {
 
     .tree-item-self.nav-folder-title {
         display: flex !important;
@@ -207,7 +208,7 @@ body.bold-folders .nav-folder-title {
 
 
 /* fix verti folders for mobile */
-.is-mobile {
+body:is(.is-mobile):not(.bb-mobile-disable-verti) {
     .nav-folder {
         padding: 10px auto;
     }

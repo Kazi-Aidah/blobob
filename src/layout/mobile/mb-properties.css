@@ -39,3 +39,25 @@
     padding-top: 8px !important;
   }
 }
+
+
+
+/* properties fix */
+.is-mobile .metadata-content {
+    background-color: var(--background-secondary-alt);
+}
+
+.is-mobile .metadata-properties-heading {
+    width: 100%;
+}
+
+@container (max-width: 800px) {
+    .is-mobile .metadata-container {
+        padding-right: 0px !important;
+    }
+
+    .is-mobile .metadata-content {
+        transform: translateX(-12px);
+        width: 100%;
+    }
+}

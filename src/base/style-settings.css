@@ -488,6 +488,13 @@ settings:
     default: false
     addCommand: true
 
+  - id: center-all-lines
+    title: Center all lines
+    description: Use centerall cssclass for centering text for a specific file.
+    type: class-toggle
+    default: false
+    addCommand: true
+
   - id: dim-inactive
     title: Darken inactive lines
     type: class-toggle
@@ -1052,7 +1059,7 @@ settings:
 
   - id: verti-folder
     title: Vertical Folder
-    description: Enabling/Disabling this may cause a folder layout break at first, just "Collapse all" to fix them.
+    description: Enabling/Disabling this may cause a folder layout break at first, just "Collapse all" to fix them or reopen vault.
     type: class-toggle
     default: true
 
@@ -1074,7 +1081,7 @@ settings:
     title: Folders Style
     description: Select the folder style and color accent
     type: class-select
-    default: none
+    default: folder-none
     options:
       - label: None
         value: folder-none
@@ -1351,6 +1358,11 @@ settings:
 
   - id: bb-mobile-hide-tabs
     title: Mobile Navbar - Hide Tabs button
+    type: class-toggle
+    default: false
+
+  - id: bb-mobile-disable-verti
+    title: Disable Vertical Folders on Mobile & Tablets
     type: class-toggle
     default: false
 

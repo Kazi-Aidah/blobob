@@ -85,29 +85,32 @@ body.anim-slower   { --animation-duration: 1400ms; }
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1.2);
     animation-fill-mode: both;
 }
-.vertical-tab-header, .vertical-tab-content-container {
-    animation-name: bottom-slide-in;
-    animation-duration: calc(var(--animation-duration) * 2.6667);
-    animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
-    animation-fill-mode: both;
-}
-.vertical-tab-header-group-items {
-    animation-name: bottom-slide-in;
-    animation-duration: calc(var(--animation-duration) * 2.6667);
-    animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
-    animation-fill-mode: both;
-}
-.vertical-tab-header-group-title {
-    animation-name: bottom-slide-in;
-    animation-duration: calc(var(--animation-duration) * 2.3);
-    animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
-    animation-fill-mode: both;
-}
-.cm-sizer, .markdown-preview-sizer.markdown-preview-section {
-    animation-name: bottom-slide-in;
-    animation-duration: calc(var(--animation-duration) * 2.6667);
-    animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1.2);
-    animation-fill-mode: both;
+
+body:not(.is-phone) {
+    .vertical-tab-header, .vertical-tab-content-container {
+        animation-name: bottom-slide-in;
+        animation-duration: calc(var(--animation-duration) * 2.6667);
+        animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
+        animation-fill-mode: both;
+    }
+    .vertical-tab-header-group-items {
+        animation-name: bottom-slide-in;
+        animation-duration: calc(var(--animation-duration) * 2.6667);
+        animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
+        animation-fill-mode: both;
+    }
+    .vertical-tab-header-group-title {
+        animation-name: bottom-slide-in;
+        animation-duration: calc(var(--animation-duration) * 2.3);
+        animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
+        animation-fill-mode: both;
+    }
+    .cm-sizer, .markdown-preview-sizer.markdown-preview-section {
+        animation-name: bottom-slide-in;
+        animation-duration: calc(var(--animation-duration) * 2.6667);
+        animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1.2);
+        animation-fill-mode: both;
+    }
 }
 
 

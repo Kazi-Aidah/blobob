@@ -19,7 +19,7 @@ body.tab-width {
 
 /* Tab float colours */
 .tab-float-border-none {
-    --tab-float-border-color: 0;
+    --tab-float-border-color: none;
 }
 
 .tab-float-border-less {
@@ -34,3 +34,20 @@ body.tab-width {
     --tab-float-border-color: var(--background-modifier-border-focus);
 }
 
+
+
+/* tab prompt input */
+body:is(.is-mobile):not(.is-tablet) .prompt, .modal {
+    border-radius: calc(var(--touch-radius-m) + 2px) !important;
+    corner-shape: var(--corner-shape);
+}
+body:is(.is-mobile):not(.is-tablet) .prompt-input-container {
+    border-radius: var(--touch-radius-m);
+    corner-shape: var(--corner-shape);
+    border: 2px solid var(--background-modifier-border-focus) !important;
+}
+body:is(.is-mobile):not(.is-tablet) .prompt-input {
+    border-radius: var(--touch-radius-m) !important;
+    corner-shape: var(--corner-shape);
+    border: none !important;
+}

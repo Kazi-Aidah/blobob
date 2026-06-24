@@ -24,16 +24,64 @@
     border: none !important;
 }
 
-.is-mobile .view-actions button:nth-child(3) { /* ellipsis */
-    box-shadow: -2px 0px 0px var(--background-modifier-border-hover);
+.is-mobile .view-actions {
+    background-color: var(--interactive-normal) !important;
+}
+
+.is-tablet .view-actions {
+    margin-top: 3px;
+}
+
+.is-mobile .view-header {
+    background-color: transparent;
+    background: transparent;
+}
+
+.is-tablet .clickable-icon.view-action {
+    height: 100%;
+}
+
+.is-mobile .view-actions {
+    padding: 0px !important;
+}
+
+/* ellipsis */
+.is-mobile .view-actions button:nth-child(3),
+.is-tablet .view-actions button:nth-child(3) {
+    box-shadow: -2px 0px 0px var(--shadow-color);
     border-radius: 0px !important;
     max-width: 30px;
+    border-left: 2px solid var(--shadow-color);
 }
+
+/* colors for mobile & tab */
+.is-mobile {
+    --shadow-color: var(--background-modifier-border-focus);
+}
+.is-tablet {
+    --shadow-color: var(--tab-float-border-color);
+}
+
+/* hide ellipsis border when itself hovered */
+.is-mobile .view-actions button:hover:nth-child(3),
+.is-tablet .view-actions button:hover:nth-child(3) {
+    border-radius: var(--button-radius) !important;
+    box-shadow: 0px 0px 0px var(--shadow-color);
+}
+
+/* hide ellipsis border when reading mode (2) hovered */
+.is-mobile .view-actions button:nth-child(2):hover + button:nth-child(3),
+.is-tablet .view-actions button:nth-child(2):hover + button:nth-child(3) {
+    box-shadow: 0 0 0 var(--shadow-color);
+    border-radius: var(--button-radius) !important;
+    border-left: 0;
+}
+
+
 
 /* make navbar wide + fixed at bottom */
 .is-mobile .mobile-navbar {
-    background-color: var(--background-primary-alt) !important;
-    background: var(--background-primary-alt) !important;
+    background-color: var(--background-secondary-alt);
     border-top: 2px solid var(--background-modifier-border-focus) !important;
     border-radius: 0 !important;
     corner-shape: sharp !important;
@@ -55,7 +103,7 @@
     corner-shape: var(--corner-shape);
 }
 .mobile-toolbar-options-list {
-    background-color: var(--background-secondary) !important;
+    background-color: var(--interactive-normal) !important;
     border-radius: calc(var(--button-radius) + 4px) !important;
     corner-shape: var(--corner-shape);
     border: 2px solid var(--background-modifier-border-focus);
@@ -73,4 +121,12 @@
 /* fix in focus mode */
 .is-tablet .mobile-toolbar {
     margin-top: -10px;
+}
+
+.is-tablet .view-actions {
+    margin-top: 2.5px;
+}
+
+.mobile-tab-switcher-menubar {
+    background-color: var(--background-primary);
 }
