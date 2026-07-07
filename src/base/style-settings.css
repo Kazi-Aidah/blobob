@@ -1398,6 +1398,27 @@ settings:
     level: 1
     collapsed: true
 
+  - id: calendar-styles
+    title: Calendar Styles
+    type: class-select
+    default: none
+    options:
+      - label: None
+        value: none
+      - label: Poster
+        value: calendar-poster
+      - label: calendar-2
+        value: calendar-2
+      - label: calendar-3
+        value: calendar-3
+
+  - id: calendar-full-height
+    title: Make Calendar Full Height
+    description:
+    type: class-toggle
+    addCommand: true
+    default: true
+
   - id: kanban-styling
     title: Enable Kanban styling
     description:
