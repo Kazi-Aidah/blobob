@@ -6107,32 +6107,6 @@ body {
 }
 
 
-/* base internal link underline */
-.markdown-source-view.mod-cm6 .cm-hmd-internal-link, .markdown-rendered .internal-link {
-    text-decoration: none;
-}
-
-/* base menu items */
-.suggestion-item.bases-toolbar-menu-item.is-selected {
-    color: var(--interactive-accent);
-    --checkbox-border-color: var(--interactive-accent);
-}
-
-.suggestion-item.bases-toolbar-menu-item.is-selected svg {
-    color: var(--interactive-accent);
-}
-
-.suggestion-item.bases-toolbar-menu-item.is-selected input[type="checkbox"] {
-    accent-color: var(--interactive-accent);
-    border: 1.5px solid var(--interactive-accent);
-    box-shadow: 0px 0px 2px 2px hsla(var(--interactive-accent-hsl), 0.2);
-}
-
-.suggestion-item.bases-toolbar-menu-item.is-selected input[type="checkbox"]:focus,
-.suggestion-item.bases-toolbar-menu-item.is-selected input[type="checkbox"]:focus-visible {
-    outline: 2px solid var(--interactive-accent);
-    outline-offset: 1px;
-}
 
 /* 
 canvas-sharp-cards
