@@ -1,0 +1,145 @@
+[33mcf9f0a6[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{0}: reset: moving to HEAD~1
+[33m68259ef[m HEAD@{1}: reset: moving to HEAD~1
+[33m48a4870[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{2}: commit: Added Bases Style Settings & Adjustments
+[33m68259ef[m HEAD@{3}: commit: Bases menu items
+[33mcf9f0a6[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{4}: commit (merge): Merge branch 'main' of https://github.com/Kazi-Aidah/blobob
+[33mf3b8934[m HEAD@{5}: commit: Bases menu items
+[33ma5a75eb[m HEAD@{6}: reset: moving to HEAD~1
+[33mf04c849[m HEAD@{7}: commit: Base menu items
+[33ma5a75eb[m HEAD@{8}: commit: Added More Calendar Styles
+[33m74e71cb[m HEAD@{9}: commit: Calendar Poster Style
+[33md5b448e[m HEAD@{10}: commit: Improved Properties
+[33m54c3c19[m HEAD@{11}: commit: Fixed subfolder focus
+[33m7644bda[m HEAD@{12}: commit: Update manifest again
+[33mcb70ed0[m[33m ([m[1;33mtag: [m[1;33m0.2.1[m[33m)[m HEAD@{13}: commit: update manifest
+[33m866780a[m[33m ([m[1;33mtag: [m[1;33m0.2.0[m[33m)[m HEAD@{14}: checkout: moving from main to main
+[33m866780a[m[33m ([m[1;33mtag: [m[1;33m0.2.0[m[33m)[m HEAD@{15}: commit: Fix: name casing
+[33m0723023[m HEAD@{16}: commit: Fix
+[33me52ba40[m HEAD@{17}: commit: Fix: Missing semicolon...
+[33m133f0a9[m HEAD@{18}: commit: Fix mask
+[33m714df54[m HEAD@{19}: commit: Fix name casing
+[33m551ded8[m HEAD@{20}: commit: Merge 0.2.0
+[33mba783cf[m[33m ([m[1;31morigin/reworkjune26[m[33m, [m[1;31mblobob/reworkjune26[m[33m, [m[1;32mreworkjune26[m[33m)[m HEAD@{21}: checkout: moving from reworkjune26 to main
+[33mba783cf[m[33m ([m[1;31morigin/reworkjune26[m[33m, [m[1;31mblobob/reworkjune26[m[33m, [m[1;32mreworkjune26[m[33m)[m HEAD@{22}: checkout: moving from main to reworkjune26
+[33mba783cf[m[33m ([m[1;31morigin/reworkjune26[m[33m, [m[1;31mblobob/reworkjune26[m[33m, [m[1;32mreworkjune26[m[33m)[m HEAD@{23}: merge reworkjune26: Fast-forward
+[33m7f31390[m[33m ([m[1;33mtag: [m[1;33m0.1.0[m[33m, [m[1;31mblobob/main[m[33m, [m[1;31mblobob/HEAD[m[33m)[m HEAD@{24}: checkout: moving from reworkjune26 to main
+[33mba783cf[m[33m ([m[1;31morigin/reworkjune26[m[33m, [m[1;31mblobob/reworkjune26[m[33m, [m[1;32mreworkjune26[m[33m)[m HEAD@{25}: checkout: moving from reworkjune26 to reworkjune26
+[33mba783cf[m[33m ([m[1;31morigin/reworkjune26[m[33m, [m[1;31mblobob/reworkjune26[m[33m, [m[1;32mreworkjune26[m[33m)[m HEAD@{26}: commit: Removed Duplicates
+[33ma973650[m HEAD@{27}: commit: Updated Readme
+[33m299b6b7[m HEAD@{28}: commit: style: disable settingstab animations on mobile and refactor color theme
+[33mce9ac7c[m HEAD@{29}: commit: Fix bullet visibility
+[33m3a6216b[m HEAD@{30}: commit: Fixed Underlined & Contained tab sidebar tabs
+[33m9720e3d[m HEAD@{31}: commit: Added Underlined & Contained tabs.
+[33m63841ff[m HEAD@{32}: commit: Replace animations slider with dropdown
+[33m2fbf88b[m HEAD@{33}: commit: Animation Slider Fix
+[33m9daedc6[m HEAD@{34}: commit: Update border colours
+[33mbb3eef6[m HEAD@{35}: commit: refactor(styles): optimize animations and update default settings
+[33ma6f62d0[m HEAD@{36}: checkout: moving from main to reworkjune26
+[33m7f31390[m[33m ([m[1;33mtag: [m[1;33m0.1.0[m[33m, [m[1;31mblobob/main[m[33m, [m[1;31mblobob/HEAD[m[33m)[m HEAD@{37}: reset: moving to 7f31390
+[33ma6f62d0[m HEAD@{38}: checkout: moving from main to main
+[33ma6f62d0[m HEAD@{39}: checkout: moving from reworkjune26 to main
+[33ma6f62d0[m HEAD@{40}: checkout: moving from main to reworkjune26
+[33ma6f62d0[m HEAD@{41}: checkout: moving from main to main
+[33ma6f62d0[m HEAD@{42}: commit: Completely Reworked theme
+[33m7f31390[m[33m ([m[1;33mtag: [m[1;33m0.1.0[m[33m, [m[1;31mblobob/main[m[33m, [m[1;31mblobob/HEAD[m[33m)[m HEAD@{43}: commit: Forcing + Improvements + Fixed #5 & #6
+[33me9ef2ee[m HEAD@{44}: commit: Added compact tabs, fixed statusbar hover
+[33m64c418a[m HEAD@{45}: commit: uncomment tab order
+[33m991be6a[m HEAD@{46}: commit: fix: right sidedock
+[33m09af502[m HEAD@{47}: commit: refactor: restructure css source files, update build tooling + mobile fix
+[33mff4a346[m HEAD@{48}: commit: feat: improved basic bordered folder
+[33m25207de[m HEAD@{49}: commit: forgot to build
+[33ma38a25f[m HEAD@{50}: commit: refactor(ui): restructure CSS and update plugin settings
+[33m8244370[m HEAD@{51}: commit: feat(blobob): add initial project setup
+[33m7b1dd6e[m HEAD@{52}: commit: bug: Fixed Tab Close Button Visibility
+[33maf88d10[m HEAD@{53}: commit: feat: Button radius affects tab styling properly
+[33mae4df9e[m HEAD@{54}: commit: Fix mistakes
+[33m1ee723e[m HEAD@{55}: commit: Styled Style Settings
+[33m3f13f88[m HEAD@{56}: commit: Kanban fixes
+[33m0b2101a[m HEAD@{57}: commit: Remove internal link underline
+[33ma09fd10[m HEAD@{58}: commit: Added popover styling
+[33m3623c65[m HEAD@{59}: commit: Added Image Captions support
+[33m1fd535a[m HEAD@{60}: commit: Added Kanban Styling support
+[33m166eea2[m HEAD@{61}: commit: Improved Hexagon Button Radius
+[33m1335189[m HEAD@{62}: commit: Styled Notice
+[33m2152020[m HEAD@{63}: commit: Tiny fix
+[33m7cabb23[m HEAD@{64}: commit: Margin
+[33mdc9d814[m HEAD@{65}: commit: Bug fixes
+[33me4e9595[m HEAD@{66}: commit: New features:
+[33md710fa5[m HEAD@{67}: commit: FIXED YAY! sidedock button when ribbon is toggled on or off looks pretty
+[33m981fe2d[m HEAD@{68}: commit: remove bg color on left sidebar button when ribbon is hidden
+[33mc50a929[m HEAD@{69}: commit: Fixed text transform of special view title
+[33m3c0d6cb[m HEAD@{70}: checkout: moving from main to main
+[33m3c0d6cb[m HEAD@{71}: commit: Added Ribbon styles and fixed sidebar dock icons
+[33me2810f1[m HEAD@{72}: commit: Fixed custom checkboxes using wrong face in Reading Mode.
+[33ma996303[m HEAD@{73}: commit: Added special view title
+[33m9e5b44f[m HEAD@{74}: commit: Exclude .view-header buttons
+[33mfa92c2f[m HEAD@{75}: commit: Added button & select styles
+[33m1ad5ba6[m HEAD@{76}: commit: Update readme with active line prefix gif
+[33ma10e30e[m HEAD@{77}: commit: Added Highlight options in style settings
+[33mfd54970[m HEAD@{78}: commit: Fixed pinned tab cutoff
+[33m16f5a8b[m HEAD@{79}: commit: Fix theme count
+[33m895e0a5[m HEAD@{80}: commit: Updated Readme with Cold Memory and Green Road themages
+[33m52ad0fb[m HEAD@{81}: commit: Added Cold memory theme
+[33m799ae0e[m HEAD@{82}: commit: Orgazed style settings + added active line prefix settings
+[33mdbc006e[m HEAD@{83}: commit: Added disable animation settings + animation speed slider + view title and metadata key case selects
+[33m2393b84[m HEAD@{84}: commit: Updated Pinned tabs readme & fixed default pinned tab positioning
+[33m5372f05[m HEAD@{85}: commit: Fix green road
+[33m6eab474[m HEAD@{86}: commit: Fix form field colors
+[33m8d1cf0e[m HEAD@{87}: commit: Fixed Pinned Tabs animation & Code bg
+[33m17c253d[m HEAD@{88}: commit: Green Road: Added Color variation for mod cta + Fixed input field color
+[33m08e8834[m HEAD@{89}: commit: Added Green Road & Red Forest Themes
+[33m4003865[m HEAD@{90}: commit: Added Style Settings to color min-max titlebar icons
+[33m0376b71[m HEAD@{91}: commit: Clickable icon animations
+[33m2cb8f07[m HEAD@{92}: commit: Vertical Tab padding adjust
+[33m2665340[m HEAD@{93}: commit: Fixed Bubble Pin Icons
+[33m20be411[m HEAD@{94}: commit: Fixed pinned tabs
+[33m351f31b[m HEAD@{95}: pull --tags origin main: Merge made by the 'ort' strategy.
+[33m747fb0e[m HEAD@{96}: commit: fix icon size
+[33m85d1e60[m HEAD@{97}: commit: Improved Readme
+[33m94c2b05[m HEAD@{98}: commit: Added Color Images in Readme
+[33m74f8270[m HEAD@{99}: commit: Added multiple themes
+[33m0510e98[m HEAD@{100}: commit: Fixed Sidedock tabs & Added Canvas Styling
+[33mffe46f5[m HEAD@{101}: commit: Added Golden Earth, Muted Green and Forest Green Dark Themes
+[33m807a15d[m HEAD@{102}: commit: added bubble tabs gif
+[33m1f18fbd[m HEAD@{103}: commit: Fixed close button color
+[33m20e209a[m HEAD@{104}: commit: Added Bubble Layout + Bubble Color Options
+[33mc3c7662[m HEAD@{105}: commit: fixed weird width
+[33m0383fba[m HEAD@{106}: commit: Fixed variable text issue
+[33meece93b[m HEAD@{107}: pull --tags origin main: Merge made by the 'ort' strategy.
+[33m43ed55a[m HEAD@{108}: commit: Changing to old Vertical Tab animation & updated callout to use obsidian variables
+[33mbdf8a42[m HEAD@{109}: commit: Updated Readme
+[33m10e1337[m HEAD@{110}: commit: Added 22 Light Themes
+[33mc681955[m HEAD@{111}: commit: Fixed Tab Cutoff
+[33m632cc99[m HEAD@{112}: commit: Bettered vertical tabs animation
+[33m75d727a[m HEAD@{113}: commit: Fixed button
+[33m748de3c[m HEAD@{114}: commit: Globalized Button Styles
+[33md54f578[m HEAD@{115}: commit: Added More Themes
+[33m97a3715[m HEAD@{116}: commit: Text Input Boxes adjustments
+[33m8a2817d[m HEAD@{117}: commit: Fixed Button styles
+[33mfa7e35e[m HEAD@{118}: commit: Fix Images in Callouts
+[33m36b6684[m HEAD@{119}: commit: Added Mobile view header adjustments & menu item styling
+[33m4186a34[m HEAD@{120}: commit: added blockquote styling
+[33mfbd2588[m HEAD@{121}: commit: Made all buttons use the chosen radius properly
+[33m6283c9d[m HEAD@{122}: commit: remobve non-circular state of clickable icons
+[33m7f8ad31[m HEAD@{123}: commit: Added Radius Controls
+[33m4f93d3a[m HEAD@{124}: commit: bettered properties animation
+[33m402bdef[m HEAD@{125}: commit: sidebar file properties bg fix
+[33m749aaab[m HEAD@{126}: commit: Updated Readme
+[33m4d06adc[m HEAD@{127}: commit: Added Themes + Per Heading Colors
+[33m68d789a[m HEAD@{128}: commit: cssclasses-tag fix
+[33me50d48e[m HEAD@{129}: commit: fixed codeblock
+[33m9c80cc7[m HEAD@{130}: commit: added dim inactive lines toggle
+[33m2e4aba6[m HEAD@{131}: commit: pinned tab close button isolation
+[33meceb70f[m HEAD@{132}: commit: Vertical Tabs Plugin Fix
+[33m16d2e14[m HEAD@{133}: commit: Tab Close button Animation
+[33m59ffad2[m HEAD@{134}: commit: Fixed Sidebar tabs - icon disappearing
+[33mac19776[m HEAD@{135}: commit: Fixed Pin Tab icon poisition + tab padding animation + active tab LR margin
+[33m8e7ba2a[m HEAD@{136}: commit: Better tab animation + close button order change. (close button shows instead of icon on tab hover.)
+[33me811454[m HEAD@{137}: commit: added why blobob in readme
+[33m6adabde[m HEAD@{138}: commit: screenshot size fix
+[33ma3b9fdf[m HEAD@{139}: commit: added high resolution banner to README
+[33m28f8ff0[m HEAD@{140}: commit: screenshot fix
+[33m2a69181[m HEAD@{141}: pull --tags origin main: Fast-forward
+[33m44fea3b[m HEAD@{142}: commit: Added README
+[33m84cf231[m HEAD@{143}: pull origin main --allow-unrelated-histories: Merge made by the 'ort' strategy.
+[33ma705cea[m HEAD@{144}: commit (initial): add theme.css
