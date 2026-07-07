@@ -1398,22 +1398,49 @@ settings:
     level: 1
     collapsed: true
 
-  - id: calendar-styles
-    title: Calendar Styles
+  - id: calendar-today-styles
+    title: Calendar - Today Colour
     type: class-select
-    default: none
+    default: calendar-today-accent-border
     options:
       - label: None
         value: none
-      - label: Poster
+      - label: Mono
+        value: calendar-today-mono
+      - label: Mono + Border
+        value: calendar-today-mono-border
+      - label: Accent
+        value: calendar-today-accent
+      - label: Accent + Border
+        value: calendar-today-accent-border
+      - label: Solid
+        value: calendar-today-solid
+
+  - id: calendar-styles
+    title: Calendar - Month Styles
+    type: class-select
+    default: calendar-no-lines
+    options:
+      - label: No lines
+        value: calendar-no-lines
+      - label: Table Poster
         value: calendar-poster
-      - label: calendar-2
-        value: calendar-2
-      - label: calendar-3
-        value: calendar-3
+      - label: Horizontal Lines only
+        value: calendar-hor-lined
+      - label: Vertical Lines only
+        value: calendar-ver-lined
+      - label: Vertical Lines only
+        value: calendar-ver-lined
 
   - id: calendar-full-height
-    title: Make Calendar Full Height
+    title: Calendar - Make Month Full Height
+    description:
+    type: class-toggle
+    addCommand: true
+    default: true
+
+  - id: calendar-hide-nav
+    title: Calendar - Show Nav only on hover
     description:
     type: class-toggle
     addCommand: true
