@@ -28,12 +28,19 @@ body:not(.disable-extra-animations) {
     animation-fill-mode: both;
 }
 
-.suggestion-item.is-selected {
+.prompt-results .suggestion-item.is-selected {
     animation-name: bottom-slide-in-small;
     animation-duration: calc(var(--animation-duration) * 1.667);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
     animation-fill-mode: both;
 }
+
+/* .suggestion-item.is-selected {
+    animation-name: bottom-slide-in-small;
+    animation-duration: calc(var(--animation-duration) * 1.667);
+    animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
+    animation-fill-mode: both;
+} */
 
 .menu {
     animation-name: bottom-slide-in;
@@ -148,7 +155,7 @@ body:not(.is-phone) {
     0% {
         opacity: 0;
 
-        transform: translateY(50px);
+        transform: translateY(10px);
     }
 
     25% {

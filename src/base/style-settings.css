@@ -1421,6 +1421,8 @@ settings:
     type: class-select
     default: calendar-no-lines
     options:
+      - label: None
+        value: calendar-none
       - label: No lines
         value: calendar-no-lines
       - label: Table Poster
