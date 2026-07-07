@@ -11,6 +11,8 @@ body.anim-normal   { --animation-duration: 600ms; }
 body.anim-slow     { --animation-duration: 900ms; }
 body.anim-slower   { --animation-duration: 1400ms; }
 
+body:not(.disable-extra-animations) {
+
 /* anims */
 .modal, .prompt {
     animation-name: bottom-slide-in;
@@ -47,37 +49,7 @@ body.anim-slower   { --animation-duration: 1400ms; }
     animation-fill-mode: both;
 }
 
-@keyframes bottom-slide-in {
-    0% {
-        opacity: 0;
 
-        transform: translateY(100px);
-    }
-
-    25% {
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-@keyframes bottom-slide-in-small {
-    0% {
-        opacity: 0;
-
-        transform: translateY(50px);
-    }
-
-    25% {
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
 
 .modal-close-button.mod-raised.clickable-icon {
     z-index: 2000;
@@ -140,6 +112,54 @@ body:not(.is-phone) {
 }
 
 
+/* .workspace-split.mod-horizontal.mod-sidedock.mod-right-split {
+    animation: right-slide-in 0.6s cubic-bezier(0.17, 0.86, 0.17, 1) both;
+} */
+
+.workspace-split.mod-horizontal.mod-sidedock.mod-right-split .tree-item-self,
+.workspace-split.mod-horizontal.mod-sidedock.mod-right-split .nav-folder,
+.workspace-split.mod-horizontal.mod-sidedock.mod-right-split .nav-buttons-container,
+.workspace-split.mod-horizontal.mod-sidedock.mod-right-split .view-content {
+    animation-name: right-slide-in;
+    animation-duration: calc(var(--animation-duration) * 1.6667);
+    animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
+    animation-fill-mode: both;
+}
+
+}
+
+@keyframes bottom-slide-in {
+    0% {
+        opacity: 0;
+
+        transform: translateY(100px);
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bottom-slide-in-small {
+    0% {
+        opacity: 0;
+
+        transform: translateY(50px);
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
 @keyframes left-scale-slide-in {
     0% {
         opacity: 0;
@@ -170,21 +190,6 @@ body:not(.is-phone) {
     100% {
         transform: translateX(0);
     }
-}
-
-
-/* .workspace-split.mod-horizontal.mod-sidedock.mod-right-split {
-    animation: right-slide-in 0.6s cubic-bezier(0.17, 0.86, 0.17, 1) both;
-} */
-
-.workspace-split.mod-horizontal.mod-sidedock.mod-right-split .tree-item-self,
-.workspace-split.mod-horizontal.mod-sidedock.mod-right-split .nav-folder,
-.workspace-split.mod-horizontal.mod-sidedock.mod-right-split .nav-buttons-container,
-.workspace-split.mod-horizontal.mod-sidedock.mod-right-split .view-content {
-    animation-name: right-slide-in;
-    animation-duration: calc(var(--animation-duration) * 1.6667);
-    animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
-    animation-fill-mode: both;
 }
 
 @keyframes right-scale-slide-in {

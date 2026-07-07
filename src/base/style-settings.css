@@ -1278,6 +1278,12 @@ settings:
     type: class-toggle
     default: false
 
+  - id: disable-extra-animations
+    title: Disable Extra UI Animations 
+    description: Disables animations on sidebars, modals & files
+    type: class-toggle
+    default: false
+
   - id: disable-ui-animations-mobile
     title: MOBILE - Disable button, dropdown & input animations
     description: Disables transition animations on buttons, dropdowns, and input boxes
