@@ -30,8 +30,8 @@
 .properties-2 .metadata-container,
 .properties-4 .metadata-container,
 .properties-6 .metadata-container {
-    border: 2px solid var(--text-faint);
-    box-shadow: 0 3px 0 0 var(--text-faint);
+    border: 2px solid var(--background-modifier-border-focus);
+    box-shadow: 0 3px 0 0 var(--background-modifier-border-focus);
 }
 
 .properties-3 .metadata-container {
@@ -40,8 +40,8 @@
 }
 
 .properties-5 .metadata-container {
-    border-top: 2px solid var(--text-faint);
-    border-bottom: 2px solid var(--text-faint);
+    border-top: 2px solid var(--background-modifier-border-focus);
+    border-bottom: 2px solid var(--background-modifier-border-focus);
 }
 
 /* ===== STYLE 1 ===== */
@@ -70,7 +70,7 @@
 }
 
 .properties-1 .metadata-properties-heading {
-    border-bottom: 2px solid var(--text-faint);
+    border-bottom: 2px solid var(--background-modifier-border-focus);
     width: 100%;
     padding: 0.5em 1.4em 16px;
     transition: border-bottom 0s ease;
@@ -276,39 +276,5 @@
 .meta-key-case-none  .metadata-property-key-input { text-transform: none; }
 
 
-/* ===== RESET FOR FILE PROPERTIES SIDEBAR ===== */
-.workspace-leaf-content[data-type="file-properties"] .metadata-container {
-    background-color: var(--background-primary);
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    padding: 0;
-    margin: 0;
-    transform: none;
-    opacity: 1;
-    animation: none;
-    transition: none;
-    width: auto;
-    justify-content: normal;
-}
 
-.workspace-leaf-content[data-type="file-properties"] .metadata-content {
-    background-color: var(--background-secondary);
-    padding: 0;
-    transform: none;
-    opacity: 1;
-    animation: none;
-    transition: none;
-}
-
-.workspace-leaf-content[data-type="file-properties"] .metadata-properties-heading {
-    border: none;
-    padding: 0;
-    justify-content: normal;
-    text-align: left;
-}
-
-.workspace-leaf-content[data-type="file-properties"] .metadata-property-value {
-    padding-bottom: 10px;
-}
 

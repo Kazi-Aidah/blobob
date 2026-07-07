@@ -1,42 +1,83 @@
+/* sidebar proeprties */
+.multi-select-container {
+    padding: 6px;
+}
+
+/* ===== RESET FOR FILE PROPERTIES SIDEBAR ===== */
+.workspace-leaf-content[data-type="file-properties"] .metadata-container {
+    background-color: var(--background-primary-alt);
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    transform: none;
+    opacity: 1;
+    animation: none;
+    transition: none;
+    width: auto;
+    justify-content: normal;
+}
+
+.workspace-leaf-content[data-type="file-properties"] .metadata-property {
+    padding: 8px;
+}
+
+/* target file properties container in SIDEBAR */
+.workspace-leaf-content[data-type="file-properties"] .metadata-container,
+.workspace-leaf-content[data-type="file-properties"] .metadata-content {
+    background-color: var(--background-secondary-alt);
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+    padding: 8px;
+}
+
+.workspace-leaf-content[data-type="file-properties"] .metadata-property {
+    border-bottom: 1.8px solid var(--background-modifier-border-focus);
+}
+
+
 .cm-scroller {
   container-type: inline-size;
 }
 
 /* Stack metadata vertically when .cm-scroller width is less than 500px */
 @container (max-width: 500px) {
-  .metadata-property {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 8px !important;
-    margin-bottom: 4px !important;
-  }
+  /* exclude file-properties */
+  .workspace-leaf-content:not([data-type="file-properties"]) {
+    .metadata-property {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      margin-bottom: 4px !important;
+    }
 
-  .is-mobile .metadata-property-icon {
-    --icon-size: var(--mobile-font-size);
-  }
+    .is-mobile .metadata-property-icon {
+      --icon-size: var(--mobile-font-size);
+    }
 
-  .metadata-property-key {
-    width: 100% !important;
-    margin-bottom: 0 !important;
-    padding: 0 !important;
-    height: 40px !important;
-  }
+    .metadata-property-key {
+      width: 100% !important;
+      margin-bottom: 0 !important;
+      padding: 0 !important;
+      height: 40px !important;
+    }
 
-  .metadata-property-value {
-    width: 100% !important;
-    margin-left: 0 !important;
-    padding-left: 0 !important;
-  }
+    .metadata-property-value {
+      width: 100% !important;
+      margin-left: 0 !important;
+      padding-left: 0 !important;
+    }
 
-  .multi-select-container {
-    flex-wrap: wrap !important;
-  }
+    .multi-select-container {
+      flex-wrap: wrap !important;
+    }
 
-  .is-mobile .metadata-container {
-    padding: 0 !important;
-    padding-right: 24px !important;
-    padding-top: 8px !important;
+    .is-mobile .metadata-container {
+      padding: 0 !important;
+      padding-right: 24px !important;
+      padding-top: 8px !important;
+    }
   }
 }
 
@@ -62,3 +103,102 @@
     }
 }
 
+
+/* PROPERTIES ADD BUTTON */
+.metadata-add-button.text-icon-button {
+    margin-top: 10px;
+}
+
+/* accented */
+.properties-add-btn-accented .metadata-add-button.text-icon-button {
+    background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
+    color: var(--color-accent);
+    padding: 6px 8px;
+    
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+
+    transition: 0.2s ease background-color;
+}
+
+.properties-add-btn-accented .metadata-add-button.text-icon-button:hover {
+    background-color: hsla(var(--interactive-accent-hsl), 0.3) !important;
+    color: var(--color-accent);
+}
+
+.properties-add-btn-accented .metadata-add-button.text-icon-button:hover .text-button-icon {
+    color: var(--color-accent);
+}
+
+
+/* full-width */
+.properties-add-btn-fullwidth .metadata-add-button.text-icon-button {
+    width: 100%;
+    padding: 6px 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* accented + fullwidth */
+.properties-add-btn-accented-fullwidth .metadata-add-button.text-icon-button {
+    background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
+    color: var(--color-accent);
+
+    width: 100%;
+    padding: 6px 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+
+    transition: 0.2s ease background-color;
+}
+
+.properties-add-btn-accented-fullwidth .metadata-add-button.text-icon-button:hover {
+    background-color: hsla(var(--interactive-accent-hsl), 0.3) !important;
+    color: var(--color-accent);
+}
+
+.properties-add-btn-accented-fullwidth .metadata-add-button.text-icon-button:hover .text-button-icon {
+    color: var(--color-accent);
+}
+
+
+/* hidden */
+.properties-add-btn-hidden .metadata-add-button.text-icon-button {
+    display: none;
+}
+
+
+/* sidebar properties add button */
+.workspace-leaf-content[data-type="file-properties"] .metadata-add-button.text-icon-button {
+    background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
+    color: var(--color-accent);
+
+    width: 100%;
+    padding: 6px 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+
+    transition: 0.2s ease background-color;
+}
+
+.workspace-leaf-content[data-type="file-properties"] .metadata-add-button.text-icon-button:hover {
+    background-color: hsla(var(--interactive-accent-hsl), 0.3) !important;
+    color: var(--color-accent);
+}
+
+.workspace-leaf-content[data-type="file-properties"] .metadata-add-button.text-icon-button:hover .text-button-icon {
+    color: var(--color-accent);
+}

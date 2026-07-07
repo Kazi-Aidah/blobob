@@ -4,6 +4,14 @@
     color: var(--tag-color);
     border-radius: var(--button-radius);
     corner-shape: var(--corner-shape);
+
+    padding: 2px 10px;
+}
+
+.multi-select-pill:hover {
+    background-color: var(--tag-background-hover);
+    color: var(--tag-color);
+    padding-right: 8px;
 }
 
 /* cssclasses */
@@ -18,15 +26,17 @@
 
 .metadata-property[data-property-key="cssclasses"] .multi-select-pill:hover {
     background-color: var(--tag-background-hover);
+    padding-right: 8px;
 }
 
 /* tags */
 .metadata-property[data-property-key="tags"] .multi-select-pill {
-    padding-right: 12px;
+    padding: 4px 2px;
+    padding-right: 10px;
 }
 
 .metadata-property[data-property-key="tags"] .multi-select-pill:hover {
-    padding-right: 2px;
+    padding-right: 8px;
 }
 
 /* x button */
@@ -90,33 +100,6 @@
 }
 
 
-
-/* target file properties sidebar */
-.workspace-leaf-content[data-type="file-properties"] .metadata-container,
-.workspace-leaf-content[data-type="file-properties"] .metadata-content {
-    background-color: var(--background-secondary) !important;
-    border-radius: var(--button-radius) !important;
-    corner-shape: var(--corner-shape);
-    padding: 8px !important;
-}
-
-.workspace-leaf-content[data-type="file-properties"] .metadata-property[data-property-key="tags"] .multi-select-pill {
-    padding-right: 10px;
-}
-
-.workspace-leaf-content[data-type="file-properties"] .metadata-property[data-property-key="tags"] .multi-select-pill:hover {
-    padding-right: 6px;
-}
-
-.workspace-leaf-content[data-type="file-properties"] .metadata-property-value {
-    padding: 4px !important;
-}
-
-.metadata-property,
-.metadata-property-key,
-.metadata-property-value {
-    border: none !important;
-}
 
 
 /* dropdown: property key icon styles: accent color, normal text color, muted color, hidden */
@@ -191,21 +174,3 @@
     color: var(--text-muted) !important;
     display: none !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
