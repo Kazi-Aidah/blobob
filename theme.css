@@ -28,12 +28,19 @@ body:not(.disable-extra-animations) {
     animation-fill-mode: both;
 }
 
-.suggestion-item.is-selected {
+.prompt-results .suggestion-item.is-selected {
     animation-name: bottom-slide-in-small;
     animation-duration: calc(var(--animation-duration) * 1.667);
     animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
     animation-fill-mode: both;
 }
+
+/* .suggestion-item.is-selected {
+    animation-name: bottom-slide-in-small;
+    animation-duration: calc(var(--animation-duration) * 1.667);
+    animation-timing-function: cubic-bezier(0.17, 0.86, 0.17, 1);
+    animation-fill-mode: both;
+} */
 
 .menu {
     animation-name: bottom-slide-in;
@@ -148,7 +155,7 @@ body:not(.is-phone) {
     0% {
         opacity: 0;
 
-        transform: translateY(50px);
+        transform: translateY(10px);
     }
 
     25% {
@@ -1803,6 +1810,8 @@ settings:
     type: class-select
     default: calendar-no-lines
     options:
+      - label: None
+        value: calendar-none
       - label: No lines
         value: calendar-no-lines
       - label: Table Poster
@@ -6067,1159 +6076,6 @@ body.image-captions-styling {
 
 
 
-/* shared: tab close button animation */
-
-/* tab close button */
-.is-mobile .workspace .mod-root .workspace-tab-header .workspace-tab-header-inner-close-button {
-    border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
-    padding: 4px;
-} /* for mobile */
-
-body:not(.is-mobile) .workspace .mod-root .workspace-tab-header .workspace-tab-header-inner-close-button {
-    border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
-    display: flex !important;
-    z-index: 1001 !important;
-    
-    transform: scale(0.1);
-    opacity: 0;
-    width: 0;
-    order: -1;
-
-    margin-left: -8px;
-    margin-right: 2px;
-    
-    transition:
-        transform calc(var(--animation-duration) * 0.6667) cubic-bezier(0.34, 1.56, 0.64, 1),
-        opacity calc(var(--animation-duration) * 0.6667) ease-out,
-        width calc(var(--animation-duration) * 0.6667) ease-out,
-        margin-left calc(var(--animation-duration) * 0.6667) ease-out !important;
-    pointer-events: none;
-    border: 2px solid transparent;
-} /* for desktop */
-
-/* all close buttons */
-.workspace-tab-header-inner-close-button {
-    transform: scale(0.9) !important;
-}
-
-.workspace-tab-header-inner-close-button:hover {
-    background-color: var(--background-modifier-hover) !important;
-    border-radius: calc(var(--button-radius) + 2px) !important;
-    corner-shape: var(--corner-shape);
-}
-
-/* active tab close button */
-.workspace .mod-root .workspace-tab-header.is-active:hover .workspace-tab-header-inner-close-button {
-    transform: scale(0.9);
-    opacity: 1;
-    width: auto;
-    margin-left: -4px !important;
-    margin-top: 1px;
-    margin-bottom: 1px;
-    pointer-events: auto;
-}
-
-/* all inactive tab close button */
-.workspace .mod-root .workspace-tab-header:hover .workspace-tab-header-inner-close-button {
-    transform: scale(0.9);
-    opacity: 1;
-    width: auto;
-    margin-left: -2px !important;
-    pointer-events: auto;
-}
-
-.workspace-tab-header:not(.is-active) .workspace-tab-header-inner-close-button {
-    margin-left: -2px !important;
-}
-
-
-/* tab full width */
-body.tab-full-width .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner { 
-    flex:100%;
-}
-
-body.tab-width {
-    --tab-width: 200px;
-}
-
-/* center tab title */   
-.tab-title-center .workspace-tab-header-inner-title {
-   text-align: center;
-}
-
-/* hide tab close button */
-.hide-tab-close-button .workspace-tab-header-inner-close-button {
-   display: none;
-}
-
-/* Tab float colours */
-.tab-float-border-none {
-    --tab-float-border-color: none;
-}
-
-.tab-float-border-less {
-    --tab-float-border-color: var(--background-modifier-border);
-}
-
-.tab-float-border-hover {
-    --tab-float-border-color: var(--background-modifier-border-hover);
-}
-
-.tab-float-border-focus {
-    --tab-float-border-color: var(--background-modifier-border-focus);
-}
-
-
-
-/* tab prompt input */
-body:is(.is-mobile):not(.is-tablet) .prompt, .modal {
-    border-radius: calc(var(--touch-radius-m) + 2px) !important;
-    corner-shape: var(--corner-shape);
-}
-
-body:is(.is-mobile):not(.is-tablet) .prompt-input-container {
-    border-radius: var(--touch-radius-m);
-    corner-shape: var(--corner-shape);
-    border: 2px solid var(--background-modifier-border-focus) !important;
-}
-
-body:is(.is-mobile):not(.is-tablet) .prompt-input {
-    border-radius: var(--touch-radius-m) !important;
-    corner-shape: var(--corner-shape);
-    border: none !important;
-}
-
-
-body {
-    --titlebar-background-focused: var(--titlebar-background) !important;
-}
-
-/* shared: hide | between tabs */
-.workspace .mod-root .workspace-tab-header-inner::after { display: none; }
-
-/* tabs: close button adjustment */
-.workspace-tab-header .workspace-tab-header-inner-close-button {
-  border-radius: var(--button-radius) !important;
-  corner-shape: var(--corner-shape);
-}
-
-
-/* JOINED TABS */
-body.tab-joined,
-body:not(.tab-none, .tab-float, .tab-lined, .tab-contained) {
-  --system-status-background: var(--titlebar-background);
-
-  /* close button fine tuning */
-  .workspace .mod-root .workspace-tab-header-container .workspace-tab-header.is-active:hover .workspace-tab-header-inner-close-button {
-    transform: scale(0.9);
-    opacity: 1;
-    width: auto;
-    margin-left: -4px !important;
-    margin-bottom: 4px;
-    pointer-events: auto;
-  }
-
-  /* hide tab under line */
-  .workspace-tab-header-container {
-    border-bottom: none;
-    background-color: var(--tab-container-background);
-    box-shadow: inset 0 -1px 0 var(--tab-outline-color);
-  }
-
-  /* base tab */
-  .workspace-tab-header-container .workspace-tab-header {
-    margin: 0;
-
-    --tab-curve: 0px;
-    border-radius: var(--button-radius) var(--button-radius) 0 0;
-    padding-left: 0;
-    box-shadow: 0 0 0 1px transparent;
-    transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.2),
-                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1), margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
-  }
-
-  /* tab active */
-  .workspace-tab-header-container .workspace-tab-header:active {
-    background-color: var(--background-primary);
-    border: 2px solid var(--background-modifier-border);
-    transform: scale(0.8) !important;
-    border-radius: calc(var(--button-radius) + 2px) !important;
-    corner-shape: var(--corner-shape);
-  }
-
-  /* tab actually active (root, left, right) */
-  .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active,
-  .mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active,
-  .mod-root .workspace-tab-header-container .workspace-tab-header.is-active {
-    margin: 5px 5px -10px;
-    padding: 2px 2px 4px;
-    border-radius: var(--button-radius) var(--button-radius) 0 0;
-    corner-shape: var(--corner-shape);
-    border: 1.5px solid var(--background-modifier-border);
-    transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
-                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1), margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
-  }
-
-  .workspace-tab-header-container-inner {
-    margin-top: 8px;
-  }
-
-  /* Main hover effect */
-  .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover {
-    transform: translateY(0);
-    opacity: 1;
-  }
-
-  .workspace-tab-header-container .workspace-tab-header:not(.is-active) {
-    transform: translateY(8px);
-    opacity: 0.6;
-  }
-
-  /* Sidebar hover effects */
-  .workspace .mod-left-split .workspace-tab-header-container .workspace-tab-header:active {
-    z-index: 1001 !important;
-  }
-
-  /* Sidebar not active + its hover */
-  .workspace .mod-left-split .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner,
-  .workspace .mod-right-split .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
-    transform: translateY(4px);
-  }
-
-  /* not active + its hover (root) */
-  .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
-    transform: translateY(0);
-    height: 100%;
-    margin-right: 2px;
-    margin-left: 2px;
-    margin-top: -2px;
-    transition: all calc(var(--animation-duration) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1), background-color 0s ease;
-  }
-
-  .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:hover {
-    background-color: var(--background-primary-alt);
-    transition: all calc(var(--animation-duration) * 1.2) ease-out;
-    border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
-  }
-
-  .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:active {
-    background-color: var(--background-primary);
-    border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
-    padding: 10px 6px;
-    padding-top: -10px;
-    transform: scale(0.9) translateY(4px);
-    transition: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-  }
-
-  .workspace-split.mod-vertical.mod-root .workspace-tab-header-container .workspace-tab-header:not(.is-active, :has(.mod-pinned)) {
-    margin-left: 0;
-    margin-right: -3px;
-  }
-
-  /* left sidebar icon adjustment */
-  .workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header.is-active {
-    padding-top: 5px !important;
-  }
-
-  /* main tabs text adjustment */
-  .workspace-split.mod-vertical.mod-root .workspace-tab-header-container .workspace-tab-header.is-active {
-    padding-top: 0 !important;
-  }
-
-  .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner {
-    transition: all calc(var(--animation-duration) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1);
-  }
-
-  /* sidebar tabs color */
-  .workspace-split.mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active,
-  .workspace-split.mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active {
-    background-color: var(--background-secondary);
-  }
-}
-
-
-/* FLOATING TAB */
-.tab-float {
-  --system-status-background: var(--background-primary);
-
-  .workspace-leaf-content {
-    border-radius: var(--touch-radius-s);
-    corner-shape: var(--corner-shape)
-  }
-
-  /* tab close button */
-  .workspace .mod-root .workspace-tab-header-container .workspace-tab-header:hover .workspace-tab-header-inner-close-button {
-    margin-left: -6px !important;
-  }
-
-  /* tabs themselves */
-  .workspace-tab-header-container .workspace-tab-header-inner {
-    background-color: transparent !important;
-  }
-
-  .workspace-tab-header-container .workspace-tab-header {
-    --tab-curve: 0px;
-    border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
-    filter: brightness(1);
-    margin-top: 1px;
-    margin-bottom: 8px;
-    margin-right: 4px;
-    padding: 2px 3px;
-    transform: translateY(0) scale(0.98);
-    transition: background-color 0.2s ease, box-shadow 0.2s ease,
-                transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.4),
-                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
-                margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
-  }
-
-  .workspace-tab-header-container .workspace-tab-header.is-active {
-    min-height: 24px;
-    background-color: var(--background-primary-alt);
-    box-shadow: 0 0 0 1.6px var(--tab-float-border-color);
-    margin: 1px 10px 8px;
-    padding: 2px 3px;
-    transform: translateY(1px) scale(1);
-  }
-
-  .workspace .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active {
-    margin: 0 3px;
-    padding: 2px 3px;
-    margin-left: 10px !important;
-  }
-
-  .workspace-tab-header-container .workspace-tab-header:not(.is-active) {
-    transform: translateY(4px);
-  }
-
-  .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover {
-    background-color: var(--background-primary-alt);
-    box-shadow: 0 0 0 1.6px var(--tab-float-border-color);
-    padding: 2px;
-    transform: translateY(1px) scale(0.9);
-  }
-
-  .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
-    background-color: var(--background-primary-alt);
-    box-shadow: 0 0 0 1.6px var(--tab-float-border-color);
-    transform: translateY(1px) scale(0.8);
-  }
-
-  /* tab darkening / brightening */
-  &.theme-dark .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover,
-  &.theme-dark .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
-    filter: brightness(1.4);
-  }
-
-  &.theme-light .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover,
-  &.theme-light .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
-    filter: brightness(1.1);
-  }
-
-  /* sidebar tabs */
-  .workspace-split.mod-left-split .workspace-tab-header-container .workspace-tab-header,
-  .workspace-split.mod-right-split .workspace-tab-header-container .workspace-tab-header,
-  .workspace-split.mod-left-split,
-  .workspace-split.mod-left-split .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover,
-  .workspace-split.mod-right-split .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover {
-    border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
-    height: 100%;
-  }
-
-  /* non-sidebar tab inner */
-  .workspace-split.mod-root .workspace-tab-header-container .workspace-tab-header {
-    margin-left: 0 !important;
-  }
-
-  /* all active tabs */
-  .workspace-tab-header-container .workspace-tab-header.is-active,
-  .workspace-split.mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active,
-  .workspace-split.mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active {
-    border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
-    background-color: var(--background-primary-alt) !important;
-  }
-
-  /* layout adjustments */
-  .workspace-tab-header-container {
-    border: none;
-    background-color: var(--background-primary);
-    margin-bottom: -4px;
-  }
-
-  .workspace-tab-container {
-    margin: 6px;
-    border: 2px solid var(--tab-float-border-color);
-    border-radius: var(--modal-radius);
-    corner-shape: var(--corner-shape);
-  }
-
-  .workspace-tabs {
-    background-color: var(--background-primary);
-  }
-
-  /* live preview editor bg */
-  .workspace-leaf, .workspace-leaf-content, .cm-scroller, .workspace-leaf-content .view-header, .empty-state {
-    --file-header-background-focused: var(--background-primary-alt);
-    background-color: var(--background-primary-alt);
-  }
-
-  /* reading editor bg */
-  .markdown-reading-view .markdown-preview-view {
-    --file-header-background-focused: var(--background-primary-alt);
-    background-color: var(--background-primary-alt);
-  }
-
-  .titlebar-button-container {
-    background-color: var(--background-primary) !important;
-  }
-
-  .workspace-sidedock-vault-profile {
-    border-top: 0;
-    background-color: var(--background-primary) !important;
-    margin-top: -8px;
-  }
-
-  /* tab float sidebar tabs */
-  .workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header {
-    margin-top: 2px !important;
-    margin-left: 0;
-    margin-right: 0;
-    transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.2),
-                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1), margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6) !important;
-  }
-
-  .workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover {
-    transform: translateY(-2px) scale(0.9) !important;
-    margin-left: 4px;
-    margin-right: 4px;
-  }
-
-  .workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
-    transform: translateY(1px) scale(0.8) !important;
-  }
-
-  .workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header.is-active {
-    margin-top: 2px !important;
-    margin-left: 4px !important;
-    margin-right: 4px !important;
-    transform: translateY(1px) scale(1) !important;
-    transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.2),
-                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1), margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6) !important;
-  }
-
-  /* move left sidebar tabs left to avoid cutoff */
-  .workspace-split.mod-left-split .workspace-tab-header-container-inner {
-    width: 100%;
-    padding-left: 4px;
-  }
-}
-
-/* tab float sidebar color fix - apply only to workspace drawer */
-.is-mobile .workspace-drawer-active-tab-content .workspace-leaf,
-.is-mobile .workspace-drawer-active-tab-content .workspace-leaf-content,
-.is-mobile .workspace-drawer-active-tab-content .cm-scroller,
-.is-mobile .workspace-drawer-active-tab-content .view-header,
-.is-mobile .workspace-drawer-active-tab-content .empty-state {
-  --file-header-background-focused: var(--background-secondary);
-  background-color: var(--background-secondary) !important;
-}
-
-
-/* tablet when tab joined: active tab color */
-body:is(.is-tablet):is(.tab-joined) .workspace-tab-header.is-active,
-body:is(.is-tablet):is(.tab-joined) .view-header:not(.is-mobile) {
-  background-color: var(--background-primary) !important;
-}
-
-/* tablet: increased active tab height */
-body:is(.is-tablet):not(.compact-tabs, .tab-none) .workspace-tab-header-container {
-  height: 50px;
-}
-
-/* tablet: increased margin around text and x */
-body:is(.is-tablet):not(.compact-tabs, .tab-none) .workspace-tab-header.is-active .workspace-tab-header-inner {
-  margin: auto 5px;
-}
-
-/* tablet: tab float header color */
-body:is(.is-tablet):is(.tab-float) .view-header {
-  background-color: var(--background-primary-alt) !important;
-  border-bottom: 2px solid var(--tab-float-border-color);
-}
-
-/* tablet: tab joined header border */
-body:is(.is-tablet):is(.tab-joined) .view-header {
-  border-bottom: 2px solid var(--background-modifier-border-hover);
-}
-
-/* desktop: tab float header color */
-body:is(.tab-float):not(.is-mobile) .view-header {
-  background-color: var(--background-primary-alt) !important;
-  border-bottom: 2px solid var(--background-modifier-border);
-}
-
-/* desktop: tab joined header border */
-body:is(.tab-joined):not(.is-mobile) .view-header {
-  border-bottom: 2px solid var(--background-modifier-border-hover);
-}
-
-
-/*
-.workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header:not(.is-active) {
-    transition: width 0.3s ease, height 0.3s ease, padding 0.3s ease, margin 0.3s ease, transform 0.3s ease, border-radius 0.3s ease !important;
-}
-
-.workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
-    transition: width 0.3s ease, height 0.3s ease, padding 0.3s ease, margin 0.3s ease !important;
-} */
-
-
-
-/* UNDERLINED TABS */
-body.tab-lined {
-    /* non active tab icon darkening */
-
-    /* .workspace-tab-header
-        .workspace-tab-header-inner-icon {
-        filter: brightness(0.8);
-    } */
-
-    /* tab icon brightening if active */
-    .workspace-tab-header.is-active
-        .workspace-tab-header-inner-icon,
-    .workspace-tab-header:active
-        .workspace-tab-header-inner-icon {
-        filter: brightness(1);
-
-        --icon-color: var(--text-normal);
-        color: var(--text-normal);
-    }
-
-    /* tab */
-    .workspace-tab-header-container .workspace-tab-header,
-    .workspace-tab-header-container .workspace-tab-header.is-active {
-        --tab-curve: 0px;
-        background-color: transparent;
-        box-shadow: none;
-        transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out,
-                transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.4),
-                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
-                margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
-    }
-
-    .workspace-tab-header-container .workspace-tab-header.is-active {
-        border-bottom: 2px solid var(--color-accent);
-        background: 
-            linear-gradient(to bottom, 
-            var(--titlebar-background), 
-            hsl(var(--interactive-accent-hsl), 0.2));
-            
-        padding-bottom: 0;
-        border-radius: 0;
-    }
-
-    body:is(.compact-tabs) .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner {
-        padding-bottom: 4px;
-    }
-
-    .workspace-tab-header-container 
-    .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
-        border-radius: 0;
-        background: 
-            linear-gradient(to bottom, 
-            var(--titlebar-background), 
-            var(--titlebar-background));
-
-        border-bottom: 2px solid hsl(var(--interactive-accent-hsl), 0);
-        transform: translateY(2px);
-        transition: all 0.2s ease-out;
-    }
-
-    .workspace-tab-header-container 
-    .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
-        background: 
-            linear-gradient(to bottom, 
-            var(--titlebar-background), 
-            hsl(var(--interactive-accent-hsl), 0.1));
-        border-bottom: 2px solid hsl(var(--interactive-accent-hsl), 0.1);
-        transform: translateY(-2px);
-    }
-
-    .workspace-tab-header-container 
-    .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner {
-        background: 
-            linear-gradient(to bottom, 
-            var(--titlebar-background), 
-            hsl(var(--interactive-accent-hsl), 0.2));
-        color: var(--text-normal);
-
-        --icon-color: ar(--text-normal) !important;
-        border-bottom: 2px solid hsl(var(--interactive-accent-hsl), 1);
-        transform: translateY(4px);
-    }
-
-    /* sidebar tabs fix */
-    .workspace-split:not(.mod-vertical.mod-root) 
-    .workspace-tab-header-container-inner .workspace-tab-header {
-        margin-bottom: -7px;
-    }
-
-    .workspace-split:not(.mod-vertical.mod-root) 
-    .workspace-tab-header-container 
-    .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
-        transform: translateY(-4px);
-    }
-
-    .workspace-split:not(.mod-vertical.mod-root) 
-    .workspace-tab-header-container 
-    .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner {
-        transform: translateY(0);
-    }
-}
-
-
-
-
-
-
-
-
-/* CONTAINED TABS */
-.tab-contained {
-    .workspace-tab-header-container .workspace-tab-header,
-    .workspace-tab-header-container .workspace-tab-header.is-active {
-        --tab-curve: 0px;
-
-        /* box-shadow: none; */
-    }
-
-    .workspace-tab-header-container {
-        padding: 4px;
-        height: 50px;
-    }
-
-    .workspace-tab-header-container-inner {
-        margin-top: 0;
-        margin-left: 5px;
-        padding-left: 0 !important;
-
-        margin-right: 10px;
-        padding-right: 0 !important;
-
-        border-radius: var(--touch-radius-xs);
-        corner-shape: var(--corner-shape);
-        background-color: var(--background-secondary-alt);
-
-        transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out,
-                transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.4),
-                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
-                margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
-    }
-
-    .workspace-tab-header-container .workspace-tab-header.is-active {
-        margin-top: 2px !important;
-        margin-bottom: 3px !important;
-        margin-left: 4px;
-        margin-right: 4px;
-        border-radius: var(--touch-radius-xxs);
-
-        transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out,
-                transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.4),
-                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
-                margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
-    }
-
-    .workspace-tab-header-container .workspace-tab-header-inner {
-        border-radius: var(--touch-radius-xxs);
-    }
-}
-
-/* contained compact tabs */
-body:is(.tab-contained):is(.compact-tabs) {
-    --header-height: 25px;
-    
-    .workspace-tab-header-container {
-        padding: 4px;
-        height: 32px;
-    }
-
-    .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner {
-        margin-top: -2px;
-    }
-
-    .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner {
-        margin-top: 1px;
-    }
-
-    /* sidebar tabs fix */
-    .workspace-split:not(.mod-vertical.mod-root) 
-    .workspace-tab-header-container-inner {
-        padding-left: 4px !important;
-        padding-right: 4px !important;    
-    }
-
-    .workspace-split:not(.mod-vertical.mod-root) 
-    .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
-        margin-top: 2px !important;
-        transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.2),
-                    padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1), margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6) !important;
-    }
-
-    .workspace-split:not(.mod-vertical.mod-root) 
-    .workspace-tab-header-container .workspace-tab-header.is-active {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-
-    .workspace-split.mod-left-split .workspace-tab-header,
-    .workspace-split.mod-right-split .workspace-tab-header,
-    .workspace-split.mod-left-split .workspace-tab-header.is-active,
-    .workspace-split.mod-right-split .workspace-tab-header.is-active,
-    .workspace-split.mod-left-split .workspace-tab-header:not(.is-active):hover,
-    .workspace-split.mod-right-split .workspace-tab-header:not(.is-active):hover {
-        height: 18.5px !important;
-        width: 30px;
-        padding: auto;
-        overflow: visible !important;
-    }
-}
-
-
-
-
-
-
-
-
-
-/* ==================================================
-   PINNED TABS RELATED CSS
-   ================================================== */
-
-.workspace-tab-header-status-container {
-    z-index: 1001 !important;
-}
-
-/* Pinned tabs: icon only */
-body.pin-icon-only .workspace-tab-header:has(.mod-pinned) {
-    --tab-max-width: 40px !important;
-
-    /* jumping pinned tab tansiiton */    
-
-    /* transition-property: border-radius, max-width, margin, padding, transform, background-color !important;
-    transition-duration:
-        calc(var(--animation-duration) * 1.3333),
-        calc(var(--animation-duration) * 1.3333),
-        calc(var(--animation-duration) * 1.3333),
-        calc(var(--animation-duration) * 1.3333),
-        calc(var(--animation-duration) * 1),
-        0s !important;
-    transition-timing-function:
-        cubic-bezier(0.34, 1.56, 0.64, 1),
-        cubic-bezier(0.34, 1.56, 0.64, 1),
-        cubic-bezier(0.34, 1.56, 0.64, 1),
-        cubic-bezier(0.34, 1.56, 0.64, 1),
-        cubic-bezier(0.68, -0.55, 0.265, 1.55),
-        ease !important; */
-}
-
-.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner-title {
-    display: none;
-}
-
-.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner-close-button {
-    display: none !important;
-}
-
-.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-status-icon {
-    margin-right: 3.5px;
-    pointer-events: none;
-}
-
-.pin-icon-only .workspace-tab-header.is-active:has(.mod-pinned) .workspace-tab-header-status-icon {
-    margin-right: 2.5px;
-}
-
-
-body.pin-icon-only .workspace-tab-header:has(.mod-pinned) 
-.workspace-tab-header-inner-close-button,
-body.pin-icon-only .workspace-tab-header:has(.mod-pinned):hover 
-.workspace-tab-header-inner-close-button {
-    display: none !important;
-}
-
-/* pinned tabs, replace icon pin icon with file icon */
-.workspace-tab-header-status-container { z-index: 1001 !important; }
-
-.pin-icon-only .workspace .mod-root .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner-close-button {
-    display: none !important;
-}
-
-.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner {
-    transition: transform calc(var(--animation-duration) * 1) cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
-}
-
-.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner .workspace-tab-header-inner-icon {
-    transform: scale(1) rotate(0deg);
-    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
-}
-
-.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner:hover .workspace-tab-header-inner-icon {
-    transform: scale(1.1) rotate(5deg);
-    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
-}
-
-.pin-icon-only .workspace-tab-header-inner:has(.mod-pinned):has(.workspace-tab-header-inner-icon.iconic-icon) .workspace-tab-header-status-container {
-    z-index: 1001 !important;
-    display: none;
-}
-
-
-/* ORDERING & TAB POSITION */
-
-/* orders of tab header container */
-.workspace-tab-header-tab-list {
-    order: -1;
-    margin-left: 0;
-    margin-right: 0;
-    gap: 4px;
-}
-
-body:not(.disable-fixed-newtab) {
-    /* NEW TAB BUTTON */
-    .workspace-tab-header-new-tab {
-        /* padding: 0 6px !important; */
-        margin-right: 6px;
-        background: transparent;
-        order: 999; 
-
-        /* force at the end */
-        flex: 0 0 auto;
-    }
-
-    /* RIGHT SIDEBAR TOGGLE */
-    .sidebar-toggle-button.mod-right {
-        order: 1000;
-        flex: 0 0 auto;
-        align-self: center;
-        background: transparent;
-        box-shadow: none;
-        height: 24px;
-        width: 24px;
-        padding: 0;
-    }
-}
-
-/* FIXED LEFT SIDEBAR TOGGLE */
-body.fixed-left-sidebar-button .sidebar-toggle-button.mod-left {
-    order: -1;
-    margin-right: 8px;
-}
-
-/* ===== TAB STYLE — LEFT TOP ===== */
-
-/* Labels Only */
-body.tab-top-left-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space {
-    --sidebar-tab-text-display: inline-block;
-}
-
-body.tab-top-left-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner-icon {
-    display: none;
-}
-
-body.tab-top-left-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner-title {
-    display: inline-block !important;
-}
-
-body.tab-top-left-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner {
-    width: auto !important;
-}
-
-/* Icons + Labels */
-body.tab-top-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space {
-    --sidebar-tab-text-display: inline-block;
-}
-
-body.tab-top-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner-title {
-    display: inline-block !important;
-}
-
-body.tab-top-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner {
-    width: auto !important;
-    gap: 6px;
-}
-
-/* Icons Only */
-body.tab-top-left-icons .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner-title {
-    display: none !important;
-}
-
-/* ===== TAB STYLE — RIGHT TOP ===== */
-
-/* Labels Only */
-body.tab-top-right-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space {
-    --sidebar-tab-text-display: inline-block;
-}
-
-body.tab-top-right-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner-icon {
-    display: none;
-}
-
-body.tab-top-right-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner-title {
-    display: inline-block !important;
-}
-
-body.tab-top-right-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner {
-    width: auto !important;
-}
-
-/* Icons + Labels */
-body.tab-top-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space {
-    --sidebar-tab-text-display: inline-block;
-}
-
-body.tab-top-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner-title {
-    display: inline-block !important;
-}
-
-body.tab-top-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner {
-    width: auto !important;
-    gap: 6px;
-}
-
-/* Icons Only */
-body.tab-top-right-icons .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner-title {
-    display: none !important;
-}
-
-/* ===== TAB STYLE — LEFT (bottom) ===== */
-
-/* Labels Only */
-body.tab-left-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) {
-    --sidebar-tab-text-display: inline-block;
-}
-
-body.tab-left-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-icon {
-    display: none;
-}
-
-body.tab-left-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
-    display: inline-block !important;
-}
-
-body.tab-left-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner {
-    width: auto !important;
-}
-
-/* Icons + Labels */
-body.tab-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) {
-    --sidebar-tab-text-display: inline-block;
-}
-
-body.tab-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
-    display: inline-block !important;
-}
-
-body.tab-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner {
-    width: auto !important;
-    gap: 6px;
-}
-
-/* Icons Only */
-body.tab-left-icons .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
-    display: none !important;
-}
-
-/* ===== TAB STYLE — RIGHT (bottom) ===== */
-
-/* Labels Only */
-body.tab-right-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) {
-    --sidebar-tab-text-display: inline-block;
-}
-
-body.tab-right-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-icon {
-    display: none;
-}
-
-body.tab-right-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
-    display: inline-block !important;
-}
-
-body.tab-right-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner {
-    width: auto !important;
-}
-
-/* Icons + Labels */
-body.tab-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) {
-    --sidebar-tab-text-display: inline-block;
-}
-
-body.tab-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
-    display: inline-block !important;
-}
-
-body.tab-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner {
-    width: auto !important;
-    gap: 6px;
-}
-
-/* Icons Only */
-body.tab-right-icons .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
-    display: none !important;
-}
-
-
-
-
-
-body.tab-joined.compact-tabs { --header-height: 25px; }
-body.tab-float.compact-tabs { --header-height: 30px; }
-body.tab-none.compact-tabs { --header-height: 25px; }
-
-/* shared */
-.compact-tabs .workspace-tab-header-container {
-    --tab-curve: 10px;
-    padding-top: 2px !important;
-    align-items: stretch !important;
-}
-
-.compact-tabs .workspace-tab-header-container-inner,
-.compact-tabs .workspace-tab-header-container-inner {
-    margin-top: 0 !important;
-}
-
-/* all tab margin */
-.compact-tabs .workspace-tab-header.is-active,
-.compact-tabs .workspace-tab-header {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-}
-
-/* ! tab float margin */
-.compact-tabs.tab-float .workspace-tab-header {
-    margin-top: 3px !important;
-    margin-bottom: 3px !important;
-}
-
-.compact-tabs.tab-float .workspace-tab-header.is-active {
-    min-height: 20px;
-    margin-top: 3px !important;
-    margin-bottom: 6px !important;
-}
-
-/* all tab padding */
-body.compact-tabs .workspace-tab-header.is-active .workspace-tab-header-inner {
-  padding-top: 8px !important;
-}
-
-/* ! tab float padding */
-body.tab-float.compact-tabs .workspace-tab-header.is-active .workspace-tab-header-inner {
-  padding-top: 0 !important;
-}
-
-/* joined tabs refinement */
-body.tab-joined.compact-tabs .workspace-tab-header:not(.is-active) {
-  transform: translateY(2px) !important;
-}
-
-/* text + icon overflow: fixes cutoff */
-body.compact-tabs .workspace-tab-header.is-active .workspace-tab-header-inner {
-    overflow: visible !important;
-}
-
-/* sidebar toggle button vertical offset */
-
-/* .compact-tabs .sidebar-toggle-button.mod-left .clickable-icon {
-    margin-bottom: 10px !important;
-    margin-left: 0 !important;
-    margin-top: 0px !important;
-} */
-
-/* line-height fix for tab text/icons */
-.compact-tabs .workspace-tab-header-inner-title,
-.compact-tabs .workspace-tab-header-inner-icon {
-    line-height: 1 !important;
-    vertical-align: middle !important;
-}
-
-/* compact tab + focus mode header adjustment */
-body.compact-tabs.focus-mode .view-header {
-    --header-height: 25px;
-    height: var(--header-height);
-    margin-top: -4px !important;
-}
-
-
-/* sidebar tabs */
-body.tab-float.compact-tabs {
-    .workspace-split.mod-left-split .workspace-tab-header,
-    .workspace-split.mod-right-split .workspace-tab-header,
-    .workspace-split.mod-left-split .workspace-tab-header.is-active,
-    .workspace-split.mod-right-split .workspace-tab-header.is-active,
-    .workspace-split.mod-left-split .workspace-tab-header:not(.is-active):hover,
-    .workspace-split.mod-right-split .workspace-tab-header:not(.is-active):hover {
-        /* padding: 11px 0px !important; */
-        height: 22px;
-        width: 30px;
-        padding: auto;
-        overflow: visible !important;
-    }
-
-    .workspace-split.mod-left-split .workspace-tab-header:not(.is-active),
-    .workspace-split.mod-right-split .workspace-tab-header:not(.is-active) {
-        padding-bottom: 4px !important;
-    }
-}
-
-body.tab-joined.compact-tabs {
-    .workspace-split.mod-left-split .workspace-tab-header.is-active,
-    .workspace-split.mod-right-split .workspace-tab-header.is-active {
-        padding: 11px 0 !important;
-        height: 24px;
-    }
-
-    .workspace-split.mod-left-split .workspace-tab-header:not(.is-active),
-    .workspace-split.mod-right-split .workspace-tab-headre:not(.is-active) {
-        height: 20px;
-    }
-
-    .workspace-split.mod-left-split .workspace-tab-header-inner:active,
-    .workspace-split.mod-right-split .workspace-tab-header-inner:active {
-        height: 20px;
-        box-shadow: none !important;
-        background-color: var(--background-primary) !important;
-    }
-}
-
-body.tab-none.compact-tabs {
-    .workspace-split.mod-left-split .workspace-tab-header,
-    .workspace-split.mod-right-split .workspace-tab-header,
-    .workspace-split.mod-left-split .workspace-tab-header.is-active,
-    .workspace-split.mod-right-split .workspace-tab-header.is-active,
-    .workspace-split.mod-left-split .workspace-tab-header:not(.is-active):hover,
-    .workspace-split.mod-right-split .workspace-tab-header:not(.is-active):hover {
-        /* padding: 11px 0px !important; */
-        height: 19px;
-        width: 34px;
-        padding: auto;
-        overflow: visible !important;
-    }
-
-    .workspace-split.mod-left-split .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
-        padding-bottom: 8px !important;
-    }
-}
-
-
-
-
-
 /* reset bases suggestion item animations */
 .bases-toolbar-menu-container 
 .bases-toolbar-menu-item.is-selected {
@@ -7240,7 +6096,7 @@ body:not(.disable-bases-undim) {
 }
 
 /* hide bases labels */
-.hide-bases-labels .bases-toolbar-item .text-icon-button .text-button-label {
+.hide-bases-labels .bases-toolbar-item:not(.bases-toolbar-views-menu) .text-icon-button .text-button-label {
     display: none !important;
 }
 
@@ -7251,6 +6107,32 @@ body {
 }
 
 
+/* base internal link underline */
+.markdown-source-view.mod-cm6 .cm-hmd-internal-link, .markdown-rendered .internal-link {
+    text-decoration: none;
+}
+
+/* base menu items */
+.suggestion-item.bases-toolbar-menu-item.is-selected {
+    color: var(--interactive-accent);
+    --checkbox-border-color: var(--interactive-accent);
+}
+
+.suggestion-item.bases-toolbar-menu-item.is-selected svg {
+    color: var(--interactive-accent);
+}
+
+.suggestion-item.bases-toolbar-menu-item.is-selected input[type="checkbox"] {
+    accent-color: var(--interactive-accent);
+    border: 1.5px solid var(--interactive-accent);
+    box-shadow: 0px 0px 2px 2px hsla(var(--interactive-accent-hsl), 0.2);
+}
+
+.suggestion-item.bases-toolbar-menu-item.is-selected input[type="checkbox"]:focus,
+.suggestion-item.bases-toolbar-menu-item.is-selected input[type="checkbox"]:focus-visible {
+    outline: 2px solid var(--interactive-accent);
+    outline-offset: 1px;
+}
 
 /* 
 canvas-sharp-cards
@@ -9151,6 +8033,18 @@ body.is-mobile .workspace-drawer-tab-options:not(.is-collapsed)
     }
 }
 
+
+
+.calendar-none {
+    th,
+    td {
+        border: 0px solid transparent;
+        outline: none;
+    }
+}
+
+
+
 /* ===== FULL HEIGHT (stretch calendar) ===== */
 .calendar-full-height {
     .workspace-leaf-content[data-type="calendar"] .container.svelte-pcimu8 {
@@ -9770,6 +8664,1159 @@ button.pcr-button {
     background: none;
     box-shadow: none;
 }
+
+
+
+
+/* shared: tab close button animation */
+
+/* tab close button */
+.is-mobile .workspace .mod-root .workspace-tab-header .workspace-tab-header-inner-close-button {
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+    padding: 4px;
+} /* for mobile */
+
+body:not(.is-mobile) .workspace .mod-root .workspace-tab-header .workspace-tab-header-inner-close-button {
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+    display: flex !important;
+    z-index: 1001 !important;
+    
+    transform: scale(0.1);
+    opacity: 0;
+    width: 0;
+    order: -1;
+
+    margin-left: -8px;
+    margin-right: 2px;
+    
+    transition:
+        transform calc(var(--animation-duration) * 0.6667) cubic-bezier(0.34, 1.56, 0.64, 1),
+        opacity calc(var(--animation-duration) * 0.6667) ease-out,
+        width calc(var(--animation-duration) * 0.6667) ease-out,
+        margin-left calc(var(--animation-duration) * 0.6667) ease-out !important;
+    pointer-events: none;
+    border: 2px solid transparent;
+} /* for desktop */
+
+/* all close buttons */
+.workspace-tab-header-inner-close-button {
+    transform: scale(0.9) !important;
+}
+
+.workspace-tab-header-inner-close-button:hover {
+    background-color: var(--background-modifier-hover) !important;
+    border-radius: calc(var(--button-radius) + 2px) !important;
+    corner-shape: var(--corner-shape);
+}
+
+/* active tab close button */
+.workspace .mod-root .workspace-tab-header.is-active:hover .workspace-tab-header-inner-close-button {
+    transform: scale(0.9);
+    opacity: 1;
+    width: auto;
+    margin-left: -4px !important;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    pointer-events: auto;
+}
+
+/* all inactive tab close button */
+.workspace .mod-root .workspace-tab-header:hover .workspace-tab-header-inner-close-button {
+    transform: scale(0.9);
+    opacity: 1;
+    width: auto;
+    margin-left: -2px !important;
+    pointer-events: auto;
+}
+
+.workspace-tab-header:not(.is-active) .workspace-tab-header-inner-close-button {
+    margin-left: -2px !important;
+}
+
+
+/* tab full width */
+body.tab-full-width .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner { 
+    flex:100%;
+}
+
+body.tab-width {
+    --tab-width: 200px;
+}
+
+/* center tab title */   
+.tab-title-center .workspace-tab-header-inner-title {
+   text-align: center;
+}
+
+/* hide tab close button */
+.hide-tab-close-button .workspace-tab-header-inner-close-button {
+   display: none;
+}
+
+/* Tab float colours */
+.tab-float-border-none {
+    --tab-float-border-color: none;
+}
+
+.tab-float-border-less {
+    --tab-float-border-color: var(--background-modifier-border);
+}
+
+.tab-float-border-hover {
+    --tab-float-border-color: var(--background-modifier-border-hover);
+}
+
+.tab-float-border-focus {
+    --tab-float-border-color: var(--background-modifier-border-focus);
+}
+
+
+
+/* tab prompt input */
+body:is(.is-mobile):not(.is-tablet) .prompt, .modal {
+    border-radius: calc(var(--touch-radius-m) + 2px) !important;
+    corner-shape: var(--corner-shape);
+}
+
+body:is(.is-mobile):not(.is-tablet) .prompt-input-container {
+    border-radius: var(--touch-radius-m);
+    corner-shape: var(--corner-shape);
+    border: 2px solid var(--background-modifier-border-focus) !important;
+}
+
+body:is(.is-mobile):not(.is-tablet) .prompt-input {
+    border-radius: var(--touch-radius-m) !important;
+    corner-shape: var(--corner-shape);
+    border: none !important;
+}
+
+
+body {
+    --titlebar-background-focused: var(--titlebar-background) !important;
+}
+
+/* shared: hide | between tabs */
+.workspace .mod-root .workspace-tab-header-inner::after { display: none; }
+
+/* tabs: close button adjustment */
+.workspace-tab-header .workspace-tab-header-inner-close-button {
+  border-radius: var(--button-radius) !important;
+  corner-shape: var(--corner-shape);
+}
+
+
+/* JOINED TABS */
+body.tab-joined,
+body:not(.tab-none, .tab-float, .tab-lined, .tab-contained) {
+  --system-status-background: var(--titlebar-background);
+
+  /* close button fine tuning */
+  .workspace .mod-root .workspace-tab-header-container .workspace-tab-header.is-active:hover .workspace-tab-header-inner-close-button {
+    transform: scale(0.9);
+    opacity: 1;
+    width: auto;
+    margin-left: -4px !important;
+    margin-bottom: 4px;
+    pointer-events: auto;
+  }
+
+  /* hide tab under line */
+  .workspace-tab-header-container {
+    border-bottom: none;
+    background-color: var(--tab-container-background);
+    box-shadow: inset 0 -1px 0 var(--tab-outline-color);
+  }
+
+  /* base tab */
+  .workspace-tab-header-container .workspace-tab-header {
+    margin: 0;
+
+    --tab-curve: 0px;
+    border-radius: var(--button-radius) var(--button-radius) 0 0;
+    padding-left: 0;
+    box-shadow: 0 0 0 1px transparent;
+    transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.2),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1), margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
+  }
+
+  /* tab active */
+  .workspace-tab-header-container .workspace-tab-header:active {
+    background-color: var(--background-primary);
+    border: 2px solid var(--background-modifier-border);
+    transform: scale(0.8) !important;
+    border-radius: calc(var(--button-radius) + 2px) !important;
+    corner-shape: var(--corner-shape);
+  }
+
+  /* tab actually active (root, left, right) */
+  .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active,
+  .mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active,
+  .mod-root .workspace-tab-header-container .workspace-tab-header.is-active {
+    margin: 5px 5px -10px;
+    padding: 2px 2px 4px;
+    border-radius: var(--button-radius) var(--button-radius) 0 0;
+    corner-shape: var(--corner-shape);
+    border: 1.5px solid var(--background-modifier-border);
+    transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1), margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
+  }
+
+  .workspace-tab-header-container-inner {
+    margin-top: 8px;
+  }
+
+  /* Main hover effect */
+  .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .workspace-tab-header-container .workspace-tab-header:not(.is-active) {
+    transform: translateY(8px);
+    opacity: 0.6;
+  }
+
+  /* Sidebar hover effects */
+  .workspace .mod-left-split .workspace-tab-header-container .workspace-tab-header:active {
+    z-index: 1001 !important;
+  }
+
+  /* Sidebar not active + its hover */
+  .workspace .mod-left-split .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner,
+  .workspace .mod-right-split .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+    transform: translateY(4px);
+  }
+
+  /* not active + its hover (root) */
+  .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+    transform: translateY(0);
+    height: 100%;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-top: -2px;
+    transition: all calc(var(--animation-duration) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1), background-color 0s ease;
+  }
+
+  .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:hover {
+    background-color: var(--background-primary-alt);
+    transition: all calc(var(--animation-duration) * 1.2) ease-out;
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+  }
+
+  .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:active {
+    background-color: var(--background-primary);
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+    padding: 10px 6px;
+    padding-top: -10px;
+    transform: scale(0.9) translateY(4px);
+    transition: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  }
+
+  .workspace-split.mod-vertical.mod-root .workspace-tab-header-container .workspace-tab-header:not(.is-active, :has(.mod-pinned)) {
+    margin-left: 0;
+    margin-right: -3px;
+  }
+
+  /* left sidebar icon adjustment */
+  .workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header.is-active {
+    padding-top: 5px !important;
+  }
+
+  /* main tabs text adjustment */
+  .workspace-split.mod-vertical.mod-root .workspace-tab-header-container .workspace-tab-header.is-active {
+    padding-top: 0 !important;
+  }
+
+  .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner {
+    transition: all calc(var(--animation-duration) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  }
+
+  /* sidebar tabs color */
+  .workspace-split.mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active,
+  .workspace-split.mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active {
+    background-color: var(--background-secondary);
+  }
+}
+
+
+/* FLOATING TAB */
+.tab-float {
+  --system-status-background: var(--background-primary);
+
+  .workspace-leaf-content {
+    border-radius: var(--touch-radius-s);
+    corner-shape: var(--corner-shape)
+  }
+
+  /* tab close button */
+  .workspace .mod-root .workspace-tab-header-container .workspace-tab-header:hover .workspace-tab-header-inner-close-button {
+    margin-left: -6px !important;
+  }
+
+  /* tabs themselves */
+  .workspace-tab-header-container .workspace-tab-header-inner {
+    background-color: transparent !important;
+  }
+
+  .workspace-tab-header-container .workspace-tab-header {
+    --tab-curve: 0px;
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+    filter: brightness(1);
+    margin-top: 1px;
+    margin-bottom: 8px;
+    margin-right: 4px;
+    padding: 2px 3px;
+    transform: translateY(0) scale(0.98);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease,
+                transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.4),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
+                margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
+  }
+
+  .workspace-tab-header-container .workspace-tab-header.is-active {
+    min-height: 24px;
+    background-color: var(--background-primary-alt);
+    box-shadow: 0 0 0 1.6px var(--tab-float-border-color);
+    margin: 1px 10px 8px;
+    padding: 2px 3px;
+    transform: translateY(1px) scale(1);
+  }
+
+  .workspace .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active {
+    margin: 0 3px;
+    padding: 2px 3px;
+    margin-left: 10px !important;
+  }
+
+  .workspace-tab-header-container .workspace-tab-header:not(.is-active) {
+    transform: translateY(4px);
+  }
+
+  .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover {
+    background-color: var(--background-primary-alt);
+    box-shadow: 0 0 0 1.6px var(--tab-float-border-color);
+    padding: 2px;
+    transform: translateY(1px) scale(0.9);
+  }
+
+  .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
+    background-color: var(--background-primary-alt);
+    box-shadow: 0 0 0 1.6px var(--tab-float-border-color);
+    transform: translateY(1px) scale(0.8);
+  }
+
+  /* tab darkening / brightening */
+  &.theme-dark .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover,
+  &.theme-dark .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
+    filter: brightness(1.4);
+  }
+
+  &.theme-light .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover,
+  &.theme-light .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
+    filter: brightness(1.1);
+  }
+
+  /* sidebar tabs */
+  .workspace-split.mod-left-split .workspace-tab-header-container .workspace-tab-header,
+  .workspace-split.mod-right-split .workspace-tab-header-container .workspace-tab-header,
+  .workspace-split.mod-left-split,
+  .workspace-split.mod-left-split .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover,
+  .workspace-split.mod-right-split .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover {
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+    height: 100%;
+  }
+
+  /* non-sidebar tab inner */
+  .workspace-split.mod-root .workspace-tab-header-container .workspace-tab-header {
+    margin-left: 0 !important;
+  }
+
+  /* all active tabs */
+  .workspace-tab-header-container .workspace-tab-header.is-active,
+  .workspace-split.mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active,
+  .workspace-split.mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active {
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+    background-color: var(--background-primary-alt) !important;
+  }
+
+  /* layout adjustments */
+  .workspace-tab-header-container {
+    border: none;
+    background-color: var(--background-primary);
+    margin-bottom: -4px;
+  }
+
+  .workspace-tab-container {
+    margin: 6px;
+    border: 2px solid var(--tab-float-border-color);
+    border-radius: var(--modal-radius);
+    corner-shape: var(--corner-shape);
+  }
+
+  .workspace-tabs {
+    background-color: var(--background-primary);
+  }
+
+  /* live preview editor bg */
+  .workspace-leaf, .workspace-leaf-content, .cm-scroller, .workspace-leaf-content .view-header, .empty-state {
+    --file-header-background-focused: var(--background-primary-alt);
+    background-color: var(--background-primary-alt);
+  }
+
+  /* reading editor bg */
+  .markdown-reading-view .markdown-preview-view {
+    --file-header-background-focused: var(--background-primary-alt);
+    background-color: var(--background-primary-alt);
+  }
+
+  .titlebar-button-container {
+    background-color: var(--background-primary) !important;
+  }
+
+  .workspace-sidedock-vault-profile {
+    border-top: 0;
+    background-color: var(--background-primary) !important;
+    margin-top: -8px;
+  }
+
+  /* tab float sidebar tabs */
+  .workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header {
+    margin-top: 2px !important;
+    margin-left: 0;
+    margin-right: 0;
+    transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.2),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1), margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6) !important;
+  }
+
+  .workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover {
+    transform: translateY(-2px) scale(0.9) !important;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+
+  .workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
+    transform: translateY(1px) scale(0.8) !important;
+  }
+
+  .workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header.is-active {
+    margin-top: 2px !important;
+    margin-left: 4px !important;
+    margin-right: 4px !important;
+    transform: translateY(1px) scale(1) !important;
+    transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.2),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1), margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6) !important;
+  }
+
+  /* move left sidebar tabs left to avoid cutoff */
+  .workspace-split.mod-left-split .workspace-tab-header-container-inner {
+    width: 100%;
+    padding-left: 4px;
+  }
+}
+
+/* tab float sidebar color fix - apply only to workspace drawer */
+.is-mobile .workspace-drawer-active-tab-content .workspace-leaf,
+.is-mobile .workspace-drawer-active-tab-content .workspace-leaf-content,
+.is-mobile .workspace-drawer-active-tab-content .cm-scroller,
+.is-mobile .workspace-drawer-active-tab-content .view-header,
+.is-mobile .workspace-drawer-active-tab-content .empty-state {
+  --file-header-background-focused: var(--background-secondary);
+  background-color: var(--background-secondary) !important;
+}
+
+
+/* tablet when tab joined: active tab color */
+body:is(.is-tablet):is(.tab-joined) .workspace-tab-header.is-active,
+body:is(.is-tablet):is(.tab-joined) .view-header:not(.is-mobile) {
+  background-color: var(--background-primary) !important;
+}
+
+/* tablet: increased active tab height */
+body:is(.is-tablet):not(.compact-tabs, .tab-none) .workspace-tab-header-container {
+  height: 50px;
+}
+
+/* tablet: increased margin around text and x */
+body:is(.is-tablet):not(.compact-tabs, .tab-none) .workspace-tab-header.is-active .workspace-tab-header-inner {
+  margin: auto 5px;
+}
+
+/* tablet: tab float header color */
+body:is(.is-tablet):is(.tab-float) .view-header {
+  background-color: var(--background-primary-alt) !important;
+  border-bottom: 2px solid var(--tab-float-border-color);
+}
+
+/* tablet: tab joined header border */
+body:is(.is-tablet):is(.tab-joined) .view-header {
+  border-bottom: 2px solid var(--background-modifier-border-hover);
+}
+
+/* desktop: tab float header color */
+body:is(.tab-float):not(.is-mobile) .view-header {
+  background-color: var(--background-primary-alt) !important;
+  border-bottom: 2px solid var(--background-modifier-border);
+}
+
+/* desktop: tab joined header border */
+body:is(.tab-joined):not(.is-mobile) .view-header {
+  border-bottom: 2px solid var(--background-modifier-border-hover);
+}
+
+
+/*
+.workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header:not(.is-active) {
+    transition: width 0.3s ease, height 0.3s ease, padding 0.3s ease, margin 0.3s ease, transform 0.3s ease, border-radius 0.3s ease !important;
+}
+
+.workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
+    transition: width 0.3s ease, height 0.3s ease, padding 0.3s ease, margin 0.3s ease !important;
+} */
+
+
+
+/* UNDERLINED TABS */
+body.tab-lined {
+    /* non active tab icon darkening */
+
+    /* .workspace-tab-header
+        .workspace-tab-header-inner-icon {
+        filter: brightness(0.8);
+    } */
+
+    /* tab icon brightening if active */
+    .workspace-tab-header.is-active
+        .workspace-tab-header-inner-icon,
+    .workspace-tab-header:active
+        .workspace-tab-header-inner-icon {
+        filter: brightness(1);
+
+        --icon-color: var(--text-normal);
+        color: var(--text-normal);
+    }
+
+    /* tab */
+    .workspace-tab-header-container .workspace-tab-header,
+    .workspace-tab-header-container .workspace-tab-header.is-active {
+        --tab-curve: 0px;
+        background-color: transparent;
+        box-shadow: none;
+        transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out,
+                transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.4),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
+                margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
+    }
+
+    .workspace-tab-header-container .workspace-tab-header.is-active {
+        border-bottom: 2px solid var(--color-accent);
+        background: 
+            linear-gradient(to bottom, 
+            var(--titlebar-background), 
+            hsl(var(--interactive-accent-hsl), 0.2));
+            
+        padding-bottom: 0;
+        border-radius: 0;
+    }
+
+    body:is(.compact-tabs) .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner {
+        padding-bottom: 4px;
+    }
+
+    .workspace-tab-header-container 
+    .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+        border-radius: 0;
+        background: 
+            linear-gradient(to bottom, 
+            var(--titlebar-background), 
+            var(--titlebar-background));
+
+        border-bottom: 2px solid hsl(var(--interactive-accent-hsl), 0);
+        transform: translateY(2px);
+        transition: all 0.2s ease-out;
+    }
+
+    .workspace-tab-header-container 
+    .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+        background: 
+            linear-gradient(to bottom, 
+            var(--titlebar-background), 
+            hsl(var(--interactive-accent-hsl), 0.1));
+        border-bottom: 2px solid hsl(var(--interactive-accent-hsl), 0.1);
+        transform: translateY(-2px);
+    }
+
+    .workspace-tab-header-container 
+    .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner {
+        background: 
+            linear-gradient(to bottom, 
+            var(--titlebar-background), 
+            hsl(var(--interactive-accent-hsl), 0.2));
+        color: var(--text-normal);
+
+        --icon-color: ar(--text-normal) !important;
+        border-bottom: 2px solid hsl(var(--interactive-accent-hsl), 1);
+        transform: translateY(4px);
+    }
+
+    /* sidebar tabs fix */
+    .workspace-split:not(.mod-vertical.mod-root) 
+    .workspace-tab-header-container-inner .workspace-tab-header {
+        margin-bottom: -7px;
+    }
+
+    .workspace-split:not(.mod-vertical.mod-root) 
+    .workspace-tab-header-container 
+    .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+        transform: translateY(-4px);
+    }
+
+    .workspace-split:not(.mod-vertical.mod-root) 
+    .workspace-tab-header-container 
+    .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner {
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+/* CONTAINED TABS */
+.tab-contained {
+    .workspace-tab-header-container .workspace-tab-header,
+    .workspace-tab-header-container .workspace-tab-header.is-active {
+        --tab-curve: 0px;
+
+        /* box-shadow: none; */
+    }
+
+    .workspace-tab-header-container {
+        padding: 4px;
+        height: 50px;
+    }
+
+    .workspace-tab-header-container-inner {
+        margin-top: 0;
+        margin-left: 5px;
+        padding-left: 0 !important;
+
+        margin-right: 10px;
+        padding-right: 0 !important;
+
+        border-radius: var(--touch-radius-xs);
+        corner-shape: var(--corner-shape);
+        background-color: var(--background-secondary-alt);
+
+        transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out,
+                transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.4),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
+                margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
+    }
+
+    .workspace-tab-header-container .workspace-tab-header.is-active {
+        margin-top: 2px !important;
+        margin-bottom: 3px !important;
+        margin-left: 4px;
+        margin-right: 4px;
+        border-radius: var(--touch-radius-xxs);
+
+        transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out,
+                transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.4),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
+                margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
+    }
+
+    .workspace-tab-header-container .workspace-tab-header-inner {
+        border-radius: var(--touch-radius-xxs);
+    }
+}
+
+/* contained compact tabs */
+body:is(.tab-contained):is(.compact-tabs) {
+    --header-height: 25px;
+    
+    .workspace-tab-header-container {
+        padding: 4px;
+        height: 32px;
+    }
+
+    .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner {
+        margin-top: -2px;
+    }
+
+    .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner {
+        margin-top: 1px;
+    }
+
+    /* sidebar tabs fix */
+    .workspace-split:not(.mod-vertical.mod-root) 
+    .workspace-tab-header-container-inner {
+        padding-left: 4px !important;
+        padding-right: 4px !important;    
+    }
+
+    .workspace-split:not(.mod-vertical.mod-root) 
+    .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+        margin-top: 2px !important;
+        transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.2),
+                    padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1), margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6) !important;
+    }
+
+    .workspace-split:not(.mod-vertical.mod-root) 
+    .workspace-tab-header-container .workspace-tab-header.is-active {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .workspace-split.mod-left-split .workspace-tab-header,
+    .workspace-split.mod-right-split .workspace-tab-header,
+    .workspace-split.mod-left-split .workspace-tab-header.is-active,
+    .workspace-split.mod-right-split .workspace-tab-header.is-active,
+    .workspace-split.mod-left-split .workspace-tab-header:not(.is-active):hover,
+    .workspace-split.mod-right-split .workspace-tab-header:not(.is-active):hover {
+        height: 18.5px !important;
+        width: 30px;
+        padding: auto;
+        overflow: visible !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==================================================
+   PINNED TABS RELATED CSS
+   ================================================== */
+
+.workspace-tab-header-status-container {
+    z-index: 1001 !important;
+}
+
+/* Pinned tabs: icon only */
+body.pin-icon-only .workspace-tab-header:has(.mod-pinned) {
+    --tab-max-width: 40px !important;
+
+    /* jumping pinned tab tansiiton */    
+
+    /* transition-property: border-radius, max-width, margin, padding, transform, background-color !important;
+    transition-duration:
+        calc(var(--animation-duration) * 1.3333),
+        calc(var(--animation-duration) * 1.3333),
+        calc(var(--animation-duration) * 1.3333),
+        calc(var(--animation-duration) * 1.3333),
+        calc(var(--animation-duration) * 1),
+        0s !important;
+    transition-timing-function:
+        cubic-bezier(0.34, 1.56, 0.64, 1),
+        cubic-bezier(0.34, 1.56, 0.64, 1),
+        cubic-bezier(0.34, 1.56, 0.64, 1),
+        cubic-bezier(0.34, 1.56, 0.64, 1),
+        cubic-bezier(0.68, -0.55, 0.265, 1.55),
+        ease !important; */
+}
+
+.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner-title {
+    display: none;
+}
+
+.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner-close-button {
+    display: none !important;
+}
+
+.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-status-icon {
+    margin-right: 3.5px;
+    pointer-events: none;
+}
+
+.pin-icon-only .workspace-tab-header.is-active:has(.mod-pinned) .workspace-tab-header-status-icon {
+    margin-right: 2.5px;
+}
+
+
+body.pin-icon-only .workspace-tab-header:has(.mod-pinned) 
+.workspace-tab-header-inner-close-button,
+body.pin-icon-only .workspace-tab-header:has(.mod-pinned):hover 
+.workspace-tab-header-inner-close-button {
+    display: none !important;
+}
+
+/* pinned tabs, replace icon pin icon with file icon */
+.workspace-tab-header-status-container { z-index: 1001 !important; }
+
+.pin-icon-only .workspace .mod-root .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner-close-button {
+    display: none !important;
+}
+
+.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner {
+    transition: transform calc(var(--animation-duration) * 1) cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+}
+
+.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner .workspace-tab-header-inner-icon {
+    transform: scale(1) rotate(0deg);
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+}
+
+.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner:hover .workspace-tab-header-inner-icon {
+    transform: scale(1.1) rotate(5deg);
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+}
+
+.pin-icon-only .workspace-tab-header-inner:has(.mod-pinned):has(.workspace-tab-header-inner-icon.iconic-icon) .workspace-tab-header-status-container {
+    z-index: 1001 !important;
+    display: none;
+}
+
+
+/* ORDERING & TAB POSITION */
+
+/* orders of tab header container */
+.workspace-tab-header-tab-list {
+    order: -1;
+    margin-left: 0;
+    margin-right: 0;
+    gap: 4px;
+}
+
+body:not(.disable-fixed-newtab) {
+    /* NEW TAB BUTTON */
+    .workspace-tab-header-new-tab {
+        /* padding: 0 6px !important; */
+        margin-right: 6px;
+        background: transparent;
+        order: 999; 
+
+        /* force at the end */
+        flex: 0 0 auto;
+    }
+
+    /* RIGHT SIDEBAR TOGGLE */
+    .sidebar-toggle-button.mod-right {
+        order: 1000;
+        flex: 0 0 auto;
+        align-self: center;
+        background: transparent;
+        box-shadow: none;
+        height: 24px;
+        width: 24px;
+        padding: 0;
+    }
+}
+
+/* FIXED LEFT SIDEBAR TOGGLE */
+body.fixed-left-sidebar-button .sidebar-toggle-button.mod-left {
+    order: -1;
+    margin-right: 8px;
+}
+
+/* ===== TAB STYLE — LEFT TOP ===== */
+
+/* Labels Only */
+body.tab-top-left-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space {
+    --sidebar-tab-text-display: inline-block;
+}
+
+body.tab-top-left-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner-icon {
+    display: none;
+}
+
+body.tab-top-left-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+
+body.tab-top-left-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner {
+    width: auto !important;
+}
+
+/* Icons + Labels */
+body.tab-top-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space {
+    --sidebar-tab-text-display: inline-block;
+}
+
+body.tab-top-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+
+body.tab-top-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner {
+    width: auto !important;
+    gap: 6px;
+}
+
+/* Icons Only */
+body.tab-top-left-icons .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner-title {
+    display: none !important;
+}
+
+/* ===== TAB STYLE — RIGHT TOP ===== */
+
+/* Labels Only */
+body.tab-top-right-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space {
+    --sidebar-tab-text-display: inline-block;
+}
+
+body.tab-top-right-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner-icon {
+    display: none;
+}
+
+body.tab-top-right-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+
+body.tab-top-right-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner {
+    width: auto !important;
+}
+
+/* Icons + Labels */
+body.tab-top-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space {
+    --sidebar-tab-text-display: inline-block;
+}
+
+body.tab-top-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+
+body.tab-top-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner {
+    width: auto !important;
+    gap: 6px;
+}
+
+/* Icons Only */
+body.tab-top-right-icons .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner-title {
+    display: none !important;
+}
+
+/* ===== TAB STYLE — LEFT (bottom) ===== */
+
+/* Labels Only */
+body.tab-left-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) {
+    --sidebar-tab-text-display: inline-block;
+}
+
+body.tab-left-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-icon {
+    display: none;
+}
+
+body.tab-left-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+
+body.tab-left-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner {
+    width: auto !important;
+}
+
+/* Icons + Labels */
+body.tab-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) {
+    --sidebar-tab-text-display: inline-block;
+}
+
+body.tab-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+
+body.tab-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner {
+    width: auto !important;
+    gap: 6px;
+}
+
+/* Icons Only */
+body.tab-left-icons .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
+    display: none !important;
+}
+
+/* ===== TAB STYLE — RIGHT (bottom) ===== */
+
+/* Labels Only */
+body.tab-right-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) {
+    --sidebar-tab-text-display: inline-block;
+}
+
+body.tab-right-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-icon {
+    display: none;
+}
+
+body.tab-right-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+
+body.tab-right-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner {
+    width: auto !important;
+}
+
+/* Icons + Labels */
+body.tab-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) {
+    --sidebar-tab-text-display: inline-block;
+}
+
+body.tab-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+
+body.tab-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner {
+    width: auto !important;
+    gap: 6px;
+}
+
+/* Icons Only */
+body.tab-right-icons .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
+    display: none !important;
+}
+
+
+
+
+
+body.tab-joined.compact-tabs { --header-height: 25px; }
+body.tab-float.compact-tabs { --header-height: 30px; }
+body.tab-none.compact-tabs { --header-height: 25px; }
+
+/* shared */
+.compact-tabs .workspace-tab-header-container {
+    --tab-curve: 10px;
+    padding-top: 2px !important;
+    align-items: stretch !important;
+}
+
+.compact-tabs .workspace-tab-header-container-inner,
+.compact-tabs .workspace-tab-header-container-inner {
+    margin-top: 0 !important;
+}
+
+/* all tab margin */
+.compact-tabs .workspace-tab-header.is-active,
+.compact-tabs .workspace-tab-header {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* ! tab float margin */
+.compact-tabs.tab-float .workspace-tab-header {
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
+}
+
+.compact-tabs.tab-float .workspace-tab-header.is-active {
+    min-height: 20px;
+    margin-top: 3px !important;
+    margin-bottom: 6px !important;
+}
+
+/* all tab padding */
+body.compact-tabs .workspace-tab-header.is-active .workspace-tab-header-inner {
+  padding-top: 8px !important;
+}
+
+/* ! tab float padding */
+body.tab-float.compact-tabs .workspace-tab-header.is-active .workspace-tab-header-inner {
+  padding-top: 0 !important;
+}
+
+/* joined tabs refinement */
+body.tab-joined.compact-tabs .workspace-tab-header:not(.is-active) {
+  transform: translateY(2px) !important;
+}
+
+/* text + icon overflow: fixes cutoff */
+body.compact-tabs .workspace-tab-header.is-active .workspace-tab-header-inner {
+    overflow: visible !important;
+}
+
+/* sidebar toggle button vertical offset */
+
+/* .compact-tabs .sidebar-toggle-button.mod-left .clickable-icon {
+    margin-bottom: 10px !important;
+    margin-left: 0 !important;
+    margin-top: 0px !important;
+} */
+
+/* line-height fix for tab text/icons */
+.compact-tabs .workspace-tab-header-inner-title,
+.compact-tabs .workspace-tab-header-inner-icon {
+    line-height: 1 !important;
+    vertical-align: middle !important;
+}
+
+/* compact tab + focus mode header adjustment */
+body.compact-tabs.focus-mode .view-header {
+    --header-height: 25px;
+    height: var(--header-height);
+    margin-top: -4px !important;
+}
+
+
+/* sidebar tabs */
+body.tab-float.compact-tabs {
+    .workspace-split.mod-left-split .workspace-tab-header,
+    .workspace-split.mod-right-split .workspace-tab-header,
+    .workspace-split.mod-left-split .workspace-tab-header.is-active,
+    .workspace-split.mod-right-split .workspace-tab-header.is-active,
+    .workspace-split.mod-left-split .workspace-tab-header:not(.is-active):hover,
+    .workspace-split.mod-right-split .workspace-tab-header:not(.is-active):hover {
+        /* padding: 11px 0px !important; */
+        height: 22px;
+        width: 30px;
+        padding: auto;
+        overflow: visible !important;
+    }
+
+    .workspace-split.mod-left-split .workspace-tab-header:not(.is-active),
+    .workspace-split.mod-right-split .workspace-tab-header:not(.is-active) {
+        padding-bottom: 4px !important;
+    }
+}
+
+body.tab-joined.compact-tabs {
+    .workspace-split.mod-left-split .workspace-tab-header.is-active,
+    .workspace-split.mod-right-split .workspace-tab-header.is-active {
+        padding: 11px 0 !important;
+        height: 24px;
+    }
+
+    .workspace-split.mod-left-split .workspace-tab-header:not(.is-active),
+    .workspace-split.mod-right-split .workspace-tab-headre:not(.is-active) {
+        height: 20px;
+    }
+
+    .workspace-split.mod-left-split .workspace-tab-header-inner:active,
+    .workspace-split.mod-right-split .workspace-tab-header-inner:active {
+        height: 20px;
+        box-shadow: none !important;
+        background-color: var(--background-primary) !important;
+    }
+}
+
+body.tab-none.compact-tabs {
+    .workspace-split.mod-left-split .workspace-tab-header,
+    .workspace-split.mod-right-split .workspace-tab-header,
+    .workspace-split.mod-left-split .workspace-tab-header.is-active,
+    .workspace-split.mod-right-split .workspace-tab-header.is-active,
+    .workspace-split.mod-left-split .workspace-tab-header:not(.is-active):hover,
+    .workspace-split.mod-right-split .workspace-tab-header:not(.is-active):hover {
+        /* padding: 11px 0px !important; */
+        height: 19px;
+        width: 34px;
+        padding: auto;
+        overflow: visible !important;
+    }
+
+    .workspace-split.mod-left-split .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+        padding-bottom: 8px !important;
+    }
+}
+
 
 
 

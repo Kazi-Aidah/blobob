@@ -114,6 +114,18 @@
     }
 }
 
+
+
+.calendar-none {
+    th,
+    td {
+        border: 0px solid transparent;
+        outline: none;
+    }
+}
+
+
+
 /* ===== FULL HEIGHT (stretch calendar) ===== */
 .calendar-full-height {
     .workspace-leaf-content[data-type="calendar"] .container.svelte-pcimu8 {
