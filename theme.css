@@ -760,6 +760,12 @@ settings:
       - label: Yellow-min Green-max
         value: y-min-g-max
 
+  - id: center-bases-property
+    title: Bases - Center Properties
+    type: class-toggle
+    default: false
+    addCommand: false
+
   - id: disable-bases-undim
     title: Bases - Disable dim toolbar
     type: class-toggle
@@ -770,6 +776,12 @@ settings:
     title: Bases - Hide toolbar labels
     type: class-toggle
     default: true
+    addCommand: false
+
+  - id: hide-bases-cards-label
+    title: Bases - Hide Card labels labels
+    type: class-toggle
+    default: false
     addCommand: false
 
   - id: heading-editor
@@ -838,6 +850,8 @@ settings:
     addCommand: true
     default: active-line-highlight-focused
     options:
+      - label: None
+        value: none
       - label: Highlighted
         value: active-line-highlight
       - label: Highlighted with Borders
@@ -1680,7 +1694,13 @@ settings:
 
   - id: settings-hover
     title: Enable settings item animation
-    description: Disables the hover animation on settings items
+    description: Enables the hover animation on settings items
+    type: class-toggle
+    default: false
+
+  - id: canvas-animation
+    title: Enable Canvas Node animation
+    description: 
     type: class-toggle
     default: false
 
@@ -6076,64 +6096,6 @@ body.image-captions-styling {
 
 
 
-/* reset bases suggestion item animations */
-.bases-toolbar-menu-container 
-.bases-toolbar-menu-item.is-selected {
-  margin: 0 !important;
-  animation: none;
-}
-
-/* undim on hover */
-body:not(.disable-bases-undim) {
-    .bases-header {
-        opacity: 0.5;
-        transition: all 0.2s ease;
-    }
-
-    .bases-header:hover {
-        opacity: 1;
-    }
-}
-
-/* hide bases labels */
-.hide-bases-labels .bases-toolbar-item:not(.bases-toolbar-views-menu) .text-icon-button .text-button-label {
-    display: none !important;
-}
-
-body {
-    --bases-table-row-height: 40px;
-    --metadata-input-padding: 20px 8px;
-    --bases-table-font-size: var(--font-ui-medium);
-}
-
-
-/* base internal link underline */
-.markdown-source-view.mod-cm6 .cm-hmd-internal-link, .markdown-rendered .internal-link {
-    text-decoration: none;
-}
-
-/* base menu items */
-.suggestion-item.bases-toolbar-menu-item.is-selected {
-    color: var(--interactive-accent);
-    --checkbox-border-color: var(--interactive-accent);
-}
-
-.suggestion-item.bases-toolbar-menu-item.is-selected svg {
-    color: var(--interactive-accent);
-}
-
-.suggestion-item.bases-toolbar-menu-item.is-selected input[type="checkbox"] {
-    accent-color: var(--interactive-accent);
-    border: 1.5px solid var(--interactive-accent);
-    box-shadow: 0px 0px 2px 2px hsla(var(--interactive-accent-hsl), 0.2);
-}
-
-.suggestion-item.bases-toolbar-menu-item.is-selected input[type="checkbox"]:focus,
-.suggestion-item.bases-toolbar-menu-item.is-selected input[type="checkbox"]:focus-visible {
-    outline: 2px solid var(--interactive-accent);
-    outline-offset: 1px;
-}
-
 /* 
 canvas-sharp-cards
  */
@@ -6245,23 +6207,24 @@ body.theme-dark {
 
 
 /* canvas node animation */
+.canvas-animation {
+    .canvas-node .canvas-node-container {
+        transform: scale(1);
+        transition: all 0.2s ease-out;
+    }
 
-.canvas-node .canvas-node-container {
-    transform: scale(1);
-    transition: all 0.2s ease-out;
-}
+    .canvas-node:hover .canvas-node-container {
+        transform: scale(1.05);
+    }
 
-.canvas-node:hover .canvas-node-container {
-    transform: scale(1.05);
-}
-
-.canvas-node:active .canvas-node-container {
-    transform: scale(1);
-}
+    .canvas-node:active .canvas-node-container {
+        transform: scale(1);
+    }
 
 
-.canvas-node.is-focused .canvas-node-container {
-  animation: scale-bounce 0.4s ease-out both;
+    .canvas-node.is-focused .canvas-node-container {
+    animation: scale-bounce 0.4s ease-out both;
+    }
 }
 
 @keyframes scale-bounce {
@@ -6281,9 +6244,6 @@ body.theme-dark {
     transform: scale(1);
   }
 }
-
-
-
 
 
 

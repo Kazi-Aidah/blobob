@@ -371,6 +371,12 @@ settings:
       - label: Yellow-min Green-max
         value: y-min-g-max
 
+  - id: center-bases-property
+    title: Bases - Center Properties
+    type: class-toggle
+    default: false
+    addCommand: false
+
   - id: disable-bases-undim
     title: Bases - Disable dim toolbar
     type: class-toggle
@@ -381,6 +387,12 @@ settings:
     title: Bases - Hide toolbar labels
     type: class-toggle
     default: true
+    addCommand: false
+
+  - id: hide-bases-cards-label
+    title: Bases - Hide Card labels
+    type: class-toggle
+    default: false
     addCommand: false
 
   - id: heading-editor
@@ -449,6 +461,8 @@ settings:
     addCommand: true
     default: active-line-highlight-focused
     options:
+      - label: None
+        value: none
       - label: Highlighted
         value: active-line-highlight
       - label: Highlighted with Borders
@@ -1291,7 +1305,13 @@ settings:
 
   - id: settings-hover
     title: Enable settings item animation
-    description: Disables the hover animation on settings items
+    description: Enables the hover animation on settings items
+    type: class-toggle
+    default: false
+
+  - id: canvas-animation
+    title: Enable Canvas Node animation
+    description: 
     type: class-toggle
     default: false
 

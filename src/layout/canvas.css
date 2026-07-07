@@ -109,23 +109,24 @@ body.theme-dark {
 
 
 /* canvas node animation */
+.canvas-animation {
+    .canvas-node .canvas-node-container {
+        transform: scale(1);
+        transition: all 0.2s ease-out;
+    }
 
-.canvas-node .canvas-node-container {
-    transform: scale(1);
-    transition: all 0.2s ease-out;
-}
+    .canvas-node:hover .canvas-node-container {
+        transform: scale(1.05);
+    }
 
-.canvas-node:hover .canvas-node-container {
-    transform: scale(1.05);
-}
-
-.canvas-node:active .canvas-node-container {
-    transform: scale(1);
-}
+    .canvas-node:active .canvas-node-container {
+        transform: scale(1);
+    }
 
 
-.canvas-node.is-focused .canvas-node-container {
-  animation: scale-bounce 0.4s ease-out both;
+    .canvas-node.is-focused .canvas-node-container {
+    animation: scale-bounce 0.4s ease-out both;
+    }
 }
 
 @keyframes scale-bounce {
@@ -145,9 +146,6 @@ body.theme-dark {
     transform: scale(1);
   }
 }
-
-
-
 
 
 
