@@ -326,6 +326,13 @@ settings:
     default: false
     addCommand: true
 
+  - id: canvas-hide-img-border
+    title: Canvas - Hide Image Border
+    description: 
+    type: class-toggle
+    default: false
+    addCommand: false
+
   - id: hide-breadcrumbs
     title: View header - Hide Breadcrumbs
     description: Shows the file name instead of the whole folder path
