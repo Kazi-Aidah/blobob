@@ -326,12 +326,26 @@ settings:
     default: false
     addCommand: true
 
+  - id: canvas-hide-img-label
+    title: Canvas - Hide Image Name or Label
+    description: 
+    type: class-toggle
+    default: false
+    addCommand: true
+
   - id: canvas-hide-img-border
     title: Canvas - Hide Image Border
     description: 
     type: class-toggle
     default: false
-    addCommand: false
+    addCommand: true
+
+  - id: canvas-hide-img-bg
+    title: Canvas - Hide Image Background
+    description: 
+    type: class-toggle
+    default: false
+    addCommand: true
 
   - id: hide-breadcrumbs
     title: View header - Hide Breadcrumbs

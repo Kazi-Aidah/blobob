@@ -715,12 +715,26 @@ settings:
     default: false
     addCommand: true
 
+  - id: canvas-hide-img-label
+    title: Canvas - Hide Image Name or Label
+    description: 
+    type: class-toggle
+    default: false
+    addCommand: true
+
   - id: canvas-hide-img-border
     title: Canvas - Hide Image Border
     description: 
     type: class-toggle
     default: false
-    addCommand: false
+    addCommand: true
+
+  - id: canvas-hide-img-bg
+    title: Canvas - Hide Image Background
+    description: 
+    type: class-toggle
+    default: false
+    addCommand: true
 
   - id: hide-breadcrumbs
     title: View header - Hide Breadcrumbs
@@ -10281,14 +10295,44 @@ body.theme-dark {
 }
 
 /* toggle: Hide Img Node Border unless focused */
-.canvas-hide-img-border .canvas-node:has(.image-embed):not(.is-focused):not(.is-selected) .canvas-node-container,
-.canvas-hide-img-border .canvas-node:has(.image-embed):not(.is-focused):not(.is-selected) .canvas-node-content,
-.canvas-hide-img-border .canvas-node:has(.image-embed):not(.is-focused):not(.is-selected) .canvas-node-content.media-embed,
-.canvas-hide-img-border .canvas-node:has(.image-embed):not(.is-focused):not(.is-selected) img {
+.canvas-hide-img-border 
+.canvas-node:has(> .canvas-node-container > .canvas-node-content.image-embed):not(.is-focused):not(.is-selected) .canvas-node-container,
+.canvas-hide-img-border 
+.canvas-node:has(> .canvas-node-container > .canvas-node-content.image-embed):not(.is-focused):not(.is-selected) .canvas-node-content,
+.canvas-hide-img-border 
+.canvas-node:has(> .canvas-node-container > .canvas-node-content.image-embed):not(.is-focused):not(.is-selected) img {
+    border: 1px solid transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+/* toggle: Hide Img Node bg unless focused */
+.canvas-hide-img-bg 
+.canvas-node:has(> .canvas-node-container > .canvas-node-content.image-embed):not(.is-focused):not(.is-selected) .canvas-node-container,
+.canvas-hide-img-bg 
+.canvas-node:has(> .canvas-node-container > .canvas-node-content.image-embed):not(.is-focused):not(.is-selected) .canvas-node-content.image-embed,
+.canvas-hide-img-bg 
+.canvas-node:has(> .canvas-node-container > .canvas-node-content.image-embed):not(.is-focused):not(.is-selected) img {
     background: none !important;
     border: 1px solid transparent !important;
     outline: none !important;
     box-shadow: none !important;
+}
+
+/* bg gone; border always visible tho */
+.canvas-hide-img-bg 
+.canvas-node:has(> .canvas-node-container > .canvas-node-content.image-embed) .canvas-node-container,
+.canvas-hide-img-bg 
+.canvas-node:has(> .canvas-node-container > .canvas-node-content.image-embed) .canvas-node-content.image-embed,
+.canvas-hide-img-bg 
+.canvas-node:has(> .canvas-node-container > .canvas-node-content.image-embed) img {
+    background: none !important;
+}
+
+/* Hide labels on image-only canvas nodes */
+.canvas-hide-img-label .canvas-node:has(> .canvas-node-container > .canvas-node-content.image-embed) .canvas-node-label {
+    display: none !important;
 }
 
 /* =============
