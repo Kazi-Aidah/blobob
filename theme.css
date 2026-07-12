@@ -10335,6 +10335,16 @@ body.theme-dark {
     display: none !important;
 }
 
+
+/* Canvas Background Contrast */
+.theme-dark {
+   --canvas-background: #00000080;
+}
+
+.theme-light {
+   --canvas-background: #ffffff4f;
+}
+
 /* =============
    CHECKBOXES
 ============= */

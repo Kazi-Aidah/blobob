@@ -195,3 +195,13 @@ body.theme-dark {
 .canvas-hide-img-label .canvas-node:has(> .canvas-node-container > .canvas-node-content.image-embed) .canvas-node-label {
     display: none !important;
 }
+
+
+/* Canvas Background Contrast */
+.theme-dark {
+   --canvas-background: #00000080;
+}
+
+.theme-light {
+   --canvas-background: #ffffff4f;
+}
