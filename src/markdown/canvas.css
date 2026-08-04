@@ -9,7 +9,7 @@ canvas-sharp-cards
 }
 
 .canvas-sharp-cards .canvas-node-container {
-    border: 2.5px solid rgb(var(--canvas-color)) !important;
+    border: 2.5px solid var(--canvas-color) !important;
     border-radius: 0;
 }
 
@@ -65,12 +65,12 @@ canvas-sharp-cards
 /* ===== CANVAS STYLING ===== */
 .theme-light,
 .theme-dark {
-    --canvas-color-6: 172, 124, 196;
-    --canvas-color-5: 105, 147, 194;
-    --canvas-color-4: 87, 147, 100;
-    --canvas-color-3: 255, 221, 140;
-    --canvas-color-2: 229, 156, 88;
-    --canvas-color-1: 215, 97, 76;
+    --canvas-color-6: rgb(172, 124, 196);
+    --canvas-color-5: rgb(105, 147, 194);
+    --canvas-color-4: rgb(87, 147, 100);
+    --canvas-color-3: rgb(255, 221, 140);
+    --canvas-color-2: rgb(229, 156, 88);
+    --canvas-color-1: rgb(215, 97, 76);
 }
 
 .canvas-node:not(.is-themed) .canvas-node-container {
@@ -91,7 +91,7 @@ body.theme-dark {
 }
 
 .canvas-node-container {
-    border: 2.5px solid rgb(var(--canvas-color)) !important;
+    border: 2.5px solid var(--canvas-color) !important;
     border-radius: 10px;
 }
 
@@ -102,7 +102,7 @@ body.theme-dark {
 }
 
 .canvas-node.is-themed .canvas-node-content {
-    background-color: rgb(var(--canvas-color), 0.26) !important;
+    background-color: color-mix(in srgb, var(--canvas-color) 26%, transparent) !important;
 }
 
 
