@@ -9,7 +9,6 @@
   --menu-border-width: var(--border-width);
   --status-bar-border-width: var(--border-width);
 
-
   .workspace-leaf-content {
     border-radius: var(--touch-radius-s);
     corner-shape: var(--corner-shape)
@@ -48,6 +47,10 @@
     margin: 1px 10px 8px;
     padding: 2px 3px;
     transform: translateY(1px) scale(1);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease,
+                transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.4),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
+                margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
   }
 
   .workspace .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active {
@@ -67,6 +70,10 @@
     box-shadow: 0 0 0 var(--border-width) var(--bb-border-color);
     padding: 2px;
     transform: translateY(1px) scale(0.9);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease,
+                transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.4),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
+                margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
   }
 
   .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
@@ -209,7 +216,3 @@
   --file-header-background-focused: var(--bb-workspace-bg);
   background-color: var(--bb-workspace-bg) !important;
 }
-
-
-
-

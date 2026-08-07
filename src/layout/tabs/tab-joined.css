@@ -1,6 +1,6 @@
 /* JOINED TABS */
 body.tab-joined,
-body:not(.tab-none, .tab-float, .tab-lined, .tab-contained) {
+body:not(.tab-none, .tab-float, .tab-lined, .tab-contained, .tab-linewrap, .tab-test) {
   --system-status-background: var(--titlebar-background);
 
   /* close button fine tuning */
