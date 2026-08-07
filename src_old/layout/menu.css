@@ -1,0 +1,104 @@
+
+/* menu & menu items */
+
+.menu {
+    border-radius: calc(var(--button-radius) + 2px);
+    corner-shape: var(--corner-shape);
+    overflow: auto;
+    opacity: 1;
+    transition: all calc(var(--animation-duration) * 0.6667) cubic-bezier(0.175, 0.885, 0.32, 2);
+}
+
+.menu-item.tappable {
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+    padding: 6px 8px;
+    transition: all 0.2s ease;
+}
+
+.menu-item.tappable.selected {
+    color: var(--color-accent);
+    background-color: hsl(var(--interactive-accent-hsl), 0.2);
+}
+
+.menu-item.tappable.selected .menu-item-icon {
+    color: var(--color-accent);
+}
+
+.menu-item.tappable.selected:active {
+    transform: scale(0.9);
+    transition: all 0.2s ease;
+}
+
+
+
+/* colored: delete / remove */
+.menu-item.tappable:is([data-section*="delete"], [data-section*="Delete"], [data-section*="DELETE"],
+                         [data-section*="remove"], [data-section*="Remove"], [data-section*="REMOVE"]):not(.is-disabled),
+.menu-item.tappable.is-warning {
+    color: var(--text-error);
+}
+
+.menu-item.tappable:is([data-section*="delete"], [data-section*="Delete"], [data-section*="DELETE"],
+                         [data-section*="remove"], [data-section*="Remove"], [data-section*="REMOVE"]):not(.is-disabled),
+.menu-item.tappable.is-warning.selected {
+    background-color: rgb(var(--color-red-rgb), 0.3);
+}
+
+.menu-item.tappable:is([data-section*="delete"], [data-section*="Delete"], [data-section*="DELETE"],
+                         [data-section*="remove"], [data-section*="Remove"], [data-section*="REMOVE"]):not(.is-disabled) .menu-item-icon,
+.menu-item.tappable.is-warning .menu-item-icon {
+    color: var(--text-error);
+}
+
+
+/* mobile */
+.is-mobile .menu-item.tappable:not(.menu-group .menu-item.tappable) {
+    border-radius: var(--touch-radius-xs);
+}
+
+.is-mobile .menu-group:has(.menu-item.tappable) {
+    border-radius: var(--touch-radius-xs);
+}
+
+.is-mobile .menu-group:has(.menu-item.tappable) .menu-item.tappable {
+    border-radius: 0;
+}
+
+.is-mobile .menu-group:has(.menu-item.tappable) .menu-item.tappable:first-child {
+    border-top-left-radius: var(--touch-radius-xs);
+    border-top-right-radius: var(--touch-radius-xs);
+}
+
+.is-mobile .menu-group:has(.menu-item.tappable) .menu-item.tappable:last-child {
+    border-bottom-left-radius: var(--touch-radius-xs);
+    border-bottom-right-radius: var(--touch-radius-xs);
+}
+
+/* menu */
+.is-mobile .menu-item {
+    padding: 10px 16px;
+}
+
+.is-mobile .menu-separator {
+    margin: 4px 0;
+}
+
+.is-mobile .menu-group {
+    border: 2px solid var(--background-modifier-border-focus);
+    corner-shape: var(--corner-shape);
+}
+
+/* .is-mobile .menu-group:has(.menu-item + .menu-item) .menu-item:not(:last-child) {
+} */
+.is-mobile .menu-group {
+    border-radius: var(--touch-radius-xs);
+    corner-shape: var(--corner-shape);
+}
+
+/* tablet */
+.is-mobile.is-tablet .menu-item {
+    background-color: var(--interactive-normal);
+    padding: 6px 12px;
+}
+

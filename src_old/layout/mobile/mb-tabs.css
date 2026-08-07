@@ -1,0 +1,111 @@
+.is-tablet .workspace-drawer .clickable-icon:not(.nav-action-button) {
+    background-color: var(--background-secondary-alt);
+    color: var(--text-normal);
+}
+
+.is-tablet .nav-buttons-container {
+    margin-top: 10px;
+}
+
+.is-tablet .workspace-drawer {
+    border-radius: var(--touch-radius-xl) !important;
+    corner-shape: var(--corner-shape);
+    border: 2px solid var(--background-modifier-border-focus) !important;
+}
+
+body {
+    --mobile-font-size: "14px";
+}
+
+body.cm-sizer {
+    font-size: var(--mobile-font-size) !important;
+}
+
+body {
+    --clickable-icon-radius: var(--button-radius);
+    --touch-radius-xxs: calc(var(--button-radius) * 1.25);
+    --touch-radius-xs: calc(var(--button-radius) * 1.5);
+    --touch-radius-s: calc(var(--button-radius) * 1.75);
+    --touch-radius-m: calc(var(--button-radius) * 2);
+    --touch-radius-l: calc(var(--button-radius) * 2.5);
+    --touch-radius-xl: calc(var(--button-radius) * 3);
+    --view-header-action-radius: var(--button-radius);
+    --tab-switcher-preview-shadow: 0 0 0 0 #0000;
+    --tab-switcher-preview-shadow-active: 0 0 0 0 #0000;
+}
+
+body.is-mobile, .body.is-phone {
+/* move vault switcher to top */
+.workspace-drawer-header {
+    order: -1;
+    margin-bottom: 10px;
+}
+
+/* workspace tab dropdown transitions */
+.workspace-drawer-header,
+.workspace-tab-header-inner,
+.workspace-drawer-tab-options,
+.workspace-drawer-tab-options-list {
+    transition: all 0.2s ease;
+}
+
+/* workspace tab dropdowns */
+.workspace-drawer-tab-options-list {
+    border-radius: calc(var(--button-radius) + 8px) !important;
+    corner-shape: var(--corner-shape) !important;
+
+    /* padding: 10px 10px !important;
+    padding-right: 0px !important; */
+
+    margin-top: 6px; margin-bottom: 6px;
+
+    transition: all 0.2s ease;
+}
+
+.workspace-drawer-tab-options .workspace-tab-header.is-active .workspace-tab-header-inner {
+    border: 2px solid var(--text-faint);
+}
+
+/* bottom active option: when not expanded */
+.workspace-drawer-tab-options.is-collapsed
+> .workspace-tab-header.workspace-drawer-tab-select
+> .workspace-tab-header-inner {
+    border: 2px solid var(--background-modifier-border-focus);
+}
+
+/* bottom active option: when expanded */
+.workspace-drawer-tab-options:not(.is-collapsed)
+> .workspace-tab-header
+> .workspace-tab-header-inner {
+    border: 2px solid var(--background-modifier-border-focus);
+}
+
+body.is-mobile .workspace-drawer-tab-options:not(.is-collapsed)
+> .workspace-tab-header
+> .workspace-tab-header-inner {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    border: 2px solid var(--background-modifier-border-focus);
+}
+
+/* the list container: when expanded */
+.workspace-drawer-tab-options-list:not(.is-collapsed) {
+    border: 2px solid var(--background-modifier-border-focus);
+}
+}
+
+
+.is-tablet .view-actions {
+    height: 45px;
+}
+
+.is-tablet .view-action.clickable-icon {
+    margin: 0 !important;
+    padding: 0;
+}
+
+
+
+
+

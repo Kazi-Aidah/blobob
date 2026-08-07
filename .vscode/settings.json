@@ -1,0 +1,17 @@
+{
+    "folder-color.pathColors": [
+        {
+            "folderPath": "blobob/src/",
+            "color": "foldercolorizer.color_ffaf5f"
+        },
+        {
+            "folderPath": "blobob/src_cry/layout/",
+            "color": "foldercolorizer.color_00afff"
+        },
+        {
+            "folderPath": "blobob/src_old/",
+            "color": "foldercolorizer.color_ff87af",
+            "badge": "AH"
+        }
+    ]
+}

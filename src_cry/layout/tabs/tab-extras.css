@@ -1,10 +1,4 @@
-/* tab full width */
-body.tab-full-width .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner { 
-    flex: 100%;
-    flex: 100%;
-    width: 100%;
-    min-width: 100%;
-}
+
 
 body.tab-width {
     --tab-width: 200px;

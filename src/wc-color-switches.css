@@ -1,0 +1,107 @@
+body.theme-dark.dark-wc-default {
+  --bb-editor-bg: var(--bb-editor-bg-base);
+  --bb-elements-bg: var(--bb-elements-bg-base);
+  --bb-workspace-bg: var(--bb-workspace-bg-base);
+}
+body.theme-dark.dark-wc-flipped {
+  --bb-editor-bg: var(--bb-workspace-bg-base);
+  --bb-elements-bg: var(--bb-elements-bg-base);
+  --bb-workspace-bg: var(--bb-editor-bg-base);
+}
+body.theme-dark.dark-wc-only-editor {
+  --bb-editor-bg: var(--bb-editor-bg-base);
+  --bb-elements-bg: var(--bb-editor-bg-base);
+  --bb-workspace-bg: var(--bb-editor-bg-base);
+}
+body.theme-dark.dark-wc-only-workspace {
+  --bb-editor-bg: var(--bb-workspace-bg-base);
+  --bb-elements-bg: var(--bb-workspace-bg-base);
+  --bb-workspace-bg: var(--bb-workspace-bg-base);
+}
+
+body.theme-light.light-wc-default {
+  --bb-editor-bg: var(--bb-editor-bg-base);
+  --bb-elements-bg: var(--bb-elements-bg-base);
+  --bb-workspace-bg: var(--bb-workspace-bg-base);
+}
+body.theme-light.light-wc-flipped {
+  --bb-editor-bg: var(--bb-workspace-bg-base);
+  --bb-elements-bg: var(--bb-elements-bg-base);
+  --bb-workspace-bg: var(--bb-editor-bg-base);
+}
+body.theme-light.light-wc-only-editor {
+  --bb-editor-bg: var(--bb-editor-bg-base);
+  --bb-elements-bg: var(--bb-editor-bg-base);
+  --bb-workspace-bg: var(--bb-editor-bg-base);
+}
+body.theme-light.light-wc-only-workspace {
+  --bb-editor-bg: var(--bb-workspace-bg-base);
+  --bb-elements-bg: var(--bb-workspace-bg-base);
+  --bb-workspace-bg: var(--bb-workspace-bg-base);
+}
+
+body.theme-dark.dark-border-color-none {
+  --divider-color: transparent;
+  --border-color: transparent;
+}
+body.theme-dark.dark-border-color-less {
+  --divider-color: var(--bb-border-color);
+  --border-color: var(--bb-border-color);
+}
+body.theme-dark.dark-border-color-hover {
+  --divider-color: var(--bb-border-hover-color);
+  --border-color: var(--bb-border-hover-color);
+}
+body.theme-dark.dark-border-color-focus {
+  --divider-color: var(--bb-border-focused-color);
+  --border-color: var(--bb-border-focused-color);
+}
+body.theme-dark.dark-border-color-accent {
+  --divider-color: var(--color-accent);
+  --border-color: var(--color-accent);
+}
+body.theme-dark.dark-border-color-accent-1 {
+  --divider-color: var(--color-accent-1);
+  --border-color: var(--color-accent-1);
+}
+body.theme-dark.dark-border-color-accent-2 {
+  --divider-color: var(--color-accent-2);
+  --border-color: var(--color-accent-2);
+}
+body.theme-dark.dark-border-color-accent-light {
+  --divider-color: hsla(var(--interactive-accent-hsl), 0.2);
+  --border-color: hsla(var(--interactive-accent-hsl), 0.2);
+}
+
+body.theme-light.light-border-color-none {
+  --divider-color: transparent;
+  --border-color: transparent;
+}
+body.theme-light.light-border-color-less {
+  --divider-color: var(--bb-border-color);
+  --border-color: var(--bb-border-color);
+}
+body.theme-light.light-border-color-hover {
+  --divider-color: var(--bb-border-hover-color);
+  --border-color: var(--bb-border-hover-color);
+}
+body.theme-light.light-border-color-focus {
+  --divider-color: var(--bb-border-focused-color);
+  --border-color: var(--bb-border-focused-color);
+}
+body.theme-light.light-border-color-accent {
+  --divider-color: var(--color-accent);
+  --border-color: var(--color-accent);
+}
+body.theme-light.light-border-color-accent-1 {
+  --divider-color: var(--color-accent-1);
+  --border-color: var(--color-accent-1);
+}
+body.theme-light.light-border-color-accent-2 {
+  --divider-color: var(--color-accent-2);
+  --border-color: var(--color-accent-2);
+}
+body.theme-light.light-border-color-accent-light {
+  --divider-color: hsla(var(--interactive-accent-hsl), 0.2);
+  --border-color: hsla(var(--interactive-accent-hsl), 0.2);
+}

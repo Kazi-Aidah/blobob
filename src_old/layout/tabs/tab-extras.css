@@ -1,0 +1,52 @@
+
+
+body.tab-width {
+    --tab-width: 200px;
+}
+
+/* center tab title */   
+.tab-title-center .workspace-tab-header-inner-title {
+   text-align: center;
+}
+
+/* hide tab close button */
+.hide-tab-close-button .workspace-tab-header-inner-close-button {
+   display: none;
+}
+
+/* Tab float colours */
+.tab-float-border-none {
+    --tab-float-border-color: none;
+}
+
+.tab-float-border-less {
+    --tab-float-border-color: var(--background-modifier-border);
+}
+
+.tab-float-border-hover {
+    --tab-float-border-color: var(--background-modifier-border-hover);
+}
+
+.tab-float-border-focus {
+    --tab-float-border-color: var(--background-modifier-border-focus);
+}
+
+
+
+/* tab prompt input */
+body:is(.is-mobile):not(.is-tablet) .prompt, .modal {
+    border-radius: calc(var(--touch-radius-m) + 2px) !important;
+    corner-shape: var(--corner-shape);
+}
+
+body:is(.is-mobile):not(.is-tablet) .prompt-input-container {
+    border-radius: var(--touch-radius-m);
+    corner-shape: var(--corner-shape);
+    border: 2px solid var(--background-modifier-border-focus) !important;
+}
+
+body:is(.is-mobile):not(.is-tablet) .prompt-input {
+    border-radius: var(--touch-radius-m) !important;
+    corner-shape: var(--corner-shape);
+    border: none !important;
+}

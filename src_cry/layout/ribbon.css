@@ -23,7 +23,6 @@
 }
 
 
-
 /* shared: undim on hover */
 .side-dock-actions {
     gap: 4px;
@@ -51,7 +50,6 @@
     transform: scale(1);
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.2s ease;
 }
-
 
 
 

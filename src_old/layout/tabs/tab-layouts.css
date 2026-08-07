@@ -1,0 +1,73 @@
+body {
+    --titlebar-background-focused: var(--titlebar-background) !important;
+}
+
+/* shared: hide | between tabs */
+.workspace .mod-root .workspace-tab-header-inner::after { display: none; }
+
+/* tabs: close button adjustment */
+.workspace-tab-header .workspace-tab-header-inner-close-button {
+  border-radius: var(--button-radius) !important;
+  corner-shape: var(--corner-shape);
+}
+
+
+
+
+/* tablet when tab joined: active tab color */
+body:is(.is-tablet):is(.tab-joined) .workspace-tab-header.is-active,
+body:is(.is-tablet):is(.tab-joined) .view-header:not(.is-mobile) {
+  background-color: var(--background-primary) !important;
+}
+
+
+/* tablet: tab float header color */
+body:is(.is-tablet):is(.tab-float) .view-header {
+  background-color: var(--background-primary-alt) !important;
+  border-bottom: 2px solid var(--tab-float-border-color);
+}
+
+/* tablet: tab joined header border */
+body:is(.is-tablet):is(.tab-joined) .view-header {
+  border-bottom: 2px solid var(--background-modifier-border-hover);
+}
+
+/* desktop: tab float header color */
+body:is(.tab-float):not(.is-mobile) .view-header {
+  background-color: var(--background-primary-alt) !important;
+  border-bottom: 2px solid var(--background-modifier-border);
+}
+
+/* desktop: tab joined header border */
+body:is(.tab-joined):not(.is-mobile) .view-header {
+  border-bottom: 2px solid var(--background-modifier-border-hover);
+}
+
+
+/*
+.workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header:not(.is-active) {
+    transition: width 0.3s ease, height 0.3s ease, padding 0.3s ease, margin 0.3s ease, transform 0.3s ease, border-radius 0.3s ease !important;
+}
+
+.workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
+    transition: width 0.3s ease, height 0.3s ease, padding 0.3s ease, margin 0.3s ease !important;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

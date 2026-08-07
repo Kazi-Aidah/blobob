@@ -1,0 +1,60 @@
+﻿.tab-float:not(.is-mobile) {
+    .sidebar-toggle-button.mod-left {
+        background-color: var(--background-primary);
+        border-bottom: none;
+    }
+    
+    .workspace-ribbon.side-dock-ribbon.mod-left {
+        background-color: var(--background-primary);
+        border: none;
+    }
+
+    /* remove button butt border */
+    .workspace-ribbon.mod-left::before,
+    .workspace-ribbon.mod-left::after {
+        display: none !important;
+        content: none !important;
+    }
+
+    .side-dock-actions {
+        margin-top: -6px;
+    }
+
+}
+
+
+/* shared: undim on hover */
+.side-dock-actions {
+    gap: 4px;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.side-dock-actions .clickable-icon {
+    padding: 6px !important;
+}
+
+.workspace-ribbon.side-dock-ribbon:hover .side-dock-actions {
+    opacity: 1;
+}
+
+.workspace-ribbon.side-dock-ribbon .clickable-icon {
+    background-color: transparent;
+    transform: scale(0.9);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.2s ease;
+}
+
+.workspace-ribbon.side-dock-ribbon .clickable-icon:hover {
+    background-color: hsl(var(--interactive-accent-hsl), 0.2) !important;
+    color: var(--interactive-accent);
+    transform: scale(1);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.2s ease;
+}
+
+
+
+
+
+
+
+
