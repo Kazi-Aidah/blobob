@@ -1,68 +1,10 @@
-/* tab full width */
-body.tab-full-width .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner { 
-    flex: 90%;
-    width: 90%;
-    min-width: 90%;
-}
-
-/* option: disable ribbon border */
-.workspace-ribbon {
-    border: 0px solid transparent !important;
-    box-shadow: none;
-}
-
-
-
-/* option: disable tabs underborder */
-
-
-
-
-
-
-
-
-
-/* .sidebar-toggle-button.mod-left,
-.sidebar-dock-ribbon.mod-left.is-collapsed::before {
-    margin: 20px 0px;
-    box-shadow: 0px 0px 0px 2px springgreen !important;
-} */
-
-
 /* @settings
-name: blobob theme!
+name: Actually Testing
 id: h-test
 collapsed: false
 settings:
 
 
-- id: tiptips
-  title: Global Radius
-  description: Set the border radius for all UI Elements
-  type: class-select
-  default: hexagon-tiptip
-  options:
-    - label: Circular
-      value: circular-tiptip
-    - label: Rounded
-      value: rounded-tiptip
-    - label: Round
-      value: round-tiptip
-    - label: Sharp
-      value: sharp-tiptip
-    - label: Hexagon
-      value: hexagon-tiptip
-    - label: Scoop
-      value: scoop-tiptip
-    - label: Squircle
-      value: squircle-tiptip
-    - label: Extra Squircle
-      value: extra-squircle-tiptip
-    - label: Sock
-      value: sock-tiptip
-    - label: Eye
-      value: eye-tiptip
 
 - id: workspace-layout
   title: Layout & Tab Style
@@ -81,19 +23,6 @@ settings:
     - label: None
       value: tab-none
 
-- id: workspace-density
-  title: Workspace Density
-  description: 
-  type: class-select
-  default: spacious
-  options:
-    - label: Compact
-      value: compact
-    - label: Comfortable
-      value: comfortable
-    - label: Spacious
-      value: spacious
-
 - id: bb-border-width
   title: Border Width
   type: variable-number-slider
@@ -104,16 +33,13 @@ settings:
   step: 0.5
 
 - id: bb-header-height
-  title: Default Header Height
+  title: Default Tab / Header Width
   type: variable-number-slider
   format: px
   default: 40
   min: 25
   max: 100
   step: 1
-
-
-
 
 - id: h-dark-theme
   title: Dark Theme
@@ -122,7 +48,7 @@ settings:
   collapsed: false
 
 - id: dark-theme-colors
-  title: Dark Theme Color
+  title: Dark Theme Colors
   description: Set the theme colors for dark mode
   type: class-select
   default: cool-gray
@@ -285,7 +211,7 @@ settings:
   collapsed: false
 
 - id: light-theme-colors
-  title: Light Theme Color
+  title: Light Theme Colors
   description: Set the theme colors for light mode
   type: class-select
   default: cloud-white
@@ -432,17 +358,10 @@ settings:
     - label: Lightly Accented Border
       value: light-border-color-accent-light
 
-- id: h-workspace
-  title: Other?
-  type: heading
-  level: 1
-  collapsed: false
-
 
 
 */
 
-/* Slider: Border Width */
 body {
   --border-width: var(--bb-border-width);
   --tab-outline-width: var(--border-width);
@@ -452,50 +371,116 @@ body {
   --status-bar-border-width: var(--border-width);
 }
 
-/* Slider: Header Height */
-body {
+.theme-dark:not(.obsidian),
+.theme-light:not(.obsidian) {
+  --bb-input-bg: var(--bb-tiptips-bg);
+  --bb-input-hover-bg: var(--bb-tiptips-hover-bg);
+
+  --background-primary: var(--bb-editor-bg) !important;
+  --background-primary-alt: var(--bb-elements-bg) !important;
+  --background-secondary: var(--bb-workspace-bg) !important;
+  --background-secondary-alt: var(--bb-workspace-bg) !important;
+
+  --tab-background: var(--bb-editor-bg) !important;
+  --tab-background-hover: var(--bb-elements-bg) !important;
+  --tab-background-active: var(--bb-editor-bg) !important;
+
+  --interactive-normal: var(--bb-tiptips-bg) !important;
+  --interactive-hover: var(--bb-tiptips-hover-bg) !important;
+  --background-modifier-form-field: var(--bb-input-bg) !important;
+  --background-modifier-form-field-hover: var(--bb-input-hover-bg) !important;
+  --background-modifier-border: var(--bb-border-color);
+  --background-modifier-border-hover: var(--bb-border-hover-color);
+  --background-modifier-border-focused: var(--bb-border-focused-color);
+
+  --text-normal: var(--txt-n);
+  --text-muted: var(--txt-m);
+  --text-faint: var(--text-f);
+  
+  --text-success: var(--color-green);
+  --text-warning: var(--color-red);
+  --text-error: var(--color-red);
+  --text-accent: var(--color-accent);
+  --text-accent-hover: var(--color-accent-2);
+
+  --scrollbar-bg: var(--bb-tiptips-bg);
+  --scrollbar-thumb-bg: var(--bb-tiptips-hover-bg);
+  --scrollbar-active-thumb-bg: var(--bb-tiptips-bg);
+}
+
+.theme-dark, .theme-light {
+  --accent-red: var(--color-red);
+  --accent-orange: var(--color-orange);
+  --accent-yellow: var(--color-yellow);
+  --accent-green: var(--color-green);
+  --accent-cyan: var(--color-cyan);
+  --accent-blue: var(--color-blue);
+  --accent-purple: var(--color-purple);
+  --accent-pink: var(--color-pink);
+  --accent-brown: var(--color-brown);
+  --accent-gray: var(--text-normal);
+
+  --color-red: #da4b4b;
+  --color-orange: #cc692a;
+  --color-yellow: #e8b05a;
+  --color-green: #a3bd6a;
+  --color-cyan: #42adbb;
+  --color-blue: #4281bb;
+  --color-purple: #965daf;
+  --color-pink: #c85b92;
+  --color-brown: #9b674b;
+  --color-gray: #a6a6a6;
+
   --header-height: var(--bb-header-height) !important;
 }
 
-body {
-  --system-status-background: var(--titlebar-background);
+
+
+
+.dropdown option[value^="heading-"] {
+    background-color: hsla(var(--interactive-accent-hsl), 0.75) !important;
+    color: var(--text-normal) !important;
+    font-weight: 600;
+    text-align: center;
+    pointer-events: none;
+    cursor: default;
+    font-size: 0.9em;
+    letter-spacing: 0.05em;
+    padding: 10px 0;
 }
 
-/* disable divider */
-/* body {
-    --divider-color: transparent !important;
-} */
-
-/* ribbon colors */
-
-
-/* titlebar: make tab header border show */
-.titlebar, .titlebar-button-container, .sidebar-toggle-button.mod-right {
-    background-color: transparent !important;
-    background: transparent;
+/* Red heading */
+.dropdown option[value^="heading-red"] {
+    background-color: rgba(var(--color-red-rgb), 0.75) !important;
 }
 
-
-/* ribbon color for all layouts except float */
-body:not(.tab-float) {
-  .workspace-ribbon, .sidebar-toggle-button {
-      background-color: var(--bb-workspace-bg);
-      transition: background-color 0.1s ease;
-  }
-  .workspace-ribbon.side-dock-ribbon.mod-left .sidebar-toggle-button {
-      height: var(--header-height);
-      border-bottom: var(--border-width) solid var(--border-color);
-  }
+/* Orange heading */
+.dropdown option[value^="heading-warm"],
+.dropdown option[value^="heading-orange"] {
+    background-color: rgba(var(--color-orange-rgb), 0.75) !important;
 }
 
-/* border colours */
-body {
-  --setting-items-border-color: var(--border-color);
-  --modal-border-color: var(--border-color);
-  --prompt-border-color: var(--border-color);
-  --metadata-border-color: var(--border-color);
-  --menu-border-color: var(--border-color);
-  --code-border-color: var(--border-color);
-  --bases-table-border-color: var(--border-color);
+/* Yellow heading */
+.dropdown option[value^="heading-yellow"] {
+    background-color: rgba(var(--color-yellow-rgb), 0.75) !important;
 }
 
+/* Green heading */
+.dropdown option[value^="heading-green"] {
+    background-color: rgba(var(--color-green-rgb), 0.75) !important;
+}
+
+/* Blue heading */
+.dropdown option[value^="heading-blue"] {
+    background-color: rgba(var(--color-blue-rgb), 0.75) !important;
+}
+
+/* Purple heading */
+.dropdown option[value^="heading-purple"] {
+    background-color: rgba(var(--color-purple-rgb), 0.75) !important;
+}
+
+/* Pink heading */
+.dropdown option[value^="heading-pink"] {
+    background-color: rgba(var(--color-pink-rgb), 0.75) !important;
+}

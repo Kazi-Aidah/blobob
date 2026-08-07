@@ -1,0 +1,60 @@
+.theme-dark:not(.obsidian),
+.theme-light:not(.obsidian) {
+  --bb-input-bg: var(--bb-tiptips-bg);
+  --bb-input-hover-bg: var(--bb-tiptips-hover-bg);
+
+  --background-primary: var(--bb-editor-bg) !important;
+  --background-primary-alt: var(--bb-elements-bg) !important;
+  --background-secondary: var(--bb-workspace-bg) !important;
+  --background-secondary-alt: var(--bb-workspace-bg) !important;
+
+  --tab-background: var(--bb-editor-bg) !important;
+  --tab-background-hover: var(--bb-elements-bg) !important;
+  --tab-background-active: var(--bb-editor-bg) !important;
+
+  --interactive-normal: var(--bb-tiptips-bg) !important;
+  --interactive-hover: var(--bb-tiptips-hover-bg) !important;
+  --background-modifier-form-field: var(--bb-input-bg) !important;
+  --background-modifier-form-field-hover: var(--bb-input-hover-bg) !important;
+  --background-modifier-border: var(--bb-border-color);
+  --background-modifier-border-hover: var(--bb-border-hover-color);
+  --background-modifier-border-focus: var(--bb-border-focused-color);
+
+  --text-normal: var(--txt-n);
+  --text-muted: var(--txt-m);
+  --text-faint: var(--text-f);
+  
+  --text-success: var(--color-green);
+  --text-warning: var(--color-red);
+  --text-error: var(--color-red);
+  --text-accent: var(--color-accent);
+  --text-accent-hover: var(--color-accent-2);
+
+  --scrollbar-bg: var(--bb-tiptips-bg);
+  --scrollbar-thumb-bg: var(--bb-tiptips-hover-bg);
+  --scrollbar-active-thumb-bg: var(--bb-tiptips-bg);
+}
+
+.theme-dark, .theme-light {
+  --accent-red: var(--color-red);
+  --accent-orange: var(--color-orange);
+  --accent-yellow: var(--color-yellow);
+  --accent-green: var(--color-green);
+  --accent-cyan: var(--color-cyan);
+  --accent-blue: var(--color-blue);
+  --accent-purple: var(--color-purple);
+  --accent-pink: var(--color-pink);
+  --accent-brown: var(--color-brown);
+  --accent-gray: var(--text-normal);
+
+  --color-red: #da4b4b;
+  --color-orange: #cc692a;
+  --color-yellow: #e8b05a;
+  --color-green: #a3bd6a;
+  --color-cyan: #42adbb;
+  --color-blue: #4281bb;
+  --color-purple: #965daf;
+  --color-pink: #c85b92;
+  --color-brown: #9b674b;
+  --color-gray: #a6a6a6;
+}

@@ -1,0 +1,10 @@
+/* tablet: increased active tab height */
+body:is(.is-tablet):not(.compact-tabs, .tab-none) .workspace-tab-header-container {
+  height: 50px;
+}
+
+/* tablet: increased margin around text and x */
+body:is(.is-tablet):not(.compact-tabs, .tab-none) .workspace-tab-header.is-active .workspace-tab-header-inner {
+  margin: auto 5px;
+}
+

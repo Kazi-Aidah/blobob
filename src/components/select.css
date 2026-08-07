@@ -1,0 +1,154 @@
+/* COLORED HEADING IN OPTIONS */
+.dropdown option[value^="heading-"] {
+    background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
+    /* background-color: var(--bb-elements-bg-base) !important; */
+    color: var(--text-normal) !important;
+    font-weight: 600;
+    text-align: center;
+    pointer-events: none;
+    cursor: default;
+    font-size: 0.9em;
+    letter-spacing: 0.05em;
+    padding: 10px 0;
+}
+
+/* Red heading */
+.dropdown option[value^="heading-red"] {
+    background-color: rgba(var(--color-red-rgb), 0.2) !important;
+}
+
+/* Orange heading */
+.dropdown option[value^="heading-warm"],
+.dropdown option[value^="heading-orange"] {
+    background-color: rgba(var(--color-orange-rgb), 0.2) !important;
+}
+
+/* Yellow heading */
+.dropdown option[value^="heading-yellow"] {
+    background-color: rgba(var(--color-yellow-rgb), 0.2) !important;
+}
+
+/* Green heading */
+.dropdown option[value^="heading-green"] {
+    background-color: rgba(var(--color-green-rgb), 0.2) !important;
+}
+
+/* Blue heading */
+.dropdown option[value^="heading-blue"] {
+    background-color: rgba(var(--color-blue-rgb), 0.2) !important;
+}
+
+/* Purple heading */
+.dropdown option[value^="heading-purple"] {
+    background-color: rgba(var(--color-purple-rgb), 0.2) !important;
+}
+
+/* Pink heading */
+.dropdown option[value^="heading-pink"] {
+    background-color: rgba(var(--color-pink-rgb), 0.2) !important;
+}
+
+
+
+/* ACTUAL DROPDOWN STYLING */
+select {
+  padding: 6px;
+  appearance: base-select !important;
+  background-color: var(--bb-tiptips-bg);
+  text-align: center;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  corner-shape: var(--corner-shape);
+  transition: background-color 0.2s ease, 
+              all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
+        
+}
+
+select:hover {
+  transform: scale(1.02);
+  background-color: var(--bb-tiptips-hover-bg);
+}
+
+select:active {
+    transform: scale(1);
+}
+
+select:open {
+  background-color: var(--bb-tiptips-hover-bg);
+}
+
+select:open:hover {
+  transform: scale(1);
+  background-color: var(--bb-tiptips-hover-bg);
+}
+
+/* Dropdown panel / picker */
+::picker(select) {
+  appearance: base-select !important;
+  color: var(--background-modifier-border-focus);
+  border-radius: var(--button-radius);
+  corner-shape: var(--corner-shape) !important;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  background-color: var(--bb-tiptips-hover-bg);
+
+  /* padding: 4px; */
+  box-shadow: 0 2px 4px #00000070;
+}
+
+/* hide default picker arrow icon */
+select::picker-icon {
+  display: none !important;
+}
+
+/* selected option */
+select option::checkmark {
+  content: "★";
+}
+
+/* Individual select options */
+select option {
+  height: 30px;
+  margin: 4px;
+  border-radius: calc(var(--button-radius) - 2px);
+  corner-shape: var(--corner-shape) !important;
+  color: var(--text-normal);
+  background-color: var(--bb-tiptips-hover-bg) !important;
+  transition: all 0.15s ease;
+}
+
+select option:hover {
+  transform: scale(0.98);
+  filter: brightness(1) contrast(1.2);
+  background-color: var(--bb-tiptips-bg) !important;
+}
+
+select option:active {
+  transform: scale(0.9);
+}
+
+select option:checked {
+  background-color: hsl(var(--interactive-accent-hsl), 0.3) !important;
+  color: var(--color-accent-1) !important;
+}
+
+select option:checked:hover {
+  background-color: hsl(var(--interactive-accent-hsl), 0.3) !important;
+  color: var(--color-accent-1) !important;
+  filter: brightness(1) contrast(1);
+  transform: scale(1);
+}
+
+
+/* scrollbar */
+::picker(select) {
+  scrollbar-color: hsl(var(--interactive-accent-hsl), 0.3) var(--bb-tiptips-hover-bg);
+  scrollbar-width: 10px;
+}
+
+
+.is-phone select option {
+  padding: 20px;
+}
+

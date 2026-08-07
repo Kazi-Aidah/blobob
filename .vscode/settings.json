@@ -12,6 +12,18 @@
             "folderPath": "blobob/src_old/",
             "color": "foldercolorizer.color_ff87af",
             "badge": "AH"
+        },
+        {
+            "folderPath": "blobob/src/base/",
+            "color": "foldercolorizer.color_d70000"
+        },
+        {
+            "folderPath": "blobob/src/components/",
+            "color": "foldercolorizer.color_ff5f00"
+        },
+        {
+            "folderPath": "blobob/src/layout/",
+            "color": "foldercolorizer.color_d7af5f"
         }
     ]
 }

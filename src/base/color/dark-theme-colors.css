@@ -82,6 +82,56 @@
   --txt-m: #a0a0a0;
   --text-f: #777777;
 }
+.theme-dark.arctic-ice {
+  --bb-editor-bg-base: #0f1a2a;
+  --bb-elements-bg-base: #1a2840;
+  --bb-workspace-bg-base: #24365a;
+
+  --bb-tiptips-bg: #253654;
+  --bb-tiptips-hover-bg: #2a3e68;
+
+  --bb-border-color: #304467;
+  --bb-border-hover-color: #405378;
+  --bb-border-focused-color: #506792;
+  
+  --txt-n: #e0f2fe;
+  --txt-m: #a5d8ff;
+  --text-f: #a5d8ff;
+}
+
+.theme-dark.noble-blue {
+  --bb-editor-bg-base: #0d1b2a;
+  --bb-elements-bg-base: #1b263b;
+  --bb-workspace-bg-base: #23314d;
+
+  --bb-tiptips-bg: #141d2c;
+  --bb-tiptips-hover-bg: #2d3b5a;
+
+  --bb-border-color: #2f3f5a;
+  --bb-border-hover-color: #3f4e6b;
+  --bb-border-focused-color: #4f6285;
+  
+  --txt-n: #e2e8f0;
+  --txt-m: #94a3b8;
+  --text-f: #94a3b8;
+}
+
+.theme-dark.cold-memory {
+  --bb-editor-bg-base: #14161b;
+  --bb-elements-bg-base: #1b202a;
+  --bb-workspace-bg-base: #293042;
+
+  --bb-tiptips-bg: #293042;
+  --bb-tiptips-hover-bg: #374057;
+
+  --bb-border-color: #353e4f;
+  --bb-border-hover-color: #454d60;
+  --bb-border-focused-color: #55617a;
+  
+  --txt-n: #b7c4d6;
+  --txt-m: #7c8aa3;
+  --text-f: #7c8aa3;
+}
 
 .theme-dark.dark-night {
   --bb-editor-bg-base: #111318;
@@ -103,14 +153,14 @@
 .theme-dark.deep-blue {
   --bb-editor-bg-base: #111827;
   --bb-elements-bg-base: #172554;
-  --bb-workspace-bg-base: #1e3a8a;
+  --bb-workspace-bg-base: #002791;
 
   --bb-tiptips-bg: #1e293b;
   --bb-tiptips-hover-bg: #334155;
 
-  --bb-border-color: #334155;
-  --bb-border-hover-color: #475569;
-  --bb-border-focused-color: #64748b;
+  --bb-border-color: #1a3357;
+  --bb-border-hover-color: #26436b;
+  --bb-border-focused-color: #335a91;
 
   --txt-n: #dbeafe;
   --txt-m: #93c5fd;

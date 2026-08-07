@@ -1,3 +1,4 @@
+/* WORKSPACE COLOR SWITCHES */
 body.theme-dark.dark-wc-default {
   --bb-editor-bg: var(--bb-editor-bg-base);
   --bb-elements-bg: var(--bb-elements-bg-base);
@@ -10,7 +11,7 @@ body.theme-dark.dark-wc-flipped {
 }
 body.theme-dark.dark-wc-only-editor {
   --bb-editor-bg: var(--bb-editor-bg-base);
-  --bb-elements-bg: var(--bb-editor-bg-base);
+  --bb-elements-bg: var(--bb-edibackground-modifier-bordertor-bg-base);
   --bb-workspace-bg: var(--bb-editor-bg-base);
 }
 body.theme-dark.dark-wc-only-workspace {
@@ -40,6 +41,10 @@ body.theme-light.light-wc-only-workspace {
   --bb-workspace-bg: var(--bb-workspace-bg-base);
 }
 
+
+
+
+/* BORDER COLOR SWITCHES */
 body.theme-dark.dark-border-color-none {
   --divider-color: transparent;
   --border-color: transparent;
