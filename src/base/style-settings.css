@@ -1367,6 +1367,8 @@ settings:
     options:
       - label: Instant (off)
         value: anim-instant
+      - label: Faster
+        value: anim-faster
       - label: Fast
         value: anim-fast
       - label: Normal

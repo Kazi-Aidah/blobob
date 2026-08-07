@@ -6,6 +6,7 @@
 }
 
 body.anim-instant  { --animation-duration: 0ms; }
+body.anim-faster     { --animation-duration: 50ms; }
 body.anim-fast     { --animation-duration: 200ms; }
 body.anim-normal   { --animation-duration: 600ms; }
 body.anim-slow     { --animation-duration: 900ms; }
@@ -1756,6 +1757,8 @@ settings:
     options:
       - label: Instant (off)
         value: anim-instant
+      - label: Faster
+        value: anim-faster
       - label: Fast
         value: anim-fast
       - label: Normal
