@@ -102,4 +102,9 @@ body.tab-lined {
         transform: translateY(0);
     }
 
+    .workspace-tab-header-inner {
+        border-bottom: 0px solid transparent;
+        border-radius: 0px;
+    }
+
 }

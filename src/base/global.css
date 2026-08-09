@@ -46,6 +46,9 @@ body.circular-tiptip {
     --modal-radius: 24px;
     --nav-item-radius: 50px;
     --tag-radius: 50px;
+    --tab-radius: 18px;
+    --tab-inner-radius: calc(var(--tab-radius) * .55);
+    --tab-corner-shape: round;
 }
 
 body.rounded-tiptip {
@@ -54,6 +57,9 @@ body.rounded-tiptip {
     --modal-radius: 16px;
     --nav-item-radius: 12px;
     --tag-radius: 12px;
+    --tab-radius: 12px;
+    --tab-inner-radius: calc(var(--tab-radius) * .55);
+    --tab-corner-shape: round;
 }
 
 body.round-tiptip {
@@ -62,6 +68,9 @@ body.round-tiptip {
     --modal-radius: 8px;
     --nav-item-radius: 6px;
     --tag-radius: 6px;
+    --tab-radius: 8px;
+    --tab-inner-radius: calc(var(--tab-radius) * .55);
+    --tab-corner-shape: round;
 }
 
 body.sharp-tiptip {
@@ -70,6 +79,9 @@ body.sharp-tiptip {
     --modal-radius: 0px;
     --nav-item-radius: 0px;
     --tag-radius: 0px;
+    --tab-radius: 0px;
+    --tab-inner-radius: 0px;
+    --tab-corner-shape: sharp;
 }
 
 /* CORNER SHAPES */
@@ -80,6 +92,9 @@ body.squircle-tiptip {
     --modal-radius: 18px;
     --nav-item-radius: 12px;
     --tag-radius: 12px;
+    --tab-radius: 16px;
+    --tab-inner-radius: calc(var(--tab-radius) * 1);
+    --tab-corner-shape: squircle;
 }
 
 body.extra-squircle-tiptip {
@@ -89,6 +104,11 @@ body.extra-squircle-tiptip {
     --modal-radius: 24px;
     --nav-item-radius: 18px;
     --tag-radius: 18px;
+
+    --tab-curve: 14px;
+    --tab-radius: 18px;
+    --tab-inner-radius: 12px;
+    --tab-corner-shape: round;
 }
 
 body.scoop-tiptip {
@@ -98,6 +118,11 @@ body.scoop-tiptip {
     --modal-radius: 12px;
     --nav-item-radius: 8px;
     --tag-radius: 8px;
+
+    --tab-curve: 10px;
+    --tab-radius: 8px;
+    --tab-inner-radius: 6px;
+    --tab-corner-shape: scoop;
 }
 
 body.hexagon-tiptip {
@@ -107,6 +132,11 @@ body.hexagon-tiptip {
     --modal-radius: 10px;
     --nav-item-radius: 6px;
     --tag-radius: 6px;
+
+    --tab-curve: 10px;
+    --tab-radius: 8px;
+    --tab-inner-radius: 6px;
+    --tab-corner-shape: bevel;
 }
 
 body.sock-tiptip {
@@ -116,6 +146,11 @@ body.sock-tiptip {
     --modal-radius: 4%;
     --nav-item-radius: 30%;
     --tag-radius: 30%;
+
+    --tab-curve: 12px;
+    --tab-radius: 12%;
+    --tab-inner-radius: 8px;
+    --tab-corner-shape: round;
 }
 
 body.eye-tiptip {
@@ -125,6 +160,11 @@ body.eye-tiptip {
     --modal-radius: 20px / 30px;
     --nav-item-radius: 40% / 60%;
     --tag-radius: 40% / 60%;
+
+    --tab-curve: 0;
+    --tab-radius: 50%;
+    --tab-inner-radius: 50%;
+    --tab-corner-shape: round;
 }
 
 /* APPLY VARIABLES TO ALL UI ELEMENTS */
@@ -156,15 +196,3 @@ select,
     border-radius: var(--modal-radius);
     corner-shape: var(--corner-shape);
 }
-
-/* --- layout color switches */
-
-/* dark inside */
-
-/* dark outside */
-
-/* focused dark inside */
-
-/* focused dark outside */
-
-
