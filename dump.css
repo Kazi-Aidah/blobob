@@ -856,8 +856,8 @@ body.tab-hardshadow {
 
 
 /* Skew */
-.tab-effect-skew .workspace-tab-header {
-    transform: skew(-0.03turn, 0deg);
+.tab-effect-skew .workspace-tab-header:is(.is-active) {
+    transform: skew(-0.03turn, 0deg) !important;
 }
 
 /* retro! */
@@ -896,11 +896,5 @@ body.tab-effect-boxglow {
             inset -2px -2px 0 0 var(--bb-border-hover-color),
             inset 2px 2px 0 0 var(--bb-border-color) !important;
             border: 2px solid var(--bb-border-focused-color);
-    }
-
-    .workspace-tab-container {
-            box-shadow:
-            inset -2px -2px 0 0 var(--bb-border-hover-color),
-            inset 2px 2px 0 0 var(--bb-border-color) !important;
     }
 }
