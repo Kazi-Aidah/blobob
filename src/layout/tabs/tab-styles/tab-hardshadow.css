@@ -1,0 +1,87 @@
+body.tab-hardshadow {
+    --tab-curve: 0;
+    
+    .workspace-tab-header-container-inner {
+        gap: 6px;
+    }
+
+    .mod-root .workspace-tab-header .workspace-tab-header-inner {
+        background: transparent !important;
+    }
+
+    .mod-root .workspace-tab-header,
+    .mod-root .workspace-tab-header-inner{
+        margin-bottom: 6px;
+
+        transition: all 0.2s ease-in-out;
+        border-radius: var(--tab-radius);
+    }
+
+    .mod-root .workspace-tab-header:not(.is-active) {
+        transform: translateY(2px);
+        border: 2px solid transparent;
+        box-shadow: 3px 0px 0 var(--bb-border-hover-color);
+    }
+
+    .mod-root .workspace-tab-header:not(.is-active):hover {
+        transform: translateY(0px);
+        border: 2px solid var(--bb-border-hover-color);
+        box-shadow: 3px 2px 0 var(--bb-border-hover-color);
+    }
+
+    .mod-root .workspace-tab-header:not(.is-active):active {
+        transform: translateY(4px);
+        border: 2px solid var(--bb-border-focused-color);
+        box-shadow: 3px -1px 0 0px var(--bb-border-focused-color);
+    }
+
+    .mod-root .workspace-tab-header.is-active {
+        border: 2px solid var(--bb-border-focused-color);
+        box-shadow: 3px 2px 0 var(--bb-border-focused-color);
+    }
+
+    .mod-root .workspace-tab-container {
+        box-shadow: none;
+    }
+}
+
+body.tab-hardshadow.apply-to-sidebar {
+    .workspace-tab-header-container-inner {
+        gap: 6px;
+    }
+    
+    .mod-left-split .workspace-tab-header,
+    .mod-right-split .workspace-tab-header {
+        margin-bottom: 6px;
+
+        transition: all 0.2s ease-in-out;
+        border-radius: var(--tab-radius);
+    }
+
+    .mod-left-split .workspace-tab-header:not(.is-active),
+    .mod-right-split .workspace-tab-header:not(.is-active) {
+        transform: translateY(2px);
+        border: 2px solid transparent;
+        box-shadow: 3px 0px 0 transparent;
+    }
+
+    .mod-left-split .workspace-tab-header:not(.is-active):hover,
+    .mod-right-split .workspace-tab-header:not(.is-active):hover {
+        transform: translateY(0px);
+        border: 2px solid var(--bb-border-hover-color);
+        box-shadow: 3px 2px 0 var(--bb-border-hover-color);
+    }
+
+    .mod-left-split .workspace-tab-header:not(.is-active):active,
+    .mod-right-split .workspace-tab-header:not(.is-active):active {
+        transform: translateY(4px);
+        border: 2px solid var(--bb-border-focused-color);
+        box-shadow: 3px -1px 0 0px var(--bb-border-focused-color);
+    }
+
+    .mod-left-split .workspace-tab-header.is-active,
+    .mod-right-split .workspace-tab-header.is-active {
+        border: 2px solid var(--bb-border-focused-color);
+        box-shadow: 3px 2px 0 var(--bb-border-focused-color);
+    }
+}

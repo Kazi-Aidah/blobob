@@ -12,7 +12,7 @@ button, button:hover, button:active {
 body:not(.view-header) .button-bordered button,
 .button-bordered .setting-item-control button,
 .button-bordered select {
-    border: 2px solid var(--background-modifier-border-focus);
+    border: 2px solid var(--bb-border-focused-color);
 }
 
 .button-bordered button.mod-cta {
@@ -56,7 +56,7 @@ body:not(.view-header) .button-bordered-3d button,
 .button-bordered-3d .mod-cta,
 .button-bordered-3d select,
 .button-bordered-3d .setting-item-control button {
-    border: 2px solid var(--background-modifier-border-focus);
+    border: 2px solid var(--bb-border-focused-color);
     border-bottom: 3px solid var(--button-shadow);
     transition: border-bottom 0.1s ease, transform 0.1s ease;
 }
@@ -65,7 +65,7 @@ body:not(.view-header) .button-bordered-3d button:hover,
 .button-bordered-3d .mod-cta:hover,
 .button-bordered-3d select:hover,
 .button-bordered-3d .setting-item-control button:hover {
-    border: 2px solid var(--background-modifier-border-focus);
+    border: 2px solid var(--bb-border-focused-color);
     border-bottom: 5px solid var(--button-shadow);
     transform: translateY(-2px);
 }
@@ -75,7 +75,7 @@ body:not(.view-header) .button-bordered-3d button:active,
 .button-bordered-3d .mod-cta:active,
 .button-bordered-3d select:active,
 .button-bordered-3d .setting-item-control button:active {
-    border: 2px solid var(--background-modifier-border-focus);
+    border: 2px solid var(--bb-border-focused-color);
     border-bottom: 0 solid var(--button-shadow);
     transform: translateY(0);
 }

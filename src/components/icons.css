@@ -1,29 +1,78 @@
 /* ---
-icons sizes: filled, big, big-filled
+icons sizes: filled, big, big-filled, more
 icon specified colours: donate to support, uninstall, delete, remove, close, new tab
 --- */
 
-.filled svg {
+body {
+    --icon-stroke: var(--bb-icon-stroke) !important;
+    --icon-xs-stroke-width: var(--bb-icon-stroke) !important;
+    --icon-s-stroke-width: var(--bb-icon-stroke) !important;
+    --icon-m-stroke-width: var(--bb-icon-stroke) !important;
+    --icon-l-stroke-width: calc(var(--bb-icon-stroke) * .75) !important;
+    --icon-xl-stroke-width: calc(var(--bb-icon-stroke) * .85) !important;
+    --canvas-controls-icon-stroke: var(--bb-icon-stroke) !important;
+}
+
+svg.svg-icon, .clickable-icon svg, .collapse-icon svg.svg-icon {
+    stroke-width: var(--icon-stroke);
+}
+
+/* Accented */
+.svg-accented svg {
+    fill: currentcolor;
+    fill-opacity: 1;
+    stroke: var(--text-accent);
+}
+
+/* Glowing */
+.svg-glowing svg {
+    fill: currentColor;
+    fill-opacity: .3;
+    stroke: currentColor;
+    stroke-opacity: 1;
+    filter: drop-shadow(0 0 2px currentColor);
+}
+
+/* Just Glow */
+.svg-just-glow svg {
+    fill: currentColor;
+    fill-opacity: 0;
+    stroke: currentColor;
+    stroke-opacity: 1;
+    filter: drop-shadow(0 0 2px currentColor);
+} */
+
+/* Subtle Duotone */
+.svg-subtle-duotone svg {
+    fill: currentColor;
+    fill-opacity: .75 !important; 
+    stroke: currentColor;
+    stroke-opacity: .5;
+    filter: contrast(2);
+    mix-blend-mode: screen;
+}
+
+.svg-filled svg {
     fill: currentcolor;
     fill-opacity: 0.25;
 }
 
-.big svg,
-.big svg.svg-icon,
-.big .clickable-icon {
+.svg-big svg,
+.svg-big svg.svg-icon,
+.svg-big .clickable-icon {
     --icon-size: 22px !important;
 }
 
-.big-filled svg,
-.big-filled svg.svg-icon,
-.big-filled .clickable-icon {
+.svg-big-filled svg,
+.svg-big-filled svg.svg-icon,
+.svg-big-filled .clickable-icon {
     --icon-size: 22px !important;
     fill: currentcolor;
     fill-opacity: 0.25;
 }
 
-.big-filled .workspace-tab-header .workspace-tab-header-inner-icon,
-.big .workspace-tab-header .workspace-tab-header-inner-icon {
+.svg-big-filled .workspace-tab-header .workspace-tab-header-inner-icon,
+.svg-big .workspace-tab-header .workspace-tab-header-inner-icon {
     --icon-size: 18px !important;
     width: 22px;
 }

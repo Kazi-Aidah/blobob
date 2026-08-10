@@ -2,7 +2,7 @@
     "folder-color.pathColors": [
         {
             "folderPath": "blobob/src/",
-            "color": "foldercolorizer.color_ffaf5f"
+            "color": "foldercolorizer.color_ff8700"
         },
         {
             "folderPath": "blobob/src_cry/layout/",
@@ -24,6 +24,11 @@
         {
             "folderPath": "blobob/src/layout/",
             "color": "foldercolorizer.color_d7af5f"
+        },
+        {
+            "folderPath": "blobob/src/layout/tabs/tab-styles/",
+            "color": "foldercolorizer.color_0000d7",
+            "isFolderOnly": true
         }
     ]
 }

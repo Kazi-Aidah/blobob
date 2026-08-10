@@ -1,0 +1,54 @@
+
+/* Skew */
+.tab-effect-skew .workspace-tab-header {
+    transform: skew(-0.03turn, 0deg);
+}
+
+/* retro! */
+body.tab-effect-boxglow {
+    
+    .workspace-tab-header-container-inner {
+        gap: 6px;
+    }
+
+    .workspace-tab-header .workspace-tab-header-inner {
+        background: transparent !important;
+    }
+
+    .workspace-tab-header {
+        /* margin: 4px 0px; */
+        transition: all 0.2s ease;
+    }
+
+    .workspace-tab-header:hover {
+        box-shadow:
+            inset -2px -2px 0 var(--bb-border-hover-color),
+            1px 1px 0 0px var(--bb-border-color),
+            2px 2px 2px rgba(0, 0, 0, 0.15) !important;
+        border: 1px solid var(--bb-border-color);
+    }
+
+    .workspace-tab-header:not(.is-active):active {
+        box-shadow:
+            inset -3px -3px 0 0 var(--bb-border-hover-color),
+            inset 3px 3px 0 0 var(--bb-border-color) !important;
+            border: 2px solid var(--bb-border-focused-color);
+    }
+
+    .workspace-tab-header.is-active {
+        box-shadow:
+            inset -2px -2px 0 0 var(--bb-border-hover-color),
+            inset 2px 2px 0 0 var(--bb-border-color) !important;
+            border: 2px solid var(--bb-border-focused-color);
+    }
+
+    .workspace-tab-container {
+            box-shadow:
+            inset -2px -2px 0 0 var(--bb-border-hover-color),
+            inset 2px 2px 0 0 var(--bb-border-color) !important;
+    }
+}
+
+/* .workspace-tab-header.is-active {
+    box-shadow: 0px 0px 4px 2px #00000050 !important;
+} */

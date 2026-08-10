@@ -12,30 +12,11 @@ body.tab-full-width .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-h
 }
 
 
-
-/* option: disable tabs underborder */
-
-
-
-
-
-
-
-
-
-/* .sidebar-toggle-button.mod-left,
-.sidebar-dock-ribbon.mod-left.is-collapsed::before {
-    margin: 20px 0px;
-    box-shadow: 0px 0px 0px 2px springgreen !important;
-} */
-
-
 /* @settings
 name: blobob theme!
 id: h-test
 collapsed: false
 settings:
-
 
 - id: tiptips
   title: Global Radius
@@ -64,65 +45,15 @@ settings:
     - label: Eye
       value: eye-tiptip
 
-- id: workspace-layout
-  title: Layout & Tab Style
-  description: Set the workspace layout for desktop
-  type: class-select
-  default: tab-float
-  options:
-    - label: Joined
-      value: tab-joined
-    - label: Floating
-      value: tab-float
-    - label: Underlined
-      value: tab-lined
-    - label: Contained
-      value: tab-contained
-    - label: None
-      value: tab-none
-
-- id: workspace-density
-  title: Workspace Density
-  description: 
-  type: class-select
-  default: spacious
-  options:
-    - label: Compact
-      value: compact
-    - label: Comfortable
-      value: comfortable
-    - label: Spacious
-      value: spacious
-
-- id: bb-border-width
-  title: Border Width
-  type: variable-number-slider
-  format: px
-  default: 3
-  min: 0
-  max: 10
-  step: 0.5
-
-- id: bb-header-height
-  title: Default Header Height
-  type: variable-number-slider
-  format: px
-  default: 40
-  min: 25
-  max: 100
-  step: 1
-
-
-
-
+### Theme Settings
 - id: h-dark-theme
-  title: Dark Theme
+  title: ☾ Dark Theme
   type: heading
-  level: 1
-  collapsed: false
+  level: 3
+  collapsed: true
 
 - id: dark-theme-colors
-  title: Dark Theme Color
+  title: ☾ Dark Theme Color
   description: Set the theme colors for dark mode
   type: class-select
   default: cool-gray
@@ -241,7 +172,7 @@ settings:
     value: velvet
 
 - id: dark-workspace-colors
-  title: Dark Theme – Color Switcher
+  title: ☾ Dark Theme – Color Switcher
   description: Choose how editor/workspace colors are mapped in dark mode
   type: class-select
   default: dark-wc-default
@@ -256,7 +187,7 @@ settings:
       value: dark-wc-only-workspace
 
 - id: dark-theme-border
-  title: Dark Theme – Border Colour
+  title: ☾┃ Dark Theme – Border Colour
   description:
   type: class-select
   default: dark-border-color-hover
@@ -279,13 +210,13 @@ settings:
       value: dark-border-color-accent-light
 
 - id: h-light-theme
-  title: Light Theme
+  title: ☀︎ Light Theme
   type: heading
-  level: 1
-  collapsed: false
+  level: 3
+  collapsed: true
 
 - id: light-theme-colors
-  title: Light Theme Color
+  title: ☀︎ Light Theme Color
   description: Set the theme colors for light mode
   type: class-select
   default: cloud-white
@@ -392,10 +323,8 @@ settings:
     value: delta
 
 
-
-
 - id: light-workspace-colors
-  title: Light Theme – Color Switcher
+  title: ☀︎ Light Theme – Color Switcher
   description: Choose how editor/workspace colors are mapped in light mode
   type: class-select
   default: light-wc-default
@@ -410,7 +339,7 @@ settings:
       value: light-wc-only-workspace
 
 - id: light-theme-border
-  title: Light Theme – Border Colour
+  title: ☀︎┃ Light Theme – Border Colour
   description:
   type: class-select
   default: light-border-color-hover
@@ -432,13 +361,403 @@ settings:
     - label: Lightly Accented Border
       value: light-border-color-accent-light
 
-- id: h-workspace
-  title: Other?
+
+### Tab Settings
+- id: h-tabs
+  title: Desktop / Tablet - Tab Settings
   type: heading
   level: 1
   collapsed: false
 
+- id: workspace-layout
+  title: Workspace Layout & Tab Style
+  description: Set the workspace layout for desktop
+  type: class-select
+  default: tab-joined
+  options:
+    - label: Obsidian Default
+      value: tab-none
+    - label: Joined
+      value: tab-joined
+    - label: Floating
+      value: tab-float
+    - label: Simple
+      value: tab-simple
+    - label: Simple Joined
+      value: tab-simplejoined
 
+    - label: Contained
+      value: tab-contained
+    - label: HardShadow
+      value: tab-hardshadow
+
+    - label: Defined Radius
+      value: heading-pink
+    - label: Underlined
+      value: tab-lined
+    - label: LineWrap
+      value: tab-linewrap
+
+    - label: Test
+      value: tab-test
+
+- id: apply-to-sidebar
+  title: Apply Tab Style to Sidebar Tabs
+  description: Apply the tab styling to sidebar tabs
+  type: class-toggle
+  default: true
+  addCommand: false
+
+- id: bb-border-width
+  title: ┃ - Workspace Border Width
+  type: variable-number-slider
+  format: px
+  default: 2
+  min: 0
+  max: 10
+  step: 0.25
+
+- id: h-tab-visual
+  title: Tab Visual
+  type: heading
+  level: 2
+  collapsed: true
+
+- id: center-tab-title
+  title: ☰ - Tab Title Alignment
+  description: 
+  type: class-select
+  default: center-active-tab-title
+  options:
+  - label: Default
+    value: none
+  - label: Center ACTIVE Tab Titles
+    value: center-active-tab-title
+  - label: Center ALL Tab Titles
+    value: center-all-tab-title
+
+- id: workspace-tab-backgrounds
+  title: Tab Background
+  description: 
+  type: class-select
+  default: tab-bg-wavy
+  options:
+    - label: None
+      value: tab-bg-none
+    - label: Wavy
+      value: tab-bg-wavy
+    - label: Horizontal Lines
+      value: tab-bg-hor
+
+    - label: Vertical Lines
+      value: tab-bg-vert2
+    - label: Vertical Lines Thick
+      value: tab-bg-vert1
+
+    - label: Diagonal
+      value: tab-bg-diagonal
+    - label: Diamond Checker
+      value: tab-bg-diamond
+    - label: Checker
+      value: tab-bg-checker
+    - label: Dots
+      value: tab-bg-dots
+    - label: Triangless
+      value: tab-bg-triangle
+    - label: Hearts
+      value: tab-bg-hearts
+    - label: Stars
+      value: tab-bg-stars
+    - label: 4-pointed Stars
+      value: tab-bg-sparkles
+
+- id: workspace-tab-effects
+  title: Tab Effect
+  description: 
+  type: class-select
+  default: tab-effect-none
+  options:
+    - label: None
+      value: tab-effect-none
+    - label: Skew
+      value: tab-effect-skew
+    - label: Box Glow
+      value: tab-effect-boxglow
+    - label: Sticker
+      value: tab-effect-sticker
+    - label: Neon
+      value: tab-effect-neon
+    - label: Glowing
+      value: tab-effect-glowing
+    - label: Aboveline
+      value: tab-effect-aboveline
+    - label: Underline
+      value: tab-effect-underline
+    - label: Glass
+      value: tab-effect-glass
+
+- id: workspace-density
+  title: ⬚ - Workspace Density
+  description: 
+  type: class-select
+  default: spacious
+  options:
+    - label: Compact
+      value: compact
+    - label: Comfortable
+      value: comfortable
+    - label: Spacious
+      value: spacious
+
+
+
+
+- id: h-tab-adj
+  title: ✦ Tab Adjustments
+  type: heading
+  level: 2
+  collapsed: true
+
+- id: bb-header-height
+  title: (↕) Tab Header Height
+  type: variable-number-slider
+  format: px
+  default: 40
+  min: 25
+  max: 100
+  step: 1
+
+- id: bb-header-topmargin
+  title: (↥) Tab Header Top Margin
+  type: variable-number-slider
+  format: px
+  default: 3
+  min: 0
+  max: 10
+  step: 1
+
+- id: bb-header-bottommargin
+  title: (↧) Tab Header Bottom Margin
+  type: variable-number-slider
+  format: px
+  default: 0
+  min: 0
+  max: 10
+  step: 1
+
+- id: bb-tab-width
+  title: (⟷) Tab Minimum Width
+  type: variable-number-slider
+  format: px
+  default: 140
+  min: 25
+  max: 500
+  step: 5
+
+- id: h-tab-behaviour
+  title: Tab Behaviour
+  type: heading
+  level: 2
+  collapsed: true
+
+- id: close-btn-hover
+  title: (X) Tab - Show close button on Hover
+  description: Otherwise, active tab close button is visible
+  type: class-toggle
+  default: true
+  addCommand: false
+
+- id: close-btn-instead
+  title: (X) Tab - Show close button INSTEAD OF TAB ICON on Hover
+  description: This brings the close button on the right
+  type: class-toggle
+  default: true
+  addCommand: false
+
+
+
+
+
+- id: disable-fixed-newtab
+  title: Disable fixed new tab button
+  description: Resets the fixed new tab button
+  type: class-toggle
+  default: false
+  addCommand: false
+
+- id: fixed-left-sidebar-button
+  title: Enable fixed left sidebar button
+  description: 
+  type: class-toggle
+  default: false
+  addCommand: false
+
+- id: hide-tab-list
+  title: Hide tab list
+  type: class-toggle
+  default: true
+
+- id: hide-tab-close-btn
+  title: Hide tab close button
+  type: class-toggle
+  default: false
+  addCommand: false
+
+- id: pin-icon-only
+  title: Show only icon on pinned tabs
+  type: class-toggle
+  default: true
+  addCommand: false
+
+- id: hide-sidebar-toggle-left
+  title: Hide Left Sidebar Toggle Button
+  type: class-toggle
+  default: false
+
+- id: hide-sidebar-toggle-right
+  title: Hide Right Sidebar Toggle Button
+  type: class-toggle
+  default: false
+
+
+- id: tab-top-left-style
+  title: Tab Style (Left top)
+  description: Style for the top-left sidebar tab strip
+  type: class-select
+  default: tab-top-left-icons
+  options:
+    - label: Icons Only
+      value: tab-top-left-icons
+    - label: Labels Only
+      value: tab-top-left-labels
+    - label: Icons + Labels
+      value: tab-top-left-icons-labels
+
+- id: tab-top-right-style
+  title: Tab Style (Right top)
+  description: Style for the top-right sidebar tab strip
+  type: class-select
+  default: tab-top-right-icons
+  options:
+    - label: Icons Only
+      value: tab-top-right-icons
+    - label: Labels Only
+      value: tab-top-right-labels
+    - label: Icons + Labels
+      value: tab-top-right-icons-labels
+
+- id: tab-left-style
+  title: Tab Style (Left)
+  description: Style for the left sidebar tab strip
+  type: class-select
+  default: tab-left-icons
+  options:
+    - label: Icons Only
+      value: tab-left-icons
+    - label: Labels Only
+      value: tab-left-labels
+    - label: Icons + Labels
+      value: tab-left-icons-labels
+
+- id: tab-right-style
+  title: Tab Style (Right)
+  description: Style for the right sidebar tab strip
+  type: class-select
+  default: tab-right-icons
+  options:
+    - label: Icons Only
+      value: tab-right-icons
+    - label: Labels Only
+      value: tab-right-labels
+    - label: Icons + Labels
+      value: tab-right-icons-labels
+
+
+
+
+- id: compact-tabs
+  title: Compact Tabs
+  type: class-toggle
+  default: false
+  addCommand: true
+
+
+
+
+- id: icons-buttons
+  title: Icons & Buttons
+  type: heading
+  level: 1
+  collapsed: true
+
+- id: icons-buttons
+  title: Icons & Buttons
+  type: heading
+  level: 2
+  collapsed: true
+
+- id: button-style
+  title: Button & dropdown select Style
+  type: class-select
+  default: default
+  options:
+    - label: Default
+      value: default
+    - label: Bordered
+      value: button-bordered
+    - label: 3D
+      value: button-3d
+    - label: Bordered 3D
+      value: button-bordered-3d
+    - label: Glow
+      value: button-glow
+
+- id: button-animation
+  title: Button Animation Style
+  type: class-select
+  default: button-shrink
+  options:
+    - label: None
+      value: none
+    - label: Scale
+      value: button-scale
+    - label: Shrink
+      value: button-shrink
+    - label: Bounce
+      value: button-bounce
+    - label: Tilt
+      value: button-tilt
+
+- id: icon-style
+  title: Icon style
+  description: Set the icon style
+  type: class-select
+  default: svg-filled
+  options:
+    - label: Default
+      value: svg-default
+    - label: Filled
+      value: svg-filled
+    - label: Big
+      value: svg-big
+    - label: Big Filled
+      value: svg-big-filled
+    - label: Glowing
+      value: svg-glowing
+    - label: Just Glow
+      value: svg-just-glow
+    - label: Accented
+      value: svg-accented
+
+
+- id: bb-icon-stroke
+  title: ┃ - Icon Stroke Width
+  type: variable-number-slider
+  format: px
+  default: 3
+  min: 0
+  max: 6
+  step: .5
 
 */
 
@@ -455,6 +774,8 @@ body {
 /* Slider: Header Height */
 body {
   --header-height: var(--bb-header-height) !important;
+  --tab-width: var(--bb-tab-width);
+  --bb-tab-width: 140px;
 }
 
 body {
@@ -502,399 +823,130 @@ body {
 
 
 
-/* .tab-linewrap {
-    --border-width: 0px;
-    --tab-curve: 14px;
-
-    .workspace-tab-header-inner {
-        border-radius: 12px;
-        corner-shape: round;
-        padding: 0px 8px;
-    }
-
-    .workspace-tab-header {
-        box-shadow: none !important;
-        border-radius: 12px;
-        corner-shape: round;
-        padding: 0px 6px;
-    }
-
-
-    .mod-root .workspace-tab-container {
-        --background-primary: var(--bb-elements-bg);
-        border-radius: 20px !important;
-    }
-
-
-} */
-
-
-/* filters? */
-/* .workspace-leaf {
-    transform: skew(-0.03turn, 0deg);
-} */
 
 
 
-
-
-
-
-/* cute rounded */
-/* body.tab-test {
-    --border-width: 0px;
-    --divider-width: 2px;
-    --tab-curve: 0px;
-
-    .mod-root .workspace-tab-header .workspace-tab-header-inner {
-        overflow: visible !important;
-    }
-    .workspace-tab-header-container::before,
-    .workspace-tab-header-container::after {
-        display: none;
-    }
-
-    --border-width: 0px;
-    --tab-curve: 14px;
-
-    .workspace-tab-header-inner {
-        border-radius: 12px;
-        corner-shape: round;
-        padding: 0px 8px;
-    }
-
-    .workspace-tab-header {
-        box-shadow: none !important;
-        border-radius: 12px;
-        corner-shape: round;
-        padding: 0px 6px;
-    }
-
-
-    .mod-root .workspace-tab-container {
-        --background-primary: var(--bb-elements-bg);
-        border-radius: 20px !important;
-    }
-} */
-
-
-/* completely sharp */
-/* body.tab-test {
-    --border-width: 0;
-    --tab-curve: 0;
-    --tab-radius: 0px;
-
-    .workspace-tab-header, .workspace-tab-header-inner {
-        corner-shape: round;
-        border-radius: 0px;
-        padding: 0px 12px;
-    }
-} */
-
-
-body.tab-linewrap {
-    --border-width: 0px;
-    --divider-width: 2px;
-    --tab-curve: 0px;
-
-    /* prevent clipping */
-    .mod-root .workspace-tab-header .workspace-tab-header-inner {
-        overflow: visible !important;
-    }
-    .workspace-tab-header-container::before,
-    .workspace-tab-header-container::after {
-        display: none;
-    }
-
-    .mod-root .workspace-tab-header {
-        border-right: 2px solid var(--border-color);
-        border-radius: 0px;
-        transform: translateY(0) scale(1);
-        transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-        overflow: visible;
-        position: relative;
-        z-index: 2;
-    }
-
-    .mod-root .workspace-tab-header:hover {
-        border-right: 2px solid var(--border-color);
-        border-radius: 0px;
-        transform: translateY(4px) scale(1.02);
-    }
-
-    .mod-root .workspace-tab-header:active {
-        border-right: 2px solid var(--border-color);
-        border-radius: 0px;
-        transform: translateY(8px) scale(0.96);
-    }
-
-    .mod-root .workspace-tab-header.is-active:hover {
-        border-right: 2px solid var(--border-color);
-        padding: 0px 10px;
-        transform: translateY(-4px) scale(1.02);
-    }
-
-    .mod-root .workspace-tab-header.is-active {
-        border-right: 2px solid var(--border-color);
-        padding: 0px 10px;
-        transform: translateY(0) scale(1);
-        z-index: 3;
-    }
+body {
+  --tab-divider-color: transparent;
 }
 
-body.tab-simplejoined {
-    .mod-root .workspace-tab-header .workspace-tab-header-inner {
-        overflow: visible !important;
-    }
-    .workspace-tab-header-container::before,
-    .workspace-tab-header-container::after {
-        display: none;
-    }
 
-    --tab-curve: calc(var(--tab-radius) * .7);
-
-    .workspace-tab-header-inner {
-        border-radius: var(--tab-inner-radius);
-        corner-shape: var(--tab-corner-shape);
-        padding: 0px 8px;
-    }
-
-    .workspace-tab-header {
-        border-radius: var(--tab-radius);
-        corner-shape: var(--tab-corner-shape);
-
-        border-bottom-left-radius: 0px !important;
-        border-bottom-right-radius: 0px !important;
-
-        padding: 0px 6px;
-    }
-
-    .workspace-tab-header.is-active {
-        border-radius: var(--tab-radius);
-        corner-shape: var(--tab-corner-shape);
-    }
-
-    .mod-root .workspace-tab-container {
-        --background-primary: var(--bb-elements-bg);
-    }
-
-
-    /* tab animation */
-    .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
-        transform: scale(0.9);
-        transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
-    }
-    .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
-        transform: scale(1);
-    }
-    .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner {
-        transform: scale(0.95);
-    }
-    .workspace-tab-header.is-active {
-        transform: scale(1) translateY(0.2px);
-        transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
-    }
-    .workspace-tab-header.is-active:hover {
-        transform: scale(1.05) translateY(0.5px);
-    }
-}
-
-body.tab-simple {
-    --tab-curve: 0px;
-    .workspace-tab-header {
-        border-radius: var(--tab-radius);
-    }
-    .workspace-tab-header.is-active {
-        border-radius: var(--tab-radius);
-        margin-bottom: 3px;
-    }
-
-    .mod-root .workspace-tab-header .workspace-tab-header-inner {
-        overflow: visible !important;
-    }
-    .workspace-tab-header-container::before,
-    .workspace-tab-header-container::after {
-        display: none;
-    }
-
-    .workspace-tab-header-inner {
-        border-radius: var(--tab-radius);
-        corner-shape: var(--tab-corner-shape);
-        padding: 0px 8px;
-    }
-
-    .workspace-tab-header {
-        border-radius: var(--tab-radius);
-        corner-shape: var(--tab-corner-shape);
-        padding: 0px 6px;
-    }
-
-    .workspace-tab-header.is-active {
-        border-radius: var(--tab-radius);
-        corner-shape: var(--tab-corner-shape);
-    }
-
-    .mod-root .workspace-tab-container {
-        --background-primary: var(--bb-elements-bg);
-    }
-
-
-    /* tab animation */
-    .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
-        transform: scale(0.9);
-        transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
-    }
-    .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
-        transform: scale(1);
-    }
-    .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner {
-        transform: scale(0.95);
-    }
-    .workspace-tab-header.is-active {
-        transform: scale(1) translateY(0.2px);
-        transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
-    }
-    .workspace-tab-header.is-active:hover {
-        transform: scale(1.05) translateY(0.5px);
-    }
-}
-
-body.tab-contained {
-    --tab-curve: 0px;
-
-    .workspace-tab-header {
-        border-radius: var(--tab-radius);
-        transition: all 0.2s ease;
-    }
-    .workspace-tab-header.is-active {
-        border-radius: var(--tab-radius);
-        padding: 0px;
-        margin-bottom: 0px;
-    }
-    .workspace-tab-header-inner {
-        background-color: transparent !important;
-        border-radius: var(--tab-radius);
-    }
-
-    .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
-        background-color: transparent !important;
-        border-radius: var(--tab-radius);
-        transform: translateY(2px);
+/* fun */
+.tab-divider-skewed {
+    --tab-divider-color: var(--border-color);
+    
+    .workspace-tab-header-inner::after {
+        width: 3px !important;
+        border-radius: 100px;
+        transform: skew(-15deg);
+        margin-right: -10px;
     }
 
     .workspace-tab-header:not(.is-active) {
-        background-color: transparent;
-    }
-    .workspace-tab-header:not(.is-active):hover {
-        background-color: var(--bb-elements-bg);
-    }
-    .workspace-tab-header.is-active {
-        background-color: var(--bb-workspace-bg);
-        min-width: calc(var(--tab-width) * 1.1) !important;
-        transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1), background-color 0s ease;
-    }
-
-    /* the container */
-    .workspace-tab-header-container-inner {
-        background-color: var(--bb-editor-bg);
-        border-radius: calc(var(--tab-radius) + 2px);
-        corner-shape: var(--tab-corner-shape);
-        padding: 4px;
-        margin-bottom: 4px;
-        gap: 4px;
-    }
-
-}
-
-
-body.tab-hardshadow {
-    --tab-curve: 0;
-    
-    .workspace-tab-header-container-inner {
-        gap: 6px;
-    }
-
-    .workspace-tab-header .workspace-tab-header-inner {
-        background: transparent !important;
-    }
-
-    .workspace-tab-header {
-        margin-bottom: 6px;
-
-        transition: all 0.2s ease;
-        border-radius: var(--tab-radius);
-    }
-
-    .workspace-tab-header:not(.is-active) {
-        transform: translateY(2px);
-        border: 2px solid transparent;
-        box-shadow: 3px 0px 0 var(--bb-border-hover-color);
-    }
-
-    .workspace-tab-header:not(.is-active):hover {
-        /* transform: translateY(1px); */
-        border: 2px solid var(--bb-border-hover-color);
-        /* box-shadow: 3px 2px 0 var(--bb-border-hover-color); */
-    }
-
-    .workspace-tab-header:not(.is-active):active {
-        transform: translateY(4px);
-        border: 2px solid var(--bb-border-focused-color);
-        box-shadow: 3px -1px 0 1px var(--bb-border-focused-color);
-    }
-
-    .workspace-tab-header.is-active {
-        border: 2px solid var(--bb-border-focused-color);
-        box-shadow: 3px 3px 0 var(--bb-border-focused-color);
-    }
-
-    .workspace-tab-container {
-        box-shadow: none;
+        margin-right: 20px;
     }
 }
 
+/* tab + squircle tiptip */
+/* body:is(.extra-squircle-tiptip) .workspace-tab-header.is-active {
+  border-radius: 24px;
+  corner-shape: round;
+}
+body:is(.extra-squircle-tiptip) .workspace-tab-header-inner {
+  border-radius: 12px;
+  corner-shape: round;
+} */
 
 
-/* Skew */
-.tab-effect-skew .workspace-tab-header:is(.is-active) {
-    transform: skew(-0.03turn, 0deg) !important;
+
+
+
+/* important for bb header topmargin */
+.workspace-tabs {
+    background: var(--titlebar-background);
 }
 
-/* retro! */
-body.tab-effect-boxglow {
-    
-    .workspace-tab-header-container-inner {
-        gap: 6px;
-    }
-
-    .workspace-tab-header .workspace-tab-header-inner {
-        background: transparent !important;
-    }
-
-    .workspace-tab-header {
-        /* margin: 4px 0px; */
-        transition: all 0.2s ease;
-    }
-
-    .workspace-tab-header:hover {
-        box-shadow:
-            inset -2px -2px 0 var(--bb-border-hover-color),
-            1px 1px 0 0px var(--bb-border-color),
-            2px 2px 2px rgba(0, 0, 0, 0.15) !important;
-        border: 1px solid var(--bb-border-color);
-    }
-
-    .workspace-tab-header:not(.is-active):active {
-        box-shadow:
-            inset -3px -3px 0 0 var(--bb-border-hover-color),
-            inset 3px 3px 0 0 var(--bb-border-color) !important;
-            border: 2px solid var(--bb-border-focused-color);
-    }
-
-    .workspace-tab-header.is-active {
-        box-shadow:
-            inset -2px -2px 0 0 var(--bb-border-hover-color),
-            inset 2px 2px 0 0 var(--bb-border-color) !important;
-            border: 2px solid var(--bb-border-focused-color);
-    }
+body:not(.tab-contained) .workspace-tab-header {
+    margin-top: var(--bb-header-topmargin) !important;
 }
+
+body:not(.tab-contained) .workspace-tab-header-container-inner {
+    padding-bottom: var(--bb-header-bottommargin) !important;
+}
+
+
+/* basic tab space + close button adj */
+.mod-root .workspace-tab-header .workspace-tab-header-inner {
+  gap: 0px;
+  padding-right: 1px !important;
+}
+.mod-root .workspace-tab-header-inner-title {
+  padding-left: 5px;
+}
+.mod-root .workspace-tab-header-inner-icon {
+  padding-left: 3px;
+}
+.mod-root .workspace-tab-header-inner-close-button {
+  margin-right: 0px;
+  border-radius: 100px;
+}
+/* close button show on hover */
+.close-btn-hover .mod-root .workspace-tab-header .workspace-tab-header-inner-close-button {
+  opacity: 0 !important;
+  transition: opacity 0.1s ease;
+}
+.close-btn-hover .mod-root .workspace-tab-header:hover .workspace-tab-header-inner-close-button {
+  opacity: 1 !important;
+}
+/* Show close button in place of icon */
+.close-btn-instead .mod-root .workspace-tab-header-inner-close-button {
+  order: -1;
+  display: none;
+  margin-left: -3px;
+}
+.close-btn-instead .mod-root .workspace-tab-header:hover .workspace-tab-header-inner-icon {
+  display: none !important;
+}
+body.close-btn-instead.center-active-tab-title .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner-title,
+body.close-btn-instead.center-all-tab-title .mod-root .workspace-tab-header .workspace-tab-header-inner-title {
+  margin-left: -24px;
+} /* plus fix title when center active tab is on*/
+
+
+/* center ACTIVE tab title */
+.center-active-tab-title .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* center ALL tab title */
+.center-all-tab-title .mod-root .workspace-tab-header .workspace-tab-header-inner-title {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* active tab width */
+.mod-root .workspace-tab-header {
+  min-width: var(--tab-width) !important;
+}
+
+/* make sure tabs don't get cut off */
+.mod-left-split .workspace-tab-header-container-inner,
+.mod-right-split .workspace-tab-header-container-inner {
+    flex: 100% !important;
+}/* transparent bg on hiding ribbon: good */
+.sidebar-toggle-button {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+.workspace-ribbon.is-collapsed .sidebar-toggle-button {
+    background-color: var(--ribbon-background-collapsed) !important;
+}
+
+
+

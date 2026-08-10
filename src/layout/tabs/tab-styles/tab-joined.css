@@ -1,0 +1,171 @@
+body.tab-joined,
+body:not(.tab-none, .tab-float, .tab-lined, .tab-contained, .tab-linewrap, .tab-simple, .tab-simplejoined, .tab-hardshadow, .tab-test) {
+  --system-status-background: var(--titlebar-background);
+
+  .workspace-tab-header-container {
+    border-bottom: none;
+    background-color: var(--tab-container-background);
+    box-shadow: inset 0 calc(-1 * var(--border-width)) 0 var(--border-color);
+  }
+
+  .workspace-tab-header-container-inner {
+    margin-top: 8px;
+  }
+
+  .workspace-tab-header {
+    margin: 0;
+    --tab-curve: 0px;
+    border-radius: var(--button-radius) var(--button-radius) 0 0;
+    padding-left: 0;
+    box-shadow: 0 0 0 1px transparent;
+    transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.2),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1), margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
+  }
+
+  .workspace .mod-root .workspace-tab-header.is-active:hover .workspace-tab-header-inner-close-button,
+  .workspace .mod-left-split .workspace-tab-header.is-active:hover .workspace-tab-header-inner-close-button,
+  .workspace .mod-right-split .workspace-tab-header.is-active:hover .workspace-tab-header-inner-close-button {
+    transform: scale(0.9);
+    opacity: 1;
+    width: auto;
+    margin-left: -4px !important;
+    margin-bottom: 4px;
+    pointer-events: auto;
+  }
+}
+
+body.tab-joined .mod-root {
+  .workspace-tab-header.is-active {
+    margin: 5px 5px -10px;
+    padding: 2px 2px 4px;
+    padding-top: 0 !important;
+    border-radius: var(--button-radius) var(--button-radius) 0 0;
+    corner-shape: var(--corner-shape);
+    transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1), margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
+  }
+
+  .workspace-tab-header:not(.is-active) {
+    transform: translateY(8px);
+    opacity: 0.6;
+  }
+
+  .workspace-tab-header:not(.is-active):hover {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+    transform: translateY(0);
+    height: 100%;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-top: -2px;
+    transition: all calc(var(--animation-duration) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1), background-color 0s ease;
+  }
+
+  .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:hover {
+    background-color: var(--bb-workspace-bg-alt);
+    transition: all calc(var(--animation-duration) * 1.2) ease-out;
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+  }
+
+  .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:active {
+    background-color: var(--bb-editor-bg);
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+    padding: 10px 6px;
+    padding-top: -10px;
+    transform: scale(0.9) translateY(4px);
+    transition: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  }
+
+  .workspace-tab-header:active {
+    background-color: var(--bb-editor-bg);
+    border: var(--border-width) solid var(--border-color);
+    transform: scale(0.8) translateY(4px) !important;
+    border-radius: calc(var(--button-radius) + 2px) !important;
+    corner-shape: var(--corner-shape);
+  }
+
+  .workspace-split.mod-vertical.mod-root .workspace-tab-header:not(.is-active, :has(.mod-pinned)) {
+    margin-left: 0;
+    margin-right: -3px;
+  }
+
+  .workspace-tab-header .workspace-tab-header-inner {
+    transition: all calc(var(--animation-duration) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  }
+}
+
+body.tab-joined.apply-to-sidebar {
+  .mod-left-split .workspace-tab-header,
+  .mod-right-split .workspace-tab-header {
+    transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.2),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1), margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
+  }
+
+  .mod-left-split .workspace-tab-header.is-active,
+  .mod-right-split .workspace-tab-header.is-active {
+    margin: 5px 5px -10px;
+    padding: 2px 2px 4px;
+    border-radius: var(--button-radius) var(--button-radius) 0 0;
+    corner-shape: var(--corner-shape);
+    border: var(--border-width) solid var(--border-color);
+    background-color: var(--bb-workspace-bg);
+    transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1), margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
+  }
+
+  .mod-left-split .workspace-tab-header:not(.is-active),
+  .mod-right-split .workspace-tab-header:not(.is-active) {
+    transform: translateY(8px);
+    opacity: 0.6;
+  }
+
+  .mod-left-split .workspace-tab-header:not(.is-active):hover,
+  .mod-right-split .workspace-tab-header:not(.is-active):hover {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .mod-left-split .workspace-tab-header:not(.is-active) .workspace-tab-header-inner,
+  .mod-right-split .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+    transform: translateY(0);
+    height: 100%;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-top: -2px;
+    transition: all calc(var(--animation-duration) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1), background-color 0s ease;
+  }
+
+  .mod-left-split .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:hover,
+  .mod-right-split .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:hover {
+    background-color: var(--bb-workspace-bg-alt);
+    transition: all calc(var(--animation-duration) * 1.2) ease-out;
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+  }
+
+  .mod-left-split .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:active,
+  .mod-right-split .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:active {
+    background-color: var(--bb-editor-bg);
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+    padding: 10px 6px;
+    padding-top: -10px;
+    transform: scale(0.9) translateY(4px);
+    transition: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  }
+
+  .mod-left-split .workspace-tab-header:active,
+  .mod-right-split .workspace-tab-header:active {
+    background-color: var(--bb-editor-bg);
+    border: var(--border-width) solid var(--border-color);
+    transform: scale(0.8) translateY(4px) !important;
+    border-radius: calc(var(--button-radius) + 2px) !important;
+    corner-shape: var(--corner-shape);
+    z-index: 1001 !important;
+  }
+}

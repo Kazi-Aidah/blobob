@@ -83,25 +83,6 @@ body.tab-lined {
         margin: 0px;
     }
 
-    /* sidebar tabs fix */
-    .workspace-split:not(.mod-vertical.mod-root) 
-    .workspace-tab-header-container-inner .workspace-tab-header {
-        margin-bottom: -7px;
-        /* padding: 2px; */
-    }
-
-    .workspace-split:not(.mod-vertical.mod-root) 
-    .workspace-tab-header-container 
-    .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
-        transform: translateY(-4px);
-    }
-
-    .workspace-split:not(.mod-vertical.mod-root) 
-    .workspace-tab-header-container 
-    .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner {
-        transform: translateY(0);
-    }
-
     .workspace-tab-header-inner {
         border-bottom: 0px solid transparent;
         border-radius: 0px;

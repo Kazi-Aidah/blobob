@@ -2002,7 +2002,7 @@ button, button:hover, button:active {
 body:not(.view-header) .button-bordered button,
 .button-bordered .setting-item-control button,
 .button-bordered select {
-    border: 2px solid var(--background-modifier-border-focus);
+    border: 2px solid var(--bb-border-focused-color);
 }
 
 .button-bordered button.mod-cta {
@@ -2046,7 +2046,7 @@ body:not(.view-header) .button-bordered-3d button,
 .button-bordered-3d .mod-cta,
 .button-bordered-3d select,
 .button-bordered-3d .setting-item-control button {
-    border: 2px solid var(--background-modifier-border-focus);
+    border: 2px solid var(--bb-border-focused-color);
     border-bottom: 3px solid var(--button-shadow);
     transition: border-bottom 0.1s ease, transform 0.1s ease;
 }
@@ -2055,7 +2055,7 @@ body:not(.view-header) .button-bordered-3d button:hover,
 .button-bordered-3d .mod-cta:hover,
 .button-bordered-3d select:hover,
 .button-bordered-3d .setting-item-control button:hover {
-    border: 2px solid var(--background-modifier-border-focus);
+    border: 2px solid var(--bb-border-focused-color);
     border-bottom: 5px solid var(--button-shadow);
     transform: translateY(-2px);
 }
@@ -2065,7 +2065,7 @@ body:not(.view-header) .button-bordered-3d button:active,
 .button-bordered-3d .mod-cta:active,
 .button-bordered-3d select:active,
 .button-bordered-3d .setting-item-control button:active {
-    border: 2px solid var(--background-modifier-border-focus);
+    border: 2px solid var(--bb-border-focused-color);
     border-bottom: 0 solid var(--button-shadow);
     transform: translateY(0);
 }
@@ -2088,31 +2088,80 @@ body:not(.view-header) .button-bordered-3d button:active,
 
 
 /* ---
-icons sizes: filled, big, big-filled
+icons sizes: filled, big, big-filled, more
 icon specified colours: donate to support, uninstall, delete, remove, close, new tab
 --- */
 
-.filled svg {
+body {
+    --icon-stroke: var(--bb-icon-stroke) !important;
+    --icon-xs-stroke-width: var(--bb-icon-stroke) !important;
+    --icon-s-stroke-width: var(--bb-icon-stroke) !important;
+    --icon-m-stroke-width: var(--bb-icon-stroke) !important;
+    --icon-l-stroke-width: calc(var(--bb-icon-stroke) * .75) !important;
+    --icon-xl-stroke-width: calc(var(--bb-icon-stroke) * .85) !important;
+    --canvas-controls-icon-stroke: var(--bb-icon-stroke) !important;
+}
+
+svg.svg-icon, .clickable-icon svg, .collapse-icon svg.svg-icon {
+    stroke-width: var(--icon-stroke);
+}
+
+/* Accented */
+.svg-accented svg {
+    fill: currentcolor;
+    fill-opacity: 1;
+    stroke: var(--text-accent);
+}
+
+/* Glowing */
+.svg-glowing svg {
+    fill: currentColor;
+    fill-opacity: .3;
+    stroke: currentColor;
+    stroke-opacity: 1;
+    filter: drop-shadow(0 0 2px currentColor);
+}
+
+/* Just Glow */
+.svg-just-glow svg {
+    fill: currentColor;
+    fill-opacity: 0;
+    stroke: currentColor;
+    stroke-opacity: 1;
+    filter: drop-shadow(0 0 2px currentColor);
+} */
+
+/* Subtle Duotone */
+.svg-subtle-duotone svg {
+    fill: currentColor;
+    fill-opacity: .75 !important; 
+    stroke: currentColor;
+    stroke-opacity: .5;
+    filter: contrast(2);
+    mix-blend-mode: screen;
+}
+
+.svg-filled svg {
     fill: currentcolor;
     fill-opacity: 0.25;
 }
 
-.big svg,
-.big svg.svg-icon,
-.big .clickable-icon {
+.svg-big svg,
+.svg-big svg.svg-icon,
+.svg-big .clickable-icon {
     --icon-size: 22px !important;
 }
 
-.big-filled svg,
-.big-filled svg.svg-icon,
-.big-filled .clickable-icon {
+.svg-big-filled svg,
+.svg-big-filled svg.svg-icon,
+.svg-big-filled .clickable-icon {
     --icon-size: 22px !important;
     fill: currentcolor;
     fill-opacity: 0.25;
 }
 
-.big-filled .workspace-tab-header .workspace-tab-header-inner-icon,
-.big .workspace-tab-header .workspace-tab-header-inner-icon {
+.svg-big-filled .workspace-tab-header .workspace-tab-header-inner-icon,
+.svg-big .workspace-tab-header .workspace-tab-header-inner-icon {
     --icon-size: 18px !important;
     width: 22px;
 }
@@ -2501,10 +2550,535 @@ input[type="checkbox"]:checked:hover {
     background-size: 160px 160px;
 }
 
-/* FLOATING TAB */
-.tab-float {
-  --system-status-background: var(--bb-editor-bg);
 
+
+
+
+
+
+
+
+
+
+
+/* >> EFFECTS */
+
+/* LINES */
+body.tab-effect-aboveline .workspace-tab-header.is-active {
+    border-top: 2px solid var(--color-accent-2);
+}
+
+body.tab-effect-underline .workspace-tab-header.is-active {
+    border-bottom: 2px solid var(--color-accent-2);
+}
+
+
+
+/* NEON */
+body.tab-effect-neon .workspace-tab-header.is-active {
+    box-shadow:
+        0 0 8px var(--color-accent-2),
+        0 0 20px var(--color-accent-2),
+        0 0 20px var(--color-accent-2),
+        0 0 40px color-mix(in srgb, var(--color-accent-2) 30%, transparent) !important;
+
+    border: 1px solid var(--color-accent-2);
+}
+
+body.tab-effect-neon .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+    box-shadow:
+        0 0 8px color-mix(in srgb, var(--text-normal) 15%, transparent);
+
+    border: 1px solid var(--text-muted);
+}
+
+
+
+
+/* GLOWNING */
+body.tab-effect-glowing .workspace-tab-header {
+    transition: all 0.2s ease;
+}
+
+body.tab-effect-glowing .workspace-tab-header.is-active {
+    background: transparent;
+    background-color: #ffffff0e;
+    box-shadow:
+        0 0 8px color-mix(in srgb, var(--text-normal) 15%, transparent);
+    border: 1px solid var(--text-muted);
+}
+
+body.tab-effect-glowing .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+    box-shadow:
+        0 0 8px color-mix(in srgb, var(--bb-border-color) 15%, transparent);
+
+    border: 1px solid var(--bb-border-focused-color);
+}
+
+
+
+
+
+
+/* STICKER */
+body.tab-effect-sticker .workspace-tab-header {
+    transition: all 0.2s ease;
+}
+
+body.tab-effect-sticker .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:hover {
+    transform: rotate(0deg) scale(1.04);
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.08);
+    border: 2px dashed var(--color-accent-2);
+}
+
+body.tab-effect-sticker .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:active {
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.08);
+    border: 2px solid var(--color-accent-2) !important;
+}
+
+body.tab-effect-sticker .workspace-tab-header.is-active {
+    border: 2px solid var(--color-accent-1) !important;
+    box-shadow: 0px 0px 0 var(--interactive-accent),
+                0px 0px 0 3px var(--bb-border-focused-color);
+    transform: rotate(0deg) scale(1.02);
+}
+
+
+
+/* GLASS */
+body.tab-effect-glass .workspace-tab-header {
+    border: 1px solid color-mix(
+        in srgb,
+        var(--text-normal) 14%,
+        transparent
+    );
+
+    box-shadow:
+        inset 0 1px 0 color-mix(
+            in srgb,
+            var(--text-normal) 30%,
+            transparent
+        ),
+        inset 0 -1px 0 color-mix(
+            in srgb,
+            var(--text-normal) 8%,
+            transparent
+        ),
+        0 2px 3px rgba(0, 0, 0, 0.18),
+        0 6px 12px rgba(0, 0, 0, 0.12);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+body.tab-effect-glass .workspace-tab-header.is-active {
+    border-color: color-mix(
+        in srgb,
+        var(--text-normal) 24%,
+        transparent
+    );
+
+    box-shadow:
+        inset 0 1px 0 color-mix(
+            in srgb,
+            var(--text-normal) 42%,
+            transparent
+        ),
+        inset 0 -1px 0 color-mix(
+            in srgb,
+            var(--text-normal) 12%,
+            transparent
+        ),
+        0 3px 5px rgba(0, 0, 0, 0.22),
+        0 8px 18px rgba(0, 0, 0, 0.14);
+
+    transform: translateY(-1px);
+}
+
+body.tab-effect-glass .workspace-tab-header:hover:not(.is-active) {
+    border-color: color-mix(
+        in srgb,
+        var(--text-normal) 22%,
+        transparent
+    );
+
+    box-shadow:
+        inset 0 1px 0 color-mix(
+            in srgb,
+            var(--text-normal) 38%,
+            transparent
+        ),
+        inset 0 -1px 0 color-mix(
+            in srgb,
+            var(--text-normal) 10%,
+            transparent
+        ),
+        0 4px 7px rgba(0, 0, 0, 0.20),
+        0 8px 16px rgba(0, 0, 0, 0.12);
+
+    transform: translateY(-1px);
+}
+
+body.tab-effect-glass .workspace-tab-header:active {
+    box-shadow:
+        inset 0 2px 5px rgba(0, 0, 0, 0.22),
+        inset 0 -1px 0 color-mix(
+            in srgb,
+            var(--text-normal) 8%,
+            transparent
+        ),
+        0 1px 2px rgba(0, 0, 0, 0.16);
+
+    transform: translateY(1px);
+}
+
+/* Skew */
+.tab-effect-skew .workspace-tab-header {
+    transform: skew(-0.03turn, 0deg);
+}
+
+/* retro! */
+body.tab-effect-boxglow {
+    
+    .workspace-tab-header-container-inner {
+        gap: 6px;
+    }
+
+    .workspace-tab-header .workspace-tab-header-inner {
+        background: transparent !important;
+    }
+
+    .workspace-tab-header {
+        /* margin: 4px 0px; */
+        transition: all 0.2s ease;
+    }
+
+    .workspace-tab-header:hover {
+        box-shadow:
+            inset -2px -2px 0 var(--bb-border-hover-color),
+            1px 1px 0 0px var(--bb-border-color),
+            2px 2px 2px rgba(0, 0, 0, 0.15) !important;
+        border: 1px solid var(--bb-border-color);
+    }
+
+    .workspace-tab-header:not(.is-active):active {
+        box-shadow:
+            inset -3px -3px 0 0 var(--bb-border-hover-color),
+            inset 3px 3px 0 0 var(--bb-border-color) !important;
+            border: 2px solid var(--bb-border-focused-color);
+    }
+
+    .workspace-tab-header.is-active {
+        box-shadow:
+            inset -2px -2px 0 0 var(--bb-border-hover-color),
+            inset 2px 2px 0 0 var(--bb-border-color) !important;
+            border: 2px solid var(--bb-border-focused-color);
+    }
+
+    .workspace-tab-container {
+            box-shadow:
+            inset -2px -2px 0 0 var(--bb-border-hover-color),
+            inset 2px 2px 0 0 var(--bb-border-color) !important;
+    }
+}
+
+/* .workspace-tab-header.is-active {
+    box-shadow: 0px 0px 4px 2px #00000050 !important;
+} */
+/* ORDERING & TAB POSITION */
+
+/* orders of tab header container */
+.workspace-tab-header-tab-list {
+    order: -1;
+    margin-left: 0;
+    margin-right: 0;
+    gap: 4px;
+}
+
+body:not(.disable-fixed-newtab) {
+    /* NEW TAB BUTTON */
+    .workspace-tab-header-new-tab {
+        /* padding: 0 6px !important; */
+        margin-right: 6px;
+        background: transparent;
+        order: 999; 
+
+        /* force at the end */
+        flex: 0 0 auto;
+    }
+
+    /* RIGHT SIDEBAR TOGGLE */
+    .sidebar-toggle-button.mod-right {
+        order: 1000;
+        flex: 0 0 auto;
+        align-self: center;
+        background: transparent;
+        box-shadow: none;
+        height: 24px;
+        width: 24px;
+        padding: 0;
+    }
+}
+
+/* FIXED LEFT SIDEBAR TOGGLE */
+body.fixed-left-sidebar-button .sidebar-toggle-button.mod-left {
+    order: -1;
+    margin-left: -4px;
+    margin-right: 20px;
+}
+
+.sidebar-toggle-button.mod-left {
+    margin-left: -8px !important;
+    margin-right: 0px !important;
+}
+
+.workspace-tab-header-container-inner {
+    margin-left: -12px;
+}
+
+/* Hide Tab List */
+body.hide-tab-list .workspace-tab-header-tab-list {
+    display: none;
+}
+
+/* ===== TAB STYLE — LEFT TOP ===== */
+
+/* Labels Only */
+body.tab-top-left-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space {
+    --sidebar-tab-text-display: inline-block;
+}
+
+body.tab-top-left-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner-icon {
+    display: none;
+}
+
+body.tab-top-left-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+
+body.tab-top-left-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner {
+    width: auto !important;
+}
+
+/* Icons + Labels */
+body.tab-top-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space {
+    --sidebar-tab-text-display: inline-block;
+}
+
+body.tab-top-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+
+body.tab-top-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner {
+    width: auto !important;
+    gap: 6px;
+}
+
+/* Icons Only */
+body.tab-top-left-icons .mod-sidedock.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-inner-title {
+    display: none !important;
+}
+
+/* ===== TAB STYLE — RIGHT TOP ===== */
+
+/* Labels Only */
+body.tab-top-right-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space {
+    --sidebar-tab-text-display: inline-block;
+}
+
+body.tab-top-right-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner-icon {
+    display: none;
+}
+
+body.tab-top-right-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+
+body.tab-top-right-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner {
+    width: auto !important;
+}
+
+/* Icons + Labels */
+body.tab-top-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space {
+    --sidebar-tab-text-display: inline-block;
+}
+
+body.tab-top-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+
+body.tab-top-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner {
+    width: auto !important;
+    gap: 6px;
+}
+
+/* Icons Only */
+body.tab-top-right-icons .mod-sidedock.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-header-inner-title {
+    display: none !important;
+}
+
+/* ===== TAB STYLE — LEFT (bottom) ===== */
+
+/* Labels Only */
+body.tab-left-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) {
+    --sidebar-tab-text-display: inline-block;
+}
+
+body.tab-left-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-icon {
+    display: none;
+}
+
+body.tab-left-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+
+body.tab-left-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner {
+    width: auto !important;
+}
+
+/* Icons + Labels */
+body.tab-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) {
+    --sidebar-tab-text-display: inline-block;
+}
+
+body.tab-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+
+body.tab-left-icons-labels .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner {
+    width: auto !important;
+    gap: 6px;
+}
+
+/* Icons Only */
+body.tab-left-icons .mod-sidedock.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
+    display: none !important;
+}
+
+/* ===== TAB STYLE — RIGHT (bottom) ===== */
+
+/* Labels Only */
+body.tab-right-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) {
+    --sidebar-tab-text-display: inline-block;
+}
+
+body.tab-right-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-icon {
+    display: none;
+}
+
+body.tab-right-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+
+body.tab-right-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner {
+    width: auto !important;
+}
+
+/* Icons + Labels */
+body.tab-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) {
+    --sidebar-tab-text-display: inline-block;
+}
+
+body.tab-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
+    display: inline-block !important;
+}
+
+body.tab-right-icons-labels .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner {
+    width: auto !important;
+    gap: 6px;
+}
+
+/* Icons Only */
+body.tab-right-icons .mod-sidedock.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-inner-title {
+    display: none !important;
+}
+body.tab-contained {
+    --tab-curve: 0px;
+
+    .mod-root .workspace-tab-header {
+        border-radius: var(--tab-radius);
+        transition: all 0.2s ease;
+    }
+    .mod-root .workspace-tab-header.is-active {
+        border-radius: var(--tab-radius);
+        padding: 0px;
+        margin-bottom: 0px;
+    }
+    .mod-root .workspace-tab-header-inner {
+        background-color: transparent !important;
+        border-radius: var(--tab-radius);
+    }
+
+    .mod-root .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+        background-color: transparent !important;
+        border-radius: var(--tab-radius);
+        transform: translateY(2px);
+    }
+
+    .mod-root .workspace-tab-header:not(.is-active) {
+        background-color: transparent;
+    }
+    .mod-root .workspace-tab-header:not(.is-active):hover {
+        background-color: var(--bb-elements-bg);
+    }
+    .mod-root .workspace-tab-header.is-active {
+        background-color: var(--bb-workspace-bg);
+        min-width: calc(var(--tab-width) * 1.1) !important;
+        transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1), background-color 0s ease;
+    }
+
+    /* the container */
+    .mod-root .workspace-tab-header-container-inner {
+        background-color: var(--bb-editor-bg);
+        border-radius: calc(var(--tab-radius) + 2px);
+        corner-shape: var(--tab-corner-shape);
+        padding: 4px;
+        margin-bottom: 4px;
+        gap: 4px;
+    }
+
+}
+
+body.tab-contained.apply-to-sidebar {
+    /* sidebar tabs */
+    .mod-left-split .workspace-tab-header-container-inner,
+    .mod-right-split .workspace-tab-header-container-inner {
+        background-color: var(--bb-editor-bg);
+        border-radius: calc(var(--tab-radius) + 2px);
+        corner-shape: var(--tab-corner-shape);
+        padding: 4px;
+        margin-bottom: 4px;
+        gap: 4px;
+    }
+
+    .mod-left-split .workspace-tab-header,
+    .mod-right-split .workspace-tab-header {
+        border-radius: var(--tab-radius);
+        transition: all 0.2s ease;
+    }
+
+    .mod-left-split .workspace-tab-header:not(.is-active),
+    .mod-right-split .workspace-tab-header:not(.is-active) {
+        background-color: transparent;
+    }
+
+    .mod-left-split .workspace-tab-header:not(.is-active):hover,
+    .mod-right-split .workspace-tab-header:not(.is-active):hover {
+        background-color: var(--bb-elements-bg);
+    }
+
+    .mod-left-split .workspace-tab-header.is-active,
+    .mod-right-split .workspace-tab-header.is-active {
+        background-color: var(--bb-workspace-bg);
+        outline: var(--border-width) solid var(--border-color);
+        /* min-width: calc(var(--tab-width) * 0.3) !important; */
+        transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1), background-color 0s ease;
+    }
+}
+body.tab-float {
+  --system-status-background: var(--bb-editor-bg);
   --border-width: var(--bb-border-width);
   --tab-outline-width: 0px;
   --divider-width: 0px;
@@ -2514,114 +3088,9 @@ input[type="checkbox"]:checked:hover {
 
   .workspace-leaf-content {
     border-radius: var(--touch-radius-s);
-    corner-shape: var(--corner-shape)
-  }
-
-  /* tab close button */
-  .workspace .mod-root .workspace-tab-header-container .workspace-tab-header:hover .workspace-tab-header-inner-close-button {
-    margin-left: -6px !important;
-  }
-
-  /* tabs themselves */
-  .workspace-tab-header-container .workspace-tab-header-inner {
-    background-color: transparent !important;
-  }
-
-  .workspace-tab-header-container .workspace-tab-header {
-    --tab-curve: 0px;
-    border-radius: var(--button-radius);
     corner-shape: var(--corner-shape);
-    filter: brightness(1);
-    margin-top: 1px;
-    margin-bottom: 8px;
-    margin-right: 4px;
-    padding: 2px 3px;
-    transform: translateY(0) scale(0.98);
-    transition: background-color 0.2s ease, box-shadow 0.2s ease,
-                transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.4),
-                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
-                margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
   }
 
-  .workspace-tab-header-container .workspace-tab-header.is-active {
-    min-height: 24px;
-    background-color: var(--bb-elements-bg);
-    box-shadow: 0 0 0 var(--border-width) var(--border-color);
-    margin: 1px 10px 8px;
-    padding: 2px 3px;
-    transform: translateY(1px) scale(1);
-    transition: background-color 0.2s ease, box-shadow 0.2s ease,
-                transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.4),
-                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
-                margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
-  }
-
-  .workspace .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active {
-    margin: 0 3px;
-    padding: 2px 3px;
-    margin-left: 10px !important;
-  }
-
-  .workspace-tab-header-container .workspace-tab-header:not(.is-active) {
-    transform: translateY(4px);
-    box-shadow: 0 0 0 calc(var(--border-width) * 0) var(--bb-border-color);
-    transition: border-width 0.2s ease;
-  }
-
-  .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover {
-    background-color: var(--bb-elements-bg);
-    box-shadow: 0 0 0 var(--border-width) var(--bb-border-color);
-    padding: 2px;
-    transform: translateY(1px) scale(0.9);
-    transition: background-color 0.2s ease, box-shadow 0.2s ease,
-                transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.4),
-                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
-                margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
-  }
-
-  .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
-    background-color: var(--bb-elements-bg);
-    box-shadow: 0 0 0 var(--border-width) var(--bb-border-color);
-    transform: translateY(1px) scale(0.8);
-  }
-
-  /* tab darkening / brightening */
-  &.theme-dark .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover,
-  &.theme-dark .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
-    filter: brightness(1.4);
-  }
-
-  &.theme-light .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover,
-  &.theme-light .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
-    filter: brightness(1.1);
-  }
-
-  /* sidebar tabs */
-  .workspace-split.mod-left-split .workspace-tab-header-container .workspace-tab-header,
-  .workspace-split.mod-right-split .workspace-tab-header-container .workspace-tab-header,
-  .workspace-split.mod-left-split,
-  .workspace-split.mod-left-split .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover,
-  .workspace-split.mod-right-split .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover {
-    border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
-    height: 100%;
-  }
-
-  /* non-sidebar tab inner */
-  .workspace-split.mod-root .workspace-tab-header-container .workspace-tab-header {
-    margin-left: 0 !important;
-  }
-
-  /* all active tabs */
-  .workspace-tab-header-container .workspace-tab-header.is-active,
-  .workspace-split.mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active,
-  .workspace-split.mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active {
-    border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
-    background-color: var(--bb-elements-bg) !important;
-  }
-
-  /* layout adjustments */
   .workspace-tab-header-container {
     border: none;
     background-color: var(--bb-editor-bg);
@@ -2639,13 +3108,15 @@ input[type="checkbox"]:checked:hover {
     background-color: var(--bb-editor-bg);
   }
 
-  /* live preview editor bg */
-  .workspace-leaf, .workspace-leaf-content, .cm-scroller, .workspace-leaf-content .view-header, .empty-state {
+  .workspace-leaf,
+  .workspace-leaf-content,
+  .cm-scroller,
+  .workspace-leaf-content .view-header,
+  .empty-state {
     --file-header-background-focused: var(--bb-elements-bg);
     background-color: var(--bb-elements-bg);
   }
 
-  /* reading editor bg */
   .markdown-reading-view .markdown-preview-view {
     --file-header-background-focused: var(--bb-elements-bg);
     background-color: var(--bb-elements-bg);
@@ -2661,90 +3132,259 @@ input[type="checkbox"]:checked:hover {
     margin-top: -8px;
   }
 
-  /* tab float sidebar tabs */
-  .workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header {
+  .workspace-ribbon,
+  .sidebar-toggle-button {
+    background-color: var(--bb-editor-bg);
+    transition: background-color 0.1s ease;
+    margin-left: 5px;
+  }
+
+  .workspace-ribbon::before {
+    border: 0px solid transparent !important;
+    box-shadow: none;
+  }
+
+  .workspace .mod-root .workspace-tab-header:hover .workspace-tab-header-inner-close-button {
+    margin-left: -6px !important;
+  }
+
+  .workspace-tab-header-container .workspace-tab-header-inner {
+    background-color: transparent !important;
+  }
+
+  .workspace-tab-header {
+    --tab-curve: 0px;
+    border-radius: var(--tab-radius);
+    corner-shape: var(--corner-shape);
+    filter: brightness(1);
+    margin-top: 1px;
+    margin-bottom: 8px;
+    margin-right: 4px;
+    padding: 2px 3px;
+    transform: translateY(0) scale(0.98);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease,
+                transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.4),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
+                margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
+  }
+
+  .mod-root .workspace-tab-header.is-active {
+    min-height: 24px;
+    background-color: var(--bb-elements-bg);
+    box-shadow: 0 0 0 var(--border-width) var(--border-color);
+    margin: 1px 10px 8px;
+    padding: 2px 3px;
+    transform: translateY(1px) scale(1);
+    border-radius: var(--tab-radius);
+    corner-shape: var(--corner-shape);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease,
+                transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.4),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
+                margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
+  }
+
+  .mod-root .workspace-tab-header:not(.is-active) {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 calc(var(--border-width) * 0) var(--bb-border-color);
+    transition: border-width 0.2s ease;
+  }
+
+  .mod-root .workspace-tab-header:not(.is-active):hover {
+    background-color: var(--bb-elements-bg);
+    box-shadow: 0 0 0 var(--border-width) var(--bb-border-color);
+    padding: 2px;
+    transform: translateY(1px) scale(0.9);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease,
+                transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.4),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
+                margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
+  }
+
+  .mod-root .workspace-tab-header:not(.is-active):active {
+    background-color: var(--bb-elements-bg);
+    box-shadow: 0 0 0 var(--border-width) var(--bb-border-color);
+    transform: translateY(1px) scale(0.8);
+  }
+
+  &.theme-dark .workspace-tab-header:not(.is-active):hover,
+  &.theme-dark .workspace-tab-header:not(.is-active):active {
+    filter: brightness(1.4);
+  }
+
+  &.theme-light .workspace-tab-header:not(.is-active):hover,
+  &.theme-light .workspace-tab-header:not(.is-active):active {
+    filter: brightness(1.1);
+  }
+
+  .workspace-tab-header-container .workspace-tab-header {
+    margin-left: 0 !important;
+  }
+}
+
+body.tab-float.apply-to-sidebar {
+  .mod-left-split .workspace-tab-header,
+  .mod-right-split .workspace-tab-header {
+    border-radius: var(--tab-radius);
+    corner-shape: var(--corner-shape);
     margin-top: 2px !important;
     margin-left: 0;
     margin-right: 0;
-    transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.2),
-                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1), margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6) !important;
+    margin-bottom: 4px;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease,
+                transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.2),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
+                margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6) !important;
   }
 
-  .workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover {
+  .mod-left-split .workspace-tab-header.is-active,
+  .mod-right-split .workspace-tab-header.is-active {
+    margin-bottom: 6px;
+    padding: 2px 3px;
+    transform: translateY(0px) scale(1) !important;
+    border-radius: var(--tab-radius);
+    corner-shape: var(--corner-shape);
+    background-color: var(--bb-elements-bg) !important;
+    box-shadow: 0 0 0 var(--border-width) var(--border-color);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease,
+                transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.2),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
+                margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6) !important;
+  }
+
+  .mod-left-split .workspace-tab-header:not(.is-active),
+  .mod-right-split .workspace-tab-header:not(.is-active) {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 calc(var(--border-width) * 0) var(--bb-border-color);
+    transition: border-width 0.2s ease;
+  }
+
+  .mod-left-split .workspace-tab-header:not(.is-active):hover,
+  .mod-right-split .workspace-tab-header:not(.is-active):hover {
+    background-color: var(--bb-elements-bg);
+    box-shadow: 0 0 0 var(--border-width) var(--bb-border-color);
     transform: translateY(-2px) scale(0.9) !important;
-    /* margin-left: 4px;
-    margin-right: 4px; */
+    transition: background-color 0.2s ease, box-shadow 0.2s ease,
+                transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.4),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
+                margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
   }
 
-  .workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
+  .mod-left-split .workspace-tab-header:not(.is-active):active,
+  .mod-right-split .workspace-tab-header:not(.is-active):active {
+    background-color: var(--bb-elements-bg);
+    box-shadow: 0 0 0 var(--border-width) var(--bb-border-color);
     transform: translateY(1px) scale(0.8) !important;
   }
 
-  .workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header.is-active {
-    margin-top: 2px !important;
-    margin-left: 4px !important;
-    margin-right: 4px !important;
-    transform: translateY(0px) scale(1) !important;
-    transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.2),
-                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1), margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6) !important;
-  }
-
-  /* move left sidebar tabs left to avoid cutoff */
-  .workspace-split.mod-left-split .workspace-tab-header-container-inner {
+  .mod-left-split .workspace-tab-header-container-inner,
+  .mod-right-split .workspace-tab-header-container-inner {
     width: 100%;
     padding-left: 4px;
   }
-
-    /* ribbon */
-    .workspace-ribbon, .sidebar-toggle-button {
-        background-color: var(--bb-editor-bg);
-        transition: background-color 0.1s ease;
-
-        margin-left: 5px;
+}
+body.tab-hardshadow {
+    --tab-curve: 0;
+    
+    .workspace-tab-header-container-inner {
+        gap: 6px;
     }
 
-    /* option: Diable Ribbon Sidebar Border */
-    .workspace-ribbon::before {
-        border: 0px solid transparent !important;
+    .mod-root .workspace-tab-header .workspace-tab-header-inner {
+        background: transparent !important;
+    }
+
+    .mod-root .workspace-tab-header,
+    .mod-root .workspace-tab-header-inner{
+        margin-bottom: 6px;
+
+        transition: all 0.2s ease-in-out;
+        border-radius: var(--tab-radius);
+    }
+
+    .mod-root .workspace-tab-header:not(.is-active) {
+        transform: translateY(2px);
+        border: 2px solid transparent;
+        box-shadow: 3px 0px 0 var(--bb-border-hover-color);
+    }
+
+    .mod-root .workspace-tab-header:not(.is-active):hover {
+        transform: translateY(0px);
+        border: 2px solid var(--bb-border-hover-color);
+        box-shadow: 3px 2px 0 var(--bb-border-hover-color);
+    }
+
+    .mod-root .workspace-tab-header:not(.is-active):active {
+        transform: translateY(4px);
+        border: 2px solid var(--bb-border-focused-color);
+        box-shadow: 3px -1px 0 0px var(--bb-border-focused-color);
+    }
+
+    .mod-root .workspace-tab-header.is-active {
+        border: 2px solid var(--bb-border-focused-color);
+        box-shadow: 3px 2px 0 var(--bb-border-focused-color);
+    }
+
+    .mod-root .workspace-tab-container {
         box-shadow: none;
     }
 }
 
-/* tab float sidebar color fix: apply only to workspace drawer */
-.is-mobile .workspace-drawer-active-tab-content .workspace-leaf,
-.is-mobile .workspace-drawer-active-tab-content .workspace-leaf-content,
-.is-mobile .workspace-drawer-active-tab-content .cm-scroller,
-.is-mobile .workspace-drawer-active-tab-content .view-header,
-.is-mobile .workspace-drawer-active-tab-content .empty-state {
-  --file-header-background-focused: var(--bb-workspace-bg);
-  background-color: var(--bb-workspace-bg) !important;
+body.tab-hardshadow.apply-to-sidebar {
+    .workspace-tab-header-container-inner {
+        gap: 6px;
+    }
+    
+    .mod-left-split .workspace-tab-header,
+    .mod-right-split .workspace-tab-header {
+        margin-bottom: 6px;
+
+        transition: all 0.2s ease-in-out;
+        border-radius: var(--tab-radius);
+    }
+
+    .mod-left-split .workspace-tab-header:not(.is-active),
+    .mod-right-split .workspace-tab-header:not(.is-active) {
+        transform: translateY(2px);
+        border: 2px solid transparent;
+        box-shadow: 3px 0px 0 transparent;
+    }
+
+    .mod-left-split .workspace-tab-header:not(.is-active):hover,
+    .mod-right-split .workspace-tab-header:not(.is-active):hover {
+        transform: translateY(0px);
+        border: 2px solid var(--bb-border-hover-color);
+        box-shadow: 3px 2px 0 var(--bb-border-hover-color);
+    }
+
+    .mod-left-split .workspace-tab-header:not(.is-active):active,
+    .mod-right-split .workspace-tab-header:not(.is-active):active {
+        transform: translateY(4px);
+        border: 2px solid var(--bb-border-focused-color);
+        box-shadow: 3px -1px 0 0px var(--bb-border-focused-color);
+    }
+
+    .mod-left-split .workspace-tab-header.is-active,
+    .mod-right-split .workspace-tab-header.is-active {
+        border: 2px solid var(--bb-border-focused-color);
+        box-shadow: 3px 2px 0 var(--bb-border-focused-color);
+    }
 }
-/* JOINED TABS */
 body.tab-joined,
 body:not(.tab-none, .tab-float, .tab-lined, .tab-contained, .tab-linewrap, .tab-simple, .tab-simplejoined, .tab-hardshadow, .tab-test) {
   --system-status-background: var(--titlebar-background);
 
-  /* close button fine tuning */
-  .workspace .mod-root .workspace-tab-header-container .workspace-tab-header.is-active:hover .workspace-tab-header-inner-close-button {
-    transform: scale(0.9);
-    opacity: 1;
-    width: auto;
-    margin-left: -4px !important;
-    margin-bottom: 4px;
-    pointer-events: auto;
-  }
-
-  /* hide tab under line */
   .workspace-tab-header-container {
     border-bottom: none;
     background-color: var(--tab-container-background);
     box-shadow: inset 0 calc(-1 * var(--border-width)) 0 var(--border-color);
   }
 
-  /* base tab */
-  .workspace-tab-header-container .workspace-tab-header {
-    margin: 0;
+  .workspace-tab-header-container-inner {
+    margin-top: 8px;
+  }
 
+  .workspace-tab-header {
+    margin: 0;
     --tab-curve: 0px;
     border-radius: var(--button-radius) var(--button-radius) 0 0;
     padding-left: 0;
@@ -2753,56 +3393,40 @@ body:not(.tab-none, .tab-float, .tab-lined, .tab-contained, .tab-linewrap, .tab-
                 padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1), margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
   }
 
-  /* tab active */
-  .workspace-tab-header-container .workspace-tab-header:active {
-    background-color: var(--bb-editor-bg);
-    border: var(--border-width) solid var(--border-color);
-    transform: scale(0.8) translateY(4px) !important;
-    border-radius: calc(var(--button-radius) + 2px) !important;
-    corner-shape: var(--corner-shape);
+  .workspace .mod-root .workspace-tab-header.is-active:hover .workspace-tab-header-inner-close-button,
+  .workspace .mod-left-split .workspace-tab-header.is-active:hover .workspace-tab-header-inner-close-button,
+  .workspace .mod-right-split .workspace-tab-header.is-active:hover .workspace-tab-header-inner-close-button {
+    transform: scale(0.9);
+    opacity: 1;
+    width: auto;
+    margin-left: -4px !important;
+    margin-bottom: 4px;
+    pointer-events: auto;
   }
+}
 
-  /* tab actually active (root, left, right) */
-  .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active,
-  .mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active,
-  .mod-root .workspace-tab-header-container .workspace-tab-header.is-active {
+body.tab-joined .mod-root {
+  .workspace-tab-header.is-active {
     margin: 5px 5px -10px;
     padding: 2px 2px 4px;
+    padding-top: 0 !important;
     border-radius: var(--button-radius) var(--button-radius) 0 0;
     corner-shape: var(--corner-shape);
-    border: var(--border-width) solid var(--border-color);
     transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
                 padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1), margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
   }
 
-  .workspace-tab-header-container-inner {
-    margin-top: 8px;
-  }
-
-  /* Main hover effect */
-  .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover {
-    transform: translateY(0);
-    opacity: 1;
-  }
-
-  .workspace-tab-header-container .workspace-tab-header:not(.is-active) {
+  .workspace-tab-header:not(.is-active) {
     transform: translateY(8px);
     opacity: 0.6;
   }
 
-  /* Sidebar hover effects */
-  .workspace .mod-left-split .workspace-tab-header-container .workspace-tab-header:active {
-    z-index: 1001 !important;
+  .workspace-tab-header:not(.is-active):hover {
+    transform: translateY(0);
+    opacity: 1;
   }
 
-  /* Sidebar not active + its hover */
-  .workspace .mod-left-split .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner,
-  .workspace .mod-right-split .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
-    transform: translateY(4px);
-  }
-
-  /* not active + its hover (root) */
-  .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+  .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
     transform: translateY(0);
     height: 100%;
     margin-right: 2px;
@@ -2811,14 +3435,14 @@ body:not(.tab-none, .tab-float, .tab-lined, .tab-contained, .tab-linewrap, .tab-
     transition: all calc(var(--animation-duration) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1), background-color 0s ease;
   }
 
-  .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:hover {
+  .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:hover {
     background-color: var(--bb-workspace-bg-alt);
     transition: all calc(var(--animation-duration) * 1.2) ease-out;
     border-radius: var(--button-radius);
     corner-shape: var(--corner-shape);
   }
 
-  .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:active {
+  .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:active {
     background-color: var(--bb-editor-bg);
     border-radius: var(--button-radius);
     corner-shape: var(--corner-shape);
@@ -2828,31 +3452,169 @@ body:not(.tab-none, .tab-float, .tab-lined, .tab-contained, .tab-linewrap, .tab-
     transition: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
   }
 
-  .workspace-split.mod-vertical.mod-root .workspace-tab-header-container .workspace-tab-header:not(.is-active, :has(.mod-pinned)) {
+  .workspace-tab-header:active {
+    background-color: var(--bb-editor-bg);
+    border: var(--border-width) solid var(--border-color);
+    transform: scale(0.8) translateY(4px) !important;
+    border-radius: calc(var(--button-radius) + 2px) !important;
+    corner-shape: var(--corner-shape);
+  }
+
+  .workspace-split.mod-vertical.mod-root .workspace-tab-header:not(.is-active, :has(.mod-pinned)) {
     margin-left: 0;
     margin-right: -3px;
   }
 
-  /* left sidebar icon adjustment */
-  .workspace-split:not(.mod-vertical.mod-root) .workspace-tab-header-container .workspace-tab-header.is-active {
-    padding-top: 5px !important;
-  }
-
-  /* main tabs text adjustment */
-  .workspace-split.mod-vertical.mod-root .workspace-tab-header-container .workspace-tab-header.is-active {
-    padding-top: 0 !important;
-  }
-
-  .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner {
+  .workspace-tab-header .workspace-tab-header-inner {
     transition: all calc(var(--animation-duration) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1);
   }
+}
 
-  /* sidebar tabs color */
-  .workspace-split.mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active,
-  .workspace-split.mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active {
-    background-color: var(--bb-workspace-bg);
+body.tab-joined.apply-to-sidebar {
+  .mod-left-split .workspace-tab-header,
+  .mod-right-split .workspace-tab-header {
+    transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.2),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1), margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
   }
 
+  .mod-left-split .workspace-tab-header.is-active,
+  .mod-right-split .workspace-tab-header.is-active {
+    margin: 5px 5px -10px;
+    padding: 2px 2px 4px;
+    border-radius: var(--button-radius) var(--button-radius) 0 0;
+    corner-shape: var(--corner-shape);
+    border: var(--border-width) solid var(--border-color);
+    background-color: var(--bb-workspace-bg);
+    transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1), margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
+  }
+
+  .mod-left-split .workspace-tab-header:not(.is-active),
+  .mod-right-split .workspace-tab-header:not(.is-active) {
+    transform: translateY(8px);
+    opacity: 0.6;
+  }
+
+  .mod-left-split .workspace-tab-header:not(.is-active):hover,
+  .mod-right-split .workspace-tab-header:not(.is-active):hover {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .mod-left-split .workspace-tab-header:not(.is-active) .workspace-tab-header-inner,
+  .mod-right-split .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+    transform: translateY(0);
+    height: 100%;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-top: -2px;
+    transition: all calc(var(--animation-duration) * 1.2) cubic-bezier(0.2, 0.9, 0.4, 1.1), background-color 0s ease;
+  }
+
+  .mod-left-split .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:hover,
+  .mod-right-split .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:hover {
+    background-color: var(--bb-workspace-bg-alt);
+    transition: all calc(var(--animation-duration) * 1.2) ease-out;
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+  }
+
+  .mod-left-split .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:active,
+  .mod-right-split .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:active {
+    background-color: var(--bb-editor-bg);
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+    padding: 10px 6px;
+    padding-top: -10px;
+    transform: scale(0.9) translateY(4px);
+    transition: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  }
+
+  .mod-left-split .workspace-tab-header:active,
+  .mod-right-split .workspace-tab-header:active {
+    background-color: var(--bb-editor-bg);
+    border: var(--border-width) solid var(--border-color);
+    transform: scale(0.8) translateY(4px) !important;
+    border-radius: calc(var(--button-radius) + 2px) !important;
+    corner-shape: var(--corner-shape);
+    z-index: 1001 !important;
+  }
+}
+body.tab-linewrap {
+    --border-width: 0px;
+    --divider-width: 2px;
+    --tab-curve: 0px;
+    --tab-radius: 0px;
+    --tab-inner-radius: 0px;
+
+    /* prevent clipping */
+    .mod-root .workspace-tab-header .workspace-tab-header-inner {
+        overflow: visible !important;
+    }
+    
+    .workspace-tab-header-container::before,
+    .workspace-tab-header-container::after {
+        display: none;
+    }
+
+    .mod-root .workspace-tab-header {
+        border-right: 2px solid var(--border-color);
+        border-radius: 0px;
+        transform: translateY(0) scale(1);
+        transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+        overflow: visible;
+        position: relative;
+        z-index: 2;
+    }
+
+    .mod-root .workspace-tab-header:hover {
+        border-right: 2px solid var(--border-color);
+        border-radius: 0px;
+        transform: translateY(4px) scale(1.02);
+    }
+
+    .mod-root .workspace-tab-header:active {
+        border-right: 2px solid var(--border-color);
+        border-radius: 0px;
+        transform: translateY(8px) scale(0.96);
+    }
+
+    .mod-root .workspace-tab-header.is-active:hover {
+        border-right: 2px solid var(--border-color);
+        padding: 0px 10px;
+        transform: translateY(-4px) scale(1.02);
+    }
+
+    .mod-root .workspace-tab-header.is-active {
+        border-right: 2px solid var(--border-color);
+        padding: 0px 10px;
+        transform: translateY(0) scale(1);
+        z-index: 3;
+    }
+}
+
+/* sidebar tabs */
+body.tab-linewrap.apply-to-sidebar {
+    .workspace-tab-header {
+        transform: translateY(0) scale(1);
+        transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .workspace-tab-header:hover {
+        transform: translateY(4px) scale(1.02);
+    }
+
+    .workspace-tab-header:active {
+        transform: translateY(8px) scale(0.96);
+    }
+
+    .workspace-tab-header.is-active:hover {
+        transform: translateY(-4px) scale(1.02);
+    }
+
+    .workspace-tab-header.is-active {
+        transform: translateY(0) scale(1);
+    }
 }
 /* tablet: increased active tab height */
 body:is(.is-tablet):not(.compact-tabs, .tab-none) .workspace-tab-header-container {
@@ -2862,6 +3624,150 @@ body:is(.is-tablet):not(.compact-tabs, .tab-none) .workspace-tab-header-containe
 /* tablet: increased margin around text and x */
 body:is(.is-tablet):not(.compact-tabs, .tab-none) .workspace-tab-header.is-active .workspace-tab-header-inner {
   margin: auto 5px;
+}
+body.tab-simple {
+    --tab-curve: 0px;
+    .workspace-tab-header {
+        border-radius: var(--tab-radius);
+    }
+    .workspace-tab-header.is-active {
+        border-radius: var(--tab-radius);
+        margin-bottom: 3px;
+    }
+
+    .mod-root .workspace-tab-header .workspace-tab-header-inner {
+        overflow: visible !important;
+    }
+    .workspace-tab-header-container::before,
+    .workspace-tab-header-container::after {
+        display: none;
+    }
+
+    .workspace-tab-header-inner {
+        border-radius: var(--tab-radius);
+        corner-shape: var(--tab-corner-shape);
+        padding: 0px 8px;
+    }
+
+    .workspace-tab-header {
+        border-radius: var(--tab-radius);
+        corner-shape: var(--tab-corner-shape);
+        padding: 0px 6px;
+    }
+
+    .workspace-tab-header.is-active {
+        border-radius: var(--tab-radius);
+        corner-shape: var(--tab-corner-shape);
+    }
+
+    .mod-root .workspace-tab-container {
+        --background-primary: var(--bb-elements-bg);
+    }
+
+
+    /* tab animation */
+    .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+        transform: scale(0.9);
+        transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
+    }
+    .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+        transform: scale(1);
+    }
+    .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner {
+        transform: scale(0.95);
+    }
+    .workspace-tab-header.is-active {
+        transform: scale(1) translateY(0.2px);
+        transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
+    }
+    .workspace-tab-header.is-active:hover {
+        transform: scale(1.05) translateY(0.5px);
+    }
+
+    /* sidebar tabs */
+    .mod-left-split .workspace-tab-header:not(.is-active):active,
+    .mod-right-split .workspace-tab-header:not(.is-active):active {
+        transform: scale(0.95);
+    }
+}
+body.tab-simplejoined {
+    .mod-root .workspace-tab-header .workspace-tab-header-inner {
+        overflow: visible !important;
+    }
+    .mod-root  .workspace-tab-header-container::before,
+    .workspace-tab-header-container::after {
+        display: none;
+    }
+
+    --tab-curve: calc(var(--tab-radius) * .7);
+
+    .mod-root .workspace-tab-header-inner {
+        border-radius: var(--tab-inner-radius);
+        corner-shape: var(--tab-corner-shape);
+        padding: 0px 8px;
+    }
+
+    .mod-root .workspace-tab-header {
+        border-radius: var(--tab-radius);
+        corner-shape: var(--tab-corner-shape);
+
+        border-bottom-left-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+
+        padding: 0px 6px;
+    }
+
+    .mod-root .workspace-tab-header.is-active {
+        border-radius: var(--tab-radius);
+        corner-shape: var(--tab-corner-shape);
+    }
+
+    .mod-root .workspace-tab-container {
+        --background-primary: var(--bb-elements-bg);
+    }
+
+
+    /* tab animation */
+    .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+        transform: scale(0.9);
+        transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
+    }
+    .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+        transform: scale(1);
+    }
+    .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner {
+        transform: scale(0.95);
+    }
+    .workspace-tab-header.is-active {
+        transform: scale(1) translateY(0.2px);
+        transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
+    }
+    .workspace-tab-header.is-active:hover {
+        transform: scale(1.05) translateY(0.5px);
+    }
+}
+
+body.tab-simplejoined.apply-to-sidebar {
+    /* sidebar tabs */
+    .mod-left-split .workspace-tab-header .workspace-tab-header-inner,
+    .mod-right-split .workspace-tab-header .workspace-tab-header-inner {
+        border-radius: var(--tab-radius);
+    }
+    .mod-left-split .workspace-tab-header:not(.is-active):active,
+    .mod-right-split .workspace-tab-header:not(.is-active):active {
+        transform: scale(0.95);
+        padding: 0px 2px;
+    }
+    .mod-left-split .workspace-tab-header,
+    .mod-right-split .workspace-tab-header {
+        border-radius: var(--tab-radius);
+        corner-shape: var(--tab-corner-shape);
+
+        border-bottom-left-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+
+        padding: 0px 2px;
+    }
 }
 /* UNDERLINED TABS */
 body.tab-lined {
@@ -2946,25 +3852,6 @@ body.tab-lined {
         border-bottom: 2px solid hsl(var(--interactive-accent-hsl), 1);
         transform: translateY(0px);
         margin: 0px;
-    }
-
-    /* sidebar tabs fix */
-    .workspace-split:not(.mod-vertical.mod-root) 
-    .workspace-tab-header-container-inner .workspace-tab-header {
-        margin-bottom: -7px;
-        /* padding: 2px; */
-    }
-
-    .workspace-split:not(.mod-vertical.mod-root) 
-    .workspace-tab-header-container 
-    .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
-        transform: translateY(-4px);
-    }
-
-    .workspace-split:not(.mod-vertical.mod-root) 
-    .workspace-tab-header-container 
-    .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner {
-        transform: translateY(0);
     }
 
     .workspace-tab-header-inner {

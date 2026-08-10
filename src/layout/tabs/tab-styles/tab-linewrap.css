@@ -1,0 +1,76 @@
+body.tab-linewrap {
+    --border-width: 0px;
+    --divider-width: 2px;
+    --tab-curve: 0px;
+    --tab-radius: 0px;
+    --tab-inner-radius: 0px;
+
+    /* prevent clipping */
+    .mod-root .workspace-tab-header .workspace-tab-header-inner {
+        overflow: visible !important;
+    }
+    
+    .workspace-tab-header-container::before,
+    .workspace-tab-header-container::after {
+        display: none;
+    }
+
+    .mod-root .workspace-tab-header {
+        border-right: 2px solid var(--border-color);
+        border-radius: 0px;
+        transform: translateY(0) scale(1);
+        transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+        overflow: visible;
+        position: relative;
+        z-index: 2;
+    }
+
+    .mod-root .workspace-tab-header:hover {
+        border-right: 2px solid var(--border-color);
+        border-radius: 0px;
+        transform: translateY(4px) scale(1.02);
+    }
+
+    .mod-root .workspace-tab-header:active {
+        border-right: 2px solid var(--border-color);
+        border-radius: 0px;
+        transform: translateY(8px) scale(0.96);
+    }
+
+    .mod-root .workspace-tab-header.is-active:hover {
+        border-right: 2px solid var(--border-color);
+        padding: 0px 10px;
+        transform: translateY(-4px) scale(1.02);
+    }
+
+    .mod-root .workspace-tab-header.is-active {
+        border-right: 2px solid var(--border-color);
+        padding: 0px 10px;
+        transform: translateY(0) scale(1);
+        z-index: 3;
+    }
+}
+
+/* sidebar tabs */
+body.tab-linewrap.apply-to-sidebar {
+    .workspace-tab-header {
+        transform: translateY(0) scale(1);
+        transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .workspace-tab-header:hover {
+        transform: translateY(4px) scale(1.02);
+    }
+
+    .workspace-tab-header:active {
+        transform: translateY(8px) scale(0.96);
+    }
+
+    .workspace-tab-header.is-active:hover {
+        transform: translateY(-4px) scale(1.02);
+    }
+
+    .workspace-tab-header.is-active {
+        transform: translateY(0) scale(1);
+    }
+}
