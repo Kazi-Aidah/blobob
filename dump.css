@@ -1,15 +1,4 @@
-/* tab full width */
-body.tab-full-width .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner { 
-    flex: 90%;
-    width: 90%;
-    min-width: 90%;
-}
 
-/* option: disable ribbon border */
-.workspace-ribbon {
-    border: 0px solid transparent !important;
-    box-shadow: none;
-}
 
 
 /* @settings

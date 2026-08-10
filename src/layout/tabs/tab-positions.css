@@ -36,17 +36,14 @@ body:not(.disable-fixed-newtab) {
 /* FIXED LEFT SIDEBAR TOGGLE */
 body.fixed-left-sidebar-button .sidebar-toggle-button.mod-left {
     order: -1;
-    margin-left: -4px;
-    margin-right: 20px;
 }
-
-.sidebar-toggle-button.mod-left {
+.fixed-left-sidebar-button .workspace-tab-header-container-inner {
+    margin-left: -12px;
+}
+/* Apply only when ribbon is hidden */
+.workspace-tab-header-container .sidebar-toggle-button.mod-left {
     margin-left: -8px !important;
     margin-right: 0px !important;
-}
-
-.workspace-tab-header-container-inner {
-    margin-left: -12px;
 }
 
 /* Hide Tab List */
