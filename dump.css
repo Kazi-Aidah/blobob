@@ -1,8 +1,5 @@
-
-
-
 /* @settings
-name: blobob theme!
+name: ✦ BLOBOB THEME
 id: h-test
 collapsed: false
 settings:
@@ -40,6 +37,13 @@ settings:
   type: heading
   level: 3
   collapsed: true
+
+#- id: dark-accent
+#  title: ☾ Dark Theme Accent
+#  type: variable-color
+#  format: hex
+#  opacity: false
+#  default: '#7B1B6C'
 
 - id: dark-theme-colors
   title: ☾ Dark Theme Color
@@ -204,6 +208,13 @@ settings:
   level: 3
   collapsed: true
 
+#- id: light-accent
+#  title: ☀︎ Light Theme Accent
+#  type: variable-color
+#  format: hex
+#  opacity: false
+#  default: '#420038'
+
 - id: light-theme-colors
   title: ☀︎ Light Theme Color
   description: Set the theme colors for light mode
@@ -353,10 +364,10 @@ settings:
 
 ### Tab Settings
 - id: h-tabs
-  title: Desktop / Tablet - Tab Settings
+  title: Tab Settings
   type: heading
   level: 1
-  collapsed: false
+  collapsed: true
 
 - id: workspace-layout
   title: Workspace Layout & Tab Style
@@ -425,13 +436,19 @@ settings:
   - label: Center ALL Tab Titles
     value: center-all-tab-title
 
+- id: tab-full-width
+  title: Tab Full Width
+  type: class-toggle
+  default: false
+  addCommand: false
+
 - id: workspace-tab-backgrounds
   title: Tab Background
   description: 
   type: class-select
   default: tab-bg-wavy
   options:
-    - label: None
+    - label: Custom
       value: tab-bg-none
     - label: Wavy
       value: tab-bg-wavy
@@ -459,6 +476,21 @@ settings:
       value: tab-bg-stars
     - label: 4-pointed Stars
       value: tab-bg-sparkles
+
+- id: bg-image
+  title: Custom Tab Background Image
+  description: Paste an image link in this format, url("https://image.png")
+  type: variable-text
+  default: url("https://image.png")
+
+#- id: bb-bg-img-opacity
+#  title: Tab Background Image Opacity
+#  type: variable-number-slider
+#  format: 
+#  default: 0.5
+#  min: 0
+#  max: 1
+#  step: 0.1
 
 - id: workspace-tab-effects
   title: Tab Effect
@@ -549,6 +581,33 @@ settings:
   level: 2
   collapsed: true
 
+- id: pin-icon-only
+  title: Show only icon on pinned tabs
+  type: class-toggle
+  default: true
+  addCommand: false
+
+- id: disable-fixed-newtab
+  title: (+) Disable fixed new tab button
+  description: Resets the fixed new tab button
+  type: class-toggle
+  default: false
+  addCommand: false
+
+- id: fixed-left-sidebar-button
+  title: (←) Enable fixed left sidebar button
+  description: 
+  type: class-toggle
+  default: true
+  addCommand: false
+
+
+- id: h-tab-behaviour-hover
+  title: Tabs on Hover
+  type: heading
+  level: 3
+  collapsed: true
+
 - id: close-btn-hover
   title: (X) Tab - Show close button on Hover
   description: Otherwise, active tab close button is visible
@@ -563,51 +622,40 @@ settings:
   default: true
   addCommand: false
 
-
-
-
-
-- id: disable-fixed-newtab
-  title: Disable fixed new tab button
-  description: Resets the fixed new tab button
-  type: class-toggle
-  default: false
-  addCommand: false
-
-- id: fixed-left-sidebar-button
-  title: Enable fixed left sidebar button
-  description: 
-  type: class-toggle
-  default: false
-  addCommand: false
+- id: h-tab-behaviour-elements
+  title: Tab Elements
+  type: heading
+  level: 3
+  collapsed: true
 
 - id: hide-tab-list
-  title: Hide tab list
+  title: (⌄) Hide tab list
   type: class-toggle
   default: true
 
 - id: hide-tab-close-btn
-  title: Hide tab close button
+  title: (X) Hide tab close button
   type: class-toggle
   default: false
   addCommand: false
 
-- id: pin-icon-only
-  title: Show only icon on pinned tabs
-  type: class-toggle
-  default: true
-  addCommand: false
+
 
 - id: hide-sidebar-toggle-left
-  title: Hide Left Sidebar Toggle Button
+  title: (←) Hide Left Sidebar Toggle Button
   type: class-toggle
   default: false
 
 - id: hide-sidebar-toggle-right
-  title: Hide Right Sidebar Toggle Button
+  title: (→) Hide Right Sidebar Toggle Button
   type: class-toggle
   default: false
 
+- id: h-tab-behaviour-positions
+  title: Tab Position Styles
+  type: heading
+  level: 3
+  collapsed: true
 
 - id: tab-top-left-style
   title: Tab Style (Left top)
@@ -664,20 +712,11 @@ settings:
 
 
 
-- id: compact-tabs
-  title: Compact Tabs
-  type: class-toggle
-  default: false
-  addCommand: true
-
-
-
-
-- id: icons-buttons
-  title: Icons & Buttons
+- id: h-elements
+  title: Interface Elements
   type: heading
   level: 1
-  collapsed: true
+  collapsed: false
 
 - id: icons-buttons
   title: Icons & Buttons
@@ -748,7 +787,139 @@ settings:
   max: 6
   step: .5
 
+
+- id: h-ribbon
+  title: Ribbon
+  type: heading
+  level: 2
+  collapsed: true
+
+- id: center-ribbon-items
+  title: Center Ribbon Items
+  type: class-toggle
+  default: true
+
+- id: ribbon-style
+  title: Ribbon Style
+  description: Set the ribbon style
+  type: class-select
+  default: ribbon-contained
+  options:
+    - label: Default
+      value: ribbon-default
+    - label: Contained
+      value: ribbon-contained
+    - label: Glassy
+      value: ribbon-glassy
+    - label: Bordered
+      value: ribbon-bordered
+
+- id: ribbon-button-color
+  title: Ribbon Button Colour
+  description: Set the ribbon button colour
+  type: class-select
+  default: ribbon-button-color-1
+  options:
+    - label: Default
+      value: ribbon-default
+    - label: One
+      value: ribbon-button-color-1
+    - label: Two
+      value: ribbon-button-color-2
+    - label: Three
+      value: ribbon-button-color-3
+    - label: Accent
+      value: ribbon-button-color-acc
+
+- id: ribbon-button-style
+  title: Ribbon Button Style
+  description: By default, it is set by the Global Radius you pick.
+  type: class-select
+  default: ribbon-default
+  options:
+    - label: Default
+      value: ribbon-default
+    - label: Circle Buttons
+      value: ribbon-button-style-round
+    - label: Squircle Buttons
+      value: ribbon-button-style-squircle
+    - label: Sharp Buttons
+      value: ribbon-button-style-sharp
+    - label: Top-left Cut Buttons
+      value: ribbon-button-style-topcut
+    - label: Rev Cut Buttons
+      value: ribbon-button-style-revcut
+
+- id: ribbon-backgrounds
+  title: Ribbon Background
+  description: 
+  type: class-select
+  default: ribbon-bg-diagonal
+  options:
+    - label: Custom
+      value: ribbon-bg-none
+    - label: Wavy
+      value: ribbon-bg-wavy
+    - label: Horizontal Lines
+      value: ribbon-bg-hor
+
+    - label: Vertical Lines
+      value: ribbon-bg-vert2
+    - label: Vertical Lines Thick
+      value: ribbon-bg-vert1
+
+    - label: Diagonal
+      value: ribbon-bg-diagonal
+    - label: Diamond Checker
+      value: ribbon-bg-diamond
+    - label: Checker
+      value: ribbon-bg-checker
+    - label: Dots
+      value: ribbon-bg-dots
+    - label: Triangless
+      value: ribbon-bg-triangle
+    - label: Hearts
+      value: ribbon-bg-hearts
+    - label: Stars
+      value: ribbon-bg-stars
+    - label: 4-pointed Stars
+      value: ribbon-bg-sparkles
+
+- id: ribbon-bg-image
+  title: Custom Ribbon Background Image
+  description: Paste an image link in this format, url("https://image.png")
+  type: variable-text
+  default: url("https://image.png")
+
+- id: bb-ribbon-button-padding
+  title: (✥) Ribbon Button Padding
+  type: variable-number-slider
+  format: px
+  default: 6
+  min: 0
+  max: 10
+  step: 1
+
+- id: bb-ribbon-width
+  title: (⟷) Ribbon Width
+  type: variable-number-slider
+  format: px
+  default: 60
+  min: 30
+  max: 120
+  step: 1
+
+- id: ribbon-dim 
+  title: Undim Ribbon on Hover
+  description: Dim the ribbon icons unless hovered over
+  type: class-toggle
+  default: false
+  addCommand: false
+
+
+
 */
+
 
 /* Slider: Border Width */
 body {
@@ -893,7 +1064,7 @@ body:not(.tab-contained) .workspace-tab-header-container-inner {
   display: none;
   margin-left: -3px;
 }
-.close-btn-instead .mod-root .workspace-tab-header:hover .workspace-tab-header-inner-icon {
+.close-btn-instead .mod-root .workspace-tab-header:not(:has(.mod-pinned)):hover .workspace-tab-header-inner-icon {
   display: none !important;
 }
 body.close-btn-instead.center-active-tab-title .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner-title,
@@ -936,6 +1107,95 @@ body.close-btn-instead.center-all-tab-title .mod-root .workspace-tab-header .wor
 .workspace-ribbon.is-collapsed .sidebar-toggle-button {
     background-color: var(--ribbon-background-collapsed) !important;
 }
+
+
+
+/* tab full width */
+body.tab-full-width .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner { 
+    flex: 90%;
+    width: 90%;
+    min-width: 90%;
+}
+/* 
+body.tab-full-width-exclude-pin .mod-root .workspace-tabs:not(.mod-stacked) 
+  .workspace-tab-header-container-inner 
+  .workspace-tab-header:has(.mod-pinned) {
+    flex: 0 0 auto !important;
+    min-width: auto !important;
+    flex-shrink: 0 !important;
+    margin-right: 10px;
+} */
+
+/* option: disable ribbon border */
+.workspace-ribbon {
+    border: 0px solid transparent !important;
+    box-shadow: none;
+}
+
+
+
+/* hide help icon */
+.svg-icon.help {
+    display: none;
+}
+
+/* hide tab close btn */
+.hide-tab-close-btn
+    .workspace
+    .mod-root
+    .workspace-tab-header
+    .workspace-tab-header-inner-close-button {
+    margin-right: 6px;
+    display: none;
+}
+
+/* hide sidebar toggle buttons */
+body.hide-sidebar-toggle-left .sidebar-toggle-button.mod-left {
+    display: none;
+}
+
+body.hide-sidebar-toggle-right .sidebar-toggle-button.mod-right {
+    display: none;
+}
+
+/* hide breadcrumbs */
+.hide-breadcrumbs .view-header-breadcrumb {
+    display: none;
+}
+
+.hide-breadcrumbs .view-header-breadcrumb-separator {
+    display: none;
+}
+
+/* hide strikethrough */
+.hide-strikethrough .markdown-preview-view .task-list-item.is-checked,
+.hide-strikethrough .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"],
+.hide-strikethrough .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="X"] {
+    text-decoration: none !important;
+}
+
+/* hide properties arrow */
+.hide-properties-arrow
+    .metadata-container
+    .metadata-properties-heading
+    .collapse-indicator.collapse-icon {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+
+/* hide folder collapse arrow */
+body.hide-folder-arrow .nav-folder-title .collapse-icon {
+    --nav-collapse-icon-color: transparent;
+    --nav-collapse-icon-color-collapsed: transparent;
+}
+
+body.hide-folder-arrow .nav-folder-title .tree-item-icon {
+    display: none;
+}
+
+
 
 
 

@@ -170,3 +170,11 @@ button.pcr-button {
     background: none;
     box-shadow: none;
 }
+
+
+
+
+/* ??? */
+.vertical-tab-content .setting-item ~ :is(h1, h2, h3, h4, .setting-item-heading) {
+    margin-top: 9px;
+}

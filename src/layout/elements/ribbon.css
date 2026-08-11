@@ -1,0 +1,115 @@
+body {
+    --ribbon-width: var(--bb-ribbon-width, 60px);
+    --ribbon-button-padding: var(--bb-ribbon-button-padding);
+}
+
+
+/* ribbon background color change + transition */
+.workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) {
+    background-color: var(--bb-workspace-bg);
+    transition: background-color 0.2s ease;
+}
+.workspace-ribbon.side-dock-ribbon.mod-left.is-collapsed {
+    background-color: var(--bb-editor-bg);
+    transition: background-color 0.2s ease;
+}
+
+/* sidebar toggle button background color change + transition */
+.workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .sidebar-toggle-button.mod-left {
+    background-color: var(--bb-workspace-bg);
+    border-bottom: none;
+    transition: background-color 0.3s ease;
+}
+.workspace-ribbon.side-dock-ribbon.mod-left.is-collapsed .sidebar-toggle-button.mod-left {
+    background-color: var(--bb-editor-bg);
+    border-bottom: none;
+    transition: all 0.3s ease;
+    transition-delay: all 2s;
+}
+
+
+
+
+/* BASE */
+.clickable-icon.side-dock-ribbon-action {
+    padding: var(--ribbon-button-padding);
+}
+
+/* ribbon items in center */
+.center-ribbon-items .side-dock-actions {
+    padding: 100% 0;
+    height: 100%;
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+}
+
+/* RIBBON STYLES */
+.ribbon-contained .side-dock-actions {
+    background-color: var(--ribbon-background);
+    border-radius: var(--touch-radius-xs);
+    corner-shape: var(--corner-shape);
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.ribbon-glassy .side-dock-actions {
+    background-color: var(--ribbon-background);
+    backdrop-filter: blur(12px);
+    border: 2px solid rgba(255,255,255,0.06);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.ribbon-bordered .side-dock-actions {
+    background-color: var(--ribbon-background);
+    border: var(--border-width) solid var(--border-color);
+}
+
+
+
+/* RIBBON BUTTON COLOURS */
+.ribbon-button-color-1
+.clickable-icon.side-dock-ribbon-action {
+    background-color: var(--bb-editor-bg);
+}
+.ribbon-button-color-2
+.clickable-icon.side-dock-ribbon-action {
+    background-color: var(--bb-workspace-bg);
+}
+.ribbon-button-color-3
+.clickable-icon.side-dock-ribbon-action {
+    background-color: var(--bb-elements-bg);
+}
+.ribbon-button-color-acc .clickable-icon.side-dock-ribbon-action {
+    background-color: hsla(var(--interactive-accent-hsl), 0.5) !important;
+    color:  color-mix(in srgb, var(--color-accent-2), white 50%) !important;
+}
+
+
+/* RIBBON BUTTON STYLES */
+.ribbon-button-style-round .clickable-icon.side-dock-ribbon-action {
+    border-radius: 100px;
+    corner-shape: round;
+}
+
+.ribbon-button-style-squircle .clickable-icon.side-dock-ribbon-action {
+    border-radius: 30px;
+    corner-shape: squircle;
+}
+
+.ribbon-button-style-sharp .clickable-icon.side-dock-ribbon-action {
+    border-radius: 0px;
+    corner-shape: sharp;
+}
+
+.ribbon-button-style-topcut .clickable-icon.side-dock-ribbon-action {
+    border-radius: 0px;
+    border-top-left-radius: 8px;
+    corner-shape: bevel;
+}
+
+.ribbon-button-style-revcut .clickable-icon.side-dock-ribbon-action {
+    border-radius: 0px;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    corner-shape: bevel;
+}

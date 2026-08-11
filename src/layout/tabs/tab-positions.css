@@ -38,7 +38,10 @@ body.fixed-left-sidebar-button .sidebar-toggle-button.mod-left {
     order: -1;
 }
 .fixed-left-sidebar-button .workspace-tab-header-container-inner {
-    margin-left: -12px;
+    margin-left: -8px;
+}
+.fixed-left-sidebar-button .mod-left-split .workspace-tab-header-container-inner {
+    margin-left: 7px !important;
 }
 /* Apply only when ribbon is hidden */
 .workspace-tab-header-container .sidebar-toggle-button.mod-left {

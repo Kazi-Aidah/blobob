@@ -2478,6 +2478,243 @@ input[type="checkbox"]:checked:hover {
 }
 
 
+/* Custom Ribbon Container BG Image */
+body.ribbon-bg-none .side-dock-actions {
+  background: var(--ribbon-bg-image) !important;
+  background-size: cover !important;
+  background-color: transparent !important;
+  /* opacity: var(--bb-bg-img-opacity); */
+}
+
+/* WAVY */
+body.ribbon-bg-wavy .side-dock-actions {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='20' viewBox='0 0 60 20'%3E%3Cpath d='M0 10 Q15 0 30 10 T60 10' stroke='rgba(128,128,128,0.2)' fill='none' stroke-width='2'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 60px 20px;
+}
+
+/* VERTICAL 1 */
+body.ribbon-bg-vert1 .side-dock-actions {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Crect width='20' height='8' fill='rgba(128,128,128,0.15)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 20px 20px;
+}
+
+/* VERTICAL 2 */
+body.ribbon-bg-vert2 .side-dock-actions {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Crect width='30' height='7' fill='rgba(128,128,128,0.15)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 10px 10px;
+}
+
+/* HORIZONTAL */
+body.ribbon-bg-hor .side-dock-actions {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Crect width='7' height='30' fill='rgba(128,128,128,0.15)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 10px 10px;
+}
+
+/* DIAGONAL */
+body.ribbon-bg-diagonal .side-dock-actions {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cline x1='0' y1='0' x2='30' y2='30' stroke='rgba(128,128,128,0.15)' stroke-width='3'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 30px 30px;
+}
+
+/* DIAMOND */
+body.ribbon-bg-diamond .side-dock-actions {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpolygon points='0,0 40,0 20,20' fill='rgba(128,128,128,0.1)'/%3E%3Cpolygon points='0,40 40,40 20,20' fill='rgba(128,128,128,0.1)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 40px 40px;
+}
+
+/* CHECKERBOARD */
+body.ribbon-bg-checker .side-dock-actions {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Crect width='15' height='15' fill='rgba(128,128,128,0.15)'/%3E%3Crect x='15' y='15' width='15' height='15' fill='rgba(128,128,128,0.15)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 30px 30px;
+}
+
+/* DOTS */
+body.ribbon-bg-dots .side-dock-actions {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='3' fill='rgba(128,128,128,0.2)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 20px 20px;
+}
+
+/* TRIANGLES */
+body.ribbon-bg-triangle .side-dock-actions {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cpolygon points='0,-8 7,6 -7,6' fill='rgba(128, 128, 128, 0.37)' transform='translate(20,20) rotate(15) scale(1)' /%3E%3Cpolygon points='0,-8 7,6 -7,6' fill='rgba(128,128,128,0.08)' transform='translate(60,15) rotate(75) scale(1.2)' /%3E%3Cpolygon points='0,-8 7,6 -7,6' fill='rgba(128,128,128,0.12)' transform='translate(110,25) rotate(120) scale(0.8)' /%3E%3Cpolygon points='0,-8 7,6 -7,6' fill='rgba(128,128,128,0.06)' transform='translate(145,10) rotate(45) scale(1.5)' /%3E%3Cpolygon points='0,-8 7,6 -7,6' fill='rgba(128,128,128,0.09)' transform='translate(35,55) rotate(200) scale(1)' /%3E%3Cpolygon points='0,-8 7,6 -7,6' fill='rgba(128,128,128,0.07)' transform='translate(85,45) rotate(30) scale(1.3)' /%3E%3Cpolygon points='0,-8 7,6 -7,6' fill='rgba(128,128,128,0.11)' transform='translate(135,60) rotate(330) scale(0.9)' /%3E%3Cpolygon points='0,-8 7,6 -7,6' fill='rgba(128,128,128,0.08)' transform='translate(15,95) rotate(85) scale(1.4)' /%3E%3Cpolygon points='0,-8 7,6 -7,6' fill='rgba(128,128,128,0.10)' transform='translate(65,80) rotate(160) scale(1)' /%3E%3Cpolygon points='0,-8 7,6 -7,6' fill='rgba(128,128,128,0.06)' transform='translate(110,90) rotate(270) scale(1.1)' /%3E%3Cpolygon points='0,-8 7,6 -7,6' fill='rgba(128,128,128,0.12)' transform='translate(150,105) rotate(20) scale(0.7)' /%3E%3Cpolygon points='0,-8 7,6 -7,6' fill='rgba(128,128,128,0.09)' transform='translate(40,120) rotate(310) scale(1.2)' /%3E%3Cpolygon points='0,-8 7,6 -7,6' fill='rgba(128,128,128,0.07)' transform='translate(90,130) rotate(45) scale(1)' /%3E%3Cpolygon points='0,-8 7,6 -7,6' fill='rgba(128,128,128,0.10)' transform='translate(140,140) rotate(190) scale(0.8)' /%3E%3Cpolygon points='0,-8 7,6 -7,6' fill='rgba(128,128,128,0.08)' transform='translate(20,150) rotate(60) scale(1.5)' /%3E%3Cpolygon points='0,-8 7,6 -7,6' fill='rgba(128,128,128,0.11)' transform='translate(70,150) rotate(280) scale(0.9)' /%3E%3Cpolygon points='0,-8 7,6 -7,6' fill='rgba(128,128,128,0.06)' transform='translate(120,20) rotate(10) scale(1.1)' /%3E%3Cpolygon points='0,-8 7,6 -7,6' fill='rgba(128,128,128,0.12)' transform='translate(10,45) rotate(140) scale(0.8)' /%3E%3Cpolygon points='0,-8 7,6 -7,6' fill='rgba(128,128,128,0.07)' transform='translate(155,70) rotate(70) scale(1.2)' /%3E%3Cpolygon points='0,-8 7,6 -7,6' fill='rgba(128,128,128,0.09)' transform='translate(95,150) rotate(210) scale(1)' /%3E%3Cpolygon points='0,-8 7,6 -7,6' fill='rgba(128,128,128,0.13)' transform='translate(50,20) rotate(5) scale(0.9)' /%3E%3Cpolygon points='0,-8 7,6 -7,6' fill='rgba(128,128,128,0.08)' transform='translate(125,110) rotate(165) scale(1.3)' /%3E%3Cpolygon points='0,-8 7,6 -7,6' fill='rgba(128,128,128,0.10)' transform='translate(80,110) rotate(90) scale(0.8)' /%3E%3Cpolygon points='0,-8 7,6 -7,6' fill='rgba(128,128,128,0.07)' transform='translate(30,75) rotate(250) scale(1.4)' /%3E%3Cpolygon points='0,-8 7,6 -7,6' fill='rgba(128,128,128,0.11)' transform='translate(105,55) rotate(35) scale(1)' /%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 160px 160px;
+}
+
+/* HEARTS */
+body.ribbon-bg-hearts .side-dock-actions {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg transform='translate(20,20) rotate(15) scale(1.2)'%3E%3Cpath d='M0 -10 C-8 -18 -20 -10 -12 0 C-8 6 -4 10 0 14 C4 10 8 6 12 0 C20 -10 8 -18 0 -10 Z' fill='rgba(128,128,128,0.10)'/%3E%3C/g%3E%3Cg transform='translate(60,15) rotate(75) scale(0.9)'%3E%3Cpath d='M0 -10 C-8 -18 -20 -10 -12 0 C-8 6 -4 10 0 14 C4 10 8 6 12 0 C20 -10 8 -18 0 -10 Z' fill='rgba(128,128,128,0.08)'/%3E%3C/g%3E%3Cg transform='translate(110,25) rotate(120) scale(1.1)'%3E%3Cpath d='M0 -10 C-8 -18 -20 -10 -12 0 C-8 6 -4 10 0 14 C4 10 8 6 12 0 C20 -10 8 -18 0 -10 Z' fill='rgba(128,128,128,0.12)'/%3E%3C/g%3E%3Cg transform='translate(145,10) rotate(45) scale(1.0)'%3E%3Cpath d='M0 -10 C-8 -18 -20 -10 -12 0 C-8 6 -4 10 0 14 C4 10 8 6 12 0 C20 -10 8 -18 0 -10 Z' fill='rgba(128,128,128,0.06)'/%3E%3C/g%3E%3Cg transform='translate(35,55) rotate(200) scale(1.3)'%3E%3Cpath d='M0 -10 C-8 -18 -20 -10 -12 0 C-8 6 -4 10 0 14 C4 10 8 6 12 0 C20 -10 8 -18 0 -10 Z' fill='rgba(128,128,128,0.09)'/%3E%3C/g%3E%3Cg transform='translate(85,45) rotate(30) scale(0.8)'%3E%3Cpath d='M0 -10 C-8 -18 -20 -10 -12 0 C-8 6 -4 10 0 14 C4 10 8 6 12 0 C20 -10 8 -18 0 -10 Z' fill='rgba(128,128,128,0.07)'/%3E%3C/g%3E%3Cg transform='translate(135,60) rotate(330) scale(1.4)'%3E%3Cpath d='M0 -10 C-8 -18 -20 -10 -12 0 C-8 6 -4 10 0 14 C4 10 8 6 12 0 C20 -10 8 -18 0 -10 Z' fill='rgba(128,128,128,0.11)'/%3E%3C/g%3E%3Cg transform='translate(15,95) rotate(85) scale(1.0)'%3E%3Cpath d='M0 -10 C-8 -18 -20 -10 -12 0 C-8 6 -4 10 0 14 C4 10 8 6 12 0 C20 -10 8 -18 0 -10 Z' fill='rgba(128,128,128,0.08)'/%3E%3C/g%3E%3Cg transform='translate(65,80) rotate(160) scale(1.2)'%3E%3Cpath d='M0 -10 C-8 -18 -20 -10 -12 0 C-8 6 -4 10 0 14 C4 10 8 6 12 0 C20 -10 8 -18 0 -10 Z' fill='rgba(128,128,128,0.10)'/%3E%3C/g%3E%3Cg transform='translate(110,90) rotate(270) scale(0.9)'%3E%3Cpath d='M0 -10 C-8 -18 -20 -10 -12 0 C-8 6 -4 10 0 14 C4 10 8 6 12 0 C20 -10 8 -18 0 -10 Z' fill='rgba(128,128,128,0.06)'/%3E%3C/g%3E%3Cg transform='translate(150,105) rotate(20) scale(1.5)'%3E%3Cpath d='M0 -10 C-8 -18 -20 -10 -12 0 C-8 6 -4 10 0 14 C4 10 8 6 12 0 C20 -10 8 -18 0 -10 Z' fill='rgba(128,128,128,0.12)'/%3E%3C/g%3E%3Cg transform='translate(40,120) rotate(310) scale(1.1)'%3E%3Cpath d='M0 -10 C-8 -18 -20 -10 -12 0 C-8 6 -4 10 0 14 C4 10 8 6 12 0 C20 -10 8 -18 0 -10 Z' fill='rgba(128,128,128,0.09)'/%3E%3C/g%3E%3Cg transform='translate(90,130) rotate(45) scale(0.8)'%3E%3Cpath d='M0 -10 C-8 -18 -20 -10 -12 0 C-8 6 -4 10 0 14 C4 10 8 6 12 0 C20 -10 8 -18 0 -10 Z' fill='rgba(128,128,128,0.07)'/%3E%3C/g%3E%3Cg transform='translate(140,140) rotate(190) scale(1.3)'%3E%3Cpath d='M0 -10 C-8 -18 -20 -10 -12 0 C-8 6 -4 10 0 14 C4 10 8 6 12 0 C20 -10 8 -18 0 -10 Z' fill='rgba(128,128,128,0.10)'/%3E%3C/g%3E%3Cg transform='translate(20,150) rotate(60) scale(0.9)'%3E%3Cpath d='M0 -10 C-8 -18 -20 -10 -12 0 C-8 6 -4 10 0 14 C4 10 8 6 12 0 C20 -10 8 -18 0 -10 Z' fill='rgba(128,128,128,0.08)'/%3E%3C/g%3E%3Cg transform='translate(70,150) rotate(280) scale(1.2)'%3E%3Cpath d='M0 -10 C-8 -18 -20 -10 -12 0 C-8 6 -4 10 0 14 C4 10 8 6 12 0 C20 -10 8 -18 0 -10 Z' fill='rgba(128,128,128,0.11)'/%3E%3C/g%3E%3Cg transform='translate(120,20) rotate(10) scale(1.0)'%3E%3Cpath d='M0 -10 C-8 -18 -20 -10 -12 0 C-8 6 -4 10 0 14 C4 10 8 6 12 0 C20 -10 8 -18 0 -10 Z' fill='rgba(128,128,128,0.06)'/%3E%3C/g%3E%3Cg transform='translate(10,45) rotate(140) scale(1.4)'%3E%3Cpath d='M0 -10 C-8 -18 -20 -10 -12 0 C-8 6 -4 10 0 14 C4 10 8 6 12 0 C20 -10 8 -18 0 -10 Z' fill='rgba(128,128,128,0.12)'/%3E%3C/g%3E%3Cg transform='translate(155,70) rotate(70) scale(0.8)'%3E%3Cpath d='M0 -10 C-8 -18 -20 -10 -12 0 C-8 6 -4 10 0 14 C4 10 8 6 12 0 C20 -10 8 -18 0 -10 Z' fill='rgba(128,128,128,0.07)'/%3E%3C/g%3E%3Cg transform='translate(95,150) rotate(210) scale(1.1)'%3E%3Cpath d='M0 -10 C-8 -18 -20 -10 -12 0 C-8 6 -4 10 0 14 C4 10 8 6 12 0 C20 -10 8 -18 0 -10 Z' fill='rgba(128,128,128,0.09)'/%3E%3C/g%3E%3Cg transform='translate(50,20) rotate(5) scale(1.3)'%3E%3Cpath d='M0 -10 C-8 -18 -20 -10 -12 0 C-8 6 -4 10 0 14 C4 10 8 6 12 0 C20 -10 8 -18 0 -10 Z' fill='rgba(128,128,128,0.13)'/%3E%3C/g%3E%3Cg transform='translate(125,110) rotate(165) scale(0.9)'%3E%3Cpath d='M0 -10 C-8 -18 -20 -10 -12 0 C-8 6 -4 10 0 14 C4 10 8 6 12 0 C20 -10 8 -18 0 -10 Z' fill='rgba(128,128,128,0.08)'/%3E%3C/g%3E%3Cg transform='translate(80,110) rotate(90) scale(1.2)'%3E%3Cpath d='M0 -10 C-8 -18 -20 -10 -12 0 C-8 6 -4 10 0 14 C4 10 8 6 12 0 C20 -10 8 -18 0 -10 Z' fill='rgba(128,128,128,0.10)'/%3E%3C/g%3E%3Cg transform='translate(30,75) rotate(250) scale(1.0)'%3E%3Cpath d='M0 -10 C-8 -18 -20 -10 -12 0 C-8 6 -4 10 0 14 C4 10 8 6 12 0 C20 -10 8 -18 0 -10 Z' fill='rgba(128,128,128,0.07)'/%3E%3C/g%3E%3Cg transform='translate(105,55) rotate(35) scale(1.4)'%3E%3Cpath d='M0 -10 C-8 -18 -20 -10 -12 0 C-8 6 -4 10 0 14 C4 10 8 6 12 0 C20 -10 8 -18 0 -10 Z' fill='rgba(128,128,128,0.11)'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 200px 200px;
+}
+
+/* STARS */
+body.ribbon-bg-stars .side-dock-actions {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg transform='translate(20,20) rotate(15) scale(1.2)'%3E%3Cpolygon points='0,-10 3,-3 10,-3 5,2 8,9 0,5 -8,9 -5,2 -10,-3 -3,-3' fill='rgba(128,128,128,0.10)'/%3E%3C/g%3E%3Cg transform='translate(60,15) rotate(75) scale(0.9)'%3E%3Cpolygon points='0,-10 3,-3 10,-3 5,2 8,9 0,5 -8,9 -5,2 -10,-3 -3,-3' fill='rgba(128,128,128,0.08)'/%3E%3C/g%3E%3Cg transform='translate(110,25) rotate(120) scale(1.1)'%3E%3Cpolygon points='0,-10 3,-3 10,-3 5,2 8,9 0,5 -8,9 -5,2 -10,-3 -3,-3' fill='rgba(128,128,128,0.12)'/%3E%3C/g%3E%3Cg transform='translate(145,10) rotate(45) scale(1.0)'%3E%3Cpolygon points='0,-10 3,-3 10,-3 5,2 8,9 0,5 -8,9 -5,2 -10,-3 -3,-3' fill='rgba(128,128,128,0.06)'/%3E%3C/g%3E%3Cg transform='translate(35,55) rotate(200) scale(1.3)'%3E%3Cpolygon points='0,-10 3,-3 10,-3 5,2 8,9 0,5 -8,9 -5,2 -10,-3 -3,-3' fill='rgba(128,128,128,0.09)'/%3E%3C/g%3E%3Cg transform='translate(85,45) rotate(30) scale(0.8)'%3E%3Cpolygon points='0,-10 3,-3 10,-3 5,2 8,9 0,5 -8,9 -5,2 -10,-3 -3,-3' fill='rgba(128,128,128,0.07)'/%3E%3C/g%3E%3Cg transform='translate(135,60) rotate(330) scale(1.4)'%3E%3Cpolygon points='0,-10 3,-3 10,-3 5,2 8,9 0,5 -8,9 -5,2 -10,-3 -3,-3' fill='rgba(128,128,128,0.11)'/%3E%3C/g%3E%3Cg transform='translate(15,95) rotate(85) scale(1.0)'%3E%3Cpolygon points='0,-10 3,-3 10,-3 5,2 8,9 0,5 -8,9 -5,2 -10,-3 -3,-3' fill='rgba(128,128,128,0.08)'/%3E%3C/g%3E%3Cg transform='translate(65,80) rotate(160) scale(1.2)'%3E%3Cpolygon points='0,-10 3,-3 10,-3 5,2 8,9 0,5 -8,9 -5,2 -10,-3 -3,-3' fill='rgba(128,128,128,0.10)'/%3E%3C/g%3E%3Cg transform='translate(110,90) rotate(270) scale(0.9)'%3E%3Cpolygon points='0,-10 3,-3 10,-3 5,2 8,9 0,5 -8,9 -5,2 -10,-3 -3,-3' fill='rgba(128,128,128,0.06)'/%3E%3C/g%3E%3Cg transform='translate(150,105) rotate(20) scale(1.5)'%3E%3Cpolygon points='0,-10 3,-3 10,-3 5,2 8,9 0,5 -8,9 -5,2 -10,-3 -3,-3' fill='rgba(128,128,128,0.12)'/%3E%3C/g%3E%3Cg transform='translate(40,120) rotate(310) scale(1.1)'%3E%3Cpolygon points='0,-10 3,-3 10,-3 5,2 8,9 0,5 -8,9 -5,2 -10,-3 -3,-3' fill='rgba(128,128,128,0.09)'/%3E%3C/g%3E%3Cg transform='translate(90,130) rotate(45) scale(0.8)'%3E%3Cpolygon points='0,-10 3,-3 10,-3 5,2 8,9 0,5 -8,9 -5,2 -10,-3 -3,-3' fill='rgba(128,128,128,0.07)'/%3E%3C/g%3E%3Cg transform='translate(140,140) rotate(190) scale(1.3)'%3E%3Cpolygon points='0,-10 3,-3 10,-3 5,2 8,9 0,5 -8,9 -5,2 -10,-3 -3,-3' fill='rgba(128,128,128,0.10)'/%3E%3C/g%3E%3Cg transform='translate(20,150) rotate(60) scale(0.9)'%3E%3Cpolygon points='0,-10 3,-3 10,-3 5,2 8,9 0,5 -8,9 -5,2 -10,-3 -3,-3' fill='rgba(128,128,128,0.08)'/%3E%3C/g%3E%3Cg transform='translate(70,150) rotate(280) scale(1.2)'%3E%3Cpolygon points='0,-10 3,-3 10,-3 5,2 8,9 0,5 -8,9 -5,2 -10,-3 -3,-3' fill='rgba(128,128,128,0.11)'/%3E%3C/g%3E%3Cg transform='translate(120,20) rotate(10) scale(1.0)'%3E%3Cpolygon points='0,-10 3,-3 10,-3 5,2 8,9 0,5 -8,9 -5,2 -10,-3 -3,-3' fill='rgba(128,128,128,0.06)'/%3E%3C/g%3E%3Cg transform='translate(10,45) rotate(140) scale(1.4)'%3E%3Cpolygon points='0,-10 3,-3 10,-3 5,2 8,9 0,5 -8,9 -5,2 -10,-3 -3,-3' fill='rgba(128,128,128,0.12)'/%3E%3C/g%3E%3Cg transform='translate(155,70) rotate(70) scale(0.8)'%3E%3Cpolygon points='0,-10 3,-3 10,-3 5,2 8,9 0,5 -8,9 -5,2 -10,-3 -3,-3' fill='rgba(128,128,128,0.07)'/%3E%3C/g%3E%3Cg transform='translate(95,150) rotate(210) scale(1.1)'%3E%3Cpolygon points='0,-10 3,-3 10,-3 5,2 8,9 0,5 -8,9 -5,2 -10,-3 -3,-3' fill='rgba(128,128,128,0.09)'/%3E%3C/g%3E%3Cg transform='translate(50,20) rotate(5) scale(1.3)'%3E%3Cpolygon points='0,-10 3,-3 10,-3 5,2 8,9 0,5 -8,9 -5,2 -10,-3 -3,-3' fill='rgba(128,128,128,0.13)'/%3E%3C/g%3E%3Cg transform='translate(125,110) rotate(165) scale(0.9)'%3E%3Cpolygon points='0,-10 3,-3 10,-3 5,2 8,9 0,5 -8,9 -5,2 -10,-3 -3,-3' fill='rgba(128,128,128,0.08)'/%3E%3C/g%3E%3Cg transform='translate(80,110) rotate(90) scale(1.2)'%3E%3Cpolygon points='0,-10 3,-3 10,-3 5,2 8,9 0,5 -8,9 -5,2 -10,-3 -3,-3' fill='rgba(128,128,128,0.10)'/%3E%3C/g%3E%3Cg transform='translate(30,75) rotate(250) scale(1.0)'%3E%3Cpolygon points='0,-10 3,-3 10,-3 5,2 8,9 0,5 -8,9 -5,2 -10,-3 -3,-3' fill='rgba(128,128,128,0.07)'/%3E%3C/g%3E%3Cg transform='translate(105,55) rotate(35) scale(1.4)'%3E%3Cpolygon points='0,-10 3,-3 10,-3 5,2 8,9 0,5 -8,9 -5,2 -10,-3 -3,-3' fill='rgba(128,128,128,0.11)'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 160px 160px;
+}
+
+/* SPARKLES */
+body.ribbon-bg-sparkles .side-dock-actions {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg transform='translate(20,20) rotate(15) scale(1.2)'%3E%3Cpath d='M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z' fill='rgba(128,128,128,0.10)'/%3E%3C/g%3E%3Cg transform='translate(60,15) rotate(75) scale(0.9)'%3E%3Cpath d='M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z' fill='rgba(128,128,128,0.08)'/%3E%3C/g%3E%3Cg transform='translate(110,25) rotate(120) scale(1.1)'%3E%3Cpath d='M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z' fill='rgba(128,128,128,0.12)'/%3E%3C/g%3E%3Cg transform='translate(145,10) rotate(45) scale(1.0)'%3E%3Cpath d='M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z' fill='rgba(128,128,128,0.06)'/%3E%3C/g%3E%3Cg transform='translate(35,55) rotate(200) scale(1.3)'%3E%3Cpath d='M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z' fill='rgba(128,128,128,0.09)'/%3E%3C/g%3E%3Cg transform='translate(85,45) rotate(30) scale(0.8)'%3E%3Cpath d='M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z' fill='rgba(128,128,128,0.07)'/%3E%3C/g%3E%3Cg transform='translate(135,60) rotate(330) scale(1.4)'%3E%3Cpath d='M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z' fill='rgba(128,128,128,0.11)'/%3E%3C/g%3E%3Cg transform='translate(15,95) rotate(85) scale(1.0)'%3E%3Cpath d='M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z' fill='rgba(128,128,128,0.08)'/%3E%3C/g%3E%3Cg transform='translate(65,80) rotate(160) scale(1.2)'%3E%3Cpath d='M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z' fill='rgba(128,128,128,0.10)'/%3E%3C/g%3E%3Cg transform='translate(110,90) rotate(270) scale(0.9)'%3E%3Cpath d='M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z' fill='rgba(128,128,128,0.06)'/%3E%3C/g%3E%3Cg transform='translate(150,105) rotate(20) scale(1.5)'%3E%3Cpath d='M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z' fill='rgba(128,128,128,0.12)'/%3E%3C/g%3E%3Cg transform='translate(40,120) rotate(310) scale(1.1)'%3E%3Cpath d='M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z' fill='rgba(128,128,128,0.09)'/%3E%3C/g%3E%3Cg transform='translate(90,130) rotate(45) scale(0.8)'%3E%3Cpath d='M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z' fill='rgba(128,128,128,0.07)'/%3E%3C/g%3E%3Cg transform='translate(140,140) rotate(190) scale(1.3)'%3E%3Cpath d='M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z' fill='rgba(128,128,128,0.10)'/%3E%3C/g%3E%3Cg transform='translate(20,150) rotate(60) scale(0.9)'%3E%3Cpath d='M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z' fill='rgba(128,128,128,0.08)'/%3E%3C/g%3E%3Cg transform='translate(70,150) rotate(280) scale(1.2)'%3E%3Cpath d='M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z' fill='rgba(128,128,128,0.11)'/%3E%3C/g%3E%3Cg transform='translate(120,20) rotate(10) scale(1.0)'%3E%3Cpath d='M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z' fill='rgba(128,128,128,0.06)'/%3E%3C/g%3E%3Cg transform='translate(10,45) rotate(140) scale(1.4)'%3E%3Cpath d='M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z' fill='rgba(128,128,128,0.12)'/%3E%3C/g%3E%3Cg transform='translate(155,70) rotate(70) scale(0.8)'%3E%3Cpath d='M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z' fill='rgba(128,128,128,0.07)'/%3E%3C/g%3E%3Cg transform='translate(95,150) rotate(210) scale(1.1)'%3E%3Cpath d='M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z' fill='rgba(128,128,128,0.09)'/%3E%3C/g%3E%3Cg transform='translate(50,20) rotate(5) scale(1.3)'%3E%3Cpath d='M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z' fill='rgba(128,128,128,0.13)'/%3E%3C/g%3E%3Cg transform='translate(125,110) rotate(165) scale(0.9)'%3E%3Cpath d='M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z' fill='rgba(128,128,128,0.08)'/%3E%3C/g%3E%3Cg transform='translate(80,110) rotate(90) scale(1.2)'%3E%3Cpath d='M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z' fill='rgba(128,128,128,0.10)'/%3E%3C/g%3E%3Cg transform='translate(30,75) rotate(250) scale(1.0)'%3E%3Cpath d='M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z' fill='rgba(128,128,128,0.07)'/%3E%3C/g%3E%3Cg transform='translate(105,55) rotate(35) scale(1.4)'%3E%3Cpath d='M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z' fill='rgba(128,128,128,0.11)'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 160px 160px;
+}
+body {
+    --ribbon-width: var(--bb-ribbon-width, 60px);
+    --ribbon-button-padding: var(--bb-ribbon-button-padding);
+}
+
+
+/* ribbon background color change + transition */
+.workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) {
+    background-color: var(--bb-workspace-bg);
+    transition: background-color 0.2s ease;
+}
+.workspace-ribbon.side-dock-ribbon.mod-left.is-collapsed {
+    background-color: var(--bb-editor-bg);
+    transition: background-color 0.2s ease;
+}
+
+/* sidebar toggle button background color change + transition */
+.workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .sidebar-toggle-button.mod-left {
+    background-color: var(--bb-workspace-bg);
+    border-bottom: none;
+    transition: background-color 0.3s ease;
+}
+.workspace-ribbon.side-dock-ribbon.mod-left.is-collapsed .sidebar-toggle-button.mod-left {
+    background-color: var(--bb-editor-bg);
+    border-bottom: none;
+    transition: all 0.3s ease;
+    transition-delay: all 2s;
+}
+
+
+
+
+/* BASE */
+.clickable-icon.side-dock-ribbon-action {
+    padding: var(--ribbon-button-padding);
+}
+
+/* ribbon items in center */
+.center-ribbon-items .side-dock-actions {
+    padding: 100% 0;
+    height: 100%;
+    border-radius: var(--button-radius);
+    corner-shape: var(--corner-shape);
+}
+
+/* RIBBON STYLES */
+.ribbon-contained .side-dock-actions {
+    background-color: var(--ribbon-background);
+    border-radius: var(--touch-radius-xs);
+    corner-shape: var(--corner-shape);
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.ribbon-glassy .side-dock-actions {
+    background-color: var(--ribbon-background);
+    backdrop-filter: blur(12px);
+    border: 2px solid rgba(255,255,255,0.06);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.ribbon-bordered .side-dock-actions {
+    background-color: var(--ribbon-background);
+    border: var(--border-width) solid var(--border-color);
+}
+
+
+
+/* RIBBON BUTTON COLOURS */
+.ribbon-button-color-1
+.clickable-icon.side-dock-ribbon-action {
+    background-color: var(--bb-editor-bg);
+}
+.ribbon-button-color-2
+.clickable-icon.side-dock-ribbon-action {
+    background-color: var(--bb-workspace-bg);
+}
+.ribbon-button-color-3
+.clickable-icon.side-dock-ribbon-action {
+    background-color: var(--bb-elements-bg);
+}
+.ribbon-button-color-acc .clickable-icon.side-dock-ribbon-action {
+    background-color: hsla(var(--interactive-accent-hsl), 0.5) !important;
+    color:  color-mix(in srgb, var(--color-accent-2), white 50%) !important;
+}
+
+
+/* RIBBON BUTTON STYLES */
+.ribbon-button-style-round .clickable-icon.side-dock-ribbon-action {
+    border-radius: 100px;
+    corner-shape: round;
+}
+
+.ribbon-button-style-squircle .clickable-icon.side-dock-ribbon-action {
+    border-radius: 30px;
+    corner-shape: squircle;
+}
+
+.ribbon-button-style-sharp .clickable-icon.side-dock-ribbon-action {
+    border-radius: 0px;
+    corner-shape: sharp;
+}
+
+.ribbon-button-style-topcut .clickable-icon.side-dock-ribbon-action {
+    border-radius: 0px;
+    border-top-left-radius: 8px;
+    corner-shape: bevel;
+}
+
+.ribbon-button-style-revcut .clickable-icon.side-dock-ribbon-action {
+    border-radius: 0px;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    corner-shape: bevel;
+}
+/* Pinned Tabs:
+show icon but not status (pin) icon
+but do show status (pin) icon when there is no file icon */
+
+.pin-icon-only .workspace-tab-header:has(.mod-pinned) {
+    --tab-width: 50px;
+}
+.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner-title {
+    display: none !important;
+}
+.pin-icon-only .workspace-tab-header:has(.mod-pinned):has(.workspace-tab-header-inner-icon:not([style*="display: none"]))
+    .workspace-tab-header-status-icon {
+    display: none !important;
+}
+.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner-close-button {
+    display: none !important;
+}
+.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-status-icon {
+    pointer-events: none !important;
+}
+.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner,
+.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header:active .workspace-tab-header-inner {
+    padding-left: 0px !important;
+}
+/* Custom Tab Container BG Image */
+.mod-root .workspace-tab-header-container {
+  background: var(--bg-image);
+  background-size: cover;
+  background-color: transparent;
+  /* opacity: var(--bb-bg-img-opacity); */
+}
 
 .tab-bg-wavy .mod-root .workspace-tab-header-container {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='20' viewBox='0 0 60 20'%3E%3Cpath d='M0 10 Q15 0 30 10 T60 10' stroke='rgba(128,128,128,0.2)' fill='none' stroke-width='2'/%3E%3C/svg%3E");
@@ -2828,7 +3065,10 @@ body.fixed-left-sidebar-button .sidebar-toggle-button.mod-left {
     order: -1;
 }
 .fixed-left-sidebar-button .workspace-tab-header-container-inner {
-    margin-left: -12px;
+    margin-left: -8px;
+}
+.fixed-left-sidebar-button .mod-left-split .workspace-tab-header-container-inner {
+    margin-left: 7px !important;
 }
 /* Apply only when ribbon is hidden */
 .workspace-tab-header-container .sidebar-toggle-button.mod-left {
@@ -4095,6 +4335,14 @@ button.pcr-button {
     background-color: none;
     background: none;
     box-shadow: none;
+}
+
+
+
+
+/* ??? */
+.vertical-tab-content .setting-item ~ :is(h1, h2, h3, h4, .setting-item-heading) {
+    margin-top: 9px;
 }
 /* todo: add density ss */
 /* Compact */

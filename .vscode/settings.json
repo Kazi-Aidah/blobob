@@ -18,7 +18,7 @@
             "color": "foldercolorizer.color_d70000"
         },
         {
-            "folderPath": "blobob/src/components/",
+            "folderPath": "blobob/src/layout/components",
             "color": "foldercolorizer.color_ff5f00"
         },
         {
@@ -27,8 +27,8 @@
         },
         {
             "folderPath": "blobob/src/layout/tabs/tab-styles/",
-            "color": "foldercolorizer.color_0000d7",
-            "isFolderOnly": true
+            "isFolderOnly": true,
+            "color": "foldercolorizer.color_00afff"
         }
     ]
 }

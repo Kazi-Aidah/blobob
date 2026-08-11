@@ -1,0 +1,24 @@
+/* Pinned Tabs:
+show icon but not status (pin) icon
+but do show status (pin) icon when there is no file icon */
+
+.pin-icon-only .workspace-tab-header:has(.mod-pinned) {
+    --tab-width: 50px;
+}
+.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner-title {
+    display: none !important;
+}
+.pin-icon-only .workspace-tab-header:has(.mod-pinned):has(.workspace-tab-header-inner-icon:not([style*="display: none"]))
+    .workspace-tab-header-status-icon {
+    display: none !important;
+}
+.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner-close-button {
+    display: none !important;
+}
+.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-status-icon {
+    pointer-events: none !important;
+}
+.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner,
+.pin-icon-only .workspace-tab-header:has(.mod-pinned) .workspace-tab-header:active .workspace-tab-header-inner {
+    padding-left: 0px !important;
+}
