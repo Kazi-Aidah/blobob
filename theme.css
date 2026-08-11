@@ -2614,6 +2614,16 @@ body {
     corner-shape: var(--corner-shape);
 }
 
+/* shared: undim on hover */
+.ribbon-dim .side-dock-actions {
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.ribbon-dim .workspace-ribbon.side-dock-ribbon:hover .side-dock-actions {
+    opacity: 1;
+}
+
 /* RIBBON STYLES */
 .ribbon-contained .side-dock-actions {
     background-color: var(--ribbon-background);
@@ -2683,6 +2693,86 @@ body {
     border-top-left-radius: 8px;
     border-bottom-right-radius: 8px;
     corner-shape: bevel;
+}
+body {
+  --status-bar-background: var(--bb-workspace-bg);
+  --status-bar-border-color: var(--divider-color);
+  --status-bar-border-width: var(--border-width) 0 0 var(--border-width);
+  --status-bar-font-size: var(--font-ui-smaller);
+  --status-bar-text-color: var(--text-muted);
+  --status-bar-position: fixed;
+  --status-bar-radius: var(--touch-radius-m) 0 0 0;
+}
+
+
+.hide-status-bar .status-bar {
+    display: none !important;
+}
+
+/* default statusbar */
+.status-bar {
+    transition: all calc(var(--animation-duration) * 0.6667) cubic-bezier(0.175, 0.885, 0.32, 1.5) !important;
+    overflow: auto !important;
+    corner-shape: var(--corner-shape);
+}
+
+.status-bar:hover {
+    padding: 10px 12px;
+    transition: all calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
+    transform: translateX(0);
+    color: var(--text-normal);
+}
+
+
+
+/* STATUS BAR OPACITY */
+.dim-status-bar .status-bar {
+    opacity: 0.65;
+}
+.dim-status-bar .status-bar:hover {
+    opacity: 1;
+}
+.show-status-bar .status-bar {
+    opacity: 0;
+}
+.show-status-bar .status-bar:hover {
+    opacity: 1;
+}
+.blur-status-bar .status-bar {
+    opacity: 0.65;
+    filter: blur(1.5px);
+}
+.blur-status-bar .status-bar:hover {
+    opacity: 1;
+    filter: blur(0px);
+}
+
+
+/* CENTERED STATUS BAR */
+.centered-statusbar {
+    .status-bar {
+        position: fixed;
+        bottom: var(--size-4-2);
+        left: 50%;
+        transform: translateX(-50%);
+        width: fit-content;
+        background: none;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-radius: var(--radius-m);
+        padding: 4px 12px !important;
+        margin-bottom: 2px;
+        border: none;
+        box-shadow: none !important;
+        font-size: var(--font-ui-smaller);
+        line-height: 1.4;
+        transition: opacity 0.25s ease, transform 0.2s ease;
+        pointer-events: auto;
+    }
+
+    .workspace-tab-container:has(.cm-scroller) {
+        padding-bottom: 48px !important;
+    }
 }
 /* Pinned Tabs:
 show icon but not status (pin) icon
@@ -3275,6 +3365,7 @@ body.tab-contained {
         padding: 4px;
         margin-bottom: 4px;
         gap: 4px;
+        margin-left: 4px;
     }
 
 }
@@ -3338,7 +3429,7 @@ body.tab-float {
   .workspace-tab-container {
     margin: 6px;
     border: var(--border-width) solid var(--border-color);
-    border-radius: var(--modal-radius);
+    border-radius: calc(var(--modal-radius) + 5px);
     corner-shape: var(--corner-shape);
   }
 
@@ -3519,6 +3610,21 @@ body.tab-float.apply-to-sidebar {
     width: 100%;
     padding-left: 4px;
   }
+}
+
+
+/* tab float sidebar toggle button adjustments */
+body.tab-float {
+    .workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed)::before {
+        transform: translateX(5px);
+    }
+    .workspace-ribbon.is-collapsed.mod-left::before {
+        background-color: var(--ribbon-background-collapsed) !important;
+    }
+}
+
+body.tab-float.sharp-tiptip .workspace-tab-container {
+    border-radius: calc(var(--modal-radius) + 0px) !important;
 }
 body.tab-hardshadow {
     --tab-curve: 0;
@@ -4343,6 +4449,117 @@ button.pcr-button {
 /* ??? */
 .vertical-tab-content .setting-item ~ :is(h1, h2, h3, h4, .setting-item-heading) {
     margin-top: 9px;
+}
+
+
+
+
+/* PCR */
+.pickr .pcr-button, .pcr-button::before, .pcr-button::after {
+    border-radius: var(--button-radius) !important;
+    corner-shape: var(--corner-shape) !important;
+    min-width: 36px;
+    height: 36px;
+    box-shadow: none !important;
+    outline: 2px solid var(--bb-border-focused-color);
+}
+
+.pcr-app {
+    background: var(--background-primary);
+    border: 3px solid var(--background-modifier-border);
+    border-radius: calc(var(--button-radius) * 1.4) !important;
+    corner-shape: var(--corner-shape) !important;
+    min-width: 250px;
+}
+
+.pcr-result {
+    background: var(--bb-tiptips) !important;
+}
+
+/* .pcr-interaction {
+    justify-content: space-between !important;
+} */
+
+.pcr-type, .pcr-save, .pcr-cancel {
+    order: -1;
+}
+
+.pcr-palette,
+.pcr-palette::before,
+.pcr-palette::after {
+    border-radius: calc(var(--button-radius) * 1.4) !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    corner-shape: var(--corner-shape) !important;
+
+}
+.pcr-type, .pcr-cancel, .pcr-save, .pcr-result, .pcr-swatches button {
+    border-radius: calc(var(--button-radius) * 0.8) !important;
+    corner-shape: var(--corner-shape) !important;
+}
+
+/* normal button */
+.pcr-app .pcr-interaction .pcr-type {
+    background: var(--bb-tiptips-hover-bg);
+    color: var(--text-faint);
+}
+
+/* active button */
+.pcr-app .pcr-interaction .pcr-type.active,
+.pcr-save {
+    background: var(--color-accent) !important;
+    border: 2px solid var(--bb-border-focused-color);
+}
+
+/* cancel */
+.pcr-app .pcr-interaction .pcr-cancel {
+    background: rgba(var(--color-red-rgb), 0.5) !important;
+}
+
+
+/* remove focus outline */
+.pcr-result:focus, .pcr-type:focus {
+    box-shadow: none !important;
+    outline: 2px solid var(--color-accent-2) !important;
+}
+
+.pcr-color-chooser {
+    transform: translateY(10px);
+}
+
+/* themed color variable pickers */
+.themed-color-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    min-height: 100% !important;
+}
+
+.themed-color-wrapper .theme-light, .theme-dark {
+    gap: 6px;
+}
+
+.themed-color-wrapper .pickr-reset > button {
+    padding: 6px 7px !important;
+    margin: 4px !important;
+}
+
+.themed-color-wrapper, .theme-light, .theme-dark {
+    border-radius: var(--touch-radius-s) !important;
+    corner-shape: var(--corner-shape) !important;
+}
+
+.themed-color-wrapper > div + div {
+    margin-top: 0px;
+}
+
+.themed-color-wrapper .theme-light::before {
+    content: "LIGHT";
+    margin-right: 6px;
+}
+.themed-color-wrapper .theme-dark::before {
+    content: "DARK";
+    margin-right: 6px;
 }
 /* todo: add density ss */
 /* Compact */

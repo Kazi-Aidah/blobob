@@ -21,7 +21,7 @@ body.tab-float {
   .workspace-tab-container {
     margin: 6px;
     border: var(--border-width) solid var(--border-color);
-    border-radius: var(--modal-radius);
+    border-radius: calc(var(--modal-radius) + 5px);
     corner-shape: var(--corner-shape);
   }
 
@@ -205,3 +205,16 @@ body.tab-float.apply-to-sidebar {
 }
 
 
+/* tab float sidebar toggle button adjustments */
+body.tab-float {
+    .workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed)::before {
+        transform: translateX(5px);
+    }
+    .workspace-ribbon.is-collapsed.mod-left::before {
+        background-color: var(--ribbon-background-collapsed) !important;
+    }
+}
+
+body.tab-float.sharp-tiptip .workspace-tab-container {
+    border-radius: calc(var(--modal-radius) + 0px) !important;
+}

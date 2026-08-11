@@ -1,0 +1,80 @@
+body {
+  --status-bar-background: var(--bb-workspace-bg);
+  --status-bar-border-color: var(--divider-color);
+  --status-bar-border-width: var(--border-width) 0 0 var(--border-width);
+  --status-bar-font-size: var(--font-ui-smaller);
+  --status-bar-text-color: var(--text-muted);
+  --status-bar-position: fixed;
+  --status-bar-radius: var(--touch-radius-m) 0 0 0;
+}
+
+
+.hide-status-bar .status-bar {
+    display: none !important;
+}
+
+/* default statusbar */
+.status-bar {
+    transition: all calc(var(--animation-duration) * 0.6667) cubic-bezier(0.175, 0.885, 0.32, 1.5) !important;
+    overflow: auto !important;
+    corner-shape: var(--corner-shape);
+}
+
+.status-bar:hover {
+    padding: 10px 12px;
+    transition: all calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 1.5);
+    transform: translateX(0);
+    color: var(--text-normal);
+}
+
+
+
+/* STATUS BAR OPACITY */
+.dim-status-bar .status-bar {
+    opacity: 0.65;
+}
+.dim-status-bar .status-bar:hover {
+    opacity: 1;
+}
+.show-status-bar .status-bar {
+    opacity: 0;
+}
+.show-status-bar .status-bar:hover {
+    opacity: 1;
+}
+.blur-status-bar .status-bar {
+    opacity: 0.65;
+    filter: blur(1.5px);
+}
+.blur-status-bar .status-bar:hover {
+    opacity: 1;
+    filter: blur(0px);
+}
+
+
+/* CENTERED STATUS BAR */
+.centered-statusbar {
+    .status-bar {
+        position: fixed;
+        bottom: var(--size-4-2);
+        left: 50%;
+        transform: translateX(-50%);
+        width: fit-content;
+        background: none;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-radius: var(--radius-m);
+        padding: 4px 12px !important;
+        margin-bottom: 2px;
+        border: none;
+        box-shadow: none !important;
+        font-size: var(--font-ui-smaller);
+        line-height: 1.4;
+        transition: opacity 0.25s ease, transform 0.2s ease;
+        pointer-events: auto;
+    }
+
+    .workspace-tab-container:has(.cm-scroller) {
+        padding-bottom: 48px !important;
+    }
+}

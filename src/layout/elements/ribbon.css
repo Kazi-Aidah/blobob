@@ -43,6 +43,16 @@ body {
     corner-shape: var(--corner-shape);
 }
 
+/* shared: undim on hover */
+.ribbon-dim .side-dock-actions {
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.ribbon-dim .workspace-ribbon.side-dock-ribbon:hover .side-dock-actions {
+    opacity: 1;
+}
+
 /* RIBBON STYLES */
 .ribbon-contained .side-dock-actions {
     background-color: var(--ribbon-background);
@@ -113,3 +123,4 @@ body {
     border-bottom-right-radius: 8px;
     corner-shape: bevel;
 }
+
