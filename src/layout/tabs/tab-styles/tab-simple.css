@@ -1,9 +1,9 @@
-body.tab-simple {
+body:is(.tab-simple) {
     --tab-curve: 0px;
-    .workspace-tab-header {
+    .workspace-tab-header-container .workspace-tab-header {
         border-radius: var(--tab-radius);
     }
-    .workspace-tab-header.is-active {
+    .workspace-tab-header-container .workspace-tab-header.is-active {
         border-radius: var(--tab-radius);
         margin-bottom: 3px;
     }
@@ -16,19 +16,19 @@ body.tab-simple {
         display: none;
     }
 
-    .workspace-tab-header-inner {
+    .workspace-tab-header-container .workspace-tab-header-inner {
         border-radius: var(--tab-radius);
         corner-shape: var(--tab-corner-shape);
         padding: 0px 8px;
     }
 
-    .workspace-tab-header {
+    .workspace-tab-header-container .workspace-tab-header {
         border-radius: var(--tab-radius);
         corner-shape: var(--tab-corner-shape);
         padding: 0px 6px;
     }
 
-    .workspace-tab-header.is-active {
+    .workspace-tab-header-container .workspace-tab-header.is-active {
         border-radius: var(--tab-radius);
         corner-shape: var(--tab-corner-shape);
     }
@@ -39,21 +39,21 @@ body.tab-simple {
 
 
     /* tab animation */
-    .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+    .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
         transform: scale(0.9);
         transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
     }
-    .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+    .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
         transform: scale(1);
     }
-    .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner {
+    .workspace-tab-header-container .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner {
         transform: scale(0.95);
     }
-    .workspace-tab-header.is-active {
+    .workspace-tab-header-container .workspace-tab-header.is-active {
         transform: scale(1) translateY(0.2px);
         transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
     }
-    .workspace-tab-header.is-active:hover {
+    .workspace-tab-header-container .workspace-tab-header.is-active:hover {
         transform: scale(1.05) translateY(0.5px);
     }
 

@@ -8,9 +8,9 @@ body.tab-lined {
     } */
 
     /* tab icon brightening if active */
-    .workspace-tab-header.is-active
+    .workspace-tab-header-container .workspace-tab-header.is-active
         .workspace-tab-header-inner-icon,
-    .workspace-tab-header:active
+    .workspace-tab-header-container .workspace-tab-header:active
         .workspace-tab-header-inner-icon {
         filter: brightness(1);
 
@@ -83,7 +83,7 @@ body.tab-lined {
         margin: 0px;
     }
 
-    .workspace-tab-header-inner {
+    .workspace-tab-header-container .workspace-tab-header-inner {
         border-bottom: 0px solid transparent;
         border-radius: 0px;
     }

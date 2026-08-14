@@ -55,6 +55,10 @@ body.tab-joined .mod-root {
     opacity: 1;
   }
 
+  .workspace-tab-header-inner {
+    background-color: transparent !important;
+  }
+
   .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
     transform: translateY(0);
     height: 100%;
@@ -169,3 +173,4 @@ body.tab-joined.apply-to-sidebar {
     z-index: 1001 !important;
   }
 }
+

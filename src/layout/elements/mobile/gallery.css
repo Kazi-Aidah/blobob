@@ -1,0 +1,226 @@
+.is-mobile .menu {
+    padding-bottom: 40px;
+}
+
+/* --------------------------- */
+
+/* fix menubar */
+.mobile-tab-switcher-menubar {
+    background-color: var(--bb-workspace-bg);
+    border-top: 2px solid var(--background-modifier-border-hover);
+    padding-top: 20px;
+}
+
+/* Remove ALL shadows from mobile tab previews */
+.mobile-tab .mobile-tab-preview,
+.mobile-tab .mobile-tab-preview *,
+.mobile-tab .mobile-tab-preview::before,
+.mobile-tab .mobile-tab-preview::after {
+  box-shadow: none !important;
+  filter: drop-shadow(0 0 0 transparent) !important;
+  text-shadow: none !important;
+}
+
+/* close/pin button */
+.mobile-tab .mobile-tab-pin,
+.mobile-tab .close-button {
+    width: 30px;
+    height: 30px;
+    border-radius: calc(var(--button-radius) * 0.6);
+    corner-shape: var(--corner-shape);
+}
+
+.mobile-tab-title {
+    width: 100% !important;
+    padding: 0px 10px;
+}
+
+/* inactive */
+.mobile-tab {
+    padding: 10px;
+    border: 2px solid var(--background-modifier-border-hover);
+    border-radius: var(--touch-radius-xs);
+    corner-shape: var(--corner-shape);
+    background-color: var(--bb-editor-bg);
+}
+
+.mobile-tab .mobile-tab-preview {
+    border-radius: var(--touch-radius-xxs);
+    corner-shape: var(--corner-shape) !important;
+    border: 2px solid var(--background-modifier-border);
+    background-color: var(--bb-workspace-bg) !important;
+}
+
+.mobile-tab-title {
+    padding-bottom: 4px;
+}
+
+/* active gallery item */
+.mobile-tab.is-active {
+    border: 2px solid var(--color-accent);
+    background-color: hsl(var(--interactive-accent-hsl), 0.2);
+    corner-shape: var(--corner-shape);
+}
+.mobile-tab.is-active .mobile-tab-preview {
+    border: 2px solid hsl(var(--interactive-accent-hsl), 0.7) !important;
+}
+.mobile-tab.is-active .mobile-tab-preview svg {
+    color: var(--color-accent);
+}
+.mobile-tab.is-active .mobile-tab-pin,
+.mobile-tab.is-active .close-button {
+    background-color: hsl(var(--interactive-accent-hsl), 0.2);
+}
+
+
+.bb-gallery-column {
+    /* Force single column layout - one item per row */
+    .mobile-tab-group-container {
+        display: flex !important;
+        flex-flow: column nowrap !important;
+        gap: 12px !important;
+    }
+    .mobile-tab-wrapper {
+        width: 100% !important;
+        flex: none !important;
+        margin-bottom: 10px;
+    }
+    .mobile-tab, .mobile-tab-preview {
+        width: 100%;
+    }
+}
+
+.mobile-tab .mobile-tab-preview,
+.mobile-tab.is-active .mobile-tab-preview,
+.mobile-tab .mobile-tab-preview-empty,
+.mobile-tab.is-active .mobile-tab-preview-empty {
+    --tab-switcher-preview-radius: var(--touch-radius-xs);
+    corner-shape: var(--corner-shape) !important;
+    background: none;
+
+    --icon-size: 22px;
+}
+
+
+
+.bb-gallery-tile {
+    .mobile-tab-switcher-scroll .close-button,
+    .mobile-tab-switcher-scroll .mobile-tab-pin {
+        border-radius: calc(var(--button-radius) * 0.8);
+        left: 2px;
+        top: 2px;
+        width: 72px;
+    }
+
+    .mobile-tab {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .mobile-tab .mobile-tab-preview {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        width: 80px;
+        height: 90px;
+        padding-top: 27px;
+    }
+
+    .mobile-tab .mobile-tab-title {
+        flex: 1;
+        white-space: nowrap;
+    }
+}
+
+
+.bb-gallery-namelist {
+    .mobile-tab-group-container {
+        gap: 12px;
+    }
+
+    .mobile-tab {
+        width: 100%;
+        height: 60px;
+    }
+
+    .mobile-tab-preview, .mobile-tab-preview-empty {
+        display: none;
+    }
+
+    .mobile-tab {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .mobile-tab-title {
+        text-align: left !important;
+        flex: 0 0 auto;
+        width: 100% !important;
+        padding: 0px 16px;
+    }
+}
+
+
+
+/* option: move close/pin buttons on the left */
+.mobile-gallery-left {
+    .mobile-tab-pin {
+        position: absolute;
+        left: 8px;
+        top: 25%;
+    }
+    .close-button {
+        position: absolute;
+        left: 8px;
+        top: 75%;
+    }
+} /* broken with ss? */
+
+
+
+
+.bb-gallery-list {
+    .mobile-tab-group-container {
+        gap: 10px;
+    }
+
+    .mobile-tab {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100px;
+    }
+
+    .mobile-tab .mobile-tab-preview,
+    .mobile-tab.is-active .mobile-tab-preview {
+        position: absolute !important;
+        left: 85px;
+        top: 50%;
+        transform: translateY(-37px);
+        border: none !important;
+        display: flex !important;
+        align-items: center;
+    }
+
+    .mobile-tab .mobile-tab-pin,
+    .mobile-tab .close-button {
+        width: 50px;
+        height: 50px;
+        border-radius: calc(var(--button-radius) * 0.4);
+    }
+
+    .mobile-tab-title {
+        text-align: left !important;
+        flex: 0 0 auto;
+        margin-left: 20%;
+        width: 100% !important;
+        padding: 0px 50px;
+    }
+}
+

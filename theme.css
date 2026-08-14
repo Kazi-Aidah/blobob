@@ -1442,6 +1442,18 @@ body:not(.disable-extra-animations) {
   --txt-m: #a9422b;
   --text-f: #a9422b;
 }
+body {
+    --interactive-accent-hsl: var(--accent);
+    --color-accent-hsl: var(--accent);
+
+    --color-accent: hsl(var(--accent)) !important;
+    --color-accent-1: color-mix(in srgb, hsl(var(--accent)), white 15%) !important;
+    --color-accent-2: color-mix(in srgb, hsl(var(--accent)), white 30%) !important;
+
+    --interactive-accent: var(--color-accent);
+    --interactive-accent-hover: var(--color-accent-1);
+}
+
 .theme-dark:not(.obsidian),
 .theme-light:not(.obsidian) {
   --bb-input-bg: var(--bb-tiptips-bg);
@@ -2478,6 +2490,231 @@ input[type="checkbox"]:checked:hover {
 }
 
 
+.is-mobile .menu {
+    padding-bottom: 40px;
+}
+
+/* --------------------------- */
+
+/* fix menubar */
+.mobile-tab-switcher-menubar {
+    background-color: var(--bb-workspace-bg);
+    border-top: 2px solid var(--background-modifier-border-hover);
+    padding-top: 20px;
+}
+
+/* Remove ALL shadows from mobile tab previews */
+.mobile-tab .mobile-tab-preview,
+.mobile-tab .mobile-tab-preview *,
+.mobile-tab .mobile-tab-preview::before,
+.mobile-tab .mobile-tab-preview::after {
+  box-shadow: none !important;
+  filter: drop-shadow(0 0 0 transparent) !important;
+  text-shadow: none !important;
+}
+
+/* close/pin button */
+.mobile-tab .mobile-tab-pin,
+.mobile-tab .close-button {
+    width: 30px;
+    height: 30px;
+    border-radius: calc(var(--button-radius) * 0.6);
+    corner-shape: var(--corner-shape);
+}
+
+.mobile-tab-title {
+    width: 100% !important;
+    padding: 0px 10px;
+}
+
+/* inactive */
+.mobile-tab {
+    padding: 10px;
+    border: 2px solid var(--background-modifier-border-hover);
+    border-radius: var(--touch-radius-xs);
+    corner-shape: var(--corner-shape);
+    background-color: var(--bb-editor-bg);
+}
+
+.mobile-tab .mobile-tab-preview {
+    border-radius: var(--touch-radius-xxs);
+    corner-shape: var(--corner-shape) !important;
+    border: 2px solid var(--background-modifier-border);
+    background-color: var(--bb-workspace-bg) !important;
+}
+
+.mobile-tab-title {
+    padding-bottom: 4px;
+}
+
+/* active gallery item */
+.mobile-tab.is-active {
+    border: 2px solid var(--color-accent);
+    background-color: hsl(var(--interactive-accent-hsl), 0.2);
+    corner-shape: var(--corner-shape);
+}
+.mobile-tab.is-active .mobile-tab-preview {
+    border: 2px solid hsl(var(--interactive-accent-hsl), 0.7) !important;
+}
+.mobile-tab.is-active .mobile-tab-preview svg {
+    color: var(--color-accent);
+}
+.mobile-tab.is-active .mobile-tab-pin,
+.mobile-tab.is-active .close-button {
+    background-color: hsl(var(--interactive-accent-hsl), 0.2);
+}
+
+
+.bb-gallery-column {
+    /* Force single column layout - one item per row */
+    .mobile-tab-group-container {
+        display: flex !important;
+        flex-flow: column nowrap !important;
+        gap: 12px !important;
+    }
+    .mobile-tab-wrapper {
+        width: 100% !important;
+        flex: none !important;
+        margin-bottom: 10px;
+    }
+    .mobile-tab, .mobile-tab-preview {
+        width: 100%;
+    }
+}
+
+.mobile-tab .mobile-tab-preview,
+.mobile-tab.is-active .mobile-tab-preview,
+.mobile-tab .mobile-tab-preview-empty,
+.mobile-tab.is-active .mobile-tab-preview-empty {
+    --tab-switcher-preview-radius: var(--touch-radius-xs);
+    corner-shape: var(--corner-shape) !important;
+    background: none;
+
+    --icon-size: 22px;
+}
+
+
+
+.bb-gallery-tile {
+    .mobile-tab-switcher-scroll .close-button,
+    .mobile-tab-switcher-scroll .mobile-tab-pin {
+        border-radius: calc(var(--button-radius) * 0.8);
+        left: 2px;
+        top: 2px;
+        width: 72px;
+    }
+
+    .mobile-tab {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .mobile-tab .mobile-tab-preview {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        width: 80px;
+        height: 90px;
+        padding-top: 27px;
+    }
+
+    .mobile-tab .mobile-tab-title {
+        flex: 1;
+        white-space: nowrap;
+    }
+}
+
+
+.bb-gallery-namelist {
+    .mobile-tab-group-container {
+        gap: 12px;
+    }
+
+    .mobile-tab {
+        width: 100%;
+        height: 60px;
+    }
+
+    .mobile-tab-preview, .mobile-tab-preview-empty {
+        display: none;
+    }
+
+    .mobile-tab {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .mobile-tab-title {
+        text-align: left !important;
+        flex: 0 0 auto;
+        width: 100% !important;
+        padding: 0px 16px;
+    }
+}
+
+
+
+/* option: move close/pin buttons on the left */
+.mobile-gallery-left {
+    .mobile-tab-pin {
+        position: absolute;
+        left: 8px;
+        top: 25%;
+    }
+    .close-button {
+        position: absolute;
+        left: 8px;
+        top: 75%;
+    }
+} /* broken with ss? */
+
+
+
+
+.bb-gallery-list {
+    .mobile-tab-group-container {
+        gap: 10px;
+    }
+
+    .mobile-tab {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100px;
+    }
+
+    .mobile-tab .mobile-tab-preview,
+    .mobile-tab.is-active .mobile-tab-preview {
+        position: absolute !important;
+        left: 85px;
+        top: 50%;
+        transform: translateY(-37px);
+        border: none !important;
+        display: flex !important;
+        align-items: center;
+    }
+
+    .mobile-tab .mobile-tab-pin,
+    .mobile-tab .close-button {
+        width: 50px;
+        height: 50px;
+        border-radius: calc(var(--button-radius) * 0.4);
+    }
+
+    .mobile-tab-title {
+        text-align: left !important;
+        flex: 0 0 auto;
+        margin-left: 20%;
+        width: 100% !important;
+        padding: 0px 50px;
+    }
+}
 /* Custom Ribbon Container BG Image */
 body.ribbon-bg-none .side-dock-actions {
   background: var(--ribbon-bg-image) !important;
@@ -3473,7 +3710,7 @@ body.tab-float {
     box-shadow: none;
   }
 
-  .workspace .mod-root .workspace-tab-header:hover .workspace-tab-header-inner-close-button {
+  .workspace .mod-root .workspace-tab-header-container .workspace-tab-header:hover .workspace-tab-header-inner-close-button {
     margin-left: -6px !important;
   }
 
@@ -3481,7 +3718,7 @@ body.tab-float {
     background-color: transparent !important;
   }
 
-  .workspace-tab-header {
+  .workspace-tab-header-container .workspace-tab-header {
     --tab-curve: 0px;
     border-radius: var(--tab-radius);
     corner-shape: var(--corner-shape);
@@ -3497,7 +3734,7 @@ body.tab-float {
                 margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
   }
 
-  .mod-root .workspace-tab-header.is-active {
+  .mod-root .workspace-tab-header-container .workspace-tab-header.is-active {
     min-height: 24px;
     background-color: var(--bb-elements-bg);
     box-shadow: 0 0 0 var(--border-width) var(--border-color);
@@ -3512,13 +3749,13 @@ body.tab-float {
                 margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
   }
 
-  .mod-root .workspace-tab-header:not(.is-active) {
+  .mod-root .workspace-tab-header-container .workspace-tab-header:not(.is-active) {
     transform: translateY(4px);
     box-shadow: 0 0 0 calc(var(--border-width) * 0) var(--bb-border-color);
     transition: border-width 0.2s ease;
   }
 
-  .mod-root .workspace-tab-header:not(.is-active):hover {
+  .mod-root .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover {
     background-color: var(--bb-elements-bg);
     box-shadow: 0 0 0 var(--border-width) var(--bb-border-color);
     padding: 2px;
@@ -3529,19 +3766,19 @@ body.tab-float {
                 margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
   }
 
-  .mod-root .workspace-tab-header:not(.is-active):active {
+  .mod-root .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
     background-color: var(--bb-elements-bg);
     box-shadow: 0 0 0 var(--border-width) var(--bb-border-color);
     transform: translateY(1px) scale(0.8);
   }
 
-  &.theme-dark .workspace-tab-header:not(.is-active):hover,
-  &.theme-dark .workspace-tab-header:not(.is-active):active {
+  &.theme-dark .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover,
+  &.theme-dark .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
     filter: brightness(1.4);
   }
 
-  &.theme-light .workspace-tab-header:not(.is-active):hover,
-  &.theme-light .workspace-tab-header:not(.is-active):active {
+  &.theme-light .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover,
+  &.theme-light .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
     filter: brightness(1.1);
   }
 
@@ -3587,8 +3824,8 @@ body.tab-float.apply-to-sidebar {
     transition: border-width 0.2s ease;
   }
 
-  .mod-left-split .workspace-tab-header:not(.is-active):hover,
-  .mod-right-split .workspace-tab-header:not(.is-active):hover {
+  .mod-left-split .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover,
+  .mod-right-split .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover {
     background-color: var(--bb-elements-bg);
     box-shadow: 0 0 0 var(--border-width) var(--bb-border-color);
     transform: translateY(-2px) scale(0.9) !important;
@@ -3770,6 +4007,10 @@ body.tab-joined .mod-root {
     opacity: 1;
   }
 
+  .workspace-tab-header-inner {
+    background-color: transparent !important;
+  }
+
   .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
     transform: translateY(0);
     height: 100%;
@@ -3901,7 +4142,7 @@ body.tab-linewrap {
         display: none;
     }
 
-    .mod-root .workspace-tab-header {
+    .mod-root .workspace-tab-header-container .workspace-tab-header {
         border-right: 2px solid var(--border-color);
         border-radius: 0px;
         transform: translateY(0) scale(1);
@@ -3911,25 +4152,25 @@ body.tab-linewrap {
         z-index: 2;
     }
 
-    .mod-root .workspace-tab-header:hover {
+    .mod-root .workspace-tab-header-container .workspace-tab-header:hover {
         border-right: 2px solid var(--border-color);
         border-radius: 0px;
         transform: translateY(4px) scale(1.02);
     }
 
-    .mod-root .workspace-tab-header:active {
+    .mod-root .workspace-tab-header-container .workspace-tab-header:active {
         border-right: 2px solid var(--border-color);
         border-radius: 0px;
         transform: translateY(8px) scale(0.96);
     }
 
-    .mod-root .workspace-tab-header.is-active:hover {
+    .mod-root .workspace-tab-header-container .workspace-tab-header.is-active:hover {
         border-right: 2px solid var(--border-color);
         padding: 0px 10px;
         transform: translateY(-4px) scale(1.02);
     }
 
-    .mod-root .workspace-tab-header.is-active {
+    .mod-root .workspace-tab-header-container .workspace-tab-header.is-active {
         border-right: 2px solid var(--border-color);
         padding: 0px 10px;
         transform: translateY(0) scale(1);
@@ -3939,24 +4180,24 @@ body.tab-linewrap {
 
 /* sidebar tabs */
 body.tab-linewrap.apply-to-sidebar {
-    .workspace-tab-header {
+    .workspace-tab-header-container .workspace-tab-header {
         transform: translateY(0) scale(1);
         transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
-    .workspace-tab-header:hover {
+    .workspace-tab-header-container .workspace-tab-header:hover {
         transform: translateY(4px) scale(1.02);
     }
 
-    .workspace-tab-header:active {
+    .workspace-tab-header-container .workspace-tab-header:active {
         transform: translateY(8px) scale(0.96);
     }
 
-    .workspace-tab-header.is-active:hover {
+    .workspace-tab-header-container .workspace-tab-header.is-active:hover {
         transform: translateY(-4px) scale(1.02);
     }
 
-    .workspace-tab-header.is-active {
+    .workspace-tab-header-container .workspace-tab-header.is-active {
         transform: translateY(0) scale(1);
     }
 }
@@ -3969,12 +4210,12 @@ body:is(.is-tablet):not(.compact-tabs, .tab-none) .workspace-tab-header-containe
 body:is(.is-tablet):not(.compact-tabs, .tab-none) .workspace-tab-header.is-active .workspace-tab-header-inner {
   margin: auto 5px;
 }
-body.tab-simple {
+body:is(.tab-simple) {
     --tab-curve: 0px;
-    .workspace-tab-header {
+    .workspace-tab-header-container .workspace-tab-header {
         border-radius: var(--tab-radius);
     }
-    .workspace-tab-header.is-active {
+    .workspace-tab-header-container .workspace-tab-header.is-active {
         border-radius: var(--tab-radius);
         margin-bottom: 3px;
     }
@@ -3987,19 +4228,19 @@ body.tab-simple {
         display: none;
     }
 
-    .workspace-tab-header-inner {
+    .workspace-tab-header-container .workspace-tab-header-inner {
         border-radius: var(--tab-radius);
         corner-shape: var(--tab-corner-shape);
         padding: 0px 8px;
     }
 
-    .workspace-tab-header {
+    .workspace-tab-header-container .workspace-tab-header {
         border-radius: var(--tab-radius);
         corner-shape: var(--tab-corner-shape);
         padding: 0px 6px;
     }
 
-    .workspace-tab-header.is-active {
+    .workspace-tab-header-container .workspace-tab-header.is-active {
         border-radius: var(--tab-radius);
         corner-shape: var(--tab-corner-shape);
     }
@@ -4010,21 +4251,21 @@ body.tab-simple {
 
 
     /* tab animation */
-    .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+    .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
         transform: scale(0.9);
         transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
     }
-    .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+    .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
         transform: scale(1);
     }
-    .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner {
+    .workspace-tab-header-container .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner {
         transform: scale(0.95);
     }
-    .workspace-tab-header.is-active {
+    .workspace-tab-header-container .workspace-tab-header.is-active {
         transform: scale(1) translateY(0.2px);
         transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
     }
-    .workspace-tab-header.is-active:hover {
+    .workspace-tab-header-container .workspace-tab-header.is-active:hover {
         transform: scale(1.05) translateY(0.5px);
     }
 
@@ -4072,21 +4313,21 @@ body.tab-simplejoined {
 
 
     /* tab animation */
-    .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+    .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
         transform: scale(0.9);
         transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
     }
-    .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+    .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
         transform: scale(1);
     }
-    .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner {
+    .workspace-tab-header-container .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner {
         transform: scale(0.95);
     }
-    .workspace-tab-header.is-active {
+    .workspace-tab-header-container .workspace-tab-header.is-active {
         transform: scale(1) translateY(0.2px);
         transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
     }
-    .workspace-tab-header.is-active:hover {
+    .workspace-tab-header-container .workspace-tab-header.is-active:hover {
         transform: scale(1.05) translateY(0.5px);
     }
 }
@@ -4123,9 +4364,9 @@ body.tab-lined {
     } */
 
     /* tab icon brightening if active */
-    .workspace-tab-header.is-active
+    .workspace-tab-header-container .workspace-tab-header.is-active
         .workspace-tab-header-inner-icon,
-    .workspace-tab-header:active
+    .workspace-tab-header-container .workspace-tab-header:active
         .workspace-tab-header-inner-icon {
         filter: brightness(1);
 
@@ -4198,7 +4439,7 @@ body.tab-lined {
         margin: 0px;
     }
 
-    .workspace-tab-header-inner {
+    .workspace-tab-header-container .workspace-tab-header-inner {
         border-bottom: 0px solid transparent;
         border-radius: 0px;
     }
@@ -4533,6 +4774,11 @@ button.pcr-button {
     flex-direction: row;
     gap: 8px;
     min-height: 100% !important;
+}
+
+body:is(.is-mobile):not(.is-tablet) .themed-color-wrapper {
+    display: flex;
+    flex-direction: column !important;
 }
 
 .themed-color-wrapper .theme-light, .theme-dark {

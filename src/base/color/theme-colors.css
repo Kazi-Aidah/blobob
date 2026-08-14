@@ -1,3 +1,15 @@
+body {
+    --interactive-accent-hsl: var(--accent);
+    --color-accent-hsl: var(--accent);
+
+    --color-accent: hsl(var(--accent)) !important;
+    --color-accent-1: color-mix(in srgb, hsl(var(--accent)), white 15%) !important;
+    --color-accent-2: color-mix(in srgb, hsl(var(--accent)), white 30%) !important;
+
+    --interactive-accent: var(--color-accent);
+    --interactive-accent-hover: var(--color-accent-1);
+}
+
 .theme-dark:not(.obsidian),
 .theme-light:not(.obsidian) {
   --bb-input-bg: var(--bb-tiptips-bg);

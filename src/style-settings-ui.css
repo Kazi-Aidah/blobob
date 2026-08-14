@@ -263,6 +263,11 @@ button.pcr-button {
     min-height: 100% !important;
 }
 
+body:is(.is-mobile):not(.is-tablet) .themed-color-wrapper {
+    display: flex;
+    flex-direction: column !important;
+}
+
 .themed-color-wrapper .theme-light, .theme-dark {
     gap: 6px;
 }
