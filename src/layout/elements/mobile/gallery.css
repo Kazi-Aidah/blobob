@@ -224,3 +224,7 @@
     }
 }
 
+/* GALLERY SWITCHER */
+.mobile-tab-switcher-menubar {
+    background-color: var(--bb-elements-bg);
+}
