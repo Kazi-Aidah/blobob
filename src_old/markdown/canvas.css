@@ -47,7 +47,7 @@ canvas-sharp-cards
 .canvas-card-menu {
     padding: 6px 10px;
     border-radius: var(--touch-radius-m);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     opacity: 0.6;
     margin-bottom: -10px;
 
@@ -57,7 +57,7 @@ canvas-sharp-cards
 .canvas-card-menu:hover {
     padding: 6px 10px;
     border-radius: var(--touch-radius-m);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     opacity: 1;
     margin-bottom: 0;
 }

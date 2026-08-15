@@ -3,7 +3,7 @@
 
 .menu {
     border-radius: calc(var(--button-radius) + 2px);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     overflow: auto;
     opacity: 1;
     transition: all calc(var(--animation-duration) * 0.6667) cubic-bezier(0.175, 0.885, 0.32, 2);
@@ -11,7 +11,7 @@
 
 .menu-item.tappable {
     border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     padding: 6px 8px;
     transition: all 0.2s ease;
 }
@@ -86,14 +86,14 @@
 
 .is-mobile .menu-group {
     border: 2px solid var(--background-modifier-border-focus);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
 }
 
 /* .is-mobile .menu-group:has(.menu-item + .menu-item) .menu-item:not(:last-child) {
 } */
 .is-mobile .menu-group {
     border-radius: var(--touch-radius-xs);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
 }
 
 /* tablet */

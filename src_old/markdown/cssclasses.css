@@ -3,7 +3,7 @@
     background-color: var(--tag-background);
     color: var(--tag-color);
     border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
 
     padding: 2px 10px;
 }
@@ -19,7 +19,7 @@
     background-color: var(--tag-background);
     color: var(--tag-color);
     border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
 
     padding: 2px 10px;
 }
@@ -105,7 +105,7 @@
 /* dropdown: property key icon styles: accent color, normal text color, muted color, hidden */
 .mpk-accent-color .metadata-property-key-input {
     border-radius: var(--button-radius) !important;
-    corner-shape: var(--corner-shape) !important;
+    corner-shape: var(--bb-corner-shape) !important;
     padding: 4px 10px !important;
     letter-spacing: 0.09em;
     background-color: transparent;
@@ -120,7 +120,7 @@
 /* accent-color + hidden */
 .mpk-accent-color-hidden .metadata-property-key-input {
     border-radius: var(--button-radius) !important;
-    corner-shape: var(--corner-shape) !important;
+    corner-shape: var(--bb-corner-shape) !important;
     letter-spacing: 0.09em;
     background-color: transparent;
     color: var(--color-accent-1) !important;
@@ -135,7 +135,7 @@
 /* ? normal */
 .mpk-normal-color .metadata-property-key-input {
     border-radius: var(--button-radius) !important;
-    corner-shape: var(--corner-shape) !important;
+    corner-shape: var(--bb-corner-shape) !important;
     padding: 4px 12px !important;
     letter-spacing: 0.09em;
     background-color: transparent;
@@ -149,7 +149,7 @@
 /* ? muted */
 .mpk-muted-color .metadata-property-key-input {
     border-radius: var(--button-radius) !important;
-    corner-shape: var(--corner-shape) !important;   
+    corner-shape: var(--bb-corner-shape) !important;   
     padding: 4px 12px !important;
     letter-spacing: 0.09em;
     background-color: transparent;
@@ -163,7 +163,7 @@
 /* ? hidden */
 .mpk-key-only .metadata-property-key-input {
     border-radius: var(--button-radius) !important;
-    corner-shape: var(--corner-shape) !important;   
+    corner-shape: var(--bb-corner-shape) !important;   
     padding: 4px 12px !important;
     letter-spacing: 0.09em;
     background-color: transparent;

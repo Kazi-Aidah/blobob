@@ -59,7 +59,7 @@ body {
   --accent-brown: var(--color-brown);
   --accent-gray: var(--text-normal);
 
-  --color-red: #da4b4b;
+  /* --color-red: #da4b4b;
   --color-orange: #cc692a;
   --color-yellow: #e8b05a;
   --color-green: #a3bd6a;
@@ -68,5 +68,5 @@ body {
   --color-purple: #965daf;
   --color-pink: #c85b92;
   --color-brown: #9b674b;
-  --color-gray: #a6a6a6;
+  --color-gray: #a6a6a6; */
 }

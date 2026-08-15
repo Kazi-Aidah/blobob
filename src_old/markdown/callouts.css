@@ -6,7 +6,7 @@
     border: var(--callout-border-width) solid
         rgb(var(--callout-color), var(--callout-border-opacity));
     border-radius: var(--callout-radius);
-    corner-shape: var(--corner-shape) !important;
+    corner-shape: var(--bb-corner-shape) !important;
     margin: 1em 0;
     mix-blend-mode: var(--callout-blend-mode);
     background-color: rgb(var(--callout-color), 0.1);

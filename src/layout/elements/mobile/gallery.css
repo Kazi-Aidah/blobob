@@ -27,7 +27,7 @@
     width: 30px;
     height: 30px;
     border-radius: calc(var(--button-radius) * 0.6);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
 }
 
 .mobile-tab-title {
@@ -40,13 +40,13 @@
     padding: 10px;
     border: 2px solid var(--background-modifier-border-hover);
     border-radius: var(--touch-radius-xs);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     background-color: var(--bb-editor-bg);
 }
 
 .mobile-tab .mobile-tab-preview {
     border-radius: var(--touch-radius-xxs);
-    corner-shape: var(--corner-shape) !important;
+    corner-shape: var(--bb-corner-shape) !important;
     border: 2px solid var(--background-modifier-border);
     background-color: var(--bb-workspace-bg) !important;
 }
@@ -59,7 +59,7 @@
 .mobile-tab.is-active {
     border: 2px solid var(--color-accent);
     background-color: hsl(var(--interactive-accent-hsl), 0.2);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
 }
 .mobile-tab.is-active .mobile-tab-preview {
     border: 2px solid hsl(var(--interactive-accent-hsl), 0.7) !important;
@@ -95,7 +95,7 @@
 .mobile-tab .mobile-tab-preview-empty,
 .mobile-tab.is-active .mobile-tab-preview-empty {
     --tab-switcher-preview-radius: var(--touch-radius-xs);
-    corner-shape: var(--corner-shape) !important;
+    corner-shape: var(--bb-corner-shape) !important;
     background: none;
 
     --icon-size: 22px;

@@ -117,7 +117,7 @@ body {
   --bases-cards-background: var(--background-primary);
   --bases-cards-border-width: var(--border-width);
   --bases-cards-container-background: transparent;
-  --bases-cards-corner-shape: var(--corner-shape);
+  --bases-cards-corner-shape: var(--bb-corner-shape);
   --bases-cards-cover-background: var(--background-primary-alt);
   --bases-cards-font-size: var(--font-smaller);
   --bases-cards-line-height: 24px;
@@ -135,7 +135,7 @@ body {
   --bold-weight: calc(var(--font-weight) + var(--bold-modifier));
   --border-width: 1px;
   --button-radius: var(--input-radius);
-  --button-corner-shape: var(--corner-shape);
+  --button-corner-shape: var(--bb-corner-shape);
   --blur-background: color-mix(in srgb, var(--background-primary) var(--blur-opacity-s), transparent) linear-gradient(var(--background-primary), color-mix(in srgb, var(--background-primary) var(--blur-opacity-s), transparent));
   --blur-opacity-s: 65%;
   --blur-opacity-m: 90%;
@@ -252,7 +252,7 @@ body {
   --embed-font-style: inherit;
   --embed-actions-background: color-mix(in srgb, var(--background-primary) 80%, transparent);
   --embed-actions-blur: var(--blur-s);
-  --embed-actions-corner-shape: var(--corner-shape);
+  --embed-actions-corner-shape: var(--bb-corner-shape);
   --embed-actions-padding: var(--size-2-1);
   --embed-actions-radius: calc(var(--embed-action-radius) + var(--embed-actions-padding));
   --embed-actions-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 0 6px 0 rgba(0, 0, 0, 0.05);
@@ -402,7 +402,7 @@ body {
   --input-height: 30px;
   --input-padding: var(--size-4-1) var(--size-4-2);
   --input-radius: 5px;
-  --input-corner-shape: var(--corner-shape);
+  --input-corner-shape: var(--bb-corner-shape);
   --input-font-weight: var(--font-normal);
   --input-border-width: var(--border-width);
   --input-border-width-focus: 2px;
@@ -495,7 +495,7 @@ body {
   --menu-padding: var(--size-2-3);
   --menu-shadow: var(--shadow-s);
   --menu-radius: var(--radius-m);
-  --menu-corner-shape: var(--corner-shape);
+  --menu-corner-shape: var(--bb-corner-shape);
   --menu-background: var(--background-secondary);
   --menu-border-color: var(--background-modifier-border-hover);
   --menu-border-width: var(--border-width);
@@ -518,9 +518,9 @@ body {
   --metadata-property-radius: 6px;
   --metadata-property-radius-hover: 6px;
   --metadata-property-radius-focus: 6px;
-  --metadata-property-corner-shape: var(--corner-shape);
-  --metadata-property-corner-shape-hover: var(--corner-shape);
-  --metadata-property-corner-shape-focus: var(--corner-shape);
+  --metadata-property-corner-shape: var(--bb-corner-shape);
+  --metadata-property-corner-shape-hover: var(--bb-corner-shape);
+  --metadata-property-corner-shape-focus: var(--bb-corner-shape);
   --metadata-property-background: transparent;
   --metadata-property-background-hover: transparent;
   --metadata-property-background-active: var(--background-modifier-hover);
@@ -596,7 +596,7 @@ body {
   --prompt-max-height: 70vh;
   --prompt-border-width: var(--border-width);
   --prompt-border-color: var(--color-base-40, var(--background-modifier-border-focus));
-  --corner-shape: round;
+  --bb-corner-shape: round;
   --radius-s: 4px;
   --radius-m: 8px;
   --radius-l: 12px;

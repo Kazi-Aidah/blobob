@@ -1,0 +1,169 @@
+body.dt-code-warm {
+  --dt-code-normal: var(--text-normal);
+  --dt-code-comment: var(--text-faint);
+  --dt-code-function: var(--dt-color-yellow);
+  --dt-code-important: var(--dt-color-orange);
+  --dt-code-keyword: var(--dt-color-pink);
+  --dt-code-operator: var(--dt-color-red);
+  --dt-code-property: var(--dt-color-cyan);
+  --dt-code-punctuation: var(--text-muted);
+  --dt-code-string: var(--dt-color-green);
+  --dt-code-tag: var(--dt-color-red);
+  --dt-code-value: var(--dt-color-purple);
+}
+body.dt-code-cool {
+  --dt-code-normal: var(--text-normal);
+  --dt-code-comment: var(--text-faint);
+  --dt-code-function: var(--dt-color-blue);
+  --dt-code-important: var(--dt-color-cyan);
+  --dt-code-keyword: var(--dt-color-purple);
+  --dt-code-operator: var(--dt-color-cyan);
+  --dt-code-property: var(--dt-color-cyan);
+  --dt-code-punctuation: var(--text-muted);
+  --dt-code-string: var(--dt-color-green);
+  --dt-code-tag: var(--dt-color-blue);
+  --dt-code-value: var(--dt-color-purple);
+}
+body.dt-code-vibrant {
+  --dt-code-normal: var(--text-normal);
+  --dt-code-comment: var(--text-faint);
+  --dt-code-function: #ff6b6b;
+  --dt-code-important: #ff922b;
+  --dt-code-keyword: #cc5de8;
+  --dt-code-operator: #ff922b;
+  --dt-code-property: #22b8cf;
+  --dt-code-punctuation: var(--text-muted);
+  --dt-code-string: #51cf66;
+  --dt-code-tag: #ff6b6b;
+  --dt-code-value: #cc5de8;
+}
+body.dt-code-muted {
+  --dt-code-normal: var(--text-normal);
+  --dt-code-comment: var(--text-faint);
+  --dt-code-function: #b07a7a;
+  --dt-code-important: #b08a5a;
+  --dt-code-keyword: #8a7a9a;
+  --dt-code-operator: #5a8a8a;
+  --dt-code-property: #408080;
+  --dt-code-punctuation: var(--text-muted);
+  --dt-code-string: #608060;
+  --dt-code-tag: #a06060;
+  --dt-code-value: #706080;
+}
+body.lt-code-warm {
+  --lt-code-normal: var(--text-normal);
+  --lt-code-comment: var(--text-faint);
+  --lt-code-function: var(--lt-color-yellow);
+  --lt-code-important: var(--lt-color-orange);
+  --lt-code-keyword: var(--lt-color-pink);
+  --lt-code-operator: var(--lt-color-red);
+  --lt-code-property: var(--lt-color-cyan);
+  --lt-code-punctuation: var(--text-muted);
+  --lt-code-string: var(--lt-color-green);
+  --lt-code-tag: var(--lt-color-red);
+  --lt-code-value: var(--lt-color-purple);
+}
+body.lt-code-cool {
+  --lt-code-normal: var(--text-normal);
+  --lt-code-comment: var(--text-faint);
+  --lt-code-function: var(--lt-color-blue);
+  --lt-code-important: var(--lt-color-cyan);
+  --lt-code-keyword: var(--lt-color-purple);
+  --lt-code-operator: var(--lt-color-cyan);
+  --lt-code-property: var(--lt-color-cyan);
+  --lt-code-punctuation: var(--text-muted);
+  --lt-code-string: var(--lt-color-green);
+  --lt-code-tag: var(--lt-color-blue);
+  --lt-code-value: var(--lt-color-purple);
+}
+body.lt-code-vibrant {
+  --lt-code-normal: var(--text-normal);
+  --lt-code-comment: var(--text-faint);
+  --lt-code-function: #ff6b6b;
+  --lt-code-important: #ff922b;
+  --lt-code-keyword: #cc5de8;
+  --lt-code-operator: #ff922b;
+  --lt-code-property: #22b8cf;
+  --lt-code-punctuation: var(--text-muted);
+  --lt-code-string: #51cf66;
+  --lt-code-tag: #ff6b6b;
+  --lt-code-value: #cc5de8;
+}
+body.lt-code-muted {
+  --lt-code-normal: var(--text-normal);
+  --lt-code-comment: var(--text-faint);
+  --lt-code-function: #b07a7a;
+  --lt-code-important: #b08a5a;
+  --lt-code-keyword: #8a7a9a;
+  --lt-code-operator: #5a8a8a;
+  --lt-code-property: #5a8a8a;
+  --lt-code-punctuation: var(--text-muted);
+  --lt-code-string: #7a9a7a;
+  --lt-code-tag: #b07a7a;
+  --lt-code-value: #8a7a9a;
+}
+body.theme-dark {
+  --code-normal: var(--dt-code-normal, var(--text-normal));
+  --code-comment: var(--dt-code-comment, var(--text-faint));
+  --code-function: var(--dt-code-function, var(--color-yellow));
+  --code-important: var(--dt-code-important, var(--color-orange));
+  --code-keyword: var(--dt-code-keyword, var(--color-pink));
+  --code-operator: var(--dt-code-operator, var(--color-red));
+  --code-property: var(--dt-code-property, var(--color-cyan));
+  --code-punctuation: var(--dt-code-punctuation, var(--text-muted));
+  --code-string: var(--dt-code-string, var(--color-green));
+  --code-tag: var(--dt-code-tag, var(--color-red));
+  --code-value: var(--dt-code-value, var(--color-purple));
+}
+body.theme-light {
+  --code-normal: var(--lt-code-normal, var(--text-normal));
+  --code-comment: var(--lt-code-comment, var(--text-faint));
+  --code-function: var(--lt-code-function, var(--color-yellow));
+  --code-important: var(--lt-code-important, var(--color-orange));
+  --code-keyword: var(--lt-code-keyword, var(--color-pink));
+  --code-operator: var(--lt-code-operator, var(--color-red));
+  --code-property: var(--lt-code-property, var(--color-cyan));
+  --code-punctuation: var(--lt-code-punctuation, var(--text-muted));
+  --code-string: var(--lt-code-string, var(--color-green));
+  --code-tag: var(--lt-code-tag, var(--color-red));
+  --code-value: var(--lt-code-value, var(--color-purple));
+}
+.setting-item[data-id="dark-code-color-scheme"] .setting-item-control,
+.setting-item[data-id="light-code-color-scheme"] .setting-item-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.setting-item[data-id="dark-code-color-scheme"] .setting-item-control::before {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 20px;
+  flex-shrink: 0;
+  border-radius: var(--radius-s, 4px);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+  background: linear-gradient(to right,
+    var(--dt-code-comment) 0%, var(--dt-code-comment) 20%,
+    var(--dt-code-keyword) 20%, var(--dt-code-keyword) 40%,
+    var(--dt-code-string) 40%, var(--dt-code-string) 60%,
+    var(--dt-code-function) 60%, var(--dt-code-function) 80%,
+    var(--dt-code-operator) 80%, var(--dt-code-operator) 100%
+  );
+}
+.setting-item[data-id="light-code-color-scheme"] .setting-item-control::before {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 20px;
+  flex-shrink: 0;
+  border-radius: var(--radius-s, 4px);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+  background: linear-gradient(to right,
+    var(--lt-code-comment) 0%, var(--lt-code-comment) 20%,
+    var(--lt-code-keyword) 20%, var(--lt-code-keyword) 40%,
+    var(--lt-code-string) 40%, var(--lt-code-string) 60%,
+    var(--lt-code-function) 60%, var(--lt-code-function) 80%,
+    var(--lt-code-operator) 80%, var(--lt-code-operator) 100%
+  );
+}

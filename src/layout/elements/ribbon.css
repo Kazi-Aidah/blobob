@@ -40,7 +40,7 @@ body {
     padding: 100% 0;
     height: 100%;
     border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
 }
 
 /* shared: undim on hover */
@@ -57,7 +57,7 @@ body {
 .ribbon-contained .side-dock-actions {
     background-color: var(--ribbon-background);
     border-radius: var(--touch-radius-xs);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     padding-top: 8px;
     padding-bottom: 8px;
 }

@@ -110,7 +110,7 @@
     }
     .day.svelte-q3wqg9 {
         border-radius: var(--button-radius);
-        corner-shape: var(--corner-shape);
+        corner-shape: var(--bb-corner-shape);
     }
 }
 

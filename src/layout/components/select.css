@@ -1,3 +1,9 @@
+/* fix wrapping issue caused by base select */
+select {
+    transition: width 0.2s ease-in-out !important;
+    width: calc(var(--dropdown-fitted-width) + 4px) !important;
+}
+
 /* COLORED HEADING IN OPTIONS */
 .dropdown option[value^="heading-"] {
     background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
@@ -59,7 +65,7 @@ select {
   line-height: 1.5;
   display: flex;
   align-items: center;
-  corner-shape: var(--corner-shape);
+  corner-shape: var(--bb-corner-shape);
   transition: background-color 0.2s ease, 
               all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
         
@@ -88,7 +94,7 @@ select:open:hover {
   appearance: base-select !important;
   color: var(--background-modifier-border-focus);
   border-radius: var(--button-radius);
-  corner-shape: var(--corner-shape) !important;
+  corner-shape: var(--bb-corner-shape) !important;
   margin-top: 4px;
   margin-bottom: 4px;
   background-color: var(--bb-tiptips-hover-bg);
@@ -112,7 +118,7 @@ select option {
   height: 30px;
   margin: 4px;
   border-radius: calc(var(--button-radius) - 2px);
-  corner-shape: var(--corner-shape) !important;
+  corner-shape: var(--bb-corner-shape) !important;
   color: var(--text-normal);
   background-color: var(--bb-tiptips-hover-bg) !important;
   transition: all 0.15s ease;

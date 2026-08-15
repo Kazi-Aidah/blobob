@@ -1,0 +1,289 @@
+body.lt-pastel {
+  --lt-color-red: #ffb3b3;
+  --lt-color-orange: #ffd1b3;
+  --lt-color-yellow: #ffecb3;
+  --lt-color-green: #b3ffb3;
+  --lt-color-cyan: #b3f0ff;
+  --lt-color-blue: #b3d9ff;
+  --lt-color-purple: #d9b3ff;
+  --lt-color-pink: #ffb3e6;
+  --lt-color-brown: #d9c2b3;
+}
+body.lt-light {
+  --lt-color-red: #f8a5a5;
+  --lt-color-orange: #f8b88a;
+  --lt-color-yellow: #f8d88a;
+  --lt-color-green: #8ac8a5;
+  --lt-color-cyan: #8ad8d8;
+  --lt-color-blue: #8ab8e0;
+  --lt-color-purple: #b8a5f0;
+  --lt-color-pink: #e8a5c8;
+  --lt-color-brown: #c8a88a;
+}
+body.lt-warm {
+  --lt-color-red: #d97a4a;
+  --lt-color-orange: #e8943a;
+  --lt-color-yellow: #e8b83a;
+  --lt-color-green: #7a9a4a;
+  --lt-color-cyan: #4a8a7a;
+  --lt-color-blue: #4a6a8a;
+  --lt-color-purple: #8a6a8a;
+  --lt-color-pink: #c87a7a;
+  --lt-color-brown: #8a6a3a;
+}
+body.lt-bright {
+  --lt-color-red: #e03131;
+  --lt-color-orange: #e8590c;
+  --lt-color-yellow: #f08c00;
+  --lt-color-green: #2f9e44;
+  --lt-color-cyan: #0c8599;
+  --lt-color-blue: #1971c2;
+  --lt-color-purple: #5f3dc4;
+  --lt-color-pink: #c2255c;
+  --lt-color-brown: #7b4b11;
+}
+body.lt-natural {
+  --lt-color-red: #b5554a;
+  --lt-color-orange: #c47d3a;
+  --lt-color-yellow: #c4a83a;
+  --lt-color-green: #5a8a5a;
+  --lt-color-cyan: #3a8a8a;
+  --lt-color-blue: #3a6a8a;
+  --lt-color-purple: #7a5a8a;
+  --lt-color-pink: #b06a7a;
+  --lt-color-brown: #8a6a3a;
+}
+body.lt-cool {
+  --lt-color-red: #b06a7a;
+  --lt-color-orange: #b0807a;
+  --lt-color-yellow: #b09a6a;
+  --lt-color-green: #5a8a7a;
+  --lt-color-cyan: #3a8a9a;
+  --lt-color-blue: #3a6a9a;
+  --lt-color-purple: #5a5a9a;
+  --lt-color-pink: #8a6a8a;
+  --lt-color-brown: #6a6a4a;
+}
+body.lt-dark {
+  --lt-color-red: #961f1f;
+  --lt-color-orange: #8c3507;
+  --lt-color-yellow: #a36002;
+  --lt-color-green: #1b5f28;
+  --lt-color-cyan: #075d6c;
+  --lt-color-blue: #0e4170;
+  --lt-color-purple: #3f2980;
+  --lt-color-pink: #881b41;
+  --lt-color-brown: #5c390d;
+}
+body.lt-muted {
+  --lt-color-red: #c47a7a;
+  --lt-color-orange: #c48a5a;
+  --lt-color-yellow: #c4b05a;
+  --lt-color-green: #7a9a7a;
+  --lt-color-cyan: #5a8a8a;
+  --lt-color-blue: #5a7a9a;
+  --lt-color-purple: #8a7a9a;
+  --lt-color-pink: #b07a8a;
+  --lt-color-brown: #8a6a4a;
+}
+body.lt-neon {
+  --lt-color-red: #ff2a2a;
+  --lt-color-orange: #ff6a1a;
+  --lt-color-yellow: #ffea00;
+  --lt-color-green: #1aff6a;
+  --lt-color-cyan: #1affff;
+  --lt-color-blue: #1a6aff;
+  --lt-color-purple: #aa1aff;
+  --lt-color-pink: #ff1a9a;
+  --lt-color-brown: #cc8833;
+}
+body.lt-cinematic {
+  --lt-color-red: #b53a2a;
+  --lt-color-orange: #c96a2a;
+  --lt-color-yellow: #d4a030;
+  --lt-color-green: #4a7a4a;
+  --lt-color-cyan: #3a8a8a;
+  --lt-color-blue: #2a5a8a;
+  --lt-color-purple: #5a3a7a;
+  --lt-color-pink: #b04a6a;
+  --lt-color-brown: #7a4a2a;
+}
+body.dt-pastel {
+  --dt-color-red: #cc8888;
+  --dt-color-orange: #cca888;
+  --dt-color-yellow: #ccbb88;
+  --dt-color-green: #88bb88;
+  --dt-color-cyan: #88bbcc;
+  --dt-color-blue: #8899cc;
+  --dt-color-purple: #aa88cc;
+  --dt-color-pink: #cc88aa;
+  --dt-color-brown: #aa9988;
+}
+body.dt-light {
+  --dt-color-red: #f07070;
+  --dt-color-orange: #e08a40;
+  --dt-color-yellow: #e8c070;
+  --dt-color-green: #80b880;
+  --dt-color-cyan: #60b8c8;
+  --dt-color-blue: #6098d0;
+  --dt-color-purple: #b080c8;
+  --dt-color-pink: #d880a8;
+  --dt-color-brown: #b08060;
+}
+body.dt-warm {
+  --dt-color-red: #d07a4a;
+  --dt-color-orange: #d08a3a;
+  --dt-color-yellow: #d0a83a;
+  --dt-color-green: #6a8a4a;
+  --dt-color-cyan: #4a7a6a;
+  --dt-color-blue: #4a5a7a;
+  --dt-color-purple: #7a5a7a;
+  --dt-color-pink: #b06a6a;
+  --dt-color-brown: #7a5a2a;
+}
+body.dt-bright {
+  --dt-color-red: #da4b4b;
+  --dt-color-orange: #cc692a;
+  --dt-color-yellow: #e8b05a;
+  --dt-color-green: #a3bd6a;
+  --dt-color-cyan: #42adbb;
+  --dt-color-blue: #4281bb;
+  --dt-color-purple: #965daf;
+  --dt-color-pink: #c85b92;
+  --dt-color-brown: #9b674b;
+}
+body.dt-natural {
+  --dt-color-red: #8a4035;
+  --dt-color-orange: #9a5a2a;
+  --dt-color-yellow: #9a7a2a;
+  --dt-color-green: #3a6a3a;
+  --dt-color-cyan: #2a6a6a;
+  --dt-color-blue: #2a4a6a;
+  --dt-color-purple: #5a3a6a;
+  --dt-color-pink: #8a3a5a;
+  --dt-color-brown: #6a4a2a;
+}
+body.dt-cool {
+  --dt-color-red: #9a5a6a;
+  --dt-color-orange: #9a6a6a;
+  --dt-color-yellow: #9a7a5a;
+  --dt-color-green: #4a7a6a;
+  --dt-color-cyan: #3a7a8a;
+  --dt-color-blue: #3a5a8a;
+  --dt-color-purple: #5a4a8a;
+  --dt-color-pink: #7a5a7a;
+  --dt-color-brown: #5a5a3a;
+}
+body.dt-dark {
+  --dt-color-red: #8a2a2a;
+  --dt-color-orange: #8a4018;
+  --dt-color-yellow: #a07020;
+  --dt-color-green: #3a6a3a;
+  --dt-color-cyan: #1a6a7a;
+  --dt-color-blue: #1a4a7a;
+  --dt-color-purple: #4a2a6a;
+  --dt-color-pink: #6a2a4a;
+  --dt-color-brown: #4a2a1a;
+}
+body.dt-muted {
+  --dt-color-red: #a06060;
+  --dt-color-orange: #a07040;
+  --dt-color-yellow: #a09050;
+  --dt-color-green: #608060;
+  --dt-color-cyan: #408080;
+  --dt-color-blue: #406080;
+  --dt-color-purple: #706080;
+  --dt-color-pink: #906070;
+  --dt-color-brown: #705040;
+}
+body.dt-neon {
+  --dt-color-red: #ff4444;
+  --dt-color-orange: #ff8844;
+  --dt-color-yellow: #ffff44;
+  --dt-color-green: #44ff88;
+  --dt-color-cyan: #44ffff;
+  --dt-color-blue: #4488ff;
+  --dt-color-purple: #cc44ff;
+  --dt-color-pink: #ff44bb;
+  --dt-color-brown: #ddaa55;
+}
+body.dt-cinematic {
+  --dt-color-red: #cc4a3a;
+  --dt-color-orange: #d87a3a;
+  --dt-color-yellow: #e0a840;
+  --dt-color-green: #5a8a5a;
+  --dt-color-cyan: #4a9a9a;
+  --dt-color-blue: #3a6a9a;
+  --dt-color-purple: #6a4a8a;
+  --dt-color-pink: #c05a7a;
+  --dt-color-brown: #8a5a3a;
+}
+body.theme-light {
+  --color-red: var(--lt-color-red);
+  --color-orange: var(--lt-color-orange);
+  --color-yellow: var(--lt-color-yellow);
+  --color-green: var(--lt-color-green);
+  --color-cyan: var(--lt-color-cyan);
+  --color-blue: var(--lt-color-blue);
+  --color-purple: var(--lt-color-purple);
+  --color-pink: var(--lt-color-pink);
+  --color-brown: var(--lt-color-brown);
+}
+body.theme-dark {
+  --color-red: var(--dt-color-red);
+  --color-orange: var(--dt-color-orange);
+  --color-yellow: var(--dt-color-yellow);
+  --color-green: var(--dt-color-green);
+  --color-cyan: var(--dt-color-cyan);
+  --color-blue: var(--dt-color-blue);
+  --color-purple: var(--dt-color-purple);
+  --color-pink: var(--dt-color-pink);
+  --color-brown: var(--dt-color-brown);
+}
+.setting-item[data-id="light-theme-color-swatches"] .setting-item-control,
+.setting-item[data-id="dark-theme-color-swatches"] .setting-item-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.setting-item[data-id="light-theme-color-swatches"] .setting-item-control::before {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 20px;
+  flex-shrink: 0;
+  border-radius: var(--radius-s, 4px);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+  background: linear-gradient(to right,
+    var(--lt-color-red) 0%, var(--lt-color-red) 11.11%,
+    var(--lt-color-orange) 11.11%, var(--lt-color-orange) 22.22%,
+    var(--lt-color-yellow) 22.22%, var(--lt-color-yellow) 33.33%,
+    var(--lt-color-green) 33.33%, var(--lt-color-green) 44.44%,
+    var(--lt-color-cyan) 44.44%, var(--lt-color-cyan) 55.56%,
+    var(--lt-color-blue) 55.56%, var(--lt-color-blue) 66.67%,
+    var(--lt-color-purple) 66.67%, var(--lt-color-purple) 77.78%,
+    var(--lt-color-pink) 77.78%, var(--lt-color-pink) 88.89%,
+    var(--lt-color-brown) 88.89%, var(--lt-color-brown) 100%
+  );
+}
+.setting-item[data-id="dark-theme-color-swatches"] .setting-item-control::before {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 20px;
+  flex-shrink: 0;
+  border-radius: var(--radius-s, 4px);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+  background: linear-gradient(to right,
+    var(--dt-color-red) 0%, var(--dt-color-red) 11.11%,
+    var(--dt-color-orange) 11.11%, var(--dt-color-orange) 22.22%,
+    var(--dt-color-yellow) 22.22%, var(--dt-color-yellow) 33.33%,
+    var(--dt-color-green) 33.33%, var(--dt-color-green) 44.44%,
+    var(--dt-color-cyan) 44.44%, var(--dt-color-cyan) 55.56%,
+    var(--dt-color-blue) 55.56%, var(--dt-color-blue) 66.67%,
+    var(--dt-color-purple) 66.67%, var(--dt-color-purple) 77.78%,
+    var(--dt-color-pink) 77.78%, var(--dt-color-pink) 88.89%,
+    var(--dt-color-brown) 88.89%, var(--dt-color-brown) 100%
+  );
+}

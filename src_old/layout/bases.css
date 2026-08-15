@@ -27,7 +27,7 @@ body {
     /* --metadata-input-padding: 20px 8px; */
     --bases-table-font-size: var(--font-ui-medium);
     --bases-cards-radius: var(--touch-radius-xs);
-    --bases-cards-corner-shape: var(--corner-shape);
+    --bases-cards-corner-shape: var(--bb-corner-shape);
 }
 
 

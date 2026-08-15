@@ -9,7 +9,7 @@
 
 .is-tablet .workspace-drawer {
     border-radius: var(--touch-radius-xl) !important;
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     border: 2px solid var(--background-modifier-border-focus) !important;
 }
 
@@ -52,7 +52,7 @@ body.is-mobile, .body.is-phone {
 /* workspace tab dropdowns */
 .workspace-drawer-tab-options-list {
     border-radius: calc(var(--button-radius) + 8px) !important;
-    corner-shape: var(--corner-shape) !important;
+    corner-shape: var(--bb-corner-shape) !important;
 
     /* padding: 10px 10px !important;
     padding-right: 0px !important; */

@@ -8,7 +8,7 @@ body {
 /* tabs: close button adjustment */
 .workspace-tab-header .workspace-tab-header-inner-close-button {
   border-radius: var(--button-radius) !important;
-  corner-shape: var(--corner-shape);
+  corner-shape: var(--bb-corner-shape);
 }
 
 

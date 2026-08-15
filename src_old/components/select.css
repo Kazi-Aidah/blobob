@@ -12,7 +12,7 @@
 
 /*   align-items: center; */
 
-/*   corner-shape: var(--corner-shape); */
+/*   corner-shape: var(--bb-corner-shape); */
 
 /* } */
 
@@ -24,7 +24,7 @@
 
 /*    border-radius: 0px 0px 10px 10px; */
 
-/*    corner-shape: var(--corner-shape) !important; */
+/*    corner-shape: var(--bb-corner-shape) !important; */
 
 /* } */
 
@@ -56,7 +56,7 @@ select {
   line-height: 1.5;
   display: flex;
   align-items: center;
-  corner-shape: var(--corner-shape);
+  corner-shape: var(--bb-corner-shape);
   transition: background-color 0.2s ease, 
               all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
         
@@ -85,7 +85,7 @@ select:open:hover {
   appearance: base-select !important;
   color: var(--background-modifier-border-focus);
   border-radius: var(--button-radius);
-  corner-shape: var(--corner-shape) !important;
+  corner-shape: var(--bb-corner-shape) !important;
   margin-top: 4px;
   margin-bottom: 4px;
   background-color: var(--dropdown-background-hover);
@@ -109,7 +109,7 @@ select option {
   height: 30px;
   margin: 4px;
   border-radius: calc(var(--button-radius) - 2px);
-  corner-shape: var(--corner-shape) !important;
+  corner-shape: var(--bb-corner-shape) !important;
   color: var(--text-normal);
   background-color: var(--dropdown-background-hover) !important;
   transition: all 0.15s ease;

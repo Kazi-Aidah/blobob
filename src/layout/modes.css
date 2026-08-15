@@ -1,0 +1,108 @@
+/* Shows Mode Icons */
+.display-current-mode {
+    .view-actions svg.lucide-book-open > *,
+    .view-actions svg.lucide-edit-3 > * {
+    display: none !important;
+    }
+    .view-actions svg.lucide-book-open,
+    .view-actions svg.lucide-edit-3 {
+    -webkit-mask-position: 50% 50%;
+    -webkit-mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    background-color: currentColor !important;
+    }
+    .view-actions svg.lucide-book-open {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 7v14'/%3E%3Cpath d='M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z'/%3E%3C/svg%3E");
+    }
+    .view-actions svg.lucide-edit-3 {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M13 21h8'/%3E%3Cpath d='M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z'/%3E%3C/svg%3E");
+    }
+    /* When ON → show current mode icon */
+    .workspace-leaf-content[data-mode="source"] .view-actions svg.lucide-book-open {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M13 21h8'/%3E%3Cpath d='M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z'/%3E%3C/svg%3E");
+    }
+    .workspace-leaf-content[data-mode="preview"] .view-actions svg.lucide-edit-3 {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 7v14'/%3E%3Cpath d='M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z'/%3E%3C/svg%3E");
+    }
+    /* When OFF → defaults above already show opposite icons */
+    .view-actions .clickable-icon svg {
+    color: var(--icon-color);
+    }
+    .view-actions .clickable-icon:hover svg {
+    color: var(--icon-color-hover);
+    }
+}
+
+
+/* Shows Mode Labels */
+.display-mode-label {
+    button.view-action[aria-label*="Current view:"]::after {
+        content: attr(aria-label);
+        font-size: var(--font-ui-small);
+        font-weight: var(--font-medium);
+        white-space: nowrap;
+    }
+
+    /* When display-current-mode is ON → show current mode name */
+    &.display-current-mode button.view-action[aria-label*="editing"]::after {
+        content: "Editing";
+    }
+    &.display-current-mode button.view-action[aria-label*="reading"]::after {
+        content: "Reading";
+    }
+
+    /* When display-current-mode is OFF → show opposite mode name */
+    &:not(.display-current-mode) button.view-action[aria-label*="editing"]::after {
+        content: "Reading";
+    }
+    &:not(.display-current-mode) button.view-action[aria-label*="reading"]::after {
+        content: "Editing";
+    }
+
+    /* Button padding & border (only when label is enabled) */
+    button.view-action[aria-label*="Current view:"] {
+        padding: 4px 12px 4px 8px;
+        gap: 6px;
+        border: 2px solid var(--bb-border-color);
+        background-color: var(--bb-elements-bg);
+    }
+}
+
+/* bouncy button animation */
+button.view-action[aria-label*="Current view:"] {
+    border-radius: var(--button-radius);
+    padding: 7px 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 6px;
+    transform: scale(1);
+
+    &:hover {
+        transform: scale(1.03);
+        padding: 6px 12px;
+    }
+
+    &:active {
+        transform: scale(0.95);
+        padding: 8px 16px;
+    }
+}
+
+.color-mode-button {
+    button.view-action[aria-label*="Current view:"] {
+        background-color: var(--interactive-accent) !important;
+        color: var(--text-on-accent-inverted) !important;
+        --icon-color: var(--text-on-accent-inverted) !important;
+        border-radius: var(--button-radius);
+        border: none;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-left: 6px;
+    }
+
+    button.view-action[aria-label*="Current view:"] svg {
+        color: var(--text-on-accent-inverted) !important;
+    }
+}

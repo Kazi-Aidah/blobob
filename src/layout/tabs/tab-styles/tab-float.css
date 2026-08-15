@@ -9,7 +9,7 @@ body.tab-float {
 
   .workspace-leaf-content {
     border-radius: var(--touch-radius-s);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
   }
 
   .workspace-tab-header-container {
@@ -22,7 +22,7 @@ body.tab-float {
     margin: 6px;
     border: var(--border-width) solid var(--border-color);
     border-radius: calc(var(--modal-radius) + 5px);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
   }
 
   .workspace-tabs {
@@ -76,7 +76,7 @@ body.tab-float {
   .workspace-tab-header-container .workspace-tab-header {
     --tab-curve: 0px;
     border-radius: var(--tab-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     filter: brightness(1);
     margin-top: 1px;
     margin-bottom: 8px;
@@ -97,7 +97,7 @@ body.tab-float {
     padding: 2px 3px;
     transform: translateY(1px) scale(1);
     border-radius: var(--tab-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     transition: background-color 0.2s ease, box-shadow 0.2s ease,
                 transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.4),
                 padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
@@ -146,7 +146,7 @@ body.tab-float.apply-to-sidebar {
   .mod-left-split .workspace-tab-header,
   .mod-right-split .workspace-tab-header {
     border-radius: var(--tab-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     margin-top: 2px !important;
     margin-left: 0;
     margin-right: 0;
@@ -163,7 +163,7 @@ body.tab-float.apply-to-sidebar {
     padding: 2px 3px;
     transform: translateY(0px) scale(1) !important;
     border-radius: var(--tab-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     background-color: var(--bb-elements-bg) !important;
     box-shadow: 0 0 0 var(--border-width) var(--border-color);
     transition: background-color 0.2s ease, box-shadow 0.2s ease,

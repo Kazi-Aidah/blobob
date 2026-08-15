@@ -1,10 +1,25 @@
 /* setting items */
+.setting-item {
+    align-items: center;
+}
 
 /* .setting-item, .setting-items {
     --setting-items-radius: calc(var(--button-radius) + 8px);
     border-radius: calc(var(--button-radius) + 8px) !important;
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
 } */
+
+.vertical-tab-nav-item-title {
+	color: var(--text-normal);
+}
+.theme-light .vertical-tab-nav-item.is-active .vertical-tab-nav-item-title,
+.theme-light .vertical-tab-nav-item.is-active svg {
+	color: var(--text-on-accent) !important;
+}
+.theme-dark .vertical-tab-nav-item.is-active .vertical-tab-nav-item-title,
+.theme-dark .vertical-tab-nav-item.is-active svg  {
+	color: var(--text-on-accent-inverted) !important;
+}
 
 /* vertical settings tabs */
 .horizontal-tab-nav-item.is-active .vertical-tab-nav-item-icon,
@@ -62,5 +77,5 @@ body.is-phone .vertical-tab-nav-item {
 
 .vertical-tab-group-items {
     border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
 }

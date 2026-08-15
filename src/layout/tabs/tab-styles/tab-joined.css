@@ -40,7 +40,7 @@ body.tab-joined .mod-root {
     padding: 2px 2px 4px;
     padding-top: 0 !important;
     border-radius: var(--button-radius) var(--button-radius) 0 0;
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
                 padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1), margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
   }
@@ -72,13 +72,13 @@ body.tab-joined .mod-root {
     background-color: var(--bb-workspace-bg-alt);
     transition: all calc(var(--animation-duration) * 1.2) ease-out;
     border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
   }
 
   .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:active {
     background-color: var(--bb-editor-bg);
     border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     padding: 10px 6px;
     padding-top: -10px;
     transform: scale(0.9) translateY(4px);
@@ -90,7 +90,7 @@ body.tab-joined .mod-root {
     border: var(--border-width) solid var(--border-color);
     transform: scale(0.8) translateY(4px) !important;
     border-radius: calc(var(--button-radius) + 2px) !important;
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
   }
 
   .workspace-split.mod-vertical.mod-root .workspace-tab-header:not(.is-active, :has(.mod-pinned)) {
@@ -115,7 +115,7 @@ body.tab-joined.apply-to-sidebar {
     margin: 5px 5px -10px;
     padding: 2px 2px 4px;
     border-radius: var(--button-radius) var(--button-radius) 0 0;
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     border: var(--border-width) solid var(--border-color);
     background-color: var(--bb-workspace-bg);
     transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
@@ -149,14 +149,14 @@ body.tab-joined.apply-to-sidebar {
     background-color: var(--bb-workspace-bg-alt);
     transition: all calc(var(--animation-duration) * 1.2) ease-out;
     border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
   }
 
   .mod-left-split .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:active,
   .mod-right-split .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:active {
     background-color: var(--bb-editor-bg);
     border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     padding: 10px 6px;
     padding-top: -10px;
     transform: scale(0.9) translateY(4px);
@@ -169,7 +169,7 @@ body.tab-joined.apply-to-sidebar {
     border: var(--border-width) solid var(--border-color);
     transform: scale(0.8) translateY(4px) !important;
     border-radius: calc(var(--button-radius) + 2px) !important;
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     z-index: 1001 !important;
   }
 }

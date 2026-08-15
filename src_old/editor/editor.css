@@ -40,7 +40,7 @@ body.active-line-highlight .cm-line.cm-active:not(.cm-gutterElement,.HyperMD-cod
   content: "";
   z-index: -2;
   border-radius: var(--button-radius);
-  corner-shape: var(--corner-shape);
+  corner-shape: var(--bb-corner-shape);
 }
 
 body.active-line-highlight .view-content>.markdown-source-view .cm-line.cm-active:is(.HyperMD-codeblock-bg,.HyperMD-callout,.HyperMD-quote) {
@@ -55,7 +55,7 @@ body.active-line-highlight-beyond .cm-line.cm-active:not(.cm-gutterElement,.Hype
   content: "";
   z-index: -2;
   border-radius: var(--button-radius);
-  corner-shape: var(--corner-shape);
+  corner-shape: var(--bb-corner-shape);
 }
 
 body.active-line-highlight-beyond .view-content>.markdown-source-view .cm-line.cm-active:is(.HyperMD-codeblock-bg,.HyperMD-callout,.HyperMD-quote) {
@@ -71,7 +71,7 @@ body.active-line-highlight-focused .cm-line.cm-active:not(.cm-gutterElement,.Hyp
   content: "";
   z-index: -2;
   border-radius: var(--button-radius);
-  corner-shape: var(--corner-shape);
+  corner-shape: var(--bb-corner-shape);
 }
 
 body.active-line-highlight-focused .view-content>.markdown-source-view .cm-line.cm-active:is(.HyperMD-codeblock-bg,.HyperMD-callout,.HyperMD-quote) {

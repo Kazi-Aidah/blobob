@@ -3,7 +3,7 @@
 /* .setting-item, .setting-items {
     --setting-items-radius: calc(var(--button-radius) + 8px);
     border-radius: calc(var(--button-radius) + 8px) !important;
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
 } */
 
 /* vertical settings tabs */
@@ -62,5 +62,5 @@ body.is-phone .vertical-tab-nav-item {
 
 .vertical-tab-group-items {
     border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
 }

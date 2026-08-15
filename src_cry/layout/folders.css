@@ -13,7 +13,7 @@
 /* ----- Base Style ----- */
 .nav-folder-title {
   border-radius: var(--nav-folder-radius) !important;
-  corner-shape: var(--corner-shape) !important;
+  corner-shape: var(--bb-corner-shape) !important;
   margin-bottom: 0 !important;
 
   padding-top: 10px !important;
@@ -58,7 +58,7 @@ body:not(.disable-foldy-basic-bordered) {
   /* --nav-folder-radius: var(--button-radius); */
 
   border-radius: var(--nav-folder-radius) !important;
-  corner-shape: var(--corner-shape) !important;
+  corner-shape: var(--bb-corner-shape) !important;
   margin-bottom: 0 !important;
   border-bottom: 0 solid var(--background-modifier-border);
 
@@ -69,7 +69,7 @@ body:not(.disable-foldy-basic-bordered) {
   --nav-folder-radius: var(--button-radius);
   
   border-radius: var(--nav-folder-radius) !important;
-  corner-shape: var(--corner-shape) !important;
+  corner-shape: var(--bb-corner-shape) !important;
 
   transition: border-radius 0.2s ease;
 }
@@ -78,7 +78,7 @@ body:not(.disable-foldy-basic-bordered) {
   --nav-folder-radius: calc(var(--button-radius) - 4px);
   
   border-radius: var(--nav-folder-radius) !important;
-  corner-shape: var(--corner-shape) !important;
+  corner-shape: var(--bb-corner-shape) !important;
 
   transition: border-radius 0.2s ease;
 }

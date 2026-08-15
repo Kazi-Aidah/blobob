@@ -184,6 +184,23 @@
   --text-f: #8b7aaa;
 }
 
+.theme-dark.twilight {
+  --bb-editor-bg-base: #0f0a1c;
+  --bb-elements-bg-base: #1c1430;
+  --bb-workspace-bg-base: #2e2249;
+
+  --bb-tiptips-bg: #241a3d;
+  --bb-tiptips-hover-bg: #362a56;
+
+  --bb-border-color: #4a3968;
+  --bb-border-hover-color: #5c4980;
+  --bb-border-focused-color: #6e5c9c;
+
+  --txt-n: #ede6fa;
+  --txt-m: #b8a3e0;
+  --text-f: #8f7cba;
+}
+
 .theme-dark.violet-dream {
   --bb-editor-bg-base: #1e0f33;
   --bb-elements-bg-base: #341c5c;

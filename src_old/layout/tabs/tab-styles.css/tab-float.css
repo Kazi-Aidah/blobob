@@ -4,7 +4,7 @@
 
   .workspace-leaf-content {
     border-radius: var(--touch-radius-s);
-    corner-shape: var(--corner-shape)
+    corner-shape: var(--bb-corner-shape)
   }
 
   /* tab close button */
@@ -20,7 +20,7 @@
   .workspace-tab-header-container .workspace-tab-header {
     --tab-curve: 0px;
     border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     filter: brightness(1);
     margin-top: 1px;
     margin-bottom: 8px;
@@ -83,7 +83,7 @@
   .workspace-split.mod-left-split .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover,
   .workspace-split.mod-right-split .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover {
     border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     height: 100%;
   }
 
@@ -97,7 +97,7 @@
   .workspace-split.mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active,
   .workspace-split.mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active {
     border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     background-color: var(--background-primary-alt) !important;
   }
 
@@ -112,7 +112,7 @@
     margin: 6px;
     border: 2px solid var(--tab-float-border-color);
     border-radius: var(--modal-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
   }
 
   .workspace-tabs {

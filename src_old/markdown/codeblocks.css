@@ -7,7 +7,7 @@
     background-color: var(--code-background);
     border-radius: var(--touch-radius-s);
     border: 3px solid var(--background-modifier-border);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
 }
 
 .markdown-rendered code {
@@ -31,7 +31,7 @@
     border-top: 3px solid var(--background-modifier-border);
     border-top-left-radius: var(--touch-radius-s);
     border-top-right-radius: var(--touch-radius-s);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
 }
 
 /* bottom border + radius on the last line */
@@ -39,7 +39,7 @@
     border-bottom: 3px solid var(--background-modifier-border);
     border-bottom-left-radius: var(--touch-radius-s);
     border-bottom-right-radius: var(--touch-radius-s);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
 }
 
 

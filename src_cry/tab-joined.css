@@ -38,7 +38,7 @@ body:not(.tab-none, .tab-float, .tab-lined, .tab-contained) {
     border: 2px solid var(--background-modifier-border);
     transform: scale(0.8) !important;
     border-radius: calc(var(--button-radius) + 2px) !important;
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
   }
 
   /* tab actually active (root, left, right) */
@@ -48,7 +48,7 @@ body:not(.tab-none, .tab-float, .tab-lined, .tab-contained) {
     margin: 5px 5px -10px;
     padding: 2px 2px 4px;
     border-radius: var(--button-radius) var(--button-radius) 0 0;
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     border: 1.5px solid var(--background-modifier-border);
     transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
                 padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1), margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
@@ -94,13 +94,13 @@ body:not(.tab-none, .tab-float, .tab-lined, .tab-contained) {
     background-color: var(--background-primary-alt);
     transition: all calc(var(--animation-duration) * 1.2) ease-out;
     border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
   }
 
   .workspace-tab-header-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:active {
     background-color: var(--background-primary);
     border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     padding: 10px 6px;
     padding-top: -10px;
     transform: scale(0.9) translateY(4px);

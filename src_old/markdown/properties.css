@@ -1,6 +1,6 @@
 .metadata-container {
     border-radius: var(--touch-radius-s);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
 }
 
 /* toggle: dim unless hovered */

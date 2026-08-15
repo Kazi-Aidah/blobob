@@ -98,13 +98,13 @@
 
 .suggestion-item {
     border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     transition: all 0.2s ease;
 }
 
 .suggestion-item.is-selected {
     border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     color: var(--color-accent-1);
     background-color: hsl(var(--interactive-accent-hsl), 0.2) !important;
 }

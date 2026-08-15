@@ -1,0 +1,183 @@
+/* CALLOUTS */
+body {
+  --callout-border-width: var(--border-width);
+  --callout-border-opacity: 0.25;
+  /* --callout-padding: var(--size-4-3) var(--size-4-3) var(--size-4-3) var(--size-4-6); */
+  --callout-padding: 0px;
+  --callout-radius: var(--button-radius);
+  --callout-blend-mode: var(--highlight-mix-blend-mode);
+  --callout-title-color: inherit;
+  --callout-title-padding: 0;
+  --callout-title-size: inherit;
+  --callout-title-weight: calc(var(--font-weight) + var(--bold-modifier));
+  --callout-content-padding: 0;
+  --callout-content-background: transparent;
+
+  --callout-bug: var(--color-red);
+  --callout-default: var(--color-blue);
+  --callout-error: var(--color-red);
+  --callout-example: var(--color-purple);
+  --callout-fail: var(--color-red);
+  --callout-important: var(--color-cyan);
+  --callout-info: var(--color-blue);
+  --callout-question: var(--color-orange);
+  --callout-success: var(--color-green);
+  --callout-summary: var(--color-cyan);
+  --callout-tip: var(--color-cyan);
+  --callout-todo: var(--color-blue);
+  --callout-warning: var(--color-orange);
+  --callout-quote: #9e9e9e;
+
+  /* blockquote vars */
+  --blockquote-border-thickness: 3px;
+  --blockquote-border-color: var(--interactive-accent);
+  --blockquote-font-style: normal;
+  --blockquote-color: var(--text-accent);
+  --blockquote-background-color: var(--bb-elements-bg);
+
+  /* code vars */
+  --code-white-space: pre-wrap;
+  --code-border-width: var(--border-width);
+  --code-border-color: var(--background-modifier-border);
+  --code-bracket-background: var(--background-modifier-hover);
+  --code-radius: var(--button-radius);
+  --code-size: var(--font-smaller);
+  --code-background: var(--background-primary-alt);
+}
+
+.callout {
+    corner-shape: var(--bb-corner-shape);
+}
+
+.callout-title {
+    gap: 10px;
+    corner-shape: var(--bb-corner-shape);
+
+    border-bottom: 2px solid color-mix(
+        in srgb,
+        var(--callout-color) calc(var(--callout-border-opacity) * 100%),
+        transparent
+    );
+}
+.callout-title, .callout-content {
+    padding: 12px 20px;
+}
+.callout p, h1, h2, h3, h4, h5, h6 {
+    margin: 0px !important;
+    padding-bottom: 4px;
+}
+.callout h1, h2, h3, h4, h5, h6 {
+    padding-top: 12px;
+}
+.callout h1 {
+    padding-bottom: 18px;
+}
+
+.c-center-title 
+.callout-title {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.c-hide-arrow
+.callout-fold {
+    display: none;
+}
+
+.callout img {
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+
+/* BLOCKQUOTES */
+:not(.callout) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote, blockquote {
+    background-color: var(--bb-elements-bg);
+    /* border: 2px solid var(--bb-border-color); */
+    border-left: 0px;
+    padding: 4px;
+}
+
+blockquote {
+    padding: 8px 16px !important;
+}
+.callout blockquote p {
+    padding: 0px !important;
+}
+
+/* .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+    padding: 2px;
+} */
+
+
+
+
+
+/* ===== CALLOUT ANIMATION ===== */
+
+.callout {
+    transform-origin: top;
+    transition:
+        transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 2.5),
+        max-height 0.5s ease,
+        padding 0.3s ease,
+        opacity 0.3s ease;
+    overflow: hidden;
+    opacity: 1;
+}
+
+/* OPEN STATE */
+.callout:not(.is-collapsed) {
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+/* CLOSE STATE */
+.callout.is-collapsed {
+    transform: scaleY(0.95);
+    opacity: 1;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* OPEN SETTLE */
+@keyframes callout-open-settle {
+    0% {
+        transform: scaleY(0.9);
+    }
+
+    60% {
+        transform: scaleY(1.03);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+/* CLOSE BOUNCE */
+@keyframes callout-close-bounce {
+    0% {
+        transform: scaleY(1);
+    }
+
+    40% {
+        transform: scaleY(1.05);
+    }
+
+    100% {
+        transform: scaleY(0.95);
+    }
+}
+
+.callout-title {
+    transition: border-bottom-width calc(var(--animation-duration) * 0.5) ease;
+    gap: 10px;
+}
+
+.callout.is-collapsed > .callout-title {
+    border-bottom-width: 0;
+}
+

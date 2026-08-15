@@ -1,3 +1,5 @@
+
+
 /* hide arrow */
 .setting-item-heading[data-level="1"] .style-settings-collapse-indicator,
 .setting-item-heading[data-level="2"] .style-settings-collapse-indicator,
@@ -17,7 +19,7 @@
 /* --- style setting ui elements --- */
 .style-settings-heading {
     border-radius: var(--touch-radius-m);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     background-color: var(--background-primary-alt);
     padding: 10px 20px;
     border: 2px solid var(--background-modifier-border);
@@ -50,12 +52,18 @@
     background-color: var(--background-secondary);
 
     /* border-left: 6px solid var(--interactive-accent); */
-    border-radius: var(--touch-radius-m);
-    corner-shape: var(--corner-shape);
+    border-radius: var(--touch-radius-s);
+    corner-shape: var(--bb-corner-shape);
     padding: 8px 16px;
     margin-left: 16px;
     width: calc(100% - 16px);
     filter: brightness(1);
+}
+
+.setting-item-heading[data-level="3"] {
+    background-color: var(--background-secondary);
+    border-radius: var(--touch-radius-xs) !important;
+    corner-shape: var(--bb-corner-shape);
 }
 
 /* heading pretext */
@@ -93,7 +101,7 @@
     background-color: var(--background-primary);
     border-bottom: 2px dotted var(--background-modifier-border);
     border-radius: var(--touch-radius-l);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     padding: 6px 12px;
     margin-left: 32px;
     width: calc(100% - 32px);
@@ -185,7 +193,7 @@ button.pcr-button {
 /* PCR */
 .pickr .pcr-button, .pcr-button::before, .pcr-button::after {
     border-radius: var(--button-radius) !important;
-    corner-shape: var(--corner-shape) !important;
+    corner-shape: var(--bb-corner-shape) !important;
     min-width: 36px;
     height: 36px;
     box-shadow: none !important;
@@ -196,7 +204,7 @@ button.pcr-button {
     background: var(--background-primary);
     border: 3px solid var(--background-modifier-border);
     border-radius: calc(var(--button-radius) * 1.4) !important;
-    corner-shape: var(--corner-shape) !important;
+    corner-shape: var(--bb-corner-shape) !important;
     min-width: 250px;
 }
 
@@ -218,12 +226,12 @@ button.pcr-button {
     border-radius: calc(var(--button-radius) * 1.4) !important;
     border-bottom-left-radius: 0px !important;
     border-bottom-right-radius: 0px !important;
-    corner-shape: var(--corner-shape) !important;
+    corner-shape: var(--bb-corner-shape) !important;
 
 }
 .pcr-type, .pcr-cancel, .pcr-save, .pcr-result, .pcr-swatches button {
     border-radius: calc(var(--button-radius) * 0.8) !important;
-    corner-shape: var(--corner-shape) !important;
+    corner-shape: var(--bb-corner-shape) !important;
 }
 
 /* normal button */
@@ -279,7 +287,7 @@ body:is(.is-mobile):not(.is-tablet) .themed-color-wrapper {
 
 .themed-color-wrapper, .theme-light, .theme-dark {
     border-radius: var(--touch-radius-s) !important;
-    corner-shape: var(--corner-shape) !important;
+    corner-shape: var(--bb-corner-shape) !important;
 }
 
 .themed-color-wrapper > div + div {

@@ -7,13 +7,13 @@
 
 .is-mobile .view-actions {
     border-radius: var(--button-radius) !important;
-    corner-shape: var(--corner-shape) !important;
+    corner-shape: var(--bb-corner-shape) !important;
     border: 2px solid var(--background-modifier-border-focus) !important;
 }
 
 .is-mobile .clickable-icon {
     border-radius: var(--button-radius) !important;
-    corner-shape: var(--corner-shape) !important;
+    corner-shape: var(--bb-corner-shape) !important;
 }
 
 .is-mobile .view-action.clickable-icon {
@@ -103,13 +103,13 @@
     margin: 0;
     padding: 0;
     border-radius: calc(var(--button-radius) + 4px) !important;
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
 }
 
 .mobile-toolbar-options-list {
     background-color: var(--interactive-normal) !important;
     border-radius: calc(var(--button-radius) + 4px) !important;
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     border: 2px solid var(--background-modifier-border-focus);
 }
 

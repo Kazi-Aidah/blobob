@@ -23,7 +23,7 @@ body {
     --modal-radius: 8px;
     --nav-item-radius: 4px;
     --tag-radius: 4px;
-    --corner-shape: initial;
+    --bb-corner-shape: initial;
     --tab-sidebar-radius: clamp(8px, var(--button-radius, 8px), 20px);
 }
 
@@ -86,7 +86,7 @@ body.sharp-tiptip {
 
 /* CORNER SHAPES */
 body.squircle-tiptip {
-    --corner-shape: squircle;
+    --bb-corner-shape: squircle;
     --button-radius: 12px;
     --input-radius: 12px;
     --modal-radius: 18px;
@@ -98,7 +98,7 @@ body.squircle-tiptip {
 }
 
 body.extra-squircle-tiptip {
-    --corner-shape: squircle;
+    --bb-corner-shape: squircle;
     --button-radius: 18px;
     --input-radius: 18px;
     --modal-radius: 24px;
@@ -112,7 +112,7 @@ body.extra-squircle-tiptip {
 }
 
 body.scoop-tiptip {
-    --corner-shape: scoop;
+    --bb-corner-shape: scoop;
     --button-radius: 8px;
     --input-radius: 8px;
     --modal-radius: 12px;
@@ -126,7 +126,7 @@ body.scoop-tiptip {
 }
 
 body.hexagon-tiptip {
-    --corner-shape: bevel;
+    --bb-corner-shape: bevel;
     --button-radius: 6px;
     --input-radius: 6px;
     --modal-radius: 10px;
@@ -140,7 +140,7 @@ body.hexagon-tiptip {
 }
 
 body.sock-tiptip {
-    --corner-shape: initial;
+    --bb-corner-shape: initial;
     --button-radius: 20%;
     --input-radius: 30%;
     --modal-radius: 4%;
@@ -154,7 +154,7 @@ body.sock-tiptip {
 }
 
 body.eye-tiptip {
-    --corner-shape: initial;
+    --bb-corner-shape: initial;
     --button-radius: 40% / 60%;
     --input-radius: 40% / 60%;
     --modal-radius: 20px / 30px;
@@ -183,7 +183,7 @@ textarea,
 select,
 .tag {
     border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
 }
 
 .modal,
@@ -194,5 +194,5 @@ select,
 .kanban-plugin__lane,
 .metadata-container {
     border-radius: var(--modal-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
 }

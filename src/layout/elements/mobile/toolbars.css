@@ -37,7 +37,7 @@ body:is(.is-mobile):not(.is-tablet) .view-header {
 .is-mobile .view-actions {
     background: var(--bb-elements-bg);
     border-radius: var(--button-radius) !important;
-    corner-shape: var(--corner-shape) !important;
+    corner-shape: var(--bb-corner-shape) !important;
     gap: 0px;
     padding: 0 4px !important;
     box-shadow: none !important;
@@ -53,7 +53,7 @@ body:is(.is-mobile):not(.is-tablet) .view-header {
 
 .is-mobile .clickable-icon {
     border-radius: var(--button-radius) !important;
-    corner-shape: var(--corner-shape) !important;
+    corner-shape: var(--bb-corner-shape) !important;
 }
 
 .is-mobile .view-action.clickable-icon {
@@ -97,11 +97,17 @@ body:is(.is-mobile):not(.is-tablet) .view-header {
 }
 
 /* NAVBAR */
-body:is(.is-mobile):not(.disable-wide-mobile-nav) .mobile-navbar {
-    background-color: var(--background-secondary-alt);
+body:not(.disable-wide-mobile-nav) .mobile-navbar {
+    min-width: 100% !important;
+    width: 100% !important;
     border-radius: 0 !important;
     corner-shape: sharp !important;
-    min-width: 100%;
+}
+
+body:is(.is-mobile) .mobile-navbar {
+    background-color: var(--background-secondary-alt);
+    border-radius: var(--touch-radius-s);
+    corner-shape: var(--bb-corner-shape);
     bottom: 0% !important;
     padding: 0 10px;
 }
@@ -116,7 +122,7 @@ body:is(.is-mobile):not(.disable-wide-mobile-nav) .mobile-navbar {
     bottom: 0;
     margin: 0;
     border-radius: calc(var(--button-radius) + 4px) !important;
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     background-color: var(--bb-elements-bg) !important;
     padding-bottom: 4px !important;
 }
@@ -124,7 +130,7 @@ body:is(.is-mobile):not(.disable-wide-mobile-nav) .mobile-navbar {
 .mobile-toolbar-options-list {
     background-color: var(--bb-elements-bg) !important;
     border-radius: calc(var(--button-radius) + 4px) !important;
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
 }
 
 .is-tablet .mobile-toolbar {
@@ -140,5 +146,43 @@ body:is(.is-mobile):not(.disable-wide-mobile-nav) .mobile-navbar {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+}
+
+
+
+/* mobile: hide buttons from wide navbar */
+.bb-mobile-hide-arrows {
+    .mobile-navbar-actions > .mobile-navbar-action:nth-child(1),
+    .mobile-navbar-actions > .mobile-navbar-action:nth-child(2) {
+        display: none;
+    }
+}
+
+.bb-mobile-hide-searchnote {
+    .mobile-navbar-actions > .mobile-navbar-action:nth-child(3) {
+        display: none;
+    }
+}
+
+.bb-mobile-hide-newtab {
+    .mobile-navbar-actions > .mobile-navbar-action:nth-child(4) {
+        display: none;
+    }
+}
+
+.bb-mobile-hide-tabs {
+    .mobile-navbar-actions > .mobile-navbar-action:nth-child(5) {
+        display: none;
+    }
+}
+
+/* hide toolbar */
+.bb-hide-toolbar {
+    .mobile-toolbar,
+    .mobile-toolbar-spacer,
+    .mobile-toolbar-options-list,
+    .mobile-toolbar-options-list-container {
+        display: none !important;
     }
 }

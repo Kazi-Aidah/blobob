@@ -6,7 +6,7 @@
 
 img {
     border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
 }
 
 .popover .markdown-embed-link {

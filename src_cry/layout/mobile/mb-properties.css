@@ -28,7 +28,7 @@
 .workspace-leaf-content[data-type="file-properties"] .metadata-content {
     background-color: var(--background-secondary-alt);
     border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
     padding: 8px;
 }
 
@@ -116,7 +116,7 @@
     padding: 6px 8px;
     
     border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
 
     transition: 0.2s ease background-color;
 }
@@ -155,7 +155,7 @@
     justify-content: center;
     
     border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
 
     transition: 0.2s ease background-color;
 }
@@ -189,7 +189,7 @@
     justify-content: center;
     
     border-radius: var(--button-radius);
-    corner-shape: var(--corner-shape);
+    corner-shape: var(--bb-corner-shape);
 
     transition: 0.2s ease background-color;
 }
