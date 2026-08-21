@@ -1,0 +1,39 @@
+/* --- image captions support --- */
+body.image-captions-styling {
+.image-captions-figure, .theme-dark .image-captions-caption {
+    background-color: var(--background-secondary-alt);
+    color: var(--text-normal);
+
+    /* box-shadow: 0px 5px 0px -1px var(--text-faint); */
+    margin-bottom: 2px;
+}
+
+.image-captions-caption {
+    background-color: var(--background-secondary-alt);
+    border-radius: 0 0 14px 14px;
+    padding-bottom: 8px;
+}
+
+.image-captions-figure {
+    border-radius: 12px 12px 0 0;
+}
+
+
+.image-captions-figure img {
+    border-radius: 8px !important;
+    transform: scale(0.99);
+    corner-shape: squircle !important;
+}
+
+/* .internal-embed.media-embed.image-embed, */
+.image-captions-figure, .image-captions-caption {
+    border: 2.5px solid var(--background-modifier-border);
+    corner-shape: squircle;
+}
+
+.image-captions-caption {
+    border: 2.5px solid var(--background-modifier-border);
+    border-top: none !important;
+    border-bottom: 6px solid var(--background-modifier-border) !important;
+}
+}

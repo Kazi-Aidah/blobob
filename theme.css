@@ -2327,7 +2327,7 @@ button animations: scale, shrink, tilt, bounce
 
 /* shrink butt */
 .button-shrink button,
-.button-shrink .clickable-icon {
+.button-shrink .clickable-icon:not(.input-right-decorator) {
     transition:
         all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2),
         background-color calc(var(--animation-duration) * 0.6667) ease;
@@ -2336,14 +2336,14 @@ button animations: scale, shrink, tilt, bounce
 }
 
 .button-shrink button:hover,
-.button-shrink .clickable-icon:hover {
+.button-shrink .clickable-icon:not(.input-right-decorator):hover {
     transform: scale(0.9);
     z-index: 1000;
 }
 
 .button-shrink button:active,
-.button-shrink .clickable-icon:active,
-.button-shrink .clickable-icon:focus-visible {
+.button-shrink .clickable-icon:not(.input-right-decorator):active,
+.button-shrink .clickable-icon:not(.input-right-decorator):focus-visible {
     transform: scale(0.7);
     opacity: 0.7;
     transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);
@@ -2971,6 +2971,14 @@ input[type="checkbox"]:checked:hover {
 }
 
 
+.is-tablet.is-mobile :not(.view-header) .clickable-icon {
+  background-color: var(--bb-tiptips-bg);
+  color: var(--text-faint);
+}
+
+.is-mobile .metadata-content {
+  width: 100% !important;
+}
 .is-mobile .menu {
     padding-bottom: 40px;
 }
@@ -3201,6 +3209,73 @@ input[type="checkbox"]:checked:hover {
 .mobile-tab-switcher-menubar {
     background-color: var(--bb-elements-bg);
 }
+.is-mobile:not(.is-tablet) .nav-buttons-container {
+  background: var(--bb-editor-bg) !important;
+  padding: 6px !important;
+}
+.is-mobile:not(.is-tablet) .workspace-leaf { /* under nav */
+  background-color: var(--bb-editor-bg) !important;
+}
+
+
+/* tab drawer */
+/* :: blend the workspace tab container drawer with bg */
+.workspace-drawer-active-tab-container {
+  background: var(--bb-workspace-bg);
+}
+.is-mobile .workspace-tab-header-inner {
+  background: var(--bb-workspace-bg);
+}
+.is-mobile .workspace-drawer-tab-options-list {
+  box-shadow: none;
+}
+
+
+.workspace-drawer-inner { /* bg */
+  background-color: var(--bb-editor-bg);
+}
+
+
+/* get rid of that gradient */
+.is-mobile .nav-buttons-container::after,
+.workspace-drawer .workspace-leaf-content::after {
+  background: transparent !important;
+}
+
+
+
+
+.workspace-drawer-tab-options-list {
+  background: var(--bb-workspace-bg);
+
+  corner-shape: var(--bb-corner-shape);
+  border-radius: var(--touch-radius-l);
+  overflow-y: hidden;
+
+  padding-left: var(--size-4-2);
+  padding-right: 2px;
+}
+
+.workspace-drawer-tab-container .workspace-tab-header-inner {
+  border-radius: var(--touch-radius-xxs);
+  corner-shape: var(--bb-corner-shape);
+}
+.workspace-drawer-tab-container .workspace-tab-header:not(.is-active) {
+  background: var(--bb-workspace-bg);
+  border-radius: var(--touch-radius-xxs);
+  corner-shape: var(--bb-corner-shape);
+}
+.workspace-drawer-tab-container .workspace-tab-header.is-active .workspace-tab-header-inner {
+  background: var(--bb-tiptips-hover-bg) !important;
+  border: 3px solid var(--bb-border-hover-color);
+}
+
+
+.is-tablet .workspace-drawer {
+  corner-shape: var(--bb-corner-shape);
+  border-radius: var(--touch-radius-l);
+}
+
 /* show title */
 body:is(.is-phone.show-inline-title):is(.bb-mobile-title-visible) .workspace-leaf-content[data-type="markdown"] .view-header-title-container {
     display: flex;
@@ -3229,6 +3304,7 @@ body:is(.is-mobile):not(.is-tablet) .view-header {
     background: var(--bb-elements-bg) !important;
     backdrop-filter: none !important;
     filter: none !important;
+    box-shadow: none !important;
 }
 
 .view-header svg,
@@ -3308,7 +3384,7 @@ body:not(.disable-wide-mobile-nav) .mobile-navbar {
 }
 
 body:is(.is-mobile) .mobile-navbar {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--bb-editor-bg);
     border-radius: var(--touch-radius-s);
     corner-shape: var(--bb-corner-shape);
     bottom: 0% !important;
@@ -3331,7 +3407,7 @@ body:is(.is-mobile) .mobile-navbar {
 }
 
 .mobile-toolbar-options-list {
-    background-color: var(--bb-elements-bg) !important;
+    /* background-color: var(--bb-elements-bg) !important; */
     border-radius: calc(var(--button-radius) + 4px) !important;
     corner-shape: var(--bb-corner-shape);
 }
@@ -3388,6 +3464,12 @@ body:is(.is-mobile) .mobile-navbar {
     .mobile-toolbar-options-list-container {
         display: none !important;
     }
+}
+
+
+
+.mobile-toolbar-options-list-container > html {
+  background: red !important;
 }
 /* toggle: center properties heading */
 .p-center-heading .metadata-container .metadata-properties-heading {
@@ -4278,7 +4360,7 @@ body {
 
 
 /* Shows Mode Labels */
-.display-mode-label {
+body:not(.is-mobile) .display-mode-label {
     button.view-action[aria-label*="Current view:"]::after {
         content: attr(aria-label);
         font-size: var(--font-ui-small);
@@ -4982,6 +5064,21 @@ body.tab-contained.apply-to-sidebar {
         transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1), background-color 0s ease;
     }
 }
+body.tab-float.scoop-tiptip {
+    --tab-curve: 10px;
+    --tab-radius: 6px;
+    --tab-inner-radius: 4px;
+    --tab-corner-shape: scoop;
+}
+
+body.tab-float.hexagon-tiptip {
+    --tab-curve: 10px;
+    --tab-radius: 6px;
+    --tab-inner-radius: 4px;
+    --tab-corner-shape: bevel;
+}
+
+
 body.tab-float {
   --system-status-background: var(--bb-editor-bg);
   --border-width: var(--bb-border-width);
@@ -5126,6 +5223,9 @@ body.tab-float {
   }
 }
 
+
+
+
 body.tab-float.apply-to-sidebar {
   .mod-left-split .workspace-tab-header,
   .mod-right-split .workspace-tab-header {
@@ -5174,11 +5274,15 @@ body.tab-float.apply-to-sidebar {
                 margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
   }
 
-  .mod-left-split .workspace-tab-header:not(.is-active):active,
-  .mod-right-split .workspace-tab-header:not(.is-active):active {
+  .mod-left-split .workspace-tab-header-container .workspace-tab-header:not(.is-active):active,
+  .mod-right-split .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
     background-color: var(--bb-elements-bg);
     box-shadow: 0 0 0 var(--border-width) var(--bb-border-color);
-    transform: translateY(1px) scale(0.8) !important;
+    transform: translateY(-1px) scale(0.8) !important;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease,
+                transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.4),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
+                margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
   }
 
   .mod-left-split .workspace-tab-header-container-inner,
@@ -5613,6 +5717,10 @@ body:is(.tab-simple) {
     .mod-right-split .workspace-tab-header:not(.is-active):active {
         transform: scale(0.95);
     }
+    .mod-left-split .workspace-tab-header.is-active,
+    .mod-right-split .workspace-tab-header.is-active {
+        padding: 0px;
+    }
 }
 body.tab-simplejoined {
     .mod-root .workspace-tab-header .workspace-tab-header-inner {
@@ -5875,6 +5983,13 @@ body {
 .callout img {
     margin-top: 10px;
     margin-bottom: 8px;
+}
+
+.callout.is-collapsed {
+    margin: 8px 0 !important;
+}
+.callout p {
+    padding-top: 2px;
 }
 
 
@@ -6226,6 +6341,437 @@ th {
     outline: none !important;
     border-top: none !important;
     border-bottom: none !important;
+}
+/* ===== HIDE NAV (on hover reveal) ===== */
+.calendar-hide-nav .right-nav {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+.calendar-hide-nav .right-nav:hover {
+    opacity: 1;
+}
+
+/* ===== TODAY STYLES ===== */
+.calendar-today-mono .day.today.svelte-q3wqg9 {
+    background-color: var(--background-secondary-alt);
+    color: var(--text-normal);
+}
+.calendar-today-accent .day.today.svelte-q3wqg9 {
+    background-color: hsla(var(--interactive-accent-hsl), 0.2);
+    color: var(--interactive-accent);
+}
+.calendar-today-mono-border .day.today.svelte-q3wqg9 {
+    background-color: var(--background-secondary-alt);
+    border: 1.5px solid var(--background-modifier-border-focus) !important;
+    color: var(--text-normal);
+}
+.calendar-today-accent-border .day.today.svelte-q3wqg9 {
+    background-color: hsla(var(--interactive-accent-hsl), 0.2);
+    border: 1.5px solid hsla(var(--interactive-accent-hsl), 0.4) !important;
+    color: var(--interactive-accent);
+}
+.calendar-today-solid .day.today.svelte-q3wqg9 {
+    background-color: hsla(var(--interactive-accent-hsl), 1);
+    border: 1.5px solid hsla(var(--interactive-accent-hsl), 1) !important;
+    color: var(--text-on-accent);
+    font-weight: 900;
+}
+
+
+/* ===== BASE CALENDAR LAYOUT (shared) ===== */
+.calendar-no-lines .workspace-leaf-content[data-type="calendar"] .view-content {
+    thead,
+    tbody {
+        background-color: transparent !important;
+    }
+}
+
+.calendar-poster .workspace-leaf-content[data-type="calendar"] .view-content,
+.calendar-hor-lined .workspace-leaf-content[data-type="calendar"] .view-content,
+.calendar-ver-lined .workspace-leaf-content[data-type="calendar"] .view-content,
+.calendar-no-lines .workspace-leaf-content[data-type="calendar"] .view-content {
+    thead,
+    tbody {
+        background-color: var(--background-secondary);
+        border: 1.5px solid var(--background-modifier-border-hover);
+    }
+    th,
+    td {
+        border: 1px solid var(--background-modifier-border-hover);
+        outline: none;
+    }
+    .day.svelte-q3wqg9 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0px;
+        border: 2px solid transparent;
+        transition: all 0.2s ease;
+    }
+    .day.svelte-q3wqg9:hover:not(.adjacent-month) {
+        background-color: hsla(var(--interactive-accent-hsl), 0.2);
+        border: 1.5px solid hsla(var(--interactive-accent-hsl), 0.4);
+        color: var(--interactive-accent);
+    }
+    .nav .right-nav {
+        align-self: flex-end;
+        margin-bottom: 3px;
+    }
+    .reset-button.svelte-1vwr9dd {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .arrow.svelte-156w7na svg {
+        color: var(--text-normal);
+    }
+}
+
+/* ===== VARIANT OVERRIDES ===== */
+.calendar-hor-lined .workspace-leaf-content[data-type="calendar"] .view-content {
+    th,
+    td {
+        border: none;
+        border-bottom: 1.5px solid var(--background-modifier-border-hover);
+    }
+}
+    .calendar-ver-lined .workspace-leaf-content[data-type="calendar"] .view-content {
+    th,
+    td {
+        border: none;
+        border-left: 1.5px solid var(--background-modifier-border-hover);
+    }
+}
+.calendar-no-lines .workspace-leaf-content[data-type="calendar"] .view-content {
+    thead,
+    tbody {
+        border: none;
+    }
+    th,
+    td {
+        border: none;
+    }
+    .day.svelte-q3wqg9 {
+        border-radius: var(--button-radius);
+        corner-shape: var(--bb-corner-shape);
+    }
+}
+
+
+
+.calendar-none {
+    th,
+    td {
+        border: 0px solid transparent;
+        outline: none;
+    }
+}
+
+
+
+/* ===== FULL HEIGHT (stretch calendar) ===== */
+.calendar-full-height {
+    .workspace-leaf-content[data-type="calendar"] .container.svelte-pcimu8 {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+        height: 100%;
+        box-sizing: border-box;
+    }
+    .workspace-leaf-content[data-type="calendar"] .container.svelte-pcimu8 table {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+        width: 100%;
+        height: 100%;
+        table-layout: fixed;
+    }
+    .workspace-leaf-content[data-type="calendar"] .container.svelte-pcimu8 thead tr {
+        display: flex;
+        width: 100%;
+    }
+    .workspace-leaf-content[data-type="calendar"] .container.svelte-pcimu8 thead th {
+        flex: 1 1 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .workspace-leaf-content[data-type="calendar"] .container.svelte-pcimu8 tbody {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+        width: 100%;
+    }
+    .workspace-leaf-content[data-type="calendar"] .container.svelte-pcimu8 tbody tr {
+        flex: 1 1 0;
+        display: flex;
+        min-height: 0;
+        width: 100%;
+    }
+    .workspace-leaf-content[data-type="calendar"] .container.svelte-pcimu8 tbody td {
+        flex: 1 1 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 0;
+    }
+    .workspace-leaf-content[data-type="calendar"] .container.svelte-pcimu8 tbody td .day.svelte-q3wqg9 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+}
+.bb-grid-explorer-topbar {
+    .ge-header-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    }
+
+    /* first two icons */
+    .ge-header-buttons > *:nth-child(-n+2) {
+    display: inline-flex !important;
+    margin-right: -10px !important;
+    }
+
+    /* gap between groups */
+    .ge-header-buttons > *:nth-child(2) {
+    margin-right: auto !important;
+    }
+
+    .ge-header-buttons button:not(.clickable-icon) {
+        color: var(--text-color);
+        background-color: var(--background-primary);
+        box-shadow: none;
+    }
+
+    .ge-header-buttons button {
+        outline: none !important;
+        opacity: 0.35;
+        transition: opacity 0.2s ease;
+    }
+
+    .ge-header-buttons button:hover {
+        opacity: 1;
+    }
+}
+/* --- image captions support --- */
+body.image-captions-styling {
+.image-captions-figure, .theme-dark .image-captions-caption {
+    background-color: var(--background-secondary-alt);
+    color: var(--text-normal);
+
+    /* box-shadow: 0px 5px 0px -1px var(--text-faint); */
+    margin-bottom: 2px;
+}
+
+.image-captions-caption {
+    background-color: var(--background-secondary-alt);
+    border-radius: 0 0 14px 14px;
+    padding-bottom: 8px;
+}
+
+.image-captions-figure {
+    border-radius: 12px 12px 0 0;
+}
+
+
+.image-captions-figure img {
+    border-radius: 8px !important;
+    transform: scale(0.99);
+    corner-shape: squircle !important;
+}
+
+/* .internal-embed.media-embed.image-embed, */
+.image-captions-figure, .image-captions-caption {
+    border: 2.5px solid var(--background-modifier-border);
+    corner-shape: squircle;
+}
+
+.image-captions-caption {
+    border: 2.5px solid var(--background-modifier-border);
+    border-top: none !important;
+    border-bottom: 6px solid var(--background-modifier-border) !important;
+}
+}
+/* === other plugins support */
+.kanban-styling {
+/* --- mainbody --- */
+.kanban-plugin__lane {
+  border-radius: var(--button-radius);
+  border: 2.5px solid var(--background-modifier-border);
+  box-shadow: 0 2px 0 var(--background-modifier-border);
+}
+
+
+/* --- item cards --- */
+
+.kanban-plugin__item {
+  border-radius: var(--button-radius);
+  border: 2px solid var(--background-modifier-border);
+  box-shadow: 0 2px 0 var(--background-modifier-border);
+  margin-bottom: 4px;
+}
+
+.kanban-plugin__item-title-wrapper {
+  background-color: var(--background-primary) !important;
+  padding: 12px;
+}
+
+.kanban-plugin__item p {
+  font-size: 16px !important;
+  transition: font-size 0.2s ease-out;
+}
+
+/* Icons */
+.kanban-plugin__item .kanban-plugin__icon {
+  opacity: 0;
+}
+
+.kanban-plugin__item .kanban-plugin__icon:hover {
+  opacity: 1;
+}
+
+.kanban-plugin__item .kanban-plugin__icon svg {
+  --icon-size: 12px !important;
+}
+
+.kanban-plugin__item-title-wrapper .tag {
+  padding: 3px 5px !important;
+  margin-left: 1px;
+  border-radius: 8px !important;
+}
+
+.kanban-plugin__item-title-wrapper p {
+    line-height: 1.6 !important;
+}
+
+.kanban-plugin__item-title-wrapper {
+  background-color: var(--background-primary) !important;
+  padding: 8px 10px !important;
+}
+
+.kanban-plugin__item-metadata-date-relative {
+    margin-top: -3px;
+}
+
+.kanban-plugin__date, .cm-kanban-time-wrapper, .cm-kanban-date-wrapper {
+    display: inline;
+}
+
+
+/* buttons */
+button.kanban-plugin__new-item-button {
+  width: 100%;
+  background-color: var(--button-background);
+  color: var(--surface);
+  box-shadow: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1.5);
+}
+
+button.kanban-plugin__new-item-button:hover {
+  background-color: var(--button-background-hover);
+  color: var(--surface);
+  transform: scale(1);
+  opacity: 1;
+  box-shadow: none;
+}
+
+/* the + text */
+.kanban-plugin__item-button-plus {
+  margin-inline-end: 4px;
+}
+
+.kanban-plugin__item-input-wrapper {
+  border-radius: 0 !important;
+}
+
+}
+
+/* --- kanban boards take up 100% width --- */
+
+body.kanban-full .kanban-plugin__board {
+  display: flex !important;
+}
+
+body.kanban-full .kanban-plugin__lane-wrapper:not(.collapse-horizontal) {
+  flex: 100% !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 100%;
+}
+
+body.kanban-full .kanban-plugin__board > div {
+  width: 100% !important;
+  margin-left: 20px !important;
+}
+
+
+
+/* =========================
+   Add Card Button (PREPEND HOVER EXPAND)
+========================= */
+
+body.kanban-prepend-hover-expand 
+.kanban-plugin__item-button-wrapper {
+  max-height: 0;
+  overflow: hidden;
+}
+
+body.kanban-prepend-hover-expand 
+.kanban-plugin__item-button-wrapper:hover {
+  max-height: 60px;
+  transition: max-height 0.3s ease,
+              opacity 0.15s ease,
+              all 0.2s ease;
+}
+
+body.kanban-prepend-hover-expand 
+button.kanban-plugin__new-item-button {
+  transform: scale(1.2) translateY(2px);
+  transition: max-height 0.3s ease,
+              opacity 0.15s ease,
+              all 0.2s ease;
+}
+
+body.kanban-prepend-hover-expand 
+.kanban-plugin__item-button-wrapper:hover 
+button.kanban-plugin__new-item-button {
+  transform: scale(1);
+}
+
+/* --- extra --- */
+body.kanban-hover-biggen 
+.kanban-plugin__item:hover p {
+  font-size: 20px !important;
+}
+
+.kanban-redden-metadata .kanban-plugin__item-metadata {
+  color: var(--color-red);
+}
+/* Vertical Tabs Plugin Fix */
+.workspace-leaf.obsidian-vertical-tabs-tab-content .tree-item-self.is-active {
+    padding: 0;
+}
+
+.workspace-leaf.obsidian-vertical-tabs-tab-content
+    .tree-item-self.is-active
+    .tree-item-icon,
+.workspace-leaf.obsidian-vertical-tabs-tab-content
+    .tree-item-self.is-active
+    .tree-item-inner {
+    margin: 8px 2px;
+    margin-inline: 6px -4px;
+    color: var(--color-accent-1);
+    font-weight: 500;
 }
 /* setting items */
 .setting-item {

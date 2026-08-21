@@ -1,0 +1,66 @@
+.is-mobile:not(.is-tablet) .nav-buttons-container {
+  background: var(--bb-editor-bg) !important;
+  padding: 6px !important;
+}
+.is-mobile:not(.is-tablet) .workspace-leaf { /* under nav */
+  background-color: var(--bb-editor-bg) !important;
+}
+
+
+/* tab drawer */
+/* :: blend the workspace tab container drawer with bg */
+.workspace-drawer-active-tab-container {
+  background: var(--bb-workspace-bg);
+}
+.is-mobile .workspace-tab-header-inner {
+  background: var(--bb-workspace-bg);
+}
+.is-mobile .workspace-drawer-tab-options-list {
+  box-shadow: none;
+}
+
+
+.workspace-drawer-inner { /* bg */
+  background-color: var(--bb-editor-bg);
+}
+
+
+/* get rid of that gradient */
+.is-mobile .nav-buttons-container::after,
+.workspace-drawer .workspace-leaf-content::after {
+  background: transparent !important;
+}
+
+
+
+
+.workspace-drawer-tab-options-list {
+  background: var(--bb-workspace-bg);
+
+  corner-shape: var(--bb-corner-shape);
+  border-radius: var(--touch-radius-l);
+  overflow-y: hidden;
+
+  padding-left: var(--size-4-2);
+  padding-right: 2px;
+}
+
+.workspace-drawer-tab-container .workspace-tab-header-inner {
+  border-radius: var(--touch-radius-xxs);
+  corner-shape: var(--bb-corner-shape);
+}
+.workspace-drawer-tab-container .workspace-tab-header:not(.is-active) {
+  background: var(--bb-workspace-bg);
+  border-radius: var(--touch-radius-xxs);
+  corner-shape: var(--bb-corner-shape);
+}
+.workspace-drawer-tab-container .workspace-tab-header.is-active .workspace-tab-header-inner {
+  background: var(--bb-tiptips-hover-bg) !important;
+  border: 3px solid var(--bb-border-hover-color);
+}
+
+
+.is-tablet .workspace-drawer {
+  corner-shape: var(--bb-corner-shape);
+  border-radius: var(--touch-radius-l);
+}

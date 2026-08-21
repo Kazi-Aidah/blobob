@@ -62,4 +62,8 @@ body:is(.tab-simple) {
     .mod-right-split .workspace-tab-header:not(.is-active):active {
         transform: scale(0.95);
     }
+    .mod-left-split .workspace-tab-header.is-active,
+    .mod-right-split .workspace-tab-header.is-active {
+        padding: 0px;
+    }
 }

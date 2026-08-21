@@ -1,0 +1,34 @@
+.bb-grid-explorer-topbar {
+    .ge-header-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    }
+
+    /* first two icons */
+    .ge-header-buttons > *:nth-child(-n+2) {
+    display: inline-flex !important;
+    margin-right: -10px !important;
+    }
+
+    /* gap between groups */
+    .ge-header-buttons > *:nth-child(2) {
+    margin-right: auto !important;
+    }
+
+    .ge-header-buttons button:not(.clickable-icon) {
+        color: var(--text-color);
+        background-color: var(--background-primary);
+        box-shadow: none;
+    }
+
+    .ge-header-buttons button {
+        outline: none !important;
+        opacity: 0.35;
+        transition: opacity 0.2s ease;
+    }
+
+    .ge-header-buttons button:hover {
+        opacity: 1;
+    }
+}

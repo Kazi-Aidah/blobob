@@ -1,0 +1,13 @@
+.is-tablet.is-mobile :not(.view-header) .clickable-icon {
+  background-color: var(--bb-tiptips-bg);
+  color: var(--text-faint);
+}
+
+.is-mobile .metadata-content {
+  width: 100% !important;
+}
+
+.vertical-tab-header-group-items {
+  border-radius: var(--touch-radius-s) !important;
+  corner-shape: var(--bb-corner-shape) !important;
+}

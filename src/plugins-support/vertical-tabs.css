@@ -1,0 +1,16 @@
+/* Vertical Tabs Plugin Fix */
+.workspace-leaf.obsidian-vertical-tabs-tab-content .tree-item-self.is-active {
+    padding: 0;
+}
+
+.workspace-leaf.obsidian-vertical-tabs-tab-content
+    .tree-item-self.is-active
+    .tree-item-icon,
+.workspace-leaf.obsidian-vertical-tabs-tab-content
+    .tree-item-self.is-active
+    .tree-item-inner {
+    margin: 8px 2px;
+    margin-inline: 6px -4px;
+    color: var(--color-accent-1);
+    font-weight: 500;
+}

@@ -26,7 +26,7 @@ button animations: scale, shrink, tilt, bounce
 
 /* shrink butt */
 .button-shrink button,
-.button-shrink .clickable-icon {
+.button-shrink .clickable-icon:not(.input-right-decorator) {
     transition:
         all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2),
         background-color calc(var(--animation-duration) * 0.6667) ease;
@@ -35,14 +35,14 @@ button animations: scale, shrink, tilt, bounce
 }
 
 .button-shrink button:hover,
-.button-shrink .clickable-icon:hover {
+.button-shrink .clickable-icon:not(.input-right-decorator):hover {
     transform: scale(0.9);
     z-index: 1000;
 }
 
 .button-shrink button:active,
-.button-shrink .clickable-icon:active,
-.button-shrink .clickable-icon:focus-visible {
+.button-shrink .clickable-icon:not(.input-right-decorator):active,
+.button-shrink .clickable-icon:not(.input-right-decorator):focus-visible {
     transform: scale(0.7);
     opacity: 0.7;
     transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 2);

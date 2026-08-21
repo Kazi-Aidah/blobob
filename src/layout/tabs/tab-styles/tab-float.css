@@ -1,3 +1,18 @@
+body.tab-float.scoop-tiptip {
+    --tab-curve: 10px;
+    --tab-radius: 6px;
+    --tab-inner-radius: 4px;
+    --tab-corner-shape: scoop;
+}
+
+body.tab-float.hexagon-tiptip {
+    --tab-curve: 10px;
+    --tab-radius: 6px;
+    --tab-inner-radius: 4px;
+    --tab-corner-shape: bevel;
+}
+
+
 body.tab-float {
   --system-status-background: var(--bb-editor-bg);
   --border-width: var(--bb-border-width);
@@ -142,6 +157,9 @@ body.tab-float {
   }
 }
 
+
+
+
 body.tab-float.apply-to-sidebar {
   .mod-left-split .workspace-tab-header,
   .mod-right-split .workspace-tab-header {
@@ -190,11 +208,15 @@ body.tab-float.apply-to-sidebar {
                 margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
   }
 
-  .mod-left-split .workspace-tab-header:not(.is-active):active,
-  .mod-right-split .workspace-tab-header:not(.is-active):active {
+  .mod-left-split .workspace-tab-header-container .workspace-tab-header:not(.is-active):active,
+  .mod-right-split .workspace-tab-header-container .workspace-tab-header:not(.is-active):active {
     background-color: var(--bb-elements-bg);
     box-shadow: 0 0 0 var(--border-width) var(--bb-border-color);
-    transform: translateY(1px) scale(0.8) !important;
+    transform: translateY(-1px) scale(0.8) !important;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease,
+                transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.4),
+                padding 0.4s cubic-bezier(0.2, 0.9, 0.4, 2.1),
+                margin 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.6);
   }
 
   .mod-left-split .workspace-tab-header-container-inner,

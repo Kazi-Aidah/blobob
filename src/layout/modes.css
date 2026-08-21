@@ -35,7 +35,7 @@
 
 
 /* Shows Mode Labels */
-.display-mode-label {
+body:not(.is-mobile) .display-mode-label {
     button.view-action[aria-label*="Current view:"]::after {
         content: attr(aria-label);
         font-size: var(--font-ui-small);
