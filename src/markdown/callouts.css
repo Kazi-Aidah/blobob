@@ -4,12 +4,12 @@
     --callout-radius: var(--touch-radius-s);
     --callout-padding: 0px;
     border: var(--callout-border-width) solid
-        rgb(var(--callout-color), var(--callout-border-opacity));
+        color-mix(in srgb, var(--callout-color) calc(var(--callout-border-opacity) * 100%), transparent);
     border-radius: var(--callout-radius);
     corner-shape: var(--corner-shape) !important;
     margin: 1em 0;
     mix-blend-mode: var(--callout-blend-mode);
-    background-color: rgb(var(--callout-color), 0.1);
+    background-color: color-mix(in srgb, var(--callout-color) 10%, transparent);
     padding: var(--callout-padding);
 }
 
@@ -19,11 +19,11 @@
     display: flex;
     gap: var(--size-4-1);
     font-size: var(--callout-title-size);
-    color: rgb(var(--callout-color));
+    color: var(--callout-color);
     line-height: var(--line-height-tight);
     align-items: flex-start;
     border-bottom: 2px solid
-        rgb(var(--callout-color), var(--callout-border-opacity));
+        color-mix(in srgb, var(--callout-color) calc(var(--callout-border-opacity) * 100%), transparent);
     transition: border-bottom-width calc(var(--animation-duration) * 0.3333) ease;
 }
 
