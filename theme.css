@@ -2979,6 +2979,11 @@ input[type="checkbox"]:checked:hover {
 .is-mobile .metadata-content {
   width: 100% !important;
 }
+
+.vertical-tab-header-group-items {
+  border-radius: var(--touch-radius-s) !important;
+  corner-shape: var(--bb-corner-shape) !important;
+}
 .is-mobile .menu {
     padding-bottom: 40px;
 }
@@ -4430,6 +4435,71 @@ button.view-action[aria-label*="Current view:"] {
     button.view-action[aria-label*="Current view:"] svg {
         color: var(--text-on-accent-inverted) !important;
     }
+}
+
+body {
+    --nav-hide-text: "My Vault";
+}
+
+
+/* ==================================================
+   NAV HIDE TEXT
+================================================== */
+body:not(.is-tablet):not(.disable-nav-hovertext) {
+@media (width >= 600px) {
+    .nav-header {
+        /* margin-top: -30px; */
+        transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.2);
+        border-bottom: 1.5px solid var(--background-modifier-border);
+    }
+
+    .nav-buttons-container {
+        position: relative;
+        transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.6);
+        margin: -2.2px;
+    }
+
+    /* Hide the buttons and show text */
+    .workspace-leaf-content[data-type="file-explorer"]
+        .nav-buttons-container::after {
+        content: var(--nav-hide-text) !important;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--text-muted);
+        opacity: 1;
+        pointer-events: none;
+        transition: opacity 0s ease;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* On hover, show buttons + hide text */
+    .workspace-leaf-content[data-type="file-explorer"]
+        .nav-buttons-container:hover {
+        opacity: 1;
+        padding: 10px 0 !important;
+    }
+
+    .workspace-leaf-content[data-type="file-explorer"]
+        .nav-buttons-container:hover::after {
+        opacity: 0;
+    }
+
+    /* Initially hide buttons */
+    .workspace-leaf-content[data-type="file-explorer"]
+        .nav-buttons-container:not(:hover)
+        > * {
+        opacity: 0;
+        transition: opacity 0ms ease;
+        margin: auto !important;
+    }
+
+    .workspace-leaf-content[data-type="file-explorer"] .nav-files-container {
+        padding-top: 10px;
+    }
+}
 }
 /* Pinned Tabs:
 show icon but not status (pin) icon
@@ -5891,6 +5961,53 @@ body.tab-lined {
         border-radius: 0px;
     }
 
+}
+.vertical-tabs {
+    .workspace-split.mod-root .workspace-tab-header-container {
+    display: flex !important;
+    flex-direction: row !important;
+    transform-origin: top left !important;
+    transform: rotate(-90deg) translateX(-100%) !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    border-bottom: none !important;
+    padding: 0 !important;
+    padding-bottom: 2px !important;
+    z-index: 10 !important;
+    min-height: unset !important;
+    }
+
+    .workspace-split.mod-root .workspace-tab-header-inner-icon {
+    flex-shrink: 0 !important;
+    }
+
+    .workspace-split.mod-root .workspace-tab-header-inner-close-button {
+    flex-shrink: 0 !important;
+    }
+
+    .workspace-split.mod-root .workspace-tab-header-spacer,
+    .workspace-split.mod-root .workspace-tab-header-new-tab,
+    .workspace-split.mod-root .workspace-tab-header-tab-list,
+    .workspace-split.mod-root .sidebar-toggle-button.mod-right {
+    display: none !important;
+    }
+
+    .workspace-split.mod-root .workspace-tabs {
+    display: flex !important;
+    flex-direction: row !important;
+    padding-left: 40px !important;
+    position: relative !important;
+    }
+}
+
+
+.hide-titlebar .titlebar {
+    display: none;
+}
+
+.vertical-tabs .view-header {
+    margin-top: 10px;
 }
 /* CALLOUTS */
 body {

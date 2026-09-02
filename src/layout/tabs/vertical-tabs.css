@@ -1,0 +1,47 @@
+.vertical-tabs {
+    .workspace-split.mod-root .workspace-tab-header-container {
+    display: flex !important;
+    flex-direction: row !important;
+    transform-origin: top left !important;
+    transform: rotate(-90deg) translateX(-100%) !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    border-bottom: none !important;
+    padding: 0 !important;
+    padding-bottom: 2px !important;
+    z-index: 10 !important;
+    min-height: unset !important;
+    }
+
+    .workspace-split.mod-root .workspace-tab-header-inner-icon {
+    flex-shrink: 0 !important;
+    }
+
+    .workspace-split.mod-root .workspace-tab-header-inner-close-button {
+    flex-shrink: 0 !important;
+    }
+
+    .workspace-split.mod-root .workspace-tab-header-spacer,
+    .workspace-split.mod-root .workspace-tab-header-new-tab,
+    .workspace-split.mod-root .workspace-tab-header-tab-list,
+    .workspace-split.mod-root .sidebar-toggle-button.mod-right {
+    display: none !important;
+    }
+
+    .workspace-split.mod-root .workspace-tabs {
+    display: flex !important;
+    flex-direction: row !important;
+    padding-left: 40px !important;
+    position: relative !important;
+    }
+}
+
+
+.hide-titlebar .titlebar {
+    display: none;
+}
+
+.vertical-tabs .view-header {
+    margin-top: 10px;
+}

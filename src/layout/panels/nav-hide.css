@@ -1,0 +1,66 @@
+
+body {
+    --nav-hide-text: "My Vault";
+}
+
+
+/* ==================================================
+   NAV HIDE TEXT
+================================================== */
+body:not(.is-tablet):not(.disable-nav-hovertext) {
+@media (width >= 600px) {
+    .nav-header {
+        /* margin-top: -30px; */
+        transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.2);
+        border-bottom: 1.5px solid var(--background-modifier-border);
+    }
+
+    .nav-buttons-container {
+        position: relative;
+        transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.6);
+        margin: -2.2px;
+    }
+
+    /* Hide the buttons and show text */
+    .workspace-leaf-content[data-type="file-explorer"]
+        .nav-buttons-container::after {
+        content: var(--nav-hide-text) !important;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--text-muted);
+        opacity: 1;
+        pointer-events: none;
+        transition: opacity 0s ease;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* On hover, show buttons + hide text */
+    .workspace-leaf-content[data-type="file-explorer"]
+        .nav-buttons-container:hover {
+        opacity: 1;
+        padding: 10px 0 !important;
+    }
+
+    .workspace-leaf-content[data-type="file-explorer"]
+        .nav-buttons-container:hover::after {
+        opacity: 0;
+    }
+
+    /* Initially hide buttons */
+    .workspace-leaf-content[data-type="file-explorer"]
+        .nav-buttons-container:not(:hover)
+        > * {
+        opacity: 0;
+        transition: opacity 0ms ease;
+        margin: auto !important;
+    }
+
+    .workspace-leaf-content[data-type="file-explorer"] .nav-files-container {
+        padding-top: 10px;
+    }
+}
+}
+
