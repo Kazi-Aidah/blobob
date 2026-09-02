@@ -196,3 +196,56 @@ select,
     border-radius: var(--modal-radius);
     corner-shape: var(--bb-corner-shape);
 }
+
+
+
+
+
+/* FIX WINDOW CORNER SHAPE */
+
+/* store org corner shape from body */
+body.hexagon-tiptip { --saved-corner-shape: bevel; }
+body.squircle-tiptip { --saved-corner-shape: squircle; }
+body.scoop-tiptip { --saved-corner-shape: scoop; }
+body.sock-tiptip { --saved-corner-shape: initial; }
+body.eye-tiptip { --saved-corner-shape: initial; }
+body.circular-tiptip { --saved-corner-shape: round; }
+body.rounded-tiptip { --saved-corner-shape: round; }
+body.round-tiptip { --saved-corner-shape: round; }
+body.sharp-tiptip { --saved-corner-shape: sharp; }
+
+/* reset window to sharp corners */
+body {
+  --bb-corner-shape: sharp !important;
+  border-radius: 0 !important;
+  clip-path: none !important;
+  box-shadow: none !important;
+}
+
+/* apply saved shape to all babies */
+body * {
+  --bb-corner-shape: var(--saved-corner-shape) !important;
+}
+
+/* exclude content areas from inheriting the shape */
+body *:not(.modal):not(.modal *):not(.workspace-leaf-content):not(.workspace-leaf-content *):not(.view-content):not(.view-content *):not(.markdown-source-view):not(.markdown-source-view *):not(.markdown-preview-view):not(.markdown-preview-view *):not(.cm-content):not(.cm-content *):not(.editor):not(.editor *) {
+  --bb-corner-shape: var(--saved-corner-shape) !important;
+}
+
+/* content areas stay normal */
+.modal,
+.modal *,
+.workspace-leaf-content,
+.workspace-leaf-content *,
+.view-content,
+.view-content *,
+.markdown-source-view,
+.markdown-source-view *,
+.markdown-preview-view,
+.markdown-preview-view *,
+.cm-content,
+.cm-content *,
+.editor,
+.editor * {
+  --bb-corner-shape: unset !important;
+}

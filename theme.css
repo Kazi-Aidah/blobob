@@ -2299,6 +2299,59 @@ select,
     border-radius: var(--modal-radius);
     corner-shape: var(--bb-corner-shape);
 }
+
+
+
+
+
+/* FIX WINDOW CORNER SHAPE */
+
+/* store org corner shape from body */
+body.hexagon-tiptip { --saved-corner-shape: bevel; }
+body.squircle-tiptip { --saved-corner-shape: squircle; }
+body.scoop-tiptip { --saved-corner-shape: scoop; }
+body.sock-tiptip { --saved-corner-shape: initial; }
+body.eye-tiptip { --saved-corner-shape: initial; }
+body.circular-tiptip { --saved-corner-shape: round; }
+body.rounded-tiptip { --saved-corner-shape: round; }
+body.round-tiptip { --saved-corner-shape: round; }
+body.sharp-tiptip { --saved-corner-shape: sharp; }
+
+/* reset window to sharp corners */
+body {
+  --bb-corner-shape: sharp !important;
+  border-radius: 0 !important;
+  clip-path: none !important;
+  box-shadow: none !important;
+}
+
+/* apply saved shape to all babies */
+body * {
+  --bb-corner-shape: var(--saved-corner-shape) !important;
+}
+
+/* exclude content areas from inheriting the shape */
+body *:not(.modal):not(.modal *):not(.workspace-leaf-content):not(.workspace-leaf-content *):not(.view-content):not(.view-content *):not(.markdown-source-view):not(.markdown-source-view *):not(.markdown-preview-view):not(.markdown-preview-view *):not(.cm-content):not(.cm-content *):not(.editor):not(.editor *) {
+  --bb-corner-shape: var(--saved-corner-shape) !important;
+}
+
+/* content areas stay normal */
+.modal,
+.modal *,
+.workspace-leaf-content,
+.workspace-leaf-content *,
+.view-content,
+.view-content *,
+.markdown-source-view,
+.markdown-source-view *,
+.markdown-preview-view,
+.markdown-preview-view *,
+.cm-content,
+.cm-content *,
+.editor,
+.editor * {
+  --bb-corner-shape: unset !important;
+}
 /* ---
 button animations: scale, shrink, tilt, bounce
 --- */
@@ -2715,6 +2768,32 @@ body:not(.button-scale, .button-shrink, .button-tilt, .button-bounce) .sidebar-t
 
 
 
+
+
+
+/* restore / reload / settings  */
+.clickable-icon.extra-setting-button[aria-label="Restore default"]:hover svg,
+.clickable-icon.extra-setting-button[aria-label="Restore"]:hover svg,
+.clickable-icon.extra-setting-button[aria-label="Reload"]:hover svg,
+.clickable-icon.extra-setting-button[aria-label="Settings"]:hover svg,
+.clickable-icon:hover svg.svg-icon.lucide-settings,
+.clickable-icon:hover svg.svg-icon.lucide-refresh-cw
+.clickable-icon:hover svg.svg-icon.lucide-rotate-ccw {
+    animation: windupBounce 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-delay: 0.2s;
+}
+
+@keyframes windupBounce {
+    0% {
+        transform: rotate(0deg);
+    }
+    30% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 /* fix wrapping issue caused by base select */
 select {
     transition: width 0.2s ease-in-out !important;

@@ -148,7 +148,8 @@ body:not(.button-scale, .button-shrink, .button-tilt, .button-bounce) .sidebar-t
 .clickable-icon.extra-setting-button[aria-label="Reload"]:hover svg,
 .clickable-icon.extra-setting-button[aria-label="Settings"]:hover svg,
 .clickable-icon:hover svg.svg-icon.lucide-settings,
-.clickable-icon:hover svg.svg-icon.lucide-refresh-cw {
+.clickable-icon:hover svg.svg-icon.lucide-refresh-cw
+.clickable-icon:hover svg.svg-icon.lucide-rotate-ccw {
     animation: windupBounce 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     animation-delay: 0.2s;
 }
