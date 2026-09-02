@@ -139,3 +139,28 @@ body:not(.button-scale, .button-shrink, .button-tilt, .button-bounce) .sidebar-t
 
 
 
+
+
+
+/* restore / reload / settings  */
+.clickable-icon.extra-setting-button[aria-label="Restore default"]:hover svg,
+.clickable-icon.extra-setting-button[aria-label="Restore"]:hover svg,
+.clickable-icon.extra-setting-button[aria-label="Reload"]:hover svg,
+.clickable-icon.extra-setting-button[aria-label="Settings"]:hover svg,
+.clickable-icon:hover svg.svg-icon.lucide-settings,
+.clickable-icon:hover svg.svg-icon.lucide-refresh-cw {
+    animation: windupBounce 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-delay: 0.2s;
+}
+
+@keyframes windupBounce {
+    0% {
+        transform: rotate(0deg);
+    }
+    30% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
