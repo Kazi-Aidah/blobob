@@ -1,0 +1,68 @@
+input.slider {
+    height: 10px;
+    border-radius: 3px;
+    corner-shape: round;
+    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+input.slider:hover {
+    height: 20px;
+    border-radius: 10px;
+    corner-shape: round;
+}
+
+input.slider::-webkit-slider-thumb {
+    appearance: none;
+    border-radius: 4px !important;
+    background-color: var(--interactive-accent);
+    cursor: pointer;
+    width: 20px !important;
+    transform: scale(1.2);
+    transition: all calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 1.5),
+                border-radius 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-image: url("data:image/svg+xml;utf8,\
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>\
+    \3c !-- Angry eyes \\/ -->\
+    <line x1='28' y1='34' x2='42' y2='38' stroke='black' stroke-width='7' stroke-linecap='round'/>\
+    <line x1='58' y1='38' x2='72' y2='34' stroke='black' stroke-width='7' stroke-linecap='round'/>\
+    \3c !-- Straight mouth -->\
+    <line x1='40' y1='55' x2='60' y2='55' stroke='black' stroke-width='7' stroke-linecap='round'/>\
+    </svg>");
+}
+
+input.slider::-webkit-slider-thumb:hover {
+    transform: scale(1.6);
+    appearance: none;
+    border-radius: 20px !important;
+    width: 18px !important;
+    transition: all calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2);
+    background-image: url("data:image/svg+xml;utf8,\
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>\
+    <circle cx='20' cy='50' r='6' fill='orange'/>\
+    <circle cx='75' cy='50' r='6' fill='orange'/>\
+    <circle cx='30' cy='40' r='10' fill='black'/>\
+    <circle cx='65' cy='40' r='10' fill='black'/>\
+    <circle cx='35' cy='37' r='4' fill='white'/>\
+    <circle cx='70' cy='37' r='4' fill='white'/>\
+    <path d='M40 60 Q50 72 60 60' stroke='black' stroke-width='8' fill='none' stroke-linecap='round'/>\
+    </svg>") !important;
+}
+
+/* old slider */
+/* 
+input.slider::-webkit-slider-thumb:hover {
+    transform: scale(1.6);
+    appearance: none;
+    border-radius: 20px !important;
+    width: 18px !important;
+    transition: all calc(var(--animation-duration) * 0.3333) cubic-bezier(0.175, 0.885, 0.32, 2);
+    background-image: url("data:image/svg+xml;utf8,\
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>\
+    <circle cx='20' cy='50' r='6' fill='orange'/>\
+    <circle cx='75' cy='50' r='6' fill='orange'/>\
+    <circle cx='30' cy='40' r='8' fill='black'/>\
+    <circle cx='65' cy='40' r='8' fill='black'/>\
+    <path d='M40 60 Q50 72 60 60' stroke='black' stroke-width='8' fill='none' stroke-linecap='round'/>\
+    </svg>") !important;
+}
+*/

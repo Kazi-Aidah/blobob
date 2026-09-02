@@ -2875,6 +2875,7 @@ select option:checked:hover {
   padding: 20px;
 }
 
+
 ﻿/* =============
    TOGGLES
 ============= */
@@ -2941,6 +2942,7 @@ select option:checked:hover {
     <circle cx='65' cy='40' r='6' fill='black'/>\
     <path d='M30 60 Q50 72 70 60' stroke='black' stroke-width='10' fill='none' stroke-linecap='round'/>\
     </svg>");
+    background-position: center;
 }
 
 .checkbox-container.is-enabled:hover::after {
@@ -4449,13 +4451,13 @@ body:not(.is-tablet):not(.disable-nav-hovertext) {
 @media (width >= 600px) {
     .nav-header {
         /* margin-top: -30px; */
-        transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.2);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2);
         border-bottom: 1.5px solid var(--background-modifier-border);
     }
 
     .nav-buttons-container {
         position: relative;
-        transition: all calc(var(--animation-duration) * 1) cubic-bezier(0.175, 0.885, 0.32, 1.6);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.6);
         margin: -2.2px;
     }
 
@@ -5999,15 +6001,20 @@ body.tab-lined {
     padding-left: 40px !important;
     position: relative !important;
     }
+    
+    .view-header {
+        margin-top: 10px;
+    }
 }
 
-
-.hide-titlebar .titlebar {
-    display: none;
+.hide-titlebar:not(.is-popout-window) .titlebar {
+    display: none !important;
 }
-
-.vertical-tabs .view-header {
-    margin-top: 10px;
+.hide-titlebar .app-container > .titlebar {
+    display: none !important;
+}
+.hide-titlebar .horizontal-main-container > .titlebar {
+    display: none !important;
 }
 /* CALLOUTS */
 body {

@@ -35,13 +35,18 @@
     padding-left: 40px !important;
     position: relative !important;
     }
+    
+    .view-header {
+        margin-top: 10px;
+    }
 }
 
-
-.hide-titlebar .titlebar {
-    display: none;
+.hide-titlebar:not(.is-popout-window) .titlebar {
+    display: none !important;
 }
-
-.vertical-tabs .view-header {
-    margin-top: 10px;
+.hide-titlebar .app-container > .titlebar {
+    display: none !important;
+}
+.hide-titlebar .horizontal-main-container > .titlebar {
+    display: none !important;
 }
